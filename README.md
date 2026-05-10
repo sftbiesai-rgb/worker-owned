@@ -52,10 +52,10 @@ Sourced from the [USFWC Directory](https://www.usworker.coop/directory/) (474+ w
 
 ## Current Coverage
 
-- **75 total entries** across 25 states
-- **51 coffee shops** — cafes, bakeries, roasters that serve coffee
-- **24 restaurants** — restaurants, brewpubs, pizzerias, diners with full menus
-- **Key states:** CA (25), MN (6), MA (5), MD (5), NY (5), OH (4), OR (3), VT (3), WA (2), VA (2), plus CO, CT, IA, KY, LA, ME, MI, NC, ND, OK, PA, RI, WI, and more
+- **85 total entries** across 27 states
+- **55 coffee shops** — cafes, bakeries, roasters that serve coffee
+- **30 restaurants** — restaurants, brewpubs, pizzerias, diners with full menus
+- **Key states:** CA (25), MN (7), MA (6), MD (6), NY (5), OH (4), OR (3), VT (3), WA (2), VA (2), plus CO, CT, IA, KY, LA, ME, MI, NC, ND, OK, PA, RI, WI, and more
 
 ## Next Steps
 

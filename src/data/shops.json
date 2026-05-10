@@ -70,8 +70,18 @@
   { "id": 69, "name": "Oceanview Diner", "city": "Berkeley", "state": "CA", "location": "1807 Fourth St, Berkeley, CA 94710", "website": "", "category": "restaurant" },
   { "id": 70, "name": "A Taste of Denmark Bakery", "city": "Oakland", "state": "CA", "location": "3401 Telegraph Ave, Oakland, CA 94609", "website": "", "category": "coffee" },
   { "id": 71, "name": "Sliver Pizzeria", "city": "Berkeley", "state": "CA", "location": "2132 Center St, Berkeley, CA 94704", "website": "sliverpizzeria.com", "category": "restaurant" },
-  { "id": 72, "name": "Dimond Slice Pizzeria", "city": "Oakland", "state": "CA", "location": "Oakland, CA", "website": "", "category": "restaurant" },
+{ "id": 72, "name": "Dimond Slice Pizzeria", "city": "Oakland", "state": "CA", "location": "Oakland, CA", "website": "", "category": "restaurant" },
   { "id": 73, "name": "Sankofa Cafe", "city": "Bridgeport", "state": "CT", "location": "Bridgeport, CT", "website": "", "category": "coffee" },
   { "id": 74, "name": "Griffin Coffee", "city": "Denver", "state": "CO", "location": "Denver, CO", "website": "", "category": "coffee" },
-  { "id": 75, "name": "Pueblo Cafe", "city": "Los Angeles", "state": "CA", "location": "Los Angeles, CA", "website": "", "category": "coffee" }
+  { "id": 75, "name": "Pueblo Cafe", "city": "Los Angeles", "state": "CA", "location": "Los Angeles, CA", "website": "", "category": "coffee" },
+  { "id": 76, "name": "Mera Kitchen Collective", "city": "Baltimore", "state": "MD", "location": "Baltimore, MD", "website": "", "category": "restaurant" },
+  { "id": 77, "name": "Rad Dish Cafe", "city": "Philadelphia", "state": "PA", "location": "Temple University, Philadelphia, PA", "website": "", "category": "coffee" },
+  { "id": 78, "name": "Olio Culinary Cooperative", "city": "Somerville", "state": "MA", "location": "Somerville, MA", "website": "", "category": "restaurant" },
+  { "id": 79, "name": "Isuken Co-op", "city": "Lewiston", "state": "ME", "location": "Lewiston, ME", "website": "isukencoop.com", "category": "restaurant" },
+  { "id": 80, "name": "New Deal Cafe", "city": "Greenbelt", "state": "MD", "location": "113 Centerway, Greenbelt, MD 20770", "website": "newdealcafe.com", "category": "restaurant" },
+  { "id": 81, "name": "Broken Clock Brewing Cooperative", "city": "Minneapolis", "state": "MN", "location": "Minneapolis, MN", "website": "brokenclockbrew.com", "category": "restaurant" },
+  { "id": 82, "name": "Marquette Brewing Cooperative", "city": "Marquette", "state": "MI", "location": "Marquette, MI", "website": "marquettebrewing.com", "category": "restaurant" },
+  { "id": 83, "name": "True Love Cafe", "city": "Somerville", "state": "MA", "location": "Somerville, MA", "website": "truelovecafe.com", "category": "coffee" },
+  { "id": 84, "name": "Oakhouse Bakery & Cafe", "city": "Asheville", "state": "NC", "location": "Asheville, NC", "website": "", "category": "coffee" },
+  { "id": 85, "name": "Swing Oil Coffee Roasters", "city": "Milwaukee", "state": "WI", "location": "Milwaukee, WI", "website": "", "category": "coffee" }
 ]
