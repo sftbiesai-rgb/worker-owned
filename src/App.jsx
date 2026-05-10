@@ -74,18 +74,18 @@ function App() {
         <main className="max-w-2xl mx-auto px-5 pb-16">
           <div className="space-y-3 mt-5">
             {browseShops.map(shop => (
-              <div key={shop.id} className="bg-white rounded-xl border border-gray-200 px-4 py-3.5 flex items-center justify-between shadow-sm">
-                <div className="min-w-0 flex-1">
-                  <div className="font-semibold text-sm sm:text-base truncate">{shop.name}</div>
-                  <div className="text-xs sm:text-sm text-gray-500 mt-0.5 flex items-center gap-1">
-                    <MapPin size={11} className="shrink-0" />
-                    <span className="truncate">{shop.city}, {shop.state}</span>
-                  </div>
-                </div>
-                {shop.website && (
-                  <a href={shop.website.startsWith('http') ? shop.website : `https://${shop.website}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#BF0A30] transition-colors shrink-0 ml-3 p-1">
-                    <ExternalLink size={16} />
+              <div key={shop.id} className="bg-white rounded-xl border border-gray-200 px-4 py-3.5 shadow-sm">
+                {shop.website ? (
+                  <a href={shop.website.startsWith('http') ? shop.website : `https://${shop.website}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5">
+                    <span className="font-semibold text-sm sm:text-base truncate hover:text-[#004cb9] transition-colors">{shop.name}</span>
+                    <ExternalLink size={12} className="text-gray-300 shrink-0" />
+                    <span className="text-xs sm:text-sm text-gray-400 truncate ml-1">&mdash; {shop.city}, {shop.state}</span>
                   </a>
+                ) : (
+                  <span className="flex items-center gap-1.5">
+                    <span className="font-semibold text-sm sm:text-base truncate">{shop.name}</span>
+                    <span className="text-xs sm:text-sm text-gray-400 truncate">&mdash; {shop.city}, {shop.state}</span>
+                  </span>
                 )}
               </div>
             ))}
