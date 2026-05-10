@@ -5,17 +5,19 @@ A directory of worker-owned coffee shops and restaurants across the United State
 ## Features
 
 - Search by city, state, or business name
-- Toggle between **Coffee Shops** (34) and **Restaurants** (27)
+- Toggle between **Coffee Shops** (51) and **Restaurants** (24)
 - Browse full listing page
-- Clickable addresses linking to Google Maps
-- Clean, minimal design inspired by yourfairshare.info
+- Submission form with math CAPTCHA anti-spam
+- Red, white & blue theme inspired by yourfairshare.info
+- Mobile-friendly card-based design
 
 ## Tech Stack
 
 - **React 19** + **Vite** for the frontend
 - **Tailwind CSS 4** for styling
 - **Lucide React** for icons
-- **Python HTTP server** for local preview
+- **Vercel Serverless Functions** (`/api/submit.js`) for form submission
+- **Nodemailer** for email delivery (configure SMTP env vars for production)
 
 ## Usage
 
@@ -25,6 +27,22 @@ npm run dev       # development server
 npm run build     # production build
 npm run preview   # preview production build
 ```
+
+## Vercel Deployment
+
+This project is deployed on Vercel. The serverless function at `/api/submit.js` handles form submissions.
+
+To enable email delivery, set these environment variables in Vercel:
+
+```
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your-email@gmail.com
+SMTP_PASS=your-app-password
+SMTP_FROM=noreply@workerowned.com
+```
+
+For Gmail, use an [App Password](https://support.google.com/accounts/answer/185833) instead of your regular password.
 
 ## Data
 
@@ -39,6 +57,18 @@ Sourced from the [USFWC Directory](https://www.usworker.coop/directory/) (474+ w
 - **24 restaurants** — restaurants, brewpubs, pizzerias, diners with full menus
 - **Key states:** CA (25), MN (6), MA (5), MD (5), NY (5), OH (4), OR (3), VT (3), WA (2), VA (2), plus CO, CT, IA, KY, LA, ME, MI, NC, ND, OK, PA, RI, WI, and more
 
+## Next Steps
+
+- [ ] **Expand listed shops and restaurants** — search regional co-op directories (Co-op Cincy, NYC NoWC, Project Equity, Cooperation Texas, Valley Alliance of Worker Co-ops) for more entries; scrape news articles about worker co-op conversions
+- [ ] **Post on Reddit co-op groups** — share on r/cooperatives, r/coffee, and city-specific subreddits to invite submissions from the community
+- [ ] **Add Vercel Analytics / visit counters** — drop in the Vercel Analytics script or a simple counter to track page views
+- [ ] **SEO optimization** — add meta descriptions, Open Graph tags, sitemap.xml, structured data (Schema.org) for local business listings
+- [ ] **Add city/state pages** — generate static pages for each city/state with filtered results for better SEO
+- [ ] **Add Google Maps integration** — embed a map view showing all worker-owned shops
+- [ ] **Add category expansion** — include bakeries, grocery co-ops with cafes, breweries, etc.
+- [ ] **Add user ratings / reviews** — let visitors leave feedback on listed businesses
+- [ ] **Set up automated email notifications** — configure SMTP env vars in Vercel so submissions are emailed to sftbiesai@gmail.com
+
 ## Adding More Data
 
 To add entries, edit `src/data/shops.json` with the schema:
@@ -51,8 +81,6 @@ To add entries, edit `src/data/shops.json` with the schema:
 To build the site after changes: `npm run build`
 
 ## Preview
-
-A Python HTTP server serves the built site on port 8090:
 
 ```bash
 npm run build
