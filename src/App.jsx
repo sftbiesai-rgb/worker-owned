@@ -59,7 +59,9 @@ function App() {
   return (
     <div className="min-h-screen bg-white text-gray-800 font-sans flex flex-col">
       <main className="flex-1 max-w-xl mx-auto px-6 flex flex-col items-center justify-center text-center">
-        <div className="mb-2 text-5xl font-extralight tracking-tight text-[#BF0A30]">&#9733;</div>
+<div className="mb-2 flex items-center justify-center">
+          <img src="/logo.png" alt="WorkerOwned" width="52" height="52" />
+        </div>
         <h1 className="text-3xl font-bold tracking-tight mb-1">
           <span className="text-[#BF0A30]">Worker</span><span className="text-[#002868]">Owned</span>
         </h1>
