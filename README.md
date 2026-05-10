@@ -59,6 +59,7 @@ Sourced from the [USFWC Directory](https://www.usworker.coop/directory/) (474+ w
 
 ## Next Steps
 
+- [ ] **Update logo** — replace the Your Fair Share icon with a coffee mug icon
 - [ ] **Expand listed shops and restaurants** — search regional co-op directories (Co-op Cincy, NYC NoWC, Project Equity, Cooperation Texas, Valley Alliance of Worker Co-ops) for more entries; scrape news articles about worker co-op conversions
 - [ ] **Post on Reddit co-op groups** — share on r/cooperatives, r/coffee, and city-specific subreddits to invite submissions from the community
 - [ ] **Add Vercel Analytics / visit counters** — drop in the Vercel Analytics script or a simple counter to track page views

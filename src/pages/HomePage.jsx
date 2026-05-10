@@ -82,7 +82,7 @@ function HomePage() {
           )}
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 shadow-sm px-6 py-4 mt-3">
+        <div className="bg-white rounded-xl border border-gray-200 shadow-sm px-6 py-4 mt-3 w-full">
           <Link to="/submit" className="text-sm text-blue-600 hover:text-[#BF0A30] transition-colors font-medium">
             Submit a worker-owned coffee shop or restaurant &rarr;
           </Link>
