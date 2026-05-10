@@ -81,14 +81,15 @@ function HomePage() {
             </div>
           )}
         </div>
-      </main>
 
-      <footer className="py-6 text-center space-y-4">
-        <div className="bg-white rounded-xl border border-gray-200 shadow-sm px-6 py-4 max-w-xl mx-auto">
+        <div className="bg-white rounded-xl border border-gray-200 shadow-sm px-6 py-4 mt-3">
           <Link to="/submit" className="text-sm text-blue-600 hover:text-[#BF0A30] transition-colors font-medium">
             Submit a worker-owned coffee shop or restaurant &rarr;
           </Link>
         </div>
+      </main>
+
+      <footer className="pb-6 pt-4 text-center">
         <p className="text-xs text-gray-400">
           <a href="https://www.usworker.coop/directory/" target="_blank" rel="noopener noreferrer" className="hover:text-[#004cb9] transition-colors">Data via USFWC</a>
         </p>
