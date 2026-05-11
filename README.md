@@ -5,7 +5,7 @@ A directory of worker-owned coffee shops and restaurants across the United State
 ## Features
 
 - Search by city, state, or business name
-- Toggle between **Coffee Shops** (51) and **Restaurants** (24)
+- Toggle between **Coffee Shops** (59) and **Restaurants** (32)
 - Browse full listing page
 - Submission form with math CAPTCHA anti-spam
 - Red, white & blue theme inspired by yourfairshare.info
@@ -52,10 +52,10 @@ Sourced from the [USFWC Directory](https://www.usworker.coop/directory/) (474+ w
 
 ## Current Coverage
 
-- **85 total entries** across 27 states
-- **55 coffee shops** — cafes, bakeries, roasters that serve coffee
-- **30 restaurants** — restaurants, brewpubs, pizzerias, diners with full menus
-- **Key states:** CA (25), MN (7), MA (6), MD (6), NY (5), OH (4), OR (3), VT (3), WA (2), VA (2), plus CO, CT, IA, KY, LA, ME, MI, NC, ND, OK, PA, RI, WI, and more
+- **91 total entries** across 29 states
+- **59 coffee shops** — cafes, bakeries, roasters that serve coffee
+- **32 restaurants** — restaurants, brewpubs, pizzerias, diners with full menus
+- **Key states:** CA (25), MN (7), MA (6), MD (6), NY (6), OH (4), OR (3), VT (3), WA (4), VA (2), PA (3), IL (1), RI (2), plus CO, CT, IA, KY, LA, ME, MI, NC, ND, OK, WI, and more
 
 ## Next Steps
 
