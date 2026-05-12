@@ -39,8 +39,8 @@ function BrowsePage({ category }) {
 
           <div className="flex items-center justify-center gap-3 mb-6">
             <img src="/logo.png" alt="" width="36" height="36" className="shrink-0" />
-            <Link to="/" className="text-2xl font-bold tracking-tight">
-              <span style={{color: '#BF0A30'}}>Worker</span><span style={{color: '#004cb9'}}>Owned</span>
+            <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">
+              Worker Owned
             </Link>
           </div>
 
