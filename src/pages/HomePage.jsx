@@ -1,9 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import shopsData from '../data/shops.json'
 
 function HomePage() {
+  useEffect(() => {
+    document.title = 'WorkerOwned — Find Worker-Owned Coffee Shops & Restaurants Near You'
+    document.querySelector('meta[name="description"]')?.setAttribute('content',
+      'Find worker-owned coffee shops and restaurants across the US. Search by city to discover cooperatively owned cafes, bakeries, and restaurants in your area.')
+  }, [])
   const [searchTerm, setSearchTerm] = useState('')
   const [category, setCategory] = useState('coffee')
 

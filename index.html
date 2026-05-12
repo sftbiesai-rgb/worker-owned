@@ -4,8 +4,40 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Worker-Owned Coffee Directory | Support Economic Democracy</title>
-    <meta name="description" content="A directory of worker-owned coffee shops across the United States. Support local businesses that are owned and governed by their workers." />
+
+    <title>WorkerOwned — Find Worker-Owned Coffee Shops & Restaurants Near You</title>
+    <meta name="description" content="Find worker-owned coffee shops and restaurants across the US. Search by city to discover cooperatively owned cafes, bakeries, and restaurants in your area." />
+    <meta name="keywords" content="worker owned coffee shop, worker cooperative restaurant, worker owned cafe, cooperative coffee shop, employee owned restaurant, worker cooperative near me" />
+    <link rel="canonical" href="https://worker-owned.vercel.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://worker-owned.vercel.app/" />
+    <meta property="og:title" content="WorkerOwned — Find Worker-Owned Coffee Shops & Restaurants" />
+    <meta property="og:description" content="Find worker-owned coffee shops and restaurants across the US. Search by city to discover cooperatively owned cafes, bakeries, and restaurants in your area." />
+    <meta property="og:image" content="https://worker-owned.vercel.app/logo.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="WorkerOwned — Find Worker-Owned Coffee Shops & Restaurants" />
+    <meta name="twitter:description" content="Find worker-owned coffee shops and restaurants across the US. Search by city to discover cooperatively owned cafes and restaurants near you." />
+    <meta name="twitter:image" content="https://worker-owned.vercel.app/logo.png" />
+
+    <!-- JSON-LD: Website -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "WorkerOwned",
+      "url": "https://worker-owned.vercel.app/",
+      "description": "A directory of worker-owned coffee shops and restaurants across the United States.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://worker-owned.vercel.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

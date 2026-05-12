@@ -1,10 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import shopsData from '../data/shops.json'
 
 function BrowsePage({ category }) {
   const [search, setSearch] = useState('')
+
+  useEffect(() => {
+    if (category === 'coffee') {
+      document.title = 'Worker-Owned Coffee Shops in the US | WorkerOwned'
+      document.querySelector('meta[name="description"]')?.setAttribute('content',
+        'Browse all worker-owned coffee shops, cafes, and bakeries across the United States. Find cooperatively owned coffee near you.')
+    } else {
+      document.title = 'Worker-Owned Restaurants in the US | WorkerOwned'
+      document.querySelector('meta[name="description"]')?.setAttribute('content',
+        'Browse all worker-owned restaurants, brewpubs, and diners across the United States. Find cooperatively owned food near you.')
+    }
+  }, [category])
 
   const coffeeCount = shopsData.filter(s => s.category === 'coffee').length
   const restaurantCount = shopsData.filter(s => s.category === 'restaurant').length
