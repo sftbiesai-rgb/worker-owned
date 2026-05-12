@@ -55,7 +55,7 @@
   { "id": 54, "name": "Mirisata", "city": "Portland", "state": "OR", "location": "Portland, OR", "website": "mirisata.com", "category": "restaurant" },
   { "id": 55, "name": "Workers Tap", "city": "Portland", "state": "OR", "location": "Portland, OR", "website": "workerstap.com", "category": "restaurant" },
   { "id": 56, "name": "Art's Cafe", "city": "Springville", "state": "NY", "location": "Springville, NY", "website": "", "category": "restaurant" },
-  { "id": 57, "name": "Donna Cocktail Club", "city": "New York", "state": "NY", "location": "New York, NY", "website": "", "category": "restaurant" },
+  { "id": 57, "name": "Donna Cocktail Club", "city": "New York", "state": "NY", "location": "7 Cornelia St, New York, NY 10014", "website": "donnanyc.com", "category": "restaurant" },
   { "id": 58, "name": "Extra Extra Pizza", "city": "Buffalo", "state": "NY", "location": "Buffalo, NY", "website": "", "category": "restaurant" },
   { "id": 59, "name": "Flat Iron Cooperative", "city": "Bellows Falls", "state": "VT", "location": "Bellows Falls, VT", "website": "", "category": "restaurant" },
   { "id": 60, "name": "Ruby Wine", "city": "San Francisco", "state": "CA", "location": "San Francisco, CA", "website": "", "category": "restaurant" },
