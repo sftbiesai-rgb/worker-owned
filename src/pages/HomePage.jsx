@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Search, ExternalLink } from 'lucide-react'
+import { Search } from 'lucide-react'
 import shopsData from '../data/shops.json'
 
 function HomePage() {
@@ -62,21 +62,20 @@ function HomePage() {
                 <div className="space-y-2">
                   <p className="text-xs text-gray-400">{filteredShops.length} result{filteredShops.length !== 1 ? 's' : ''}</p>
                   {filteredShops.map(shop => (
-                    <div key={shop.id} className="bg-[#f5f5f7] rounded-xl px-4 py-3 flex items-center justify-between">
-                      <div className="min-w-0 flex-1">
-                        <div className="font-semibold text-sm truncate">{shop.name}</div>
-                        {shop.location && shop.location !== `${shop.city}, ${shop.state}` ? (
-                          <a href={`https://maps.google.com/?q=${encodeURIComponent(shop.location)}`} target="_blank" rel="noopener noreferrer" className="text-xs text-gray-500 hover:text-[#004cb9] truncate mt-0.5 block transition-colors">
-                            {shop.location}
-                          </a>
-                        ) : (
-                          <div className="text-xs text-gray-500 truncate mt-0.5">{shop.location}</div>
-                        )}
-                      </div>
-                      {shop.website && (
-                        <a href={shop.website.startsWith('http') ? shop.website : `https://${shop.website}`} target="_blank" rel="noopener noreferrer" className="text-[#BF0A30] hover:text-[#8a0721] transition-colors shrink-0 ml-3 p-1">
-                          <ExternalLink size={14} />
+                    <div key={shop.id} className="bg-[#f5f5f7] rounded-xl px-4 py-3">
+                      {shop.website ? (
+                        <a href={shop.website.startsWith('http') ? shop.website : `https://${shop.website}`} target="_blank" rel="noopener noreferrer" className="font-semibold text-sm truncate block text-[#BF0A30] hover:text-[#8a0721] transition-colors">
+                          {shop.name}
                         </a>
+                      ) : (
+                        <div className="font-semibold text-sm truncate text-[#BF0A30]">{shop.name}</div>
+                      )}
+                      {shop.location && shop.location !== `${shop.city}, ${shop.state}` ? (
+                        <a href={`https://maps.google.com/?q=${encodeURIComponent(shop.location)}`} target="_blank" rel="noopener noreferrer" className="text-xs text-[#004cb9] hover:underline truncate mt-0.5 block transition-colors">
+                          {shop.location}
+                        </a>
+                      ) : (
+                        <div className="text-xs text-[#004cb9] truncate mt-0.5">{shop.location}</div>
                       )}
                     </div>
                   ))}
