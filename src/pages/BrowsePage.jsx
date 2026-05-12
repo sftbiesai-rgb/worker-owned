@@ -42,6 +42,13 @@ function BrowsePage({ category }) {
             <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">
               Worker Owned
             </Link>
+            <img
+              src={category === 'coffee' ? '/logo-coffee.png' : '/logo-restaurant.png'}
+              alt=""
+              width="36"
+              height="36"
+              className="shrink-0"
+            />
           </div>
 
           <div className="flex gap-2 mb-5">
