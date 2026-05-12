@@ -30,12 +30,19 @@ function SubmitPage() {
       return
     }
     try {
-      await fetch('/api/submit', {
+      const res = await fetch('https://formspree.io/f/mjglzgwl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: formName, city: formCity, state: formState, website: formWebsite, email: formEmail, description: formDesc }),
       })
-    } catch (_) {}
+      if (!res.ok) {
+        setFormError('Something went wrong. Please try again.')
+        return
+      }
+    } catch (_) {
+      setFormError('Something went wrong. Please try again.')
+      return
+    }
     setSubmitted(true)
     setFormError('')
   }
