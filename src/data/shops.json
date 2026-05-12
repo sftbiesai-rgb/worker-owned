@@ -81,5 +81,10 @@
   { "id": 88, "name": "Pidgin Cooperative", "city": "Seattle", "state": "WA", "location": "3909 18th Ave W, Seattle, WA 98119", "website": "pidgincooperative.com", "category": "restaurant" },
   { "id": 89, "name": "Building New Hope Coffee", "city": "Pittsburgh", "state": "PA", "location": "6401 Penn Ave, Pittsburgh, PA 15206", "website": "buildingnewhope.org", "category": "coffee" },
   { "id": 90, "name": "Small World Food", "city": "Rochester", "state": "NY", "location": "936 Exchange St, Rochester, NY 14608", "website": "smallworldfood.com", "category": "coffee" },
-  { "id": 91, "name": "Small Format", "city": "Providence", "state": "RI", "location": "335 Wickenden St, Providence, RI 02903", "website": "smallformat.one", "category": "coffee" }
+  { "id": 91, "name": "Small Format", "city": "Providence", "state": "RI", "location": "335 Wickenden St, Providence, RI 02903", "website": "smallformat.one", "category": "coffee" },
+  { "id": 92, "name": "Boyfriend Co-op", "city": "Brooklyn", "state": "NY", "location": "1157 Myrtle Ave, Brooklyn, NY 11206", "website": "boyfriend.coop", "category": "coffee" },
+  { "id": 93, "name": "Sea & Soil", "city": "Brooklyn", "state": "NY", "location": "388 Atlantic Ave, Brooklyn, NY 11217", "website": "seaandsoilcoop.com", "category": "coffee" },
+  { "id": 94, "name": "Ke'nekt Cooperative", "city": "Atlanta", "state": "GA", "location": "1492 Ralph David Abernathy Blvd SW, Atlanta, GA 30310", "website": "thekenekt.com", "category": "coffee" },
+  { "id": 95, "name": "Cafe Olli", "city": "Portland", "state": "OR", "location": "3925 NE Martin Luther King Blvd, Portland, OR 97212", "website": "cafeolli.com", "category": "restaurant" },
+  { "id": 96, "name": "Local Sprouts Cooperative", "city": "Portland", "state": "ME", "location": "649 Congress St, Portland, ME 04101", "website": "localsproutscooperative.com", "category": "restaurant" }
 ]

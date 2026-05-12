@@ -29,7 +29,7 @@ function HomePage() {
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-10 sm:py-14 mt-8 sm:mt-0">
           <div className="flex items-center justify-center gap-3 mb-4">
             <img src="/logo.png" alt="" width="44" height="44" className="shrink-0" />
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">WorkerOwned</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Worker Owned</h1>
           </div>
           <p className="text-gray-400 text-sm mb-6">Get coffee or food at a worker-owned business, just enter a city or town</p>
 
