@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://worker-owned.vercel.app/sitemap.xml
+Sitemap: https://www.workerowned.info/sitemap.xml
