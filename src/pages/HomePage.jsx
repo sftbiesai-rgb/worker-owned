@@ -51,7 +51,7 @@ function HomePage() {
           </div>
 
           {!searchTerm && (
-            <Link to="/browse" className="text-sm text-blue-600 hover:text-[#BF0A30] transition-colors font-medium">
+            <Link to={category === 'coffee' ? '/coffee' : '/restaurants'} className="text-sm text-blue-600 hover:text-[#BF0A30] transition-colors font-medium">
               Browse all {categoryCount(category)} {category === 'coffee' ? 'coffee shops' : 'restaurants'} &rarr;
             </Link>
           )}

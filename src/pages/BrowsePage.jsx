@@ -1,72 +1,121 @@
-import { useState, useEffect } from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
-import { ExternalLink } from 'lucide-react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Search } from 'lucide-react'
 import shopsData from '../data/shops.json'
 
-const logoBlue = '#004cb9'
+function BrowsePage({ category }) {
+  const [search, setSearch] = useState('')
 
-function BrowsePage() {
-  const [searchParams, setSearchParams] = useSearchParams()
-  const category = searchParams.get('category') || 'coffee'
-  const [localSearch, setLocalSearch] = useState('')
+  const coffeeCount = shopsData.filter(s => s.category === 'coffee').length
+  const restaurantCount = shopsData.filter(s => s.category === 'restaurant').length
 
-  const categoryCount = (cat) => shopsData.filter(s => s.category === cat).length
-
-  const browseShops = shopsData
-    .filter(shop => shop.category === category)
-    .filter(shop =>
-      shop.city.toLowerCase().includes(localSearch.toLowerCase()) ||
-      shop.name.toLowerCase().includes(localSearch.toLowerCase()) ||
-      shop.state.toLowerCase().includes(localSearch.toLowerCase())
+  const shops = shopsData
+    .filter(s => s.category === category)
+    .filter(s =>
+      s.city.toLowerCase().includes(search.toLowerCase()) ||
+      s.name.toLowerCase().includes(search.toLowerCase()) ||
+      s.state.toLowerCase().includes(search.toLowerCase())
     )
     .sort((a, b) => a.state.localeCompare(b.state) || a.city.localeCompare(b.city))
 
+  const label = category === 'coffee' ? 'coffee shop' : 'restaurant'
+
   return (
-    <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans">
-      <header style={{backgroundColor: logoBlue}} className="text-white px-5 pt-8 pb-6">
-        <div className="max-w-2xl mx-auto">
-          <Link to="/" className="text-sm text-blue-200 hover:text-white transition-colors">&larr; Back</Link>
-          <h1 className="text-2xl sm:text-3xl font-bold mt-3 tracking-tight">All Worker-Owned {category === 'coffee' ? 'Coffee Shops' : 'Restaurants'}</h1>
-          <p className="text-blue-200 text-xs sm:text-sm mt-1">{categoryCount(category)} businesses across the US</p>
+    <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
+      <main className="flex-1 max-w-xl mx-auto w-full px-5 py-8 flex flex-col">
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-8">
+
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <img src="/logo.png" alt="" width="36" height="36" className="shrink-0" />
+            <Link to="/" className="text-2xl font-bold tracking-tight">
+              <span style={{color: '#BF0A30'}}>Worker</span><span style={{color: '#004cb9'}}>Owned</span>
+            </Link>
+          </div>
+
+          <div className="flex gap-2 mb-5">
+            <Link
+              to="/coffee"
+              className={`flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors ${
+                category === 'coffee'
+                  ? 'bg-[#004cb9] text-white'
+                  : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+              }`}
+            >
+              Coffee ({coffeeCount})
+            </Link>
+            <Link
+              to="/restaurants"
+              className={`flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors ${
+                category === 'restaurant'
+                  ? 'bg-[#004cb9] text-white'
+                  : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+              }`}
+            >
+              Restaurants ({restaurantCount})
+            </Link>
+          </div>
+
+          <div className="relative mb-4">
+            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Filter by city, state, or name"
+              className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+            />
+          </div>
+
+          <p className="text-xs text-gray-400 mb-3">
+            {shops.length} {label}{shops.length !== 1 ? 's' : ''}
+          </p>
+
+          <div className="space-y-2">
+            {shops.map(shop => (
+              <div key={shop.id} className="bg-[#f5f5f7] rounded-xl px-4 py-3">
+                {shop.website ? (
+                  <a
+                    href={shop.website.startsWith('http') ? shop.website : `https://${shop.website}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-sm block text-[#004cb9] hover:text-[#003a8c] transition-colors truncate"
+                  >
+                    {shop.name}
+                  </a>
+                ) : (
+                  <div className="font-semibold text-sm text-[#004cb9] truncate">{shop.name}</div>
+                )}
+                {shop.location && shop.location !== `${shop.city}, ${shop.state}` ? (
+                  <a
+                    href={`https://maps.google.com/?q=${encodeURIComponent(shop.location)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-[#BF0A30] hover:underline truncate mt-0.5 block transition-colors"
+                  >
+                    {shop.location}
+                  </a>
+                ) : (
+                  <div className="text-xs text-[#BF0A30] truncate mt-0.5">{shop.city}, {shop.state}</div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-      </header>
-      <main className="max-w-2xl mx-auto px-5 pb-16">
-        <div className="flex gap-2 mt-5 mb-5">
-          <select
-            value={category}
-            onChange={(e) => { setSearchParams({ category: e.target.value }); setLocalSearch('') }}
-            className="border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white text-gray-700"
-          >
-            <option value="coffee">Coffee Shops ({categoryCount('coffee')})</option>
-            <option value="restaurant">Restaurants ({categoryCount('restaurant')})</option>
-          </select>
-          <input
-            type="text"
-            placeholder="Filter by city or name"
-            className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
-            value={localSearch}
-            onChange={(e) => setLocalSearch(e.target.value)}
-          />
-        </div>
-        <div className="space-y-2">
-          {browseShops.map(shop => (
-            <div key={shop.id} className="bg-white rounded-xl border border-gray-200 px-4 py-3.5 shadow-sm">
-              {shop.website ? (
-                <a href={shop.website.startsWith('http') ? shop.website : `https://${shop.website}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5">
-                  <span className="font-semibold text-sm sm:text-base truncate hover:text-[#004cb9] transition-colors">{shop.name}</span>
-                  <ExternalLink size={12} className="text-gray-300 shrink-0" />
-                  <span className="text-xs sm:text-sm text-gray-400 truncate ml-1">&mdash; {shop.city}, {shop.state}</span>
-                </a>
-              ) : (
-                <span className="flex items-center gap-1.5">
-                  <span className="font-semibold text-sm sm:text-base truncate">{shop.name}</span>
-                  <span className="text-xs sm:text-sm text-gray-400 truncate">&mdash; {shop.city}, {shop.state}</span>
-                </span>
-              )}
-            </div>
-          ))}
+
+        <div className="mt-3 text-center">
+          <Link to="/" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+            &larr; Search
+          </Link>
         </div>
       </main>
+
+      <footer className="pb-6 pt-2 text-center">
+        <p className="text-xs text-gray-400">
+          <a href="https://www.usworker.coop/directory/" target="_blank" rel="noopener noreferrer" className="hover:text-[#004cb9] transition-colors">
+            Data via USFWC
+          </a>
+        </p>
+      </footer>
     </div>
   )
 }
