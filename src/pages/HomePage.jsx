@@ -5,7 +5,7 @@ import shopsData from '../data/shops.json'
 
 function HomePage() {
   useEffect(() => {
-    document.title = 'Worker Owned — Find Worker-Owned Coffee Shops & Restaurants Near You'
+    document.title = 'Worker-Owned — Find Worker-Owned Coffee Shops & Restaurants Near You'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
       'Find worker-owned coffee shops and restaurants across the US. Search by city to discover cooperatively owned cafes, bakeries, and restaurants in your area.')
   }, [])
@@ -38,7 +38,7 @@ function HomePage() {
               height="36"
               className="shrink-0"
             />
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Worker Owned</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Worker-Owned</h1>
           </div>
 
           <div className="flex gap-2 mb-4">

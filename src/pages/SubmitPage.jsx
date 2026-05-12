@@ -4,7 +4,7 @@ import { Send } from 'lucide-react'
 
 function SubmitPage() {
   useEffect(() => {
-    document.title = 'Submit a Worker-Owned Business | Worker Owned'
+    document.title = 'Submit a Worker-Owned Business | Worker-Owned'
   }, [])
 
   const [formName, setFormName] = useState('')
@@ -47,7 +47,7 @@ function SubmitPage() {
 
           <div className="flex items-center justify-center gap-3 mb-2">
             <img src="/logo.png" alt="" width="36" height="36" className="shrink-0" />
-            <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Worker Owned</Link>
+            <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Worker-Owned</Link>
           </div>
 
           {submitted ? (
