@@ -67,7 +67,7 @@ Sourced from the [USFWC Directory](https://www.usworker.coop/directory/) (474+ w
 - [ ] **Add Google Maps integration** — embed a map view showing all worker-owned shops
 - [ ] **Add category expansion** — include bakeries, grocery co-ops with cafes, breweries, etc.
 - [ ] **Add user ratings / reviews** — let visitors leave feedback on listed businesses
-- [ ] **Set up automated email notifications** — configure SMTP env vars in Vercel so submissions are emailed to sftbiesai@gmail.com
+- [ ] **Set up automated email notifications** — configure SMTP env vars in Vercel (`SMTP_HOST`, `SMTP_USER`, `SMTP_PASS`, `SUBMISSIONS_EMAIL`)
 
 ## Database Expansion Strategy
 

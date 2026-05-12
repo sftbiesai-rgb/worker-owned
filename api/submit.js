@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   }
 
   const message = {
-    to: 'sftbiesai@gmail.com',
+    to: process.env.SUBMISSIONS_EMAIL,
     from: process.env.SMTP_FROM || 'noreply@workerowned.com',
     subject: `New submission: ${name}`,
     text: `Business: ${name}
