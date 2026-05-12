@@ -5,14 +5,16 @@ import shopsData from '../data/shops.json'
 
 function HomePage() {
   useEffect(() => {
-    document.title = 'WorkerOwned — Find Worker-Owned Coffee Shops & Restaurants Near You'
+    document.title = 'Worker Owned — Find Worker-Owned Coffee Shops & Restaurants Near You'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
       'Find worker-owned coffee shops and restaurants across the US. Search by city to discover cooperatively owned cafes, bakeries, and restaurants in your area.')
   }, [])
+
   const [searchTerm, setSearchTerm] = useState('')
   const [category, setCategory] = useState('coffee')
 
-  const categoryCount = (cat) => shopsData.filter(s => s.category === cat).length
+  const coffeeCount = shopsData.filter(s => s.category === 'coffee').length
+  const restaurantCount = shopsData.filter(s => s.category === 'restaurant').length
 
   const filteredShops = shopsData
     .filter(shop => shop.category === category)
@@ -25,47 +27,51 @@ function HomePage() {
 
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
-      <main className="flex-1 max-w-xl mx-auto w-full px-5 flex flex-col items-center justify-center text-center">
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-10 sm:py-14 mt-8 sm:mt-0">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <img src="/logo.png" alt="" width="44" height="44" className="shrink-0" />
+      <main className="flex-1 max-w-xl mx-auto w-full px-5 py-8 flex flex-col">
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-8">
+
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <img src="/logo.png" alt="" width="36" height="36" className="shrink-0" />
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Worker Owned</h1>
           </div>
-          <p className="text-gray-400 text-sm mb-6">Get coffee or food at a worker-owned business, just enter a city or town</p>
+          <p className="text-gray-400 text-sm text-center mb-5">Get coffee or food at a worker-owned business</p>
 
-          <div className="w-full flex flex-col sm:flex-row gap-2 mb-4">
-            <select
-              value={category}
-              onChange={(e) => { setCategory(e.target.value); setSearchTerm('') }}
-              className="w-full sm:w-auto border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white text-gray-700"
+          <div className="flex gap-2 mb-4">
+            <button
+              onClick={() => { setCategory('coffee'); setSearchTerm('') }}
+              className={`flex-1 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                category === 'coffee' ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+              }`}
             >
-              <option value="coffee">Coffee Shops ({categoryCount('coffee')})</option>
-              <option value="restaurant">Restaurants ({categoryCount('restaurant')})</option>
-            </select>
-            <div className="relative flex-1">
-              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search by city, state, or name"
-                className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                autoFocus
-              />
-            </div>
+              Coffee ({coffeeCount})
+            </button>
+            <button
+              onClick={() => { setCategory('restaurant'); setSearchTerm('') }}
+              className={`flex-1 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                category === 'restaurant' ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+              }`}
+            >
+              Restaurants ({restaurantCount})
+            </button>
           </div>
 
-          {!searchTerm && (
-            <Link to={category === 'coffee' ? '/coffee' : '/restaurants'} className="text-sm text-blue-600 hover:text-[#BF0A30] transition-colors font-medium">
-              Browse all {categoryCount(category)} {category === 'coffee' ? 'coffee shops' : 'restaurants'} &rarr;
-            </Link>
-          )}
+          <div className="relative mb-4">
+            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Search by city, state, or name"
+              className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              autoFocus
+            />
+          </div>
 
           {searchTerm && (
-            <div className="w-full mt-4 text-left">
+            <div className="w-full text-left">
               {filteredShops.length > 0 ? (
                 <div className="space-y-2">
-                  <p className="text-xs text-gray-400">{filteredShops.length} result{filteredShops.length !== 1 ? 's' : ''}</p>
+                  <p className="text-xs text-gray-400 mb-2">{filteredShops.length} result{filteredShops.length !== 1 ? 's' : ''}</p>
                   {filteredShops.map(shop => (
                     <div key={shop.id} className="bg-[#f5f5f7] rounded-xl px-4 py-3">
                       {shop.website ? (
@@ -75,31 +81,35 @@ function HomePage() {
                       ) : (
                         <div className="font-semibold text-sm truncate text-[#004cb9]">{shop.name}</div>
                       )}
-                      {shop.location && shop.location !== `${shop.city}, ${shop.state}` ? (
-                        <a href={`https://maps.google.com/?q=${encodeURIComponent(shop.location)}`} target="_blank" rel="noopener noreferrer" className="text-xs text-[#BF0A30] hover:underline truncate mt-0.5 block transition-colors">
-                          {shop.location}
-                        </a>
-                      ) : (
-                        <div className="text-xs text-[#BF0A30] truncate mt-0.5">{shop.location}</div>
-                      )}
+                      <a href={`https://maps.google.com/?q=${encodeURIComponent(shop.location)}`} target="_blank" rel="noopener noreferrer" className="text-xs text-[#BF0A30] hover:underline truncate mt-0.5 block transition-colors">
+                        {shop.location}
+                      </a>
                     </div>
                   ))}
                 </div>
               ) : (
-                <p className="text-gray-500 text-sm text-center">No businesses found. Try a different search.</p>
+                <p className="text-gray-500 text-sm text-center py-4">No businesses found. Try a different search.</p>
               )}
+            </div>
+          )}
+
+          {(searchTerm ? filteredShops.length > 0 : true) && (
+            <div className={`text-center ${searchTerm ? 'mt-4 pt-4 border-t border-gray-100' : ''}`}>
+              <Link to={category === 'coffee' ? '/coffee' : '/restaurants'} className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+                Browse all {category === 'coffee' ? coffeeCount : restaurantCount} {category === 'coffee' ? 'coffee shops' : 'restaurants'} &rarr;
+              </Link>
             </div>
           )}
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 shadow-sm px-6 py-4 mt-3 w-full">
-          <Link to="/submit" className="text-sm text-blue-600 hover:text-[#BF0A30] transition-colors font-medium">
-            Submit a worker-owned coffee shop or restaurant &rarr;
+        <div className="mt-3 text-center">
+          <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+            Submit a worker-owned business &rarr;
           </Link>
         </div>
       </main>
 
-      <footer className="pb-6 pt-4 text-center">
+      <footer className="pb-6 pt-2 text-center">
         <p className="text-xs text-gray-400">
           <a href="https://www.usworker.coop/directory/" target="_blank" rel="noopener noreferrer" className="hover:text-[#004cb9] transition-colors">Data via USFWC</a>
         </p>
