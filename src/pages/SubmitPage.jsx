@@ -122,7 +122,7 @@ function SubmitPage() {
       <footer className="pb-6 pt-2 text-center">
         <p className="text-xs text-gray-400 mb-1">
           <a href="https://yourfairshare.info" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-[#004cb9] transition-colors">
-            <img src="/logo.png" alt="" className="h-3 w-3 inline" />
+            <img src="/logo-yourfairshare.png" alt="" className="h-3 w-3 inline" />
             Your Fair Share
           </a>
         </p>

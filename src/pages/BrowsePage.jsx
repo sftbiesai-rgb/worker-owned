@@ -38,10 +38,6 @@ function BrowsePage({ category }) {
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-8">
 
           <div className="flex items-center justify-center gap-3 mb-6">
-            <img src="/logo.png" alt="" width="36" height="36" className="shrink-0" />
-            <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">
-              Worker Owned
-            </Link>
             <img
               src={category === 'coffee' ? '/logo-coffee.png' : '/logo-restaurant.png'}
               alt=""
@@ -49,6 +45,9 @@ function BrowsePage({ category }) {
               height="36"
               className="shrink-0"
             />
+            <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">
+              Worker Owned
+            </Link>
           </div>
 
           <div className="flex gap-2 mb-5">
@@ -131,7 +130,7 @@ function BrowsePage({ category }) {
       <footer className="pb-6 pt-2 text-center">
         <p className="text-xs text-gray-400 mb-1">
           <a href="https://yourfairshare.info" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-[#004cb9] transition-colors">
-            <img src="/logo.png" alt="" className="h-3 w-3 inline" />
+            <img src="/logo-yourfairshare.png" alt="" className="h-3 w-3 inline" />
             Your Fair Share
           </a>
         </p>

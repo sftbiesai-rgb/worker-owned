@@ -31,8 +31,6 @@ function HomePage() {
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-8">
 
           <div className="flex items-center justify-center gap-3 mb-2">
-            <img src="/logo.png" alt="" width="36" height="36" className="shrink-0" />
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Worker Owned</h1>
             <img
               src={category === 'coffee' ? '/logo-coffee.png' : '/logo-restaurant.png'}
               alt=""
@@ -40,6 +38,7 @@ function HomePage() {
               height="36"
               className="shrink-0"
             />
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Worker Owned</h1>
           </div>
 
           <div className="flex gap-2 mb-4">
@@ -121,7 +120,7 @@ function HomePage() {
       <footer className="pb-6 pt-2 text-center">
         <p className="text-xs text-gray-400 mb-1">
           <a href="https://yourfairshare.info" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-[#004cb9] transition-colors">
-            <img src="/logo.png" alt="" className="h-3 w-3 inline" />
+            <img src="/logo-yourfairshare.png" alt="" className="h-3 w-3 inline" />
             Your Fair Share
           </a>
         </p>
