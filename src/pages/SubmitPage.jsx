@@ -49,7 +49,6 @@ function SubmitPage() {
             <img src="/logo.png" alt="" width="36" height="36" className="shrink-0" />
             <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Worker Owned</Link>
           </div>
-          <p className="text-gray-400 text-sm text-center mb-6">Know a worker-owned spot? Add it to the directory.</p>
 
           {submitted ? (
             <div className="text-center py-6">

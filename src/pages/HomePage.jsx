@@ -34,7 +34,6 @@ function HomePage() {
             <img src="/logo.png" alt="" width="36" height="36" className="shrink-0" />
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Worker Owned</h1>
           </div>
-          <p className="text-gray-400 text-sm text-center mb-5">Get coffee or food at a worker-owned business</p>
 
           <div className="flex gap-2 mb-4">
             <button
