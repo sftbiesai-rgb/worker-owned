@@ -53,7 +53,7 @@ function BrowsePage({ category }) {
                   : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
               }`}
             >
-              Coffee ({coffeeCount})
+              Coffee
             </Link>
             <Link
               to="/restaurants"
@@ -63,7 +63,7 @@ function BrowsePage({ category }) {
                   : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
               }`}
             >
-              Restaurants ({restaurantCount})
+              Restaurants
             </Link>
           </div>
 

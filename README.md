@@ -59,7 +59,7 @@ Sourced from the [USFWC Directory](https://www.usworker.coop/directory/) (474+ w
 
 ## Next Steps
 
-- [ ] **Update logo** — replace the Your Fair Share icon with a coffee mug icon
+- [ ] **Update logo / favicon** — replace the Your Fair Share icon with a custom coffee mug or co-op icon; update favicon to match
 - [ ] **Post on Reddit co-op groups** — share on r/cooperatives, r/coffee, and city-specific subreddits to invite submissions from the community
 - [ ] **Add Vercel Analytics / visit counters** — drop in the Vercel Analytics script or a simple counter to track page views
 - [ ] **SEO optimization** — add meta descriptions, Open Graph tags, sitemap.xml, structured data (Schema.org) for local business listings

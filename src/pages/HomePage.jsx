@@ -42,7 +42,7 @@ function HomePage() {
                 category === 'coffee' ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
               }`}
             >
-              Coffee ({coffeeCount})
+              Coffee
             </button>
             <button
               onClick={() => { setCategory('restaurant'); setSearchTerm('') }}
@@ -50,7 +50,7 @@ function HomePage() {
                 category === 'restaurant' ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
               }`}
             >
-              Restaurants ({restaurantCount})
+              Restaurants
             </button>
           </div>
 
