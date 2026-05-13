@@ -135,6 +135,34 @@ The submission form at `/submit` lets anyone nominate a business. Promote it on:
 ### Target: 200+ entries
 The US likely has 150-250 worker-owned coffee shops/cafes and 100-150 worker-owned restaurants. With systematic scraping of all regional directories, we should reach 200+.
 
+### Long-Term Vision: Multi-Sector Directory
+The ultimate goal is to expand beyond food & beverage into a comprehensive directory of **all worker-owned businesses** across the US, including:
+
+- **Clothing & Apparel** — worker-owned clothing brands, textile co-ops, tailor shops
+- **Bookstores** — worker-owned bookshops and radical literature distributors
+- **Home & Garden** — worker-owned landscaping, cleaning, handyperson services
+- **Healthcare & Wellness** — worker-owned clinics, therapy collectives, fitness co-ops
+- **Childcare & Education** — worker-owned daycare centers, tutoring co-ops, schools
+- **Retail & Grocery** — worker-owned markets, food co-ops, general stores
+- **Tech & Media** — worker-owned软件开发, design studios, publishing co-ops
+- **Manufacturing & Trades** — worker-owned factories, construction, breweries
+
+Each sector would get its own data file (`src/data/shops.json` → `src/data/` directory), category toggle, and filtered search. The USFWC directory (474+ entries across all industries) provides a foundation — once the food sector is mature, the same scraping and verification workflow can be applied sector by sector.
+
+### Long-Term Vision: Multi-Sector Directory
+The ultimate goal is to expand beyond food & beverage into a comprehensive directory of **all worker-owned businesses** across the US, including:
+
+- **Clothing & Apparel** — worker-owned clothing brands, textile co-ops, tailor shops
+- **Bookstores** — worker-owned bookshops and radical literature distributors
+- **Home & Garden** — worker-owned landscaping, cleaning, handyperson services
+- **Healthcare & Wellness** — worker-owned clinics, therapy collectives, fitness co-ops
+- **Childcare & Education** — worker-owned daycare centers, tutoring co-ops, schools
+- **Retail & Grocery** — worker-owned markets, food co-ops, general stores
+- **Tech & Media** — worker-owned软件开发, design studios, publishing co-ops
+- **Manufacturing & Trades** — worker-owned factories, construction, breweries
+
+Each sector would get its own data file (`src/data/shops.json` → `src/data/` directory), category toggle, and filtered search. The USFWC directory (474+ entries across all industries) provides a foundation — once the food sector is mature, the same scraping and verification workflow can be applied sector by sector.
+
 ## Adding More Data
 
 To add entries, edit `src/data/shops.json` with the schema:
