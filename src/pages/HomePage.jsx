@@ -30,16 +30,18 @@ function HomePage() {
       <main className="flex-1 max-w-xl mx-auto w-full px-5 py-8 flex flex-col">
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-8">
 
-          <div className="flex items-center justify-center gap-3 mb-2">
+          <div className="flex items-center justify-center gap-3 mb-1">
             <img
               src={category === 'coffee' ? '/logo-coffee.png' : '/logo-restaurant.png'}
-              alt=""
+              alt="Worker Owned"
               width="36"
               height="36"
               className="shrink-0"
             />
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Worker Owned</h1>
           </div>
+
+          <p className="text-center text-sm text-gray-500 mb-4">A directory of worker-owned coffee shops and restaurants across the US</p>
 
           <div className="flex gap-2 mb-4">
             <button

@@ -40,7 +40,7 @@ function BrowsePage({ category }) {
           <div className="flex items-center justify-center gap-3 mb-6">
             <img
               src={category === 'coffee' ? '/logo-coffee.png' : '/logo-restaurant.png'}
-              alt=""
+              alt="Worker Owned"
               width="36"
               height="36"
               className="shrink-0"
@@ -49,6 +49,15 @@ function BrowsePage({ category }) {
               Worker Owned
             </Link>
           </div>
+
+          <h2 className="text-center text-base font-semibold text-gray-700 mb-1">
+            {category === 'coffee' ? 'Worker-Owned Coffee Shops' : 'Worker-Owned Restaurants'}
+          </h2>
+          <p className="text-center text-sm text-gray-500 mb-4">
+            {category === 'coffee'
+              ? 'Cooperatively owned cafes, coffee shops, and bakeries across the United States'
+              : 'Cooperatively owned restaurants, diners, and brewpubs across the United States'}
+          </p>
 
           <div className="flex gap-2 mb-5">
             <Link
