@@ -86,5 +86,6 @@
   { "id": 93, "name": "Sea & Soil", "city": "Brooklyn", "state": "NY", "location": "388 Atlantic Ave, Brooklyn, NY 11217", "website": "seaandsoilcoop.com", "category": "coffee" },
   { "id": 94, "name": "Ke'nekt Cooperative", "city": "Atlanta", "state": "GA", "location": "1492 Ralph David Abernathy Blvd SW, Atlanta, GA 30310", "website": "thekenekt.com", "category": "coffee" },
   { "id": 95, "name": "Cafe Olli", "city": "Portland", "state": "OR", "location": "3925 NE Martin Luther King Blvd, Portland, OR 97212", "website": "cafeolli.com", "category": "restaurant" },
-  { "id": 96, "name": "Local Sprouts Cooperative", "city": "Portland", "state": "ME", "location": "649 Congress St, Portland, ME 04101", "website": "localsproutscooperative.com", "category": "restaurant" }
+  { "id": 96, "name": "Local Sprouts Cooperative", "city": "Portland", "state": "ME", "location": "649 Congress St, Portland, ME 04101", "website": "localsproutscooperative.com", "category": "restaurant" },
+  { "id": 97, "name": "Trident Cafe", "city": "Boulder", "state": "CO", "location": "940 Pearl St, Boulder, CO 80302", "website": "tridentcafe.com", "category": "coffee" }
 ]
