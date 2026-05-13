@@ -221,7 +221,7 @@
     "city": "San Francisco",
     "state": "CA",
     "location": "1268 Valencia St, San Francisco, CA 94110",
-    "website": "arizmendi-bakery.com",
+    "website": "arizmendibakery.com",
     "category": "coffee"
   },
   {
@@ -230,29 +230,20 @@
     "city": "Emeryville",
     "state": "CA",
     "location": "4301 San Pablo Ave, Emeryville, CA 94608",
-    "website": "arizmendi-bakery.org",
+    "website": "arizmendibakery.com",
     "category": "coffee"
   },
   {
     "id": 27,
-    "name": "Arizmendi Bakery (San Rafael)",
-    "city": "San Rafael",
-    "state": "CA",
-    "location": "1002 4th St, San Rafael, CA 94901",
-    "website": "arizmendisanrafael.com",
-    "category": "coffee"
-  },
-  {
-    "id": 28,
     "name": "Arizmendi Bakery (San Pablo Ave)",
     "city": "Berkeley",
     "state": "CA",
     "location": "1505 San Pablo Ave, Berkeley, CA 94702",
-    "website": "arizmendi-bakery-Pizzeria.com",
+    "website": "arizmendibakery.com",
     "category": "coffee"
   },
   {
-    "id": 29,
+    "id": 28,
     "name": "Mandala TeaHouse",
     "city": "Oakland",
     "state": "CA",
@@ -261,7 +252,7 @@
     "category": "coffee"
   },
   {
-    "id": 30,
+    "id": 29,
     "name": "Che Cafe Collective",
     "city": "La Jolla",
     "state": "CA",
@@ -270,7 +261,7 @@
     "category": "restaurant"
   },
   {
-    "id": 31,
+    "id": 30,
     "name": "BreadHive Bakery & Cafe",
     "city": "Buffalo",
     "state": "NY",
@@ -279,7 +270,7 @@
     "category": "coffee"
   },
   {
-    "id": 32,
+    "id": 31,
     "name": "Blue Scorcher Bakery & Cafe",
     "city": "Astoria",
     "state": "OR",
@@ -288,7 +279,7 @@
     "category": "coffee"
   },
   {
-    "id": 33,
+    "id": 32,
     "name": "Bellegarde Bakery",
     "city": "New Orleans",
     "state": "LA",
@@ -297,7 +288,7 @@
     "category": "coffee"
   },
   {
-    "id": 34,
+    "id": 33,
     "name": "Casa Nueva Restaurant & Cantina",
     "city": "Athens",
     "state": "OH",
@@ -306,7 +297,7 @@
     "category": "restaurant"
   },
   {
-    "id": 35,
+    "id": 34,
     "name": "May Day Cafe",
     "city": "Minneapolis",
     "state": "MN",
@@ -315,7 +306,7 @@
     "category": "coffee"
   },
   {
-    "id": 36,
+    "id": 35,
     "name": "Democracy Brewing",
     "city": "Boston",
     "state": "MA",
@@ -324,7 +315,7 @@
     "category": "restaurant"
   },
   {
-    "id": 37,
+    "id": 36,
     "name": "Equal Exchange",
     "city": "West Bridgewater",
     "state": "MA",
@@ -333,7 +324,7 @@
     "category": "coffee"
   },
   {
-    "id": 38,
+    "id": 37,
     "name": "Bluestockings Cooperative Cafe",
     "city": "New York",
     "state": "NY",
@@ -342,7 +333,7 @@
     "category": "coffee"
   },
   {
-    "id": 39,
+    "id": 38,
     "name": "Bound Together Bookstore",
     "city": "San Francisco",
     "state": "CA",
@@ -351,7 +342,7 @@
     "category": "coffee"
   },
   {
-    "id": 40,
+    "id": 39,
     "name": "Gimme! Coffee Cooperative",
     "city": "Ithaca",
     "state": "NY",
@@ -360,7 +351,7 @@
     "category": "coffee"
   },
   {
-    "id": 41,
+    "id": 40,
     "name": "Morning Bell Coffee Roasters",
     "city": "Ames",
     "state": "IA",
@@ -369,7 +360,7 @@
     "category": "coffee"
   },
   {
-    "id": 42,
+    "id": 41,
     "name": "Phoenix Coffee Co.",
     "city": "Cleveland",
     "state": "OH",
@@ -378,7 +369,7 @@
     "category": "coffee"
   },
   {
-    "id": 43,
+    "id": 42,
     "name": "Pagoda Cafe Cooperative",
     "city": "New Orleans",
     "state": "LA",
@@ -387,7 +378,7 @@
     "category": "restaurant"
   },
   {
-    "id": 44,
+    "id": 43,
     "name": "The Red Raven Espresso Parlor",
     "city": "Fargo",
     "state": "ND",
@@ -396,7 +387,7 @@
     "category": "coffee"
   },
   {
-    "id": 45,
+    "id": 44,
     "name": "Riverwest Co-op Grocery & Cafe",
     "city": "Milwaukee",
     "state": "WI",
@@ -405,7 +396,7 @@
     "category": "restaurant"
   },
   {
-    "id": 46,
+    "id": 45,
     "name": "Pattycake Bakery",
     "city": "Columbus",
     "state": "OH",
@@ -414,7 +405,7 @@
     "category": "coffee"
   },
   {
-    "id": 47,
+    "id": 46,
     "name": "Positively 3rd Street Bakery",
     "city": "Duluth",
     "state": "MN",
@@ -423,7 +414,7 @@
     "category": "coffee"
   },
   {
-    "id": 48,
+    "id": 47,
     "name": "Proof Bakery",
     "city": "Los Angeles",
     "state": "CA",
@@ -432,7 +423,7 @@
     "category": "coffee"
   },
   {
-    "id": 49,
+    "id": 48,
     "name": "Third Space Bakery Coop",
     "city": "Pittsburgh",
     "state": "PA",
@@ -441,7 +432,7 @@
     "category": "coffee"
   },
   {
-    "id": 50,
+    "id": 49,
     "name": "Woodbelly Pizza",
     "city": "Montpelier",
     "state": "VT",
@@ -450,7 +441,7 @@
     "category": "restaurant"
   },
   {
-    "id": 51,
+    "id": 50,
     "name": "Niles Pie Company",
     "city": "Union City",
     "state": "CA",
@@ -459,7 +450,7 @@
     "category": "coffee"
   },
   {
-    "id": 52,
+    "id": 51,
     "name": "Mirisata",
     "city": "Portland",
     "state": "OR",
@@ -468,7 +459,7 @@
     "category": "restaurant"
   },
   {
-    "id": 53,
+    "id": 52,
     "name": "Workers Tap",
     "city": "Portland",
     "state": "OR",
@@ -477,7 +468,7 @@
     "category": "restaurant"
   },
   {
-    "id": 54,
+    "id": 53,
     "name": "Art's Cafe",
     "city": "Springville",
     "state": "NY",
@@ -486,7 +477,7 @@
     "category": "restaurant"
   },
   {
-    "id": 55,
+    "id": 54,
     "name": "Donna Cocktail Club",
     "city": "New York",
     "state": "NY",
@@ -495,7 +486,7 @@
     "category": "restaurant"
   },
   {
-    "id": 56,
+    "id": 55,
     "name": "Extra Extra Pizza",
     "city": "Buffalo",
     "state": "NY",
@@ -504,7 +495,7 @@
     "category": "restaurant"
   },
   {
-    "id": 57,
+    "id": 56,
     "name": "Flat Iron Cooperative",
     "city": "Bellows Falls",
     "state": "VT",
@@ -513,7 +504,7 @@
     "category": "restaurant"
   },
   {
-    "id": 58,
+    "id": 57,
     "name": "Ruby Wine",
     "city": "San Francisco",
     "state": "CA",
@@ -522,7 +513,7 @@
     "category": "restaurant"
   },
   {
-    "id": 59,
+    "id": 58,
     "name": "Nick's Pizza and Bakery",
     "city": "Oakland",
     "state": "CA",
@@ -531,7 +522,7 @@
     "category": "restaurant"
   },
   {
-    "id": 60,
+    "id": 59,
     "name": "Common Ground Cafe",
     "city": "Baltimore",
     "state": "MD",
@@ -540,7 +531,7 @@
     "category": "coffee"
   },
   {
-    "id": 61,
+    "id": 60,
     "name": "Radical Bean Cooperative",
     "city": "Cincinnati",
     "state": "OH",
@@ -549,7 +540,7 @@
     "category": "coffee"
   },
   {
-    "id": 62,
+    "id": 61,
     "name": "A Slice of New York",
     "city": "San Jose",
     "state": "CA",
@@ -558,7 +549,7 @@
     "category": "restaurant"
   },
   {
-    "id": 63,
+    "id": 62,
     "name": "Cafe Reynard",
     "city": "Malden",
     "state": "MA",
@@ -567,7 +558,7 @@
     "category": "coffee"
   },
   {
-    "id": 64,
+    "id": 63,
     "name": "New Leaf Espresso",
     "city": "Somerville",
     "state": "MA",
@@ -576,7 +567,7 @@
     "category": "coffee"
   },
   {
-    "id": 65,
+    "id": 64,
     "name": "Full Stop Filling Station",
     "city": "Louisville",
     "state": "KY",
@@ -585,7 +576,7 @@
     "category": "coffee"
   },
   {
-    "id": 66,
+    "id": 65,
     "name": "Hasta Muerte Coffee",
     "city": "Oakland",
     "state": "CA",
@@ -594,7 +585,7 @@
     "category": "coffee"
   },
   {
-    "id": 67,
+    "id": 66,
     "name": "Oceanview Diner",
     "city": "Berkeley",
     "state": "CA",
@@ -603,7 +594,7 @@
     "category": "restaurant"
   },
   {
-    "id": 68,
+    "id": 67,
     "name": "A Taste of Denmark Bakery",
     "city": "Oakland",
     "state": "CA",
@@ -612,7 +603,7 @@
     "category": "coffee"
   },
   {
-    "id": 69,
+    "id": 68,
     "name": "Sliver Pizzeria",
     "city": "Berkeley",
     "state": "CA",
@@ -621,7 +612,7 @@
     "category": "restaurant"
   },
   {
-    "id": 70,
+    "id": 69,
     "name": "Dimond Slice Pizzeria",
     "city": "Oakland",
     "state": "CA",
@@ -630,7 +621,7 @@
     "category": "restaurant"
   },
   {
-    "id": 71,
+    "id": 70,
     "name": "Sankofa Cafe",
     "city": "Bridgeport",
     "state": "CT",
@@ -639,7 +630,7 @@
     "category": "coffee"
   },
   {
-    "id": 72,
+    "id": 71,
     "name": "Griffin Coffee",
     "city": "Edgewater",
     "state": "CO",
@@ -648,7 +639,7 @@
     "category": "coffee"
   },
   {
-    "id": 73,
+    "id": 72,
     "name": "Mera Kitchen Collective",
     "city": "Baltimore",
     "state": "MD",
@@ -657,7 +648,7 @@
     "category": "restaurant"
   },
   {
-    "id": 74,
+    "id": 73,
     "name": "New Deal Cafe",
     "city": "Greenbelt",
     "state": "MD",
@@ -666,7 +657,7 @@
     "category": "restaurant"
   },
   {
-    "id": 75,
+    "id": 74,
     "name": "Broken Clock Brewing Cooperative",
     "city": "Minneapolis",
     "state": "MN",
@@ -675,7 +666,7 @@
     "category": "restaurant"
   },
   {
-    "id": 76,
+    "id": 75,
     "name": "Drifa Brewing Company",
     "city": "Marquette",
     "state": "MI",
@@ -684,7 +675,7 @@
     "category": "restaurant"
   },
   {
-    "id": 77,
+    "id": 76,
     "name": "Kusanya Cafe",
     "city": "Chicago",
     "state": "IL",
@@ -693,7 +684,7 @@
     "category": "coffee"
   },
   {
-    "id": 78,
+    "id": 77,
     "name": "Patty Pan Cooperative",
     "city": "Shoreline",
     "state": "WA",
@@ -702,7 +693,7 @@
     "category": "restaurant"
   },
   {
-    "id": 79,
+    "id": 78,
     "name": "Pidgin Cooperative",
     "city": "Seattle",
     "state": "WA",
@@ -711,7 +702,7 @@
     "category": "restaurant"
   },
   {
-    "id": 80,
+    "id": 79,
     "name": "Building New Hope Coffee",
     "city": "Pittsburgh",
     "state": "PA",
@@ -720,7 +711,7 @@
     "category": "coffee"
   },
   {
-    "id": 81,
+    "id": 80,
     "name": "Small World Food",
     "city": "Rochester",
     "state": "NY",
@@ -729,7 +720,7 @@
     "category": "coffee"
   },
   {
-    "id": 82,
+    "id": 81,
     "name": "Small Format",
     "city": "Providence",
     "state": "RI",
@@ -738,7 +729,7 @@
     "category": "coffee"
   },
   {
-    "id": 83,
+    "id": 82,
     "name": "Boyfriend Co-op",
     "city": "Brooklyn",
     "state": "NY",
@@ -747,7 +738,7 @@
     "category": "coffee"
   },
   {
-    "id": 84,
+    "id": 83,
     "name": "Sea & Soil",
     "city": "Brooklyn",
     "state": "NY",
@@ -756,7 +747,7 @@
     "category": "coffee"
   },
   {
-    "id": 85,
+    "id": 84,
     "name": "Ke'nekt Cooperative",
     "city": "Atlanta",
     "state": "GA",
@@ -765,7 +756,7 @@
     "category": "coffee"
   },
   {
-    "id": 86,
+    "id": 85,
     "name": "Cafe Olli",
     "city": "Portland",
     "state": "OR",
@@ -774,7 +765,7 @@
     "category": "restaurant"
   },
   {
-    "id": 87,
+    "id": 86,
     "name": "Local Sprouts Cooperative",
     "city": "Portland",
     "state": "ME",
@@ -783,7 +774,7 @@
     "category": "restaurant"
   },
   {
-    "id": 88,
+    "id": 87,
     "name": "Trident Cafe",
     "city": "Boulder",
     "state": "CO",
