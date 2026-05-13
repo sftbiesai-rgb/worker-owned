@@ -1,90 +1,794 @@
 [
-  { "id": 1, "name": "White Electric / CUPS Cooperative", "city": "Providence", "state": "RI", "location": "711 Westminster St, Providence, RI 02903", "website": "whiteelectriccoffee.com", "category": "coffee" },
-  { "id": 2, "name": "Circus Cooperative Cafe", "city": "Cambridge", "state": "MA", "location": "80 Sherman St, Cambridge, MA 02140", "website": "circus.coop", "category": "coffee" },
-  { "id": 3, "name": "Red Emma's Bookstore Coffeehouse", "city": "Baltimore", "state": "MD", "location": "3128 Greenmount Ave, Baltimore, MD 21218", "website": "redemmas.org", "category": "restaurant" },
-  { "id": 4, "name": "Slow Bloom Coffee Cooperative", "city": "Redlands", "state": "CA", "location": "420 E State St, Redlands, CA 92373", "website": "slowbloomcoffee.com", "category": "coffee" },
-  { "id": 5, "name": "Burial Grounds Coffee", "city": "Olympia", "state": "WA", "location": "601 Capitol Way S, Olympia, WA 98501", "website": "burialgroundscoffee.com", "category": "coffee" },
-  { "id": 6, "name": "New Moon Cooperative", "city": "Olympia", "state": "WA", "location": "113 4th Ave W, Olympia, WA 98501", "website": "newmooncooperative.com", "category": "coffee" },
-  { "id": 7, "name": "Matchbox Coffeeshop", "city": "Minneapolis", "state": "MN", "location": "1306 4th St SE, Minneapolis, MN 55414", "website": "matchboxminneapolis.com", "category": "coffee" },
-  { "id": 8, "name": "Seward Community Cafe", "city": "Minneapolis", "state": "MN", "location": "2129 E Franklin Ave, Minneapolis, MN 55404", "website": "sewardcafe.com", "category": "restaurant" },
-  { "id": 9, "name": "Afterglow Coffee Cooperative", "city": "Richmond", "state": "VA", "location": "1719 Summit Ave, Richmond, VA 23230", "website": "afterglowcoffee.com", "category": "coffee" },
-  { "id": 10, "name": "Gray Owl Coffee", "city": "Norman", "state": "OK", "location": "223 E Gray St, Norman, OK 73069", "website": "grayowlcoffee.com", "category": "coffee" },
-  { "id": 11, "name": "Dean's Beans Organic Coffee", "city": "Orange", "state": "MA", "location": "50 R.W. Moore Ave, Orange, MA 01364", "website": "deansbeans.com", "category": "coffee" },
-  { "id": 12, "name": "Arizmendi Bakery (9th Ave)", "city": "San Francisco", "state": "CA", "location": "1331 9th Ave, San Francisco, CA 94122", "website": "arizmendibakery.com", "category": "coffee" },
-  { "id": 13, "name": "Joe Squared", "city": "Baltimore", "state": "MD", "location": "33 W North Ave, Baltimore, MD 21201", "website": "joesquared.com", "category": "restaurant" },
-  { "id": 14, "name": "Firestorm Books & Coffee", "city": "Asheville", "state": "NC", "location": "1022 Haywood Rd, Asheville, NC 28806", "website": "firestorm.coop", "category": "coffee" },
-  { "id": 15, "name": "Hard Times Cafe", "city": "Minneapolis", "state": "MN", "location": "1821 Riverside Ave, Minneapolis, MN 55454", "website": "hardtimescafe.shop", "category": "restaurant" },
-  { "id": 16, "name": "Thread Coffee Roasters", "city": "Baltimore", "state": "MD", "location": "12 W North Ave, Baltimore, MD 21201", "website": "threadcoffee.com", "category": "coffee" },
-  { "id": 18, "name": "Collective Espresso", "city": "Cincinnati", "state": "OH", "location": "207 Woodward St, Cincinnati, OH 45202", "website": "collectiveespresso.com", "category": "coffee" },
-  { "id": 19, "name": "Just Coffee Cooperative", "city": "Madison", "state": "WI", "location": "1500 Gilson St, Madison, WI 53715", "website": "justcoffee.coop", "category": "coffee" },
-  { "id": 20, "name": "Higher Grounds Trading Co.", "city": "Traverse City", "state": "MI", "location": "806 Red Dr, Traverse City, MI 49684", "website": "highergroundstrading.com", "category": "coffee" },
-  { "id": 21, "name": "Little Grill Collective", "city": "Harrisonburg", "state": "VA", "location": "621 N Main St, Harrisonburg, VA 22802", "website": "littlegrillcollective.com", "category": "restaurant" },
-  { "id": 22, "name": "Cheese Board Collective", "city": "Berkeley", "state": "CA", "location": "1504 Shattuck Ave, Berkeley, CA 94709", "website": "cheeseboardcollective.coop", "category": "coffee" },
-  { "id": 23, "name": "Nabolom Bakery + Pizzeria", "city": "Berkeley", "state": "CA", "location": "2708 Russell St, Berkeley, CA 94705", "website": "nabolom.com", "category": "coffee" },
-  { "id": 24, "name": "Rock City Coffee", "city": "Rockland", "state": "ME", "location": "316 Main St, Rockland, ME 04841", "website": "rockcitycoffee.com", "category": "coffee" },
-  { "id": 25, "name": "Arizmendi Bakery (Lakeshore)", "city": "Oakland", "state": "CA", "location": "3267 Lakeshore Ave, Oakland, CA 94610", "website": "arizmendibakery.com", "category": "coffee" },
-  { "id": 26, "name": "Arizmendi Bakery (Valencia)", "city": "San Francisco", "state": "CA", "location": "1268 Valencia St, San Francisco, CA 94110", "website": "arizmendi-bakery.com", "category": "coffee" },
-  { "id": 27, "name": "Arizmendi Bakery (Emeryville)", "city": "Emeryville", "state": "CA", "location": "4301 San Pablo Ave, Emeryville, CA 94608", "website": "arizmendi-bakery.org", "category": "coffee" },
-  { "id": 28, "name": "Arizmendi Bakery (San Rafael)", "city": "San Rafael", "state": "CA", "location": "1002 4th St, San Rafael, CA 94901", "website": "arizmendisanrafael.com", "category": "coffee" },
-  { "id": 29, "name": "Arizmendi Bakery (San Pablo Ave)", "city": "Berkeley", "state": "CA", "location": "1505 San Pablo Ave, Berkeley, CA 94702", "website": "arizmendi-bakery-Pizzeria.com", "category": "coffee" },
-  { "id": 30, "name": "Mandala TeaHouse", "city": "Oakland", "state": "CA", "location": "717 Washington St, Oakland, CA 94607", "website": "mandala.coop", "category": "coffee" },
-  { "id": 31, "name": "Che Cafe Collective", "city": "La Jolla", "state": "CA", "location": "9500 Gilman Dr, La Jolla, CA 92093", "website": "checafe.org", "category": "restaurant" },
-  { "id": 32, "name": "BreadHive Bakery & Cafe", "city": "Buffalo", "state": "NY", "location": "402 Connecticut St, Buffalo, NY 14213", "website": "breadhive.com", "category": "coffee" },
-  { "id": 33, "name": "Blue Scorcher Bakery & Cafe", "city": "Astoria", "state": "OR", "location": "1493 Duane St, Astoria, OR 97103", "website": "bluescorcher.com", "category": "coffee" },
-  { "id": 34, "name": "Bellegarde Bakery", "city": "New Orleans", "state": "LA", "location": "2900 Gravier St, New Orleans, LA 70119", "website": "bellegarde.com", "category": "coffee" },
-  { "id": 35, "name": "Casa Nueva Restaurant & Cantina", "city": "Athens", "state": "OH", "location": "6 W State St, Athens, OH 45701", "website": "casanueva.com", "category": "restaurant" },
-  { "id": 36, "name": "May Day Cafe", "city": "Minneapolis", "state": "MN", "location": "3440 Bloomington Ave, Minneapolis, MN 55407", "website": "maydaycafe.coop", "category": "coffee" },
-  { "id": 37, "name": "Democracy Brewing", "city": "Boston", "state": "MA", "location": "29-35 Temple Pl, Boston, MA 02111", "website": "democracybrewing.com", "category": "restaurant" },
-  { "id": 38, "name": "Equal Exchange", "city": "West Bridgewater", "state": "MA", "location": "50 R.W. Moore Ave, West Bridgewater, MA 02379", "website": "equalexchange.coop", "category": "coffee" },
-  { "id": 39, "name": "Bluestockings Cooperative Cafe", "city": "New York", "state": "NY", "location": "116 Suffolk St, New York, NY 10002", "website": "bluestockings.com", "category": "coffee" },
-  { "id": 40, "name": "Bound Together Bookstore", "city": "San Francisco", "state": "CA", "location": "1369 Haight St, San Francisco, CA 94117", "website": "boundtogetherbooks.com", "category": "coffee" },
-  { "id": 41, "name": "Gimme! Coffee Cooperative", "city": "Ithaca", "state": "NY", "location": "430 N Cayuga St, Ithaca, NY 14850", "website": "gimmecoffee.com", "category": "coffee" },
-  { "id": 42, "name": "Morning Bell Coffee Roasters", "city": "Ames", "state": "IA", "location": "111 Main St, Ames, IA 50010", "website": "morningbellcoffeeroasters.square.site", "category": "coffee" },
-  { "id": 43, "name": "Phoenix Coffee Co.", "city": "Cleveland", "state": "OH", "location": "2211 Hamilton Ave, Cleveland, OH 44114", "website": "phoenixcoffee.com", "category": "coffee" },
-  { "id": 44, "name": "Pagoda Cafe Cooperative", "city": "New Orleans", "state": "LA", "location": "1430 N Dorgenois St, New Orleans, LA 70119", "website": "pagodacafe.net", "category": "restaurant" },
-  { "id": 45, "name": "The Red Raven Espresso Parlor", "city": "Fargo", "state": "ND", "location": "916 Main Ave, Fargo, ND 58103", "website": "redravenespressoparlor.com", "category": "coffee" },
-  { "id": 47, "name": "Riverwest Co-op Grocery & Cafe", "city": "Milwaukee", "state": "WI", "location": "733 E Clarke St, Milwaukee, WI 53212", "website": "riverwest.coop", "category": "restaurant" },
-  { "id": 48, "name": "Pattycake Bakery", "city": "Columbus", "state": "OH", "location": "3870 N High St, Columbus, OH 43214", "website": "pattycakebakery.com", "category": "coffee" },
-  { "id": 49, "name": "Positively 3rd Street Bakery", "city": "Duluth", "state": "MN", "location": "1202 E 3rd St, Duluth, MN 55805", "website": "3rdstreetbakery.com", "category": "coffee" },
-  { "id": 50, "name": "Proof Bakery", "city": "Los Angeles", "state": "CA", "location": "3156 Glendale Blvd, Los Angeles, CA 90039", "website": "proofbakeryla.com", "category": "coffee" },
-  { "id": 51, "name": "Third Space Bakery Coop", "city": "Pittsburgh", "state": "PA", "location": "5349 Penn Ave, Pittsburgh, PA 15224", "website": "thirdspacebakery.com", "category": "coffee" },
-  { "id": 52, "name": "Woodbelly Pizza", "city": "Montpelier", "state": "VT", "location": "79 Barre St, Montpelier, VT 05602", "website": "woodbellypizza.com", "category": "restaurant" },
-  { "id": 53, "name": "Niles Pie Company", "city": "Union City", "state": "CA", "location": "32990 Alvarado-Niles Rd, Union City, CA 94587", "website": "nilespie.com", "category": "coffee" },
-  { "id": 54, "name": "Mirisata", "city": "Portland", "state": "OR", "location": "2420 SE Belmont St, Portland, OR 97214", "website": "mirisata.com", "category": "restaurant" },
-  { "id": 55, "name": "Workers Tap", "city": "Portland", "state": "OR", "location": "101 SE 12th Ave, Portland, OR 97214", "website": "workerstap.com", "category": "restaurant" },
-  { "id": 56, "name": "Art's Cafe", "city": "Springville", "state": "NY", "location": "5 E Main St, Springville, NY 14141", "website": "artscafespringville.com", "category": "restaurant" },
-  { "id": 57, "name": "Donna Cocktail Club", "city": "New York", "state": "NY", "location": "7 Cornelia St, New York, NY 10014", "website": "donnanyc.com", "category": "restaurant" },
-  { "id": 58, "name": "Extra Extra Pizza", "city": "Buffalo", "state": "NY", "location": "549 W Utica St, Buffalo, NY 14213", "website": "extraextrapizza.com", "category": "restaurant" },
-  { "id": 59, "name": "Flat Iron Cooperative", "city": "Bellows Falls", "state": "VT", "location": "51 The Square, Bellows Falls, VT 05101", "website": "flatiron.coop", "category": "restaurant" },
-  { "id": 60, "name": "Ruby Wine", "city": "San Francisco", "state": "CA", "location": "1419 18th St, San Francisco, CA 94107", "website": "rubywinesf.com", "category": "restaurant" },
-  { "id": 61, "name": "Nick's Pizza and Bakery", "city": "Oakland", "state": "CA", "location": "6400 Shattuck Ave, Oakland, CA 94609", "website": "oaklandstylepizza.com", "category": "restaurant" },
-  { "id": 62, "name": "Common Ground Cafe", "city": "Baltimore", "state": "MD", "location": "3543 Chestnut Ave, Baltimore, MD 21211", "website": "commongroundhampden.com", "category": "coffee" },
-  { "id": 63, "name": "Radical Bean Cooperative", "city": "Cincinnati", "state": "OH", "location": "123 E McMicken Ave, Cincinnati, OH 45202", "website": "radicalbeancooperative.com", "category": "coffee" },
-  { "id": 64, "name": "A Slice of New York", "city": "San Jose", "state": "CA", "location": "3443 Stevens Creek Blvd, San Jose, CA 95117", "website": "asony.com", "category": "restaurant" },
-  { "id": 65, "name": "Cafe Reynard", "city": "Malden", "state": "MA", "location": "89 Commercial St, Malden, MA 02148", "website": "cafe-reynard.com", "category": "coffee" },
-  { "id": 66, "name": "New Leaf Espresso", "city": "Somerville", "state": "MA", "location": "310 Highland Ave, Somerville, MA 02144", "website": "newleafespresso.com", "category": "coffee" },
-  { "id": 67, "name": "Full Stop Filling Station", "city": "Louisville", "state": "KY", "location": "1132 E St Catherine St, Louisville, KY 40204", "website": "fullstopstation.com", "category": "coffee" },
-  { "id": 68, "name": "Hasta Muerte Coffee", "city": "Oakland", "state": "CA", "location": "2701 Fruitvale Ave, Oakland, CA 94601", "website": "hastamuerta.coffee", "category": "coffee" },
-  { "id": 69, "name": "Oceanview Diner", "city": "Berkeley", "state": "CA", "location": "1807 Fourth St, Berkeley, CA 94710", "website": "oceanviewonfourth.com", "category": "restaurant" },
-  { "id": 70, "name": "A Taste of Denmark Bakery", "city": "Oakland", "state": "CA", "location": "3401 Telegraph Ave, Oakland, CA 94609", "website": "tastedenmark.com", "category": "coffee" },
-  { "id": 71, "name": "Sliver Pizzeria", "city": "Berkeley", "state": "CA", "location": "2132 Center St, Berkeley, CA 94704", "website": "sliverpizzeria.com", "category": "restaurant" },
-  { "id": 72, "name": "Dimond Slice Pizzeria", "city": "Oakland", "state": "CA", "location": "2208 MacArthur Blvd, Oakland, CA 94602", "website": "dimondpizza.com", "category": "restaurant" },
-  { "id": 73, "name": "Sankofa Cafe", "city": "Bridgeport", "state": "CT", "location": "1001 Main St, Bridgeport, CT 06604", "website": "sankofa.cafe", "category": "coffee" },
-  { "id": 74, "name": "Griffin Coffee", "city": "Edgewater", "state": "CO", "location": "5224 W 25th Ave, Edgewater, CO 80214", "website": "griffincoffeeshop.com", "category": "coffee" },
-  { "id": 76, "name": "Mera Kitchen Collective", "city": "Baltimore", "state": "MD", "location": "1301 N Calvert St, Baltimore, MD 21202", "website": "mera.kitchen", "category": "restaurant" },
-  { "id": 80, "name": "New Deal Cafe", "city": "Greenbelt", "state": "MD", "location": "113 Centerway, Greenbelt, MD 20770", "website": "newdealcafe.com", "category": "restaurant" },
-  { "id": 81, "name": "Broken Clock Brewing Cooperative", "city": "Minneapolis", "state": "MN", "location": "1712 Marshall St NE, Minneapolis, MN 55413", "website": "brokenclockbrew.com", "category": "restaurant" },
-  { "id": 82, "name": "Drifa Brewing Company", "city": "Marquette", "state": "MI", "location": "501 S Lake St, Marquette, MI 49855", "website": "drifabrewingcompany.com", "category": "restaurant" },
-  { "id": 86, "name": "Kusanya Cafe", "city": "Chicago", "state": "IL", "location": "825 W 69th St, Chicago, IL 60621", "website": "kusanyacafe.org", "category": "coffee" },
-  { "id": 87, "name": "Patty Pan Cooperative", "city": "Shoreline", "state": "WA", "location": "15550 27th Ave NE, Shoreline, WA 98155", "website": "pattypan.coop", "category": "restaurant" },
-  { "id": 88, "name": "Pidgin Cooperative", "city": "Seattle", "state": "WA", "location": "3909 18th Ave W, Seattle, WA 98119", "website": "pidgincooperative.com", "category": "restaurant" },
-  { "id": 89, "name": "Building New Hope Coffee", "city": "Pittsburgh", "state": "PA", "location": "6401 Penn Ave, Pittsburgh, PA 15206", "website": "buildingnewhope.org", "category": "coffee" },
-  { "id": 90, "name": "Small World Food", "city": "Rochester", "state": "NY", "location": "936 Exchange St, Rochester, NY 14608", "website": "smallworldfood.com", "category": "coffee" },
-  { "id": 91, "name": "Small Format", "city": "Providence", "state": "RI", "location": "335 Wickenden St, Providence, RI 02903", "website": "smallformat.one", "category": "coffee" },
-  { "id": 92, "name": "Boyfriend Co-op", "city": "Brooklyn", "state": "NY", "location": "1157 Myrtle Ave, Brooklyn, NY 11206", "website": "boyfriend.coop", "category": "coffee" },
-  { "id": 93, "name": "Sea & Soil", "city": "Brooklyn", "state": "NY", "location": "388 Atlantic Ave, Brooklyn, NY 11217", "website": "seaandsoilcoop.com", "category": "coffee" },
-  { "id": 94, "name": "Ke'nekt Cooperative", "city": "Atlanta", "state": "GA", "location": "1492 Ralph David Abernathy Blvd SW, Atlanta, GA 30310", "website": "thekenekt.com", "category": "coffee" },
-  { "id": 95, "name": "Cafe Olli", "city": "Portland", "state": "OR", "location": "3925 NE Martin Luther King Blvd, Portland, OR 97212", "website": "cafeolli.com", "category": "restaurant" },
-  { "id": 96, "name": "Local Sprouts Cooperative", "city": "Portland", "state": "ME", "location": "649 Congress St, Portland, ME 04101", "website": "localsproutscooperative.com", "category": "restaurant" },
-  { "id": 97, "name": "Trident Cafe", "city": "Boulder", "state": "CO", "location": "940 Pearl St, Boulder, CO 80302", "website": "tridentcafe.com", "category": "coffee" }
+  {
+    "id": 1,
+    "name": "White Electric / CUPS Cooperative",
+    "city": "Providence",
+    "state": "RI",
+    "location": "711 Westminster St, Providence, RI 02903",
+    "website": "whiteelectriccoffee.com",
+    "category": "coffee"
+  },
+  {
+    "id": 2,
+    "name": "Circus Cooperative Cafe",
+    "city": "Cambridge",
+    "state": "MA",
+    "location": "80 Sherman St, Cambridge, MA 02140",
+    "website": "circus.coop",
+    "category": "coffee"
+  },
+  {
+    "id": 3,
+    "name": "Red Emma's Bookstore Coffeehouse",
+    "city": "Baltimore",
+    "state": "MD",
+    "location": "3128 Greenmount Ave, Baltimore, MD 21218",
+    "website": "redemmas.org",
+    "category": "restaurant"
+  },
+  {
+    "id": 4,
+    "name": "Slow Bloom Coffee Cooperative",
+    "city": "Redlands",
+    "state": "CA",
+    "location": "420 E State St, Redlands, CA 92373",
+    "website": "slowbloomcoffee.com",
+    "category": "coffee"
+  },
+  {
+    "id": 5,
+    "name": "Burial Grounds Coffee",
+    "city": "Olympia",
+    "state": "WA",
+    "location": "601 Capitol Way S, Olympia, WA 98501",
+    "website": "burialgroundscoffee.com",
+    "category": "coffee"
+  },
+  {
+    "id": 6,
+    "name": "New Moon Cooperative",
+    "city": "Olympia",
+    "state": "WA",
+    "location": "113 4th Ave W, Olympia, WA 98501",
+    "website": "newmooncooperative.com",
+    "category": "coffee"
+  },
+  {
+    "id": 7,
+    "name": "Matchbox Coffeeshop",
+    "city": "Minneapolis",
+    "state": "MN",
+    "location": "1306 4th St SE, Minneapolis, MN 55414",
+    "website": "matchboxminneapolis.com",
+    "category": "coffee"
+  },
+  {
+    "id": 8,
+    "name": "Seward Community Cafe",
+    "city": "Minneapolis",
+    "state": "MN",
+    "location": "2129 E Franklin Ave, Minneapolis, MN 55404",
+    "website": "sewardcafe.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 9,
+    "name": "Afterglow Coffee Cooperative",
+    "city": "Richmond",
+    "state": "VA",
+    "location": "1719 Summit Ave, Richmond, VA 23230",
+    "website": "afterglowcoffee.com",
+    "category": "coffee"
+  },
+  {
+    "id": 10,
+    "name": "Gray Owl Coffee",
+    "city": "Norman",
+    "state": "OK",
+    "location": "223 E Gray St, Norman, OK 73069",
+    "website": "grayowlcoffee.com",
+    "category": "coffee"
+  },
+  {
+    "id": 11,
+    "name": "Dean's Beans Organic Coffee",
+    "city": "Orange",
+    "state": "MA",
+    "location": "50 R.W. Moore Ave, Orange, MA 01364",
+    "website": "deansbeans.com",
+    "category": "coffee"
+  },
+  {
+    "id": 12,
+    "name": "Arizmendi Bakery (9th Ave)",
+    "city": "San Francisco",
+    "state": "CA",
+    "location": "1331 9th Ave, San Francisco, CA 94122",
+    "website": "arizmendibakery.com",
+    "category": "coffee"
+  },
+  {
+    "id": 13,
+    "name": "Joe Squared",
+    "city": "Baltimore",
+    "state": "MD",
+    "location": "33 W North Ave, Baltimore, MD 21201",
+    "website": "joesquared.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 14,
+    "name": "Firestorm Books & Coffee",
+    "city": "Asheville",
+    "state": "NC",
+    "location": "1022 Haywood Rd, Asheville, NC 28806",
+    "website": "firestorm.coop",
+    "category": "coffee"
+  },
+  {
+    "id": 15,
+    "name": "Hard Times Cafe",
+    "city": "Minneapolis",
+    "state": "MN",
+    "location": "1821 Riverside Ave, Minneapolis, MN 55454",
+    "website": "hardtimescafe.shop",
+    "category": "restaurant"
+  },
+  {
+    "id": 16,
+    "name": "Thread Coffee Roasters",
+    "city": "Baltimore",
+    "state": "MD",
+    "location": "12 W North Ave, Baltimore, MD 21201",
+    "website": "threadcoffee.com",
+    "category": "coffee"
+  },
+  {
+    "id": 17,
+    "name": "Collective Espresso",
+    "city": "Cincinnati",
+    "state": "OH",
+    "location": "207 Woodward St, Cincinnati, OH 45202",
+    "website": "collectiveespresso.com",
+    "category": "coffee"
+  },
+  {
+    "id": 18,
+    "name": "Just Coffee Cooperative",
+    "city": "Madison",
+    "state": "WI",
+    "location": "1500 Gilson St, Madison, WI 53715",
+    "website": "justcoffee.coop",
+    "category": "coffee"
+  },
+  {
+    "id": 19,
+    "name": "Higher Grounds Trading Co.",
+    "city": "Traverse City",
+    "state": "MI",
+    "location": "806 Red Dr, Traverse City, MI 49684",
+    "website": "highergroundstrading.com",
+    "category": "coffee"
+  },
+  {
+    "id": 20,
+    "name": "Little Grill Collective",
+    "city": "Harrisonburg",
+    "state": "VA",
+    "location": "621 N Main St, Harrisonburg, VA 22802",
+    "website": "littlegrillcollective.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 21,
+    "name": "Cheese Board Collective",
+    "city": "Berkeley",
+    "state": "CA",
+    "location": "1504 Shattuck Ave, Berkeley, CA 94709",
+    "website": "cheeseboardcollective.coop",
+    "category": "coffee"
+  },
+  {
+    "id": 22,
+    "name": "Nabolom Bakery + Pizzeria",
+    "city": "Berkeley",
+    "state": "CA",
+    "location": "2708 Russell St, Berkeley, CA 94705",
+    "website": "nabolom.com",
+    "category": "coffee"
+  },
+  {
+    "id": 23,
+    "name": "Rock City Coffee",
+    "city": "Rockland",
+    "state": "ME",
+    "location": "316 Main St, Rockland, ME 04841",
+    "website": "rockcitycoffee.com",
+    "category": "coffee"
+  },
+  {
+    "id": 24,
+    "name": "Arizmendi Bakery (Lakeshore)",
+    "city": "Oakland",
+    "state": "CA",
+    "location": "3267 Lakeshore Ave, Oakland, CA 94610",
+    "website": "arizmendibakery.com",
+    "category": "coffee"
+  },
+  {
+    "id": 25,
+    "name": "Arizmendi Bakery (Valencia)",
+    "city": "San Francisco",
+    "state": "CA",
+    "location": "1268 Valencia St, San Francisco, CA 94110",
+    "website": "arizmendi-bakery.com",
+    "category": "coffee"
+  },
+  {
+    "id": 26,
+    "name": "Arizmendi Bakery (Emeryville)",
+    "city": "Emeryville",
+    "state": "CA",
+    "location": "4301 San Pablo Ave, Emeryville, CA 94608",
+    "website": "arizmendi-bakery.org",
+    "category": "coffee"
+  },
+  {
+    "id": 27,
+    "name": "Arizmendi Bakery (San Rafael)",
+    "city": "San Rafael",
+    "state": "CA",
+    "location": "1002 4th St, San Rafael, CA 94901",
+    "website": "arizmendisanrafael.com",
+    "category": "coffee"
+  },
+  {
+    "id": 28,
+    "name": "Arizmendi Bakery (San Pablo Ave)",
+    "city": "Berkeley",
+    "state": "CA",
+    "location": "1505 San Pablo Ave, Berkeley, CA 94702",
+    "website": "arizmendi-bakery-Pizzeria.com",
+    "category": "coffee"
+  },
+  {
+    "id": 29,
+    "name": "Mandala TeaHouse",
+    "city": "Oakland",
+    "state": "CA",
+    "location": "717 Washington St, Oakland, CA 94607",
+    "website": "mandala.coop",
+    "category": "coffee"
+  },
+  {
+    "id": 30,
+    "name": "Che Cafe Collective",
+    "city": "La Jolla",
+    "state": "CA",
+    "location": "9500 Gilman Dr, La Jolla, CA 92093",
+    "website": "checafe.org",
+    "category": "restaurant"
+  },
+  {
+    "id": 31,
+    "name": "BreadHive Bakery & Cafe",
+    "city": "Buffalo",
+    "state": "NY",
+    "location": "402 Connecticut St, Buffalo, NY 14213",
+    "website": "breadhive.com",
+    "category": "coffee"
+  },
+  {
+    "id": 32,
+    "name": "Blue Scorcher Bakery & Cafe",
+    "city": "Astoria",
+    "state": "OR",
+    "location": "1493 Duane St, Astoria, OR 97103",
+    "website": "bluescorcher.com",
+    "category": "coffee"
+  },
+  {
+    "id": 33,
+    "name": "Bellegarde Bakery",
+    "city": "New Orleans",
+    "state": "LA",
+    "location": "2900 Gravier St, New Orleans, LA 70119",
+    "website": "bellegarde.com",
+    "category": "coffee"
+  },
+  {
+    "id": 34,
+    "name": "Casa Nueva Restaurant & Cantina",
+    "city": "Athens",
+    "state": "OH",
+    "location": "6 W State St, Athens, OH 45701",
+    "website": "casanueva.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 35,
+    "name": "May Day Cafe",
+    "city": "Minneapolis",
+    "state": "MN",
+    "location": "3440 Bloomington Ave, Minneapolis, MN 55407",
+    "website": "maydaycafe.coop",
+    "category": "coffee"
+  },
+  {
+    "id": 36,
+    "name": "Democracy Brewing",
+    "city": "Boston",
+    "state": "MA",
+    "location": "29-35 Temple Pl, Boston, MA 02111",
+    "website": "democracybrewing.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 37,
+    "name": "Equal Exchange",
+    "city": "West Bridgewater",
+    "state": "MA",
+    "location": "50 R.W. Moore Ave, West Bridgewater, MA 02379",
+    "website": "equalexchange.coop",
+    "category": "coffee"
+  },
+  {
+    "id": 38,
+    "name": "Bluestockings Cooperative Cafe",
+    "city": "New York",
+    "state": "NY",
+    "location": "116 Suffolk St, New York, NY 10002",
+    "website": "bluestockings.com",
+    "category": "coffee"
+  },
+  {
+    "id": 39,
+    "name": "Bound Together Bookstore",
+    "city": "San Francisco",
+    "state": "CA",
+    "location": "1369 Haight St, San Francisco, CA 94117",
+    "website": "boundtogetherbooks.com",
+    "category": "coffee"
+  },
+  {
+    "id": 40,
+    "name": "Gimme! Coffee Cooperative",
+    "city": "Ithaca",
+    "state": "NY",
+    "location": "430 N Cayuga St, Ithaca, NY 14850",
+    "website": "gimmecoffee.com",
+    "category": "coffee"
+  },
+  {
+    "id": 41,
+    "name": "Morning Bell Coffee Roasters",
+    "city": "Ames",
+    "state": "IA",
+    "location": "111 Main St, Ames, IA 50010",
+    "website": "morningbellcoffeeroasters.square.site",
+    "category": "coffee"
+  },
+  {
+    "id": 42,
+    "name": "Phoenix Coffee Co.",
+    "city": "Cleveland",
+    "state": "OH",
+    "location": "2211 Hamilton Ave, Cleveland, OH 44114",
+    "website": "phoenixcoffee.com",
+    "category": "coffee"
+  },
+  {
+    "id": 43,
+    "name": "Pagoda Cafe Cooperative",
+    "city": "New Orleans",
+    "state": "LA",
+    "location": "1430 N Dorgenois St, New Orleans, LA 70119",
+    "website": "pagodacafe.net",
+    "category": "restaurant"
+  },
+  {
+    "id": 44,
+    "name": "The Red Raven Espresso Parlor",
+    "city": "Fargo",
+    "state": "ND",
+    "location": "916 Main Ave, Fargo, ND 58103",
+    "website": "redravenespressoparlor.com",
+    "category": "coffee"
+  },
+  {
+    "id": 45,
+    "name": "Riverwest Co-op Grocery & Cafe",
+    "city": "Milwaukee",
+    "state": "WI",
+    "location": "733 E Clarke St, Milwaukee, WI 53212",
+    "website": "riverwest.coop",
+    "category": "restaurant"
+  },
+  {
+    "id": 46,
+    "name": "Pattycake Bakery",
+    "city": "Columbus",
+    "state": "OH",
+    "location": "3870 N High St, Columbus, OH 43214",
+    "website": "pattycakebakery.com",
+    "category": "coffee"
+  },
+  {
+    "id": 47,
+    "name": "Positively 3rd Street Bakery",
+    "city": "Duluth",
+    "state": "MN",
+    "location": "1202 E 3rd St, Duluth, MN 55805",
+    "website": "3rdstreetbakery.com",
+    "category": "coffee"
+  },
+  {
+    "id": 48,
+    "name": "Proof Bakery",
+    "city": "Los Angeles",
+    "state": "CA",
+    "location": "3156 Glendale Blvd, Los Angeles, CA 90039",
+    "website": "proofbakeryla.com",
+    "category": "coffee"
+  },
+  {
+    "id": 49,
+    "name": "Third Space Bakery Coop",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "location": "5349 Penn Ave, Pittsburgh, PA 15224",
+    "website": "thirdspacebakery.com",
+    "category": "coffee"
+  },
+  {
+    "id": 50,
+    "name": "Woodbelly Pizza",
+    "city": "Montpelier",
+    "state": "VT",
+    "location": "79 Barre St, Montpelier, VT 05602",
+    "website": "woodbellypizza.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 51,
+    "name": "Niles Pie Company",
+    "city": "Union City",
+    "state": "CA",
+    "location": "32990 Alvarado-Niles Rd, Union City, CA 94587",
+    "website": "nilespie.com",
+    "category": "coffee"
+  },
+  {
+    "id": 52,
+    "name": "Mirisata",
+    "city": "Portland",
+    "state": "OR",
+    "location": "2420 SE Belmont St, Portland, OR 97214",
+    "website": "mirisata.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 53,
+    "name": "Workers Tap",
+    "city": "Portland",
+    "state": "OR",
+    "location": "101 SE 12th Ave, Portland, OR 97214",
+    "website": "workerstap.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 54,
+    "name": "Art's Cafe",
+    "city": "Springville",
+    "state": "NY",
+    "location": "5 E Main St, Springville, NY 14141",
+    "website": "artscafespringville.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 55,
+    "name": "Donna Cocktail Club",
+    "city": "New York",
+    "state": "NY",
+    "location": "7 Cornelia St, New York, NY 10014",
+    "website": "donnanyc.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 56,
+    "name": "Extra Extra Pizza",
+    "city": "Buffalo",
+    "state": "NY",
+    "location": "549 W Utica St, Buffalo, NY 14213",
+    "website": "extraextrapizza.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 57,
+    "name": "Flat Iron Cooperative",
+    "city": "Bellows Falls",
+    "state": "VT",
+    "location": "51 The Square, Bellows Falls, VT 05101",
+    "website": "flatiron.coop",
+    "category": "restaurant"
+  },
+  {
+    "id": 58,
+    "name": "Ruby Wine",
+    "city": "San Francisco",
+    "state": "CA",
+    "location": "1419 18th St, San Francisco, CA 94107",
+    "website": "rubywinesf.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 59,
+    "name": "Nick's Pizza and Bakery",
+    "city": "Oakland",
+    "state": "CA",
+    "location": "6400 Shattuck Ave, Oakland, CA 94609",
+    "website": "oaklandstylepizza.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 60,
+    "name": "Common Ground Cafe",
+    "city": "Baltimore",
+    "state": "MD",
+    "location": "3543 Chestnut Ave, Baltimore, MD 21211",
+    "website": "commongroundhampden.com",
+    "category": "coffee"
+  },
+  {
+    "id": 61,
+    "name": "Radical Bean Cooperative",
+    "city": "Cincinnati",
+    "state": "OH",
+    "location": "123 E McMicken Ave, Cincinnati, OH 45202",
+    "website": "radicalbeancooperative.com",
+    "category": "coffee"
+  },
+  {
+    "id": 62,
+    "name": "A Slice of New York",
+    "city": "San Jose",
+    "state": "CA",
+    "location": "3443 Stevens Creek Blvd, San Jose, CA 95117",
+    "website": "asony.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 63,
+    "name": "Cafe Reynard",
+    "city": "Malden",
+    "state": "MA",
+    "location": "89 Commercial St, Malden, MA 02148",
+    "website": "cafe-reynard.com",
+    "category": "coffee"
+  },
+  {
+    "id": 64,
+    "name": "New Leaf Espresso",
+    "city": "Somerville",
+    "state": "MA",
+    "location": "310 Highland Ave, Somerville, MA 02144",
+    "website": "newleafespresso.com",
+    "category": "coffee"
+  },
+  {
+    "id": 65,
+    "name": "Full Stop Filling Station",
+    "city": "Louisville",
+    "state": "KY",
+    "location": "1132 E St Catherine St, Louisville, KY 40204",
+    "website": "fullstopstation.com",
+    "category": "coffee"
+  },
+  {
+    "id": 66,
+    "name": "Hasta Muerte Coffee",
+    "city": "Oakland",
+    "state": "CA",
+    "location": "2701 Fruitvale Ave, Oakland, CA 94601",
+    "website": "hastamuerta.coffee",
+    "category": "coffee"
+  },
+  {
+    "id": 67,
+    "name": "Oceanview Diner",
+    "city": "Berkeley",
+    "state": "CA",
+    "location": "1807 Fourth St, Berkeley, CA 94710",
+    "website": "oceanviewonfourth.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 68,
+    "name": "A Taste of Denmark Bakery",
+    "city": "Oakland",
+    "state": "CA",
+    "location": "3401 Telegraph Ave, Oakland, CA 94609",
+    "website": "tastedenmark.com",
+    "category": "coffee"
+  },
+  {
+    "id": 69,
+    "name": "Sliver Pizzeria",
+    "city": "Berkeley",
+    "state": "CA",
+    "location": "2132 Center St, Berkeley, CA 94704",
+    "website": "sliverpizzeria.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 70,
+    "name": "Dimond Slice Pizzeria",
+    "city": "Oakland",
+    "state": "CA",
+    "location": "2208 MacArthur Blvd, Oakland, CA 94602",
+    "website": "dimondpizza.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 71,
+    "name": "Sankofa Cafe",
+    "city": "Bridgeport",
+    "state": "CT",
+    "location": "1001 Main St, Bridgeport, CT 06604",
+    "website": "sankofa.cafe",
+    "category": "coffee"
+  },
+  {
+    "id": 72,
+    "name": "Griffin Coffee",
+    "city": "Edgewater",
+    "state": "CO",
+    "location": "5224 W 25th Ave, Edgewater, CO 80214",
+    "website": "griffincoffeeshop.com",
+    "category": "coffee"
+  },
+  {
+    "id": 73,
+    "name": "Mera Kitchen Collective",
+    "city": "Baltimore",
+    "state": "MD",
+    "location": "1301 N Calvert St, Baltimore, MD 21202",
+    "website": "mera.kitchen",
+    "category": "restaurant"
+  },
+  {
+    "id": 74,
+    "name": "New Deal Cafe",
+    "city": "Greenbelt",
+    "state": "MD",
+    "location": "113 Centerway, Greenbelt, MD 20770",
+    "website": "newdealcafe.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 75,
+    "name": "Broken Clock Brewing Cooperative",
+    "city": "Minneapolis",
+    "state": "MN",
+    "location": "1712 Marshall St NE, Minneapolis, MN 55413",
+    "website": "brokenclockbrew.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 76,
+    "name": "Drifa Brewing Company",
+    "city": "Marquette",
+    "state": "MI",
+    "location": "501 S Lake St, Marquette, MI 49855",
+    "website": "drifabrewingcompany.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 77,
+    "name": "Kusanya Cafe",
+    "city": "Chicago",
+    "state": "IL",
+    "location": "825 W 69th St, Chicago, IL 60621",
+    "website": "kusanyacafe.org",
+    "category": "coffee"
+  },
+  {
+    "id": 78,
+    "name": "Patty Pan Cooperative",
+    "city": "Shoreline",
+    "state": "WA",
+    "location": "15550 27th Ave NE, Shoreline, WA 98155",
+    "website": "pattypan.coop",
+    "category": "restaurant"
+  },
+  {
+    "id": 79,
+    "name": "Pidgin Cooperative",
+    "city": "Seattle",
+    "state": "WA",
+    "location": "3909 18th Ave W, Seattle, WA 98119",
+    "website": "pidgincooperative.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 80,
+    "name": "Building New Hope Coffee",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "location": "6401 Penn Ave, Pittsburgh, PA 15206",
+    "website": "buildingnewhope.org",
+    "category": "coffee"
+  },
+  {
+    "id": 81,
+    "name": "Small World Food",
+    "city": "Rochester",
+    "state": "NY",
+    "location": "936 Exchange St, Rochester, NY 14608",
+    "website": "smallworldfood.com",
+    "category": "coffee"
+  },
+  {
+    "id": 82,
+    "name": "Small Format",
+    "city": "Providence",
+    "state": "RI",
+    "location": "335 Wickenden St, Providence, RI 02903",
+    "website": "smallformat.one",
+    "category": "coffee"
+  },
+  {
+    "id": 83,
+    "name": "Boyfriend Co-op",
+    "city": "Brooklyn",
+    "state": "NY",
+    "location": "1157 Myrtle Ave, Brooklyn, NY 11206",
+    "website": "boyfriend.coop",
+    "category": "coffee"
+  },
+  {
+    "id": 84,
+    "name": "Sea & Soil",
+    "city": "Brooklyn",
+    "state": "NY",
+    "location": "388 Atlantic Ave, Brooklyn, NY 11217",
+    "website": "seaandsoilcoop.com",
+    "category": "coffee"
+  },
+  {
+    "id": 85,
+    "name": "Ke'nekt Cooperative",
+    "city": "Atlanta",
+    "state": "GA",
+    "location": "1492 Ralph David Abernathy Blvd SW, Atlanta, GA 30310",
+    "website": "thekenekt.com",
+    "category": "coffee"
+  },
+  {
+    "id": 86,
+    "name": "Cafe Olli",
+    "city": "Portland",
+    "state": "OR",
+    "location": "3925 NE Martin Luther King Blvd, Portland, OR 97212",
+    "website": "cafeolli.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 87,
+    "name": "Local Sprouts Cooperative",
+    "city": "Portland",
+    "state": "ME",
+    "location": "649 Congress St, Portland, ME 04101",
+    "website": "localsproutscooperative.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 88,
+    "name": "Trident Cafe",
+    "city": "Boulder",
+    "state": "CO",
+    "location": "940 Pearl St, Boulder, CO 80302",
+    "website": "tridentcafe.com",
+    "category": "coffee"
+  }
 ]
