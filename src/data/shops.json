@@ -702,31 +702,13 @@
     "category": "coffee"
   },
   {
-    "name": "Café Castro",
-    "city": "Santa Fe",
-    "state": "NM",
-    "location": "Santa Fe, NM",
-    "website": "cafecastrosf.com",
-    "category": "restaurant",
-    "id": 79
-  },
-  {
     "name": "Phat Daddy's on Da Tracks",
     "city": "Charleston",
     "state": "WV",
     "location": "Charleston, WV",
     "website": "phatdaddysonthetracks.com",
     "category": "restaurant",
-    "id": 80
-  },
-  {
-    "name": "Taharka Brothers Ice Cream",
-    "city": "Baltimore",
-    "state": "MD",
-    "location": "Baltimore, MD",
-    "website": "taharkabrothers.com",
-    "category": "restaurant",
-    "id": 81
+    "id": 79
   },
   {
     "name": "Alvarado Street Bakery",
@@ -735,7 +717,7 @@
     "location": "3400 N Main St, Petaluma, CA 94954",
     "website": "alvaradostreetbakery.com",
     "category": "coffee",
-    "id": 82
+    "id": 80
   },
   {
     "name": "Weaver Street Market",
@@ -744,7 +726,7 @@
     "location": "101 E Weaver St, Carrboro, NC 27510",
     "website": "weaverstreetmarket.coop",
     "category": "coffee",
-    "id": 83
+    "id": 81
   },
   {
     "name": "Weaver Street Market (Hillsborough)",
@@ -753,7 +735,7 @@
     "location": "228 S Churton St, Hillsborough, NC 27278",
     "website": "weaverstreetmarket.coop",
     "category": "coffee",
-    "id": 84
+    "id": 82
   },
   {
     "name": "Weaver Street Market (Raleigh)",
@@ -762,7 +744,7 @@
     "location": "404 Daniels St, Raleigh, NC 27605",
     "website": "weaverstreetmarket.coop",
     "category": "coffee",
-    "id": 85
+    "id": 83
   },
   {
     "name": "Firebrand Artisan Breads",
@@ -771,7 +753,7 @@
     "location": "707 W. Tower Ave, Alameda, CA 94501",
     "website": "firebrandartisanbreads.com",
     "category": "coffee",
-    "id": 86
+    "id": 84
   },
   {
     "name": "Fifth Street Brewpub",
@@ -780,7 +762,7 @@
     "location": "1600 E 5th St, Dayton, OH 45403",
     "website": "fifthstreetbrewpub.com",
     "category": "restaurant",
-    "id": 87
+    "id": 85
   },
   {
     "name": "Ubuntu Coffee Cooperative",
@@ -789,7 +771,7 @@
     "location": "5776 Stewart Ave, Emeryville, CA 94608",
     "website": "ubuntu.coffee",
     "category": "coffee",
-    "id": 88
+    "id": 86
   },
   {
     "name": "San Jose Co-op Brewpub",
@@ -798,7 +780,7 @@
     "location": "1720 S 1st St, San Jose, CA 95112",
     "website": "sanjosecoopbrewpub.com",
     "category": "restaurant",
-    "id": 89
+    "id": 87
   },
   {
     "name": "Understory Oakland",
@@ -807,7 +789,7 @@
     "location": "327 17th St, Oakland, CA 94612",
     "website": "understoryoakland.com",
     "category": "restaurant",
-    "id": 90
+    "id": 88
   },
   {
     "name": "Port Clyde Fresh Catch",
@@ -816,7 +798,7 @@
     "location": "56 Polands Pt Rd, Port Clyde, ME 04855",
     "website": "portclydefreshcatch.com",
     "category": "restaurant",
-    "id": 91
+    "id": 89
   },
   {
     "name": "Cajou Creamery",
@@ -825,16 +807,7 @@
     "location": "411 N Howard St, Baltimore, MD 21201",
     "website": "cajoucreamery.com",
     "category": "restaurant",
-    "id": 92
-  },
-  {
-    "name": "Khao'na Kitchen",
-    "city": "Brooklyn",
-    "state": "NY",
-    "location": "Brooklyn, NY",
-    "website": "khaonakitchen.com",
-    "category": "restaurant",
-    "id": 93
+    "id": 90
   },
   {
     "name": "Angel Cakes Bakery",
@@ -843,16 +816,7 @@
     "location": "745 5th St, Oakland, CA",
     "website": "angelcakes510.com",
     "category": "coffee",
-    "id": 94
-  },
-  {
-    "name": "Little Lion Collective",
-    "city": "New Haven",
-    "state": "CT",
-    "location": "New Haven, CT",
-    "website": "littlelioncollective.com",
-    "category": "restaurant",
-    "id": 95
+    "id": 91
   },
   {
     "name": "LuLu's Foods",
@@ -861,7 +825,7 @@
     "location": "3119 Poplar Ave, Memphis, TN 38111",
     "website": "shop.luluscafeandbakery.com",
     "category": "coffee",
-    "id": 96
+    "id": 92
   },
   {
     "name": "Matchbox Coffeeshop",
@@ -870,7 +834,7 @@
     "location": "1306 NE 2nd St, Minneapolis, MN 55413",
     "website": "instagram.com/matchboxcoffeempls",
     "category": "coffee",
-    "id": 97
+    "id": 93
   },
   {
     "name": "Mujeres Emprendedoras Co-op",
@@ -879,7 +843,7 @@
     "location": "3738 Morrison Rd, Denver, CO 80219",
     "website": "mecooperative.com",
     "category": "restaurant",
-    "id": 98
+    "id": 94
   },
   {
     "name": "Blue Heron Bakery",
@@ -888,7 +852,7 @@
     "location": "4419 Harrison Ave NW #108, Olympia, WA 98502",
     "website": "blueheronbakery.com",
     "category": "coffee",
-    "id": 99
+    "id": 95
   },
   {
     "name": "Sway Co-op",
@@ -897,7 +861,7 @@
     "location": "1512 11th Ave, Seattle, WA 98122",
     "website": "swaycoop.weebly.com",
     "category": "coffee",
-    "id": 100
+    "id": 96
   },
   {
     "name": "Bol Cooperative",
@@ -906,7 +870,7 @@
     "location": "716 Monroe St NE, Washington, DC",
     "website": "bookshop.org/shop/bol",
     "category": "coffee",
-    "id": 101
+    "id": 97
   },
   {
     "name": "Beanchain Coffee",
@@ -915,7 +879,7 @@
     "location": "1110 W Southern Ave #8, Mesa, AZ 85210",
     "website": "bchain.coffee",
     "category": "coffee",
-    "id": 102
+    "id": 98
   },
   {
     "name": "Fair Grounds Coffee & Crafts",
@@ -924,7 +888,7 @@
     "location": "4603 Broadway C, Sacramento, CA 95820",
     "website": "coffeeandcrafts.us",
     "category": "coffee",
-    "id": 103
+    "id": 99
   },
   {
     "name": "Wooden Bar",
@@ -933,10 +897,10 @@
     "location": "4 Knowlton Ave, Worcester, MA 01603",
     "website": "wooden.coop",
     "category": "restaurant",
-    "id": 104
+    "id": 100
   },
   {
-    "id": 105,
+    "id": 101,
     "name": "Mandela Grocery Co-op",
     "city": "Oakland",
     "state": "CA",
