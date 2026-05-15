@@ -943,5 +943,32 @@
     "location": "404 4th Ave E, Olympia, WA 98501",
     "website": "levoyeurolympia.com",
     "category": "restaurant"
+  },
+  {
+    "id": 106,
+    "name": "The Stud",
+    "city": "San Francisco",
+    "state": "CA",
+    "location": "1123 Folsom St, San Francisco, CA 94103",
+    "website": "studsf.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 107,
+    "name": "Jude's Old Town",
+    "city": "Seattle",
+    "state": "WA",
+    "location": "9252 57th Ave S, Seattle, WA 98118",
+    "website": "judesoldtown.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 108,
+    "name": "Old Louisville Coffee Co-op",
+    "city": "Louisville",
+    "state": "KY",
+    "location": "316 W Ormsby Ave, Louisville, KY 40203",
+    "website": "oldlouisvillecoffeecoop.com",
+    "category": "coffee"
   }
 ]
