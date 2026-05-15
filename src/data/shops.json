@@ -934,5 +934,14 @@
     "location": "51 Square, Bellows Falls, VT 05101",
     "website": "flatiron.coop",
     "category": "coffee"
+  },
+  {
+    "id": 105,
+    "name": "Le Voyeur",
+    "city": "Olympia",
+    "state": "WA",
+    "location": "404 4th Ave E, Olympia, WA 98501",
+    "website": "levoyeurolympia.com",
+    "category": "restaurant"
   }
 ]
