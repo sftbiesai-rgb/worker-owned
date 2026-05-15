@@ -768,7 +768,7 @@
     "name": "Firebrand Artisan Breads",
     "city": "Alameda",
     "state": "CA",
-    "location": "Alameda, CA",
+    "location": "707 W. Tower Ave, Alameda, CA 94501",
     "website": "firebrandartisanbreads.com",
     "category": "coffee",
     "id": 86
@@ -822,7 +822,7 @@
     "name": "Cajou Creamery",
     "city": "Baltimore",
     "state": "MD",
-    "location": "Baltimore, MD",
+    "location": "411 N Howard St, Baltimore, MD 21201",
     "website": "cajoucreamery.com",
     "category": "restaurant",
     "id": 92
@@ -840,7 +840,7 @@
     "name": "Angel Cakes Bakery",
     "city": "Oakland",
     "state": "CA",
-    "location": "Oakland, CA",
+    "location": "745 5th St, Oakland, CA",
     "website": "angelcakes510.com",
     "category": "coffee",
     "id": 94
@@ -858,7 +858,7 @@
     "name": "LuLu's Foods",
     "city": "Memphis",
     "state": "TN",
-    "location": "Memphis, TN",
+    "location": "3119 Poplar Ave, Memphis, TN 38111",
     "website": "shop.luluscafeandbakery.com",
     "category": "coffee",
     "id": 96
@@ -876,7 +876,7 @@
     "name": "Mujeres Emprendedoras Co-op",
     "city": "Denver",
     "state": "CO",
-    "location": "Denver, CO",
+    "location": "3738 Morrison Rd, Denver, CO 80219",
     "website": "mecooperative.com",
     "category": "restaurant",
     "id": 98
@@ -885,7 +885,7 @@
     "name": "Blue Heron Bakery",
     "city": "Olympia",
     "state": "WA",
-    "location": "Olympia, WA",
+    "location": "4419 Harrison Ave NW #108, Olympia, WA 98502",
     "website": "blueheronbakery.com",
     "category": "coffee",
     "id": 99
@@ -903,7 +903,7 @@
     "name": "Sway Co-op",
     "city": "Seattle",
     "state": "WA",
-    "location": "Seattle, WA",
+    "location": "1512 11th Ave, Seattle, WA 98122",
     "website": "swaycoop.weebly.com",
     "category": "coffee",
     "id": 101
@@ -939,17 +939,17 @@
     "name": "Wooden Bar",
     "city": "Worcester",
     "state": "MA",
-    "location": "Worcester, MA",
+    "location": "4 Knowlton Ave, Worcester, MA 01603",
     "website": "wooden.coop",
     "category": "restaurant",
-"id": 105
+    "id": 105
   },
   {
     "id": 106,
     "name": "Mandela Grocery Co-op",
     "city": "Oakland",
     "state": "CA",
-    "location": "Oakland, CA",
+    "location": "1430 7th St, Oakland, CA",
     "website": "mandelagrocery.coop",
     "category": "coffee"
   }
