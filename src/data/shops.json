@@ -925,5 +925,14 @@
     "location": "310 Highland Ave, Somerville, MA 02144",
     "website": "newleafespresso.com",
     "category": "coffee"
+  },
+  {
+    "id": 104,
+    "name": "Flat Iron Cooperative",
+    "city": "Bellows Falls",
+    "state": "VT",
+    "location": "51 Square, Bellows Falls, VT 05101",
+    "website": "flatiron.coop",
+    "category": "coffee"
   }
 ]
