@@ -907,5 +907,23 @@
     "location": "1430 7th St, Oakland, CA",
     "website": "mandelagrocery.coop",
     "category": "coffee"
+  },
+  {
+    "id": 102,
+    "name": "Pagoda Cafe",
+    "city": "New Orleans",
+    "state": "LA",
+    "location": "1430 N Dorgenois St, New Orleans, LA 70119",
+    "website": "pagodacafe.net",
+    "category": "coffee"
+  },
+  {
+    "id": 103,
+    "name": "New Leaf Espresso",
+    "city": "Somerville",
+    "state": "MA",
+    "location": "310 Highland Ave, Somerville, MA 02144",
+    "website": "newleafespresso.com",
+    "category": "coffee"
   }
 ]
