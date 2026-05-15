@@ -867,7 +867,7 @@
     "name": "Matchbox Coffeeshop",
     "city": "Minneapolis",
     "state": "MN",
-    "location": "Minneapolis, MN",
+    "location": "1306 NE 2nd St, Minneapolis, MN 55413",
     "website": "instagram.com/matchboxcoffeempls",
     "category": "coffee",
     "id": 97
@@ -891,22 +891,13 @@
     "id": 99
   },
   {
-    "name": "Covered Bridge Cookies",
-    "city": "Windsor",
-    "state": "VT",
-    "location": "Windsor, VT",
-    "website": "coveredbridgecookies.com",
-    "category": "coffee",
-    "id": 100
-  },
-  {
     "name": "Sway Co-op",
     "city": "Seattle",
     "state": "WA",
     "location": "1512 11th Ave, Seattle, WA 98122",
     "website": "swaycoop.weebly.com",
     "category": "coffee",
-    "id": 101
+    "id": 100
   },
   {
     "name": "Bol Cooperative",
@@ -915,7 +906,7 @@
     "location": "716 Monroe St NE, Washington, DC",
     "website": "bookshop.org/shop/bol",
     "category": "coffee",
-    "id": 102
+    "id": 101
   },
   {
     "name": "Beanchain Coffee",
@@ -924,16 +915,16 @@
     "location": "1110 W Southern Ave #8, Mesa, AZ 85210",
     "website": "bchain.coffee",
     "category": "coffee",
-    "id": 103
+    "id": 102
   },
   {
     "name": "Fair Grounds Coffee & Crafts",
     "city": "Sacramento",
     "state": "CA",
-    "location": "Sacramento, CA",
-    "website": "",
+    "location": "4603 Broadway C, Sacramento, CA 95820",
+    "website": "coffeeandcrafts.us",
     "category": "coffee",
-    "id": 104
+    "id": 103
   },
   {
     "name": "Wooden Bar",
@@ -942,10 +933,10 @@
     "location": "4 Knowlton Ave, Worcester, MA 01603",
     "website": "wooden.coop",
     "category": "restaurant",
-    "id": 105
+    "id": 104
   },
   {
-    "id": 106,
+    "id": 105,
     "name": "Mandela Grocery Co-op",
     "city": "Oakland",
     "state": "CA",
