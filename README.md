@@ -61,9 +61,9 @@ Sourced from the [USFWC Directory](https://www.usworker.coop/directory/) (474+ w
 
 - [x] **Update logo / favicon** — replaced with custom coffee mug / co-op icon
 - [ ] **Post on Reddit co-op groups** — share on r/cooperatives, r/coffee, and city-specific subreddits to invite submissions from the community
-- [ ] **Add Vercel Analytics / visit counters** — drop in the Vercel Analytics script or a simple counter to track page views
+- [x] **Add Vercel Analytics / visit counters** — drop in the Vercel Analytics script or a simple counter to track page views
 - [ ] **SEO optimization** — add meta descriptions, Open Graph tags, sitemap.xml, structured data (Schema.org) for local business listings
-- [ ] **Add city/state pages** — generate static pages for each city/state with filtered results for better SEO
+- [x] **Add city/state pages** — generate static pages for each city/state with filtered results for better SEO
 - [ ] **Add Google Maps integration** — embed a map view showing all worker-owned shops
 - [ ] **Add category expansion** — include bakeries, grocery co-ops with cafes, breweries, etc.
 - [ ] **Add user ratings / reviews** — let visitors leave feedback on listed businesses

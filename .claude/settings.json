@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -e '.tool_input.file_path | test(\"src/data/shops\")' && cd /Applications/worker-owned && npm run build 2>&1 || true",
+            "timeout": 120,
+            "statusMessage": "Rebuilding static pages..."
+          }
+        ]
+      }
+    ]
+  }
+}
