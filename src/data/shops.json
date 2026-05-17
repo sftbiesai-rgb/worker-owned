@@ -961,5 +961,581 @@
     "location": "9252 57th Ave S, Seattle, WA 98118",
     "website": "judesoldtown.com",
     "category": "restaurant"
+  },
+  {
+    "id": 108,
+    "name": "Donna NYC",
+    "city": "New York",
+    "state": "NY",
+    "location": "7 Cornelia Street, New York, NY 10014",
+    "website": "https://www.donnanyc.com/",
+    "category": "restaurant"
+  },
+  {
+    "id": 109,
+    "name": "Moosewood Restaurant",
+    "city": "Ithaca",
+    "state": "NY",
+    "location": "",
+    "website": "https://moosewoodcooks.com/",
+    "category": "restaurant"
+  },
+  {
+    "id": 110,
+    "name": "Happy Brew",
+    "city": "Jacksonville",
+    "state": "FL",
+    "location": "3200 Hendricks Ave, Jacksonville, FL 32207",
+    "website": "https://www.happybrew.org/",
+    "category": "coffee"
+  },
+  {
+    "id": 111,
+    "name": "Afterglow Coffee Cooperative",
+    "city": "Jacksonville",
+    "state": "FL",
+    "location": "",
+    "website": "https://www.afterglowcoffee.com/about",
+    "category": "coffee"
+  },
+  {
+    "id": 112,
+    "name": "Afterglow Coffee Cooperative",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "location": "",
+    "website": "https://www.afterglowcoffee.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 113,
+    "name": "Fruition MKE",
+    "city": "Milwaukee",
+    "state": "WI",
+    "location": "N/A",
+    "website": "https://www.fruitionmke.com/cafe",
+    "category": "coffee"
+  },
+  {
+    "id": 114,
+    "name": "Riverwest Co-op & Café",
+    "city": "Milwaukee",
+    "state": "WI",
+    "location": "733 E. Clarke St., Milwaukee, WI 53212",
+    "website": "https://www.riverwestcoop.org/about-us",
+    "category": "coffee"
+  },
+  {
+    "id": 115,
+    "name": "Outpost Co-op (Capitol Drive)",
+    "city": "Milwaukee",
+    "state": "WI",
+    "location": "100 East Capitol Drive, Milwaukee, WI 53212",
+    "website": "https://www.outpost.coop",
+    "category": "coffee"
+  },
+  {
+    "id": 116,
+    "name": "Outpost Co-op (State)",
+    "city": "Wauwatosa",
+    "state": "WI",
+    "location": "7000 West State Street, Wauwatosa, WI 53213",
+    "website": "https://www.outpost.coop",
+    "category": "coffee"
+  },
+  {
+    "id": 117,
+    "name": "Outpost Co-op (Bayview)",
+    "city": "Milwaukee",
+    "state": "WI",
+    "location": "2826 South Kinnickinnic Avenue, Milwaukee, WI 53207",
+    "website": "https://www.outpost.coop",
+    "category": "coffee"
+  },
+  {
+    "id": 118,
+    "name": "Outpost Co-op (Mequon)",
+    "city": "Mequon",
+    "state": "WI",
+    "location": "7590 W. Mequon Rd., Mequon, WI 53092",
+    "website": "https://www.outpost.coop",
+    "category": "coffee"
+  },
+  {
+    "id": 119,
+    "name": "Afterglow Coffee Cooperative",
+    "city": "Seattle",
+    "state": "WA",
+    "location": "Address not specified",
+    "website": "https://www.afterglowcoffee.com/about",
+    "category": "coffee"
+  },
+  {
+    "id": 120,
+    "name": "Afterglow Coffee Cooperative",
+    "city": "Arlington",
+    "state": "TX",
+    "location": "",
+    "website": "https://www.afterglowcoffee.com/about",
+    "category": "coffee"
+  },
+  {
+    "id": 121,
+    "name": "Inclusion Coffee",
+    "city": "Arlington",
+    "state": "TX",
+    "location": "101 East Abram Street, Arlington, TX 76010",
+    "website": "https://inclusioncoffee.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 122,
+    "name": "Nehemiah Coffee Co.",
+    "city": "Arlington",
+    "state": "TX",
+    "location": "505 E Lamar Blvd Suite K100, Arlington, TX 76011",
+    "website": "https://www.nehemiahcoffee.com/our-story",
+    "category": "coffee"
+  },
+  {
+    "id": 123,
+    "name": "Taste Community Restaurant",
+    "city": "Arlington",
+    "state": "TX",
+    "location": "200 North Cooper Street, Arlington, TX 76011",
+    "website": "https://downtownarlington.org/go/taste-community-restaurant",
+    "category": "restaurant"
+  },
+  {
+    "id": 124,
+    "name": "Ujamaa Cafe",
+    "city": "Newark",
+    "state": "NJ",
+    "location": "238 Van Buren St, Newark, NJ 07105",
+    "website": "https://www.coalitionequity.org/ujamaa-cafe",
+    "category": "restaurant"
+  },
+  {
+    "id": 125,
+    "name": "Three Thirds Café",
+    "city": "Jersey City",
+    "state": "NJ",
+    "location": "400 Claremont Avenue, Jersey City, NJ 07304",
+    "website": "https://www.threethirdscafe.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 126,
+    "name": "Short Grain",
+    "city": "Jersey City",
+    "state": "NJ",
+    "location": "183 Montgomery St, Jersey City, NJ 07302",
+    "website": "https://shortgrainjc.com/",
+    "category": "restaurant"
+  },
+  {
+    "id": 127,
+    "name": "Café Esmé",
+    "city": "Jersey City",
+    "state": "NJ",
+    "location": "485 Marin Blvd, Jersey City, NJ 07302",
+    "website": "https://cafeesme.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 128,
+    "name": "CLO Coffee Co.",
+    "city": "Jersey City",
+    "state": "NJ",
+    "location": "97 Newkirk St, Jersey City, NJ 07306",
+    "website": "http://clocoffeecompany.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 129,
+    "name": "Kaffa Espresso Bar",
+    "city": "Jersey City",
+    "state": "NJ",
+    "location": "276 Newark Ave, Jersey City, NJ 07302",
+    "website": "https://kaffaespressobar.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 130,
+    "name": "Snapdragon Coffee & Social",
+    "city": "Jersey City",
+    "state": "NJ",
+    "location": "190 Monticello Ave, Jersey City, NJ 07304",
+    "website": "https://www.snapdragonjc.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 131,
+    "name": "Rabble & Lion Coffee",
+    "city": "Jersey City",
+    "state": "NJ",
+    "location": "156 Brunswick Street, Jersey City, NJ 07302",
+    "website": "https://www.rabbleandlion.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 132,
+    "name": "Luna Restaurant",
+    "city": "Jersey City",
+    "state": "NJ",
+    "location": "279 Grove Street, Jersey City, NJ 07302",
+    "website": "https://www.lunajc.com/",
+    "category": "restaurant"
+  },
+  {
+    "id": 133,
+    "name": "Better Days Eatery & Bar",
+    "city": "Jersey City",
+    "state": "NJ",
+    "location": "143 Newark Ave, Jersey City, NJ 07302",
+    "website": "https://betterdaysjc.com/",
+    "category": "restaurant"
+  },
+  {
+    "id": 134,
+    "name": "Grind House Chula Vista",
+    "city": "Chula Vista",
+    "state": "CA",
+    "location": "260 1/2 Third Ave, Chula Vista, CA 91910",
+    "website": "https://www.grindhousecv.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 135,
+    "name": "Agave Coffee & Café",
+    "city": "Chula Vista",
+    "state": "CA",
+    "location": "303 H Street, Suite #107, Chula Vista, CA 91910",
+    "website": "https://www.agavecoffeeandcafe.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 136,
+    "name": "Casa De Otay",
+    "city": "Chula Vista",
+    "state": "CA",
+    "location": "1665 Metro Ave Suite 100, Chula Vista, CA 91915",
+    "website": "https://casadeotay.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 137,
+    "name": "Dlish California Cuisine",
+    "city": "Chula Vista",
+    "state": "CA",
+    "location": "386 East H Street, Chula Vista, CA 91910",
+    "website": "https://dlishbistro.com/",
+    "category": "restaurant"
+  },
+  {
+    "id": 138,
+    "name": "Italianissimo Trattoria",
+    "city": "Chula Vista",
+    "state": "CA",
+    "location": "323 3rd Ave, Chula Vista, CA 91910",
+    "website": "https://www.italianissimotrattoria.net/",
+    "category": "restaurant"
+  },
+  {
+    "id": 139,
+    "name": "Vogue Tavern",
+    "city": "Chula Vista",
+    "state": "CA",
+    "location": "",
+    "website": "https://voguetavern.com/",
+    "category": "restaurant"
+  },
+  {
+    "id": 140,
+    "name": "Coalescence Coffee",
+    "city": "Norfolk",
+    "state": "VA",
+    "location": "226 W 24th St, Norfolk, VA 23517",
+    "website": "https://coalescencecoffee.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 141,
+    "name": "Coalescence Coffee",
+    "city": "Richmond",
+    "state": "VA",
+    "location": "23 W Broad St, Richmond, VA 23220",
+    "website": "https://coalescencecoffee.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 142,
+    "name": "Alpha Coffee Cafe",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "location": "111 S Main St, Salt Lake City, UT 84111",
+    "website": "https://alpha.coffee",
+    "category": "coffee"
+  },
+  {
+    "id": 143,
+    "name": "The People's Coffee",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "location": "177 E 200 S, Salt Lake City, UT 84111",
+    "website": "https://peoplescoffeeco.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 144,
+    "name": "Hub & Spoke Diner",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "location": "1291 S 1100 E, Salt Lake City, UT 84105",
+    "website": "https://www.hubandspokediner.com/",
+    "category": "restaurant"
+  },
+  {
+    "id": 145,
+    "name": "The Med",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "location": "420 East 3300 South, Salt Lake City, UT",
+    "website": "https://www.medslc.com/",
+    "category": "restaurant"
+  },
+  {
+    "id": 146,
+    "name": "Afterglow Coffee Cooperative",
+    "city": "Amarillo",
+    "state": "TX",
+    "location": "",
+    "website": "https://www.afterglowcoffee.com/about",
+    "category": "coffee"
+  },
+  {
+    "id": 147,
+    "name": "White Electric Coffee Co-Op",
+    "city": "Providence",
+    "state": "RI",
+    "location": "711 Westminster Street, Providence, RI",
+    "website": "https://www.whiteelectriccoffee.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 148,
+    "name": "Afterglow Coffee Cooperative",
+    "city": "Providence",
+    "state": "RI",
+    "location": "",
+    "website": "https://www.afterglowcoffee.com/about",
+    "category": "coffee"
+  },
+  {
+    "id": 149,
+    "name": "Proof Bakery Cooperative",
+    "city": "Los Angeles",
+    "state": "CA",
+    "location": "",
+    "website": "https://www.proofbakery.com/about",
+    "category": "coffee"
+  },
+  {
+    "id": 150,
+    "name": "La Milpa Café",
+    "city": "Santa Ana",
+    "state": "CA",
+    "location": "1901 W Walnut St, Santa Ana, CA 92703",
+    "website": "https://www.lacolmenacoop.com/la-milpa-cafe",
+    "category": "coffee"
+  },
+  {
+    "id": 151,
+    "name": "Etch Restaurant",
+    "city": "Nashville",
+    "state": "TN",
+    "location": "",
+    "website": "http://etchrestaurant.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 152,
+    "name": "Arizmendi Bakery",
+    "city": "San Rafael",
+    "state": "CA",
+    "location": "1002 Court Street, San Rafael, CA 94901",
+    "website": "https://www.arizmendi-sanrafael.com/our-story-1",
+    "category": "restaurant"
+  },
+  {
+    "id": 153,
+    "name": "The Palm Cafe at General Provision",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "location": "300 SW 1st Ave Suite 155, Fort Lauderdale, FL 33301",
+    "website": "https://www.atly.com/location/ThePalmCafeAtGeneralProvision",
+    "category": "coffee"
+  },
+  {
+    "id": 154,
+    "name": "Carla's",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "location": "124 Las Olas Boulevard, Fort Lauderdale, FL 33311",
+    "website": "https://www.carlasfl.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 155,
+    "name": "Sip Java Co.",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "location": "638 N Federal Hwy, Fort Lauderdale, FL 33304",
+    "website": "https://www.sipjavaco.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 156,
+    "name": "Circle House Coffee",
+    "city": "Wilton Manors",
+    "state": "FL",
+    "location": "119 W Oakland Park Blvd, Wilton Manors, FL 33311",
+    "website": "http://circlehousecoffee.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 157,
+    "name": "G&B Dockside",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "location": "3333 NE 32nd Avenue, Fort Lauderdale, FL 33308",
+    "website": "https://www.gandbdockside.com/",
+    "category": "restaurant"
+  },
+  {
+    "id": 158,
+    "name": "TIMBR",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "location": "15 W Las Olas Blvd, Fort Lauderdale, FL 33301",
+    "website": "https://www.timbr-restaurant.com/",
+    "category": "restaurant"
+  },
+  {
+    "id": 159,
+    "name": "The Combine Kitchen",
+    "city": "Rancho Cucamonga",
+    "state": "CA",
+    "location": "12750 Foothill Blvd, Rancho Cucamonga, CA 91739",
+    "website": "https://www.internationalrestaurantvillage.com/thecombinekitchen",
+    "category": "coffee"
+  },
+  {
+    "id": 160,
+    "name": "West Oak Coffee Bar",
+    "city": "Denton",
+    "state": "TX",
+    "location": "114 W. Oak Street, Denton, TX 76201",
+    "website": "https://www.westoakcoffeebar.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 161,
+    "name": "Zera Coffee & Events",
+    "city": "Denton",
+    "state": "TX",
+    "location": "420 E McKinney St, Denton, TX 76209",
+    "website": "https://www.zeracoffee.com/about",
+    "category": "coffee"
+  },
+  {
+    "id": 162,
+    "name": "Loco Cafe",
+    "city": "Denton",
+    "state": "TX",
+    "location": "603 N Locust, Denton, TX 76201",
+    "website": "https://www.locodenton.com/",
+    "category": "restaurant"
+  },
+  {
+    "id": 163,
+    "name": "Aura Coffee",
+    "city": "Denton",
+    "state": "TX",
+    "location": "Denton, TX",
+    "website": "https://www.auracoffeedtx.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 164,
+    "name": "Wild Cactus Cantina & Grill",
+    "city": "Denton",
+    "state": "TX",
+    "location": "110 W Mulberry St, Denton, TX 76201",
+    "website": "https://www.wildcactuscantina.com/",
+    "category": "restaurant"
+  },
+  {
+    "id": 165,
+    "name": "Roots & Refuge Coffee Roasters",
+    "city": "Macon",
+    "state": "GA",
+    "location": "546 Poplar Street, Macon, Georgia 31201",
+    "website": "https://rootsandrefugecoffee.com/about-1",
+    "category": "coffee"
+  },
+  {
+    "id": 166,
+    "name": "Black Star Co-op Pub & Brewery",
+    "city": "Austin",
+    "state": "TX",
+    "location": "7020 Easy Wind Dr., Ste. 100, Austin, TX, 78752",
+    "website": "https://www.blackstar.coop/",
+    "category": "restaurant"
+  },
+  {
+    "id": 167,
+    "name": "May Day Cafe Workers Cooperative",
+    "city": "Minneapolis",
+    "state": "MN",
+    "location": "",
+    "website": "https://maydaycafe.coop/",
+    "category": "restaurant"
+  },
+  {
+    "id": 168,
+    "name": "Higher Grounds Coffee Shop",
+    "city": "Midland",
+    "state": "TX",
+    "location": "403 Andrews Hwy, Midland, TX 79701",
+    "website": "https://highergroundsmidland.com/about/",
+    "category": "coffee"
+  },
+  {
+    "id": 169,
+    "name": "The Oaks Coffee & Creative Co.",
+    "city": "Midland",
+    "state": "TX",
+    "location": "403 Andrews Hwy, Midland, TX 79701",
+    "website": "https://bestofmidlandtx.com/biz/coffee-shops/the-oaks-coffee-and-creative-co/",
+    "category": "coffee"
+  },
+  {
+    "id": 170,
+    "name": "Twelve Gate Coffee Co.",
+    "city": "Midland",
+    "state": "TX",
+    "location": "3200 Mockingbird Lane, Bldg 4, Midland, TX 79705",
+    "website": "https://www.twelvegate.com/",
+    "category": "coffee"
+  },
+  {
+    "id": 171,
+    "name": "Birdies Cafe",
+    "city": "Midland",
+    "state": "TX",
+    "location": "5000 Briarwood Ave Suite 105, Midland, TX 79707",
+    "website": "https://linktr.ee/birdiesmtx",
+    "category": "coffee"
   }
 ]

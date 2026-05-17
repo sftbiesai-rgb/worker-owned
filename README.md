@@ -5,7 +5,7 @@ A directory of worker-owned coffee shops and restaurants across the United State
 ## Features
 
 - Search by city, state, or business name
-- Toggle between **Coffee Shops** (59) and **Restaurants** (32)
+- Toggle between **Coffee Shops** (64) and **Restaurants** (37)
 - Browse full listing page
 - Submission form with math CAPTCHA anti-spam
 - Red, white & blue theme inspired by yourfairshare.info
@@ -62,12 +62,10 @@ Sourced from the [USFWC Directory](https://www.usworker.coop/directory/) (474+ w
 - [x] **Update logo / favicon** — replaced with custom coffee mug / co-op icon
 - [ ] **Post on Reddit co-op groups** — share on r/cooperatives, r/coffee, and city-specific subreddits to invite submissions from the community
 - [x] **Add Vercel Analytics / visit counters** — drop in the Vercel Analytics script or a simple counter to track page views
-- [ ] **SEO optimization** — add meta descriptions, Open Graph tags, sitemap.xml, structured data (Schema.org) for local business listings
+- [x] **SEO optimization** — add meta descriptions, Open Graph tags, sitemap.xml, structured data (Schema.org) for local business listings
 - [x] **Add city/state pages** — generate static pages for each city/state with filtered results for better SEO
-- [ ] **Add Google Maps integration** — embed a map view showing all worker-owned shops
+- [x] **Add Google Maps integration** — embed a map view showing all worker-owned shops
 - [ ] **Add category expansion** — include bakeries, grocery co-ops with cafes, breweries, etc.
-- [ ] **Add user ratings / reviews** — let visitors leave feedback on listed businesses
-- [ ] **Set up automated email notifications** — configure SMTP env vars in Vercel (`SMTP_HOST`, `SMTP_USER`, `SMTP_PASS`, `SUBMISSIONS_EMAIL`)
 
 ## Database Expansion Strategy
 
@@ -125,6 +123,9 @@ If time allows, go state by state searching for:
 - "cooperative development [state]"
 - Check state government websites for co-op resources
 
+### 8. Additional Strategies (Phase 7 in RUNBOOK.md)
+State Secretary of State business search, Solidarity Economy Atlas, 1worker1vote.org, SELC case studies, Google Maps systematic search, Instagram hashtag mining, local newspaper search, Yelp keyword search, co-op conference attendee lists, university extension programs, and grant recipient databases. See `RUNBOOK.md` Phase 7 for exact steps.
+
 ### 7. Submit / Crowdsource
 The submission form at `/submit` lets anyone nominate a business. Promote it on:
 - r/cooperatives, r/coffee, r/anticonsumption
@@ -144,21 +145,7 @@ The ultimate goal is to expand beyond food & beverage into a comprehensive direc
 - **Healthcare & Wellness** — worker-owned clinics, therapy collectives, fitness co-ops
 - **Childcare & Education** — worker-owned daycare centers, tutoring co-ops, schools
 - **Retail & Grocery** — worker-owned markets, food co-ops, general stores
-- **Tech & Media** — worker-owned软件开发, design studios, publishing co-ops
-- **Manufacturing & Trades** — worker-owned factories, construction, breweries
-
-Each sector would get its own data file (`src/data/shops.json` → `src/data/` directory), category toggle, and filtered search. The USFWC directory (474+ entries across all industries) provides a foundation — once the food sector is mature, the same scraping and verification workflow can be applied sector by sector.
-
-### Long-Term Vision: Multi-Sector Directory
-The ultimate goal is to expand beyond food & beverage into a comprehensive directory of **all worker-owned businesses** across the US, including:
-
-- **Clothing & Apparel** — worker-owned clothing brands, textile co-ops, tailor shops
-- **Bookstores** — worker-owned bookshops and radical literature distributors
-- **Home & Garden** — worker-owned landscaping, cleaning, handyperson services
-- **Healthcare & Wellness** — worker-owned clinics, therapy collectives, fitness co-ops
-- **Childcare & Education** — worker-owned daycare centers, tutoring co-ops, schools
-- **Retail & Grocery** — worker-owned markets, food co-ops, general stores
-- **Tech & Media** — worker-owned软件开发, design studios, publishing co-ops
+- **Tech & Media** — worker-owned software studios, design agencies, publishing co-ops
 - **Manufacturing & Trades** — worker-owned factories, construction, breweries
 
 Each sector would get its own data file (`src/data/shops.json` → `src/data/` directory), category toggle, and filtered search. The USFWC directory (474+ entries across all industries) provides a foundation — once the food sector is mature, the same scraping and verification workflow can be applied sector by sector.
