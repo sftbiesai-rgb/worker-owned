@@ -1327,7 +1327,16 @@
     "name": "Etch Restaurant",
     "city": "Nashville",
     "state": "TN",
-    "location": "",
+    "location": "303 Demonbreun St, Nashville, TN",
+    "website": "http://etchrestaurant.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 172,
+    "name": "Etch Restaurant",
+    "city": "Franklin",
+    "state": "TN",
+    "location": "230 Franklin Rd, Ste 1300, Franklin, TN 37064",
     "website": "http://etchrestaurant.com",
     "category": "restaurant"
   },
