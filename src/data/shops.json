@@ -315,15 +315,6 @@
     "category": "coffee"
   },
   {
-    "id": 36,
-    "name": "Pagoda Cafe Cooperative",
-    "city": "New Orleans",
-    "state": "LA",
-    "location": "1430 N Dorgenois St, New Orleans, LA 70119",
-    "website": "pagodacafe.net",
-    "category": "restaurant"
-  },
-  {
     "id": 37,
     "name": "The Red Raven Espresso Parlor",
     "city": "Fargo",
@@ -918,24 +909,6 @@
     "category": "coffee"
   },
   {
-    "id": 103,
-    "name": "New Leaf Espresso",
-    "city": "Somerville",
-    "state": "MA",
-    "location": "310 Highland Ave, Somerville, MA 02144",
-    "website": "newleafespresso.com",
-    "category": "coffee"
-  },
-  {
-    "id": 104,
-    "name": "Flat Iron Cooperative",
-    "city": "Bellows Falls",
-    "state": "VT",
-    "location": "51 Square, Bellows Falls, VT 05101",
-    "website": "flatiron.coop",
-    "category": "coffee"
-  },
-  {
     "id": 105,
     "name": "Le Voyeur",
     "city": "Olympia",
@@ -960,15 +933,6 @@
     "state": "WA",
     "location": "9252 57th Ave S, Seattle, WA 98118",
     "website": "judesoldtown.com",
-    "category": "restaurant"
-  },
-  {
-    "id": 108,
-    "name": "Donna NYC",
-    "city": "New York",
-    "state": "NY",
-    "location": "7 Cornelia Street, New York, NY 10014",
-    "website": "https://www.donnanyc.com/",
     "category": "restaurant"
   },
   {
@@ -1008,15 +972,6 @@
     "category": "coffee"
   },
   {
-    "id": 114,
-    "name": "Riverwest Co-op & Café",
-    "city": "Milwaukee",
-    "state": "WI",
-    "location": "733 E. Clarke St., Milwaukee, WI 53212",
-    "website": "https://www.riverwestcoop.org/about-us",
-    "category": "coffee"
-  },
-  {
     "id": 115,
     "name": "Outpost Co-op (Capitol Drive)",
     "city": "Milwaukee",
@@ -1050,15 +1005,6 @@
     "state": "WI",
     "location": "7590 W. Mequon Rd., Mequon, WI 53092",
     "website": "https://www.outpost.coop",
-    "category": "coffee"
-  },
-  {
-    "id": 119,
-    "name": "Afterglow Coffee Cooperative",
-    "city": "Seattle",
-    "state": "WA",
-    "location": "Address not specified",
-    "website": "https://www.afterglowcoffee.com/about",
     "category": "coffee"
   },
   {
@@ -1099,7 +1045,7 @@
   },
   {
     "id": 125,
-    "name": "Three Thirds Café",
+    "name": "Three Thirds Caf\u00e9",
     "city": "Jersey City",
     "state": "NJ",
     "location": "400 Claremont Avenue, Jersey City, NJ 07304",
@@ -1117,7 +1063,7 @@
   },
   {
     "id": 127,
-    "name": "Café Esmé",
+    "name": "Caf\u00e9 Esm\u00e9",
     "city": "Jersey City",
     "state": "NJ",
     "location": "485 Marin Blvd, Jersey City, NJ 07302",
@@ -1189,7 +1135,7 @@
   },
   {
     "id": 135,
-    "name": "Agave Coffee & Café",
+    "name": "Agave Coffee & Caf\u00e9",
     "city": "Chula Vista",
     "state": "CA",
     "location": "303 H Street, Suite #107, Chula Vista, CA 91910",
@@ -1287,35 +1233,8 @@
     "category": "restaurant"
   },
   {
-    "id": 147,
-    "name": "White Electric Coffee Co-Op",
-    "city": "Providence",
-    "state": "RI",
-    "location": "711 Westminster Street, Providence, RI",
-    "website": "https://www.whiteelectriccoffee.com/",
-    "category": "coffee"
-  },
-  {
-    "id": 148,
-    "name": "Afterglow Coffee Cooperative",
-    "city": "Providence",
-    "state": "RI",
-    "location": "",
-    "website": "https://www.afterglowcoffee.com/about",
-    "category": "coffee"
-  },
-  {
-    "id": 149,
-    "name": "Proof Bakery Cooperative",
-    "city": "Los Angeles",
-    "state": "CA",
-    "location": "",
-    "website": "https://www.proofbakery.com/about",
-    "category": "coffee"
-  },
-  {
     "id": 150,
-    "name": "La Milpa Café",
+    "name": "La Milpa Caf\u00e9",
     "city": "Santa Ana",
     "state": "CA",
     "location": "1901 W Walnut St, Santa Ana, CA 92703",
