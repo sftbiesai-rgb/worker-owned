@@ -990,15 +990,6 @@
     "category": "coffee"
   },
   {
-    "id": 111,
-    "name": "Afterglow Coffee Cooperative",
-    "city": "Jacksonville",
-    "state": "FL",
-    "location": "",
-    "website": "https://www.afterglowcoffee.com/about",
-    "category": "coffee"
-  },
-  {
     "id": 112,
     "name": "Afterglow Coffee Cooperative",
     "city": "Oklahoma City",
@@ -1067,15 +1058,6 @@
     "city": "Seattle",
     "state": "WA",
     "location": "Address not specified",
-    "website": "https://www.afterglowcoffee.com/about",
-    "category": "coffee"
-  },
-  {
-    "id": 120,
-    "name": "Afterglow Coffee Cooperative",
-    "city": "Arlington",
-    "state": "TX",
-    "location": "",
     "website": "https://www.afterglowcoffee.com/about",
     "category": "coffee"
   },
@@ -1303,15 +1285,6 @@
     "location": "420 East 3300 South, Salt Lake City, UT",
     "website": "https://www.medslc.com/",
     "category": "restaurant"
-  },
-  {
-    "id": 146,
-    "name": "Afterglow Coffee Cooperative",
-    "city": "Amarillo",
-    "state": "TX",
-    "location": "",
-    "website": "https://www.afterglowcoffee.com/about",
-    "category": "coffee"
   },
   {
     "id": 147,
