@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "name": "Equal Exchange",
+    "website": "https://shop.equalexchange.coop",
+    "description": "Worker-owned fair trade coffee, chocolate, tea, and snacks sourced from small-farmer cooperatives worldwide.",
+    "tags": ["coffee", "chocolate", "tea", "snacks", "gifts"]
+  },
+  {
+    "id": 2,
+    "name": "Just Coffee Cooperative",
+    "website": "https://justcoffee.coop",
+    "description": "Worker-owned fair-trade, organic coffee roasting co-op in Madison, WI. Free shipping on all US orders.",
+    "tags": ["coffee"]
+  },
+  {
+    "id": 3,
+    "name": "Slow Bloom Coffee Cooperative",
+    "website": "https://www.slowbloomcoffee.com/shopcoffee",
+    "description": "Worker-owned specialty coffee roaster in Redlands, CA. Formed when unionized workers were laid off by their prior employer.",
+    "tags": ["coffee"]
+  },
+  {
+    "id": 4,
+    "name": "Higher Grounds Trading Co.",
+    "website": "https://highergroundstrading.com",
+    "description": "Worker-owned coffee roaster sourcing directly from farmer cooperatives in Mexico, Central America, and East Africa.",
+    "tags": ["coffee"]
+  },
+  {
+    "id": 5,
+    "name": "Afterglow Coffee Cooperative",
+    "website": "https://www.afterglowcoffee.com/shop",
+    "description": "Worker-owned specialty coffee roaster in Richmond, VA, shipping sustainably sourced coffees and brewing equipment nationally.",
+    "tags": ["coffee", "brewing equipment"]
+  },
+  {
+    "id": 6,
+    "name": "Dean's Beans Organic Coffee",
+    "website": "https://deansbeans.com",
+    "description": "Worker-owned organic coffee roaster focused on cooperative sourcing and social justice, based in Orange, MA.",
+    "tags": ["coffee"]
+  },
+  {
+    "id": 7,
+    "name": "Justseeds Artists' Cooperative",
+    "website": "https://justseeds.org/shop",
+    "description": "Worker-owned cooperative of 40 North American printmakers selling posters, prints, and publications rooted in social and environmental movements.",
+    "tags": ["art", "prints", "posters", "books", "gifts"]
+  },
+  {
+    "id": 8,
+    "name": "Stocksy United",
+    "website": "https://www.stocksy.com",
+    "description": "Artist-owned stock photography cooperative — buy licensed photos while supporting the creators who own the platform.",
+    "tags": ["photography", "art", "media"]
+  },
+  {
+    "id": 9,
+    "name": "Magnum Photos",
+    "website": "https://store.magnumphotos.com",
+    "description": "The legendary photographer-owned cooperative (est. 1947) selling fine art prints, photobooks, and archive prints.",
+    "tags": ["photography", "art prints", "books", "gifts"]
+  },
+  {
+    "id": 10,
+    "name": "Green Mountain Spinnery",
+    "website": "https://www.spinnery.com",
+    "description": "Worker-owned cooperative in Putney, VT producing certified organic, US-grown natural fiber yarns and knitting patterns since 1981.",
+    "tags": ["yarn", "fiber", "crafts", "knitting", "gifts"]
+  },
+  {
+    "id": 11,
+    "name": "TESA Collective",
+    "website": "https://store.tesacollective.com",
+    "description": "Worker-owned publisher and game studio selling cooperative-themed board games, books, and educational tools for activists and organizers.",
+    "tags": ["games", "books", "education", "gifts"]
+  },
+  {
+    "id": 12,
+    "name": "Microcosm Publishing",
+    "website": "https://microcosmpublishing.com",
+    "description": "Worker-owned independent publisher and distributor of books, zines, stickers, and DIY resources covering cycling, feminism, and social justice.",
+    "tags": ["books", "zines", "stickers", "gifts"]
+  },
+  {
+    "id": 13,
+    "name": "Worx Printing",
+    "website": "https://worxprinting.coop",
+    "description": "Worker-owned, union print-on-demand cooperative in Worcester, MA offering custom apparel, merch, and accessories.",
+    "tags": ["printing", "clothing", "apparel", "custom merch"]
+  },
+  {
+    "id": 14,
+    "name": "Radix Printing & Publishing Cooperative",
+    "website": "https://radix.coop",
+    "description": "NYC's only worker-owned union print shop, offering offset, letterpress, and digital printing services from Brooklyn.",
+    "tags": ["printing", "publishing", "design"]
+  },
+  {
+    "id": 15,
+    "name": "Collective Copies",
+    "website": "https://collectivecopies.com",
+    "description": "Worker-owned print shop based in Western Massachusetts offering printing, copying, and design services.",
+    "tags": ["printing", "design", "office"]
+  },
+  {
+    "id": 16,
+    "name": "Out of the Fog",
+    "website": "https://www.outofthefog.net",
+    "description": "Worker-owned screen printing and custom apparel co-op based in San Francisco.",
+    "tags": ["clothing", "printing", "custom merch"]
+  },
+  {
+    "id": 17,
+    "name": "Design Action Collective",
+    "website": "https://designaction.org",
+    "description": "The longest-running worker-owned, unionized graphic design firm in the US, serving nonprofits, unions, and social justice campaigns.",
+    "tags": ["design", "branding", "web design", "printing"]
+  },
+  {
+    "id": 18,
+    "name": "Agaric",
+    "website": "https://agaric.coop",
+    "description": "Worker-owned web development cooperative building open-source digital tools and websites for mission-driven organizations.",
+    "tags": ["tech", "web development", "software"]
+  },
+  {
+    "id": 19,
+    "name": "CoLab Cooperative",
+    "website": "https://colab.coop",
+    "description": "Worker-owned digital agency in Ithaca, NY building custom websites and apps for socially responsible organizations since 2010.",
+    "tags": ["tech", "web development", "software", "design"]
+  },
+  {
+    "id": 20,
+    "name": "Palante Technology Cooperative",
+    "website": "https://palantetech.coop",
+    "description": "Brooklyn-based worker cooperative providing web development and digital security consulting exclusively to progressive nonprofits.",
+    "tags": ["tech", "web development", "software", "consulting"]
+  },
+  {
+    "id": 21,
+    "name": "Loomio",
+    "website": "https://www.loomio.com",
+    "description": "Worker-owned cooperative making collaborative decision-making software used by cooperatives and nonprofits worldwide.",
+    "tags": ["tech", "software"]
+  },
+  {
+    "id": 22,
+    "name": "Artisan Beverage Cooperative",
+    "website": "https://artbev.coop",
+    "description": "Worker-owned cooperative in Greenfield, MA brewing Katalyst Kombucha and Ginger Libation beverages.",
+    "tags": ["kombucha", "beverages", "drinks"]
+  }
+]
