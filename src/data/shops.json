@@ -248,7 +248,7 @@
     "city": "Minneapolis",
     "state": "MN",
     "location": "3440 Bloomington Ave, Minneapolis, MN 55407",
-    "website": "maydaycafe.coop",
+    "website": "https://maydaycafe.coop",
     "category": "coffee"
   },
   {
@@ -1464,15 +1464,6 @@
     "state": "TX",
     "location": "7020 Easy Wind Dr., Ste. 100, Austin, TX, 78752",
     "website": "https://www.blackstar.coop/",
-    "category": "restaurant"
-  },
-  {
-    "id": 167,
-    "name": "May Day Cafe Workers Cooperative",
-    "city": "Minneapolis",
-    "state": "MN",
-    "location": "",
-    "website": "https://maydaycafe.coop/",
     "category": "restaurant"
   },
   {
