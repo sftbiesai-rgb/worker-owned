@@ -54,7 +54,7 @@ function HomePage() {
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Worker Owned</h1>
           </div>
 
-          <p className="text-center text-sm text-gray-500 mb-4">A directory of worker-owned coffee shops and restaurants across the US</p>
+          <p className="text-center text-sm text-gray-500 mb-4">Search for a worker-owned coffee shop or restaurant in your city</p>
 
           <div className="flex gap-2 mb-4">
             <button
@@ -132,7 +132,8 @@ function HomePage() {
         </div>
 
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mt-3">
-          <h2 className="text-xs font-bold tracking-widest text-gray-500 mb-3">SHOP WORKER-OWNED ONLINE</h2>
+          <h2 className="text-xs font-bold tracking-widest text-gray-500 mb-1">SHOP WORKER-OWNED ONLINE</h2>
+          <p className="text-sm text-gray-500 mb-3">Worker-owned businesses you can buy from anywhere</p>
           <div className="grid grid-cols-2 gap-2">
             {MARKETPLACE_CATEGORIES.map(cat => (
               <Link
