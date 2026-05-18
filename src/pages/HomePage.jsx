@@ -125,9 +125,9 @@ function HomePage() {
           )}
         </div>
 
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mt-6">
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mt-3">
           <p className="text-center text-sm text-gray-500 mb-3">Browse worker-owned businesses online</p>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-3">
             {MARKETPLACE_CATEGORIES.map(cat => (
               <Link
                 key={cat.slug}
