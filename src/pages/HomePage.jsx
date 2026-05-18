@@ -132,8 +132,7 @@ function HomePage() {
         </div>
 
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mt-3">
-          <h2 className="text-xs font-bold tracking-widest text-gray-500 mb-1">SHOP WORKER-OWNED ONLINE</h2>
-          <p className="text-sm text-gray-500 mb-3">Worker-owned businesses you can buy from anywhere</p>
+          <p className="text-center text-sm text-gray-500 mb-3">Browse worker-owned businesses online</p>
           <div className="grid grid-cols-2 gap-2">
             {MARKETPLACE_CATEGORIES.map(cat => (
               <Link
