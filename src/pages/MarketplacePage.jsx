@@ -3,16 +3,16 @@ import { Link, useParams, Navigate } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
 
 const SECTIONS = [
-  { slug: 'coffee-tea',       label: 'Coffee & Tea',       sectionName: 'Coffee & Tea' },
-  { slug: 'books-publishing', label: 'Books & Publishing', sectionName: 'Books & Publishing' },
-  { slug: 'food-pantry',      label: 'Food & Pantry',      sectionName: 'Food & Pantry' },
-  { slug: 'apparel',          label: 'Apparel',            sectionName: 'Apparel' },
-  { slug: 'art-prints',       label: 'Art & Prints',       sectionName: 'Art & Prints' },
-  { slug: 'music',            label: 'Music',              sectionName: 'Music' },
-  { slug: 'home-goods',       label: 'Home Goods',         sectionName: 'Home Goods' },
-  { slug: 'personal-care',    label: 'Personal Care',      sectionName: 'Personal Care' },
-  { slug: 'games',            label: 'Games',              sectionName: 'Games' },
-  { slug: 'beer-brewing',     label: 'Beer & Brewing',     sectionName: 'Beer & Brewing' },
+  { slug: 'coffee-tea',       label: 'Coffee & Tea',       sectionName: 'Coffee & Tea',       title: 'Worker-Owned Coffee & Tea Online | Worker Owned',                          description: 'Shop worker-owned coffee roasters and tea brands online. Cooperatively owned coffee roasted and shipped direct to your door.' },
+  { slug: 'books-publishing', label: 'Books & Publishing', sectionName: 'Books & Publishing', title: 'Worker-Owned Bookstores & Publishers Online | Worker Owned',               description: 'Buy books from worker-owned bookstores and independent publishers. Radical, independent, and cooperatively owned.' },
+  { slug: 'food-pantry',      label: 'Food & Pantry',      sectionName: 'Food & Pantry',      title: 'Worker-Owned Food & Pantry Online | Worker Owned',                         description: 'Shop worker-owned food brands online. Cooperatively owned nut butters, pickles, chocolate, olive oil, and pantry staples.' },
+  { slug: 'apparel',          label: 'Apparel',            sectionName: 'Apparel',            title: 'Worker-Owned Clothing & Apparel Online | Worker Owned',                    description: 'Shop worker-owned clothing and apparel brands online. Cooperatively owned, USA-made, fair labor fashion.' },
+  { slug: 'art-prints',       label: 'Art & Prints',       sectionName: 'Art & Prints',       title: 'Worker-Owned Art Prints & Posters Online | Worker Owned',                  description: 'Buy art prints and posters from worker-owned artist cooperatives. Political, social movement, and activist art ships worldwide.' },
+  { slug: 'music',            label: 'Music',              sectionName: 'Music',              title: 'Worker-Owned Music Platforms | Worker Owned',                              description: 'Stream and buy music on cooperatively owned platforms. Worker-owned Bandcamp alternatives where artists keep more.' },
+  { slug: 'home-goods',       label: 'Home Goods',         sectionName: 'Home Goods',         title: 'Worker-Owned Home Goods & Handmade Products Online | Worker Owned',        description: 'Shop worker-owned home goods and handmade products online. Cooperatively made ceramics, textiles, candles, and more.' },
+  { slug: 'personal-care',    label: 'Personal Care',      sectionName: 'Personal Care',      title: 'Worker-Owned Soap & Personal Care Online | Worker Owned',                  description: 'Shop worker-owned soaps and personal care products online. Cooperatively made with natural ingredients.' },
+  { slug: 'games',            label: 'Games',              sectionName: 'Games',              title: 'Worker-Owned Board Games Online | Worker Owned',                           description: 'Buy board games from worker-owned cooperatives. Social justice and cooperative games made in the USA.' },
+  { slug: 'beer-brewing',     label: 'Beer & Brewing',     sectionName: 'Beer & Brewing',     title: 'Worker-Owned Breweries & Craft Beer | Worker Owned',                       description: 'Find worker-owned and cooperatively owned breweries. Craft beer made by and for the workers who brew it.' },
 ]
 
 function dedupeByUrl(entries) {
@@ -45,11 +45,16 @@ function MarketplacePage() {
   const section = SECTIONS.find(s => s.slug === category)
 
   useEffect(() => {
-    if (section) {
-      document.title = `Worker-Owned ${section.label} Online Stores | Worker Owned`
-      document.querySelector('meta[name="description"]')?.setAttribute('content',
-        `Shop worker-owned and cooperatively owned ${section.label.toLowerCase()} businesses online. All companies are worker co-ops, ESOPs, or multi-stakeholder co-ops.`)
-    }
+    if (!section) return
+    const canonical = `https://www.workerowned.info/marketplace/${section.slug}`
+    document.title = section.title
+    document.querySelector('meta[name="description"]')?.setAttribute('content', section.description)
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
+    document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', section.title)
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', section.description)
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', section.title)
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', section.description)
   }, [section])
 
   if (!section) return <Navigate to="/" replace />
