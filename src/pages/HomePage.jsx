@@ -125,12 +125,6 @@ function HomePage() {
           )}
         </div>
 
-        <div className="mt-3 text-center">
-          <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
-            Submit a worker-owned business &rarr;
-          </Link>
-        </div>
-
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mt-3">
           <p className="text-center text-sm text-gray-500 mb-3">Browse worker-owned businesses online</p>
           <div className="grid grid-cols-2 gap-2">
@@ -144,6 +138,12 @@ function HomePage() {
               </Link>
             ))}
           </div>
+        </div>
+
+        <div className="mt-3 text-center">
+          <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+            Submit a worker-owned business &rarr;
+          </Link>
         </div>
       </main>
 

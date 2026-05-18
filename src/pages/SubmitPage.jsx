@@ -8,6 +8,7 @@ function SubmitPage() {
   }, [])
 
   const [formName, setFormName] = useState('')
+  const [formCategory, setFormCategory] = useState('')
   const [formCity, setFormCity] = useState('')
   const [formState, setFormState] = useState('')
   const [formWebsite, setFormWebsite] = useState('')
@@ -33,7 +34,7 @@ function SubmitPage() {
       const res = await fetch('https://formspree.io/f/mjglzgwl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: formName, city: formCity, state: formState, website: formWebsite, email: formEmail, description: formDesc }),
+        body: JSON.stringify({ name: formName, category: formCategory, city: formCity, state: formState, website: formWebsite, email: formEmail, description: formDesc }),
       })
       if (!res.ok) {
         setFormError('Something went wrong. Please try again.')
@@ -71,6 +72,26 @@ function SubmitPage() {
                 <input type="text" value={formName} onChange={e => setFormName(e.target.value)}
                   className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors"
                   placeholder="e.g. Red Emma's" />
+              </div>
+              <div>
+                <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Category</label>
+                <select value={formCategory} onChange={e => setFormCategory(e.target.value)}
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white text-gray-700">
+                  <option value="">Select a category...</option>
+                  <option value="Coffee Shop">Coffee Shop</option>
+                  <option value="Restaurant">Restaurant</option>
+                  <option value="Coffee & Tea (online)">Coffee & Tea (online)</option>
+                  <option value="Books & Publishing">Books & Publishing</option>
+                  <option value="Food & Pantry">Food & Pantry</option>
+                  <option value="Apparel">Apparel</option>
+                  <option value="Art & Prints">Art & Prints</option>
+                  <option value="Music">Music</option>
+                  <option value="Home Goods">Home Goods</option>
+                  <option value="Personal Care">Personal Care</option>
+                  <option value="Games">Games</option>
+                  <option value="Beer & Brewing">Beer & Brewing</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
               <div className="flex gap-2">
                 <div className="flex-1">
