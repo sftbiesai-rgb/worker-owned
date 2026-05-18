@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import HomePage from './pages/HomePage.jsx'
 import BrowsePage from './pages/BrowsePage.jsx'
 import SubmitPage from './pages/SubmitPage.jsx'
+import MarketplacePage from './pages/MarketplacePage.jsx'
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <Route path="/restaurants" element={<BrowsePage category="restaurant" />} />
       <Route path="/browse" element={<Navigate to="/coffee" replace />} />
       <Route path="/submit" element={<SubmitPage />} />
+      <Route path="/marketplace/:category" element={<MarketplacePage />} />
     </Routes>
   )
 }

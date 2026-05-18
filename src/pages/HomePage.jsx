@@ -3,6 +3,19 @@ import { Link } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import shopsData from '../data/shops.json'
 
+const MARKETPLACE_CATEGORIES = [
+  { slug: 'coffee-tea',       label: 'Coffee & Tea' },
+  { slug: 'books-publishing', label: 'Books & Publishing' },
+  { slug: 'food-pantry',      label: 'Food & Pantry' },
+  { slug: 'apparel',          label: 'Apparel' },
+  { slug: 'art-prints',       label: 'Art & Prints' },
+  { slug: 'music',            label: 'Music' },
+  { slug: 'home-goods',       label: 'Home Goods' },
+  { slug: 'personal-care',    label: 'Personal Care' },
+  { slug: 'games',            label: 'Games' },
+  { slug: 'beer-brewing',     label: 'Beer & Brewing' },
+]
+
 function HomePage() {
   useEffect(() => {
     document.title = 'Worker Owned — Find Worker-Owned Coffee Shops & Restaurants Near You'
@@ -116,6 +129,21 @@ function HomePage() {
           <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
             Submit a worker-owned business &rarr;
           </Link>
+        </div>
+
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mt-3">
+          <h2 className="text-xs font-bold tracking-widest text-gray-500 mb-3">SHOP WORKER-OWNED ONLINE</h2>
+          <div className="grid grid-cols-2 gap-2">
+            {MARKETPLACE_CATEGORIES.map(cat => (
+              <Link
+                key={cat.slug}
+                to={`/marketplace/${cat.slug}`}
+                className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors"
+              >
+                {cat.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </main>
 
