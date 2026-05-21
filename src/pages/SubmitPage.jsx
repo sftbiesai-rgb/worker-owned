@@ -81,7 +81,7 @@ function SubmitPage() {
                   <option value="Coffee Shop">Coffee Shop</option>
                   <option value="Restaurant">Restaurant</option>
                   <option value="Coffee & Tea (online)">Coffee & Tea (online)</option>
-                  <option value="Books & Publishing">Books & Publishing</option>
+                  <option value="Media & Publishing">Media & Publishing</option>
                   <option value="Food & Pantry">Food & Pantry</option>
                   <option value="Apparel">Apparel</option>
                   <option value="Art & Prints">Art & Prints</option>

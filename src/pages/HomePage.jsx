@@ -5,7 +5,7 @@ import shopsData from '../data/shops.json'
 
 const MARKETPLACE_CATEGORIES = [
   { slug: 'coffee-tea',       label: 'Coffee & Tea' },
-  { slug: 'books-publishing', label: 'Books & Publishing' },
+  { slug: 'media-publishing', label: 'Media & Publishing' },
   { slug: 'food-pantry',      label: 'Food & Pantry' },
   { slug: 'apparel',          label: 'Apparel' },
   { slug: 'art-prints',       label: 'Art & Prints' },

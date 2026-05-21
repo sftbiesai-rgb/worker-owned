@@ -27,10 +27,10 @@ const routes = [
     canonical: 'https://www.workerowned.info/marketplace/coffee-tea',
   },
   {
-    url: '/marketplace/books-publishing',
-    title: 'Worker-Owned Bookstores & Publishers Online | Worker Owned',
-    description: 'Buy books from worker-owned bookstores and independent publishers. Radical, independent, and cooperatively owned.',
-    canonical: 'https://www.workerowned.info/marketplace/books-publishing',
+    url: '/marketplace/media-publishing',
+    title: 'Worker-Owned Media, News & Publishers Online | Worker Owned',
+    description: 'Read and support worker-owned journalism, newsletters, podcasts, and book publishers. Independent media owned by the people who make it.',
+    canonical: 'https://www.workerowned.info/marketplace/media-publishing',
   },
   {
     url: '/marketplace/food-pantry',
