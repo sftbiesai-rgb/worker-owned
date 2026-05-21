@@ -956,15 +956,5 @@
     "status": "verified active",
     "notes": "Reader-supported, worker-owned journalism outlet dedicated exclusively to covering the tabletop RPG and board game industry. The only co-op in the games press.",
     "site_section": "Media & Publishing"
-  },
-  {
-    "id": 94,
-    "name": "The Flytrap",
-    "url": "https://theflytrap.net",
-    "category": "feminist media / essays",
-    "ownership_type": "worker co-op",
-    "status": "verify active",
-    "notes": "Intersectional feminist media co-op bringing back long-form independent cultural blogging and essays. Distributed via newsletter platforms.",
-    "site_section": "Media & Publishing"
   }
 ]
