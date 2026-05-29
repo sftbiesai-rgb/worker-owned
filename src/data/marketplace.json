@@ -221,13 +221,24 @@
   },
   {
     "id": 24,
-    "name": "Black Star Co-op",
-    "url": "https://blackstar.coop",
-    "category": "brewpub",
-    "ownership_type": "multi-stakeholder co-op",
-    "ships": "taproom only",
+    "name": "Democracy Brewing",
+    "url": "https://democracybrewing.com",
+    "category": "worker-owned brewpub",
+    "ownership_type": "worker co-op",
+    "ships": "taproom — Boston MA (possible online merch)",
     "status": "verified active",
-    "notes": "World's first cooperatively-owned worker self-managed brewpub. Austin TX. 3,000+ community members. No shipping — destination/visit listing.",
+    "notes": "100% worker-owned brewery and pub in Boston MA since 2018. 'Fermenting rebellion.' Craft beer, scratch-made food. Has online shop — check site for current offerings.",
+    "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 94,
+    "name": "Drifa Brewing Company",
+    "url": "https://drifabrewingcompany.com",
+    "category": "cooperative brewery",
+    "ownership_type": "worker co-op",
+    "ships": "taproom only — Marquette MI",
+    "status": "verified active",
+    "notes": "One of nine cooperative breweries in the US, the only one in Michigan. Taproom and beer garden in Marquette MI. Worker co-op since founding.",
     "site_section": "Beer & Brewing"
   },
   {
