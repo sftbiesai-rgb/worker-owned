@@ -700,5 +700,14 @@
     "website": "phatdaddysonthetracks.com",
     "category": "restaurant",
     "id": 79
+  },
+  {
+    "id": 80,
+    "name": "Café Castro",
+    "city": "Santa Fe",
+    "state": "NM",
+    "location": "2811 Cerrillos Rd, Santa Fe, NM 87507",
+    "website": "cafecastrosf.com",
+    "category": "restaurant"
   }
 ]
