@@ -450,24 +450,6 @@
     "category": "coffee"
   },
   {
-    "id": 51,
-    "name": "Moosewood Restaurant",
-    "city": "Ithaca",
-    "state": "NY",
-    "location": "215 N Cayuga St, Ithaca, NY 14850",
-    "website": "https://moosewoodcooks.com/",
-    "category": "restaurant"
-  },
-  {
-    "id": 52,
-    "name": "Bluestockings Cooperative Cafe",
-    "city": "New York",
-    "state": "NY",
-    "location": "116 Suffolk St, New York, NY 10002",
-    "website": "bluestockings.com",
-    "category": "coffee"
-  },
-  {
     "id": 53,
     "name": "Small World Food",
     "city": "Rochester",
@@ -684,15 +666,6 @@
     "category": "coffee"
   },
   {
-    "id": 78,
-    "name": "Riverwest Co-op Grocery & Cafe",
-    "city": "Milwaukee",
-    "state": "WI",
-    "location": "733 E Clarke St, Milwaukee, WI 53212",
-    "website": "riverwestcoop.org",
-    "category": "restaurant"
-  },
-  {
     "name": "Phat Daddy's on Da Tracks",
     "city": "Charleston",
     "state": "WV",
@@ -703,21 +676,12 @@
   },
   {
     "id": 80,
-    "name": "Café Castro",
+    "name": "Caf\u00e9 Castro",
     "city": "Santa Fe",
     "state": "NM",
     "location": "2811 Cerrillos Rd, Santa Fe, NM 87507",
     "website": "cafecastrosf.com",
     "category": "restaurant"
-  },
-  {
-    "id": 81,
-    "name": "Afterglow Coffee Cooperative",
-    "city": "Richmond",
-    "state": "VA",
-    "location": "1719 Summit Ave, Richmond, VA 23230",
-    "website": "afterglowcoffee.com",
-    "category": "coffee"
   },
   {
     "id": 82,
@@ -729,12 +693,30 @@
     "category": "coffee"
   },
   {
-    "id": 83,
-    "name": "Sea & Soil",
-    "city": "Brooklyn",
-    "state": "NY",
-    "location": "388 Atlantic Ave, Brooklyn, NY 11217",
-    "website": "seaandsoilcoop.com",
+    "id": 84,
+    "name": "Collective Avenue Coffee",
+    "city": "Lynwood",
+    "state": "CA",
+    "location": "11700 Long Beach Blvd, Lynwood, CA 90262",
+    "website": "facebook.com/CollectiveAve",
+    "category": "coffee"
+  },
+  {
+    "id": 85,
+    "name": "Thread Coffee Roasters",
+    "city": "Baltimore",
+    "state": "MD",
+    "location": "1812 Greenmount Ave, Baltimore, MD 21202",
+    "website": "threadcoffee.com",
+    "category": "coffee"
+  },
+  {
+    "id": 86,
+    "name": "Dupont Coffee Collective",
+    "city": "Washington",
+    "state": "DC",
+    "location": "1909 Q St NW, Washington, DC 20009",
+    "website": "dupontcoffee.com",
     "category": "coffee"
   }
 ]
