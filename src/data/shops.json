@@ -247,7 +247,7 @@
     "name": "Circus Cooperative Cafe",
     "city": "Cambridge",
     "state": "MA",
-    "location": "80 Sherman St, Cambridge, MA 02140",
+    "location": "31 Putnam Ave, Cambridge, MA 02139",
     "website": "circus.coop",
     "category": "coffee"
   },
@@ -709,5 +709,32 @@
     "location": "2811 Cerrillos Rd, Santa Fe, NM 87507",
     "website": "cafecastrosf.com",
     "category": "restaurant"
+  },
+  {
+    "id": 81,
+    "name": "Afterglow Coffee Cooperative",
+    "city": "Richmond",
+    "state": "VA",
+    "location": "1719 Summit Ave, Richmond, VA 23230",
+    "website": "afterglowcoffee.com",
+    "category": "coffee"
+  },
+  {
+    "id": 82,
+    "name": "Matchbox Coffeeshop",
+    "city": "Minneapolis",
+    "state": "MN",
+    "location": "1306 2nd St NE, Minneapolis, MN 55413",
+    "website": "facebook.com/p/Matchbox-Coffeeshop-100063523269520",
+    "category": "coffee"
+  },
+  {
+    "id": 83,
+    "name": "Sea & Soil",
+    "city": "Brooklyn",
+    "state": "NY",
+    "location": "388 Atlantic Ave, Brooklyn, NY 11217",
+    "website": "seaandsoilcoop.com",
+    "category": "coffee"
   }
 ]
