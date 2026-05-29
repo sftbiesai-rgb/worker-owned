@@ -103,7 +103,7 @@
     "name": "Slow Bloom Coffee Cooperative",
     "city": "Redlands",
     "state": "CA",
-    "location": "420 E State St, Redlands, CA 92373",
+    "location": "420 W Colton Ave, Redlands, CA 92374",
     "website": "slowbloomcoffee.com",
     "category": "coffee"
   },
@@ -717,6 +717,42 @@
     "state": "DC",
     "location": "1909 Q St NW, Washington, DC 20009",
     "website": "dupontcoffee.com",
+    "category": "coffee"
+  },
+  {
+    "id": 87,
+    "name": "Cooperative Coffee Roasters",
+    "city": "Asheville",
+    "state": "NC",
+    "location": "210 Haywood Rd, Asheville, NC 28806",
+    "website": "cooperativecoffeeroasters.com",
+    "category": "coffee"
+  },
+  {
+    "id": 88,
+    "name": "Catscratch Co-op Vegan Bakery",
+    "city": "Portland",
+    "state": "OR",
+    "location": "2816 NE Halsey St, Portland, OR 97232",
+    "website": "catscratchcoop.org",
+    "category": "coffee"
+  },
+  {
+    "id": 89,
+    "name": "Sconehenge Bakery & Cafe",
+    "city": "Berkeley",
+    "state": "CA",
+    "location": "2787 Shattuck Ave, Berkeley, CA 94705",
+    "website": "sconehengeberkeley.com",
+    "category": "coffee"
+  },
+  {
+    "id": 90,
+    "name": "Hasta Muerte Coffee",
+    "city": "Oakland",
+    "state": "CA",
+    "location": "2701 Fruitvale Ave, Oakland, CA 94601",
+    "website": "instagram.com/hastamuertecoffee",
     "category": "coffee"
   }
 ]
