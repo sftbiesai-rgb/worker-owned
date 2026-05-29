@@ -754,5 +754,14 @@
     "location": "2701 Fruitvale Ave, Oakland, CA 94601",
     "website": "instagram.com/hastamuertecoffee",
     "category": "coffee"
+  },
+  {
+    "id": 91,
+    "name": "Taharka Brothers Ice Cream",
+    "city": "Baltimore",
+    "state": "MD",
+    "location": "301 W 29th St, Baltimore, MD 21211",
+    "website": "taharkabrothers.com",
+    "category": "restaurant"
   }
 ]
