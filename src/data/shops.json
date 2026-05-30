@@ -772,5 +772,14 @@
     "location": "9252 57th Ave S, Seattle, WA 98118",
     "website": "judesoldtown.com",
     "category": "restaurant"
+  },
+  {
+    "id": 98,
+    "name": "Gimme! Coffee",
+    "city": "Trumansburg",
+    "state": "NY",
+    "location": "7 E Main St, Trumansburg, NY 14886",
+    "website": "gimmecoffee.com",
+    "category": "coffee"
   }
 ]
