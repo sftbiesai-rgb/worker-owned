@@ -781,5 +781,23 @@
     "location": "7 E Main St, Trumansburg, NY 14886",
     "website": "gimmecoffee.com",
     "category": "coffee"
+  },
+  {
+    "id": 99,
+    "name": "Donna",
+    "city": "New York",
+    "state": "NY",
+    "location": "7 Cornelia St, New York, NY 10014",
+    "website": "donnanyc.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 100,
+    "name": "Marshfield Village Store",
+    "city": "Marshfield",
+    "state": "VT",
+    "location": "1425 US Route 2, Marshfield, VT 05658",
+    "website": "facebook.com/MarshfieldVillageStore",
+    "category": "restaurant"
   }
 ]
