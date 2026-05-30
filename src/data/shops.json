@@ -153,15 +153,6 @@
     "category": "restaurant"
   },
   {
-    "id": 18,
-    "name": "Arizmendi Bakery",
-    "city": "San Rafael",
-    "state": "CA",
-    "location": "1002 Court Street, San Rafael, CA 94901",
-    "website": "https://www.arizmendi-sanrafael.com/our-story-1",
-    "category": "restaurant"
-  },
-  {
     "id": 19,
     "name": "La Milpa Caf\u00e9",
     "city": "Santa Ana",
@@ -720,15 +711,6 @@
     "category": "coffee"
   },
   {
-    "id": 87,
-    "name": "Cooperative Coffee Roasters",
-    "city": "Asheville",
-    "state": "NC",
-    "location": "210 Haywood Rd, Asheville, NC 28806",
-    "website": "cooperativecoffeeroasters.com",
-    "category": "coffee"
-  },
-  {
     "id": 88,
     "name": "Catscratch Co-op Vegan Bakery",
     "city": "Portland",
@@ -763,5 +745,41 @@
     "location": "301 W 29th St, Baltimore, MD 21211",
     "website": "taharkabrothers.com",
     "category": "restaurant"
+  },
+  {
+    "id": 92,
+    "name": "The Grain Shed",
+    "city": "Spokane",
+    "state": "WA",
+    "location": "1026 E Newark Ave, Spokane, WA 99202",
+    "website": "thegrainshed.coop",
+    "category": "restaurant"
+  },
+  {
+    "id": 93,
+    "name": "New Helvetia Brewing",
+    "city": "Sacramento",
+    "state": "CA",
+    "location": "1730 Broadway, Sacramento, CA 95818",
+    "website": "newhelvetia.coop",
+    "category": "restaurant"
+  },
+  {
+    "id": 94,
+    "name": "Democracy Brewing (East Boston)",
+    "city": "East Boston",
+    "state": "MA",
+    "location": "154 Maverick St, East Boston, MA 02128",
+    "website": "democracybrewing.com",
+    "category": "restaurant"
+  },
+  {
+    "id": 95,
+    "name": "Coldwater Coffeehouse & Bakery",
+    "city": "Avondale",
+    "state": "AZ",
+    "location": "127 E Western Ave, Avondale, AZ 85323",
+    "website": "coldwater.coop",
+    "category": "coffee"
   }
 ]
