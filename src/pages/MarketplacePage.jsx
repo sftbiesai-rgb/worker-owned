@@ -101,6 +101,18 @@ function MarketplacePage() {
             </div>
           )}
 
+          {section.slug === 'games' && (
+            <div className="bg-blue-50 border border-blue-100 rounded-xl px-4 py-3 mb-4 text-xs text-blue-800">
+              <strong>Note:</strong> Worker-owned game publishers are rare. <strong>TESA Collective</strong> (below) is the US leader — they make cooperative and social justice-themed tabletop games designed for collective play. Most mainstream game publishers are investor- or founder-owned.
+            </div>
+          )}
+
+          {section.slug === 'beer-brewing' && (
+            <div className="bg-blue-50 border border-blue-100 rounded-xl px-4 py-3 mb-4 text-xs text-blue-800">
+              <strong>Note:</strong> Most worker-owned breweries are local taprooms — beer shipping laws vary by state. These cooperatives are listed so you can visit if you're nearby, or support their merch and memberships online.
+            </div>
+          )}
+
           <div className="space-y-3">
             {entries.map(entry => (
               <div key={entry.id} className="bg-[#f5f5f7] rounded-xl px-4 py-3">

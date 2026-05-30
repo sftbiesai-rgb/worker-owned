@@ -1,36 +1,28 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Search } from 'lucide-react'
-import shopsData from '../data/shops.json'
+import barsData from '../data/bars.json'
 
-function BrowsePage({ category }) {
+// Exclude pure consumer co-ops (not worker-owned)
+const CONSUMER_COOP_IDS = [14, 15, 16, 17]
+const bars = barsData.filter(b => !CONSUMER_COOP_IDS.includes(b.id))
+
+function BarsPage() {
   const [search, setSearch] = useState('')
 
   useEffect(() => {
-    if (category === 'coffee') {
-      document.title = 'Worker-Owned Coffee Shops in the US | Worker Owned'
-      document.querySelector('meta[name="description"]')?.setAttribute('content',
-        'Browse all worker-owned coffee shops, cafes, and bakeries across the United States. Find cooperatively owned coffee near you.')
-    } else {
-      document.title = 'Worker-Owned Restaurants in the US | Worker Owned'
-      document.querySelector('meta[name="description"]')?.setAttribute('content',
-        'Browse all worker-owned restaurants, brewpubs, and diners across the United States. Find cooperatively owned food near you.')
-    }
-  }, [category])
+    document.title = 'Worker-Owned Bars & Breweries in the US | Worker Owned'
+    document.querySelector('meta[name="description"]')?.setAttribute('content',
+      'Browse all worker-owned bars, brewpubs, and breweries across the United States. Find cooperatively owned bars near you.')
+  }, [])
 
-  const coffeeCount = shopsData.filter(s => s.category === 'coffee').length
-  const restaurantCount = shopsData.filter(s => s.category === 'restaurant').length
-
-  const shops = shopsData
-    .filter(s => s.category === category)
-    .filter(s =>
-      s.city.toLowerCase().includes(search.toLowerCase()) ||
-      s.name.toLowerCase().includes(search.toLowerCase()) ||
-      s.state.toLowerCase().includes(search.toLowerCase())
+  const filtered = bars
+    .filter(b =>
+      b.city.toLowerCase().includes(search.toLowerCase()) ||
+      b.name.toLowerCase().includes(search.toLowerCase()) ||
+      b.state.toLowerCase().includes(search.toLowerCase())
     )
     .sort((a, b) => a.state.localeCompare(b.state) || a.city.localeCompare(b.city))
-
-  const label = category === 'coffee' ? 'coffee shop' : 'restaurant'
 
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
@@ -39,7 +31,7 @@ function BrowsePage({ category }) {
 
           <div className="flex items-center justify-center gap-3 mb-6">
             <img
-              src={category === 'coffee' ? '/logo-coffee.png' : '/logo-restaurant.png'}
+              src="/logo-restaurant.png"
               alt="Worker Owned"
               width="36"
               height="36"
@@ -51,38 +43,28 @@ function BrowsePage({ category }) {
           </div>
 
           <h2 className="text-center text-base font-semibold text-gray-700 mb-1">
-            {category === 'coffee' ? 'Worker-Owned Coffee Shops' : 'Worker-Owned Restaurants'}
+            Worker-Owned Bars & Breweries
           </h2>
           <p className="text-center text-sm text-gray-500 mb-4">
-            {category === 'coffee'
-              ? 'Cooperatively owned cafes, coffee shops, and bakeries across the United States'
-              : 'Cooperatively owned restaurants, diners, and brewpubs across the United States'}
+            Cooperatively owned bars, brewpubs, and taprooms across the United States
           </p>
 
           <div className="flex gap-2 mb-5">
             <Link
               to="/coffee"
-              className={`flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors ${
-                category === 'coffee'
-                  ? 'bg-[#004cb9] text-white'
-                  : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
-              }`}
+              className="flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]"
             >
               Coffee
             </Link>
             <Link
               to="/restaurants"
-              className={`flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors ${
-                category === 'restaurant'
-                  ? 'bg-[#004cb9] text-white'
-                  : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
-              }`}
+              className="flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]"
             >
               Restaurants
             </Link>
             <Link
               to="/bars"
-              className="flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]"
+              className="flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors bg-[#004cb9] text-white"
             >
               Bars
             </Link>
@@ -100,35 +82,35 @@ function BrowsePage({ category }) {
           </div>
 
           <p className="text-xs text-gray-400 mb-3">
-            {shops.length} {label}{shops.length !== 1 ? 's' : ''}
+            {filtered.length} bar{filtered.length !== 1 ? 's' : ''}
           </p>
 
           <div className="space-y-2">
-            {shops.map(shop => (
-              <div key={shop.id} className="bg-[#f5f5f7] rounded-xl px-4 py-3">
-                {shop.website ? (
+            {filtered.map(bar => (
+              <div key={bar.id} className="bg-[#f5f5f7] rounded-xl px-4 py-3">
+                {bar.website ? (
                   <a
-                    href={shop.website.startsWith('http') ? shop.website : `https://${shop.website}`}
+                    href={bar.website.startsWith('http') ? bar.website : `https://${bar.website}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-semibold text-sm block text-[#004cb9] hover:text-[#003a8c] transition-colors truncate"
                   >
-                    {shop.name}
+                    {bar.name}
                   </a>
                 ) : (
-                  <div className="font-semibold text-sm text-[#004cb9] truncate">{shop.name}</div>
+                  <div className="font-semibold text-sm text-[#004cb9] truncate">{bar.name}</div>
                 )}
-                {shop.location && shop.location !== `${shop.city}, ${shop.state}` ? (
+                {bar.location && bar.location !== `${bar.city}, ${bar.state}` ? (
                   <a
-                    href={`https://maps.google.com/?q=${encodeURIComponent(shop.location)}`}
+                    href={`https://maps.google.com/?q=${encodeURIComponent(bar.location)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs text-[#BF0A30] hover:underline truncate mt-0.5 block transition-colors"
                   >
-                    {shop.location}
+                    {bar.location}
                   </a>
                 ) : (
-                  <div className="text-xs text-[#BF0A30] truncate mt-0.5">{shop.city}, {shop.state}</div>
+                  <div className="text-xs text-[#BF0A30] truncate mt-0.5">{bar.city}, {bar.state}</div>
                 )}
               </div>
             ))}
@@ -157,4 +139,4 @@ function BrowsePage({ category }) {
   )
 }
 
-export default BrowsePage
+export default BarsPage

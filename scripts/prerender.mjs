@@ -21,6 +21,12 @@ const routes = [
     canonical: 'https://www.workerowned.info/restaurants',
   },
   {
+    url: '/bars',
+    title: 'Worker-Owned Bars & Breweries in the US | Worker Owned',
+    description: 'Browse all worker-owned bars, brewpubs, and breweries across the United States. Find cooperatively owned bars near you.',
+    canonical: 'https://www.workerowned.info/bars',
+  },
+  {
     url: '/marketplace/coffee-tea',
     title: 'Worker-Owned Coffee & Tea Online | Worker Owned',
     description: 'Shop worker-owned coffee roasters and tea brands online. Cooperatively owned coffee roasted and shipped direct to your door.',

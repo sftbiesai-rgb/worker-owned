@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import HomePage from './pages/HomePage.jsx'
 import BrowsePage from './pages/BrowsePage.jsx'
+import BarsPage from './pages/BarsPage.jsx'
 import SubmitPage from './pages/SubmitPage.jsx'
 import MarketplacePage from './pages/MarketplacePage.jsx'
 
@@ -10,6 +11,7 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/coffee" element={<BrowsePage category="coffee" />} />
       <Route path="/restaurants" element={<BrowsePage category="restaurant" />} />
+      <Route path="/bars" element={<BarsPage />} />
       <Route path="/browse" element={<Navigate to="/coffee" replace />} />
       <Route path="/submit" element={<SubmitPage />} />
       <Route path="/marketplace/:category" element={<MarketplacePage />} />
