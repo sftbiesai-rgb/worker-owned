@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "name": "Donna",
+    "city": "New York",
+    "state": "NY",
+    "location": "7 Cornelia St, New York, NY 10014",
+    "website": "donnanyc.com",
+    "category": "bar",
+    "notes": "NYC's first worker-owned cocktail bar. USFWC member. Pure worker co-op."
+  },
+  {
+    "id": 2,
+    "name": "BOYFRIEND co-op",
+    "city": "Brooklyn",
+    "state": "NY",
+    "location": "1157 Myrtle Ave, Brooklyn, NY 11206",
+    "website": "boyfriend.coop",
+    "category": "bar",
+    "notes": "Worker-owned cooperative cafe and cocktail bar. Queer-focused."
+  },
+  {
+    "id": 3,
+    "name": "Workers Tap & Cafe",
+    "city": "Portland",
+    "state": "OR",
+    "location": "101 SE 12th Ave, Portland, OR 97214",
+    "website": "workerstap.com",
+    "category": "bar",
+    "notes": "Worker-owned beer bar. Profits split equally among members."
+  },
+  {
+    "id": 4,
+    "name": "Democracy Brewing",
+    "city": "Boston",
+    "state": "MA",
+    "location": "35 Temple Pl, Boston, MA 02111",
+    "website": "democracybrewing.com",
+    "category": "bar",
+    "notes": "Boston's first worker-owned brewery and pub. USFWC member."
+  },
+  {
+    "id": 5,
+    "name": "Democracy Brewing East Boston",
+    "city": "Boston",
+    "state": "MA",
+    "location": "154 Maverick St, East Boston, MA 02128",
+    "website": "democracybrewing.com",
+    "category": "bar",
+    "notes": "Second location of Democracy Brewing, opened 2025."
+  },
+  {
+    "id": 6,
+    "name": "Conor Byrne Pub",
+    "city": "Seattle",
+    "state": "WA",
+    "location": "5140 Ballard Ave NW, Seattle, WA 98107",
+    "website": "conorbyrnepub.com",
+    "category": "bar",
+    "notes": "FLAG: Hybrid worker + ~600 community member co-op. Employees led buyout in 2024."
+  },
+  {
+    "id": 7,
+    "name": "New Helvetia Brewing Company",
+    "city": "Sacramento",
+    "state": "CA",
+    "location": "1730 Broadway, Sacramento, CA 95818",
+    "website": "newhelvetia.coop",
+    "category": "bar",
+    "notes": "Multi-stakeholder co-op with Workers Assembly. CA's first cooperatively owned commercial brewery."
+  },
+  {
+    "id": 8,
+    "name": "The Grain Shed",
+    "city": "Spokane",
+    "state": "WA",
+    "location": "1026 E Newark Ave, Spokane, WA 99202",
+    "website": "thegrainshed.coop",
+    "category": "bar",
+    "notes": "Worker and farmer-owned cooperative. Brewery, bakery, and taproom."
+  },
+  {
+    "id": 9,
+    "name": "Broken Clock Brewing Cooperative",
+    "city": "Minneapolis",
+    "state": "MN",
+    "location": "1712 Marshall St NE, Minneapolis, MN 55413",
+    "website": "brokenclockbrew.com",
+    "category": "bar",
+    "notes": "FLAG: Member co-op — workers can become owner-members but public can also join."
+  },
+  {
+    "id": 10,
+    "name": "Wildland Cooperative",
+    "city": "Colbert",
+    "state": "WA",
+    "location": "8022 E Green Bluff Rd, Colbert, WA 99005",
+    "website": "wildland.coop",
+    "category": "bar",
+    "notes": "FLAG: Worker-owned brewery and winery taproom on farm property. Colbert is rural, ~15 miles north of Spokane."
+  },
+  {
+    "id": 11,
+    "name": "Bathtub Row Brewing Co-op",
+    "city": "Los Alamos",
+    "state": "NM",
+    "location": "163 Central Park Square, Los Alamos, NM 87544",
+    "website": "bathtubrowbrewing.coop",
+    "category": "bar",
+    "notes": "Hybrid consumer and worker co-op brewery."
+  },
+  {
+    "id": 12,
+    "name": "Fifth Street Brewpub",
+    "city": "Dayton",
+    "state": "OH",
+    "location": "1600 E 5th St, Dayton, OH 45403",
+    "website": "fifthstreetbrewpub.com",
+    "category": "bar",
+    "notes": "Ohio's first cooperative brewpub."
+  },
+  {
+    "id": 13,
+    "name": "The Stud",
+    "city": "San Francisco",
+    "state": "CA",
+    "location": "1123 Folsom St, San Francisco, CA 94103",
+    "website": "studsf.com",
+    "category": "bar",
+    "notes": "First worker-owned cooperative nightclub in the US. LGBTQ+ bar. Reopened at new location April 2024."
+  },
+  {
+    "id": 14,
+    "name": "Full Barrel Cooperative Brewery",
+    "city": "Burlington",
+    "state": "VT",
+    "location": "12 North St, Burlington, VT 05401",
+    "website": "fullbarrel.coop",
+    "category": "bar",
+    "notes": "FLAG: Consumer/member co-op, not worker co-op. Vermont's first community-owned brewery. Nanobrewery, open Fri-Sat only."
+  },
+  {
+    "id": 15,
+    "name": "Ronan Cooperative Brewery",
+    "city": "Ronan",
+    "state": "MT",
+    "location": "23 4th Ave SW, Ronan, MT 59864",
+    "website": "ronancoopbrewery.com",
+    "category": "bar",
+    "notes": "FLAG: Consumer/member co-op (shares at $250). Montana's first cooperative brewery. Opened September 2020."
+  },
+  {
+    "id": 16,
+    "name": "Flying Bike Cooperative Brewery",
+    "city": "Seattle",
+    "state": "WA",
+    "location": "8570 Greenwood Ave N, Seattle, WA 98103",
+    "website": "flyingbike.coop",
+    "category": "bar",
+    "notes": "FLAG: Consumer/member co-op (public membership at $200). Washington's first cooperatively owned brewery. Founded 2011."
+  },
+  {
+    "id": 17,
+    "name": "New Barons Brewing Cooperative",
+    "city": "Milwaukee",
+    "state": "WI",
+    "location": "2018 S 1st St #170, Milwaukee, WI 53207",
+    "website": "newbaronsbrewing.com",
+    "category": "bar",
+    "notes": "FLAG: Consumer/member co-op (~650 members at $200). Wisconsin's first cooperative brewery. Operates as a brewery incubator."
+  }
+]
