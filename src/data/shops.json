@@ -799,5 +799,14 @@
     "location": "1425 US Route 2, Marshfield, VT 05658",
     "website": "facebook.com/MarshfieldVillageStore",
     "category": "restaurant"
+  },
+  {
+    "id": 101,
+    "name": "Red Emma's Bookstore Coffeehouse",
+    "city": "Baltimore",
+    "state": "MD",
+    "location": "3128 Greenmount Ave, Baltimore, MD 21218",
+    "website": "redemmas.org",
+    "category": "coffee"
   }
 ]
