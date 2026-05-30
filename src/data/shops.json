@@ -93,7 +93,7 @@
     "name": "Understory Oakland",
     "city": "Oakland",
     "state": "CA",
-    "location": "327 17th St, Oakland, CA 94612",
+    "location": "3340 International Blvd, Oakland, CA 94601",
     "website": "understoryoakland.com",
     "category": "restaurant",
     "id": 11
@@ -178,15 +178,6 @@
     "website": "mecooperative.com",
     "category": "restaurant",
     "id": 21
-  },
-  {
-    "id": 22,
-    "name": "Sankofa Cafe",
-    "city": "Bridgeport",
-    "state": "CT",
-    "location": "1001 Main St, Bridgeport, CT 06604",
-    "website": "cafesankofacoop.com",
-    "category": "coffee"
   },
   {
     "id": 23,
@@ -594,15 +585,6 @@
     "category": "restaurant"
   },
   {
-    "id": 71,
-    "name": "Woodbelly Pizza",
-    "city": "Montpelier",
-    "state": "VT",
-    "location": "79 Barre St, Montpelier, VT 05602",
-    "website": "woodbellypizza.com",
-    "category": "restaurant"
-  },
-  {
     "name": "Blue Heron Bakery",
     "city": "Olympia",
     "state": "WA",
@@ -628,15 +610,6 @@
     "location": "3909 18th Ave W, Seattle, WA 98119",
     "website": "pidgincooperative.com",
     "category": "restaurant"
-  },
-  {
-    "name": "Sway Co-op",
-    "city": "Seattle",
-    "state": "WA",
-    "location": "1512 11th Ave, Seattle, WA 98122",
-    "website": "swaycoop.weebly.com",
-    "category": "coffee",
-    "id": 75
   },
   {
     "id": 76,
@@ -781,5 +754,23 @@
     "location": "127 E Western Ave, Avondale, AZ 85323",
     "website": "coldwater.coop",
     "category": "coffee"
+  },
+  {
+    "id": 96,
+    "name": "Cafe Euphoria",
+    "city": "Troy",
+    "state": "NY",
+    "location": "225 River St, Troy, NY 12180",
+    "website": "cafeeuphoria.org",
+    "category": "coffee"
+  },
+  {
+    "id": 97,
+    "name": "Jude's Old Town",
+    "city": "Seattle",
+    "state": "WA",
+    "location": "9252 57th Ave S, Seattle, WA 98118",
+    "website": "judesoldtown.com",
+    "category": "restaurant"
   }
 ]
