@@ -297,15 +297,6 @@
     "category": "restaurant"
   },
   {
-    "id": 36,
-    "name": "New Deal Cafe",
-    "city": "Greenbelt",
-    "state": "MD",
-    "location": "113 Centerway, Greenbelt, MD 20770",
-    "website": "newdealcafe.com",
-    "category": "restaurant"
-  },
-  {
     "id": 37,
     "name": "Local Sprouts Cooperative",
     "city": "Portland",
@@ -807,6 +798,15 @@
     "state": "MD",
     "location": "3128 Greenmount Ave, Baltimore, MD 21218",
     "website": "redemmas.org",
+    "category": "coffee"
+  },
+  {
+    "id": 102,
+    "name": "Bol Worker Owned Bookstore Cafe",
+    "city": "Washington",
+    "state": "DC",
+    "location": "716 Monroe St NE, Washington, DC 20017",
+    "website": "bol.coop",
     "category": "coffee"
   }
 ]
