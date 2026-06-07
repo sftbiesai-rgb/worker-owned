@@ -1101,6 +1101,72 @@
     "site_section": "Food & Pantry"
   },
   {
+    "id": 108,
+    "name": "Means TV",
+    "url": "https://means.tv",
+    "category": "streaming video subscription",
+    "ownership_type": "worker co-op",
+    "ships": "US / worldwide (digital)",
+    "status": "verified active",
+    "notes": "Worker-owned cooperative streaming service. $7.99/month. Films, documentaries, scripted shows, daily news. Available on Roku, Fire TV, Apple TV.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 109,
+    "name": "RADIX",
+    "url": "https://radix.coop",
+    "category": "books / print shop",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Black-led, worker-owned, union print shop and publisher in Brooklyn, NY. Publishes titles from marginalized community voices. Online bookstore at radix.coop/shop.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 110,
+    "name": "Catalytic Sound",
+    "url": "https://catalyticsound.com",
+    "category": "music label / recordings",
+    "ownership_type": "artist co-op",
+    "ships": "US / worldwide (physical + digital)",
+    "status": "verified active",
+    "notes": "Artist-run cooperative of 33 musicians in Chicago. Free jazz and improvised music. Vinyl, CD, cassette, digital. 50% of sales go directly to musicians. Also offers Soundstream subscription.",
+    "site_section": "Music"
+  },
+  {
+    "id": 111,
+    "name": "TableTop Gaming",
+    "url": "https://ttgaming.quest",
+    "category": "board games / trading card games",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker co-op game shop in Syracuse, NY (founded 2022). Magic: The Gathering, Pokémon, D&D, Pathfinder, Lorcana, board games, accessories. Starts pricing at 10% off MSRP. Free shipping over $125.",
+    "site_section": "Games"
+  },
+  {
+    "id": 112,
+    "name": "Fair State Brewing Cooperative",
+    "url": "https://fairstate.com",
+    "category": "brewery",
+    "ownership_type": "consumer co-op",
+    "ships": "Local (Minneapolis MN)",
+    "status": "verified active",
+    "notes": "One of the first cooperative breweries in the US, Minneapolis MN. Consumer-owned co-op — members elect the board. Online shop sells merch, memberships, and gifts.",
+    "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 113,
+    "name": "Divine Chocolate",
+    "url": "https://divinechocolate.com",
+    "category": "chocolate",
+    "ownership_type": "farmer co-op stake",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Premium Fairtrade chocolate. 20% owned by Kuapa Kokoo, a Ghanaian farmer cooperative of 100,000+ cacao farmers. B Corp certified (score 114.9). Widely available online and in grocery stores.",
+    "site_section": "Food & Pantry"
+  },
+  {
     "id": 99,
     "name": "Broken Clock Brewing Cooperative",
     "url": "https://brokenclockbrew.com",
