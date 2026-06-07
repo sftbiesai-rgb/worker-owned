@@ -1035,6 +1035,72 @@
     "site_section": "Apparel"
   },
   {
+    "id": 102,
+    "name": "Alvarado Street Bakery",
+    "url": "https://alvaradostreetbakery.com",
+    "category": "bread & baked goods",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker co-op since 1981 in Petaluma, CA. Organic sprouted grain breads, tortillas, and bagels. Sold nationwide at grocery stores and direct online.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 103,
+    "name": "Artisan Beverage Cooperative",
+    "url": "https://artbev.coop",
+    "category": "kombucha / ginger beer / mead",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker co-op in Greenfield, MA. Makes Katalyst Kombucha, Ginger Libation ginger beer, and Draft Mead. Sold regionally and online.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 104,
+    "name": "Cabot Creamery",
+    "url": "https://cabotcreamery.com",
+    "category": "dairy / cheese",
+    "ownership_type": "farmer co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Farmer-owned cooperative (part of Agri-Mark) representing 800+ farm families across New England and NY. First dairy co-op to earn B Corp certification (2012). Cheddar, butter, yogurt, sour cream.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 105,
+    "name": "Tillamook",
+    "url": "https://tillamook.com",
+    "category": "dairy / cheese / ice cream",
+    "ownership_type": "farmer co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Farmer-owned cooperative of ~80 farm families in Tillamook, OR. B Corp certified 2020. Cheese, ice cream, butter, sour cream, yogurt. Major national brand.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 106,
+    "name": "Cafe Campesino",
+    "url": "https://cafecampesino.com",
+    "category": "coffee / fair trade",
+    "ownership_type": "cooperative affiliated",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Fair trade organic coffee roaster in Americus, GA. Co-founded Cooperative Coffees importing co-op. Sources directly from farmer co-ops in Latin America and Africa. B Corp certified.",
+    "site_section": "Coffee & Tea"
+  },
+  {
+    "id": 107,
+    "name": "Bainbridge Vineyards",
+    "url": "https://bainbridgevineyards.com",
+    "category": "wine",
+    "ownership_type": "cooperative farm",
+    "ships": "WA / verify",
+    "status": "verified active",
+    "notes": "Estate winery on a cooperative farm on Bainbridge Island, WA. First B Corp winery in Washington state. Organic estate-grown wines, direct-to-consumer and regional retail.",
+    "site_section": "Food & Pantry"
+  },
+  {
     "id": 99,
     "name": "Broken Clock Brewing Cooperative",
     "url": "https://brokenclockbrew.com",
