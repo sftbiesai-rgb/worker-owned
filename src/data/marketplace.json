@@ -1013,6 +1013,17 @@
     "site_section": "Beer & Brewing"
   },
   {
+    "id": 101,
+    "name": "Soft Star Shoes",
+    "url": "https://www.softstarshoes.com",
+    "category": "footwear / handcrafted shoes",
+    "ownership_type": "worker co-op",
+    "ships": "US / international",
+    "status": "verified active",
+    "notes": "Worker-owned co-op in Corvallis, OR. Handcrafted minimalist leather shoes, moccasins, and boots for adults and kids. Made in USA.",
+    "site_section": "Apparel"
+  },
+  {
     "id": 100,
     "name": "Thorogood USA",
     "url": "https://thorogoodusa.com",
