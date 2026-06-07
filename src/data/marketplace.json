@@ -1013,6 +1013,17 @@
     "site_section": "Beer & Brewing"
   },
   {
+    "id": 100,
+    "name": "Thorogood USA",
+    "url": "https://thorogoodusa.com",
+    "category": "footwear / work boots",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Made by Weinbrenner Shoe Company, employee-owned (ESOP). USA-made work boots including fire/logger/safety boots. Manufacturing in Merrill, WI since 1892.",
+    "site_section": "Apparel"
+  },
+  {
     "id": 99,
     "name": "Broken Clock Brewing Cooperative",
     "url": "https://brokenclockbrew.com",
