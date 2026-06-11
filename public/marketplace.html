@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Worker-Owned Products | Worker-Owned Marketplace</title>
+  <meta name="description" content="Search products from worker co-ops and employee-owned businesses. Real prices and images, sourced directly from the stores.">
+  <link rel="canonical" href="https://www.workerowned.info/marketplace">
+  <link rel="icon" type="image/png" href="/logo.png">
+  <style>
+    * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body {
+      background: #f5f5f7;
+      margin: 0;
+      padding: 24px 16px 60px;
+    }
+    .mp-container {
+      max-width: 1140px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .mp-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+    .mp-header a { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .mp-header img { width: 32px; height: 32px; }
+    .mp-header h1 {
+      margin: 0;
+      font-size: 1.3em;
+      color: #1a1a1a;
+      font-weight: 800;
+    }
+    .mp-tagline {
+      font-size: 0.75em;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0 0 20px;
+    }
+    #search-input {
+      width: 100%;
+      padding: 14px 18px;
+      font-size: 1em;
+      border: 1.5px solid #dde0e8;
+      border-radius: 10px;
+      background: #fff;
+      outline: none;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: border-color 0.15s;
+    }
+    #search-input:focus { border-color: #004cb9; }
+    #section-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 18px;
+    }
+    .section-tab {
+      padding: 6px 14px;
+      border: 1.5px solid #dde0e8;
+      border-radius: 99px;
+      background: #fff;
+      font-size: 0.82em;
+      font-weight: 600;
+      color: #555;
+      cursor: pointer;
+      transition: all 0.12s;
+    }
+    .section-tab:hover { border-color: #004cb9; color: #004cb9; }
+    .section-tab.active { background: #004cb9; color: #fff; border-color: #004cb9; }
+    .count-bar {
+      font-size: 0.8em;
+      color: #888;
+      margin-bottom: 14px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 600px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
+    @media (max-width: 380px) { .product-grid { grid-template-columns: 1fr; } }
+    .product-card {
+      background: #fff;
+      border: 1px solid #e8e8ec;
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: box-shadow 0.15s, transform 0.12s;
+    }
+    .product-card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+    .product-img-wrap {
+      width: 100%;
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: #fafafa;
+    }
+    .product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .product-info {
+      padding: 10px 12px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+    }
+    .product-title {
+      font-size: 0.82em;
+      font-weight: 600;
+      color: #1a1a1a;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .product-price {
+      font-size: 0.92em;
+      font-weight: 800;
+      color: #1a1a1a;
+    }
+    .product-store {
+      font-size: 0.72em;
+      color: #888;
+      margin-top: auto;
+      padding-top: 4px;
+    }
+    .ownership-badge {
+      display: inline-block;
+      font-size: 0.65em;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 99px;
+      letter-spacing: 0.03em;
+      width: fit-content;
+    }
+    .load-more-wrap { text-align: center; margin-top: 32px; }
+    #load-more {
+      display: none;
+      padding: 12px 28px;
+      background: #fff;
+      border: 1.5px solid #004cb9;
+      color: #004cb9;
+      border-radius: 8px;
+      font-size: 0.88em;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    #load-more:hover { background: #e8f0ff; }
+    #loading {
+      text-align: center;
+      padding: 60px 0;
+      color: #888;
+      font-size: 0.9em;
+    }
+    .back-link {
+      font-size: 0.78em;
+      color: #004cb9;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="mp-container">
+    <a href="/" class="back-link">← Worker-Owned</a>
+    <div class="mp-header">
+      <a href="/"><img src="/logo.png" alt="Worker-Owned"></a>
+      <h1>Shop Worker-Owned</h1>
+    </div>
+    <p class="mp-tagline">Products from worker co-ops and employee-owned businesses</p>
+
+    <input type="search" id="search-input" placeholder="Search coffee, soap, t-shirts, games..." autocomplete="off">
+
+    <div id="section-tabs"></div>
+    <div id="count-label" class="count-bar"></div>
+
+    <div id="loading">Loading products...</div>
+    <div id="product-grid" class="product-grid"></div>
+
+    <div class="load-more-wrap">
+      <button id="load-more">Load more</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7/dist/fuse.min.js"></script>
+  <script src="/marketplace.js"></script>
+</body>
+</html>
