@@ -810,42 +810,6 @@
     "category": "coffee"
   },
   {
-    "id": 103,
-    "name": "Arizmendi Bakery",
-    "city": "San Francisco",
-    "state": "CA",
-    "location": "1331 9th Ave, San Francisco, CA 94122",
-    "website": "arizmendibakery.com",
-    "category": "coffee"
-  },
-  {
-    "id": 104,
-    "name": "Arizmendi Bakery",
-    "city": "San Francisco",
-    "state": "CA",
-    "location": "1268 Valencia St, San Francisco, CA 94110",
-    "website": "arizmendibakery.com",
-    "category": "coffee"
-  },
-  {
-    "id": 105,
-    "name": "Arizmendi Bakery",
-    "city": "Oakland",
-    "state": "CA",
-    "location": "3265 Lakeshore Ave, Oakland, CA 94610",
-    "website": "arizmendibakery.com",
-    "category": "coffee"
-  },
-  {
-    "id": 106,
-    "name": "Arizmendi Bakery",
-    "city": "Emeryville",
-    "state": "CA",
-    "location": "4301 San Pablo Ave, Emeryville, CA 94608",
-    "website": "arizmendibakery.com",
-    "category": "coffee"
-  },
-  {
     "id": 107,
     "name": "Cheese Board Collective",
     "city": "Berkeley",
