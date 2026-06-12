@@ -107,7 +107,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "Worker-owned radical bookstore, cafe and community space in Baltimore MD since 2004. Online bookshop. Strong politics, history, social theory selection.",
-    "site_section": "Books & Publishing"
+    "site_section": "Media & Publishing"
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "NYC Lower East Side queer feminist bookstore founded 1999, worker-owned since 2021. Online shop via bookshop.org.",
-    "site_section": "Books & Publishing"
+    "site_section": "Media & Publishing"
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "Lawrence KS. Employee-owned since 2022. 49% worker-owned. General interest bookstore with online ordering.",
-    "site_section": "Books & Publishing"
+    "site_section": "Media & Publishing"
   },
   {
     "id": 13,
@@ -140,7 +140,7 @@
     "ships": "worldwide",
     "status": "verified active",
     "notes": "Long-running worker co-op publisher and distributor of radical books since 1990. Ships globally. Largest anarchist publisher in the English-speaking world.",
-    "site_section": "Books & Publishing"
+    "site_section": "Media & Publishing"
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "West Philadelphia nonprofit worker co-op bookstore. Online store available. Abolition and liberation focused.",
-    "site_section": "Books & Publishing"
+    "site_section": "Media & Publishing"
   },
   {
     "id": 15,
@@ -162,7 +162,7 @@
     "ships": "worldwide",
     "status": "verified active",
     "notes": "Portland OR worker-ownership program since 1996. Publishes and distributes DIY, punk, social justice zines and books. Also sells patches, stickers, buttons, shirts. US-printed.",
-    "site_section": "Books & Publishing"
+    "site_section": "Media & Publishing"
   },
   {
     "id": 16,
@@ -173,18 +173,7 @@
     "ships": "verify online availability",
     "status": "verify online store",
     "notes": "San Francisco Mission District volunteer worker co-op since 2013. Beloved community institution. Bookshop.org storefront: bookshop.org/shop/adobebooks.",
-    "site_section": "Books & Publishing"
-  },
-  {
-    "id": 17,
-    "name": "Wild Fig Worker Cooperative",
-    "url": "https://wildfigbooksandcoffee.com",
-    "category": "bookstore / cafe",
-    "ownership_type": "worker co-op",
-    "ships": "US — verify",
-    "status": "url unstable — verify current status",
-    "notes": "Lexington KY radical bookstore and coffee shop. Kentucky's only Black-owned bookstore, reborn as worker co-op. Check current operating status.",
-    "site_section": "Books & Publishing"
+    "site_section": "Media & Publishing"
   },
   {
     "id": 18,
@@ -203,9 +192,9 @@
     "url": "https://realpickles.com/products/online-store",
     "category": "fermented foods",
     "ownership_type": "worker co-op",
-    "ships": "US (ships with ice packs, seasonal delays in summer)",
+    "ships": "Northeast US only (New England + NY, NJ, PA)",
     "status": "verified active",
-    "notes": "Greenfield MA worker co-op. Organic pickles, sauerkraut, kimchi, hot sauce. Direct online store with bulk pricing.",
+    "notes": "Greenfield MA worker co-op. Organic pickles, sauerkraut, kimchi, hot sauce. Direct online store with bulk pricing. Northeast distribution only.",
     "site_section": "Food & Pantry"
   },
   {
@@ -231,36 +220,25 @@
     "site_section": "Food & Pantry"
   },
   {
-    "id": 22,
-    "name": "Fair State Brewing Cooperative",
-    "url": "https://fairstate.coop",
-    "category": "brewery",
-    "ownership_type": "consumer co-op",
-    "ships": "MN only",
-    "status": "verified active",
-    "notes": "Minnesota's first consumer-owned brewery. Taproom + local distribution. Note: consumer co-op (members are customers, not workers).",
-    "site_section": "Beer & Brewing"
-  },
-  {
-    "id": 23,
-    "name": "4th Tap Brewing Cooperative",
-    "url": "https://4thtap.coop",
-    "category": "brewery",
-    "ownership_type": "worker co-op",
-    "ships": "TX taproom / local",
-    "status": "verify online shipping",
-    "notes": "First worker-owned cooperatively-governed production brewery in Texas. Austin TX. Primarily taproom — verify online shipping availability.",
-    "site_section": "Beer & Brewing"
-  },
-  {
     "id": 24,
-    "name": "Black Star Co-op",
-    "url": "https://blackstar.coop",
-    "category": "brewpub",
-    "ownership_type": "multi-stakeholder co-op",
-    "ships": "taproom only",
+    "name": "Democracy Brewing",
+    "url": "https://democracybrewing.com",
+    "category": "worker-owned brewpub",
+    "ownership_type": "worker co-op",
+    "ships": "taproom — Boston MA (possible online merch)",
     "status": "verified active",
-    "notes": "World's first cooperatively-owned worker self-managed brewpub. Austin TX. 3,000+ community members. No shipping — destination/visit listing.",
+    "notes": "100% worker-owned brewery and pub in Boston MA since 2018. 'Fermenting rebellion.' Craft beer, scratch-made food. Has online shop — check site for current offerings.",
+    "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 94,
+    "name": "Drifa Brewing Company",
+    "url": "https://drifabrewingcompany.com",
+    "category": "cooperative brewery",
+    "ownership_type": "worker co-op",
+    "ships": "taproom only — Marquette MI",
+    "status": "verified active",
+    "notes": "One of nine cooperative breweries in the US, the only one in Michigan. Taproom and beer garden in Marquette MI. Worker co-op since founding.",
     "site_section": "Beer & Brewing"
   },
   {
@@ -283,17 +261,6 @@
     "ships": "US",
     "status": "verified active",
     "notes": "Chicago worker co-op founded 2025. Concentrated soap drops, all natural organic ingredients. Profits split equally among workers. Online store + Chicago farmers markets.",
-    "site_section": "Personal Care"
-  },
-  {
-    "id": 27,
-    "name": "Alter/Native by Suma",
-    "url": "https://www.alternative-uk.com",
-    "category": "body care / soap / hair care",
-    "ownership_type": "worker co-op",
-    "ships": "UK / verify US shipping",
-    "status": "verify US availability",
-    "notes": "Body care brand by Suma, Europe's largest equal pay worker co-op since 1977. Cruelty-free certified. UK-based — verify US shipping.",
     "site_section": "Personal Care"
   },
   {
@@ -327,17 +294,6 @@
     "ships": "worldwide",
     "status": "verified active",
     "notes": "Also sells patches, stickers, enamel pins, posters, buttons, shirts beyond books and zines.",
-    "site_section": "Art & Prints"
-  },
-  {
-    "id": 31,
-    "name": "Pop-Hop",
-    "url": "https://www.pophoplabooks.com",
-    "category": "zines / books / art",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verify online store",
-    "notes": "LA zine and book shop, worker-owned co-op since 2021. One of largest zine consignment programs in SoCal. Online store available.",
     "site_section": "Art & Prints"
   },
   {
@@ -413,8 +369,8 @@
     "category": "clothing",
     "ownership_type": "worker co-op affiliated",
     "ships": "US",
-    "status": "url returning 403 — verify current status",
-    "notes": "Consumer storefront for clothing made by Opportunity Threads worker co-op in NC. URL may be down — verify before listing.",
+    "status": "verified active",
+    "notes": "Consumer storefront for clothing made by Opportunity Threads worker co-op in NC.",
     "site_section": "Apparel"
   },
   {
@@ -558,7 +514,7 @@
     "ships": "worldwide",
     "status": "verified active",
     "notes": "Oakland CA worker co-op since 1990. Publishes and distributes radical, anarchist, and leftist books. Ships worldwide.",
-    "site_section": "Books & Publishing"
+    "site_section": "Media & Publishing"
   },
   {
     "id": 52,
@@ -613,7 +569,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "Online storefront via Bookshop.org. Ships nationally. Alternative URL if main site down.",
-    "site_section": "Books & Publishing"
+    "site_section": "Media & Publishing"
   },
   {
     "id": 57,
@@ -624,7 +580,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "Bookshop.org storefront for national ordering. NYC Lower East Side.",
-    "site_section": "Books & Publishing"
+    "site_section": "Media & Publishing"
   },
   {
     "id": 58,
@@ -635,7 +591,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "Bookshop.org storefront. West Philadelphia. Abolition, autonomy, Black/Brown/Indigenous liberation focus.",
-    "site_section": "Books & Publishing"
+    "site_section": "Media & Publishing"
   },
   {
     "id": 59,
@@ -668,7 +624,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "Lawrence KS. Employee-owned 2022. Known for How to Resist Amazon and Why author Danny Caine. Online ordering available.",
-    "site_section": "Books & Publishing"
+    "site_section": "Media & Publishing"
   },
   {
     "id": 62,
@@ -712,7 +668,7 @@
     "ships": "worldwide",
     "status": "verified active",
     "notes": "Publishers Weekly Fastest Growing Publisher 2022-2024. DIY, punk, witchcraft, bicycling, gender, self-care, social justice. US-printed.",
-    "site_section": "Books & Publishing"
+    "site_section": "Media & Publishing"
   },
   {
     "id": 66,
@@ -731,9 +687,9 @@
     "url": "https://realpickles.com/products/online-store",
     "category": "fermented foods",
     "ownership_type": "worker co-op",
-    "ships": "US (temperature-sensitive, delayed in summer)",
+    "ships": "Northeast US only (New England + NY, NJ, PA)",
     "status": "verified active",
-    "notes": "Direct link to Real Pickles online store. Pack of 4 jars, cases of 12, bulk 1 gallon and 5 gallon buckets available.",
+    "notes": "Direct link to Real Pickles online store. Pack of 4 jars, cases of 12, bulk 1 gallon and 5 gallon buckets available. Northeast only.",
     "site_section": "Food & Pantry"
   },
   {
@@ -900,5 +856,369 @@
     "status": "verified active",
     "notes": "2025 startup. Eco-friendly concentrated liquid soap. Workers split all profits equally. No investors, no managers.",
     "site_section": "Personal Care"
+  },
+  {
+    "id": 84,
+    "name": "Defector",
+    "url": "https://defector.com",
+    "category": "sports & culture journalism",
+    "ownership_type": "worker co-op",
+    "status": "verified active",
+    "notes": "Worker-owned sports and culture site launched in 2020 by the former Deadspin staff who walked out together. Reader-supported, no outside investors, workers own 100%.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 85,
+    "name": "404 Media",
+    "url": "https://www.404media.co",
+    "category": "investigative tech journalism",
+    "ownership_type": "worker co-op",
+    "status": "verified active",
+    "notes": "Worker-owned investigative tech and cybersecurity outlet founded 2023 by four journalists. Exposes hacking, privacy vulnerabilities, and digital exploitation. Reader-supported.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 86,
+    "name": "Aftermath",
+    "url": "https://aftermath.site",
+    "category": "video game journalism",
+    "ownership_type": "worker co-op",
+    "status": "verified active",
+    "notes": "Reader-funded worker-owned video game and internet culture site keeping the spirit of old-school independent games journalism alive. Founded by veteran games journalists.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 87,
+    "name": "Hell Gate",
+    "url": "https://hellgatenyc.com",
+    "category": "local news / NYC",
+    "ownership_type": "worker co-op",
+    "status": "verified active",
+    "notes": "Sharp, fiercely independent local news outlet covering New York City politics and neighborhood culture. Worker-owned, reader-supported, unapologetically NYC.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 88,
+    "name": "Flaming Hydra",
+    "url": "https://flaminghydra.com",
+    "category": "cooperative newsletter / essays",
+    "ownership_type": "worker co-op",
+    "status": "verified active",
+    "notes": "Collaborative daily cooperative newsletter delivering unmediated essays, criticism, and art from over 65 creators. Each contributor owns an equal share.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 89,
+    "name": "Hearing Things",
+    "url": "https://www.hearingthings.co",
+    "category": "music journalism",
+    "ownership_type": "worker-owned",
+    "status": "verified active",
+    "notes": "Worker-owned music journalism platform built by veteran editors to critique and celebrate music without corporate oversight. Reader-supported.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 90,
+    "name": "Racket MN",
+    "url": "https://racketmn.com",
+    "category": "local arts & culture / Minneapolis",
+    "ownership_type": "worker co-op",
+    "status": "verified active",
+    "notes": "Subscriber-backed alternative source for local arts, news, and food culture across the Minneapolis–St. Paul Twin Cities. Worker-owned, independent.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 91,
+    "name": "Maximum Fun",
+    "url": "https://maximumfun.org",
+    "category": "podcast network",
+    "ownership_type": "employee-owned",
+    "status": "verified active",
+    "notes": "Pioneering listener-supported independent podcast network that converted to employee ownership in 2023. Home to My Brother, My Brother and Me; Judge John Hodgman; and dozens more.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 92,
+    "name": "The Colorado Sun",
+    "url": "https://coloradosun.com",
+    "category": "statewide news / journalism",
+    "ownership_type": "journalist-owned",
+    "status": "verified active",
+    "notes": "Public-benefit, journalist-owned newsroom delivering rigorous investigative and statewide reporting across Colorado. Member-supported, founded 2018 by Denver Post journalists.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 93,
+    "name": "Rascal News",
+    "url": "https://rascal.news",
+    "category": "tabletop RPG & board game journalism",
+    "ownership_type": "worker co-op",
+    "status": "verified active",
+    "notes": "Reader-supported, worker-owned journalism outlet dedicated exclusively to covering the tabletop RPG and board game industry. The only co-op in the games press.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 95,
+    "name": "The Grain Shed",
+    "url": "https://thegrainshed.coop",
+    "category": "brewery",
+    "ownership_type": "worker co-op",
+    "ships": "Local (Spokane WA)",
+    "status": "verified active",
+    "notes": "Worker and farmer-owned cooperative brewery and bakery in Spokane WA. Uses regionally grown grain. Taproom open Wed–Sun.",
+    "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 96,
+    "name": "Bathtub Row Brewing Co-op",
+    "url": "https://bathtubrowbrewing.coop",
+    "category": "brewery",
+    "ownership_type": "multi-stakeholder co-op",
+    "ships": "Local (Los Alamos NM)",
+    "status": "verified active",
+    "notes": "Cooperative brewery in Los Alamos NM with both worker and consumer members. Named for historic Manhattan Project bathtubs repurposed as brewing tanks.",
+    "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 97,
+    "name": "Fifth Street Brewpub",
+    "url": "https://fifthstreetbrewpub.com",
+    "category": "brewery",
+    "ownership_type": "consumer co-op",
+    "ships": "Local (Dayton OH)",
+    "status": "verified active",
+    "notes": "Ohio's first cooperative brewpub in Dayton. Community-owned with member shares. On-site brewing, full food menu.",
+    "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 98,
+    "name": "New Barons Brewing Cooperative",
+    "url": "https://newbaronsbrewing.com",
+    "category": "brewery",
+    "ownership_type": "consumer co-op",
+    "ships": "Local (Milwaukee WI)",
+    "status": "verified active",
+    "notes": "Wisconsin's first cooperative brewery in Milwaukee. ~650 member-owners at $200/share. Operates as a brewery incubator helping new brewers launch.",
+    "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 101,
+    "name": "Soft Star Shoes",
+    "url": "https://www.softstarshoes.com",
+    "category": "footwear / handcrafted shoes",
+    "ownership_type": "worker co-op",
+    "ships": "US / international",
+    "status": "verified active",
+    "notes": "Worker-owned co-op in Corvallis, OR. Handcrafted minimalist leather shoes, moccasins, and boots for adults and kids. Made in USA.",
+    "site_section": "Apparel"
+  },
+  {
+    "id": 100,
+    "name": "Thorogood USA",
+    "url": "https://thorogoodusa.com",
+    "category": "footwear / work boots",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Made by Weinbrenner Shoe Company, employee-owned (ESOP). USA-made work boots including fire/logger/safety boots. Manufacturing in Merrill, WI since 1892.",
+    "site_section": "Apparel"
+  },
+  {
+    "id": 102,
+    "name": "Alvarado Street Bakery",
+    "url": "https://alvaradostreetbakery.com",
+    "category": "bread & baked goods",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker co-op since 1981 in Petaluma, CA. Organic sprouted grain breads, tortillas, and bagels. Sold nationwide at grocery stores and direct online.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 103,
+    "name": "Artisan Beverage Cooperative",
+    "url": "https://artbev.coop",
+    "category": "kombucha / ginger beer / mead",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker co-op in Greenfield, MA. Makes Katalyst Kombucha, Ginger Libation ginger beer, and Draft Mead. Sold regionally and online.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 104,
+    "name": "Cabot Creamery",
+    "url": "https://cabotcreamery.com",
+    "category": "dairy / cheese",
+    "ownership_type": "farmer co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Farmer-owned cooperative (part of Agri-Mark) representing 800+ farm families across New England and NY. First dairy co-op to earn B Corp certification (2012). Cheddar, butter, yogurt, sour cream.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 105,
+    "name": "Tillamook",
+    "url": "https://tillamook.com",
+    "category": "dairy / cheese / ice cream",
+    "ownership_type": "farmer co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Farmer-owned cooperative of ~80 farm families in Tillamook, OR. B Corp certified 2020. Cheese, ice cream, butter, sour cream, yogurt. Major national brand.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 106,
+    "name": "Cafe Campesino",
+    "url": "https://cafecampesino.com",
+    "category": "coffee / fair trade",
+    "ownership_type": "cooperative affiliated",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Fair trade organic coffee roaster in Americus, GA. Co-founded Cooperative Coffees importing co-op. Sources directly from farmer co-ops in Latin America and Africa. B Corp certified.",
+    "site_section": "Coffee & Tea"
+  },
+  {
+    "id": 107,
+    "name": "Bainbridge Vineyards",
+    "url": "https://bainbridgevineyards.com",
+    "category": "wine",
+    "ownership_type": "cooperative farm",
+    "ships": "WA / verify",
+    "status": "verified active",
+    "notes": "Estate winery on a cooperative farm on Bainbridge Island, WA. First B Corp winery in Washington state. Organic estate-grown wines, direct-to-consumer and regional retail.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 108,
+    "name": "Means TV",
+    "url": "https://means.tv",
+    "category": "streaming video subscription",
+    "ownership_type": "worker co-op",
+    "ships": "US / worldwide (digital)",
+    "status": "verified active",
+    "notes": "Worker-owned cooperative streaming service. $7.99/month. Films, documentaries, scripted shows, daily news. Available on Roku, Fire TV, Apple TV.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 109,
+    "name": "RADIX",
+    "url": "https://radix.coop",
+    "category": "books / print shop",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Black-led, worker-owned, union print shop and publisher in Brooklyn, NY. Publishes titles from marginalized community voices. Online bookstore at radix.coop/shop.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 110,
+    "name": "Catalytic Sound",
+    "url": "https://catalyticsound.com",
+    "category": "music label / recordings",
+    "ownership_type": "artist co-op",
+    "ships": "US / worldwide (physical + digital)",
+    "status": "verified active",
+    "notes": "Artist-run cooperative of 33 musicians in Chicago. Free jazz and improvised music. Vinyl, CD, cassette, digital. 50% of sales go directly to musicians. Also offers Soundstream subscription.",
+    "site_section": "Music"
+  },
+  {
+    "id": 111,
+    "name": "TableTop Gaming",
+    "url": "https://ttgaming.quest",
+    "category": "board games / trading card games",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker co-op game shop in Syracuse, NY (founded 2022). Magic: The Gathering, Pokémon, D&D, Pathfinder, Lorcana, board games, accessories. Starts pricing at 10% off MSRP. Free shipping over $125.",
+    "site_section": "Games"
+  },
+  {
+    "id": 112,
+    "name": "Fair State Brewing Cooperative",
+    "url": "https://fairstate.com",
+    "category": "brewery",
+    "ownership_type": "consumer co-op",
+    "ships": "Local (Minneapolis MN)",
+    "status": "verified active",
+    "notes": "One of the first cooperative breweries in the US, Minneapolis MN. Consumer-owned co-op — members elect the board. Online shop sells merch, memberships, and gifts.",
+    "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 113,
+    "name": "Divine Chocolate",
+    "url": "https://divinechocolate.com",
+    "category": "chocolate",
+    "ownership_type": "farmer co-op stake",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Premium Fairtrade chocolate. 20% owned by Kuapa Kokoo, a Ghanaian farmer cooperative of 100,000+ cacao farmers. B Corp certified (score 114.9). Widely available online and in grocery stores.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 99,
+    "name": "Broken Clock Brewing Cooperative",
+    "url": "https://brokenclockbrew.com",
+    "category": "brewery",
+    "ownership_type": "multi-stakeholder co-op",
+    "ships": "Local (Minneapolis MN)",
+    "status": "verified active",
+    "notes": "Minneapolis brewery where workers and community members can become owner-members. Taproom in NE Minneapolis with rotating craft beers.",
+    "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 114,
+    "name": "Bob's Red Mill",
+    "url": "https://www.bobsredmill.com",
+    "category": "grains, flour, baking mixes",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned since 2010 when founder Bob Moore gifted the company to his workers on his 81st birthday. Whole grains, stone-ground flours, oats, baking mixes, and cereals.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 115,
+    "name": "King Arthur Baking Company",
+    "url": "https://shop.kingarthurbaking.com",
+    "category": "flour, baking supplies",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned since 2004. Vermont-based company selling premium flours, baking mixes, tools, and ingredients. Also a B Corporation.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 116,
+    "name": "Southern Exposure Seed Exchange",
+    "url": "https://www.southernexposure.com",
+    "category": "heirloom seeds",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker-owned cooperative with equal pay for all worker-owners. Specializes in heirloom and open-pollinated seeds adapted to the Mid-Atlantic region. Over 800 varieties.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 117,
+    "name": "Golden Artist Colors",
+    "url": "https://shop.goldenartistcolors.com",
+    "category": "artist paints & supplies",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned since 2021. Manufactures professional-grade acrylic and oil paints, mediums, and varnishes. Over 200 workers across three upstate New York facilities.",
+    "site_section": "Art & Prints"
+  },
+  {
+    "id": 118,
+    "name": "W. W. Norton & Company",
+    "url": "https://wwnorton.com",
+    "category": "books",
+    "ownership_type": "employee-owned",
+    "ships": "US / worldwide",
+    "status": "verified active",
+    "notes": "Oldest and largest employee-owned book publisher in the US, wholly owned by employees since the early 1960s. Known for the Norton Anthologies and thousands of trade and academic titles.",
+    "site_section": "Media & Publishing"
   }
 ]

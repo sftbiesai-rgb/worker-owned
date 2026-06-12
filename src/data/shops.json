@@ -154,7 +154,7 @@
   },
   {
     "id": 19,
-    "name": "La Milpa Caf\u00e9",
+    "name": "La Milpa Café",
     "city": "Santa Ana",
     "state": "CA",
     "location": "1901 W Walnut St, Santa Ana, CA 92703",
@@ -631,7 +631,7 @@
   },
   {
     "id": 80,
-    "name": "Caf\u00e9 Castro",
+    "name": "Café Castro",
     "city": "Santa Fe",
     "state": "NM",
     "location": "2811 Cerrillos Rd, Santa Fe, NM 87507",
@@ -808,5 +808,59 @@
     "location": "716 Monroe St NE, Washington, DC 20017",
     "website": "bol.coop",
     "category": "coffee"
+  },
+  {
+    "id": 103,
+    "name": "Arizmendi Bakery",
+    "city": "San Francisco",
+    "state": "CA",
+    "location": "1331 9th Ave, San Francisco, CA 94122",
+    "website": "arizmendibakery.com",
+    "category": "coffee"
+  },
+  {
+    "id": 104,
+    "name": "Arizmendi Bakery",
+    "city": "San Francisco",
+    "state": "CA",
+    "location": "1268 Valencia St, San Francisco, CA 94110",
+    "website": "arizmendibakery.com",
+    "category": "coffee"
+  },
+  {
+    "id": 105,
+    "name": "Arizmendi Bakery",
+    "city": "Oakland",
+    "state": "CA",
+    "location": "3265 Lakeshore Ave, Oakland, CA 94610",
+    "website": "arizmendibakery.com",
+    "category": "coffee"
+  },
+  {
+    "id": 106,
+    "name": "Arizmendi Bakery",
+    "city": "Emeryville",
+    "state": "CA",
+    "location": "4301 San Pablo Ave, Emeryville, CA 94608",
+    "website": "arizmendibakery.com",
+    "category": "coffee"
+  },
+  {
+    "id": 107,
+    "name": "Cheese Board Collective",
+    "city": "Berkeley",
+    "state": "CA",
+    "location": "1504 Shattuck Ave, Berkeley, CA 94709",
+    "website": "cheeseboardcollective.coop",
+    "category": "coffee"
+  },
+  {
+    "id": 108,
+    "name": "Cheese Board Pizzeria",
+    "city": "Berkeley",
+    "state": "CA",
+    "location": "1512 Shattuck Ave, Berkeley, CA 94709",
+    "website": "cheeseboardcollective.coop",
+    "category": "restaurant"
   }
 ]

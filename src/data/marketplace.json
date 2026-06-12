@@ -1165,5 +1165,60 @@
     "status": "verified active",
     "notes": "Minneapolis brewery where workers and community members can become owner-members. Taproom in NE Minneapolis with rotating craft beers.",
     "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 114,
+    "name": "Bob's Red Mill",
+    "url": "https://www.bobsredmill.com",
+    "category": "grains, flour, baking mixes",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned since 2010 when founder Bob Moore gifted the company to his workers on his 81st birthday. Whole grains, stone-ground flours, oats, baking mixes, and cereals.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 115,
+    "name": "King Arthur Baking Company",
+    "url": "https://shop.kingarthurbaking.com",
+    "category": "flour, baking supplies",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned since 2004. Vermont-based company selling premium flours, baking mixes, tools, and ingredients. Also a B Corporation.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 116,
+    "name": "Southern Exposure Seed Exchange",
+    "url": "https://www.southernexposure.com",
+    "category": "heirloom seeds",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker-owned cooperative with equal pay for all worker-owners. Specializes in heirloom and open-pollinated seeds adapted to the Mid-Atlantic region. Over 800 varieties.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 117,
+    "name": "Golden Artist Colors",
+    "url": "https://shop.goldenartistcolors.com",
+    "category": "artist paints & supplies",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned since 2021. Manufactures professional-grade acrylic and oil paints, mediums, and varnishes. Over 200 workers across three upstate New York facilities.",
+    "site_section": "Art & Prints"
+  },
+  {
+    "id": 118,
+    "name": "W. W. Norton & Company",
+    "url": "https://wwnorton.com",
+    "category": "books",
+    "ownership_type": "employee-owned",
+    "ships": "US / worldwide",
+    "status": "verified active",
+    "notes": "Oldest and largest employee-owned book publisher in the US, wholly owned by employees since the early 1960s. Known for the Norton Anthologies and thousands of trade and academic titles.",
+    "site_section": "Media & Publishing"
   }
 ]

@@ -168,5 +168,15 @@
     "website": "newbaronsbrewing.com",
     "category": "bar",
     "notes": "FLAG: Consumer/member co-op (~650 members at $200). Wisconsin's first cooperative brewery. Operates as a brewery incubator."
+  },
+  {
+    "id": 18,
+    "name": "Great Lakes Brewing Company",
+    "city": "Cleveland",
+    "state": "OH",
+    "location": "2516 Market Ave, Cleveland, OH 44113",
+    "website": "greatlakesbrewing.com",
+    "category": "brewery",
+    "notes": "Employee-owned via ESOP since 2018. Brewpub and taproom in Ohio City neighborhood. Pioneered craft beer in Ohio."
   }
 ]
