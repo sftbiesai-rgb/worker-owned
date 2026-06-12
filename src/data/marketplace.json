@@ -1220,5 +1220,82 @@
     "status": "verified active",
     "notes": "Oldest and largest employee-owned book publisher in the US, wholly owned by employees since the early 1960s. Known for the Norton Anthologies and thousands of trade and academic titles.",
     "site_section": "Media & Publishing"
+  },
+  {
+    "id": 119,
+    "name": "Grass Roots Farmers' Cooperative",
+    "url": "https://grassrootscoop.com",
+    "category": "pasture-raised meat",
+    "ownership_type": "farmer co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Farmer-owned cooperative in Pearcy, AR. Sells grass-fed beef, pastured pork, and pasture-raised poultry direct to consumers. Founded by small family farms committed to regenerative agriculture.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 120,
+    "name": "Dansko",
+    "url": "https://www.dansko.com",
+    "category": "footwear / clogs",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP) since 2012. West Grove, PA. Known for professional clogs and comfort footwear. Worn by nurses, chefs, and teachers. Danish-inspired design.",
+    "site_section": "Apparel"
+  },
+  {
+    "id": 121,
+    "name": "Left Hand Brewing Company",
+    "url": "https://shop.lefthandbrewing.com",
+    "category": "brewery merch",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP) since 2020. Longmont, CO. Known for Milk Stout Nitro. Online shop sells hats, shirts, glassware, and accessories.",
+    "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 122,
+    "name": "Ten Thousand Villages",
+    "url": "https://tenthousandvillages.com",
+    "category": "handcrafted goods / fair trade gifts",
+    "ownership_type": "fair trade nonprofit",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Fair trade nonprofit retailer selling handcrafted goods from artisan cooperatives and groups in 25 countries. Originally founded by Mennonite Central Committee in 1946. Products include jewelry, home décor, baskets, ceramics, and gifts.",
+    "site_section": "Home Goods"
+  },
+  {
+    "id": 123,
+    "name": "American Roots",
+    "url": "https://www.americanrootswear.com",
+    "category": "union-made apparel",
+    "ownership_type": "union shop",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Union-made apparel manufactured in Maine by USW Local 366 members. Hoodies, tees, and labor movement gear. Workers are represented by United Steelworkers. 'Made in USA, Union Strong.'",
+    "site_section": "Apparel"
+  },
+  {
+    "id": 124,
+    "name": "1620 Workwear",
+    "url": "https://www.1620workwear.com",
+    "category": "workwear / durable apparel",
+    "ownership_type": "American-owned manufacturer",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Massachusetts-based brand that completely owns its domestic garment factories. Premium workwear, pants, and field gear made in USA with fair wages and ethical supply chain.",
+    "site_section": "Apparel"
+  },
+  {
+    "id": 125,
+    "name": "Green Mountain Spinnery",
+    "url": "https://www.spinnery.com",
+    "category": "yarn / fiber arts",
+    "ownership_type": "worker co-op",
+    "ships": "US / worldwide",
+    "status": "verified active",
+    "notes": "Worker-owned cooperative in Putney, VT since 1981. Makes eco-friendly yarns from wool, alpaca, mohair, and organic cotton. All yarn spun in Vermont using traditional methods. One of the oldest worker co-ops in the US.",
+    "site_section": "Home Goods"
   }
 ]
