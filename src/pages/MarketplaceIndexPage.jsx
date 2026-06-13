@@ -134,7 +134,7 @@ function MarketplaceIndexPage() {
                 </Link>
               ))}
             </div>
-            <p className="text-sm text-gray-600 leading-relaxed mt-4 text-center">You have so many options for buying stuff online. Why not buy from places workers own? It's easier than trying to figure out which corporations are the "good" ones.</p>
+
           </div>
         )}
 
