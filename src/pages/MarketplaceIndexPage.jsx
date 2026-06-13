@@ -77,7 +77,7 @@ function MarketplaceIndexPage() {
           </div>
           <p className="text-[11px] text-gray-400 mt-2 text-center">Results are links to company sites. We don't sell anything or earn a commission.</p>
           <p className="text-[11px] text-gray-400 mt-1 text-center">
-            <Link to="/coffee" className="hover:text-[#004cb9] transition-colors"><strong>Quick Tool:</strong> find a worker owned coffee shop or restaurant near you</Link>
+            <Link to="/coffee" className="text-[#004cb9] visited:text-[#004cb9] hover:text-[#BF0A30] transition-colors"><strong>Quick Tool:</strong> find a worker owned coffee shop or restaurant near you</Link>
           </p>
         </div>
 
