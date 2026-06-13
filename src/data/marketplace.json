@@ -1319,5 +1319,192 @@
     "status": "verified active",
     "notes": "100% employee-owned (ESOP). Founded 1988 in Bend, OR. Known for Black Butte Porter and Mirror Pond Pale Ale. Sells beer and branded merch online.",
     "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 128,
+    "name": "Mast General Store",
+    "url": "https://www.mastgeneralstore.com",
+    "category": "outdoor apparel / general store goods",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Employee-owned (ESOP) since 1995. Historic general stores in NC, TN, VA, SC. Founded 1883, reopened 1980 by the Cooper family. Sells outdoor apparel, accessories, candy, toys, and Appalachian goods online.",
+    "site_section": "Apparel"
+  },
+  {
+    "id": 129,
+    "name": "Dean's Beans Organic Coffee",
+    "url": "https://www.deansbeans.com",
+    "category": "organic / fair-trade coffee",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% worker-owned cooperative since June 2023 after 30 years of founder ownership. Based in Orange, MA. Exclusively fair trade, organic, shade-grown coffees sourced from smallholder farmer cooperatives globally. Named Massachusetts Rural Business of the Year 2026.",
+    "site_section": "Coffee & Tea"
+  },
+  {
+    "id": 130,
+    "name": "Coraçao Chocolate",
+    "url": "https://www.coracaoconfections.com",
+    "category": "vegan chocolate / handcrafted confections",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Employee-owned (Certified EO), Certified Climate Neutral. Based in Richmond, CA. Handcrafted vegan, organic chocolates and confections. Makes truffles, bars, and seasonal gift boxes.",
+    "site_section": "Chocolate & Sweets"
+  },
+  {
+    "id": 131,
+    "name": "Graeter's Ice Cream",
+    "url": "https://www.graeters.com",
+    "category": "handcrafted ice cream",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "44% employee-owned (ESOP) since 2025. Founded 1870 in Cincinnati, OH, family-owned for 5 generations. Famous for French Pot small-batch ice cream. Online shop ships ice cream pints and packs nationwide.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 132,
+    "name": "Harpoon Brewery",
+    "url": "https://shop.harpoonbrewery.com",
+    "category": "brewery merch / apparel",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP). Started 48% ESOP in 2014, completed full employee ownership in 2024. Founded 1986 in Boston, MA. Also brews in Windsor, VT. Known for UFO White and Leviathan Imperial Stout.",
+    "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 133,
+    "name": "Maine Coast Sea Vegetables",
+    "url": "https://www.seaveg.com",
+    "category": "sea vegetables / seaweed",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP) since 2017. Based in Hancock, ME. Harvests and processes wild Maine seaweeds: dulse, kelp, nori, wakame, Irish moss, sea lettuce, and blends. Also sells seaweed seasonings, teas, and supplements.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 134,
+    "name": "Sow True Seed",
+    "url": "https://www.sowtrueseed.com",
+    "category": "heirloom / open-pollinated seeds",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Employee-owned (ESOP). Based in Asheville, NC. Sells heirloom vegetable, herb, flower, and cover crop seeds. Also sells gardening tools, books, and gifts. Certified by Certified EO.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 135,
+    "name": "The Local Butcher Shop",
+    "url": "https://thelocalbutchershop.com",
+    "category": "butcher / specialty meats",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker cooperative since 2021. Based in Berkeley, CA. Whole-animal butchery sourcing from small local farms. Online shop sells meat, charcuterie, sauces, and pantry items. Certified EO listed.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 136,
+    "name": "Trama Textiles",
+    "url": "https://tramatextiles.org",
+    "category": "handwoven textiles / clothing",
+    "ownership_type": "worker co-op",
+    "ships": "US / worldwide",
+    "status": "verified active",
+    "notes": "Women-owned Maya weaving cooperative founded in 1988 in Guatemala. Worker-owned; all products handwoven by cooperative members. Sells traditional and contemporary woven clothing, scarves, bags, and home textiles. Fair trade and ethically made.",
+    "site_section": "Apparel"
+  },
+  {
+    "id": 137,
+    "name": "Barrio Brewing Co.",
+    "url": "https://barriobrewing.com",
+    "category": "craft beer / brewery merch",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP) since 2020. Based in Tucson, AZ. Founded 1991 by Dennis Arnold; one of Arizona's oldest craft breweries. Online shop sells branded merch — hats, glassware, shirts, anniversary items. WooCommerce store.",
+    "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 138,
+    "name": "Tradehome Shoes",
+    "url": "https://tradehome.com",
+    "category": "footwear",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP) since 2014. Based in Cottage Grove, MN. Family footwear retailer since 1921 with 100+ stores across the Midwest and South. Carries name-brand shoes for men, women, and kids. Certified EO listed.",
+    "site_section": "Apparel"
+  },
+  {
+    "id": 139,
+    "name": "Independent Fabrication",
+    "url": "https://www.ifbikes.com",
+    "category": "custom bicycles",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker-owned cooperative since 1995. Based in Somerville, MA. Handmade steel and titanium custom road, gravel, and mountain bikes. One of the oldest worker-owned bicycle manufacturers in the US. Certified EO listed.",
+    "site_section": "Sporting Goods & Outdoors"
+  },
+  {
+    "id": 140,
+    "name": "Stewart's Shops",
+    "url": "https://shop.stewartsshops.com",
+    "category": "convenience store goods / regional brand",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Employee-owned (ESOP) since 1974. Based in Saratoga Springs, NY. Iconic Upstate New York convenience store chain with 340+ locations. Online shop sells branded merchandise, private-label jams, coffee, and accessories. Employees own ~40% through ESOP.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 141,
+    "name": "Gardener's Supply Company",
+    "url": "https://www.gardeners.com",
+    "category": "garden tools / seeds / planters",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Employee-owned (ESOP) since 1986. Based in Burlington, VT. One of the largest independent garden supply retailers in the US. Sells raised beds, planters, tools, seeds, composting equipment, and outdoor décor. Committed to sustainability and Vermont community.",
+    "site_section": "Home & Garden"
+  },
+  {
+    "id": 142,
+    "name": "Aerosoles",
+    "url": "https://aerosoles.com",
+    "category": "women's footwear",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Employee-owned (ESOP) since 1995. Based in Edison, NJ. Known for comfortable women's shoes, sandals, booties, and flats. Over 250 styles available online. Direct-to-consumer brand with a focus on comfort engineering.",
+    "site_section": "Apparel"
+  },
+  {
+    "id": 143,
+    "name": "Taharka Brothers Ice Cream",
+    "url": "https://taharkabrothers.com",
+    "category": "small-batch ice cream",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Employee-owned (ESOP) since 2020. Based in Baltimore, MD. Handcrafted small-batch ice cream inspired by Baltimore culture and traditions. Known for flavors like Salted Honey Graham and Non-Dairy Chocolate Love. Named after a Nubian pharaoh. Mission-driven company employing returning citizens.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 144,
+    "name": "Applewood Seed Company",
+    "url": "https://applewoodseed.com",
+    "category": "wildflower seeds / native plants",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Employee-owned (ESOP) since 2020. Based in Arvada, CO. One of America's leading wildflower seed companies since 1965. Sells native wildflower mixes, cover crop seed, bulk seed, and regional mixes. WooCommerce store.",
+    "site_section": "Home & Garden"
   }
 ]
