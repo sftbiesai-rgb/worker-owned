@@ -2,6 +2,10 @@ import { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Search } from 'lucide-react'
 
+function slugify(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+}
+
 const MARKETPLACE_CATEGORIES = [
   { slug: 'coffee-tea',       label: 'Coffee & Tea' },
   { slug: 'media-publishing', label: 'Media & Publishing' },
@@ -76,24 +80,34 @@ function MarketplaceIndexPage() {
                 <p className="text-xs text-gray-400 mb-3">{results.length} result{results.length !== 1 ? 's' : ''}{results.length === 40 ? '+' : ''}</p>
                 <div className="grid grid-cols-2 gap-3">
                   {results.map(p => (
-                    <a
-                      key={p.id}
-                      href={p.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-[#f5f5f7] rounded-xl overflow-hidden hover:ring-1 hover:ring-[#004cb9] transition-all"
-                    >
-                      {p.image && (
-                        <div className="aspect-square w-full overflow-hidden bg-gray-100">
-                          <img src={p.image} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+                    <div key={p.id} className="bg-[#f5f5f7] rounded-xl overflow-hidden">
+                      <a
+                        href={p.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block hover:opacity-90 transition-opacity"
+                      >
+                        {p.image && (
+                          <div className="aspect-square w-full overflow-hidden bg-gray-100">
+                            <img src={p.image} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+                          </div>
+                        )}
+                        <div className="px-3 pt-2 pb-1">
+                          <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{p.title}</p>
+                          {p.price && <p className="text-xs font-semibold text-[#004cb9] mt-0.5">${p.price}</p>}
+                        </div>
+                      </a>
+                      {p.store_name && (
+                        <div className="px-3 pb-2">
+                          <Link
+                            to={`/marketplace/store/${slugify(p.store_name)}`}
+                            className="text-[10px] text-gray-400 hover:text-[#004cb9] transition-colors truncate block"
+                          >
+                            {p.store_name}
+                          </Link>
                         </div>
                       )}
-                      <div className="px-3 py-2">
-                        <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{p.title}</p>
-                        <p className="text-[10px] text-gray-400 mt-0.5 truncate">{p.store_name}</p>
-                        {p.price && <p className="text-xs font-semibold text-[#004cb9] mt-0.5">${p.price}</p>}
-                      </div>
-                    </a>
+                    </div>
                   ))}
                 </div>
               </>

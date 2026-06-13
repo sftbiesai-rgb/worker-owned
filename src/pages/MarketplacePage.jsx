@@ -2,6 +2,10 @@ import { useEffect } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
 
+function slugify(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+}
+
 const SECTIONS = [
   { slug: 'coffee-tea',       label: 'Coffee & Tea',       sectionName: 'Coffee & Tea',       title: 'Worker-Owned Coffee & Tea Online | Worker Owned',                          description: 'Shop worker-owned coffee roasters and tea brands online. Cooperatively owned coffee roasted and shipped direct to your door.' },
   { slug: 'media-publishing', label: 'Media & Publishing', sectionName: 'Media & Publishing', title: 'Worker-Owned Media, News & Publishers Online | Worker Owned',              description: 'Read and support worker-owned journalism, newsletters, podcasts, and book publishers. Independent media owned by the people who make it.' },
@@ -115,16 +119,11 @@ function MarketplacePage() {
 
           <div className="space-y-3">
             {entries.map(entry => (
-              <div key={entry.id} className="bg-[#f5f5f7] rounded-xl px-4 py-3">
+              <Link key={entry.id} to={`/marketplace/store/${slugify(entry.name)}`} className="block bg-[#f5f5f7] rounded-xl px-4 py-3 hover:ring-1 hover:ring-[#004cb9] transition-all">
                 <div className="flex items-start justify-between gap-2 mb-1">
-                  <a
-                    href={entry.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-semibold text-sm text-[#004cb9] hover:text-[#003a8c] transition-colors leading-snug"
-                  >
+                  <span className="font-semibold text-sm text-[#004cb9] leading-snug">
                     {entry.name}
-                  </a>
+                  </span>
                   {ownershipBadge(entry.ownership_type)}
                 </div>
                 {entry.notes && (
@@ -133,7 +132,7 @@ function MarketplacePage() {
                 {entry.ships && entry.ships !== 'US' && (
                   <p className="text-xs text-gray-400 mt-1">Ships: {entry.ships}</p>
                 )}
-              </div>
+              </Link>
             ))}
           </div>
         </div>

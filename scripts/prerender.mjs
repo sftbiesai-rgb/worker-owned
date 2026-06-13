@@ -4,6 +4,19 @@ import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
+function slugify(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+}
+
+function dedupeByUrl(entries) {
+  const seen = new Map()
+  for (let i = entries.length - 1; i >= 0; i--) {
+    const e = entries[i]
+    if (!seen.has(e.url)) seen.set(e.url, e)
+  }
+  return entries.filter(e => seen.get(e.url) === e)
+}
+
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
 
@@ -93,6 +106,26 @@ const routes = [
     canonical: 'https://www.workerowned.info/marketplace/beer-brewing',
   },
 ]
+
+// Dynamically generate store routes from marketplace.json
+const marketplaceData = JSON.parse(readFileSync(resolve(root, 'src/data/marketplace.json'), 'utf-8'))
+const allStores = dedupeByUrl(marketplaceData)
+const storeRoutes = allStores.map(s => {
+  const slug = slugify(s.name)
+  const url = `/marketplace/store/${slug}`
+  const title = `${s.name} — ${s.ownership_type || 'Worker-Owned'} | Worker Owned`
+  const description = s.notes
+    ? s.notes.substring(0, 155)
+    : `Shop ${s.name}, a ${s.ownership_type || 'worker-owned business'} selling ${s.category || s.site_section}.`
+  return {
+    url,
+    title,
+    description,
+    canonical: `https://www.workerowned.info${url}`,
+  }
+})
+
+routes.push(...storeRoutes)
 
 // Build SSR bundle
 await build({
