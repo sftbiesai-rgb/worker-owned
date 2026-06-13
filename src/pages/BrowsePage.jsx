@@ -80,12 +80,6 @@ function BrowsePage({ category }) {
             >
               Restaurants
             </Link>
-            <Link
-              to="/bars"
-              className="flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]"
-            >
-              Bars
-            </Link>
           </div>
 
           <div className="relative mb-4">
