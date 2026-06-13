@@ -85,13 +85,13 @@ function HomePage() {
                   {filteredShops.map(shop => (
                     <div key={shop.id} className="bg-[#f5f5f7] rounded-xl px-4 py-3">
                       {shop.website ? (
-                        <a href={shop.website.startsWith('http') ? shop.website : `https://${shop.website}`} target="_blank" rel="noopener noreferrer" className="font-semibold text-sm truncate block text-[#004cb9] hover:text-[#003a8c] transition-colors">
+                        <a href={shop.website.startsWith('http') ? shop.website : `https://${shop.website}`} target="_blank" rel="noopener" className="font-semibold text-sm truncate block text-[#004cb9] hover:text-[#003a8c] transition-colors">
                           {shop.name}
                         </a>
                       ) : (
                         <div className="font-semibold text-sm truncate text-[#004cb9]">{shop.name}</div>
                       )}
-                      <a href={`https://maps.google.com/?q=${encodeURIComponent(shop.location)}`} target="_blank" rel="noopener noreferrer" className="text-xs text-[#BF0A30] hover:underline truncate mt-0.5 block transition-colors">
+                      <a href={`https://maps.google.com/?q=${encodeURIComponent(shop.location)}`} target="_blank" rel="noopener" className="text-xs text-[#BF0A30] hover:underline truncate mt-0.5 block transition-colors">
                         {shop.location}
                       </a>
                     </div>
@@ -124,13 +124,13 @@ function HomePage() {
 
       <footer className="pb-6 pt-2 text-center">
         <p className="text-xs text-gray-400 mb-1">
-          <a href="https://yourfairshare.info" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-[#004cb9] transition-colors">
+          <a href="https://yourfairshare.info" target="_blank" rel="noopener" className="inline-flex items-center gap-1 hover:text-[#004cb9] transition-colors">
             <img src="/logo-yourfairshare.png" alt="" className="h-3 w-3 inline" />
             Your Fair Share
           </a>
         </p>
         <p className="text-xs text-gray-400">
-          Sources: <a href="https://www.usworker.coop/directory/" target="_blank" rel="noopener noreferrer" className="hover:text-[#004cb9] transition-colors">USFWC</a>, <a href="https://institute.coop" target="_blank" rel="noopener noreferrer" className="hover:text-[#004cb9] transition-colors">DAWI</a>, <a href="https://nycworker.coop" target="_blank" rel="noopener noreferrer" className="hover:text-[#004cb9] transition-colors">NYC NOWC</a>, regional co-op networks
+          Sources: <a href="https://www.usworker.coop/directory/" target="_blank" rel="noopener" className="hover:text-[#004cb9] transition-colors">USFWC</a>, <a href="https://institute.coop" target="_blank" rel="noopener" className="hover:text-[#004cb9] transition-colors">DAWI</a>, <a href="https://nycworker.coop" target="_blank" rel="noopener" className="hover:text-[#004cb9] transition-colors">NYC NOWC</a>, regional co-op networks
         </p>
       </footer>
     </div>
