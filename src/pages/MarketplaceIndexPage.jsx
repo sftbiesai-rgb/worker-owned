@@ -76,6 +76,9 @@ function MarketplaceIndexPage() {
             />
           </div>
           <p className="text-[11px] text-gray-400 mt-2 text-center">Results are links to company sites. We don't sell anything or earn a commission.</p>
+          <p className="text-[11px] text-gray-400 mt-1 text-center">
+            <Link to="/coffee" className="hover:text-[#004cb9] transition-colors"><strong>Quick Tool:</strong> find a worker owned coffee shop or restaurant near you</Link>
+          </p>
         </div>
 
         {searching ? (
@@ -138,10 +141,7 @@ function MarketplaceIndexPage() {
           </div>
         )}
 
-        <div className="mt-3 text-center flex flex-col gap-2">
-          <Link to="/coffee" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
-            Quick Tool: find a worker owned coffee shop or restaurant near you &rarr;
-          </Link>
+        <div className="mt-3 text-center">
           <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
             Submit a worker-owned business &rarr;
           </Link>
