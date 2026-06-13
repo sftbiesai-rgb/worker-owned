@@ -26,7 +26,7 @@ function MarketplaceIndexPage() {
   useEffect(() => {
     document.title = 'Market Place | Shop worker owned online stores for apparel, home goods, food and more'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
-      'Browse worker-owned online stores by category or search 3,500+ products from cooperatives and employee-owned companies.')
+      'Browse worker owned online stores by category or search 3,500+ products from cooperatives and employee-owned companies.')
     fetch('/data/products.json')
       .then(r => r.json())
       .then(setProducts)
@@ -62,7 +62,7 @@ function MarketplaceIndexPage() {
             <img src="/logo-marketplace.png" alt="Worker Owned Marketplace" width="48" height="48" className="shrink-0" />
             <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Market Place</Link>
           </div>
-          <p className="text-center text-sm text-gray-500 mb-4">Shop worker-owned businesses online</p>
+          <p className="text-center text-sm text-gray-500 mb-4">Shop worker owned businesses online</p>
 
           <div className="relative">
             <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -143,7 +143,7 @@ function MarketplaceIndexPage() {
 
         <div className="mt-3 text-center">
           <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
-            Submit a worker-owned business &rarr;
+            Submit a worker owned business &rarr;
           </Link>
         </div>
       </main>

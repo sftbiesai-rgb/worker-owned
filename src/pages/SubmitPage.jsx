@@ -4,7 +4,7 @@ import { Send } from 'lucide-react'
 
 function SubmitPage() {
   useEffect(() => {
-    document.title = 'Submit a Worker-Owned Business | Worker Owned'
+    document.title = 'Submit a Worker Owned Business | Worker Owned'
   }, [])
 
   const [formName, setFormName] = useState('')

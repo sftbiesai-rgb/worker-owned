@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import barsData from '../data/bars.json'
 
-// Exclude pure consumer co-ops (not worker-owned)
+// Exclude pure consumer co-ops (not worker owned)
 const CONSUMER_COOP_IDS = [14, 15, 16, 17]
 const bars = barsData.filter(b => !CONSUMER_COOP_IDS.includes(b.id))
 
@@ -11,9 +11,9 @@ function BarsPage() {
   const [search, setSearch] = useState('')
 
   useEffect(() => {
-    document.title = 'Worker-Owned Bars & Breweries in the US | Worker Owned'
+    document.title = 'Worker Owned Bars & Breweries in the US | Worker Owned'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
-      'Browse all worker-owned bars, brewpubs, and breweries across the United States. Find cooperatively owned bars near you.')
+      'Browse all worker owned bars, brewpubs, and breweries across the United States. Find cooperatively owned bars near you.')
   }, [])
 
   const filtered = bars
@@ -43,7 +43,7 @@ function BarsPage() {
           </div>
 
           <h2 className="text-center text-base font-semibold text-gray-700 mb-1">
-            Worker-Owned Bars & Breweries
+            Worker Owned Bars & Breweries
           </h2>
           <p className="text-center text-sm text-gray-500 mb-4">
             Cooperatively owned bars, brewpubs, and taprooms across the United States

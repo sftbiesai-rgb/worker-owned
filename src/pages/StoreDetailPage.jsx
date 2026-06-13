@@ -24,7 +24,7 @@ function ownershipBadge(type) {
   if (!type) return null
   const clean = type.toLowerCase()
   let color = 'bg-gray-100 text-gray-500'
-  if (clean.includes('worker co-op') || clean === 'worker-owned') color = 'bg-blue-50 text-[#004cb9]'
+  if (clean.includes('worker co-op') || clean === 'worker owned') color = 'bg-blue-50 text-[#004cb9]'
   else if (clean.includes('esop') || clean.includes('employee')) color = 'bg-green-50 text-green-700'
   else if (clean.includes('multi-stakeholder') || clean.includes('consumer')) color = 'bg-purple-50 text-purple-700'
   return (
@@ -49,7 +49,7 @@ function StoreDetailPage() {
 
   useEffect(() => {
     if (!entry) return
-    const title = `${entry.name} — Worker-Owned | Worker Owned`
+    const title = `${entry.name} — Worker Owned | Worker Owned`
     const desc = entry.notes || `Shop ${entry.name}, a ${entry.ownership_type} selling ${entry.category}.`
     document.title = title
     document.querySelector('meta[name="description"]')?.setAttribute('content', desc)
@@ -87,7 +87,7 @@ function StoreDetailPage() {
             <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Market Place</Link>
           </div>
 
-          <p className="text-center text-sm text-gray-500 mb-5">Shop worker-owned online</p>
+          <p className="text-center text-sm text-gray-500 mb-5">Shop worker owned online</p>
 
           {/* Store header */}
           <div className="mb-4">

@@ -8,13 +8,13 @@ function BrowsePage({ category }) {
 
   useEffect(() => {
     if (category === 'coffee') {
-      document.title = 'Worker-Owned Coffee Shops in the US | Worker Owned'
+      document.title = 'Worker Owned Coffee Shops in the US | Worker Owned'
       document.querySelector('meta[name="description"]')?.setAttribute('content',
-        'Browse all worker-owned coffee shops, cafes, and bakeries across the United States. Find cooperatively owned coffee near you.')
+        'Browse all worker owned coffee shops, cafes, and bakeries across the United States. Find cooperatively owned coffee near you.')
     } else {
-      document.title = 'Worker-Owned Restaurants in the US | Worker Owned'
+      document.title = 'Worker Owned Restaurants in the US | Worker Owned'
       document.querySelector('meta[name="description"]')?.setAttribute('content',
-        'Browse all worker-owned restaurants, brewpubs, and diners across the United States. Find cooperatively owned food near you.')
+        'Browse all worker owned restaurants, brewpubs, and diners across the United States. Find cooperatively owned food near you.')
     }
   }, [category])
 
@@ -51,7 +51,7 @@ function BrowsePage({ category }) {
           </div>
 
           <h2 className="text-center text-base font-semibold text-gray-700 mb-1">
-            {category === 'coffee' ? 'Worker-Owned Coffee Shops' : 'Worker-Owned Restaurants'}
+            {category === 'coffee' ? 'Worker Owned Coffee Shops' : 'Worker Owned Restaurants'}
           </h2>
           <p className="text-center text-sm text-gray-500 mb-4">
             {category === 'coffee'

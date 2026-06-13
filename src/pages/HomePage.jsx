@@ -5,9 +5,9 @@ import shopsData from '../data/shops.json'
 
 function HomePage() {
   useEffect(() => {
-    document.title = 'Worker Owned — Find Worker-Owned Coffee Shops & Restaurants Near You'
+    document.title = 'Worker Owned — Find Worker Owned Coffee Shops & Restaurants Near You'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
-      'Find worker-owned coffee shops and restaurants across the US. Search by city to discover cooperatively owned cafes, bakeries, and restaurants in your area.')
+      'Find worker owned coffee shops and restaurants across the US. Search by city to discover cooperatively owned cafes, bakeries, and restaurants in your area.')
   }, [])
 
   const [searchTerm, setSearchTerm] = useState('')
@@ -41,7 +41,7 @@ function HomePage() {
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Worker Owned</h1>
           </div>
 
-          <p className="text-center text-sm text-gray-500 mb-4">Search for a worker-owned coffee shop or restaurant in your city</p>
+          <p className="text-center text-sm text-gray-500 mb-4">Search for a worker owned coffee shop or restaurant in your city</p>
 
           <div className="flex gap-2 mb-4">
             <button
@@ -114,10 +114,10 @@ function HomePage() {
 
         <div className="mt-3 flex flex-col gap-2 text-center">
           <Link to="/marketplace" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
-            Shop worker-owned businesses online &rarr;
+            Shop worker owned businesses online &rarr;
           </Link>
           <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
-            Submit a worker-owned business &rarr;
+            Submit a worker owned business &rarr;
           </Link>
         </div>
       </main>
