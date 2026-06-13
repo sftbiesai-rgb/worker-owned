@@ -23,7 +23,7 @@ const root = resolve(__dirname, '..')
 const routes = [
   {
     url: '/marketplace',
-    title: 'Marketplace — Shop Worker-Owned Online | Worker Owned Marketplace',
+    title: 'Market Place | Shop worker owned online stores for apparel, home goods, food and more',
     description: 'Browse worker-owned online stores by category or search 3,500+ products from cooperatives and employee-owned companies.',
     canonical: 'https://www.workerowned.info/marketplace',
   },
