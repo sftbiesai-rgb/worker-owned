@@ -69,6 +69,7 @@ function MarketplaceIndexPage() {
               autoFocus
             />
           </div>
+          <p className="text-[11px] text-gray-400 mt-2 text-center">Results link to each company's own website. We don't sell anything or earn a commission — just helping you find worker-owned businesses.</p>
         </div>
 
         {searching ? (
@@ -93,7 +94,7 @@ function MarketplaceIndexPage() {
                           </div>
                         )}
                         <div className="px-3 pt-2 pb-1">
-                          <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{p.title}</p>
+                          <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{p.title} <span className="text-gray-400 font-normal">↗</span></p>
                           {p.price && <p className="text-xs font-semibold text-[#004cb9] mt-0.5">${p.price}</p>}
                         </div>
                       </a>
