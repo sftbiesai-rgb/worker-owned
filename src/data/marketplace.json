@@ -1561,5 +1561,60 @@
     "status": "verified active",
     "notes": "Worker co-op organic coffee roaster based in Orange, MA. Founded 1993 by Dean Cycon. Certified EO member. Known for social justice mission and direct relationships with farming communities. Ships coffee, tea, chocolate, and gift items.",
     "site_section": "Food & Pantry"
+  },
+  {
+    "id": 150,
+    "name": "Meow Meow Tweet",
+    "url": "https://meowmeowtweet.com",
+    "category": "vegan skincare / personal care",
+    "ownership_type": "worker collective",
+    "ships": "worldwide",
+    "status": "verified active",
+    "notes": "Brooklyn NY worker collective making vegan, organic, zero-waste personal care products. Known for plastic-free packaging — compostable and recyclable. Products include deodorant, body oil, face care, and lip balm.",
+    "site_section": "Personal Care"
+  },
+  {
+    "id": 151,
+    "name": "Alaffia",
+    "url": "https://www.alaffia.com",
+    "category": "fair trade shea body care / hair care",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker co-op based in Olympia WA. Partners with women's shea butter co-ops in Togo, West Africa. Makes lotions, shampoos, conditioners, body washes from fair trade shea and African botanicals. B Corp certified.",
+    "site_section": "Personal Care"
+  },
+  {
+    "id": 152,
+    "name": "Verso Books",
+    "url": "https://www.versobooks.com",
+    "category": "radical / political / critical theory books",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker co-op publishing house founded 1970 in London, with offices in Brooklyn NY. Largest independent radical publishing house in the English-speaking world. 750+ titles in print covering politics, history, philosophy, and culture.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 153,
+    "name": "PM Press",
+    "url": "https://www.pmpress.org",
+    "category": "radical / political / labor books",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Oakland CA worker co-op independent publisher founded 2007. Focuses on labor, anarchist, feminist, and social movement literature. Publishes books, e-books, DVDs, and music. Ships worldwide.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 154,
+    "name": "Resonate Cooperative",
+    "url": "https://resonate.coop",
+    "category": "ethical music streaming platform",
+    "ownership_type": "multi-stakeholder co-op",
+    "ships": "digital — worldwide",
+    "status": "verified active",
+    "notes": "Multi-stakeholder co-op music streaming platform owned by artists, listeners, and workers. Uses stream2own model — listeners eventually own the music they stream. Alternative to Spotify owned by its community.",
+    "site_section": "Music"
   }
 ]
