@@ -69,7 +69,7 @@ function MarketplaceIndexPage() {
               autoFocus
             />
           </div>
-          <p className="text-[11px] text-gray-400 mt-2 text-center">Results link to each company's own website. We don't sell anything or earn a commission — just helping you find worker-owned businesses.</p>
+          <p className="text-[11px] text-gray-400 mt-2 text-center">Results are links to company sites. We don't sell anything or earn a commission.</p>
         </div>
 
         {searching ? (
