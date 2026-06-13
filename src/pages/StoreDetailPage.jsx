@@ -83,8 +83,8 @@ function StoreDetailPage() {
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-8">
 
           <div className="flex items-center justify-center gap-3 mb-1">
-            <img src="/logo-coffee.png" alt="Worker Owned" width="36" height="36" className="shrink-0" />
-            <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Worker Owned</Link>
+            <img src="/logo-marketplace.png" alt="Worker Owned Marketplace" width="36" height="36" className="shrink-0" />
+            <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Worker Owned Marketplace</Link>
           </div>
 
           <p className="text-center text-sm text-gray-500 mb-5">Shop worker-owned online</p>

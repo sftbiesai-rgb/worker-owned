@@ -24,7 +24,7 @@ function MarketplaceIndexPage() {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    document.title = 'Marketplace — Shop Worker-Owned Online | Worker Owned'
+    document.title = 'Marketplace — Shop Worker-Owned Online | Worker Owned Marketplace'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
       'Browse worker-owned online stores by category or search 3,500+ products from cooperatives and employee-owned companies.')
     fetch('/data/products.json')
@@ -53,8 +53,8 @@ function MarketplaceIndexPage() {
 
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-6 mb-3">
           <div className="flex items-center justify-center gap-3 mb-1">
-            <img src="/logo-coffee.png" alt="Worker Owned" width="36" height="36" className="shrink-0" />
-            <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Worker Owned</Link>
+            <img src="/logo-marketplace.png" alt="Worker Owned Marketplace" width="36" height="36" className="shrink-0" />
+            <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Worker Owned Marketplace</Link>
           </div>
           <p className="text-center text-sm text-gray-500 mb-4">Shop worker-owned businesses online</p>
 
