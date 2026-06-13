@@ -35,12 +35,18 @@ function MarketplaceIndexPage() {
 
   const results = useMemo(() => {
     if (!query.trim()) return []
-    const q = query.toLowerCase()
+    const q = query.toLowerCase().trim()
+    // Also try stemmed form: strip trailing 'ies'→'y', 'es', 's' to handle plurals
+    const stems = [q]
+    if (q.endsWith('ies')) stems.push(q.slice(0, -3) + 'y')
+    else if (q.endsWith('es')) stems.push(q.slice(0, -2))
+    else if (q.endsWith('s')) stems.push(q.slice(0, -1))
+    const matches = (str) => str && stems.some(s => str.toLowerCase().includes(s))
     return products
       .filter(p =>
-        p.title?.toLowerCase().includes(q) ||
-        p.store_name?.toLowerCase().includes(q) ||
-        p.tags?.some(t => t.toLowerCase().includes(q))
+        matches(p.title) ||
+        matches(p.store_name) ||
+        p.tags?.some(t => matches(t))
       )
       .slice(0, 40)
   }, [query, products])
