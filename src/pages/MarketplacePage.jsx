@@ -139,8 +139,8 @@ function MarketplacePage() {
         </div>
 
         <div className="mt-3 text-center">
-          <Link to="/" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
-            &larr; Back to search
+          <Link to="/marketplace" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+            &larr; All categories
           </Link>
         </div>
       </main>

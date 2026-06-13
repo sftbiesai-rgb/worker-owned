@@ -1,0 +1,141 @@
+import { useState, useEffect, useMemo } from 'react'
+import { Link } from 'react-router-dom'
+import { Search } from 'lucide-react'
+
+const MARKETPLACE_CATEGORIES = [
+  { slug: 'coffee-tea',       label: 'Coffee & Tea' },
+  { slug: 'media-publishing', label: 'Media & Publishing' },
+  { slug: 'food-pantry',      label: 'Food & Pantry' },
+  { slug: 'apparel',          label: 'Apparel' },
+  { slug: 'art-prints',       label: 'Art & Prints' },
+  { slug: 'music',            label: 'Music' },
+  { slug: 'home-goods',       label: 'Home Goods' },
+  { slug: 'personal-care',    label: 'Personal Care' },
+  { slug: 'games',            label: 'Games' },
+  { slug: 'beer-brewing',     label: 'Beer & Brewing' },
+]
+
+function MarketplaceIndexPage() {
+  const [query, setQuery] = useState('')
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    document.title = 'Marketplace — Shop Worker-Owned Online | Worker Owned'
+    document.querySelector('meta[name="description"]')?.setAttribute('content',
+      'Browse worker-owned online stores by category or search 3,500+ products from cooperatives and employee-owned companies.')
+    fetch('/data/products.json')
+      .then(r => r.json())
+      .then(setProducts)
+      .catch(() => {})
+  }, [])
+
+  const results = useMemo(() => {
+    if (!query.trim()) return []
+    const q = query.toLowerCase()
+    return products
+      .filter(p =>
+        p.title?.toLowerCase().includes(q) ||
+        p.store_name?.toLowerCase().includes(q) ||
+        p.tags?.some(t => t.toLowerCase().includes(q))
+      )
+      .slice(0, 40)
+  }, [query, products])
+
+  const searching = query.trim().length > 0
+
+  return (
+    <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
+      <main className="flex-1 max-w-xl mx-auto w-full px-5 py-8 flex flex-col">
+
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-6 mb-3">
+          <div className="flex items-center justify-center gap-3 mb-1">
+            <img src="/logo-coffee.png" alt="Worker Owned" width="36" height="36" className="shrink-0" />
+            <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Worker Owned</Link>
+          </div>
+          <p className="text-center text-sm text-gray-500 mb-4">Shop worker-owned businesses online</p>
+
+          <div className="relative">
+            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Search products or stores…"
+              className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
+              value={query}
+              onChange={e => setQuery(e.target.value)}
+              autoFocus
+            />
+          </div>
+        </div>
+
+        {searching ? (
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
+            {results.length === 0 ? (
+              <p className="text-sm text-gray-500 text-center py-4">No results for "{query}"</p>
+            ) : (
+              <>
+                <p className="text-xs text-gray-400 mb-3">{results.length} result{results.length !== 1 ? 's' : ''}{results.length === 40 ? '+' : ''}</p>
+                <div className="grid grid-cols-2 gap-3">
+                  {results.map(p => (
+                    <a
+                      key={p.id}
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#f5f5f7] rounded-xl overflow-hidden hover:ring-1 hover:ring-[#004cb9] transition-all"
+                    >
+                      {p.image && (
+                        <div className="aspect-square w-full overflow-hidden bg-gray-100">
+                          <img src={p.image} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+                        </div>
+                      )}
+                      <div className="px-3 py-2">
+                        <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{p.title}</p>
+                        <p className="text-[10px] text-gray-400 mt-0.5 truncate">{p.store_name}</p>
+                        {p.price && <p className="text-xs font-semibold text-[#004cb9] mt-0.5">${p.price}</p>}
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        ) : (
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
+            <p className="text-center text-sm text-gray-500 mb-3">Browse by category</p>
+            <div className="grid grid-cols-2 gap-3">
+              {MARKETPLACE_CATEGORIES.map(cat => (
+                <Link
+                  key={cat.slug}
+                  to={`/marketplace/${cat.slug}`}
+                  className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors"
+                >
+                  {cat.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="mt-3 text-center">
+          <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+            Submit a worker-owned business &rarr;
+          </Link>
+        </div>
+      </main>
+
+      <footer className="pb-6 pt-2 text-center">
+        <p className="text-xs text-gray-400 mb-1">
+          <a href="https://yourfairshare.info" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-[#004cb9] transition-colors">
+            <img src="/logo-yourfairshare.png" alt="" className="h-3 w-3 inline" />
+            Your Fair Share
+          </a>
+        </p>
+        <p className="text-xs text-gray-400">
+          Sources: <a href="https://www.usworker.coop/directory/" target="_blank" rel="noopener noreferrer" className="hover:text-[#004cb9] transition-colors">USFWC</a>, <a href="https://institute.coop" target="_blank" rel="noopener noreferrer" className="hover:text-[#004cb9] transition-colors">DAWI</a>, <a href="https://nycworker.coop" target="_blank" rel="noopener noreferrer" className="hover:text-[#004cb9] transition-colors">NYC NOWC</a>, regional co-op networks
+        </p>
+      </footer>
+    </div>
+  )
+}
+
+export default MarketplaceIndexPage

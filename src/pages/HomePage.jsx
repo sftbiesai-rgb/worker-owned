@@ -3,19 +3,6 @@ import { Link } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import shopsData from '../data/shops.json'
 
-const MARKETPLACE_CATEGORIES = [
-  { slug: 'coffee-tea',       label: 'Coffee & Tea' },
-  { slug: 'media-publishing', label: 'Media & Publishing' },
-  { slug: 'food-pantry',      label: 'Food & Pantry' },
-  { slug: 'apparel',          label: 'Apparel' },
-  { slug: 'art-prints',       label: 'Art & Prints' },
-  { slug: 'music',            label: 'Music' },
-  { slug: 'home-goods',       label: 'Home Goods' },
-  { slug: 'personal-care',    label: 'Personal Care' },
-  { slug: 'games',            label: 'Games' },
-  { slug: 'beer-brewing',     label: 'Beer & Brewing' },
-]
-
 function HomePage() {
   useEffect(() => {
     document.title = 'Worker Owned — Find Worker-Owned Coffee Shops & Restaurants Near You'
@@ -125,22 +112,10 @@ function HomePage() {
           )}
         </div>
 
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mt-3">
-          <p className="text-center text-sm text-gray-500 mb-3">Browse worker-owned businesses online</p>
-          <div className="grid grid-cols-2 gap-3">
-            {MARKETPLACE_CATEGORIES.map(cat => (
-              <Link
-                key={cat.slug}
-                to={`/marketplace/${cat.slug}`}
-                className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors"
-              >
-                {cat.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-3 text-center">
+        <div className="mt-3 flex flex-col gap-2 text-center">
+          <Link to="/marketplace" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+            Shop worker-owned businesses online &rarr;
+          </Link>
           <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
             Submit a worker-owned business &rarr;
           </Link>
