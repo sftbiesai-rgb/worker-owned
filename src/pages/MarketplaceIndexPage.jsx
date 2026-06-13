@@ -122,7 +122,6 @@ function MarketplaceIndexPage() {
           </div>
         ) : (
           <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
-            <p className="text-sm text-gray-600 leading-relaxed mb-4 text-center">You have so many options for buying stuff online. Why not buy from places workers own? It's easier than trying to figure out which corporations are the "good" ones.</p>
             <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Browse by category</p>
             <div className="grid grid-cols-2 gap-3">
               {MARKETPLACE_CATEGORIES.map(cat => (
@@ -135,6 +134,7 @@ function MarketplaceIndexPage() {
                 </Link>
               ))}
             </div>
+            <p className="text-sm text-gray-600 leading-relaxed mt-4 text-center">You have so many options for buying stuff online. Why not buy from places workers own? It's easier than trying to figure out which corporations are the "good" ones.</p>
           </div>
         )}
 
