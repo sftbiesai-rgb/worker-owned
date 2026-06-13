@@ -55,7 +55,7 @@ function SubmitPage() {
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-8">
 
           <div className="flex items-center justify-center gap-3 mb-2">
-            <img src="/logo.png" alt="" width="36" height="36" className="shrink-0" />
+            <img src="/logo-marketplace.png" alt="" width="48" height="48" className="shrink-0" />
             <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Worker Owned</Link>
           </div>
 
