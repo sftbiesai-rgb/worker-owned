@@ -10,7 +10,7 @@ import StoreDetailPage from './pages/StoreDetailPage.jsx'
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<Navigate to="/marketplace" replace />} />
       <Route path="/coffee" element={<BrowsePage category="coffee" />} />
       <Route path="/restaurants" element={<BrowsePage category="restaurant" />} />
       <Route path="/bars" element={<BarsPage />} />

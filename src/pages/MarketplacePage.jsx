@@ -61,7 +61,7 @@ function MarketplacePage() {
     document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', section.description)
   }, [section])
 
-  if (!section) return <Navigate to="/" replace />
+  if (!section) return <Navigate to="/marketplace" replace />
 
   const entries = dedupeByUrl(
     marketplaceData.filter(e => e.site_section === section.sectionName)
