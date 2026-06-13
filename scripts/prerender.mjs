@@ -26,6 +26,7 @@ const routes = [
     title: 'Market Place | Shop worker owned online stores for apparel, home goods, food and more',
     description: 'Browse worker owned online stores by category or search 3,500+ products from cooperatives and employee-owned companies.',
     canonical: 'https://www.workerowned.info/marketplace',
+    ogImage: 'https://www.workerowned.info/og-marketplace.png',
   },
   {
     url: '/coffee',
@@ -145,7 +146,7 @@ for (const route of routes) {
   const appHtml = render(route.url)
   const outDir = resolve(root, `dist${route.url}`)
 
-  const html = template
+  let html = template
     .replace('<!--app-html-->', appHtml)
     .replace(/<title>[^<]*<\/title>/, `<title>${route.title}</title>`)
     .replace(/(<meta name="description" content=")[^"]*"/, `$1${route.description}"`)
@@ -155,6 +156,13 @@ for (const route of routes) {
     .replace(/(<meta property="og:description" content=")[^"]*"/, `$1${route.description}"`)
     .replace(/(<meta name="twitter:title" content=")[^"]*"/, `$1${route.title}"`)
     .replace(/(<meta name="twitter:description" content=")[^"]*"/, `$1${route.description}"`)
+
+  if (route.ogImage) {
+    html = html
+      .replace(/(<meta property="og:image" content=")[^"]*"/, `$1${route.ogImage}"`)
+      .replace(/(<meta name="twitter:image" content=")[^"]*"/, `$1${route.ogImage}"`)
+      .replace(/(<meta name="twitter:card" content=")[^"]*"/, `$1summary_large_image"`)
+  }
 
   mkdirSync(outDir, { recursive: true })
   writeFileSync(resolve(outDir, 'index.html'), html)
