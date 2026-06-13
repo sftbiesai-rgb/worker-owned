@@ -14,6 +14,7 @@ function SubmitPage() {
   const [formWebsite, setFormWebsite] = useState('')
   const [formEmail, setFormEmail] = useState('')
   const [formDesc, setFormDesc] = useState('')
+  const [formMarketplace, setFormMarketplace] = useState(false)
   const [captchaA] = useState(Math.floor(Math.random() * 10) + 3)
   const [captchaB] = useState(Math.floor(Math.random() * 10) + 1)
   const [captchaAnswer, setCaptchaAnswer] = useState('')
@@ -34,7 +35,7 @@ function SubmitPage() {
       const res = await fetch('https://formspree.io/f/mjglzgwl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: formName, category: formCategory, city: formCity, state: formState, website: formWebsite, email: formEmail, description: formDesc }),
+        body: JSON.stringify({ name: formName, category: formCategory, city: formCity, state: formState, website: formWebsite, email: formEmail, description: formDesc, marketplace_request: formMarketplace }),
       })
       if (!res.ok) {
         setFormError('Something went wrong. Please try again.')
@@ -125,6 +126,17 @@ function SubmitPage() {
                   className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors resize-none"
                   placeholder="Anything else we should know..." />
               </div>
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={formMarketplace}
+                  onChange={e => setFormMarketplace(e.target.checked)}
+                  className="mt-0.5 h-4 w-4 rounded border-gray-300 accent-[#004cb9] shrink-0"
+                />
+                <span className="text-sm text-gray-700">
+                  Request inclusion in the <strong>Market Place</strong> — we'll try to add this business to our online shopping directory
+                </span>
+              </label>
               <div className="bg-[#f5f5f7] rounded-xl px-4 py-3">
                 <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Not a robot: what is {captchaA} + {captchaB}?</label>
                 <input type="text" value={captchaAnswer} onChange={e => setCaptchaAnswer(e.target.value)}
