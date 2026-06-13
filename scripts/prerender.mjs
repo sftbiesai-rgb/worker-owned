@@ -9,6 +9,12 @@ const root = resolve(__dirname, '..')
 
 const routes = [
   {
+    url: '/marketplace',
+    title: 'Marketplace — Shop Worker-Owned Online | Worker Owned',
+    description: 'Browse worker-owned online stores by category or search 3,500+ products from cooperatives and employee-owned companies.',
+    canonical: 'https://www.workerowned.info/marketplace',
+  },
+  {
     url: '/coffee',
     title: 'Worker-Owned Coffee Shops in the US | Worker Owned',
     description: 'Browse all worker-owned coffee shops, cafes, and bakeries across the United States. Find cooperatively owned coffee near you.',

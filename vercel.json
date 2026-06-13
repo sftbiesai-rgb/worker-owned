@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "source": "/marketplace", "destination": "/marketplace.html" },
-    { "source": "/((?!sitemap\\.txt|sitemap\\.xml|robots\\.txt|marketplace\\.html|marketplace\\.js|data\\/)..*)", "destination": "/index.html" }
+    { "source": "/((?!sitemap\\.txt|sitemap\\.xml|robots\\.txt|data\\/)..*)", "destination": "/index.html" }
   ]
 }
