@@ -138,7 +138,10 @@ function MarketplaceIndexPage() {
           </div>
         )}
 
-        <div className="mt-3 text-center">
+        <div className="mt-3 text-center flex flex-col gap-2">
+          <Link to="/coffee" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+            Quick Tool: find a worker owned coffee shop or restaurant near you &rarr;
+          </Link>
           <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
             Submit a worker-owned business &rarr;
           </Link>
