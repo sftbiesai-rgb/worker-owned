@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * scrape-products.mjs
- * Pulls product data from worker-owned stores (Shopify + WooCommerce)
+ * Pulls product data from worker-owned stores (Shopify, WooCommerce, Squarespace)
  * and writes to data/products.json
  *
  * Usage: node scripts/scrape-products.mjs
@@ -192,6 +192,60 @@ async function tryMerchantFeed(entry) {
   return null;
 }
 
+// Squarespace — discover product pages via HTML link scraping, then ?format=json
+async function trySquarespace(entry) {
+  const base = getBaseUrl(entry.url);
+  if (!base) return null;
+  try {
+    // Detect Squarespace by fetching homepage
+    const homeRes = await fetchWithTimeout(base);
+    if (!homeRes.ok) return null;
+    const html = await homeRes.text();
+    if (!html.includes('squarespace')) return null;
+
+    // Extract internal page slugs from links
+    const slugs = [...new Set(
+      [...html.matchAll(/href=["']\/([^"'#?]+)/g)]
+        .map(m => m[1].split('/')[0])
+        .filter(Boolean)
+    )];
+
+    const allProducts = [];
+    for (const slug of slugs) {
+      try {
+        const r = await fetchWithTimeout(`${base}/${slug}?format=json`);
+        if (!r.ok) continue;
+        const ct = r.headers.get('content-type') ?? '';
+        if (!ct.includes('json')) continue;
+        const d = await r.json();
+        if (d.collection?.type !== 13 || !Array.isArray(d.items)) continue;
+
+        for (const item of d.items) {
+          const price = item.variants?.[0]?.priceMoney?.value
+            ?? (item.variants?.[0]?.price ? (item.variants[0].price / 100).toFixed(2) : null);
+          if (!price || parseFloat(price) <= 0) continue;
+          if (!item.assetUrl) continue;
+
+          allProducts.push({
+            id: `${entry.id}-sq-${item.id}`,
+            title: item.title,
+            price: parseFloat(price).toFixed(2),
+            image: item.assetUrl,
+            url: item.fullUrl?.startsWith('http') ? item.fullUrl : `${base}${item.fullUrl}`,
+            store_name: entry.name,
+            store_url: entry.url,
+            ownership_type: entry.ownership_type,
+            site_section: entry.site_section,
+            tags: [],
+          });
+        }
+      } catch { continue; }
+    }
+
+    return allProducts.length ? allProducts.slice(0, MAX_PER_STORE) : null;
+  } catch { return null; }
+}
+
 async function tryWooCommerce(entry) {
   const base = getBaseUrl(entry.url);
   if (!base) return null;
@@ -254,6 +308,7 @@ async function main() {
 
     let products = await tryShopify(entry);
     if (!products) products = await tryWooCommerce(entry);
+    if (!products) products = await trySquarespace(entry);
     if (!products) products = await trySouthernExposure(entry);
     if (!products) products = await tryMerchantFeed(entry);
 
