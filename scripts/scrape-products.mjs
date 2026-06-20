@@ -246,6 +246,95 @@ async function trySquarespace(entry) {
   } catch { return null; }
 }
 
+// BigCommerce — product URLs from XML sitemap, then JSON-LD from each page
+async function tryBigCommerce(entry) {
+  const base = getBaseUrl(entry.url);
+  if (!base) return null;
+  try {
+    // Check for BigCommerce XML sitemap
+    const sitemapRes = await fetchWithTimeout(`${base}/xmlsitemap.php?type=products&page=1`);
+    if (!sitemapRes.ok) return null;
+    const ct = sitemapRes.headers.get('content-type') ?? '';
+    if (!ct.includes('xml') && !ct.includes('text')) return null;
+    const xml = await sitemapRes.text();
+    if (!xml.includes('<loc>')) return null;
+
+    // Extract product URLs from sitemap
+    const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)]
+      .map(m => m[1])
+      .filter(u => !u.includes('/xmlsitemap'))
+      .slice(0, MAX_PER_STORE);
+
+    if (!urls.length) return null;
+
+    const products = [];
+    for (const productUrl of urls) {
+      try {
+        const pageRes = await fetchWithTimeout(productUrl);
+        if (!pageRes.ok) continue;
+        const html = await pageRes.text();
+
+        // Try JSON-LD Product schema first
+        let found = false;
+        const ldMatches = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)];
+        for (const m of ldMatches) {
+          try {
+            const ld = JSON.parse(m[1]);
+            if (ld['@type'] !== 'Product') continue;
+            const offer = Array.isArray(ld.offers) ? ld.offers[0] : ld.offers;
+            const price = parseFloat(offer?.price);
+            if (!price || price <= 0) continue;
+            if (offer?.availability?.includes('OutOfStock')) continue;
+            const image = Array.isArray(ld.image) ? ld.image[0] : ld.image;
+            if (!image) continue;
+
+            products.push({
+              id: `${entry.id}-bc-${products.length}`,
+              title: ld.name,
+              price: price.toFixed(2),
+              image,
+              url: productUrl,
+              store_name: entry.name,
+              store_url: entry.url,
+              ownership_type: entry.ownership_type,
+              site_section: entry.site_section,
+              tags: [],
+            });
+            found = true;
+            break;
+          } catch { continue; }
+        }
+
+        // Fall back to OG meta tags if no JSON-LD
+        if (!found) {
+          const ogTitle = html.match(/property="og:title" content="([^"]+)"/)?.[1];
+          const ogPrice = html.match(/property="product:price:amount" content="([^"]+)"/)?.[1];
+          const ogImage = html.match(/property="og:image" content="([^"]+)"/)?.[1];
+          const price = parseFloat(ogPrice);
+          if (ogTitle && ogImage && price > 0) {
+            products.push({
+              id: `${entry.id}-bc-${products.length}`,
+              title: ogTitle.replace(/&#039;/g, "'").replace(/&amp;/g, '&'),
+              price: price.toFixed(2),
+              image: ogImage,
+              url: productUrl,
+              store_name: entry.name,
+              store_url: entry.url,
+              ownership_type: entry.ownership_type,
+              site_section: entry.site_section,
+              tags: [],
+            });
+          }
+        }
+      } catch { continue; }
+      // Small delay between page fetches
+      await new Promise(r => setTimeout(r, 200));
+    }
+
+    return products.length ? products : null;
+  } catch { return null; }
+}
+
 async function tryWooCommerce(entry) {
   const base = getBaseUrl(entry.url);
   if (!base) return null;
@@ -308,6 +397,7 @@ async function main() {
 
     let products = await tryShopify(entry);
     if (!products) products = await tryWooCommerce(entry);
+    if (!products) products = await tryBigCommerce(entry);
     if (!products) products = await trySquarespace(entry);
     if (!products) products = await trySouthernExposure(entry);
     if (!products) products = await tryMerchantFeed(entry);

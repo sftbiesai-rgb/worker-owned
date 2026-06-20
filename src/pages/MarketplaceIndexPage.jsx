@@ -35,20 +35,53 @@ function MarketplaceIndexPage() {
 
   const results = useMemo(() => {
     if (!query.trim()) return []
-    const q = query.toLowerCase().trim()
-    // Also try stemmed form: strip trailing 'ies'→'y', 'es', 's' to handle plurals
-    const stems = [q]
-    if (q.endsWith('ies')) stems.push(q.slice(0, -3) + 'y')
-    else if (q.endsWith('es')) stems.push(q.slice(0, -2))
-    else if (q.endsWith('s')) stems.push(q.slice(0, -1))
-    const matches = (str) => str && stems.some(s => str.toLowerCase().includes(s))
-    return products
-      .filter(p =>
-        matches(p.title) ||
-        matches(p.store_name) ||
-        p.tags?.some(t => matches(t))
-      )
+
+    // Stem a single word for plural handling
+    function stemWord(w) {
+      if (w.endsWith('ies')) return [w, w.slice(0, -3) + 'y']
+      if (w.endsWith('ses') || w.endsWith('xes') || w.endsWith('zes') || w.endsWith('shes') || w.endsWith('ches')) return [w, w.slice(0, -2)]
+      if (w.endsWith('s') && !w.endsWith('ss')) return [w, w.slice(0, -1)]
+      return [w]
+    }
+
+    // Word-boundary match: query word must appear as a whole word or prefix in the text
+    function wordMatch(text, stems) {
+      if (!text) return false
+      const lower = text.toLowerCase().replace(/['']/g, '')
+      return stems.some(s => {
+        const idx = lower.indexOf(s)
+        if (idx === -1) return false
+        // Must be at start of a word (preceded by start-of-string or non-letter)
+        if (idx > 0 && /[a-z]/.test(lower[idx - 1])) return false
+        return true
+      })
+    }
+
+    // Split query into words, stem each one; normalize apostrophes
+    const words = query.toLowerCase().trim().replace(/['']/g, '').split(/\s+/).filter(Boolean)
+    const wordStems = words.map(w => stemWord(w))
+
+    // Score and filter: all query words must match somewhere in the product
+    const scored = []
+    for (const p of products) {
+      let allMatch = true
+      let score = 0
+      for (const stems of wordStems) {
+        const inTitle = wordMatch(p.title, stems)
+        const inStore = wordMatch(p.store_name, stems)
+        const inTags = p.tags?.some(t => wordMatch(t, stems))
+        if (!inTitle && !inStore && !inTags) { allMatch = false; break }
+        if (inTitle) score += 3
+        if (inTags) score += 1
+        if (inStore) score += 1
+      }
+      if (allMatch) scored.push({ p, score })
+    }
+
+    return scored
+      .sort((a, b) => b.score - a.score)
       .slice(0, 40)
+      .map(s => s.p)
   }, [query, products])
 
   const searching = query.trim().length > 0
