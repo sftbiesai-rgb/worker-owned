@@ -14,7 +14,7 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const MARKETPLACE_JSON = join(__dirname, '..', 'src', 'data', 'marketplace.json');
 const OUT_FILE = join(__dirname, '..', 'public', 'data', 'products.json');
-const MAX_PER_STORE = 100;
+const MAX_PER_STORE = Infinity;
 const FETCH_TIMEOUT_MS = 12000;
 const DELAY_BETWEEN_STORES_MS = 400;
 
