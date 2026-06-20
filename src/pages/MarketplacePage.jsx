@@ -96,7 +96,7 @@ function MarketplacePage() {
             ))}
           </div>
 
-          <h2 className="text-base font-bold text-gray-800 mb-1">{section.label}</h2>
+          <h1 className="text-base font-bold text-gray-800 mb-1">{section.label}</h1>
           <p className="text-xs text-gray-400 mb-4">{entries.length} worker owned option{entries.length !== 1 ? 's' : ''}</p>
 
           {section.slug === 'home-goods' && (

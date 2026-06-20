@@ -92,14 +92,16 @@ function StoreDetailPage() {
           {/* Store header */}
           <div className="mb-4">
             <div className="flex items-start justify-between gap-2 mb-1">
-              <a
-                href={entry.url}
-                target="_blank"
-                rel="noopener"
-                className="text-lg font-bold text-[#004cb9] hover:text-[#003a8c] transition-colors leading-snug"
-              >
-                {entry.name} ↗
-              </a>
+              <h1>
+                <a
+                  href={entry.url}
+                  target="_blank"
+                  rel="noopener"
+                  className="text-lg font-bold text-[#004cb9] hover:text-[#003a8c] transition-colors leading-snug"
+                >
+                  {entry.name} ↗
+                </a>
+              </h1>
               {ownershipBadge(entry.ownership_type)}
             </div>
             {entry.category && (

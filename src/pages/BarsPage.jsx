@@ -42,9 +42,9 @@ function BarsPage() {
             </Link>
           </div>
 
-          <h2 className="text-center text-base font-semibold text-gray-700 mb-1">
+          <h1 className="text-center text-base font-semibold text-gray-700 mb-1">
             Worker Owned Bars & Breweries
-          </h2>
+          </h1>
           <p className="text-center text-sm text-gray-500 mb-4">
             Cooperatively owned bars, brewpubs, and taprooms across the United States
           </p>

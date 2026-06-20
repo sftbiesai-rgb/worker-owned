@@ -50,9 +50,9 @@ function BrowsePage({ category }) {
             </Link>
           </div>
 
-          <h2 className="text-center text-base font-semibold text-gray-700 mb-1">
+          <h1 className="text-center text-base font-semibold text-gray-700 mb-1">
             {category === 'coffee' ? 'Worker Owned Coffee Shops' : 'Worker Owned Restaurants'}
-          </h2>
+          </h1>
           <p className="text-center text-sm text-gray-500 mb-4">
             {category === 'coffee'
               ? 'Cooperatively owned cafes, coffee shops, and bakeries across the United States'

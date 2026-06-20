@@ -27,24 +27,35 @@ const routes = [
     description: 'Browse worker owned online stores by category or search 3,500+ products from cooperatives and employee-owned companies.',
     canonical: 'https://www.workerowned.info',
     ogImage: 'https://www.workerowned.info/og-marketplace.png',
+    keywords: 'worker owned marketplace, shop worker owned, buy from cooperatives, worker cooperative online store, alternative to amazon, employee owned products',
   },
   {
     url: '/coffee',
     title: 'Worker Owned Coffee Shops in the US | Worker Owned Marketplace',
     description: 'Browse all worker owned coffee shops, cafes, and bakeries across the United States. Find cooperatively owned coffee near you.',
     canonical: 'https://www.workerowned.info/coffee',
+    keywords: 'worker owned coffee shop, cooperative cafe, worker cooperative coffee, employee owned coffee shop, cooperative bakery near me',
   },
   {
     url: '/restaurants',
     title: 'Worker Owned Restaurants in the US | Worker Owned Marketplace',
     description: 'Browse all worker owned restaurants, brewpubs, and diners across the United States. Find cooperatively owned food near you.',
     canonical: 'https://www.workerowned.info/restaurants',
+    keywords: 'worker owned restaurant, cooperative restaurant, worker cooperative diner, employee owned restaurant near me',
   },
   {
     url: '/bars',
     title: 'Worker Owned Bars & Breweries in the US | Worker Owned Marketplace',
     description: 'Browse all worker owned bars, brewpubs, and breweries across the United States. Find cooperatively owned bars near you.',
     canonical: 'https://www.workerowned.info/bars',
+    keywords: 'worker owned bar, cooperative brewery, worker owned brewpub, cooperative taproom, employee owned brewery',
+  },
+  {
+    url: '/submit',
+    title: 'Submit a Worker Owned Business | Worker Owned',
+    description: 'Submit a worker owned business to the Worker Owned directory. Add your cooperative coffee shop, restaurant, or online store.',
+    canonical: 'https://www.workerowned.info/submit',
+    keywords: 'submit worker owned business, add cooperative to directory, list worker cooperative',
   },
   {
     url: '/marketplace/coffee-tea',
@@ -116,13 +127,15 @@ const storeRoutes = allStores.map(s => {
   const url = `/marketplace/store/${slug}`
   const title = `${s.name} — ${s.ownership_type || 'Worker Owned'} | Worker Owned`
   const description = s.notes
-    ? s.notes.substring(0, 155)
+    ? (s.notes.length <= 155 ? s.notes : s.notes.substring(0, 155).replace(/\s+\S*$/, '...'))
     : `Shop ${s.name}, a ${s.ownership_type || 'worker owned business'} selling ${s.category || s.site_section}.`
+  const keywords = `${s.name}, worker owned ${(s.site_section || s.category || '').toLowerCase()}, ${s.ownership_type || 'worker cooperative'}, buy from cooperatives`
   return {
     url,
     title,
     description,
     canonical: `https://www.workerowned.info${url}`,
+    keywords,
   }
 })
 
@@ -156,6 +169,10 @@ for (const route of routes) {
     .replace(/(<meta property="og:description" content=")[^"]*"/, `$1${route.description}"`)
     .replace(/(<meta name="twitter:title" content=")[^"]*"/, `$1${route.title}"`)
     .replace(/(<meta name="twitter:description" content=")[^"]*"/, `$1${route.description}"`)
+
+  if (route.keywords) {
+    html = html.replace(/(<meta name="keywords" content=")[^"]*"/, `$1${route.keywords}"`)
+  }
 
   if (route.ogImage) {
     html = html

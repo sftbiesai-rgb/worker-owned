@@ -5,6 +5,8 @@ import { Send } from 'lucide-react'
 function SubmitPage() {
   useEffect(() => {
     document.title = 'Submit a Worker Owned Business | Worker Owned'
+    document.querySelector('meta[name="description"]')?.setAttribute('content',
+      'Submit a worker owned business to the Worker Owned directory. Add your cooperative coffee shop, restaurant, or online store.')
   }, [])
 
   const [formName, setFormName] = useState('')
@@ -56,7 +58,7 @@ function SubmitPage() {
 
           <div className="flex items-center justify-center gap-3 mb-2">
             <img src="/logo-marketplace.png" alt="" width="48" height="48" className="shrink-0" />
-            <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Worker Owned</Link>
+            <h1><Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Submit a Worker Owned Business</Link></h1>
           </div>
 
           {submitted ? (
