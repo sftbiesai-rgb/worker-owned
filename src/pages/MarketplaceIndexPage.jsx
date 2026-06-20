@@ -84,6 +84,8 @@ function MarketplaceIndexPage() {
       .map(s => s.p)
   }, [query, products])
 
+  const storeCount = useMemo(() => new Set(products.map(p => p.store_url)).size, [products])
+
   const searching = query.trim().length > 0
 
   return (
@@ -173,7 +175,7 @@ function MarketplaceIndexPage() {
                 </Link>
               ))}
             </div>
-
+            <p className="text-center text-xs text-gray-400 mt-3">{products.length.toLocaleString()} products from {storeCount} worker owned stores</p>
           </div>
         )}
 
