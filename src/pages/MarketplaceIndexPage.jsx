@@ -1,5 +1,5 @@
-import { useState, useEffect, useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect, useMemo, useCallback } from 'react'
+import { Link, useSearchParams } from 'react-router-dom'
 import { Search, ArrowUpDown } from 'lucide-react'
 
 function slugify(name) {
@@ -20,8 +20,22 @@ const MARKETPLACE_CATEGORIES = [
 ]
 
 function MarketplaceIndexPage() {
-  const [query, setQuery] = useState('')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const query = searchParams.get('q') || ''
+  const page = parseInt(searchParams.get('page') || '1', 10)
+  const sort = searchParams.get('sort') || 'relevance'
   const [products, setProducts] = useState([])
+
+  const updateParams = useCallback((updates) => {
+    setSearchParams(prev => {
+      const next = new URLSearchParams(prev)
+      for (const [k, v] of Object.entries(updates)) {
+        if (!v || v === '1' && k === 'page' || v === 'relevance' && k === 'sort') next.delete(k)
+        else next.set(k, v)
+      }
+      return next
+    }, { replace: true })
+  }, [setSearchParams])
 
   useEffect(() => {
     document.title = 'Market Place | Shop worker owned online stores for apparel, home goods, food and more'
@@ -83,12 +97,7 @@ function MarketplaceIndexPage() {
       .map(s => s.p)
   }, [query, products])
 
-  const [page, setPage] = useState(1)
-  const [sort, setSort] = useState('relevance')
   const PER_PAGE = 40
-
-  // Reset to page 1 when query or sort changes
-  useEffect(() => { setPage(1) }, [query, sort])
 
   const sortedResults = useMemo(() => {
     if (sort === 'relevance') return results
@@ -124,7 +133,7 @@ function MarketplaceIndexPage() {
               placeholder="Search products or stores…"
               className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
               value={query}
-              onChange={e => setQuery(e.target.value)}
+              onChange={e => updateParams({ q: e.target.value, page: '1' })}
               autoFocus
             />
           </div>
@@ -149,7 +158,7 @@ function MarketplaceIndexPage() {
                     <ArrowUpDown size={12} className="text-gray-400" />
                     <select
                       value={sort}
-                      onChange={e => setSort(e.target.value)}
+                      onChange={e => updateParams({ sort: e.target.value, page: '1' })}
                       className="text-xs text-gray-500 bg-transparent border-none outline-none cursor-pointer"
                     >
                       <option value="relevance">Relevance</option>
@@ -194,7 +203,7 @@ function MarketplaceIndexPage() {
                 {totalPages > 1 && (
                   <div className="flex items-center justify-center gap-2 mt-4">
                     <button
-                      onClick={() => { setPage(p => p - 1); window.scrollTo(0, 0) }}
+                      onClick={() => { updateParams({ page: String(page - 1) }); window.scrollTo(0, 0) }}
                       disabled={page === 1}
                       className="min-w-[32px] h-8 rounded-lg text-xs font-medium transition-colors bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 disabled:opacity-30 disabled:hover:text-gray-600 disabled:hover:bg-[#f5f5f7]"
                     >
@@ -202,7 +211,7 @@ function MarketplaceIndexPage() {
                     </button>
                     <span className="text-xs text-gray-400 px-2">{page} / {totalPages}</span>
                     <button
-                      onClick={() => { setPage(p => p + 1); window.scrollTo(0, 0) }}
+                      onClick={() => { updateParams({ page: String(page + 1) }); window.scrollTo(0, 0) }}
                       disabled={page === totalPages}
                       className="min-w-[32px] h-8 rounded-lg text-xs font-medium transition-colors bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 disabled:opacity-30 disabled:hover:text-gray-600 disabled:hover:bg-[#f5f5f7]"
                     >
