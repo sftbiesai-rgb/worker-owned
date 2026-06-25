@@ -40,7 +40,7 @@ function MarketplaceIndexPage() {
   useEffect(() => {
     document.title = 'Market Place | Shop worker owned online stores for apparel, home goods, food and more'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
-      'Browse worker owned online stores by category or search 18,000+ products from cooperatives and employee-owned companies.')
+      'Browse worker owned online stores by category or search 22,000+ products from cooperatives and employee-owned companies.')
     fetch('/data/products.json')
       .then(r => r.json())
       .then(setProducts)
