@@ -193,15 +193,21 @@ function MarketplaceIndexPage() {
                 </div>
                 {totalPages > 1 && (
                   <div className="flex items-center justify-center gap-2 mt-4">
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(n => (
-                      <button
-                        key={n}
-                        onClick={() => { setPage(n); window.scrollTo(0, 0) }}
-                        className={`min-w-[32px] h-8 rounded-lg text-xs font-medium transition-colors ${n === page ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50'}`}
-                      >
-                        {n}
-                      </button>
-                    ))}
+                    <button
+                      onClick={() => { setPage(p => p - 1); window.scrollTo(0, 0) }}
+                      disabled={page === 1}
+                      className="min-w-[32px] h-8 rounded-lg text-xs font-medium transition-colors bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 disabled:opacity-30 disabled:hover:text-gray-600 disabled:hover:bg-[#f5f5f7]"
+                    >
+                      ‹
+                    </button>
+                    <span className="text-xs text-gray-400 px-2">{page} / {totalPages}</span>
+                    <button
+                      onClick={() => { setPage(p => p + 1); window.scrollTo(0, 0) }}
+                      disabled={page === totalPages}
+                      className="min-w-[32px] h-8 rounded-lg text-xs font-medium transition-colors bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 disabled:opacity-30 disabled:hover:text-gray-600 disabled:hover:bg-[#f5f5f7]"
+                    >
+                      ›
+                    </button>
                   </div>
                 )}
               </>
