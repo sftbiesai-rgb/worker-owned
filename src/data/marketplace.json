@@ -649,17 +649,6 @@
     "site_section": "Coffee & Tea"
   },
   {
-    "id": 64,
-    "name": "Just Coffee \u2014 Store",
-    "url": "https://justcoffee.coop",
-    "category": "coffee roaster",
-    "ownership_type": "worker co-op",
-    "ships": "US (free lower 48)",
-    "status": "verified active",
-    "notes": "Founding worker co-op coffee roaster since 2001. Bold colorful packaging. Wholesale and retail. Subscription options.",
-    "site_section": "Coffee & Tea"
-  },
-  {
     "id": 65,
     "name": "Microcosm Publishing \u2014 Books",
     "url": "https://microcosmpublishing.com",
@@ -1527,17 +1516,6 @@
     "ships": "worldwide",
     "status": "verified active",
     "notes": "Worker co-op coffee roaster based in Ithaca, NY. Founded 2000, converted to worker co-op. Certified EO member. Roasts single-origin and blended coffees. Also sells brewing equipment and accessories.",
-    "site_section": "Food & Pantry"
-  },
-  {
-    "id": 147,
-    "name": "Just Coffee Cooperative",
-    "url": "https://www.justcoffee.coop",
-    "category": "fair trade organic coffee",
-    "ownership_type": "worker co-op",
-    "ships": "US, Canada",
-    "status": "verified active",
-    "notes": "Worker co-op based in Madison, WI. Sells direct-trade, organic, fair-trade coffee roasted to order. Partners with small farmer co-ops in Latin America. Certified EO member.",
     "site_section": "Food & Pantry"
   },
   {

@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Search } from 'lucide-react'
+import { Search, ArrowUpDown } from 'lucide-react'
 
 function slugify(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
@@ -80,9 +80,27 @@ function MarketplaceIndexPage() {
 
     return scored
       .sort((a, b) => b.score - a.score)
-      .slice(0, 40)
       .map(s => s.p)
   }, [query, products])
+
+  const [page, setPage] = useState(1)
+  const [sort, setSort] = useState('relevance')
+  const PER_PAGE = 40
+
+  // Reset to page 1 when query or sort changes
+  useEffect(() => { setPage(1) }, [query, sort])
+
+  const sortedResults = useMemo(() => {
+    if (sort === 'relevance') return results
+    const sorted = [...results]
+    if (sort === 'price-asc') sorted.sort((a, b) => (parseFloat(a.price) || 0) - (parseFloat(b.price) || 0))
+    if (sort === 'price-desc') sorted.sort((a, b) => (parseFloat(b.price) || 0) - (parseFloat(a.price) || 0))
+    if (sort === 'store') sorted.sort((a, b) => (a.store_name || '').localeCompare(b.store_name || ''))
+    return sorted
+  }, [results, sort])
+
+  const totalPages = Math.ceil(sortedResults.length / PER_PAGE)
+  const pagedResults = sortedResults.slice((page - 1) * PER_PAGE, page * PER_PAGE)
 
   const storeCount = useMemo(() => new Set(products.map(p => p.store_url)).size, [products])
 
@@ -125,9 +143,24 @@ function MarketplaceIndexPage() {
               <p className="text-sm text-gray-500 text-center py-4">No results for "{query}"</p>
             ) : (
               <>
-                <p className="text-xs text-gray-400 mb-3">{results.length} result{results.length !== 1 ? 's' : ''}{results.length === 40 ? '+' : ''}</p>
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-xs text-gray-400">{results.length} result{results.length !== 1 ? 's' : ''}</p>
+                  <div className="flex items-center gap-1.5">
+                    <ArrowUpDown size={12} className="text-gray-400" />
+                    <select
+                      value={sort}
+                      onChange={e => setSort(e.target.value)}
+                      className="text-xs text-gray-500 bg-transparent border-none outline-none cursor-pointer"
+                    >
+                      <option value="relevance">Relevance</option>
+                      <option value="price-asc">Price: Low to High</option>
+                      <option value="price-desc">Price: High to Low</option>
+                      <option value="store">Store A–Z</option>
+                    </select>
+                  </div>
+                </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-                  {results.map(p => (
+                  {pagedResults.map(p => (
                     <div key={p.id} className="bg-[#f5f5f7] rounded-xl overflow-hidden">
                       <a
                         href={p.url}
@@ -158,6 +191,19 @@ function MarketplaceIndexPage() {
                     </div>
                   ))}
                 </div>
+                {totalPages > 1 && (
+                  <div className="flex items-center justify-center gap-2 mt-4">
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(n => (
+                      <button
+                        key={n}
+                        onClick={() => { setPage(n); window.scrollTo(0, 0) }}
+                        className={`min-w-[32px] h-8 rounded-lg text-xs font-medium transition-colors ${n === page ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50'}`}
+                      >
+                        {n}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </>
             )}
           </div>
