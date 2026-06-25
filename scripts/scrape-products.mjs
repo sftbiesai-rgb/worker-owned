@@ -59,30 +59,37 @@ async function tryShopify(entry) {
   const productsUrl = shopifyProductsUrl(entry.url);
   if (!productsUrl) return null;
   try {
-    const res = await fetchWithTimeout(productsUrl);
-    if (!res.ok) return null;
-    const ct = res.headers.get('content-type') ?? '';
-    if (!ct.includes('json')) return null;
-    const data = await res.json();
-    if (!Array.isArray(data?.products)) return null;
+    const allProducts = [];
+    for (let page = 1; ; page++) {
+      const url = `${productsUrl}&page=${page}`;
+      const res = await fetchWithTimeout(url);
+      if (!res.ok) break;
+      const ct = res.headers.get('content-type') ?? '';
+      if (!ct.includes('json')) break;
+      const data = await res.json();
+      if (!Array.isArray(data?.products) || data.products.length === 0) break;
 
-    const products = data.products
-      .filter(p => p.images?.length > 0 && p.variants?.[0]?.price && parseFloat(p.variants[0].price) > 0)
-      .slice(0, MAX_PER_STORE)
-      .map(p => ({
-        id: `${entry.id}-${p.id}`,
-        title: p.title,
-        price: p.variants[0].price,
-        image: p.images[0].src,
-        url: `${getBaseUrl(entry.url)}/products/${p.handle}`,
-        store_name: entry.name,
-        store_url: entry.url,
-        ownership_type: entry.ownership_type,
-        site_section: entry.site_section,
-        tags: Array.isArray(p.tags) ? p.tags : (typeof p.tags === 'string' ? p.tags.split(',').map(t => t.trim()).filter(Boolean) : []),
-      }));
+      const mapped = data.products
+        .filter(p => p.images?.length > 0 && p.variants?.[0]?.price && parseFloat(p.variants[0].price) > 0)
+        .map(p => ({
+          id: `${entry.id}-${p.id}`,
+          title: p.title,
+          price: p.variants[0].price,
+          image: p.images[0].src,
+          url: `${getBaseUrl(entry.url)}/products/${p.handle}`,
+          store_name: entry.name,
+          store_url: entry.url,
+          ownership_type: entry.ownership_type,
+          site_section: entry.site_section,
+          tags: Array.isArray(p.tags) ? p.tags : (typeof p.tags === 'string' ? p.tags.split(',').map(t => t.trim()).filter(Boolean) : []),
+        }));
+      allProducts.push(...mapped);
 
-    return products.length ? products : null;
+      // If we got fewer than 250, that was the last page
+      if (data.products.length < 250) break;
+    }
+
+    return allProducts.length ? allProducts : null;
   } catch { return null; }
 }
 
