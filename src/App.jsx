@@ -18,6 +18,7 @@ export default function App() {
       <Route path="/submit" element={<SubmitPage />} />
       <Route path="/marketplace" element={<MarketplaceIndexPage />} />
       <Route path="/marketplace/store/:store" element={<StoreDetailPage />} />
+      <Route path="/marketplace/:category/:subcategory" element={<MarketplacePage />} />
       <Route path="/marketplace/:category" element={<MarketplacePage />} />
     </Routes>
   )

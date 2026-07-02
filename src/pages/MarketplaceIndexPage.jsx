@@ -272,9 +272,11 @@ function MarketplaceIndexPage() {
                 </Link>
               ))}
             </div>
-            {products.length > 0 && (
-              <p className="text-center text-xs text-gray-400 mt-3">{products.length.toLocaleString()} products from {storeCount} worker owned stores</p>
-            )}
+            <p className="text-center text-xs text-gray-400 mt-3">
+              {products.length > 0
+                ? `${products.length.toLocaleString()} products from ${storeCount} worker owned stores`
+                : '22,000+ products from 60+ worker owned stores'}
+            </p>
           </div>
         )}
 

@@ -7,10 +7,26 @@ https://www.workerowned.info/marketplace
 https://www.workerowned.info/marketplace/coffee-tea
 https://www.workerowned.info/marketplace/media-publishing
 https://www.workerowned.info/marketplace/food-pantry
+https://www.workerowned.info/marketplace/food-pantry/seeds
+https://www.workerowned.info/marketplace/food-pantry/cheese
+https://www.workerowned.info/marketplace/food-pantry/meat
+https://www.workerowned.info/marketplace/food-pantry/chocolate
+https://www.workerowned.info/marketplace/food-pantry/pantry
 https://www.workerowned.info/marketplace/apparel
+https://www.workerowned.info/marketplace/apparel/shoes
+https://www.workerowned.info/marketplace/apparel/shirts
+https://www.workerowned.info/marketplace/apparel/pants
+https://www.workerowned.info/marketplace/apparel/accessories
+https://www.workerowned.info/marketplace/apparel/outerwear
 https://www.workerowned.info/marketplace/art-prints
 https://www.workerowned.info/marketplace/music
 https://www.workerowned.info/marketplace/home-goods
+https://www.workerowned.info/marketplace/home-goods/jewelry
+https://www.workerowned.info/marketplace/home-goods/art
+https://www.workerowned.info/marketplace/home-goods/woodworking
+https://www.workerowned.info/marketplace/home-goods/ceramics
+https://www.workerowned.info/marketplace/home-goods/decor
+https://www.workerowned.info/marketplace/home-goods/paper
 https://www.workerowned.info/marketplace/personal-care
 https://www.workerowned.info/marketplace/games
 https://www.workerowned.info/marketplace/beer-brewing
@@ -34,7 +50,6 @@ https://www.workerowned.info/marketplace/store/wood-shop-workers-co-op
 https://www.workerowned.info/marketplace/store/handwork-ithaca-s-artisan-cooperative
 https://www.workerowned.info/marketplace/store/opportunity-threads
 https://www.workerowned.info/marketplace/store/breadfruit-cooperative
-https://www.workerowned.info/marketplace/store/rei-co-op
 https://www.workerowned.info/marketplace/store/ak-press-books
 https://www.workerowned.info/marketplace/store/equal-exchange-tea
 https://www.workerowned.info/marketplace/store/equal-exchange-chocolate
@@ -54,7 +69,6 @@ https://www.workerowned.info/marketplace/store/tesa-collective-store
 https://www.workerowned.info/marketplace/store/artisans-cooperative-marketplace
 https://www.workerowned.info/marketplace/store/gimme-coffee-online
 https://www.workerowned.info/marketplace/store/rock-city-coffee-online
-https://www.workerowned.info/marketplace/store/equal-exchange-olive-oil-nuts
 https://www.workerowned.info/marketplace/store/slow-bloom-coffee-shop
 https://www.workerowned.info/marketplace/store/morning-bell-coffee
 https://www.workerowned.info/marketplace/store/means-workwear-apparel
@@ -101,7 +115,6 @@ https://www.workerowned.info/marketplace/store/w-w-norton-company
 https://www.workerowned.info/marketplace/store/grass-roots-farmers-cooperative
 https://www.workerowned.info/marketplace/store/dansko
 https://www.workerowned.info/marketplace/store/left-hand-brewing-company
-https://www.workerowned.info/marketplace/store/ten-thousand-villages
 https://www.workerowned.info/marketplace/store/american-roots
 https://www.workerowned.info/marketplace/store/1620-workwear
 https://www.workerowned.info/marketplace/store/green-mountain-spinnery
@@ -109,7 +122,6 @@ https://www.workerowned.info/marketplace/store/odell-brewing-company
 https://www.workerowned.info/marketplace/store/deschutes-brewery
 https://www.workerowned.info/marketplace/store/mast-general-store
 https://www.workerowned.info/marketplace/store/cora-ao-chocolate
-https://www.workerowned.info/marketplace/store/graeter-s-ice-cream
 https://www.workerowned.info/marketplace/store/harpoon-brewery
 https://www.workerowned.info/marketplace/store/maine-coast-sea-vegetables
 https://www.workerowned.info/marketplace/store/sow-true-seed
@@ -120,7 +132,6 @@ https://www.workerowned.info/marketplace/store/tradehome-shoes
 https://www.workerowned.info/marketplace/store/independent-fabrication
 https://www.workerowned.info/marketplace/store/stewart-s-shops
 https://www.workerowned.info/marketplace/store/gardener-s-supply-company
-https://www.workerowned.info/marketplace/store/aerosoles
 https://www.workerowned.info/marketplace/store/taharka-brothers-ice-cream
 https://www.workerowned.info/marketplace/store/applewood-seed-company
 https://www.workerowned.info/marketplace/store/just-us-coffee-roasters

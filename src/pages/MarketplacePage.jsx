@@ -1,9 +1,42 @@
-import { useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
 
 function slugify(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+}
+
+function displayTags(tags) {
+  if (!tags?.length) return null
+  return tags
+    .map(t => t.replace(/&amp;/g, '&').replace(/&#0?39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>'))
+    .filter(t => t.length > 2 && t.length < 40 && !/^\d+$/.test(t) && !t.includes('_') && !/wholesale/i.test(t))
+    .slice(0, 3)
+}
+
+const SUBCATEGORIES = {
+  apparel: [
+    { slug: 'shoes', label: 'Shoes & Footwear', keywords: ['shoe', 'boot', 'sandal', 'sneaker', 'clog', 'slipper', 'slide', 'mule', 'loafer', 'flat ', 'heel', 'wedge'] },
+    { slug: 'shirts', label: 'Shirts & Tops', keywords: ['shirt', 't-shirt', 'tee ', 'top', 'blouse', 'tank ', 'tank top', 'polo', 'henley', 'camisole'] },
+    { slug: 'pants', label: 'Pants & Bottoms', keywords: ['pant', 'jean', 'short', 'skirt', 'bottom', 'legging'] },
+    { slug: 'accessories', label: 'Hats & Accessories', keywords: ['hat ', 'beanie', 'cap ', 'scarf', 'glove', 'belt', 'sock', 'bag', 'backpack', 'wallet', 'pouch', 'purse', 'crossbody', 'tote', 'wristlet'] },
+    { slug: 'outerwear', label: 'Jackets & Outerwear', keywords: ['jacket', 'coat', 'hoodie', 'vest', 'pullover', 'sweater', 'fleece', 'parka', 'cardigan', 'shacket'] },
+  ],
+  'home-goods': [
+    { slug: 'jewelry', label: 'Jewelry', keywords: ['jewelry', 'earring', 'necklace', 'bracelet', 'ring', 'pendant', 'body jewelry'] },
+    { slug: 'art', label: 'Art & Prints', keywords: ['art', 'print', 'poster', 'painting', 'wall art', 'canvas', 'illustration'] },
+    { slug: 'woodworking', label: 'Woodworking', keywords: ['wood', 'cutting board', 'furniture', 'shelf', 'table', 'chair'] },
+    { slug: 'ceramics', label: 'Ceramics & Pottery', keywords: ['ceramic', 'pottery', 'mug', 'bowl', 'plate', 'vase'] },
+    { slug: 'decor', label: 'Candles & Decor', keywords: ['candle', 'decor', 'lamp', 'pillow', 'blanket'] },
+    { slug: 'paper', label: 'Paper Goods', keywords: ['paper', 'card', 'stationery', 'notebook', 'sticker'] },
+  ],
+  'food-pantry': [
+    { slug: 'seeds', label: 'Seeds & Garden', keywords: ['seed', 'garden', 'plant', 'flower', 'herb', 'vegetable'] },
+    { slug: 'cheese', label: 'Cheese & Dairy', keywords: ['cheese', 'butter', 'dairy', 'yogurt', 'cream'] },
+    { slug: 'meat', label: 'Meat & Butcher', keywords: ['beef', 'chicken', 'pork', 'meat', 'sausage', 'bacon', 'steak', 'butcher'] },
+    { slug: 'chocolate', label: 'Chocolate & Sweets', keywords: ['chocolate', 'candy', 'sweet', 'cocoa', 'truffle', 'toffee', 'fudge', 'caramel'] },
+    { slug: 'pantry', label: 'Pantry Staples', keywords: ['olive oil', 'nut butter', 'jam', 'honey', 'spice', 'seasoning', 'sauce', 'vinegar', 'flour', 'grain', 'seaweed', 'kelp'] },
+  ],
 }
 
 const SECTIONS = [
@@ -21,12 +54,10 @@ const SECTIONS = [
 
 function dedupeByUrl(entries) {
   const seen = new Map()
-  // Iterate in reverse so last (most detailed) entries win, then reverse back
   for (let i = entries.length - 1; i >= 0; i--) {
     const e = entries[i]
     if (!seen.has(e.url)) seen.set(e.url, e)
   }
-  // Preserve original order by filtering
   return entries.filter(e => seen.get(e.url) === e)
 }
 
@@ -44,24 +75,60 @@ function ownershipBadge(type) {
   )
 }
 
+const PER_PAGE = 40
+
 function MarketplacePage() {
-  const { category } = useParams()
+  const { category, subcategory } = useParams()
   const section = SECTIONS.find(s => s.slug === category)
+  const subs = SUBCATEGORIES[category]
+  const activeSub = subs?.find(s => s.slug === subcategory) || null
+  const [products, setProducts] = useState([])
+  const [page, setPage] = useState(1)
+  const [showStores, setShowStores] = useState(false)
+
+  useEffect(() => {
+    fetch('/data/products.json')
+      .then(r => r.json())
+      .then(setProducts)
+      .catch(() => {})
+  }, [])
 
   useEffect(() => {
     if (!section) return
-    const canonical = `https://www.workerowned.info/marketplace/${section.slug}`
-    document.title = section.title
-    document.querySelector('meta[name="description"]')?.setAttribute('content', section.description)
+    const suffix = activeSub ? ` — ${activeSub.label}` : ''
+    const title = activeSub
+      ? `${activeSub.label} — ${section.label} | Worker Owned Marketplace`
+      : section.title
+    const desc = activeSub
+      ? `Browse ${activeSub.label.toLowerCase()} from worker owned businesses. Shop cooperatively made products.`
+      : section.description
+    const canonical = `https://www.workerowned.info/marketplace/${section.slug}${activeSub ? '/' + activeSub.slug : ''}`
+    document.title = title
+    document.querySelector('meta[name="description"]')?.setAttribute('content', desc)
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
-    document.querySelector('meta[property="og:title"]')?.setAttribute('content', section.title)
-    document.querySelector('meta[property="og:description"]')?.setAttribute('content', section.description)
-    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', section.title)
-    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', section.description)
-  }, [section])
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', title)
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', desc)
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', title)
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', desc)
+  }, [section, activeSub])
+
+  useEffect(() => { setPage(1) }, [subcategory])
 
   if (!section) return <Navigate to="/marketplace" replace />
+  if (subcategory && subs && !activeSub) return <Navigate to={`/marketplace/${category}`} replace />
+
+  const sectionProducts = products.filter(p => p.site_section === section.sectionName)
+
+  const filtered = activeSub
+    ? sectionProducts.filter(p => {
+        const text = p.title.toLowerCase() + ' ' + (p.tags || []).join(' ').toLowerCase()
+        return activeSub.keywords.some(kw => text.includes(kw))
+      })
+    : sectionProducts
+
+  const totalPages = Math.ceil(filtered.length / PER_PAGE)
+  const paged = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE)
 
   const entries = dedupeByUrl(
     marketplaceData.filter(e => e.site_section === section.sectionName)
@@ -70,17 +137,16 @@ function MarketplacePage() {
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
       <main className="flex-1 max-w-xl lg:max-w-4xl mx-auto w-full px-5 py-8 flex flex-col">
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-8">
 
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-6 mb-3">
           <div className="flex items-center justify-center gap-3 mb-1">
             <img src="/logo-marketplace.png" alt="Worker Owned Marketplace" width="48" height="48" className="shrink-0" />
-            <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Market Place</Link>
+            <h1><Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Market Place</Link></h1>
           </div>
-
-          <p className="text-center text-sm text-gray-500 mb-5">Shop worker owned online</p>
+          <p className="text-center text-sm text-gray-500 mb-4">Shop worker owned businesses online</p>
 
           {/* Category tabs */}
-          <div className="flex flex-wrap gap-1.5 mb-6 justify-center">
+          <div className="flex flex-wrap gap-1.5 mb-4 justify-center">
             {SECTIONS.map(s => (
               <Link
                 key={s.slug}
@@ -96,45 +162,141 @@ function MarketplacePage() {
             ))}
           </div>
 
-          <h1 className="text-base font-bold text-gray-800 mb-1">{section.label}</h1>
-          <p className="text-xs text-gray-400 mb-4">{entries.length} worker owned option{entries.length !== 1 ? 's' : ''}</p>
-
-          {section.slug === 'home-goods' && (
-            <div className="bg-blue-50 border border-blue-100 rounded-xl px-4 py-3 mb-4 text-xs text-blue-800">
-              <strong>Note:</strong> Home goods &amp; furniture is genuinely sparse among worker owned online retailers. <strong>Artisans Cooperative</strong> (below) is the best anchor — it's a member-owned Etsy alternative with hundreds of makers selling ceramics, textiles, candles, and home decor. It's a meta-marketplace rather than a single seller.
-            </div>
-          )}
-
-          {section.slug === 'games' && (
-            <div className="bg-blue-50 border border-blue-100 rounded-xl px-4 py-3 mb-4 text-xs text-blue-800">
-              <strong>Note:</strong> Worker owned game publishers are rare. <strong>TESA Collective</strong> (below) is the US leader — they make cooperative and social justice-themed tabletop games designed for collective play. Most mainstream game publishers are investor- or founder-owned.
-            </div>
-          )}
-
-          {section.slug === 'beer-brewing' && (
-            <div className="bg-blue-50 border border-blue-100 rounded-xl px-4 py-3 mb-4 text-xs text-blue-800">
-              <strong>Note:</strong> Most worker owned breweries are local taprooms — beer shipping laws vary by state. These cooperatives are listed so you can visit if you're nearby, or support their merch and memberships online.
-            </div>
-          )}
-
-          <div className="space-y-3">
-            {entries.map(entry => (
-              <Link key={entry.id} to={`/marketplace/store/${slugify(entry.name)}`} className="block bg-[#f5f5f7] rounded-xl px-4 py-3 hover:ring-1 hover:ring-[#004cb9] transition-all">
-                <div className="flex items-start justify-between gap-2 mb-1">
-                  <span className="font-semibold text-sm text-[#004cb9] leading-snug">
-                    {entry.name}
-                  </span>
-                  {ownershipBadge(entry.ownership_type)}
-                </div>
-                {entry.notes && (
-                  <p className="text-xs text-gray-500 leading-relaxed">{entry.notes}</p>
-                )}
-                {entry.ships && entry.ships !== 'US' && (
-                  <p className="text-xs text-gray-400 mt-1">Ships: {entry.ships}</p>
-                )}
+          {/* Subcategory chips */}
+          {subs && (
+            <div className="flex flex-wrap gap-1.5 justify-center">
+              <Link
+                to={`/marketplace/${category}`}
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                  !activeSub
+                    ? 'bg-gray-800 text-white'
+                    : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+                }`}
+              >
+                All
               </Link>
-            ))}
+              {subs.map(s => (
+                <Link
+                  key={s.slug}
+                  to={`/marketplace/${category}/${s.slug}`}
+                  className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                    s.slug === subcategory
+                      ? 'bg-gray-800 text-white'
+                      : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+                  }`}
+                >
+                  {s.label}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Products grid */}
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mb-3">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-sm font-bold text-gray-700">{activeSub ? activeSub.label : section.label}</h2>
+            <p className="text-xs text-gray-400">
+              {products.length > 0 ? `${filtered.length} product${filtered.length !== 1 ? 's' : ''}` : 'Loading…'}
+            </p>
           </div>
+
+          {paged.length > 0 ? (
+            <>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                {paged.map(p => (
+                  <div key={p.id} className="bg-[#f5f5f7] rounded-xl overflow-hidden group">
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener"
+                      className="block hover:opacity-90 transition-opacity"
+                    >
+                      {p.image && (
+                        <div className="aspect-square w-full overflow-hidden bg-gray-100 relative">
+                          <img src={p.image} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+                          {p.available === false && (
+                            <span className="absolute top-1.5 left-1.5 bg-gray-800/75 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded">Sold out</span>
+                          )}
+                        </div>
+                      )}
+                      <div className="px-3 pt-2 pb-1">
+                        <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{p.title} <span className="text-gray-400 font-normal">↗</span></p>
+                        {p.price && <p className="text-xs font-semibold text-[#004cb9] mt-0.5">${p.price}</p>}
+                      </div>
+                    </a>
+                    {displayTags(p.tags)?.length > 0 && (
+                      <div className="px-3 pb-1 hidden group-hover:block">
+                        <p className="text-[10px] text-gray-400 leading-snug line-clamp-1">{displayTags(p.tags).join(' · ')}</p>
+                      </div>
+                    )}
+                    {p.store_name && (
+                      <div className="px-3 pb-2">
+                        <Link
+                          to={`/marketplace/store/${slugify(p.store_name)}`}
+                          className="text-[10px] text-gray-400 hover:text-[#004cb9] transition-colors truncate block"
+                        >
+                          {p.store_name}
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+              {totalPages > 1 && (
+                <div className="flex items-center justify-center gap-2 mt-4">
+                  <button
+                    onClick={() => { setPage(p => p - 1); window.scrollTo(0, 0) }}
+                    disabled={page === 1}
+                    className="min-w-[32px] h-8 rounded-lg text-xs font-medium transition-colors bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 disabled:opacity-30 disabled:hover:text-gray-600 disabled:hover:bg-[#f5f5f7]"
+                  >
+                    ‹
+                  </button>
+                  <span className="text-xs text-gray-400 px-2">{page} / {totalPages}</span>
+                  <button
+                    onClick={() => { setPage(p => p + 1); window.scrollTo(0, 0) }}
+                    disabled={page === totalPages}
+                    className="min-w-[32px] h-8 rounded-lg text-xs font-medium transition-colors bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 disabled:opacity-30 disabled:hover:text-gray-600 disabled:hover:bg-[#f5f5f7]"
+                  >
+                    ›
+                  </button>
+                </div>
+              )}
+            </>
+          ) : products.length > 0 ? (
+            <p className="text-sm text-gray-500 text-center py-4">No products in this category yet</p>
+          ) : null}
+        </div>
+
+        {/* Stores section */}
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
+          <button
+            onClick={() => setShowStores(s => !s)}
+            className="w-full flex items-center justify-between"
+          >
+            <h2 className="text-sm font-bold text-gray-700">{entries.length} {section.label} stores</h2>
+            <span className="text-xs text-gray-400">{showStores ? '▲ Hide' : '▼ Show'}</span>
+          </button>
+          {showStores && (
+            <div className="space-y-3 mt-4">
+              {entries.map(entry => (
+                <Link key={entry.id} to={`/marketplace/store/${slugify(entry.name)}`} className="block bg-[#f5f5f7] rounded-xl px-4 py-3 hover:ring-1 hover:ring-[#004cb9] transition-all">
+                  <div className="flex items-start justify-between gap-2 mb-1">
+                    <span className="font-semibold text-sm text-[#004cb9] leading-snug">
+                      {entry.name}
+                    </span>
+                    {ownershipBadge(entry.ownership_type)}
+                  </div>
+                  {entry.notes && (
+                    <p className="text-xs text-gray-500 leading-relaxed">{entry.notes}</p>
+                  )}
+                  {entry.ships && entry.ships !== 'US' && (
+                    <p className="text-xs text-gray-400 mt-1">Ships: {entry.ships}</p>
+                  )}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="mt-3 text-center">

@@ -119,6 +119,33 @@ const routes = [
   },
 ]
 
+// Subcategory routes
+const subcategoryRoutes = [
+  { cat: 'apparel', sub: 'shoes', label: 'Shoes & Footwear', parent: 'Apparel' },
+  { cat: 'apparel', sub: 'shirts', label: 'Shirts & Tops', parent: 'Apparel' },
+  { cat: 'apparel', sub: 'pants', label: 'Pants & Bottoms', parent: 'Apparel' },
+  { cat: 'apparel', sub: 'accessories', label: 'Hats & Accessories', parent: 'Apparel' },
+  { cat: 'apparel', sub: 'outerwear', label: 'Jackets & Outerwear', parent: 'Apparel' },
+  { cat: 'home-goods', sub: 'jewelry', label: 'Jewelry', parent: 'Home Goods' },
+  { cat: 'home-goods', sub: 'art', label: 'Art & Prints', parent: 'Home Goods' },
+  { cat: 'home-goods', sub: 'woodworking', label: 'Woodworking', parent: 'Home Goods' },
+  { cat: 'home-goods', sub: 'ceramics', label: 'Ceramics & Pottery', parent: 'Home Goods' },
+  { cat: 'home-goods', sub: 'decor', label: 'Candles & Decor', parent: 'Home Goods' },
+  { cat: 'home-goods', sub: 'paper', label: 'Paper Goods', parent: 'Home Goods' },
+  { cat: 'food-pantry', sub: 'seeds', label: 'Seeds & Garden', parent: 'Food & Pantry' },
+  { cat: 'food-pantry', sub: 'cheese', label: 'Cheese & Dairy', parent: 'Food & Pantry' },
+  { cat: 'food-pantry', sub: 'meat', label: 'Meat & Butcher', parent: 'Food & Pantry' },
+  { cat: 'food-pantry', sub: 'chocolate', label: 'Chocolate & Sweets', parent: 'Food & Pantry' },
+  { cat: 'food-pantry', sub: 'pantry', label: 'Pantry Staples', parent: 'Food & Pantry' },
+].map(s => ({
+  url: `/marketplace/${s.cat}/${s.sub}`,
+  title: `${s.label} — Worker Owned ${s.parent} | Worker Owned Marketplace`,
+  description: `Browse ${s.label.toLowerCase()} from worker owned businesses. Shop cooperatively made products.`,
+  canonical: `https://www.workerowned.info/marketplace/${s.cat}/${s.sub}`,
+}))
+
+routes.push(...subcategoryRoutes)
+
 // Dynamically generate store routes from marketplace.json
 const marketplaceData = JSON.parse(readFileSync(resolve(root, 'src/data/marketplace.json'), 'utf-8'))
 const allStores = dedupeByUrl(marketplaceData)
