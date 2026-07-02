@@ -75,6 +75,7 @@ async function tryShopify(entry) {
           id: `${entry.id}-${p.id}`,
           title: p.title,
           price: p.variants[0].price,
+          available: p.variants?.some(v => v.available !== false),
           image: p.images[0].src,
           url: `${getBaseUrl(entry.url)}/products/${p.handle}`,
           store_name: entry.name,

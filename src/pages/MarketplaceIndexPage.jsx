@@ -1,9 +1,17 @@
-import { useState, useEffect, useMemo, useCallback } from 'react'
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { Search, ArrowUpDown } from 'lucide-react'
 
 function slugify(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+}
+
+function displayTags(tags) {
+  if (!tags?.length) return null
+  return tags
+    .map(t => t.replace(/&amp;/g, '&').replace(/&#0?39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>'))
+    .filter(t => t.length > 2 && t.length < 40 && !/^\d+$/.test(t) && !t.includes('_') && !/wholesale/i.test(t))
+    .slice(0, 3)
 }
 
 const MARKETPLACE_CATEGORIES = [
@@ -25,6 +33,8 @@ function MarketplaceIndexPage() {
   const page = parseInt(searchParams.get('page') || '1', 10)
   const sort = searchParams.get('sort') || 'relevance'
   const [products, setProducts] = useState([])
+  const [inputValue, setInputValue] = useState(query)
+  const debounceRef = useRef(null)
 
   const updateParams = useCallback((updates) => {
     setSearchParams(prev => {
@@ -37,10 +47,20 @@ function MarketplaceIndexPage() {
     }, { replace: true })
   }, [setSearchParams])
 
+  const handleSearchInput = useCallback((value) => {
+    setInputValue(value)
+    clearTimeout(debounceRef.current)
+    debounceRef.current = setTimeout(() => {
+      updateParams({ q: value, page: '1' })
+    }, 250)
+  }, [updateParams])
+
+  useEffect(() => { setInputValue(query) }, [query])
+
   useEffect(() => {
     document.title = 'Market Place | Shop worker owned online stores for apparel, home goods, food and more'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
-      'Browse worker owned online stores by category or search 22,000+ products from cooperatives and employee-owned companies.')
+      `Browse worker owned online stores by category or search ${products.length.toLocaleString()}+ products from cooperatives and employee-owned companies.`)
     fetch('/data/products.json')
       .then(r => r.json())
       .then(setProducts)
@@ -48,7 +68,7 @@ function MarketplaceIndexPage() {
   }, [])
 
   const results = useMemo(() => {
-    if (!query.trim()) return []
+    if (!inputValue.trim()) return []
 
     // Stem a single word for plural handling
     function stemWord(w) {
@@ -72,7 +92,7 @@ function MarketplaceIndexPage() {
     }
 
     // Split query into words, stem each one; normalize apostrophes
-    const words = query.toLowerCase().trim().replace(/['']/g, '').split(/\s+/).filter(Boolean)
+    const words = inputValue.toLowerCase().trim().replace(/['']/g, '').split(/\s+/).filter(Boolean)
     const wordStems = words.map(w => stemWord(w))
 
     // Score and filter: all query words must match somewhere in the product
@@ -95,7 +115,7 @@ function MarketplaceIndexPage() {
     return scored
       .sort((a, b) => b.score - a.score)
       .map(s => s.p)
-  }, [query, products])
+  }, [inputValue, products])
 
   const PER_PAGE = 40
 
@@ -113,7 +133,7 @@ function MarketplaceIndexPage() {
 
   const storeCount = useMemo(() => new Set(products.map(p => p.store_url)).size, [products])
 
-  const searching = query.trim().length > 0
+  const searching = inputValue.trim().length > 0
 
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
@@ -132,8 +152,8 @@ function MarketplaceIndexPage() {
               type="text"
               placeholder="Search products or stores…"
               className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
-              value={query}
-              onChange={e => updateParams({ q: e.target.value, page: '1' })}
+              value={inputValue}
+              onChange={e => handleSearchInput(e.target.value)}
               autoFocus
             />
           </div>
@@ -149,7 +169,7 @@ function MarketplaceIndexPage() {
         {searching ? (
           <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
             {results.length === 0 ? (
-              <p className="text-sm text-gray-500 text-center py-4">No results for "{query}"</p>
+              <p className="text-sm text-gray-500 text-center py-4">No results for "{inputValue}"</p>
             ) : (
               <>
                 <div className="flex items-center justify-between mb-3">
@@ -170,7 +190,7 @@ function MarketplaceIndexPage() {
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                   {pagedResults.map(p => (
-                    <div key={p.id} className="bg-[#f5f5f7] rounded-xl overflow-hidden">
+                    <div key={p.id} className="bg-[#f5f5f7] rounded-xl overflow-hidden group">
                       <a
                         href={p.url}
                         target="_blank"
@@ -178,8 +198,11 @@ function MarketplaceIndexPage() {
                         className="block hover:opacity-90 transition-opacity"
                       >
                         {p.image && (
-                          <div className="aspect-square w-full overflow-hidden bg-gray-100">
+                          <div className="aspect-square w-full overflow-hidden bg-gray-100 relative">
                             <img src={p.image} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+                            {p.available === false && (
+                              <span className="absolute top-1.5 left-1.5 bg-gray-800/75 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded">Sold out</span>
+                            )}
                           </div>
                         )}
                         <div className="px-3 pt-2 pb-1">
@@ -187,6 +210,11 @@ function MarketplaceIndexPage() {
                           {p.price && <p className="text-xs font-semibold text-[#004cb9] mt-0.5">${p.price}</p>}
                         </div>
                       </a>
+                      {displayTags(p.tags)?.length > 0 && (
+                        <div className="px-3 pb-1 hidden group-hover:block">
+                          <p className="text-[10px] text-gray-400 leading-snug line-clamp-1">{displayTags(p.tags).join(' · ')}</p>
+                        </div>
+                      )}
                       {p.store_name && (
                         <div className="px-3 pb-2">
                           <Link

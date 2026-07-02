@@ -473,17 +473,6 @@
     "site_section": "Games"
   },
   {
-    "id": 48,
-    "name": "REI Co-op",
-    "url": "https://rei.com",
-    "category": "outdoor clothing & gear",
-    "ownership_type": "consumer co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Largest consumer co-op in the US. Outdoor apparel, gear. NOTE: consumer co-op (members are customers), not worker co-op.",
-    "site_section": "Apparel"
-  },
-  {
     "id": 49,
     "name": "Subvert — Music",
     "url": "https://www.subvert.fm",
@@ -969,28 +958,6 @@
     "site_section": "Beer & Brewing"
   },
   {
-    "id": 97,
-    "name": "Fifth Street Brewpub",
-    "url": "https://fifthstreetbrewpub.com",
-    "category": "brewery",
-    "ownership_type": "consumer co-op",
-    "ships": "Local (Dayton OH)",
-    "status": "verified active",
-    "notes": "Ohio's first cooperative brewpub in Dayton. Community-owned with member shares. On-site brewing, full food menu.",
-    "site_section": "Beer & Brewing"
-  },
-  {
-    "id": 98,
-    "name": "New Barons Brewing Cooperative",
-    "url": "https://newbaronsbrewing.com",
-    "category": "brewery",
-    "ownership_type": "consumer co-op",
-    "ships": "Local (Milwaukee WI)",
-    "status": "verified active",
-    "notes": "Wisconsin's first cooperative brewery in Milwaukee. ~650 member-owners at $200/share. Operates as a brewery incubator helping new brewers launch.",
-    "site_section": "Beer & Brewing"
-  },
-  {
     "id": 101,
     "name": "Soft Star Shoes",
     "url": "https://www.softstarshoes.com",
@@ -1121,17 +1088,6 @@
     "status": "verified active",
     "notes": "Worker co-op game shop in Syracuse, NY (founded 2022). Magic: The Gathering, Pokémon, D&D, Pathfinder, Lorcana, board games, accessories. Starts pricing at 10% off MSRP. Free shipping over $125.",
     "site_section": "Games"
-  },
-  {
-    "id": 112,
-    "name": "Fair State Brewing Cooperative",
-    "url": "https://fairstate.com",
-    "category": "brewery",
-    "ownership_type": "consumer co-op",
-    "ships": "Local (Minneapolis MN)",
-    "status": "verified active",
-    "notes": "One of the first cooperative breweries in the US, Minneapolis MN. Consumer-owned co-op — members elect the board. Online shop sells merch, memberships, and gifts.",
-    "site_section": "Beer & Brewing"
   },
   {
     "id": 113,

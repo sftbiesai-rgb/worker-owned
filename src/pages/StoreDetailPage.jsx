@@ -6,6 +6,14 @@ function slugify(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 }
 
+function displayTags(tags) {
+  if (!tags?.length) return null
+  return tags
+    .map(t => t.replace(/&amp;/g, '&').replace(/&#0?39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>'))
+    .filter(t => t.length > 2 && t.length < 40 && !/^\d+$/.test(t) && !t.includes('_') && !/wholesale/i.test(t))
+    .slice(0, 3)
+}
+
 function dedupeByUrl(entries) {
   const seen = new Map()
   for (let i = entries.length - 1; i >= 0; i--) {
@@ -126,17 +134,25 @@ function StoreDetailPage() {
                     href={p.url}
                     target="_blank"
                     rel="noopener"
-                    className="bg-[#f5f5f7] rounded-xl overflow-hidden hover:ring-1 hover:ring-[#004cb9] transition-all"
+                    className="bg-[#f5f5f7] rounded-xl overflow-hidden hover:ring-1 hover:ring-[#004cb9] transition-all group"
                   >
                     {p.image && (
-                      <div className="aspect-square w-full overflow-hidden bg-gray-100">
+                      <div className="aspect-square w-full overflow-hidden bg-gray-100 relative">
                         <img src={p.image} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+                        {p.available === false && (
+                          <span className="absolute top-1.5 left-1.5 bg-gray-800/75 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded">Sold out</span>
+                        )}
                       </div>
                     )}
                     <div className="px-3 py-2">
                       <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{p.title}</p>
                       {p.price && <p className="text-xs font-semibold text-[#004cb9] mt-0.5">${p.price}</p>}
                     </div>
+                    {displayTags(p.tags)?.length > 0 && (
+                      <div className="px-3 pb-2 hidden group-hover:block">
+                        <p className="text-[10px] text-gray-400 leading-snug line-clamp-1">{displayTags(p.tags).join(' · ')}</p>
+                      </div>
+                    )}
                   </a>
                 ))}
               </div>

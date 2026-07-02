@@ -45,15 +45,6 @@
     "category": "coffee"
   },
   {
-    "name": "Ubuntu Coffee Cooperative",
-    "city": "Emeryville",
-    "state": "CA",
-    "location": "5776 Stewart Ave, Emeryville, CA 94608",
-    "website": "ubuntu.coffee",
-    "category": "coffee",
-    "id": 6
-  },
-  {
     "id": 7,
     "name": "Che Cafe Collective",
     "city": "La Jolla",
