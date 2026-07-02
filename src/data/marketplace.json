@@ -726,17 +726,6 @@
     "site_section": "Coffee & Tea"
   },
   {
-    "id": 73,
-    "name": "Equal Exchange — Olive Oil & Nuts",
-    "url": "https://shop.equalexchange.coop/collections/olive-oil-and-nuts",
-    "category": "olive oil / nuts / pantry",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Fair trade organic olive oil and mixed nuts. Sourced from farmer co-ops in Palestine and elsewhere.",
-    "site_section": "Food & Pantry"
-  },
-  {
     "id": 74,
     "name": "Slow Bloom — Coffee Shop",
     "url": "https://www.slowbloomcoffee.com/shopcoffee",
@@ -1213,7 +1202,7 @@
   {
     "id": 124,
     "name": "1620 Workwear",
-    "url": "https://www.1620workwear.com",
+    "url": "https://www.1620usa.com",
     "category": "workwear / durable apparel",
     "ownership_type": "American-owned manufacturer",
     "ships": "US",

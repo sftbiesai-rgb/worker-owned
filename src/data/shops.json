@@ -216,15 +216,6 @@
     "category": "restaurant"
   },
   {
-    "id": 28,
-    "name": "Circus Cooperative Cafe",
-    "city": "Cambridge",
-    "state": "MA",
-    "location": "31 Putnam Ave, Cambridge, MA 02139",
-    "website": "circus.coop",
-    "category": "coffee"
-  },
-  {
     "id": 29,
     "name": "Cafe Reynard",
     "city": "Malden",
@@ -441,24 +432,6 @@
     "category": "restaurant"
   },
   {
-    "id": 56,
-    "name": "Collective Espresso",
-    "city": "Cincinnati",
-    "state": "OH",
-    "location": "207 Woodward St, Cincinnati, OH 45202",
-    "website": "collectiveespresso.com",
-    "category": "coffee"
-  },
-  {
-    "id": 57,
-    "name": "Radical Bean Cooperative",
-    "city": "Cincinnati",
-    "state": "OH",
-    "location": "123 E McMicken Ave, Cincinnati, OH 45202",
-    "website": "topiacoffee.coop",
-    "category": "coffee"
-  },
-  {
     "id": 58,
     "name": "Phoenix Coffee Co.",
     "city": "Cleveland",
@@ -574,15 +547,6 @@
     "website": "blueheronbakery.com",
     "category": "coffee",
     "id": 72
-  },
-  {
-    "id": 73,
-    "name": "Le Voyeur",
-    "city": "Olympia",
-    "state": "WA",
-    "location": "404 4th Ave E, Olympia, WA 98501",
-    "website": "levoyeurolympia.com",
-    "category": "restaurant"
   },
   {
     "id": 74,
@@ -711,15 +675,6 @@
     "category": "restaurant"
   },
   {
-    "id": 93,
-    "name": "New Helvetia Brewing",
-    "city": "Sacramento",
-    "state": "CA",
-    "location": "1730 Broadway, Sacramento, CA 95818",
-    "website": "newhelvetia.coop",
-    "category": "restaurant"
-  },
-  {
     "id": 94,
     "name": "Democracy Brewing (East Boston)",
     "city": "East Boston",
@@ -727,15 +682,6 @@
     "location": "154 Maverick St, East Boston, MA 02128",
     "website": "democracybrewing.com",
     "category": "restaurant"
-  },
-  {
-    "id": 95,
-    "name": "Coldwater Coffeehouse & Bakery",
-    "city": "Avondale",
-    "state": "AZ",
-    "location": "127 E Western Ave, Avondale, AZ 85323",
-    "website": "coldwater.coop",
-    "category": "coffee"
   },
   {
     "id": 96,

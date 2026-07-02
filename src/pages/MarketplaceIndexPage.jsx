@@ -57,15 +57,23 @@ function MarketplaceIndexPage() {
 
   useEffect(() => { setInputValue(query) }, [query])
 
+  const fetchedRef = useRef(false)
+
   useEffect(() => {
     document.title = 'Market Place | Shop worker owned online stores for apparel, home goods, food and more'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
-      `Browse worker owned online stores by category or search ${products.length.toLocaleString()}+ products from cooperatives and employee-owned companies.`)
+      'Browse worker owned online stores by category or search thousands of products from cooperatives and employee-owned companies.')
+  }, [])
+
+  useEffect(() => {
+    if (fetchedRef.current) return
+    if (!inputValue.trim() && !query.trim()) return
+    fetchedRef.current = true
     fetch('/data/products.json')
       .then(r => r.json())
       .then(setProducts)
       .catch(() => {})
-  }, [])
+  }, [inputValue, query])
 
   const results = useMemo(() => {
     if (!inputValue.trim()) return []
@@ -264,7 +272,9 @@ function MarketplaceIndexPage() {
                 </Link>
               ))}
             </div>
-            <p className="text-center text-xs text-gray-400 mt-3">{products.length.toLocaleString()} products from {storeCount} worker owned stores</p>
+            {products.length > 0 && (
+              <p className="text-center text-xs text-gray-400 mt-3">{products.length.toLocaleString()} products from {storeCount} worker owned stores</p>
+            )}
           </div>
         )}
 

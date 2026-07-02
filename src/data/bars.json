@@ -60,16 +60,6 @@
     "notes": "FLAG: Hybrid worker + ~600 community member co-op. Employees led buyout in 2024."
   },
   {
-    "id": 7,
-    "name": "New Helvetia Brewing Company",
-    "city": "Sacramento",
-    "state": "CA",
-    "location": "1730 Broadway, Sacramento, CA 95818",
-    "website": "newhelvetia.coop",
-    "category": "bar",
-    "notes": "Multi-stakeholder co-op with Workers Assembly. CA's first cooperatively owned commercial brewery."
-  },
-  {
     "id": 8,
     "name": "The Grain Shed",
     "city": "Spokane",
@@ -128,16 +118,6 @@
     "website": "studsf.com",
     "category": "bar",
     "notes": "First worker-owned cooperative nightclub in the US. LGBTQ+ bar. Reopened at new location April 2024."
-  },
-  {
-    "id": 14,
-    "name": "Full Barrel Cooperative Brewery",
-    "city": "Burlington",
-    "state": "VT",
-    "location": "12 North St, Burlington, VT 05401",
-    "website": "fullbarrel.coop",
-    "category": "bar",
-    "notes": "FLAG: Consumer/member co-op, not worker co-op. Vermont's first community-owned brewery. Nanobrewery, open Fri-Sat only."
   },
   {
     "id": 15,
