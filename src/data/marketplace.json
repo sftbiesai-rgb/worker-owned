@@ -18,7 +18,7 @@
     "ownership_type": "worker co-op",
     "ships": "US",
     "status": "verified active",
-    "notes": "Asheville NC worker co-op. Roasts to order Mon–Thu, ships nationally. Single origins and blends. Subscription club available.",
+    "notes": "Asheville NC worker co-op. Roasts to order Mon\u2013Thu, ships nationally. Single origins and blends. Subscription club available.",
     "site_section": "Coffee & Tea"
   },
   {
@@ -51,7 +51,7 @@
     "ownership_type": "worker co-op",
     "ships": "US",
     "status": "verified active",
-    "notes": "Richmond VA worker co-op since 2021. Former Lamplighter employees. Ships Mon–Thu. Online shop at afterglowcoffee.com/shop.",
+    "notes": "Richmond VA worker co-op since 2021. Former Lamplighter employees. Ships Mon\u2013Thu. Online shop at afterglowcoffee.com/shop.",
     "site_section": "Coffee & Tea"
   },
   {
@@ -60,7 +60,7 @@
     "url": "https://morningbellcoffeeroasters.square.site",
     "category": "coffee roaster",
     "ownership_type": "worker co-op",
-    "ships": "US — verify national shipping",
+    "ships": "US \u2014 verify national shipping",
     "status": "verified active",
     "notes": "Iowa's first worker co-op, Ames IA since 2022. Cafe and roaster. Wholesale coffee available. Verify online national shipping.",
     "site_section": "Coffee & Tea"
@@ -177,7 +177,7 @@
   },
   {
     "id": 18,
-    "name": "Equal Exchange — Food",
+    "name": "Equal Exchange \u2014 Food",
     "url": "https://shop.equalexchange.coop",
     "category": "coffee, tea, chocolate, olive oil, nuts, snacks",
     "ownership_type": "worker co-op",
@@ -215,8 +215,8 @@
     "category": "tempeh",
     "ownership_type": "worker co-op",
     "ships": "in-store only (ME to NJ region, Whole Foods New England)",
-    "status": "no online shipping — in-store only",
-    "notes": "Biddeford ME worker co-op. Plastic-free fermentation. No direct online sales — perishable product. Find at Whole Foods New England and natural food stores.",
+    "status": "no online shipping \u2014 in-store only",
+    "notes": "Biddeford ME worker co-op. Plastic-free fermentation. No direct online sales \u2014 perishable product. Find at Whole Foods New England and natural food stores.",
     "site_section": "Food & Pantry"
   },
   {
@@ -225,9 +225,9 @@
     "url": "https://democracybrewing.com",
     "category": "worker-owned brewpub",
     "ownership_type": "worker co-op",
-    "ships": "taproom — Boston MA (possible online merch)",
+    "ships": "taproom \u2014 Boston MA (possible online merch)",
     "status": "verified active",
-    "notes": "100% worker-owned brewery and pub in Boston MA since 2018. 'Fermenting rebellion.' Craft beer, scratch-made food. Has online shop — check site for current offerings.",
+    "notes": "100% worker-owned brewery and pub in Boston MA since 2018. 'Fermenting rebellion.' Craft beer, scratch-made food. Has online shop \u2014 check site for current offerings.",
     "site_section": "Beer & Brewing"
   },
   {
@@ -236,7 +236,7 @@
     "url": "https://drifabrewingcompany.com",
     "category": "cooperative brewery",
     "ownership_type": "worker co-op",
-    "ships": "taproom only — Marquette MI",
+    "ships": "taproom only \u2014 Marquette MI",
     "status": "verified active",
     "notes": "One of nine cooperative breweries in the US, the only one in Michigan. Taproom and beer garden in Marquette MI. Worker co-op since founding.",
     "site_section": "Beer & Brewing"
@@ -287,7 +287,7 @@
   },
   {
     "id": 30,
-    "name": "Microcosm Publishing — Zines & Art",
+    "name": "Microcosm Publishing \u2014 Zines & Art",
     "url": "https://microcosmpublishing.com",
     "category": "zines / art prints / patches / stickers",
     "ownership_type": "worker-owned",
@@ -399,7 +399,7 @@
     "id": 41,
     "name": "Artisans Cooperative",
     "url": "https://artisans.coop",
-    "category": "handmade marketplace — ceramics, textiles, home decor, art, jewelry",
+    "category": "handmade marketplace \u2014 ceramics, textiles, home decor, art, jewelry",
     "ownership_type": "multi-stakeholder co-op",
     "ships": "worldwide",
     "status": "verified active",
@@ -412,14 +412,14 @@
     "url": "https://www.woodshop.coop",
     "category": "custom furniture / woodworking",
     "ownership_type": "worker co-op",
-    "ships": "Canada (Vancouver) — verify US shipping",
+    "ships": "Canada (Vancouver) \u2014 verify US shipping",
     "status": "verified active",
     "notes": "Vancouver BC worker co-op. Custom reclaimed wood furniture and millwork for homes and businesses. Founded 2014.",
     "site_section": "Home Goods"
   },
   {
     "id": 43,
-    "name": "Handwork — Ithaca's Artisan Cooperative",
+    "name": "Handwork \u2014 Ithaca's Artisan Cooperative",
     "url": "https://www.handwork.coop",
     "category": "handmade home goods / art / crafts",
     "ownership_type": "worker co-op",
@@ -452,7 +452,7 @@
   },
   {
     "id": 46,
-    "name": "Justseeds Artists' Cooperative — Prints",
+    "name": "Justseeds Artists' Cooperative \u2014 Prints",
     "url": "https://justseeds.org/shop",
     "category": "art prints / social movement posters",
     "ownership_type": "worker co-op",
@@ -463,7 +463,7 @@
   },
   {
     "id": 47,
-    "name": "TESA Collective — Games",
+    "name": "TESA Collective \u2014 Games",
     "url": "https://store.tesacollective.com",
     "category": "board games / card games",
     "ownership_type": "worker co-op",
@@ -474,7 +474,7 @@
   },
   {
     "id": 49,
-    "name": "Subvert — Music",
+    "name": "Subvert \u2014 Music",
     "url": "https://www.subvert.fm",
     "category": "music / records / digital downloads",
     "ownership_type": "multi-stakeholder co-op",
@@ -485,7 +485,7 @@
   },
   {
     "id": 50,
-    "name": "Mirlo — Music",
+    "name": "Mirlo \u2014 Music",
     "url": "https://mirlo.space",
     "category": "music / records / digital downloads",
     "ownership_type": "worker co-op",
@@ -496,7 +496,7 @@
   },
   {
     "id": 51,
-    "name": "AK Press — Books",
+    "name": "AK Press \u2014 Books",
     "url": "https://www.akpress.org",
     "category": "radical books / publisher",
     "ownership_type": "worker co-op",
@@ -507,18 +507,18 @@
   },
   {
     "id": 52,
-    "name": "Soapbox Co-op — Soap",
+    "name": "Soapbox Co-op \u2014 Soap",
     "url": "https://soapboxcoop.com",
     "category": "soap / personal care",
     "ownership_type": "worker co-op",
     "ships": "US",
     "status": "verified active",
-    "notes": "Very new (2025), Chicago. Concentrated soap drops — fill your own dispenser, pay only for soap not water. All natural organic ingredients.",
+    "notes": "Very new (2025), Chicago. Concentrated soap drops \u2014 fill your own dispenser, pay only for soap not water. All natural organic ingredients.",
     "site_section": "Personal Care"
   },
   {
     "id": 53,
-    "name": "Palestinian Soap Cooperative — Soap",
+    "name": "Palestinian Soap Cooperative \u2014 Soap",
     "url": "https://palestiniansoap.coop",
     "category": "traditional olive oil soap",
     "ownership_type": "worker co-op",
@@ -529,7 +529,7 @@
   },
   {
     "id": 54,
-    "name": "Equal Exchange — Tea",
+    "name": "Equal Exchange \u2014 Tea",
     "url": "https://shop.equalexchange.coop/collections/tea",
     "category": "tea",
     "ownership_type": "worker co-op",
@@ -540,7 +540,7 @@
   },
   {
     "id": 55,
-    "name": "Equal Exchange — Chocolate",
+    "name": "Equal Exchange \u2014 Chocolate",
     "url": "https://shop.equalexchange.coop/collections/chocolate",
     "category": "chocolate",
     "ownership_type": "worker co-op",
@@ -551,7 +551,7 @@
   },
   {
     "id": 56,
-    "name": "Red Emma's — Bookstore",
+    "name": "Red Emma's \u2014 Bookstore",
     "url": "https://bookshop.org/shop/redemmas",
     "category": "radical bookstore",
     "ownership_type": "worker co-op",
@@ -562,7 +562,7 @@
   },
   {
     "id": 57,
-    "name": "Bluestockings — Bookstore",
+    "name": "Bluestockings \u2014 Bookstore",
     "url": "https://bookshop.org/shop/bluestockings",
     "category": "queer feminist bookstore",
     "ownership_type": "worker co-op",
@@ -573,7 +573,7 @@
   },
   {
     "id": 58,
-    "name": "Making Worlds — Bookstore",
+    "name": "Making Worlds \u2014 Bookstore",
     "url": "https://bookshop.org/shop/makingworlds",
     "category": "radical bookstore",
     "ownership_type": "worker co-op",
@@ -590,12 +590,12 @@
     "ownership_type": "member co-op (retailers as members)",
     "ships": "US",
     "status": "verified active",
-    "notes": "Member-owned co-op since 1976. Herbs, spices, teas, seasonings. NOTE: member co-op (stores are members), not worker co-op — flag distinction on site.",
+    "notes": "Member-owned co-op since 1976. Herbs, spices, teas, seasonings. NOTE: member co-op (stores are members), not worker co-op \u2014 flag distinction on site.",
     "site_section": "Food & Pantry"
   },
   {
     "id": 60,
-    "name": "Once Again Nut Butter — Food",
+    "name": "Once Again Nut Butter \u2014 Food",
     "url": "https://onceagainnutbutter.com",
     "category": "nut butters / spreads",
     "ownership_type": "ESOP",
@@ -606,7 +606,7 @@
   },
   {
     "id": 61,
-    "name": "Raven Book Store — Online",
+    "name": "Raven Book Store \u2014 Online",
     "url": "https://ravenbookstore.com",
     "category": "general bookstore",
     "ownership_type": "employee-owned",
@@ -617,7 +617,7 @@
   },
   {
     "id": 62,
-    "name": "Afterglow Coffee — Shop",
+    "name": "Afterglow Coffee \u2014 Shop",
     "url": "https://www.afterglowcoffee.com/shop",
     "category": "coffee roaster",
     "ownership_type": "worker co-op",
@@ -628,7 +628,7 @@
   },
   {
     "id": 63,
-    "name": "Thread Coffee — Store",
+    "name": "Thread Coffee \u2014 Store",
     "url": "https://threadcoffee.com/store",
     "category": "coffee roaster",
     "ownership_type": "worker co-op",
@@ -639,7 +639,7 @@
   },
   {
     "id": 65,
-    "name": "Microcosm Publishing — Books",
+    "name": "Microcosm Publishing \u2014 Books",
     "url": "https://microcosmpublishing.com",
     "category": "books / zines",
     "ownership_type": "worker-owned",
@@ -650,7 +650,7 @@
   },
   {
     "id": 66,
-    "name": "Worx Printing — Shop",
+    "name": "Worx Printing \u2014 Shop",
     "url": "https://shop.goodpress.coop/collections/worx-merch",
     "category": "union-made apparel / merch",
     "ownership_type": "worker co-op",
@@ -661,7 +661,7 @@
   },
   {
     "id": 67,
-    "name": "Real Pickles — Online Store",
+    "name": "Real Pickles \u2014 Online Store",
     "url": "https://realpickles.com/products/online-store",
     "category": "fermented foods",
     "ownership_type": "worker co-op",
@@ -672,7 +672,7 @@
   },
   {
     "id": 68,
-    "name": "Justseeds — Shop",
+    "name": "Justseeds \u2014 Shop",
     "url": "https://justseeds.org/shop",
     "category": "art prints / political posters",
     "ownership_type": "worker co-op",
@@ -683,7 +683,7 @@
   },
   {
     "id": 69,
-    "name": "TESA Collective — Store",
+    "name": "TESA Collective \u2014 Store",
     "url": "https://store.tesacollective.com",
     "category": "games / education",
     "ownership_type": "worker co-op",
@@ -694,7 +694,7 @@
   },
   {
     "id": 70,
-    "name": "Artisans Cooperative — Marketplace",
+    "name": "Artisans Cooperative \u2014 Marketplace",
     "url": "https://artisans.coop",
     "category": "handmade goods marketplace",
     "ownership_type": "multi-stakeholder co-op",
@@ -705,7 +705,7 @@
   },
   {
     "id": 71,
-    "name": "Gimme Coffee — Online",
+    "name": "Gimme Coffee \u2014 Online",
     "url": "https://gimmecoffee.com",
     "category": "coffee roaster",
     "ownership_type": "worker co-op",
@@ -716,7 +716,7 @@
   },
   {
     "id": 72,
-    "name": "Rock City Coffee — Online",
+    "name": "Rock City Coffee \u2014 Online",
     "url": "https://rockcitycoffee.com",
     "category": "coffee roaster",
     "ownership_type": "worker co-op",
@@ -727,7 +727,7 @@
   },
   {
     "id": 74,
-    "name": "Slow Bloom — Coffee Shop",
+    "name": "Slow Bloom \u2014 Coffee Shop",
     "url": "https://www.slowbloomcoffee.com/shopcoffee",
     "category": "coffee roaster",
     "ownership_type": "worker co-op",
@@ -738,18 +738,18 @@
   },
   {
     "id": 75,
-    "name": "Morning Bell — Coffee",
+    "name": "Morning Bell \u2014 Coffee",
     "url": "https://morningbellcoffeeroasters.square.site",
     "category": "coffee roaster",
     "ownership_type": "worker co-op",
-    "ships": "US — verify",
+    "ships": "US \u2014 verify",
     "status": "verified active",
     "notes": "Iowa's first worker co-op business (2022). Site active. Wholesale and retail. Espresso bar and roastery in Ames IA.",
     "site_section": "Coffee & Tea"
   },
   {
     "id": 76,
-    "name": "Means Workwear — Apparel",
+    "name": "Means Workwear \u2014 Apparel",
     "url": "https://www.meansworkwear.com",
     "category": "political apparel",
     "ownership_type": "worker co-op",
@@ -760,7 +760,7 @@
   },
   {
     "id": 77,
-    "name": "Maggie's Organics — Clothing",
+    "name": "Maggie's Organics \u2014 Clothing",
     "url": "https://maggiesorganics.com",
     "category": "organic clothing / socks",
     "ownership_type": "employee-owned",
@@ -771,7 +771,7 @@
   },
   {
     "id": 78,
-    "name": "No Gods No Masters — Apparel",
+    "name": "No Gods No Masters \u2014 Apparel",
     "url": "https://www.no-gods-no-masters.com",
     "category": "political / activist clothing",
     "ownership_type": "collective",
@@ -782,7 +782,7 @@
   },
   {
     "id": 79,
-    "name": "Palestinian Soap Cooperative — Kufiya",
+    "name": "Palestinian Soap Cooperative \u2014 Kufiya",
     "url": "https://palestiniansoap.coop",
     "category": "soap / traditional goods",
     "ownership_type": "worker co-op",
@@ -793,7 +793,7 @@
   },
   {
     "id": 80,
-    "name": "Subvert — Platform Co-op",
+    "name": "Subvert \u2014 Platform Co-op",
     "url": "https://www.subvert.fm",
     "category": "music / platform",
     "ownership_type": "multi-stakeholder co-op",
@@ -804,7 +804,7 @@
   },
   {
     "id": 81,
-    "name": "Mirlo — Music Platform",
+    "name": "Mirlo \u2014 Music Platform",
     "url": "https://mirlo.space",
     "category": "music / platform",
     "ownership_type": "worker co-op",
@@ -815,7 +815,7 @@
   },
   {
     "id": 82,
-    "name": "Soapbox Co-op — Chicago",
+    "name": "Soapbox Co-op \u2014 Chicago",
     "url": "https://soapboxcoop.com",
     "category": "soap / personal care",
     "ownership_type": "worker co-op",
@@ -891,7 +891,7 @@
     "category": "local arts & culture / Minneapolis",
     "ownership_type": "worker co-op",
     "status": "verified active",
-    "notes": "Subscriber-backed alternative source for local arts, news, and food culture across the Minneapolis–St. Paul Twin Cities. Worker-owned, independent.",
+    "notes": "Subscriber-backed alternative source for local arts, news, and food culture across the Minneapolis\u2013St. Paul Twin Cities. Worker-owned, independent.",
     "site_section": "Media & Publishing"
   },
   {
@@ -932,7 +932,7 @@
     "ownership_type": "worker co-op",
     "ships": "Local (Spokane WA)",
     "status": "verified active",
-    "notes": "Worker and farmer-owned cooperative brewery and bakery in Spokane WA. Uses regionally grown grain. Taproom open Wed–Sun.",
+    "notes": "Worker and farmer-owned cooperative brewery and bakery in Spokane WA. Uses regionally grown grain. Taproom open Wed\u2013Sun.",
     "site_section": "Beer & Brewing"
   },
   {
@@ -1075,7 +1075,7 @@
     "ownership_type": "worker co-op",
     "ships": "US",
     "status": "verified active",
-    "notes": "Worker co-op game shop in Syracuse, NY (founded 2022). Magic: The Gathering, Pokémon, D&D, Pathfinder, Lorcana, board games, accessories. Starts pricing at 10% off MSRP. Free shipping over $125.",
+    "notes": "Worker co-op game shop in Syracuse, NY (founded 2022). Magic: The Gathering, Pok\u00e9mon, D&D, Pathfinder, Lorcana, board games, accessories. Starts pricing at 10% off MSRP. Free shipping over $125.",
     "site_section": "Games"
   },
   {
@@ -1267,7 +1267,7 @@
   },
   {
     "id": 130,
-    "name": "Coraçao Chocolate",
+    "name": "Cora\u00e7ao Chocolate",
     "url": "https://www.coracaoconfections.com",
     "category": "vegan chocolate / handcrafted confections",
     "ownership_type": "employee-owned",
@@ -1339,7 +1339,7 @@
     "ownership_type": "employee-owned",
     "ships": "US",
     "status": "verified active",
-    "notes": "100% employee-owned (ESOP) since 2020. Based in Tucson, AZ. Founded 1991 by Dennis Arnold; one of Arizona's oldest craft breweries. Online shop sells branded merch — hats, glassware, shirts, anniversary items. WooCommerce store.",
+    "notes": "100% employee-owned (ESOP) since 2020. Based in Tucson, AZ. Founded 1991 by Dennis Arnold; one of Arizona's oldest craft breweries. Online shop sells branded merch \u2014 hats, glassware, shirts, anniversary items. WooCommerce store.",
     "site_section": "Beer & Brewing"
   },
   {
@@ -1383,7 +1383,7 @@
     "ownership_type": "employee-owned",
     "ships": "US",
     "status": "verified active",
-    "notes": "Employee-owned (ESOP) since 1986. Based in Burlington, VT. One of the largest independent garden supply retailers in the US. Sells raised beds, planters, tools, seeds, composting equipment, and outdoor décor. Committed to sustainability and Vermont community.",
+    "notes": "Employee-owned (ESOP) since 1986. Based in Burlington, VT. One of the largest independent garden supply retailers in the US. Sells raised beds, planters, tools, seeds, composting equipment, and outdoor d\u00e9cor. Committed to sustainability and Vermont community.",
     "site_section": "Home & Garden"
   },
   {
@@ -1460,7 +1460,7 @@
     "ownership_type": "worker collective",
     "ships": "worldwide",
     "status": "verified active",
-    "notes": "Brooklyn NY worker collective making vegan, organic, zero-waste personal care products. Known for plastic-free packaging — compostable and recyclable. Products include deodorant, body oil, face care, and lip balm.",
+    "notes": "Brooklyn NY worker collective making vegan, organic, zero-waste personal care products. Known for plastic-free packaging \u2014 compostable and recyclable. Products include deodorant, body oil, face care, and lip balm.",
     "site_section": "Personal Care"
   },
   {
@@ -1502,9 +1502,53 @@
     "url": "https://resonate.coop",
     "category": "ethical music streaming platform",
     "ownership_type": "multi-stakeholder co-op",
-    "ships": "digital — worldwide",
+    "ships": "digital \u2014 worldwide",
     "status": "verified active",
-    "notes": "Multi-stakeholder co-op music streaming platform owned by artists, listeners, and workers. Uses stream2own model — listeners eventually own the music they stream. Alternative to Spotify owned by its community.",
+    "notes": "Multi-stakeholder co-op music streaming platform owned by artists, listeners, and workers. Uses stream2own model \u2014 listeners eventually own the music they stream. Alternative to Spotify owned by its community.",
     "site_section": "Music"
+  },
+  {
+    "id": 155,
+    "name": "Cleveland Embodiment Collective",
+    "url": "https://clevelandembodiment.org",
+    "category": "bodywork & massage",
+    "ownership_type": "worker co-op",
+    "ships": "Local (Cleveland, OH)",
+    "status": "verified active",
+    "notes": "Worker-owned bodywork practice in Cleveland's Tremont neighborhood. Massage, small group programming. Pay-what-you-can for 20% of sessions. No tipping.",
+    "site_section": "Personal Care"
+  },
+  {
+    "id": 156,
+    "name": "508.dev",
+    "url": "https://508.dev",
+    "category": "software engineering",
+    "ownership_type": "worker co-op",
+    "ships": "Global (remote)",
+    "status": "verified active",
+    "notes": "Worker-owned software engineering cooperative. 100+ engineers across 10 timezones. AI-native development, product engineering, cloud infrastructure.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 157,
+    "name": "JMP.chat",
+    "url": "https://jmp.chat",
+    "category": "telecom",
+    "ownership_type": "worker co-op",
+    "ships": "US & Canada",
+    "status": "verified active",
+    "notes": "Phone number service by MBOA Technology Co-operative. $4.99/mo for calling and texting from any device. Open-source software.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 158,
+    "name": "Bi-Mart",
+    "url": "https://www.bimart.com",
+    "category": "discount retail",
+    "ownership_type": "ESOP",
+    "ships": "Local (OR, WA, ID)",
+    "status": "verified active",
+    "notes": "Employee-owned membership discount retailer since 2004. 70+ stores in Oregon, Washington, and Idaho.",
+    "site_section": "Home Goods"
   }
 ]

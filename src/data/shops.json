@@ -1149,5 +1149,17 @@
     "id": 126,
     "lat": 38.4405,
     "lng": -122.7141
+  },
+  {
+    "name": "Bi-Mart",
+    "city": "Eugene",
+    "state": "OR",
+    "website": "https://www.bimart.com",
+    "category": "grocery",
+    "ownership_type": "ESOP",
+    "notes": "70+ stores in OR, WA, ID. Membership discount retailer.",
+    "id": 127,
+    "lat": 44.0521,
+    "lng": -123.0868
   }
 ]
