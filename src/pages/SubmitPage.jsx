@@ -105,7 +105,7 @@ function SubmitPage() {
                     placeholder="e.g. Baltimore" />
                 </div>
                 <div className="w-28">
-                  <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">State / Region</label>
+                  <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">State / Province</label>
                   <input type="text" value={formState} onChange={e => setFormState(e.target.value)}
                     className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors"
                     placeholder="e.g. MD" />
@@ -117,11 +117,6 @@ function SubmitPage() {
                   className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white text-gray-700">
                   <option value="US">United States</option>
                   <option value="CA">Canada</option>
-                  <option value="UK">United Kingdom</option>
-                  <option value="DE">Germany</option>
-                  <option value="FR">France</option>
-                  <option value="CH">Switzerland</option>
-                  <option value="Other">Other</option>
                 </select>
               </div>
               <div>
