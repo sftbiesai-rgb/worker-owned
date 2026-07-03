@@ -143,6 +143,7 @@ function MarketplaceIndexPage() {
           // Bonus: word in title AND tags = likely the actual product category
           if (inTags) score += 2
         }
+        else if (inStore && inTags) score += 2
         else if (inStore) score += 0.5
         else if (inTags) score += 0.5
       }
@@ -151,9 +152,32 @@ function MarketplaceIndexPage() {
       if (allMatch) scored.push({ p, score })
     }
 
-    return scored
-      .sort((a, b) => b.score - a.score)
-      .map(s => s.p)
+    // Sort by score, then interleave stores within same score tier
+    scored.sort((a, b) => b.score - a.score)
+    const interleaved = []
+    let i = 0
+    while (i < scored.length) {
+      // Collect items in same score tier
+      let j = i
+      while (j < scored.length && scored[j].score === scored[i].score) j++
+      const tier = scored.slice(i, j)
+      // Round-robin by store within tier
+      const byStore = new Map()
+      for (const item of tier) {
+        const key = item.p.store_name || ''
+        if (!byStore.has(key)) byStore.set(key, [])
+        byStore.get(key).push(item)
+      }
+      const queues = [...byStore.values()]
+      let idx = 0
+      while (queues.some(q => q.length > 0)) {
+        const q = queues[idx % queues.length]
+        if (q.length > 0) interleaved.push(q.shift())
+        idx++
+      }
+      i = j
+    }
+    return interleaved.map(s => s.p)
   }, [inputValue, products])
 
   const PER_PAGE = 40
