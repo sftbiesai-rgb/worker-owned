@@ -30,6 +30,13 @@ const routes = [
     keywords: 'worker owned marketplace, shop worker owned, buy from cooperatives, worker cooperative online store, alternative to amazon, employee owned products',
   },
   {
+    url: '/marketplace/companies',
+    title: 'All Worker Owned Companies | Worker Owned Marketplace',
+    description: 'Browse all worker owned and employee-owned companies in the Worker Owned marketplace directory, sorted by category.',
+    canonical: 'https://www.workerowned.info/marketplace/companies',
+    keywords: 'worker owned companies, worker cooperative directory, employee owned companies list, worker owned businesses',
+  },
+  {
     url: '/coffee',
     title: 'Worker Owned Coffee Shops in the US | Worker Owned Marketplace',
     description: 'Browse all worker owned coffee shops, cafes, and bakeries across the United States. Find cooperatively owned coffee near you.',

@@ -5,6 +5,7 @@ https://www.workerowned.info/bars
 https://www.workerowned.info/grocery
 https://www.workerowned.info/submit
 https://www.workerowned.info/marketplace
+https://www.workerowned.info/marketplace/companies
 https://www.workerowned.info/marketplace/coffee-tea
 https://www.workerowned.info/marketplace/media-publishing
 https://www.workerowned.info/marketplace/food-pantry

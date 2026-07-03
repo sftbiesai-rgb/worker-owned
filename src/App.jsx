@@ -6,6 +6,7 @@ import SubmitPage from './pages/SubmitPage.jsx'
 import MarketplacePage from './pages/MarketplacePage.jsx'
 import MarketplaceIndexPage from './pages/MarketplaceIndexPage.jsx'
 import StoreDetailPage from './pages/StoreDetailPage.jsx'
+import CompaniesPage from './pages/CompaniesPage.jsx'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <Route path="/browse" element={<Navigate to="/coffee" replace />} />
       <Route path="/submit" element={<SubmitPage />} />
       <Route path="/marketplace" element={<MarketplaceIndexPage />} />
+      <Route path="/marketplace/companies" element={<CompaniesPage />} />
       <Route path="/marketplace/store/:store" element={<StoreDetailPage />} />
       <Route path="/marketplace/:category/:subcategory" element={<MarketplacePage />} />
       <Route path="/marketplace/:category" element={<MarketplacePage />} />
