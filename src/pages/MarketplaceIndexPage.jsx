@@ -127,17 +127,27 @@ function MarketplaceIndexPage() {
     for (const p of products) {
       let allMatch = true
       let score = 0
+      // Strip store/brand name from title to detect brand-only title matches
+      const storeLower = (p.store_name || '').toLowerCase().replace(/['']/g, '')
+      const titleLower = (p.title || '').toLowerCase().replace(/[''™℠®©]/g, '').replace(/&#x[0-9a-f]+;/gi, '').replace(/&#\d+;/g, '')
+      const titleStripped = storeLower ? titleLower.replace(storeLower, '').replace(storeLower.replace(/\s+(co-op|cooperative|roasters|brewing|press)$/i, ''), '') : titleLower
       for (const stems of wordStems) {
         const inTitle = wordMatch(p.title, stems)
         const inStore = wordMatch(p.store_name, stems)
         const inTags = p.tags?.some(t => wordMatch(t, stems))
         if (!inTitle && !inStore && !inTags) { allMatch = false; break }
-        if (inTitle) score += 3
+        if (inTitle) {
+          // Check if match is in the actual product part of the title, not just the brand name
+          const inTitleStripped = stems.some(s => { const idx = titleStripped.indexOf(s); return idx !== -1 && (idx === 0 || !/[a-z]/.test(titleStripped[idx - 1])) })
+          score += inTitleStripped ? 3 : 1
+          // Bonus: word in title AND tags = likely the actual product category
+          if (inTags) score += 2
+        }
         else if (inStore) score += 0.5
         else if (inTags) score += 0.5
       }
-      // Bonus: full query appears as contiguous phrase in title
-      if (allMatch && p.title && p.title.toLowerCase().replace(/['']/g, '').includes(queryLower)) score += 5
+      // Bonus: full query appears in the product-relevant part of title
+      if (allMatch && titleStripped.includes(queryLower)) score += 5
       if (allMatch) scored.push({ p, score })
     }
 
