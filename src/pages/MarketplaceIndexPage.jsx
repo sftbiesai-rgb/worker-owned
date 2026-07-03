@@ -122,6 +122,7 @@ function MarketplaceIndexPage() {
     const wordStems = words.map(w => stemWord(w))
 
     // Score and filter: all query words must match somewhere in the product
+    const queryLower = inputValue.toLowerCase().trim().replace(/['']/g, '')
     const scored = []
     for (const p of products) {
       let allMatch = true
@@ -132,9 +133,11 @@ function MarketplaceIndexPage() {
         const inTags = p.tags?.some(t => wordMatch(t, stems))
         if (!inTitle && !inStore && !inTags) { allMatch = false; break }
         if (inTitle) score += 3
-        if (inTags) score += 1
-        if (inStore) score += 1
+        else if (inStore) score += 0.5
+        else if (inTags) score += 0.5
       }
+      // Bonus: full query appears as contiguous phrase in title
+      if (allMatch && p.title && p.title.toLowerCase().replace(/['']/g, '').includes(queryLower)) score += 5
       if (allMatch) scored.push({ p, score })
     }
 
