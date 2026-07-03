@@ -252,8 +252,8 @@ function MarketplaceIndexPage() {
                           >
                             {faviconUrl(p.store_url) && <img src={faviconUrl(p.store_url)} alt="" className="w-3 h-3 shrink-0" loading="lazy" />}
                             {p.store_name}
-                            {p.ownership_type && <span className={`ml-1 text-[8px] font-semibold px-1 py-px rounded ${p.ownership_type.toLowerCase().includes('worker co-op') || p.ownership_type.toLowerCase() === 'worker owned' ? 'bg-blue-50 text-[#004cb9]' : 'bg-green-50 text-green-700'}`}>{p.ownership_type}</span>}
                           </Link>
+                          {p.ownership_type && <div className="px-3 -mt-0.5"><span className={`text-[8px] font-semibold px-1 py-px rounded ${p.ownership_type.toLowerCase().includes('worker co-op') || p.ownership_type.toLowerCase() === 'worker owned' ? 'bg-blue-50 text-[#004cb9]' : 'bg-green-50 text-green-700'}`}>{p.ownership_type}</span></div>}
                         </div>
                       )}
                     </div>
