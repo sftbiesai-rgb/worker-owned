@@ -177,6 +177,7 @@ function BrowsePage({ category }) {
                 ) : (
                   <div className="text-xs text-[#BF0A30] truncate mt-0.5">{shop.city}, {shop.state}</div>
                 )}
+                {shop.notes && <div className="text-[10px] text-gray-400 mt-0.5 truncate">{shop.notes}</div>}
               </div>
             ))}
           </div>
