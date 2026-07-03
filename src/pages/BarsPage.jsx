@@ -1,14 +1,57 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { Search } from 'lucide-react'
+import { Search, Map, List } from 'lucide-react'
 import barsData from '../data/bars.json'
 
 // Exclude pure consumer co-ops (not worker owned)
 const CONSUMER_COOP_IDS = [14, 15, 16, 17]
 const bars = barsData.filter(b => !CONSUMER_COOP_IDS.includes(b.id))
 
+function BarMap({ items }) {
+  const mapRef = useRef(null)
+  const mapInstanceRef = useRef(null)
+
+  useEffect(() => {
+    if (!mapRef.current || items.length === 0) return
+    let cancelled = false
+
+    Promise.all([import('leaflet'), import('leaflet/dist/leaflet.css')]).then(([mod]) => {
+      if (cancelled || !mapRef.current) return
+      const L = mod.default
+      if (mapInstanceRef.current) { mapInstanceRef.current.remove(); mapInstanceRef.current = null }
+
+      const map = L.map(mapRef.current).setView([39.8, -98.5], 4)
+      mapInstanceRef.current = map
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 18,
+      }).addTo(map)
+
+      const markers = []
+      for (const bar of items) {
+        if (!bar.lat || !bar.lng) continue
+        const marker = L.circleMarker([bar.lat, bar.lng], { radius: 7, fillColor: '#004cb9', color: '#fff', weight: 2, fillOpacity: 0.9 }).addTo(map)
+        const url = bar.website?.startsWith('http') ? bar.website : `https://${bar.website}`
+        marker.bindPopup(`<strong>${bar.name}</strong><br>${bar.city}, ${bar.state}${bar.website ? `<br><a href="${url}" target="_blank" rel="noopener">Visit site</a>` : ''}`)
+        markers.push(marker)
+      }
+
+      if (markers.length > 0) {
+        const group = L.featureGroup(markers)
+        map.fitBounds(group.getBounds().pad(0.1))
+      }
+    })
+
+    return () => { cancelled = true; if (mapInstanceRef.current) { mapInstanceRef.current.remove(); mapInstanceRef.current = null } }
+  }, [items])
+
+  return <div ref={mapRef} className="w-full h-[400px] rounded-xl overflow-hidden" />
+}
+
 function BarsPage() {
   const [search, setSearch] = useState('')
+  const [view, setView] = useState('list')
 
   useEffect(() => {
     document.title = 'Worker Owned Bars & Breweries in the US | Worker Owned'
@@ -50,24 +93,24 @@ function BarsPage() {
           </p>
 
           <div className="flex gap-2 mb-5">
-            <Link
-              to="/coffee"
-              className="flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]"
-            >
-              Coffee
-            </Link>
-            <Link
-              to="/restaurants"
-              className="flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]"
-            >
-              Restaurants
-            </Link>
-            <Link
-              to="/bars"
-              className="flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors bg-[#004cb9] text-white"
-            >
-              Bars
-            </Link>
+            {[
+              { to: '/coffee', cat: 'coffee', label: 'Coffee' },
+              { to: '/restaurants', cat: 'restaurant', label: 'Restaurants' },
+              { to: '/bars', cat: 'bars', label: 'Bars' },
+              { to: '/grocery', cat: 'grocery', label: 'Grocery' },
+            ].map(tab => (
+              <Link
+                key={tab.cat}
+                to={tab.to}
+                className={`flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors ${
+                  tab.cat === 'bars'
+                    ? 'bg-[#004cb9] text-white'
+                    : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+                }`}
+              >
+                {tab.label}
+              </Link>
+            ))}
           </div>
 
           <div className="relative mb-4">
@@ -81,10 +124,19 @@ function BarsPage() {
             />
           </div>
 
-          <p className="text-xs text-gray-400 mb-3">
-            {filtered.length} bar{filtered.length !== 1 ? 's' : ''}
-          </p>
+          <div className="flex items-center justify-between mb-3">
+            <p className="text-xs text-gray-400">
+              {filtered.length} bar{filtered.length !== 1 ? 's' : ''}
+            </p>
+            <div className="flex gap-1">
+              <button onClick={() => setView('list')} className={`p-1.5 rounded-lg transition-colors ${view === 'list' ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-400 hover:text-[#004cb9]'}`}><List size={14} /></button>
+              <button onClick={() => setView('map')} className={`p-1.5 rounded-lg transition-colors ${view === 'map' ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-400 hover:text-[#004cb9]'}`}><Map size={14} /></button>
+            </div>
+          </div>
 
+          {view === 'map' ? (
+            <BarMap items={filtered} />
+          ) : (
           <div className="space-y-2">
             {filtered.map(bar => (
               <div key={bar.id} className="bg-[#f5f5f7] rounded-xl px-4 py-3">
@@ -115,6 +167,7 @@ function BarsPage() {
               </div>
             ))}
           </div>
+          )}
         </div>
 
         <div className="mt-3 text-center">

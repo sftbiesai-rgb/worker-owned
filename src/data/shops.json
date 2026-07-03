@@ -6,7 +6,9 @@
     "location": "707 W. Tower Ave, Alameda, CA 94501",
     "website": "firebrandartisanbreads.com",
     "category": "coffee",
-    "id": 1
+    "id": 1,
+    "lat": 37.6090291,
+    "lng": -121.899142
   },
   {
     "id": 2,
@@ -15,7 +17,9 @@
     "state": "CA",
     "location": "1505 San Pablo Ave, Berkeley, CA 94702",
     "website": "arizmendi-bakery.org",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 37.8708393,
+    "lng": -122.272863
   },
   {
     "id": 3,
@@ -24,7 +28,9 @@
     "state": "CA",
     "location": "1504 Shattuck Ave, Berkeley, CA 94709",
     "website": "cheeseboardcollective.coop",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 37.8708393,
+    "lng": -122.272863
   },
   {
     "id": 4,
@@ -33,7 +39,9 @@
     "state": "CA",
     "location": "2708 Russell St, Berkeley, CA 94705",
     "website": "nabolombakery.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 37.8708393,
+    "lng": -122.272863
   },
   {
     "id": 5,
@@ -42,7 +50,9 @@
     "state": "CA",
     "location": "4301 San Pablo Ave, Emeryville, CA 94608",
     "website": "arizmendibakery.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 37.8314089,
+    "lng": -122.2865266
   },
   {
     "id": 7,
@@ -51,7 +61,9 @@
     "state": "CA",
     "location": "9500 Gilman Dr, La Jolla, CA 92093",
     "website": "info6594074.wixsite.com/thechecafe",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 32.8458529,
+    "lng": -117.2575702
   },
   {
     "id": 8,
@@ -60,7 +72,9 @@
     "state": "CA",
     "location": "3156 Glendale Blvd, Los Angeles, CA 90039",
     "website": "proofbakery.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 34.0536909,
+    "lng": -118.242766
   },
   {
     "name": "Angel Cakes Bakery",
@@ -69,7 +83,9 @@
     "location": "745 5th St, Oakland, CA",
     "website": "angelcakes510.com",
     "category": "coffee",
-    "id": 9
+    "id": 9,
+    "lat": 37.8044557,
+    "lng": -122.271356
   },
   {
     "id": 10,
@@ -78,7 +94,9 @@
     "state": "CA",
     "location": "3267 Lakeshore Ave, Oakland, CA 94610",
     "website": "arizmendibakery.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 37.8044557,
+    "lng": -122.271356
   },
   {
     "name": "Understory Oakland",
@@ -87,7 +105,9 @@
     "location": "3340 International Blvd, Oakland, CA 94601",
     "website": "understoryoakland.com",
     "category": "restaurant",
-    "id": 11
+    "id": 11,
+    "lat": 37.8044557,
+    "lng": -122.271356
   },
   {
     "id": 12,
@@ -96,7 +116,9 @@
     "state": "CA",
     "location": "420 W Colton Ave, Redlands, CA 92374",
     "website": "slowbloomcoffee.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 34.0550328,
+    "lng": -117.1827445
   },
   {
     "id": 13,
@@ -105,7 +127,9 @@
     "state": "CA",
     "location": "1331 9th Ave, San Francisco, CA 94122",
     "website": "arizmendibakery.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 37.7879363,
+    "lng": -122.4075201
   },
   {
     "id": 14,
@@ -114,7 +138,9 @@
     "state": "CA",
     "location": "1268 Valencia St, San Francisco, CA 94110",
     "website": "arizmendi-valencia.squarespace.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 37.7879363,
+    "lng": -122.4075201
   },
   {
     "id": 15,
@@ -123,7 +149,9 @@
     "state": "CA",
     "location": "1369 Haight St, San Francisco, CA 94117",
     "website": "boundtogether.org",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 37.7879363,
+    "lng": -122.4075201
   },
   {
     "id": 16,
@@ -132,7 +160,9 @@
     "state": "CA",
     "location": "1123 Folsom St, San Francisco, CA 94103",
     "website": "studsf.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 37.7879363,
+    "lng": -122.4075201
   },
   {
     "id": 17,
@@ -141,16 +171,20 @@
     "state": "CA",
     "location": "3443 Stevens Creek Blvd, San Jose, CA 95117",
     "website": "asony.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 37.3361663,
+    "lng": -121.890591
   },
   {
     "id": 19,
-    "name": "La Milpa Café",
+    "name": "La Milpa Caf\u00e9",
     "city": "Santa Ana",
     "state": "CA",
     "location": "1901 W Walnut St, Santa Ana, CA 92703",
     "website": "https://www.lacolmenacoop.com/la-milpa-cafe",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 33.7494951,
+    "lng": -117.873221
   },
   {
     "id": 20,
@@ -159,7 +193,9 @@
     "state": "CA",
     "location": "32990 Alvarado-Niles Rd, Union City, CA 94587",
     "website": "nilespie.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 37.5872576,
+    "lng": -122.0215737
   },
   {
     "name": "Mujeres Emprendedoras Co-op",
@@ -168,7 +204,9 @@
     "location": "3738 Morrison Rd, Denver, CO 80219",
     "website": "mecooperative.com",
     "category": "restaurant",
-    "id": 21
+    "id": 21,
+    "lat": 39.7392364,
+    "lng": -104.984862
   },
   {
     "id": 23,
@@ -177,7 +215,9 @@
     "state": "GA",
     "location": "1492 Ralph David Abernathy Blvd SW, Atlanta, GA 30310",
     "website": "thekenekt.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 33.7544657,
+    "lng": -84.3898151
   },
   {
     "id": 24,
@@ -186,7 +226,9 @@
     "state": "IA",
     "location": "111 Main St, Ames, IA 50010",
     "website": "morningbellcoffeeroasters.square.site",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 42.0267567,
+    "lng": -93.6170448
   },
   {
     "id": 25,
@@ -195,7 +237,9 @@
     "state": "KY",
     "location": "1132 E St Catherine, Louisville, KY 40204",
     "website": "fullstopstation.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 38.2542376,
+    "lng": -85.759407
   },
   {
     "id": 26,
@@ -204,7 +248,9 @@
     "state": "LA",
     "location": "1430 N Dorgenois St, New Orleans, LA 70119",
     "website": "pagodacafe.net",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 29.9561422,
+    "lng": -90.0733934
   },
   {
     "id": 27,
@@ -213,7 +259,9 @@
     "state": "MA",
     "location": "29-35 Temple Pl, Boston, MA 02111",
     "website": "democracybrewing.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 42.3588336,
+    "lng": -71.0578303
   },
   {
     "id": 29,
@@ -222,7 +270,9 @@
     "state": "MA",
     "location": "89 Commercial St, Malden, MA 02148",
     "website": "cafe-reynard.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 42.4268484,
+    "lng": -71.0683741
   },
   {
     "id": 30,
@@ -231,7 +281,9 @@
     "state": "MA",
     "location": "310 Highland Ave, Somerville, MA 02144",
     "website": "newleafespresso.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 42.3875968,
+    "lng": -71.0994968
   },
   {
     "id": 31,
@@ -240,7 +292,9 @@
     "state": "MA",
     "location": "50 R.W. Moore Ave, West Bridgewater, MA 02379",
     "website": "equalexchange.coop",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 42.0190922,
+    "lng": -71.0079688
   },
   {
     "name": "Wooden Bar",
@@ -249,7 +303,9 @@
     "location": "4 Knowlton Ave, Worcester, MA 01603",
     "website": "wooden.coop",
     "category": "restaurant",
-    "id": 32
+    "id": 32,
+    "lat": 42.2625621,
+    "lng": -71.8018877
   },
   {
     "id": 33,
@@ -258,7 +314,9 @@
     "state": "MD",
     "location": "3543 Chestnut Ave, Baltimore, MD 21211",
     "website": "commongroundhampden.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 39.2908816,
+    "lng": -76.610759
   },
   {
     "id": 34,
@@ -267,7 +325,9 @@
     "state": "MD",
     "location": "1301 N Calvert St, Baltimore, MD 21202",
     "website": "mera.kitchen",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 39.2908816,
+    "lng": -76.610759
   },
   {
     "id": 35,
@@ -276,7 +336,9 @@
     "state": "MD",
     "location": "3128 Greenmount Ave, Baltimore, MD 21218",
     "website": "redemmas.org",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 39.2908816,
+    "lng": -76.610759
   },
   {
     "id": 37,
@@ -285,7 +347,9 @@
     "state": "ME",
     "location": "649 Congress St, Portland, ME 04101",
     "website": "localsproutscooperative.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 43.6573605,
+    "lng": -70.2586618
   },
   {
     "id": 38,
@@ -294,7 +358,9 @@
     "state": "ME",
     "location": "316 Main St, Rockland, ME 04841",
     "website": "rockcitycoffee.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 44.1048327,
+    "lng": -69.1091823
   },
   {
     "id": 39,
@@ -303,7 +369,9 @@
     "state": "MI",
     "location": "501 S Lake St, Marquette, MI 49855",
     "website": "drifabrewingcompany.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 46.4481521,
+    "lng": -87.6305899
   },
   {
     "id": 40,
@@ -312,7 +380,9 @@
     "state": "MN",
     "location": "1712 Marshall St NE, Minneapolis, MN 55413",
     "website": "brokenclockbrew.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 44.9772995,
+    "lng": -93.2654692
   },
   {
     "id": 41,
@@ -321,7 +391,9 @@
     "state": "MN",
     "location": "1821 Riverside Ave, Minneapolis, MN 55454",
     "website": "facebook.com/hardtimescafe",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 44.9772995,
+    "lng": -93.2654692
   },
   {
     "id": 42,
@@ -330,7 +402,9 @@
     "state": "MN",
     "location": "3440 Bloomington Ave, Minneapolis, MN 55407",
     "website": "https://maydaycafe.coop",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 44.9772995,
+    "lng": -93.2654692
   },
   {
     "id": 43,
@@ -339,7 +413,9 @@
     "state": "MN",
     "location": "2129 E Franklin Ave, Minneapolis, MN 55404",
     "website": "sewardcafe.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 44.9772995,
+    "lng": -93.2654692
   },
   {
     "id": 44,
@@ -348,7 +424,9 @@
     "state": "NC",
     "location": "1022 Haywood Rd, Asheville, NC 28806",
     "website": "firestorm.coop",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 35.595363,
+    "lng": -82.5508407
   },
   {
     "id": 45,
@@ -357,7 +435,9 @@
     "state": "ND",
     "location": "916 Main Ave, Fargo, ND 58103",
     "website": "redravenespressoparlor.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 46.877229,
+    "lng": -96.789821
   },
   {
     "id": 46,
@@ -366,7 +446,9 @@
     "state": "NY",
     "location": "1157 Myrtle Ave, Brooklyn, NY 11206",
     "website": "boyfriend.coop",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 40.6526006,
+    "lng": -73.9497211
   },
   {
     "id": 47,
@@ -375,7 +457,9 @@
     "state": "NY",
     "location": "388 Atlantic Ave, Brooklyn, NY 11217",
     "website": "seaandsoilcoop.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 40.6526006,
+    "lng": -73.9497211
   },
   {
     "id": 48,
@@ -384,7 +468,9 @@
     "state": "NY",
     "location": "402 Connecticut St, Buffalo, NY 14213",
     "website": "breadhive.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 42.8864163,
+    "lng": -78.8781493
   },
   {
     "id": 49,
@@ -393,7 +479,9 @@
     "state": "NY",
     "location": "549 W Utica St, Buffalo, NY 14213",
     "website": "extraextrapizza.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 42.8864163,
+    "lng": -78.8781493
   },
   {
     "id": 50,
@@ -402,7 +490,9 @@
     "state": "NY",
     "location": "430 N Cayuga St, Ithaca, NY 14850",
     "website": "gimmecoffee.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 42.4374175,
+    "lng": -76.5483724
   },
   {
     "id": 53,
@@ -411,7 +501,9 @@
     "state": "NY",
     "location": "936 Exchange St, Rochester, NY 14608",
     "website": "smallworldfood.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 43.157285,
+    "lng": -77.615214
   },
   {
     "id": 54,
@@ -420,7 +512,9 @@
     "state": "NY",
     "location": "5 E Main St, Springville, NY 14141",
     "website": "artscafespringville.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 42.508692,
+    "lng": -78.6667243
   },
   {
     "id": 55,
@@ -429,7 +523,9 @@
     "state": "OH",
     "location": "6 W State St, Athens, OH 45701",
     "website": "casanueva.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 39.3575616,
+    "lng": -82.0609557
   },
   {
     "id": 58,
@@ -438,7 +534,9 @@
     "state": "OH",
     "location": "2211 Hamilton Ave, Cleveland, OH 44114",
     "website": "phoenixcoffee.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 41.4996574,
+    "lng": -81.6936772
   },
   {
     "id": 59,
@@ -447,7 +545,9 @@
     "state": "OH",
     "location": "3870 N High St, Columbus, OH 43214",
     "website": "pattycakebakery.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 39.9622601,
+    "lng": -83.0007065
   },
   {
     "id": 60,
@@ -456,7 +556,9 @@
     "state": "OK",
     "location": "223 E Gray St, Norman, OK 73069",
     "website": "grayowlcoffee.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 35.2225717,
+    "lng": -97.4394816
   },
   {
     "id": 61,
@@ -465,7 +567,9 @@
     "state": "OR",
     "location": "1493 Duane St, Astoria, OR 97103",
     "website": "bluescorcher.coop",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 46.1882007,
+    "lng": -123.8319802
   },
   {
     "id": 62,
@@ -474,7 +578,9 @@
     "state": "OR",
     "location": "3925 NE Martin Luther King Blvd, Portland, OR 97212",
     "website": "cafeollipdx.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 45.5202471,
+    "lng": -122.674194
   },
   {
     "id": 63,
@@ -483,7 +589,9 @@
     "state": "OR",
     "location": "2420 SE Belmont St, Portland, OR 97214",
     "website": "mirisata.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 45.5202471,
+    "lng": -122.674194
   },
   {
     "id": 64,
@@ -492,7 +600,9 @@
     "state": "OR",
     "location": "101 SE 12th Ave, Portland, OR 97214",
     "website": "workerstap.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 45.5202471,
+    "lng": -122.674194
   },
   {
     "id": 65,
@@ -501,7 +611,9 @@
     "state": "PA",
     "location": "5349 Penn Ave, Pittsburgh, PA 15224",
     "website": "thirdspacebakery.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 40.4406968,
+    "lng": -80.0025666
   },
   {
     "id": 66,
@@ -510,7 +622,9 @@
     "state": "RI",
     "location": "335 Wickenden St, Providence, RI 02903",
     "website": "smallformat.one",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 41.8239891,
+    "lng": -71.4128343
   },
   {
     "id": 67,
@@ -519,7 +633,9 @@
     "state": "RI",
     "location": "711 Westminster St, Providence, RI 02903",
     "website": "whiteelectriccoffee.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 41.8239891,
+    "lng": -71.4128343
   },
   {
     "id": 69,
@@ -528,7 +644,9 @@
     "state": "VA",
     "location": "1719 Summit Ave, Richmond, VA 23230",
     "website": "afterglowcoffee.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 37.5385087,
+    "lng": -77.43428
   },
   {
     "id": 70,
@@ -537,7 +655,9 @@
     "state": "VT",
     "location": "51 The Square, Bellows Falls, VT 05101",
     "website": "flatiron.coop",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 43.134063,
+    "lng": -72.444534
   },
   {
     "name": "Blue Heron Bakery",
@@ -546,7 +666,9 @@
     "location": "4419 Harrison Ave NW #108, Olympia, WA 98502",
     "website": "blueheronbakery.com",
     "category": "coffee",
-    "id": 72
+    "id": 72,
+    "lat": 47.0451022,
+    "lng": -122.8950075
   },
   {
     "id": 74,
@@ -555,7 +677,9 @@
     "state": "WA",
     "location": "3909 18th Ave W, Seattle, WA 98119",
     "website": "pidgincooperative.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 47.6038321,
+    "lng": -122.330062
   },
   {
     "id": 76,
@@ -564,7 +688,9 @@
     "state": "WA",
     "location": "15550 27th Ave NE, Shoreline, WA 98155",
     "website": "pattypan.coop",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 47.7564667,
+    "lng": -122.3437497
   },
   {
     "id": 77,
@@ -573,7 +699,9 @@
     "state": "WI",
     "location": "1500 Gilson St, Madison, WI 53715",
     "website": "justcoffee.coop",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 43.07469,
+    "lng": -89.3841663
   },
   {
     "name": "Phat Daddy's on Da Tracks",
@@ -582,16 +710,20 @@
     "location": "Charleston, WV",
     "website": "phatdaddysonthetracks.com",
     "category": "restaurant",
-    "id": 79
+    "id": 79,
+    "lat": 38.3505995,
+    "lng": -81.6332812
   },
   {
     "id": 80,
-    "name": "Café Castro",
+    "name": "Caf\u00e9 Castro",
     "city": "Santa Fe",
     "state": "NM",
     "location": "2811 Cerrillos Rd, Santa Fe, NM 87507",
     "website": "cafecastrosf.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 35.6876096,
+    "lng": -105.938456
   },
   {
     "id": 82,
@@ -600,7 +732,9 @@
     "state": "MN",
     "location": "1306 2nd St NE, Minneapolis, MN 55413",
     "website": "facebook.com/p/Matchbox-Coffeeshop-100063523269520",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 44.9772995,
+    "lng": -93.2654692
   },
   {
     "id": 84,
@@ -609,7 +743,9 @@
     "state": "CA",
     "location": "11700 Long Beach Blvd, Lynwood, CA 90262",
     "website": "facebook.com/CollectiveAve",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 33.924831,
+    "lng": -118.2024154
   },
   {
     "id": 85,
@@ -618,7 +754,9 @@
     "state": "MD",
     "location": "1812 Greenmount Ave, Baltimore, MD 21202",
     "website": "threadcoffee.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 39.2908816,
+    "lng": -76.610759
   },
   {
     "id": 86,
@@ -627,7 +765,9 @@
     "state": "DC",
     "location": "1909 Q St NW, Washington, DC 20009",
     "website": "dupontcoffee.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 38.8950982,
+    "lng": -77.0363849
   },
   {
     "id": 88,
@@ -636,7 +776,9 @@
     "state": "OR",
     "location": "2816 NE Halsey St, Portland, OR 97232",
     "website": "catscratchcoop.org",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 45.5202471,
+    "lng": -122.674194
   },
   {
     "id": 89,
@@ -645,7 +787,9 @@
     "state": "CA",
     "location": "2787 Shattuck Ave, Berkeley, CA 94705",
     "website": "sconehengeberkeley.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 37.8708393,
+    "lng": -122.272863
   },
   {
     "id": 90,
@@ -654,7 +798,9 @@
     "state": "CA",
     "location": "2701 Fruitvale Ave, Oakland, CA 94601",
     "website": "instagram.com/hastamuertecoffee",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 37.8044557,
+    "lng": -122.271356
   },
   {
     "id": 91,
@@ -663,7 +809,9 @@
     "state": "MD",
     "location": "301 W 29th St, Baltimore, MD 21211",
     "website": "taharkabrothers.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 39.2908816,
+    "lng": -76.610759
   },
   {
     "id": 92,
@@ -672,7 +820,9 @@
     "state": "WA",
     "location": "1026 E Newark Ave, Spokane, WA 99202",
     "website": "thegrainshed.coop",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 47.6571934,
+    "lng": -117.42351
   },
   {
     "id": 94,
@@ -681,7 +831,9 @@
     "state": "MA",
     "location": "154 Maverick St, East Boston, MA 02128",
     "website": "democracybrewing.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 42.3750973,
+    "lng": -71.0392173
   },
   {
     "id": 96,
@@ -690,7 +842,9 @@
     "state": "NY",
     "location": "225 River St, Troy, NY 12180",
     "website": "cafeeuphoria.org",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 42.7284117,
+    "lng": -73.6917878
   },
   {
     "id": 97,
@@ -699,7 +853,9 @@
     "state": "WA",
     "location": "9252 57th Ave S, Seattle, WA 98118",
     "website": "judesoldtown.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 47.6038321,
+    "lng": -122.330062
   },
   {
     "id": 98,
@@ -708,7 +864,9 @@
     "state": "NY",
     "location": "7 E Main St, Trumansburg, NY 14886",
     "website": "gimmecoffee.com",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 42.5422939,
+    "lng": -76.6660589
   },
   {
     "id": 99,
@@ -717,7 +875,9 @@
     "state": "NY",
     "location": "7 Cornelia St, New York, NY 10014",
     "website": "donnanyc.com",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 40.7127281,
+    "lng": -74.0060152
   },
   {
     "id": 100,
@@ -726,7 +886,9 @@
     "state": "VT",
     "location": "1425 US Route 2, Marshfield, VT 05658",
     "website": "facebook.com/MarshfieldVillageStore",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 44.3513146,
+    "lng": -72.3535081
   },
   {
     "id": 101,
@@ -735,7 +897,9 @@
     "state": "MD",
     "location": "3128 Greenmount Ave, Baltimore, MD 21218",
     "website": "redemmas.org",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 39.2908816,
+    "lng": -76.610759
   },
   {
     "id": 102,
@@ -744,7 +908,9 @@
     "state": "DC",
     "location": "716 Monroe St NE, Washington, DC 20017",
     "website": "bol.coop",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 38.8950982,
+    "lng": -77.0363849
   },
   {
     "id": 107,
@@ -753,7 +919,9 @@
     "state": "CA",
     "location": "1504 Shattuck Ave, Berkeley, CA 94709",
     "website": "cheeseboardcollective.coop",
-    "category": "coffee"
+    "category": "coffee",
+    "lat": 37.8708393,
+    "lng": -122.272863
   },
   {
     "id": 108,
@@ -762,6 +930,104 @@
     "state": "CA",
     "location": "1512 Shattuck Ave, Berkeley, CA 94709",
     "website": "cheeseboardcollective.coop",
-    "category": "restaurant"
+    "category": "restaurant",
+    "lat": 37.8708393,
+    "lng": -122.272863
+  },
+  {
+    "name": "Rainbow Grocery Cooperative",
+    "city": "San Francisco",
+    "state": "CA",
+    "location": "1745 Folsom St, San Francisco, CA 94103",
+    "website": "https://rainbow.coop",
+    "category": "grocery",
+    "id": 109,
+    "lat": 37.7697,
+    "lng": -122.4147,
+    "ownership_type": "worker co-op"
+  },
+  {
+    "name": "Other Avenues Food Store",
+    "city": "San Francisco",
+    "state": "CA",
+    "location": "3930 Judah St, San Francisco, CA 94122",
+    "website": "https://otheravenues.coop",
+    "category": "grocery",
+    "ownership_type": "worker co-op",
+    "id": 110,
+    "lat": 37.7604,
+    "lng": -122.5079
+  },
+  {
+    "name": "Mandela Grocery Cooperative",
+    "city": "Oakland",
+    "state": "CA",
+    "location": "1430 7th St, Oakland, CA 94607",
+    "website": "https://www.mandelagrocery.coop",
+    "category": "grocery",
+    "ownership_type": "worker co-op",
+    "id": 111,
+    "lat": 37.8054,
+    "lng": -122.2945
+  },
+  {
+    "name": "Cheese Board Collective",
+    "city": "Berkeley",
+    "state": "CA",
+    "location": "1504 Shattuck Ave, Berkeley, CA 94709",
+    "website": "https://cheeseboardcollective.coop",
+    "category": "grocery",
+    "ownership_type": "worker co-op",
+    "id": 112,
+    "lat": 37.8798,
+    "lng": -122.2688
+  },
+  {
+    "name": "Weaver Street Market",
+    "city": "Carrboro",
+    "state": "NC",
+    "location": "101 E Weaver St, Carrboro, NC 27510",
+    "website": "https://www.weaverstreetmarket.coop",
+    "category": "grocery",
+    "ownership_type": "multi-stakeholder co-op",
+    "id": 113,
+    "lat": 35.9101,
+    "lng": -79.0753
+  },
+  {
+    "name": "Weaver Street Market",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "location": "228 S Estes Dr, Chapel Hill, NC 27514",
+    "website": "https://www.weaverstreetmarket.coop",
+    "category": "grocery",
+    "ownership_type": "multi-stakeholder co-op",
+    "id": 114,
+    "lat": 35.9274,
+    "lng": -79.0628
+  },
+  {
+    "name": "Weaver Street Market",
+    "city": "Hillsborough",
+    "state": "NC",
+    "location": "228 S Churton St, Hillsborough, NC 27278",
+    "website": "https://www.weaverstreetmarket.coop",
+    "category": "grocery",
+    "ownership_type": "multi-stakeholder co-op",
+    "id": 115,
+    "lat": 36.0593,
+    "lng": -79.099
+  },
+  {
+    "name": "Weaver Street Market",
+    "city": "Raleigh",
+    "state": "NC",
+    "location": "3540 Wade Ave, Raleigh, NC 27607",
+    "website": "https://www.weaverstreetmarket.coop",
+    "category": "grocery",
+    "ownership_type": "multi-stakeholder co-op",
+    "id": 116,
+    "lat": 35.7982,
+    "lng": -78.6831
   }
 ]

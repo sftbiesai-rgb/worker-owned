@@ -51,6 +51,13 @@ const routes = [
     keywords: 'worker owned bar, cooperative brewery, worker owned brewpub, cooperative taproom, employee owned brewery',
   },
   {
+    url: '/grocery',
+    title: 'Worker Owned Grocery Stores in the US | Worker Owned',
+    description: 'Browse all worker owned grocery stores and food co-ops across the United States. Find cooperatively owned groceries near you.',
+    canonical: 'https://www.workerowned.info/grocery',
+    keywords: 'worker owned grocery, cooperative grocery store, worker cooperative food store, employee owned grocery near me',
+  },
+  {
     url: '/submit',
     title: 'Submit a Worker Owned Business | Worker Owned',
     description: 'Submit a worker owned business to the Worker Owned directory. Add your cooperative coffee shop, restaurant, or online store.',

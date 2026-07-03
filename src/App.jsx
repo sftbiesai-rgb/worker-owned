@@ -14,6 +14,7 @@ export default function App() {
       <Route path="/coffee" element={<BrowsePage category="coffee" />} />
       <Route path="/restaurants" element={<BrowsePage category="restaurant" />} />
       <Route path="/bars" element={<BarsPage />} />
+      <Route path="/grocery" element={<BrowsePage category="grocery" />} />
       <Route path="/browse" element={<Navigate to="/coffee" replace />} />
       <Route path="/submit" element={<SubmitPage />} />
       <Route path="/marketplace" element={<MarketplaceIndexPage />} />

@@ -16,6 +16,7 @@ function SubmitPage() {
   const [formWebsite, setFormWebsite] = useState('')
   const [formEmail, setFormEmail] = useState('')
   const [formDesc, setFormDesc] = useState('')
+  const [formCountry, setFormCountry] = useState('US')
   const [formMarketplace, setFormMarketplace] = useState(false)
   const [captchaA] = useState(Math.floor(Math.random() * 10) + 3)
   const [captchaB] = useState(Math.floor(Math.random() * 10) + 1)
@@ -37,7 +38,7 @@ function SubmitPage() {
       const res = await fetch('https://formspree.io/f/mjglzgwl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: formName, category: formCategory, city: formCity, state: formState, website: formWebsite, email: formEmail, description: formDesc, marketplace_request: formMarketplace }),
+        body: JSON.stringify({ name: formName, category: formCategory, city: formCity, state: formState, country: formCountry, website: formWebsite, email: formEmail, description: formDesc, marketplace_request: formMarketplace }),
       })
       if (!res.ok) {
         setFormError('Something went wrong. Please try again.')
@@ -103,12 +104,25 @@ function SubmitPage() {
                     className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors"
                     placeholder="e.g. Baltimore" />
                 </div>
-                <div className="w-20">
-                  <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">State</label>
+                <div className="w-28">
+                  <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">State / Region</label>
                   <input type="text" value={formState} onChange={e => setFormState(e.target.value)}
                     className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors"
-                    placeholder="MD" maxLength={2} />
+                    placeholder="e.g. MD" />
                 </div>
+              </div>
+              <div>
+                <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Country</label>
+                <select value={formCountry} onChange={e => setFormCountry(e.target.value)}
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white text-gray-700">
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="DE">Germany</option>
+                  <option value="FR">France</option>
+                  <option value="CH">Switzerland</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
               <div>
                 <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Website</label>

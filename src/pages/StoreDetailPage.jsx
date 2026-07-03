@@ -14,6 +14,24 @@ function displayTags(tags) {
     .slice(0, 3)
 }
 
+function thumbUrl(url, size = 300) {
+  if (!url) return url
+  try {
+    const u = new URL(url)
+    if (u.hostname === 'cdn.shopify.com') {
+      u.searchParams.set('width', String(size))
+      return u.toString()
+    }
+  } catch {}
+  return url
+}
+
+function faviconUrl(siteUrl) {
+  if (!siteUrl) return null
+  try { return 'https://www.google.com/s2/favicons?domain=' + new URL(siteUrl).hostname + '&sz=16' }
+  catch { return null }
+}
+
 function dedupeByUrl(entries) {
   const seen = new Map()
   for (let i = entries.length - 1; i >= 0; i--) {
@@ -42,18 +60,33 @@ function ownershipBadge(type) {
   )
 }
 
+const SECTION_SLUGS = {
+  'Coffee & Tea': 'coffee-tea',
+  'Media & Publishing': 'media-publishing',
+  'Food & Pantry': 'food-pantry',
+  'Apparel': 'apparel',
+  'Art & Prints': 'art-prints',
+  'Music': 'music',
+  'Home Goods': 'home-goods',
+  'Personal Care': 'personal-care',
+  'Games': 'games',
+  'Beer & Brewing': 'beer-brewing',
+}
+
 function StoreDetailPage() {
   const { store } = useParams()
   const entry = STORE_BY_SLUG[store]
   const [products, setProducts] = useState([])
+  const categorySlug = entry ? SECTION_SLUGS[entry.site_section] : null
 
   useEffect(() => {
     if (!entry) return
-    fetch('/data/products.json')
+    const file = categorySlug ? `/data/products-${categorySlug}.json` : '/data/products.json'
+    fetch(file)
       .then(r => r.json())
       .then(data => setProducts(data.filter(p => p.store_url === entry.url).slice(0, 100)))
       .catch(() => {})
-  }, [entry])
+  }, [entry, categorySlug])
 
   useEffect(() => {
     if (!entry) return
@@ -72,19 +105,6 @@ function StoreDetailPage() {
 
   if (!entry) return <Navigate to="/marketplace" replace />
 
-  const categorySlug = {
-    'Coffee & Tea': 'coffee-tea',
-    'Media & Publishing': 'media-publishing',
-    'Food & Pantry': 'food-pantry',
-    'Apparel': 'apparel',
-    'Art & Prints': 'art-prints',
-    'Music': 'music',
-    'Home Goods': 'home-goods',
-    'Personal Care': 'personal-care',
-    'Games': 'games',
-    'Beer & Brewing': 'beer-brewing',
-  }[entry.site_section]
-
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
       <main className="flex-1 max-w-xl lg:max-w-4xl mx-auto w-full px-5 py-8 flex flex-col">
@@ -100,7 +120,8 @@ function StoreDetailPage() {
           {/* Store header */}
           <div className="mb-4">
             <div className="flex items-start justify-between gap-2 mb-1">
-              <h1>
+              <h1 className="flex items-center gap-2">
+                {faviconUrl(entry.url) && <img src={faviconUrl(entry.url)} alt="" className="w-5 h-5 shrink-0" loading="lazy" />}
                 <a
                   href={entry.url}
                   target="_blank"
@@ -138,7 +159,7 @@ function StoreDetailPage() {
                   >
                     {p.image && (
                       <div className="aspect-square w-full overflow-hidden bg-gray-100 relative">
-                        <img src={p.image} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+                        <img src={thumbUrl(p.image)} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
                         {p.available === false && (
                           <span className="absolute top-1.5 left-1.5 bg-gray-800/75 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded">Sold out</span>
                         )}

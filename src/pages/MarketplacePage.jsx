@@ -14,6 +14,24 @@ function displayTags(tags) {
     .slice(0, 3)
 }
 
+function thumbUrl(url, size = 300) {
+  if (!url) return url
+  try {
+    const u = new URL(url)
+    if (u.hostname === 'cdn.shopify.com') {
+      u.searchParams.set('width', String(size))
+      return u.toString()
+    }
+  } catch {}
+  return url
+}
+
+function faviconUrl(siteUrl) {
+  if (!siteUrl) return null
+  try { return 'https://www.google.com/s2/favicons?domain=' + new URL(siteUrl).hostname + '&sz=16' }
+  catch { return null }
+}
+
 const SUBCATEGORIES = {
   apparel: [
     { slug: 'shoes', label: 'Shoes & Footwear', keywords: ['shoe', 'boot', 'sandal', 'sneaker', 'clog', 'slipper', 'slide', 'mule', 'loafer', 'flat ', 'heel', 'wedge'] },
@@ -87,11 +105,12 @@ function MarketplacePage() {
   const [showStores, setShowStores] = useState(false)
 
   useEffect(() => {
-    fetch('/data/products.json')
+    if (!section) return
+    fetch(`/data/products-${section.slug}.json`)
       .then(r => r.json())
       .then(setProducts)
       .catch(() => {})
-  }, [])
+  }, [section])
 
   useEffect(() => {
     if (!section) return
@@ -214,7 +233,7 @@ function MarketplacePage() {
                     >
                       {p.image && (
                         <div className="aspect-square w-full overflow-hidden bg-gray-100 relative">
-                          <img src={p.image} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+                          <img src={thumbUrl(p.image)} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
                           {p.available === false && (
                             <span className="absolute top-1.5 left-1.5 bg-gray-800/75 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded">Sold out</span>
                           )}
@@ -234,9 +253,11 @@ function MarketplacePage() {
                       <div className="px-3 pb-2">
                         <Link
                           to={`/marketplace/store/${slugify(p.store_name)}`}
-                          className="text-[10px] text-gray-400 hover:text-[#004cb9] transition-colors truncate block"
+                          className="text-[10px] text-gray-400 hover:text-[#004cb9] transition-colors truncate flex items-center gap-1"
                         >
+                          {faviconUrl(p.store_url) && <img src={faviconUrl(p.store_url)} alt="" className="w-3 h-3 shrink-0" loading="lazy" />}
                           {p.store_name}
+                          {p.ownership_type && <span className={`ml-1 text-[8px] font-semibold px-1 py-px rounded ${p.ownership_type.toLowerCase().includes('worker co-op') || p.ownership_type.toLowerCase() === 'worker owned' ? 'bg-blue-50 text-[#004cb9]' : 'bg-green-50 text-green-700'}`}>{p.ownership_type}</span>}
                         </Link>
                       </div>
                     )}
@@ -282,7 +303,8 @@ function MarketplacePage() {
               {entries.map(entry => (
                 <Link key={entry.id} to={`/marketplace/store/${slugify(entry.name)}`} className="block bg-[#f5f5f7] rounded-xl px-4 py-3 hover:ring-1 hover:ring-[#004cb9] transition-all">
                   <div className="flex items-start justify-between gap-2 mb-1">
-                    <span className="font-semibold text-sm text-[#004cb9] leading-snug">
+                    <span className="font-semibold text-sm text-[#004cb9] leading-snug flex items-center gap-1.5">
+                      {faviconUrl(entry.url) && <img src={faviconUrl(entry.url)} alt="" className="w-4 h-4 shrink-0" loading="lazy" />}
                       {entry.name}
                     </span>
                     {ownershipBadge(entry.ownership_type)}

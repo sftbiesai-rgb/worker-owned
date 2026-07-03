@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender.mjs",
+    "build": "node scripts/split-products.mjs && vite build && node scripts/prerender.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "or-pipeline": "node scripts/or-pipeline.mjs"
@@ -13,6 +13,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
     "@vercel/analytics": "^2.0.1",
+    "leaflet": "^1.9.4",
     "nodemailer": "^8.0.7",
     "puppeteer-core": "^25.2.0",
     "react": "^19.2.5",

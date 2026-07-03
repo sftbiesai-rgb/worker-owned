@@ -7,7 +7,9 @@
     "location": "7 Cornelia St, New York, NY 10014",
     "website": "donnanyc.com",
     "category": "bar",
-    "notes": "NYC's first worker-owned cocktail bar. USFWC member. Pure worker co-op."
+    "notes": "NYC's first worker-owned cocktail bar. USFWC member. Pure worker co-op.",
+    "lat": 40.7127281,
+    "lng": -74.0060152
   },
   {
     "id": 2,
@@ -17,7 +19,9 @@
     "location": "1157 Myrtle Ave, Brooklyn, NY 11206",
     "website": "boyfriend.coop",
     "category": "bar",
-    "notes": "Worker-owned cooperative cafe and cocktail bar. Queer-focused."
+    "notes": "Worker-owned cooperative cafe and cocktail bar. Queer-focused.",
+    "lat": 40.6526006,
+    "lng": -73.9497211
   },
   {
     "id": 3,
@@ -27,7 +31,9 @@
     "location": "101 SE 12th Ave, Portland, OR 97214",
     "website": "workerstap.com",
     "category": "bar",
-    "notes": "Worker-owned beer bar. Profits split equally among members."
+    "notes": "Worker-owned beer bar. Profits split equally among members.",
+    "lat": 45.5202471,
+    "lng": -122.674194
   },
   {
     "id": 4,
@@ -37,7 +43,9 @@
     "location": "35 Temple Pl, Boston, MA 02111",
     "website": "democracybrewing.com",
     "category": "bar",
-    "notes": "Boston's first worker-owned brewery and pub. USFWC member."
+    "notes": "Boston's first worker-owned brewery and pub. USFWC member.",
+    "lat": 42.3588336,
+    "lng": -71.0578303
   },
   {
     "id": 5,
@@ -47,7 +55,9 @@
     "location": "154 Maverick St, East Boston, MA 02128",
     "website": "democracybrewing.com",
     "category": "bar",
-    "notes": "Second location of Democracy Brewing, opened 2025."
+    "notes": "Second location of Democracy Brewing, opened 2025.",
+    "lat": 42.3588336,
+    "lng": -71.0578303
   },
   {
     "id": 6,
@@ -57,7 +67,9 @@
     "location": "5140 Ballard Ave NW, Seattle, WA 98107",
     "website": "conorbyrnepub.com",
     "category": "bar",
-    "notes": "FLAG: Hybrid worker + ~600 community member co-op. Employees led buyout in 2024."
+    "notes": "FLAG: Hybrid worker + ~600 community member co-op. Employees led buyout in 2024.",
+    "lat": 47.6038321,
+    "lng": -122.330062
   },
   {
     "id": 8,
@@ -67,7 +79,9 @@
     "location": "1026 E Newark Ave, Spokane, WA 99202",
     "website": "thegrainshed.coop",
     "category": "bar",
-    "notes": "Worker and farmer-owned cooperative. Brewery, bakery, and taproom."
+    "notes": "Worker and farmer-owned cooperative. Brewery, bakery, and taproom.",
+    "lat": 47.6571934,
+    "lng": -117.42351
   },
   {
     "id": 9,
@@ -77,7 +91,9 @@
     "location": "1712 Marshall St NE, Minneapolis, MN 55413",
     "website": "brokenclockbrew.com",
     "category": "bar",
-    "notes": "FLAG: Member co-op — workers can become owner-members but public can also join."
+    "notes": "FLAG: Member co-op — workers can become owner-members but public can also join.",
+    "lat": 44.9772995,
+    "lng": -93.2654692
   },
   {
     "id": 10,
@@ -87,7 +103,9 @@
     "location": "8022 E Green Bluff Rd, Colbert, WA 99005",
     "website": "wildland.coop",
     "category": "bar",
-    "notes": "FLAG: Worker-owned brewery and winery taproom on farm property. Colbert is rural, ~15 miles north of Spokane."
+    "notes": "FLAG: Worker-owned brewery and winery taproom on farm property. Colbert is rural, ~15 miles north of Spokane.",
+    "lat": 47.8245288,
+    "lng": -117.3474086
   },
   {
     "id": 11,
@@ -97,7 +115,9 @@
     "location": "163 Central Park Square, Los Alamos, NM 87544",
     "website": "bathtubrowbrewing.coop",
     "category": "bar",
-    "notes": "Hybrid consumer and worker co-op brewery."
+    "notes": "Hybrid consumer and worker co-op brewery.",
+    "lat": 35.88137,
+    "lng": -106.298959
   },
   {
     "id": 12,
@@ -107,7 +127,9 @@
     "location": "1600 E 5th St, Dayton, OH 45403",
     "website": "fifthstreetbrewpub.com",
     "category": "bar",
-    "notes": "Ohio's first cooperative brewpub."
+    "notes": "Ohio's first cooperative brewpub.",
+    "lat": 39.7589478,
+    "lng": -84.1916069
   },
   {
     "id": 13,
@@ -117,7 +139,9 @@
     "location": "1123 Folsom St, San Francisco, CA 94103",
     "website": "studsf.com",
     "category": "bar",
-    "notes": "First worker-owned cooperative nightclub in the US. LGBTQ+ bar. Reopened at new location April 2024."
+    "notes": "First worker-owned cooperative nightclub in the US. LGBTQ+ bar. Reopened at new location April 2024.",
+    "lat": 37.7879363,
+    "lng": -122.4075201
   },
   {
     "id": 15,
@@ -127,7 +151,9 @@
     "location": "23 4th Ave SW, Ronan, MT 59864",
     "website": "ronancoopbrewery.com",
     "category": "bar",
-    "notes": "FLAG: Consumer/member co-op (shares at $250). Montana's first cooperative brewery. Opened September 2020."
+    "notes": "FLAG: Consumer/member co-op (shares at $250). Montana's first cooperative brewery. Opened September 2020.",
+    "lat": 47.5288233,
+    "lng": -114.101501
   },
   {
     "id": 16,
@@ -137,7 +163,9 @@
     "location": "8570 Greenwood Ave N, Seattle, WA 98103",
     "website": "flyingbike.coop",
     "category": "bar",
-    "notes": "FLAG: Consumer/member co-op (public membership at $200). Washington's first cooperatively owned brewery. Founded 2011."
+    "notes": "FLAG: Consumer/member co-op (public membership at $200). Washington's first cooperatively owned brewery. Founded 2011.",
+    "lat": 47.6038321,
+    "lng": -122.330062
   },
   {
     "id": 17,
@@ -147,7 +175,9 @@
     "location": "2018 S 1st St #170, Milwaukee, WI 53207",
     "website": "newbaronsbrewing.com",
     "category": "bar",
-    "notes": "FLAG: Consumer/member co-op (~650 members at $200). Wisconsin's first cooperative brewery. Operates as a brewery incubator."
+    "notes": "FLAG: Consumer/member co-op (~650 members at $200). Wisconsin's first cooperative brewery. Operates as a brewery incubator.",
+    "lat": 43.0386475,
+    "lng": -87.9090751
   },
   {
     "id": 18,
@@ -157,6 +187,8 @@
     "location": "2516 Market Ave, Cleveland, OH 44113",
     "website": "greatlakesbrewing.com",
     "category": "brewery",
-    "notes": "Employee-owned via ESOP since 2018. Brewpub and taproom in Ohio City neighborhood. Pioneered craft beer in Ohio."
+    "notes": "Employee-owned via ESOP since 2018. Brewpub and taproom in Ohio City neighborhood. Pioneered craft beer in Ohio.",
+    "lat": 41.4996574,
+    "lng": -81.6936772
   }
 ]
