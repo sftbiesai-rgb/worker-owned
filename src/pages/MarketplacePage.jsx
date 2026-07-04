@@ -109,6 +109,7 @@ function MarketplacePage() {
   useEffect(() => {
     if (!section) return
     setLoaded(false)
+    setShowStores(category === 'tech-software' || category === 'art-prints' || category === 'music')
     fetch(`/data/products-${section.slug}.json`)
       .then(r => r.json())
       .then(d => { setProducts(d); setLoaded(true) })
