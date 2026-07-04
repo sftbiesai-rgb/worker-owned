@@ -286,7 +286,7 @@ function MarketplacePage() {
               )}
             </>
           ) : products.length > 0 ? (
-            <p className="text-sm text-gray-500 text-center py-4">Please visit the company sites below to see products and services offered.</p>
+            <p className="text-sm text-gray-500 text-center py-4">To see products and services offered, visit company sites below.</p>
           ) : null}
         </div>
 
