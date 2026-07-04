@@ -46,6 +46,7 @@ const SECTIONS = [
   'Art & Prints',
   'Music',
   'Games',
+  'Tech & Software',
 ]
 
 const allStores = dedupeByUrl(marketplaceData)

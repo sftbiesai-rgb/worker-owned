@@ -131,6 +131,13 @@ const routes = [
     description: 'Find worker owned and cooperatively owned breweries. Craft beer made by and for the workers who brew it.',
     canonical: 'https://www.workerowned.info/marketplace/beer-brewing',
   },
+  {
+    url: '/marketplace/tech-software',
+    title: 'Worker Owned Tech & Software | Worker Owned Marketplace',
+    description: 'Worker owned technology companies, software co-ops, and platform cooperatives. Tech built by the people who make it.',
+    canonical: 'https://www.workerowned.info/marketplace/tech-software',
+    keywords: 'worker owned tech, cooperative software, worker owned software company, platform cooperative, tech co-op',
+  },
 ]
 
 // Subcategory routes
