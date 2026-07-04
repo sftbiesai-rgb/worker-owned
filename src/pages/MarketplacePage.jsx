@@ -102,15 +102,17 @@ function MarketplacePage() {
   const subs = SUBCATEGORIES[category]
   const activeSub = subs?.find(s => s.slug === subcategory) || null
   const [products, setProducts] = useState([])
+  const [loaded, setLoaded] = useState(false)
   const [page, setPage] = useState(1)
   const [showStores, setShowStores] = useState(category === 'tech-software' || category === 'art-prints' || category === 'music')
 
   useEffect(() => {
     if (!section) return
+    setLoaded(false)
     fetch(`/data/products-${section.slug}.json`)
       .then(r => r.json())
-      .then(setProducts)
-      .catch(() => {})
+      .then(d => { setProducts(d); setLoaded(true) })
+      .catch(() => setLoaded(true))
   }, [section])
 
   useEffect(() => {
@@ -217,7 +219,7 @@ function MarketplacePage() {
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-sm font-bold text-gray-700">{activeSub ? activeSub.label : section.label}</h2>
             <p className="text-xs text-gray-400">
-              {products.length > 0 ? `${filtered.length} product${filtered.length !== 1 ? 's' : ''}` : 'Loading…'}
+              {!loaded ? 'Loading…' : products.length > 0 ? `${filtered.length} product${filtered.length !== 1 ? 's' : ''}` : ''}
             </p>
           </div>
 
@@ -285,7 +287,7 @@ function MarketplacePage() {
                 </div>
               )}
             </>
-          ) : products.length > 0 ? (
+          ) : loaded ? (
             <p className="text-sm text-gray-500 text-center py-4">To see products and services offered, visit company sites below.</p>
           ) : null}
         </div>
