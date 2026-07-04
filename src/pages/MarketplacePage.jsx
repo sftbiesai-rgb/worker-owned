@@ -68,6 +68,7 @@ const SECTIONS = [
   { slug: 'personal-care',    label: 'Personal Care',      sectionName: 'Personal Care',      title: 'Worker Owned Soap & Personal Care Online | Worker Owned Marketplace',                  description: 'Shop worker owned soaps and personal care products online. Cooperatively made with natural ingredients.' },
   { slug: 'games',            label: 'Games',              sectionName: 'Games',              title: 'Worker Owned Board Games Online | Worker Owned Marketplace',                           description: 'Buy board games from worker owned cooperatives. Social justice and cooperative games made in the USA.' },
   { slug: 'beer-brewing',     label: 'Beer & Brewing',     sectionName: 'Beer & Brewing',     title: 'Worker Owned Breweries & Craft Beer | Worker Owned Marketplace',                       description: 'Find worker owned and cooperatively owned breweries. Craft beer made by and for the workers who brew it.' },
+  { slug: 'tech-software',    label: 'Tech & Software',    sectionName: 'Tech & Software',    title: 'Worker Owned Tech & Software | Worker Owned Marketplace',                             description: 'Worker owned technology companies, software co-ops, and platform cooperatives. Tech built by the people who make it.' },
 ]
 
 function dedupeByUrl(entries) {

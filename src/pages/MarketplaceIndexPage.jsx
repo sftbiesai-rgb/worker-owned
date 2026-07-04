@@ -43,6 +43,7 @@ const MARKETPLACE_CATEGORIES = [
   { slug: 'personal-care',    label: 'Personal Care' },
   { slug: 'games',            label: 'Games' },
   { slug: 'beer-brewing',     label: 'Beer & Brewing' },
+  { slug: 'tech-software',    label: 'Tech & Software' },
 ]
 
 function MarketplaceIndexPage() {

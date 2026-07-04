@@ -22,6 +22,7 @@ const SECTIONS = {
   'Personal Care': 'personal-care',
   'Games': 'games',
   'Beer & Brewing': 'beer-brewing',
+  'Tech & Software': 'tech-software',
 }
 
 const products = JSON.parse(readFileSync(resolve(root, 'public/data/products.json'), 'utf-8'))
