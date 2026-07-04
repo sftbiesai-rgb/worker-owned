@@ -149,6 +149,11 @@ function MarketplaceIndexPage() {
       }
       // Bonus: full query appears in the product-relevant part of title
       if (allMatch && titleStripped.includes(queryLower)) score += 5
+      // Category bonus: query matches the product's section (e.g. "coffee" matches "Coffee & Tea")
+      if (allMatch && p.site_section) {
+        const sectionLower = p.site_section.toLowerCase()
+        if (words.some(w => sectionLower.includes(w))) score += 4
+      }
       if (allMatch) scored.push({ p, score })
     }
 
