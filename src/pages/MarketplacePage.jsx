@@ -103,7 +103,7 @@ function MarketplacePage() {
   const activeSub = subs?.find(s => s.slug === subcategory) || null
   const [products, setProducts] = useState([])
   const [page, setPage] = useState(1)
-  const [showStores, setShowStores] = useState(false)
+  const [showStores, setShowStores] = useState(category === 'tech-software')
 
   useEffect(() => {
     if (!section) return
