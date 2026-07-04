@@ -1550,5 +1550,38 @@
     "status": "verified active",
     "notes": "Employee-owned membership discount retailer since 2004. 70+ stores in Oregon, Washington, and Idaho.",
     "site_section": "Home Goods"
+  },
+  {
+    "id": 159,
+    "name": "Agaric",
+    "url": "https://agaric.coop",
+    "category": "web development",
+    "ownership_type": "worker co-op",
+    "ships": "Global (remote)",
+    "status": "verified active",
+    "notes": "Worker-owned web development cooperative building sites and applications with free software. Clients include MASS Design Group, NICHQ, Portside.",
+    "site_section": "Tech & Software"
+  },
+  {
+    "id": 160,
+    "name": "CoLab Cooperative",
+    "url": "https://colab.coop",
+    "category": "web & app development",
+    "ownership_type": "worker co-op",
+    "ships": "Global (remote)",
+    "status": "verified active",
+    "notes": "Worker-owned digital agency since 2010. Complex websites and custom apps for socially responsible organizations. Clients include Apollo Theater.",
+    "site_section": "Tech & Software"
+  },
+  {
+    "id": 161,
+    "name": "Sassafras Tech Collective",
+    "url": "https://sassafras.coop",
+    "category": "software development",
+    "ownership_type": "worker co-op",
+    "ships": "Global (remote)",
+    "status": "verified active",
+    "notes": "Unionized worker co-op designing and building technology for justice and joy. Over a decade of partnerships with mission-driven organizations.",
+    "site_section": "Tech & Software"
   }
 ]
