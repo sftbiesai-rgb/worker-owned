@@ -229,7 +229,7 @@ function MarketplaceIndexPage() {
           <p className="text-[11px] text-gray-400 mt-2 text-center">Results are links to company sites. We don't sell anything or earn a commission.</p>
         </div>
 
-        <Link to="/coffee" className="block bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-4 mt-3 mb-3 hover:border-[#004cb9] transition-colors">
+        <Link to="/coffee" className="block bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-4 mb-3 hover:border-[#004cb9] transition-colors">
           <div className="flex items-center justify-center gap-2.5">
             <img src="/logo-coffee.png" alt="" width="28" height="28" className="shrink-0" />
             <span className="text-sm text-[#004cb9] font-semibold"><strong>Quick Tool:</strong> worker owned coffee shops, bars, restaurants, and groceries near you!</span>
