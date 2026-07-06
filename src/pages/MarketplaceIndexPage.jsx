@@ -39,7 +39,7 @@ const MARKETPLACE_CATEGORIES = [
   { slug: 'apparel',          label: 'Apparel' },
   { slug: 'art-prints',       label: 'Art & Prints' },
   { slug: 'music',            label: 'Music' },
-  { slug: 'home-goods',       label: 'Home Goods' },
+  { slug: 'home-goods',       label: 'Home Goods & Services' },
   { slug: 'personal-care',    label: 'Personal Care' },
   { slug: 'games',            label: 'Games' },
   { slug: 'beer-brewing',     label: 'Beer & Brewing' },
@@ -97,12 +97,51 @@ function MarketplaceIndexPage() {
   const results = useMemo(() => {
     if (!inputValue.trim()) return []
 
-    // Stem a single word for plural handling
+    // Stem a word: plurals, -ing, -ed, -er, -ly
     function stemWord(w) {
-      if (w.endsWith('ies')) return [w, w.slice(0, -3) + 'y']
-      if (w.endsWith('ses') || w.endsWith('xes') || w.endsWith('zes') || w.endsWith('shes') || w.endsWith('ches')) return [w, w.slice(0, -2)]
-      if (w.endsWith('s') && !w.endsWith('ss')) return [w, w.slice(0, -1)]
-      return [w]
+      const forms = new Set([w])
+      // Plurals
+      if (w.endsWith('ies')) forms.add(w.slice(0, -3) + 'y')
+      else if (w.endsWith('ses') || w.endsWith('xes') || w.endsWith('zes') || w.endsWith('shes') || w.endsWith('ches')) forms.add(w.slice(0, -2))
+      else if (w.endsWith('s') && !w.endsWith('ss')) forms.add(w.slice(0, -1))
+      // -ing: roasting→roast, baking→bake, running→run
+      if (w.endsWith('ing') && w.length > 4) {
+        forms.add(w.slice(0, -3))          // roasting → roast
+        forms.add(w.slice(0, -3) + 'e')    // baking → bake
+        if (w.length > 5 && w[w.length - 4] === w[w.length - 5]) forms.add(w.slice(0, -4)) // running → run
+      }
+      // -ed: roasted→roast, baked→bake
+      if (w.endsWith('ed') && w.length > 3) {
+        forms.add(w.slice(0, -2))           // roasted → roast
+        forms.add(w.slice(0, -1))           // baked → bake (via 'd' removal)
+        if (w.endsWith('ied')) forms.add(w.slice(0, -3) + 'y') // dried → dry
+        if (w.length > 4 && w[w.length - 3] === w[w.length - 4]) forms.add(w.slice(0, -3)) // brewed → brew
+      }
+      // -er: roaster→roast, baker→bake
+      if (w.endsWith('er') && w.length > 3) {
+        forms.add(w.slice(0, -2))           // roaster → roast
+        forms.add(w.slice(0, -1))           // baker → bake (via 'r' removal — caught by -e)
+        if (w.length > 4 && w[w.length - 3] === w[w.length - 4]) forms.add(w.slice(0, -3)) // brewer → brew
+      }
+      return [...forms]
+    }
+
+    // Synonym expansions: query word → additional words to match
+    const SYNONYMS = {
+      tee: ['t-shirt', 'tee'], tshirt: ['t-shirt', 'tee'], 'shirt': ['t-shirt', 'tee', 'shirt'],
+      mug: ['cup', 'mug'], cup: ['mug', 'cup'],
+      pants: ['trousers', 'jeans', 'pants'], trousers: ['pants', 'trousers'],
+      sneakers: ['shoes', 'sneakers'], shoes: ['sneakers', 'footwear', 'shoes'],
+      hoodie: ['sweatshirt', 'hoodie'], sweatshirt: ['hoodie', 'sweatshirt'],
+      bag: ['tote', 'bag', 'pouch'], tote: ['bag', 'tote'],
+      chocolate: ['cocoa', 'cacao', 'chocolate'], cocoa: ['chocolate', 'cocoa', 'cacao'],
+      tea: ['chai', 'tea'], chai: ['tea', 'chai'],
+      soap: ['bar soap', 'soap'], lotion: ['moisturizer', 'lotion', 'cream'],
+      cap: ['hat', 'cap', 'beanie'], hat: ['cap', 'hat', 'beanie'],
+      vinyl: ['record', 'lp', 'vinyl'], record: ['vinyl', 'lp', 'record'],
+      poster: ['print', 'poster', 'art print'], print: ['poster', 'print', 'art print'],
+      jam: ['preserve', 'jelly', 'jam'], jelly: ['jam', 'preserve', 'jelly'],
+      'hot sauce': ['hot sauce', 'salsa', 'chili sauce'], salsa: ['hot sauce', 'salsa'],
     }
 
     // Word-boundary match: query word must appear as a whole word or prefix in the text
@@ -120,7 +159,22 @@ function MarketplaceIndexPage() {
 
     // Split query into words, stem each one; normalize apostrophes
     const words = inputValue.toLowerCase().trim().replace(/['']/g, '').split(/\s+/).filter(Boolean)
-    const wordStems = words.map(w => stemWord(w))
+    // Expand stems with synonyms
+    const wordStems = words.map(w => {
+      const stems = stemWord(w)
+      const syns = SYNONYMS[w]
+      if (syns) for (const s of syns) stems.push(...stemWord(s))
+      return [...new Set(stems)]
+    })
+
+    // Extract searchable words from a product URL slug
+    function urlWords(url) {
+      if (!url) return ''
+      try {
+        const path = new URL(url).pathname
+        return path.replace(/[^a-z0-9]+/gi, ' ').toLowerCase()
+      } catch { return '' }
+    }
 
     // Score and filter: all query words must match somewhere in the product
     const queryLower = inputValue.toLowerCase().trim().replace(/['']/g, '')
@@ -132,11 +186,13 @@ function MarketplaceIndexPage() {
       const storeLower = (p.store_name || '').toLowerCase().replace(/['']/g, '')
       const titleLower = (p.title || '').toLowerCase().replace(/[''™℠®©]/g, '').replace(/&#x[0-9a-f]+;/gi, '').replace(/&#\d+;/g, '')
       const titleStripped = storeLower ? titleLower.replace(storeLower, '').replace(storeLower.replace(/\s+(co-op|cooperative|roasters|brewing|press)$/i, ''), '') : titleLower
+      const slugText = urlWords(p.url)
       for (const stems of wordStems) {
         const inTitle = wordMatch(p.title, stems)
         const inStore = wordMatch(p.store_name, stems)
         const inTags = p.tags?.some(t => wordMatch(t, stems))
-        if (!inTitle && !inStore && !inTags) { allMatch = false; break }
+        const inSlug = wordMatch(slugText, stems)
+        if (!inTitle && !inStore && !inTags && !inSlug) { allMatch = false; break }
         if (inTitle) {
           // Check if match is in the actual product part of the title, not just the brand name
           const inTitleStripped = stems.some(s => { const idx = titleStripped.indexOf(s); return idx !== -1 && (idx === 0 || !/[a-z]/.test(titleStripped[idx - 1])) })
@@ -145,8 +201,9 @@ function MarketplaceIndexPage() {
           if (inTags) score += 2
         }
         else if (inStore && inTags) score += 2
+        else if (inTags) score += 1
+        else if (inSlug) score += 0.5
         else if (inStore) score += 0.5
-        else if (inTags) score += 0.5
       }
       // Bonus: full query appears in the product-relevant part of title
       if (allMatch && titleStripped.includes(queryLower)) score += 5
@@ -155,6 +212,8 @@ function MarketplaceIndexPage() {
         const sectionLower = p.site_section.toLowerCase()
         if (words.some(w => sectionLower.includes(w))) score += 4
       }
+      // Slight penalty for sold-out items
+      if (allMatch && p.available === false) score -= 1
       if (allMatch) scored.push({ p, score })
     }
 

@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
 
 const REMAP = {
-  'Home & Garden': 'Home Goods',
+  'Home & Garden': 'Home Goods & Services',
   'Chocolate & Sweets': 'Food & Pantry',
   'Sporting Goods & Outdoors': 'Apparel',
 }
@@ -18,7 +18,7 @@ const SECTIONS = {
   'Apparel': 'apparel',
   'Art & Prints': 'art-prints',
   'Music': 'music',
-  'Home Goods': 'home-goods',
+  'Home Goods & Services': 'home-goods',
   'Personal Care': 'personal-care',
   'Games': 'games',
   'Beer & Brewing': 'beer-brewing',

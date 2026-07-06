@@ -39,7 +39,7 @@ const SECTIONS = [
   'Coffee & Tea',
   'Food & Pantry',
   'Apparel',
-  'Home Goods',
+  'Home Goods & Services',
   'Personal Care',
   'Beer & Brewing',
   'Media & Publishing',

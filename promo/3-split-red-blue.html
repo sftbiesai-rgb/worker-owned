@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  .card {
+    width: 1200px; height: 630px;
+    display: flex;
+  }
+  .left {
+    flex: 1; background: #004cb9; color: white;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 50px 50px;
+  }
+  .left h1 { font-size: 52px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+  .left p { font-size: 20px; opacity: 0.85; line-height: 1.5; }
+  .right {
+    flex: 1; background: white;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 50px 50px;
+  }
+  .feature { margin-bottom: 28px; }
+  .feature .icon { font-size: 28px; margin-bottom: 6px; }
+  .feature .title { font-size: 20px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
+  .feature .desc { font-size: 16px; color: #666; line-height: 1.4; }
+  .accent { color: #BF0A30; }
+  .url {
+    margin-top: 12px;
+    font-size: 24px; font-weight: 700; color: #004cb9;
+    background: #f0f4ff; display: inline-block;
+    padding: 10px 24px; border-radius: 10px;
+  }
+  .red-bar { width: 6px; background: #BF0A30; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="left">
+    <h1>Worker<br>Owned</h1>
+    <p>Every purchase goes directly to a worker-owned co-op. No commissions. No middlemen.</p>
+  </div>
+  <div class="red-bar"></div>
+  <div class="right">
+    <div class="feature">
+      <div class="title"><span class="accent">6,500+</span> Products</div>
+      <div class="desc">From 60+ worker-owned cooperative stores</div>
+    </div>
+    <div class="feature">
+      <div class="title"><span class="accent">110+</span> Locations</div>
+      <div class="desc">Find co-op cafes, restaurants & bars near you</div>
+    </div>
+    <div class="feature">
+      <div class="title"><span class="accent">0%</span> Commission</div>
+      <div class="desc">Traffic goes straight to the co-op's site</div>
+    </div>
+    <div class="url">workerowned.info</div>
+  </div>
+</div>
+</body>
+</html>

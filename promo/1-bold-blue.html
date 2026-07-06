@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 540px; height: 540px; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  .card {
+    width: 1080px; height: 1080px;
+    background: #004cb9;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 80px;
+    transform: scale(0.5); transform-origin: top left;
+    text-align: center;
+  }
+  .logo { width: 120px; height: 120px; background: white; border-radius: 28px; padding: 10px; margin-bottom: 40px; }
+  .logo img { width: 100%; height: 100%; object-fit: contain; }
+  h1 { font-size: 72px; font-weight: 800; color: white; line-height: 1.15; margin-bottom: 24px; }
+  .sub { font-size: 28px; color: rgba(255,255,255,0.85); line-height: 1.5; margin-bottom: 50px; }
+  .stats { display: flex; gap: 20px; margin-bottom: 50px; }
+  .stat {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 16px;
+    padding: 20px 28px;
+    color: white;
+    text-align: center;
+  }
+  .stat .num { font-size: 36px; font-weight: 800; }
+  .stat .label { font-size: 15px; opacity: 0.8; margin-top: 4px; }
+  .url { font-size: 30px; font-weight: 700; background: white; color: #004cb9; padding: 14px 36px; border-radius: 14px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo"><img src="../public/logo-marketplace.png" alt=""></div>
+  <h1>Shop<br>Worker-Owned</h1>
+  <p class="sub">Products from 60+ worker-owned<br>cooperative stores</p>
+  <div class="stats">
+    <div class="stat">
+      <div class="num">6,500+</div>
+      <div class="label">Products</div>
+    </div>
+    <div class="stat">
+      <div class="num">60+</div>
+      <div class="label">Co-op Stores</div>
+    </div>
+    <div class="stat">
+      <div class="num">110+</div>
+      <div class="label">Locations</div>
+    </div>
+  </div>
+  <div class="url">workerowned.info</div>
+</div>
+</body>
+</html>
