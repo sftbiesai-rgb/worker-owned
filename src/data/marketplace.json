@@ -1605,5 +1605,49 @@
     "status": "verified active",
     "notes": "Worker-owned human-powered hauling cooperative with 27 workers. Trash, recycling, and compost pickup by bicycle. Also yard care, delivery, and a free bike lab.",
     "site_section": "Home Goods & Services"
+  },
+  {
+    "id": 164,
+    "name": "Recology",
+    "url": "https://www.recology.com",
+    "category": "waste management",
+    "ownership_type": "ESOP",
+    "ships": "Local (CA, OR, WA)",
+    "status": "verified active",
+    "notes": "100% employee-owned waste and recycling services. 40+ operating companies serving 2.5M+ people across California, Oregon, and Washington.",
+    "site_section": "Home Goods & Services"
+  },
+  {
+    "id": 165,
+    "name": "Cooperative Home Care Associates",
+    "url": "https://www.chcany.org",
+    "category": "home health care",
+    "ownership_type": "worker co-op",
+    "ships": "Local (NYC metro area)",
+    "status": "verified active",
+    "notes": "Largest worker co-op in the US. 1,600+ caregiver-owners providing home health care in NYC metro area. Founded 1985. B-Corp certified.",
+    "site_section": "Home Goods & Services"
+  },
+  {
+    "id": 166,
+    "name": "Scheels All Sports",
+    "url": "https://www.scheels.com",
+    "category": "sporting goods",
+    "ownership_type": "ESOP",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned sporting goods retailer. 34 stores across 16 states. Full online store with outdoor gear, apparel, footwear, and more.",
+    "site_section": "Apparel"
+  },
+  {
+    "id": 167,
+    "name": "Thrifty White Pharmacy",
+    "url": "https://shop.thriftywhite.com",
+    "category": "pharmacy",
+    "ownership_type": "ESOP",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned pharmacy chain. 96 drugstores across MN, ND, SD, MT, WI, IA. Online store sells OTC meds, vitamins, supplements, personal care, and beauty products.",
+    "site_section": "Personal Care"
   }
 ]
