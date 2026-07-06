@@ -212,8 +212,17 @@ function MarketplaceIndexPage() {
         const sectionLower = p.site_section.toLowerCase()
         if (words.some(w => sectionLower.includes(w))) score += 4
       }
+      // Ownership bonus: prioritize worker co-ops over ESOPs
+      if (allMatch) {
+        const ot = (p.ownership_type || '').toLowerCase()
+        if (ot.includes('worker co-op') || ot === 'worker owned') score += 2
+        else if (ot.includes('multi-stakeholder')) score += 1
+        // ESOPs get no bonus (score += 0)
+      }
       // Slight penalty for sold-out items
       if (allMatch && p.available === false) score -= 1
+      // Penalty: match is store-name-only (e.g. "coffee" matching "X Coffee Cooperative" but product is a t-shirt)
+      if (allMatch && score < 1.5) score -= 2
       if (allMatch) scored.push({ p, score })
     }
 
