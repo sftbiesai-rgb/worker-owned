@@ -217,7 +217,15 @@ function MarketplaceIndexPage() {
         const ot = (p.ownership_type || '').toLowerCase()
         if (ot.includes('worker co-op') || ot === 'worker owned') score += 2
         else if (ot.includes('multi-stakeholder')) score += 1
-        // ESOPs get no bonus (score += 0)
+      }
+      // Query density sub-score: what fraction of title words are query matches?
+      // "French Roast Coffee" → 1/3 = 0.33 (product IS coffee)
+      // "OXO Coffee Grinder" → 1/3 = 0.33 but stripped title is longer
+      // Higher density = product is more likely TO BE the thing searched for
+      if (allMatch) {
+        const titleWords = titleStripped.trim().split(/\s+/).filter(Boolean)
+        const matchCount = words.filter(w => titleStripped.includes(w)).length
+        score += titleWords.length > 0 ? (matchCount / titleWords.length) : 0
       }
       // Slight penalty for sold-out items
       if (allMatch && p.available === false) score -= 1
@@ -226,32 +234,43 @@ function MarketplaceIndexPage() {
       if (allMatch) scored.push({ p, score })
     }
 
-    // Sort by score, then interleave stores within same score tier
+    // Sort by score descending, then gently dedup: no more than 3 consecutive from same store
     scored.sort((a, b) => b.score - a.score)
-    const interleaved = []
-    let i = 0
-    while (i < scored.length) {
-      // Collect items in same score tier
-      let j = i
-      while (j < scored.length && scored[j].score === scored[i].score) j++
-      const tier = scored.slice(i, j)
-      // Round-robin by store within tier
-      const byStore = new Map()
-      for (const item of tier) {
-        const key = item.p.store_name || ''
-        if (!byStore.has(key)) byStore.set(key, [])
-        byStore.get(key).push(item)
+    const result = []
+    const deferred = []
+    const MAX_CONSECUTIVE = 3
+    for (const item of scored) {
+      const store = item.p.store_name || ''
+      let consecutive = 0
+      for (let k = result.length - 1; k >= Math.max(0, result.length - MAX_CONSECUTIVE); k--) {
+        if ((result[k].store_name || '') === store) consecutive++
+        else break
       }
-      const queues = [...byStore.values()]
-      let idx = 0
-      while (queues.some(q => q.length > 0)) {
-        const q = queues[idx % queues.length]
-        if (q.length > 0) interleaved.push(q.shift())
-        idx++
+      if (consecutive >= MAX_CONSECUTIVE) {
+        deferred.push(item)
+      } else {
+        result.push(item.p)
+        // Try to insert deferred items
+        if (deferred.length > 0) {
+          const retry = []
+          for (const d of deferred) {
+            const ds = d.p.store_name || ''
+            let dc = 0
+            for (let k = result.length - 1; k >= Math.max(0, result.length - MAX_CONSECUTIVE); k--) {
+              if ((result[k].store_name || '') === ds) dc++
+              else break
+            }
+            if (dc < MAX_CONSECUTIVE) result.push(d.p)
+            else retry.push(d)
+          }
+          deferred.length = 0
+          deferred.push(...retry)
+        }
       }
-      i = j
     }
-    return interleaved.map(s => s.p)
+    // Append any remaining deferred items at the end
+    for (const d of deferred) result.push(d.p)
+    return result
   }, [inputValue, products])
 
   const PER_PAGE = 40
