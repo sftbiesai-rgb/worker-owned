@@ -1161,5 +1161,77 @@
     "id": 127,
     "lat": 44.0521,
     "lng": -123.0868
+  },
+  {
+    "name": "Harp's Food Stores",
+    "city": "Springdale",
+    "state": "AR",
+    "website": "https://www.harpsfood.com",
+    "category": "grocery",
+    "ownership_type": "ESOP",
+    "notes": "125+ supermarkets across AR, OK, MO, KS, LA. Employee-owned since 2001.",
+    "id": 128,
+    "lat": 36.1867,
+    "lng": -94.1288
+  },
+  {
+    "name": "Redner's Warehouse Markets",
+    "city": "Reading",
+    "state": "PA",
+    "website": "https://www.redners.com",
+    "category": "grocery",
+    "ownership_type": "ESOP",
+    "notes": "64 supermarkets across PA, DE, MD. First ESOP supermarket in PA (1975).",
+    "id": 129,
+    "lat": 40.3357,
+    "lng": -75.9269
+  },
+  {
+    "name": "Homeland Stores",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "website": "https://www.homelandstores.com",
+    "category": "grocery",
+    "ownership_type": "ESOP",
+    "notes": "70 stores (Homeland, United, Cash Saver) across OK, KS, TX. 100% employee-owned since 2011.",
+    "id": 130,
+    "lat": 35.4676,
+    "lng": -97.5164
+  },
+  {
+    "name": "Yoke's Fresh Markets",
+    "city": "Spokane",
+    "state": "WA",
+    "website": "https://www.yokesfreshmarkets.com",
+    "category": "grocery",
+    "ownership_type": "ESOP",
+    "notes": "19 grocery stores across WA, ID, MT. Employee-owned since 1990.",
+    "id": 131,
+    "lat": 47.6588,
+    "lng": -117.4260
+  },
+  {
+    "name": "Buehler's Fresh Foods",
+    "city": "Wooster",
+    "state": "OH",
+    "website": "https://www.buehlers.com",
+    "category": "grocery",
+    "ownership_type": "ESOP",
+    "notes": "14 supermarkets in north-central OH. ESOP since 2017.",
+    "id": 132,
+    "lat": 40.8051,
+    "lng": -81.9351
+  },
+  {
+    "name": "Thrifty White Pharmacy",
+    "city": "Plymouth",
+    "state": "MN",
+    "website": "https://www.thriftywhite.com",
+    "category": "grocery",
+    "ownership_type": "ESOP",
+    "notes": "96 drugstores across MN, ND, SD, MT, WI, IA. 100% employee-owned.",
+    "id": 133,
+    "lat": 44.9855,
+    "lng": -93.4555
   }
 ]
