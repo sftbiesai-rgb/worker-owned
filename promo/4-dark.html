@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  .card {
+    width: 1200px; height: 630px;
+    background: #0a0a0a;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(0,76,185,0.3) 0%, transparent 70%);
+  }
+  .card::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(191,10,48,0.2) 0%, transparent 70%);
+  }
+  .content { position: relative; z-index: 1; }
+  .tagline { font-size: 18px; text-transform: uppercase; letter-spacing: 4px; color: #BF0A30; font-weight: 700; margin-bottom: 20px; }
+  h1 { font-size: 68px; font-weight: 800; color: white; margin-bottom: 20px; line-height: 1.1; }
+  .subtitle { font-size: 22px; color: #999; margin-bottom: 40px; line-height: 1.5; }
+  .stats { display: flex; gap: 50px; margin-bottom: 40px; justify-content: center; }
+  .stat .num { font-size: 36px; font-weight: 800; color: #004cb9; }
+  .stat .label { font-size: 14px; color: #666; margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+  .url { font-size: 24px; font-weight: 700; color: white; border: 2px solid #004cb9; display: inline-block; padding: 12px 32px; border-radius: 12px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="content">
+    <div class="tagline">Support Co-ops</div>
+    <h1>Shop Worker-Owned</h1>
+    <p class="subtitle">A searchable alternative to Amazon where every<br>purchase goes to a worker-owned cooperative</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="num">6,500+</div>
+        <div class="label">Products</div>
+      </div>
+      <div class="stat">
+        <div class="num">60+</div>
+        <div class="label">Co-op Stores</div>
+      </div>
+      <div class="stat">
+        <div class="num">110+</div>
+        <div class="label">Locations</div>
+      </div>
+    </div>
+    <div class="url">workerowned.info</div>
+  </div>
+</div>
+</body>
+</html>

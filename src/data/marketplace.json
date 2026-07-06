@@ -404,7 +404,7 @@
     "ships": "worldwide",
     "status": "verified active",
     "notes": "Member-owned Etsy alternative launched 2023. Hundreds of sellers offering handmade home goods, ceramics, candles, textiles. Best single marketplace source for co-op-made goods.",
-    "site_section": "Home Goods"
+    "site_section": "Home Goods & Services"
   },
   {
     "id": 42,
@@ -415,7 +415,7 @@
     "ships": "Canada (Vancouver) \u2014 verify US shipping",
     "status": "verified active",
     "notes": "Vancouver BC worker co-op. Custom reclaimed wood furniture and millwork for homes and businesses. Founded 2014.",
-    "site_section": "Home Goods"
+    "site_section": "Home Goods & Services"
   },
   {
     "id": 43,
@@ -426,7 +426,7 @@
     "ships": "verify online availability",
     "status": "verify online store",
     "notes": "Founded 1976. Worker-owned shop in Ithaca NY selling handcrafted goods from local and regional makers. One of the oldest artisan co-ops in the US.",
-    "site_section": "Home Goods"
+    "site_section": "Home Goods & Services"
   },
   {
     "id": 44,
@@ -448,7 +448,7 @@
     "ships": "NYC region",
     "status": "verify current status and online availability",
     "notes": "NYC-based cooperative focused on woodworking and Indigenous maker practices. Refurbished furniture and home goods for BIPOC communities.",
-    "site_section": "Home Goods"
+    "site_section": "Home Goods & Services"
   },
   {
     "id": 46,
@@ -701,7 +701,7 @@
     "ships": "worldwide",
     "status": "verified active",
     "notes": "Launched Oct 2023. Sellers pay no fees until profitable. Members govern platform democratically. Covers ceramics, jewelry, textiles, home goods, clothing.",
-    "site_section": "Home Goods"
+    "site_section": "Home Goods & Services"
   },
   {
     "id": 71,
@@ -1219,7 +1219,7 @@
     "ships": "US / worldwide",
     "status": "verified active",
     "notes": "Worker-owned cooperative in Putney, VT since 1981. Makes eco-friendly yarns from wool, alpaca, mohair, and organic cotton. All yarn spun in Vermont using traditional methods. One of the oldest worker co-ops in the US.",
-    "site_section": "Home Goods"
+    "site_section": "Home Goods & Services"
   },
   {
     "id": 126,
@@ -1549,7 +1549,7 @@
     "ships": "Local (OR, WA, ID)",
     "status": "verified active",
     "notes": "Employee-owned membership discount retailer since 2004. 70+ stores in Oregon, Washington, and Idaho.",
-    "site_section": "Home Goods"
+    "site_section": "Home Goods & Services"
   },
   {
     "id": 159,
@@ -1583,5 +1583,27 @@
     "status": "verified active",
     "notes": "Unionized worker co-op designing and building technology for justice and joy. Over a decade of partnerships with mission-driven organizations.",
     "site_section": "Tech & Software"
+  },
+  {
+    "id": 162,
+    "name": "Hypha Worker Co-operative",
+    "url": "https://hypha.coop",
+    "category": "technology",
+    "ownership_type": "worker co-op",
+    "ships": "Global (remote)",
+    "status": "verified active",
+    "notes": "Worker-owned tech co-op in Toronto. R&D partner building local AI systems, digital media integrity tools, and decentralized infrastructure.",
+    "site_section": "Tech & Software"
+  },
+  {
+    "id": 163,
+    "name": "Pedal People",
+    "url": "https://pedalpeople.coop",
+    "category": "home services",
+    "ownership_type": "worker co-op",
+    "ships": "Local (Northampton, MA)",
+    "status": "verified active",
+    "notes": "Worker-owned human-powered hauling cooperative with 27 workers. Trash, recycling, and compost pickup by bicycle. Also yard care, delivery, and a free bike lab.",
+    "site_section": "Home Goods & Services"
   }
 ]

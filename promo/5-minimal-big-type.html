@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  .card {
+    width: 1200px; height: 630px;
+    background: white;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 55px 65px;
+  }
+  .top {}
+  h1 { font-size: 72px; font-weight: 800; color: #1a1a1a; line-height: 1.1; }
+  h1 .blue { color: #004cb9; }
+  h1 .red { color: #BF0A30; }
+  .mid { font-size: 24px; color: #555; line-height: 1.6; }
+  .bottom { display: flex; align-items: flex-end; justify-content: space-between; }
+  .stats-row { display: flex; gap: 40px; }
+  .stat .num { font-size: 32px; font-weight: 800; color: #004cb9; }
+  .stat .label { font-size: 14px; color: #999; text-transform: uppercase; letter-spacing: 1px; }
+  .url { font-size: 28px; font-weight: 800; color: #004cb9; }
+  .line { width: 100%; height: 4px; background: linear-gradient(90deg, #004cb9, #BF0A30); border-radius: 2px; margin-top: 16px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top">
+    <h1><span class="blue">6,500+</span> products.<br><span class="blue">60+</span> co-op stores.<br><span class="red">0%</span> commission.</h1>
+  </div>
+  <div class="mid">
+    Search worker-owned co-op products instead of Amazon.<br>
+    Every link goes straight to the co-op's site.
+  </div>
+  <div class="bottom">
+    <div class="stats-row">
+      <div class="stat">
+        <div class="num">110+</div>
+        <div class="label">Co-op Cafes & Bars</div>
+      </div>
+    </div>
+    <div class="url">workerowned.info</div>
+  </div>
+  <div class="line"></div>
+</div>
+</body>
+</html>

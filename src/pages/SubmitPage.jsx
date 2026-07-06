@@ -90,7 +90,7 @@ function SubmitPage() {
                   <option value="Apparel">Apparel</option>
                   <option value="Art & Prints">Art & Prints</option>
                   <option value="Music">Music</option>
-                  <option value="Home Goods">Home Goods</option>
+                  <option value="Home Goods & Services">Home Goods & Services</option>
                   <option value="Personal Care">Personal Care</option>
                   <option value="Games">Games</option>
                   <option value="Beer & Brewing">Beer & Brewing</option>

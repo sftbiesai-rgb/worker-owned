@@ -67,7 +67,7 @@ const SECTION_SLUGS = {
   'Apparel': 'apparel',
   'Art & Prints': 'art-prints',
   'Music': 'music',
-  'Home Goods': 'home-goods',
+  'Home Goods & Services': 'home-goods',
   'Personal Care': 'personal-care',
   'Games': 'games',
   'Beer & Brewing': 'beer-brewing',
