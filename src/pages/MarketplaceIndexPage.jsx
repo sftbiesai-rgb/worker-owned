@@ -234,43 +234,19 @@ function MarketplaceIndexPage() {
       if (allMatch) scored.push({ p, score })
     }
 
-    // Sort by score descending, then gently dedup: no more than 3 consecutive from same store
+    // Sort by score with store fatigue: each additional product from the same store
+    // costs a small penalty, naturally letting other stores surface
     scored.sort((a, b) => b.score - a.score)
-    const result = []
-    const deferred = []
-    const MAX_CONSECUTIVE = 3
-    for (const item of scored) {
+    const storeCounts = new Map()
+    const FATIGUE = 0.3 // penalty per prior appearance of same store
+    const withFatigue = scored.map(item => {
       const store = item.p.store_name || ''
-      let consecutive = 0
-      for (let k = result.length - 1; k >= Math.max(0, result.length - MAX_CONSECUTIVE); k--) {
-        if ((result[k].store_name || '') === store) consecutive++
-        else break
-      }
-      if (consecutive >= MAX_CONSECUTIVE) {
-        deferred.push(item)
-      } else {
-        result.push(item.p)
-        // Try to insert deferred items
-        if (deferred.length > 0) {
-          const retry = []
-          for (const d of deferred) {
-            const ds = d.p.store_name || ''
-            let dc = 0
-            for (let k = result.length - 1; k >= Math.max(0, result.length - MAX_CONSECUTIVE); k--) {
-              if ((result[k].store_name || '') === ds) dc++
-              else break
-            }
-            if (dc < MAX_CONSECUTIVE) result.push(d.p)
-            else retry.push(d)
-          }
-          deferred.length = 0
-          deferred.push(...retry)
-        }
-      }
-    }
-    // Append any remaining deferred items at the end
-    for (const d of deferred) result.push(d.p)
-    return result
+      const prior = storeCounts.get(store) || 0
+      storeCounts.set(store, prior + 1)
+      return { ...item, effective: item.score - (prior * FATIGUE) }
+    })
+    withFatigue.sort((a, b) => b.effective - a.effective)
+    return withFatigue.map(s => s.p)
   }, [inputValue, products])
 
   const PER_PAGE = 40
