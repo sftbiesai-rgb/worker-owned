@@ -35,24 +35,39 @@ const ALTERNATIVES = [
   {
     instead: 'Etsy',
     why: 'Etsy takes up to 15% in fees from makers. These worker-owned shops sell handmade goods directly, keeping 100% of the sale.',
-    categories: [
-      { label: 'Art & Prints', section: 'Art & Prints' },
-      { label: 'Home Goods & Handmade', section: 'Home Goods & Services' },
-      { label: 'Apparel', section: 'Apparel' },
+    picks: [
+      { name: 'Artisans Cooperative', product: 'Handmade ceramics, jewelry, textiles, and art.', detail: 'A co-op marketplace built by the makers themselves.' },
+      { name: 'Justseeds Artists\' Cooperative', product: 'Art prints, posters, and social movement graphics.', detail: 'Worker-owned artist collective since 1998.' },
+      { name: 'Green Mountain Spinnery', product: 'Yarn and fiber arts supplies.', detail: 'Worker-owned mill in Vermont since 1981.' },
+      { name: 'Soft Star Shoes', product: 'Handcrafted shoes and sandals.', detail: 'Worker-owned, made by hand in Oregon.' },
+      { name: 'Trama Textiles', product: 'Handwoven textiles and clothing.', detail: 'Women-owned weaving cooperative in Guatemala.' },
+      { name: 'Golden Artist Colors', product: 'Artist paints and supplies.', detail: 'Employee-owned manufacturer in New York.' },
+      { name: 'Wood Shop Workers Co-op', product: 'Custom furniture and woodworking.', detail: 'Worker-owned shop in Brooklyn.' },
+      { name: 'Microcosm Publishing', product: 'Books, zines, patches, and stickers.', detail: 'Worker-owned indie publisher in Portland.' },
     ],
   },
   {
     instead: 'Spotify',
-    why: 'Spotify pays artists fractions of a cent per stream. These worker-owned platforms let you support musicians directly.',
-    categories: [
-      { label: 'Music Platforms', section: 'Music' },
+    why: 'These worker-owned platforms let you support musicians directly.',
+    picks: [
+      { name: 'Mirlo', product: 'Music downloads and streaming.', detail: 'Worker-owned platform where artists set their own prices.' },
+      { name: 'Subvert', product: 'Music marketplace for records and digital downloads.', detail: 'Multi-stakeholder co-op connecting fans to artists.' },
+      { name: 'Resonate Cooperative', product: 'Music streaming with a listen-to-own model.', detail: 'Co-op owned by artists and listeners.' },
+      { name: 'Catalytic Sound', product: 'Experimental and improvised music recordings.', detail: 'Artist-owned cooperative label.' },
     ],
   },
   {
     instead: 'Corporate News',
     why: 'These media outlets are owned by the journalists and writers who produce them.',
-    categories: [
-      { label: 'Media & Publishing', section: 'Media & Publishing' },
+    picks: [
+      { name: 'Defector', product: 'Sports and culture journalism.', detail: 'Worker-owned since the staff walked out of Deadspin in 2020.' },
+      { name: '404 Media', product: 'Investigative tech and internet journalism.', detail: 'Worker-owned by former Motherboard reporters.' },
+      { name: 'Aftermath', product: 'Video game journalism and criticism.', detail: 'Worker-owned, independent, no ads.' },
+      { name: 'Hell Gate', product: 'New York City local news.', detail: 'Worker-owned newsroom covering NYC.' },
+      { name: 'The Colorado Sun', product: 'Statewide news and investigative reporting.', detail: 'Journalist-owned, nonprofit.' },
+      { name: 'Racket MN', product: 'Minneapolis arts, culture, and local news.', detail: 'Worker-owned local media.' },
+      { name: 'Means TV', product: 'Streaming video and documentaries.', detail: 'Worker-owned streaming service.' },
+      { name: 'Maximum Fun', product: 'Podcast network with dozens of shows.', detail: 'Employee-owned since 2023.' },
     ],
   },
 ]
