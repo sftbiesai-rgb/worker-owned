@@ -407,12 +407,27 @@ function MarketplaceIndexPage() {
           </div>
         )}
 
-        <div className="mt-3 flex justify-center gap-4">
-          <Link to="/guides/alternatives" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
-            Guides
-          </Link>
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mt-3">
+          <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Guides</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            <Link to="/guides/alternatives#amazon" className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors">
+              Instead of Amazon
+            </Link>
+            <Link to="/guides/alternatives#etsy" className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors">
+              Instead of Etsy
+            </Link>
+            <Link to="/guides/alternatives#spotify" className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors">
+              Instead of Spotify
+            </Link>
+            <Link to="/guides/what-is-a-worker-cooperative" className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors">
+              What is a co-op?
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-3 text-center">
           <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
-            Submit a business &rarr;
+            Submit a worker owned business &rarr;
           </Link>
         </div>
       </main>
