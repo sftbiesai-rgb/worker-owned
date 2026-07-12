@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Search, Map, List } from 'lucide-react'
+import 'leaflet/dist/leaflet.css'
 import barsData from '../data/bars.json'
 
 // Exclude pure consumer co-ops (not worker owned)
@@ -15,7 +16,7 @@ function BarMap({ items }) {
     if (!mapRef.current || items.length === 0) return
     let cancelled = false
 
-    Promise.all([import('leaflet'), import('leaflet/dist/leaflet.css')]).then(([mod]) => {
+    import('leaflet').then((mod) => {
       if (cancelled || !mapRef.current) return
       const L = mod.default
       if (mapInstanceRef.current) { mapInstanceRef.current.remove(); mapInstanceRef.current = null }
