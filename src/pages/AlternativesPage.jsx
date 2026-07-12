@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
 
 function slugify(name) {
@@ -58,11 +58,20 @@ const ALTERNATIVES = [
 ]
 
 function AlternativesPage() {
+  const { hash } = useLocation()
+
   useEffect(() => {
     document.title = 'Worker-Owned Alternatives to Amazon, Etsy & More | Worker Owned Marketplace'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
       'Skip Amazon and Etsy. Shop worker-owned cooperatives that sell coffee, food, books, clothing, art, and more. Every purchase supports worker ownership.')
   }, [])
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.slice(1))
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [hash])
 
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
