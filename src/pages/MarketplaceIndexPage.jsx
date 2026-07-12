@@ -414,6 +414,9 @@ function MarketplaceIndexPage() {
             <Link to="/guides/alternatives#spotify" className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors">
               Instead of Spotify
             </Link>
+            <Link to="/guides/alternatives#corporate-news" className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors">
+              Instead of Corporate News
+            </Link>
             <Link to="/guides/what-is-a-worker-cooperative" className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors">
               What is a co-op?
             </Link>
