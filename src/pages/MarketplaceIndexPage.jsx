@@ -407,9 +407,12 @@ function MarketplaceIndexPage() {
           </div>
         )}
 
-        <div className="mt-3 text-center">
+        <div className="mt-3 flex justify-center gap-4">
+          <Link to="/guides/alternatives" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+            Guides
+          </Link>
           <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
-            Submit a worker owned business &rarr;
+            Submit a business &rarr;
           </Link>
         </div>
       </main>
