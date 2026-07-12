@@ -14,16 +14,16 @@ function faviconUrl(siteUrl) {
 
 // Hand-picked stores for the Amazon alternative section (variety across categories)
 const AMAZON_PICKS = [
-  'Equal Exchange',
-  'King Arthur Baking Company',
-  'Mast General Store',
-  'Thrifty White Pharmacy',
-  'Artisans Cooperative',
-  'Means Workwear',
-  'Just Coffee Cooperative',
-  'Red Emma\'s',
-  'Bob\'s Red Mill',
-  'Frontier Co-op',
+  { name: 'Equal Exchange', product: 'Coffee, tea, and chocolate', detail: 'from a pioneer worker co-op since 1986.' },
+  { name: 'King Arthur Baking Company', product: 'Flours, baking mixes, and ingredients.', detail: 'Employee-owned since 2004.' },
+  { name: 'Mast General Store', product: 'Outdoor gear, clothing, candy, and housewares.', detail: 'Employee-owned general store.' },
+  { name: 'Thrifty White Pharmacy', product: 'Pharmacy, health, and wellness products.', detail: 'Employee-owned since 1952.' },
+  { name: 'Artisans Cooperative', product: 'Handmade ceramics, jewelry, textiles, and art.', detail: 'A co-op alternative to Etsy.' },
+  { name: 'Means Workwear', product: 'Durable workwear and everyday clothing.', detail: 'Worker-owned in the US.' },
+  { name: 'Just Coffee Cooperative', product: 'Fair-trade organic coffee', detail: 'roasted in Madison, WI since 2001.' },
+  { name: 'Red Emma\'s', product: 'Books, zines, and coffee', detail: 'from a worker-owned bookstore in Baltimore.' },
+  { name: 'Bob\'s Red Mill', product: 'Whole grains, oats, flours, and baking staples.', detail: 'Employee-owned.' },
+  { name: 'Frontier Co-op', product: 'Spices, seasonings, and bulk herbs.', detail: 'Member-owned co-op since 1976.' },
 ]
 
 const ALTERNATIVES = [
@@ -88,10 +88,15 @@ function AlternativesPage() {
 
           {ALTERNATIVES.map(alt => {
             let stores
+            let pickData = {}
             if (alt.picks) {
               // Use hand-picked stores for variety
               stores = alt.picks
-                .map(name => marketplaceData.find(s => s.name === name))
+                .map(pick => {
+                  const store = marketplaceData.find(s => s.name === pick.name)
+                  if (store) pickData[store.id] = pick
+                  return store
+                })
                 .filter(Boolean)
             } else {
               // Pick evenly from each category
@@ -127,9 +132,14 @@ function AlternativesPage() {
                           {store.ownership_type}
                         </span>
                       </div>
-                      {store.notes && (
-                        <p className="text-[11px] text-gray-400 mt-0.5 line-clamp-1">{store.notes}</p>
-                      )}
+                      {pickData[store.id] ? (
+                        <p className="text-[11px] text-gray-400 mt-0.5 line-clamp-2">
+                          <span className="font-semibold text-gray-600">{pickData[store.id].product}</span>{' '}
+                          {pickData[store.id].detail}
+                        </p>
+                      ) : store.notes ? (
+                        <p className="text-[11px] text-gray-400 mt-0.5 line-clamp-2">{store.notes}</p>
+                      ) : null}
                     </div>
                   ))}
                 </div>
