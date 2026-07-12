@@ -99,7 +99,7 @@ function AlternativesPage() {
             }
 
             return (
-              <div key={alt.instead} className="mb-8">
+              <div key={alt.instead} id={alt.instead.toLowerCase().replace(/\s+/g, '-')} className="mb-8">
                 <h2 className="text-lg font-bold text-gray-900 mb-1">Instead of {alt.instead}</h2>
                 <p className="text-sm text-gray-500 mb-3">{alt.why}</p>
 
