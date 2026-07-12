@@ -388,12 +388,12 @@ function MarketplaceIndexPage() {
         ) : (
           <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
             <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Browse by category</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            <div className="flex flex-wrap justify-center gap-2">
               {MARKETPLACE_CATEGORIES.map(cat => (
                 <Link
                   key={cat.slug}
                   to={`/marketplace/${cat.slug}`}
-                  className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors"
+                  className="py-2 px-4 rounded-lg text-sm font-medium bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors"
                 >
                   {cat.label}
                 </Link>
@@ -404,20 +404,20 @@ function MarketplaceIndexPage() {
 
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mt-3">
           <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Guides</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            <Link to="/guides/alternatives#amazon" className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors">
+          <div className="flex flex-wrap justify-center gap-2">
+            <Link to="/guides/alternatives#amazon" className="py-2 px-4 rounded-lg text-sm font-medium bg-blue-50 text-[#004cb9] hover:bg-[#004cb9] hover:text-white transition-colors">
               Instead of Amazon
             </Link>
-            <Link to="/guides/alternatives#etsy" className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors">
+            <Link to="/guides/alternatives#etsy" className="py-2 px-4 rounded-lg text-sm font-medium bg-blue-50 text-[#004cb9] hover:bg-[#004cb9] hover:text-white transition-colors">
               Instead of Etsy
             </Link>
-            <Link to="/guides/alternatives#spotify" className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors">
+            <Link to="/guides/alternatives#spotify" className="py-2 px-4 rounded-lg text-sm font-medium bg-blue-50 text-[#004cb9] hover:bg-[#004cb9] hover:text-white transition-colors">
               Instead of Spotify
             </Link>
-            <Link to="/guides/alternatives#corporate-news" className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors">
+            <Link to="/guides/alternatives#corporate-news" className="py-2 px-4 rounded-lg text-sm font-medium bg-blue-50 text-[#004cb9] hover:bg-[#004cb9] hover:text-white transition-colors">
               Instead of Corporate News
             </Link>
-            <Link to="/guides/what-is-a-worker-cooperative" className="py-2 px-3 rounded-lg text-sm font-medium text-center bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors">
+            <Link to="/guides/what-is-a-worker-cooperative" className="py-2 px-4 rounded-lg text-sm font-medium bg-blue-50 text-[#004cb9] hover:bg-[#004cb9] hover:text-white transition-colors">
               What is a co-op?
             </Link>
           </div>
