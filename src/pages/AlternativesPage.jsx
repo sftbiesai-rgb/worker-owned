@@ -12,18 +12,25 @@ function faviconUrl(siteUrl) {
   catch { return null }
 }
 
+// Hand-picked stores for the Amazon alternative section (variety across categories)
+const AMAZON_PICKS = [
+  'Equal Exchange',
+  'King Arthur Baking Company',
+  'Mast General Store',
+  'Thrifty White Pharmacy',
+  'Artisans Cooperative',
+  'Means Workwear',
+  'Just Coffee Cooperative',
+  'Red Emma\'s',
+  'Bob\'s Red Mill',
+  'Frontier Co-op',
+]
+
 const ALTERNATIVES = [
   {
     instead: 'Amazon',
     why: 'These worker-owned businesses sell the same products and ship nationwide.',
-    categories: [
-      { label: 'Coffee & Tea', section: 'Coffee & Tea' },
-      { label: 'Food & Pantry', section: 'Food & Pantry' },
-      { label: 'Books & Media', section: 'Media & Publishing' },
-      { label: 'Home Goods', section: 'Home Goods & Services' },
-      { label: 'Personal Care', section: 'Personal Care' },
-      { label: 'Apparel', section: 'Apparel' },
-    ],
+    picks: AMAZON_PICKS,
   },
   {
     instead: 'Etsy',
@@ -71,18 +78,25 @@ function AlternativesPage() {
           </p>
 
           {ALTERNATIVES.map(alt => {
-            const stores = []
-            const seen = new Set()
-            alt.categories.forEach(cat => {
-              marketplaceData
-                .filter(s => s.site_section === cat.section)
-                .forEach(s => {
-                  if (!seen.has(s.url)) {
-                    seen.add(s.url)
-                    stores.push(s)
-                  }
+            let stores
+            if (alt.picks) {
+              // Use hand-picked stores for variety
+              stores = alt.picks
+                .map(name => marketplaceData.find(s => s.name === name))
+                .filter(Boolean)
+            } else {
+              // Pick evenly from each category
+              const seen = new Set()
+              const perCategory = Math.max(2, Math.floor(8 / alt.categories.length))
+              stores = []
+              alt.categories.forEach(cat => {
+                const catStores = marketplaceData.filter(s => s.site_section === cat.section && !seen.has(s.url))
+                catStores.slice(0, perCategory).forEach(s => {
+                  seen.add(s.url)
+                  stores.push(s)
                 })
-            })
+              })
+            }
 
             return (
               <div key={alt.instead} className="mb-8">
@@ -90,7 +104,7 @@ function AlternativesPage() {
                 <p className="text-sm text-gray-500 mb-3">{alt.why}</p>
 
                 <div className="space-y-1.5">
-                  {stores.slice(0, 8).map(store => (
+                  {stores.slice(0, 10).map(store => (
                     <div key={store.id} className="bg-[#f5f5f7] rounded-xl px-4 py-2.5">
                       <div className="flex items-center gap-2">
                         <Link
@@ -111,12 +125,20 @@ function AlternativesPage() {
                   ))}
                 </div>
 
-                {stores.length > 8 && (
+                {alt.categories && stores.length > 8 && (
                   <Link
                     to={`/marketplace/${slugify(alt.categories[0].section)}`}
                     className="inline-block mt-2 text-xs text-[#004cb9] hover:text-[#003a8c] font-medium"
                   >
                     View all {stores.length} stores &rarr;
+                  </Link>
+                )}
+                {alt.picks && (
+                  <Link
+                    to="/marketplace/companies"
+                    className="inline-block mt-2 text-xs text-[#004cb9] hover:text-[#003a8c] font-medium"
+                  >
+                    Browse all companies &rarr;
                   </Link>
                 )}
               </div>
