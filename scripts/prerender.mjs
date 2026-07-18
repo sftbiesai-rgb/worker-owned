@@ -25,7 +25,7 @@ const routes = [
     url: '/marketplace',
     title: 'Market Place | Shop worker owned online stores for apparel, home goods, food and more',
     description: 'Browse worker owned online stores by category or search 3,500+ products from cooperatives and employee-owned companies.',
-    canonical: 'https://www.workerowned.info',
+    canonical: 'https://www.workerowned.info/marketplace',
     ogImage: 'https://www.workerowned.info/og-marketplace.png',
     keywords: 'worker owned marketplace, shop worker owned, buy from cooperatives, worker cooperative online store, alternative to amazon, employee owned products',
   },
