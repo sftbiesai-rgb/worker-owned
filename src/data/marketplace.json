@@ -102,33 +102,33 @@
     "id": 10,
     "name": "Red Emma's",
     "url": "https://redemmas.org/books",
-    "category": "bookstore",
+    "category": "radical bookstore",
     "ownership_type": "worker co-op",
     "ships": "US",
     "status": "verified active",
-    "notes": "Worker-owned radical bookstore, cafe and community space in Baltimore MD since 2004. Online bookshop. Strong politics, history, social theory selection.",
+    "notes": "Worker-owned radical bookstore, cafe and community space in Baltimore MD since 2004. Online bookshop via Bookshop.org. Strong politics, history, social theory selection.",
     "site_section": "Media & Publishing"
   },
   {
     "id": 11,
     "name": "Bluestockings Cooperative",
     "url": "https://bluestockings.com",
-    "category": "bookstore",
+    "category": "queer feminist bookstore",
     "ownership_type": "worker co-op",
     "ships": "US",
     "status": "verified active",
-    "notes": "NYC Lower East Side queer feminist bookstore founded 1999, worker-owned since 2021. Online shop via bookshop.org.",
+    "notes": "NYC Lower East Side queer feminist bookstore founded 1999, worker-owned since 2021. Online shop via Bookshop.org. Ships nationally.",
     "site_section": "Media & Publishing"
   },
   {
     "id": 12,
     "name": "Raven Book Store",
     "url": "https://ravenbookstore.com",
-    "category": "bookstore",
+    "category": "general bookstore",
     "ownership_type": "employee-owned",
     "ships": "US",
     "status": "verified active",
-    "notes": "Lawrence KS. Employee-owned since 2022. 49% worker-owned. General interest bookstore with online ordering.",
+    "notes": "Lawrence KS. Employee-owned since 2022. Known for How to Resist Amazon and Why author Danny Caine. Online ordering available.",
     "site_section": "Media & Publishing"
   },
   {
@@ -139,18 +139,18 @@
     "ownership_type": "worker co-op",
     "ships": "worldwide",
     "status": "verified active",
-    "notes": "Long-running worker co-op publisher and distributor of radical books since 1990. Ships globally. Largest anarchist publisher in the English-speaking world.",
+    "notes": "Worker co-op publisher and distributor of radical books since 1990. Oakland CA. Largest anarchist publisher in the English-speaking world. Ships worldwide.",
     "site_section": "Media & Publishing"
   },
   {
     "id": 14,
     "name": "Making Worlds Bookstore",
     "url": "https://www.makingworldsbooks.org/onlinestore",
-    "category": "bookstore",
+    "category": "radical bookstore",
     "ownership_type": "worker co-op",
     "ships": "US",
     "status": "verified active",
-    "notes": "West Philadelphia nonprofit worker co-op bookstore. Online store available. Abolition and liberation focused.",
+    "notes": "West Philadelphia nonprofit worker co-op bookstore. Abolition, autonomy, Black/Brown/Indigenous liberation focus. Online store and Bookshop.org storefront.",
     "site_section": "Media & Publishing"
   },
   {
@@ -161,7 +161,7 @@
     "ownership_type": "worker-owned",
     "ships": "worldwide",
     "status": "verified active",
-    "notes": "Portland OR worker-ownership program since 1996. Publishes and distributes DIY, punk, social justice zines and books. Also sells patches, stickers, buttons, shirts. US-printed.",
+    "notes": "Portland OR worker-ownership program since 1996. Publishers Weekly Fastest Growing Publisher 2022-2024. DIY, punk, social justice zines and books. Also sells patches, stickers, buttons, shirts. US-printed.",
     "site_section": "Media & Publishing"
   },
   {
@@ -249,7 +249,9 @@
     "ownership_type": "worker co-op",
     "ships": "worldwide",
     "status": "verified active",
-    "notes": "Palestinian and American member-owned co-op founded 2021. Traditional Nablus olive oil soap. Ships worldwide from Palestine and US warehouses. 8,000+ reviews.",
+    "notes": {
+      "notes": "Nablus, Palestine worker co-op since 1907. Traditional cold-pressed olive oil soap. Also sells kufiya scarves and other Palestinian goods. Ships worldwide."
+    },
     "site_section": "Personal Care"
   },
   {
@@ -260,7 +262,9 @@
     "ownership_type": "worker co-op",
     "ships": "US",
     "status": "verified active",
-    "notes": "Chicago worker co-op founded 2025. Concentrated soap drops, all natural organic ingredients. Profits split equally among workers. Online store + Chicago farmers markets.",
+    "notes": {
+      "notes": "Chicago worker-owned cooperative since 2022. Handmade soaps, cleaning products, personal care. Fair labor, earth-friendly ingredients."
+    },
     "site_section": "Personal Care"
   },
   {
@@ -271,7 +275,9 @@
     "ownership_type": "worker co-op",
     "ships": "US",
     "status": "verified active",
-    "notes": "Worker-owned co-op making social justice board games. Titles: Co-opoly, Rise Up, STRIKE!, Space Cats Fight Fascism. Made in USA with union/co-op printers.",
+    "notes": {
+      "notes": "Worker-owned cooperative creating cooperative board games and educational materials. Games about collective organizing, fair trade, sustainability."
+    },
     "site_section": "Games"
   },
   {
@@ -282,7 +288,9 @@
     "ownership_type": "worker co-op",
     "ships": "worldwide",
     "status": "verified active",
-    "notes": "Worker-owned co-op of 40 North American printmakers since 1998. Social/political/environmental themed prints and posters. Active online store in Pittsburgh.",
+    "notes": {
+      "notes": "International decentralized worker co-op of 30 artists producing activist screen-printed posters, prints, and graphics. Art for social movements."
+    },
     "site_section": "Art & Prints"
   },
   {
@@ -304,7 +312,9 @@
     "ownership_type": "multi-stakeholder co-op",
     "ships": "digital / worldwide",
     "status": "verified active",
-    "notes": "Cooperatively-owned Bandcamp alternative. 19,000+ artists, 2,800+ labels across 120+ countries. Artists keep 100% of earnings. Live as of 2025.",
+    "notes": {
+      "notes": "Worker-owned platform co-op for musicians. DRM-free streaming and downloads. Artists keep 95% of revenue."
+    },
     "site_section": "Music"
   },
   {
@@ -315,7 +325,9 @@
     "ownership_type": "worker co-op",
     "ships": "digital / worldwide",
     "status": "verified active",
-    "notes": "Open-source worker co-op music platform. Artists set their own fees. Already live and functional. Fairer Bandcamp alternative.",
+    "notes": {
+      "notes": "Worker-owned music platform co-op. Musicians keep 100% of tips and most sales revenue. Open-source, community-governed."
+    },
     "site_section": "Music"
   },
   {
@@ -403,7 +415,9 @@
     "ownership_type": "multi-stakeholder co-op",
     "ships": "worldwide",
     "status": "verified active",
-    "notes": "Member-owned Etsy alternative launched 2023. Hundreds of sellers offering handmade home goods, ceramics, candles, textiles. Best single marketplace source for co-op-made goods.",
+    "notes": {
+      "notes": "Platform co-op marketplace for independent artisans. Handmade ceramics, textiles, home decor, art, jewelry. Worker-and-artisan owned alternative to Etsy."
+    },
     "site_section": "Home Goods & Services"
   },
   {
@@ -451,83 +465,6 @@
     "site_section": "Home Goods & Services"
   },
   {
-    "id": 46,
-    "name": "Justseeds Artists' Cooperative \u2014 Prints",
-    "url": "https://justseeds.org/shop",
-    "category": "art prints / social movement posters",
-    "ownership_type": "worker co-op",
-    "ships": "worldwide",
-    "status": "verified active",
-    "notes": "40 artists across US, Canada, Mexico. Affordable political printmaking. Ships from Pittsburgh PA.",
-    "site_section": "Art & Prints"
-  },
-  {
-    "id": 47,
-    "name": "TESA Collective \u2014 Games",
-    "url": "https://store.tesacollective.com",
-    "category": "board games / card games",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Co-opoly: learn cooperative economics. Rise Up: build a social movement. STRIKE!: fight a corporation. Space Cats Fight Fascism. All US-made.",
-    "site_section": "Games"
-  },
-  {
-    "id": 49,
-    "name": "Subvert \u2014 Music",
-    "url": "https://www.subvert.fm",
-    "category": "music / records / digital downloads",
-    "ownership_type": "multi-stakeholder co-op",
-    "ships": "digital / worldwide",
-    "status": "verified active",
-    "notes": "Collectively-owned Bandcamp successor. 0% platform fees. Artists keep 100% of earnings. Members vote on platform governance.",
-    "site_section": "Music"
-  },
-  {
-    "id": 50,
-    "name": "Mirlo \u2014 Music",
-    "url": "https://mirlo.space",
-    "category": "music / records / digital downloads",
-    "ownership_type": "worker co-op",
-    "ships": "digital / worldwide",
-    "status": "verified active",
-    "notes": "Open-source worker co-op. Artists set their own fee percentage. Already live with full functionality.",
-    "site_section": "Music"
-  },
-  {
-    "id": 51,
-    "name": "AK Press \u2014 Books",
-    "url": "https://www.akpress.org",
-    "category": "radical books / publisher",
-    "ownership_type": "worker co-op",
-    "ships": "worldwide",
-    "status": "verified active",
-    "notes": "Oakland CA worker co-op since 1990. Publishes and distributes radical, anarchist, and leftist books. Ships worldwide.",
-    "site_section": "Media & Publishing"
-  },
-  {
-    "id": 52,
-    "name": "Soapbox Co-op \u2014 Soap",
-    "url": "https://soapboxcoop.com",
-    "category": "soap / personal care",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Very new (2025), Chicago. Concentrated soap drops \u2014 fill your own dispenser, pay only for soap not water. All natural organic ingredients.",
-    "site_section": "Personal Care"
-  },
-  {
-    "id": 53,
-    "name": "Palestinian Soap Cooperative \u2014 Soap",
-    "url": "https://palestiniansoap.coop",
-    "category": "traditional olive oil soap",
-    "ownership_type": "worker co-op",
-    "ships": "worldwide",
-    "status": "verified active",
-    "notes": "Member-owned 2021. Nablus traditional hot-process olive oil soap. Warehouses in Palestine and USA. 8,000+ reviews.",
-    "site_section": "Personal Care"
-  },
-  {
     "id": 54,
     "name": "Equal Exchange \u2014 Tea",
     "url": "https://shop.equalexchange.coop/collections/tea",
@@ -550,39 +487,6 @@
     "site_section": "Food & Pantry"
   },
   {
-    "id": 56,
-    "name": "Red Emma's \u2014 Bookstore",
-    "url": "https://bookshop.org/shop/redemmas",
-    "category": "radical bookstore",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Online storefront via Bookshop.org. Ships nationally. Alternative URL if main site down.",
-    "site_section": "Media & Publishing"
-  },
-  {
-    "id": 57,
-    "name": "Bluestockings \u2014 Bookstore",
-    "url": "https://bookshop.org/shop/bluestockings",
-    "category": "queer feminist bookstore",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Bookshop.org storefront for national ordering. NYC Lower East Side.",
-    "site_section": "Media & Publishing"
-  },
-  {
-    "id": 58,
-    "name": "Making Worlds \u2014 Bookstore",
-    "url": "https://bookshop.org/shop/makingworlds",
-    "category": "radical bookstore",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Bookshop.org storefront. West Philadelphia. Abolition, autonomy, Black/Brown/Indigenous liberation focus.",
-    "site_section": "Media & Publishing"
-  },
-  {
     "id": 59,
     "name": "Frontier Co-op",
     "url": "https://www.frontiercoop.com",
@@ -592,28 +496,6 @@
     "status": "verified active",
     "notes": "Member-owned co-op since 1976. Herbs, spices, teas, seasonings. NOTE: member co-op (stores are members), not worker co-op \u2014 flag distinction on site.",
     "site_section": "Food & Pantry"
-  },
-  {
-    "id": 60,
-    "name": "Once Again Nut Butter \u2014 Food",
-    "url": "https://onceagainnutbutter.com",
-    "category": "nut butters / spreads",
-    "ownership_type": "ESOP",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "100% employee-owned ESOP. Organic peanut butter, almond, cashew, tahini, sunflower butters. One of the most worker-democratic ESOPs in the food industry.",
-    "site_section": "Food & Pantry"
-  },
-  {
-    "id": 61,
-    "name": "Raven Book Store \u2014 Online",
-    "url": "https://ravenbookstore.com",
-    "category": "general bookstore",
-    "ownership_type": "employee-owned",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Lawrence KS. Employee-owned 2022. Known for How to Resist Amazon and Why author Danny Caine. Online ordering available.",
-    "site_section": "Media & Publishing"
   },
   {
     "id": 62,
@@ -638,17 +520,6 @@
     "site_section": "Coffee & Tea"
   },
   {
-    "id": 65,
-    "name": "Microcosm Publishing \u2014 Books",
-    "url": "https://microcosmpublishing.com",
-    "category": "books / zines",
-    "ownership_type": "worker-owned",
-    "ships": "worldwide",
-    "status": "verified active",
-    "notes": "Publishers Weekly Fastest Growing Publisher 2022-2024. DIY, punk, witchcraft, bicycling, gender, self-care, social justice. US-printed.",
-    "site_section": "Media & Publishing"
-  },
-  {
     "id": 66,
     "name": "Worx Printing \u2014 Shop",
     "url": "https://shop.goodpress.coop/collections/worx-merch",
@@ -660,72 +531,6 @@
     "site_section": "Apparel"
   },
   {
-    "id": 67,
-    "name": "Real Pickles \u2014 Online Store",
-    "url": "https://realpickles.com/products/online-store",
-    "category": "fermented foods",
-    "ownership_type": "worker co-op",
-    "ships": "Northeast US only (New England + NY, NJ, PA)",
-    "status": "verified active",
-    "notes": "Direct link to Real Pickles online store. Pack of 4 jars, cases of 12, bulk 1 gallon and 5 gallon buckets available. Northeast only.",
-    "site_section": "Food & Pantry"
-  },
-  {
-    "id": 68,
-    "name": "Justseeds \u2014 Shop",
-    "url": "https://justseeds.org/shop",
-    "category": "art prints / political posters",
-    "ownership_type": "worker co-op",
-    "ships": "worldwide",
-    "status": "verified active",
-    "notes": "Direct link to Justseeds online shop. Affordable prints from 40 activist artists. Pittsburgh shipping hub.",
-    "site_section": "Art & Prints"
-  },
-  {
-    "id": 69,
-    "name": "TESA Collective \u2014 Store",
-    "url": "https://store.tesacollective.com",
-    "category": "games / education",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Full game store. Also sells shirts and activist merchandise. Free shipping available.",
-    "site_section": "Games"
-  },
-  {
-    "id": 70,
-    "name": "Artisans Cooperative \u2014 Marketplace",
-    "url": "https://artisans.coop",
-    "category": "handmade goods marketplace",
-    "ownership_type": "multi-stakeholder co-op",
-    "ships": "worldwide",
-    "status": "verified active",
-    "notes": "Launched Oct 2023. Sellers pay no fees until profitable. Members govern platform democratically. Covers ceramics, jewelry, textiles, home goods, clothing.",
-    "site_section": "Home Goods & Services"
-  },
-  {
-    "id": 71,
-    "name": "Gimme Coffee \u2014 Online",
-    "url": "https://gimmecoffee.com",
-    "category": "coffee roaster",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Ithaca NY, founded 2000. Worker co-op since recently. Multiple cafes in Ithaca. Online store with subscriptions.",
-    "site_section": "Coffee & Tea"
-  },
-  {
-    "id": 72,
-    "name": "Rock City Coffee \u2014 Online",
-    "url": "https://rockcitycoffee.com",
-    "category": "coffee roaster",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Rockland Maine worker co-op since 1999. Ships anywhere US. Free local delivery in mid-coast Maine.",
-    "site_section": "Coffee & Tea"
-  },
-  {
     "id": 74,
     "name": "Slow Bloom \u2014 Coffee Shop",
     "url": "https://www.slowbloomcoffee.com/shopcoffee",
@@ -735,94 +540,6 @@
     "status": "verified active",
     "notes": "Direct link to Slow Bloom coffee shop. Single origin coffees, subscriptions available. Founded by workers illegally fired during unionization.",
     "site_section": "Coffee & Tea"
-  },
-  {
-    "id": 75,
-    "name": "Morning Bell \u2014 Coffee",
-    "url": "https://morningbellcoffeeroasters.square.site",
-    "category": "coffee roaster",
-    "ownership_type": "worker co-op",
-    "ships": "US \u2014 verify",
-    "status": "verified active",
-    "notes": "Iowa's first worker co-op business (2022). Site active. Wholesale and retail. Espresso bar and roastery in Ames IA.",
-    "site_section": "Coffee & Tea"
-  },
-  {
-    "id": 76,
-    "name": "Means Workwear \u2014 Apparel",
-    "url": "https://www.meansworkwear.com",
-    "category": "political apparel",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Worker co-op fighting for a worker-owned world. USA-produced, hand-printed. Labor movement themes, anti-fascist designs.",
-    "site_section": "Apparel"
-  },
-  {
-    "id": 77,
-    "name": "Maggie's Organics \u2014 Clothing",
-    "url": "https://maggiesorganics.com",
-    "category": "organic clothing / socks",
-    "ownership_type": "employee-owned",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Oldest organic apparel company in US. Employee-owned. Socks, tights, leggings, tops. Production at worker co-ops in Nicaragua and NC. GOTS certified.",
-    "site_section": "Apparel"
-  },
-  {
-    "id": 78,
-    "name": "No Gods No Masters \u2014 Apparel",
-    "url": "https://www.no-gods-no-masters.com",
-    "category": "political / activist clothing",
-    "ownership_type": "collective",
-    "ships": "worldwide",
-    "status": "verified active",
-    "notes": "Artist collective cooperative. Sweatshop-free, vegan inks, fair labor certified. Political and activist designs. Ships worldwide.",
-    "site_section": "Apparel"
-  },
-  {
-    "id": 79,
-    "name": "Palestinian Soap Cooperative \u2014 Kufiya",
-    "url": "https://palestiniansoap.coop",
-    "category": "soap / traditional goods",
-    "ownership_type": "worker co-op",
-    "ships": "worldwide",
-    "status": "verified active",
-    "notes": "Also sells traditional kufiyas and Palestinian goods beyond soap. Palestinian and American co-owned.",
-    "site_section": "Personal Care"
-  },
-  {
-    "id": 80,
-    "name": "Subvert \u2014 Platform Co-op",
-    "url": "https://www.subvert.fm",
-    "category": "music / platform",
-    "ownership_type": "multi-stakeholder co-op",
-    "ships": "digital",
-    "status": "verified active",
-    "notes": "19,823 artists, 2,856 labels, 2,532 supporters across 120+ countries. 0% platform fees. Artists and fans co-own the platform.",
-    "site_section": "Music"
-  },
-  {
-    "id": 81,
-    "name": "Mirlo \u2014 Music Platform",
-    "url": "https://mirlo.space",
-    "category": "music / platform",
-    "ownership_type": "worker co-op",
-    "ships": "digital",
-    "status": "verified active",
-    "notes": "Open source. Artists set their own platform fee. No waiting lists. Full catalog and label profiles. The most functional Bandcamp alternative.",
-    "site_section": "Music"
-  },
-  {
-    "id": 82,
-    "name": "Soapbox Co-op \u2014 Chicago",
-    "url": "https://soapboxcoop.com",
-    "category": "soap / personal care",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "2025 startup. Eco-friendly concentrated liquid soap. Workers split all profits equally. No investors, no managers.",
-    "site_section": "Personal Care"
   },
   {
     "id": 84,
@@ -1439,17 +1156,6 @@
     "ships": "worldwide",
     "status": "verified active",
     "notes": "Worker co-op based in Nunda, NY since 1976. Makes organic and natural peanut butter, almond butter, cashew butter, sunflower butter, honey, and tahini. B Corp certified. Certified EO member.",
-    "site_section": "Food & Pantry"
-  },
-  {
-    "id": 149,
-    "name": "Dean's Beans Organic Coffee",
-    "url": "https://www.deansbeans.com",
-    "category": "fair trade organic coffee",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Worker co-op organic coffee roaster based in Orange, MA. Founded 1993 by Dean Cycon. Certified EO member. Known for social justice mission and direct relationships with farming communities. Ships coffee, tea, chocolate, and gift items.",
     "site_section": "Food & Pantry"
   },
   {
