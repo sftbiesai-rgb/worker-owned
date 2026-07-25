@@ -214,10 +214,10 @@ function MarketplacePage() {
             <div className="flex flex-wrap gap-1.5 justify-center">
               <Link
                 to={`/marketplace/${category}`}
-                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors border ${
                   !activeSub
-                    ? 'bg-gray-800 text-white'
-                    : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+                    ? 'bg-gray-700 text-white border-gray-700'
+                    : 'bg-white text-gray-500 border-gray-200 hover:text-[#004cb9] hover:border-[#004cb9]'
                 }`}
               >
                 All
@@ -226,10 +226,10 @@ function MarketplacePage() {
                 <Link
                   key={s.slug}
                   to={`/marketplace/${category}/${s.slug}`}
-                  className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                  className={`px-3 py-1 rounded-full text-xs font-medium transition-colors border ${
                     s.slug === subcategory
-                      ? 'bg-gray-800 text-white'
-                      : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+                      ? 'bg-gray-700 text-white border-gray-700'
+                      : 'bg-white text-gray-500 border-gray-200 hover:text-[#004cb9] hover:border-[#004cb9]'
                   }`}
                 >
                   {s.label}
