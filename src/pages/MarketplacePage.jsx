@@ -55,6 +55,24 @@ const SUBCATEGORIES = {
     { slug: 'chocolate', label: 'Chocolate & Sweets', keywords: ['chocolate', 'candy', 'sweet', 'cocoa', 'truffle', 'toffee', 'fudge', 'caramel'] },
     { slug: 'pantry', label: 'Pantry Staples', keywords: ['olive oil', 'nut butter', 'jam', 'honey', 'spice', 'seasoning', 'sauce', 'vinegar', 'flour', 'grain', 'seaweed', 'kelp'] },
   ],
+  'personal-care': [
+    { slug: 'skin-care', label: 'Skin Care', keywords: ['lotion', 'moisturizer', 'cream', 'sunscreen', 'face wash', 'cleanser', 'serum', 'body butter', 'body wash', 'exfoliat', 'toner', 'skin'] },
+    { slug: 'hair-care', label: 'Hair Care', keywords: ['shampoo', 'conditioner', 'hair', 'styling'] },
+    { slug: 'soap', label: 'Soap & Bath', keywords: ['soap', 'bar soap', 'bath', 'body bar', 'hand wash', 'bubble'] },
+    { slug: 'deodorant', label: 'Deodorant', keywords: ['deodorant', 'antiperspirant'] },
+    { slug: 'vitamins', label: 'Vitamins & Supplements', keywords: ['vitamin', 'supplement', 'mineral', 'probiotic', 'calcium', 'magnesium', 'iron ', 'zinc ', 'omega', 'fish oil', 'multivitamin', 'gummies'] },
+    { slug: 'medicine', label: 'Medicine & First Aid', keywords: ['medicine', 'tylenol', 'advil', 'ibuprofen', 'acetaminophen', 'allergy', 'cold ', 'cough', 'bandage', 'first aid', 'thermometer', 'antibiotic', 'pain relief', 'aspirin'] },
+  ],
+  'coffee-tea': [
+    { slug: 'coffee', label: 'Coffee', keywords: ['coffee', 'espresso', 'roast', 'blend', 'decaf', 'ground', 'whole bean'] },
+    { slug: 'tea', label: 'Tea', keywords: ['tea', 'herbal', 'chai', 'matcha', 'rooibos', 'green tea', 'black tea'] },
+    { slug: 'chocolate', label: 'Chocolate & Cocoa', keywords: ['chocolate', 'cocoa', 'cacao', 'hot chocolate'] },
+  ],
+  'games': [
+    { slug: 'board-games', label: 'Board Games', keywords: ['board game', 'game', 'card game', 'dice', 'strategy', 'party game', 'family game'] },
+    { slug: 'puzzles', label: 'Puzzles', keywords: ['puzzle', 'jigsaw'] },
+    { slug: 'toys', label: 'Toys & Kids', keywords: ['toy', 'plush', 'stuffed', 'figure', 'doll', 'kid', 'children', 'building'] },
+  ],
   'media-publishing': [
     { slug: 'books', label: 'Books', keywords: ['book', 'paperback', 'hardcover', 'novel', 'memoir', 'anthology', ' zine', 'zines', 'pamphlet', 'guide', 'handbook', 'reader', 'edition', 'volume', 'press'] },
     { slug: 'news-journalism', label: 'News & Journalism', keywords: ['journalism', 'news', 'magazine', 'newsletter', 'subscription', 'investigative', 'reporting', 'essay'] },
