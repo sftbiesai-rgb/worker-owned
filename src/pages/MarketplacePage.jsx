@@ -174,8 +174,9 @@ function MarketplacePage() {
       })
     : sectionProducts
 
-  const totalPages = Math.ceil(filtered.length / PER_PAGE)
-  const paged = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE)
+  const sorted = [...filtered].sort((a, b) => (a.available === false ? 1 : 0) - (b.available === false ? 1 : 0))
+  const totalPages = Math.ceil(sorted.length / PER_PAGE)
+  const paged = sorted.slice((page - 1) * PER_PAGE, page * PER_PAGE)
 
   const entries = dedupeByUrl(
     marketplaceData.filter(e => e.site_section === section.sectionName)
