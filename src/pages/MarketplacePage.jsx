@@ -129,6 +129,7 @@ function MarketplacePage() {
   const [loaded, setLoaded] = useState(false)
   const [page, setPage] = useState(1)
   const [showStores, setShowStores] = useState(category === 'tech-software' || category === 'art-prints' || category === 'music')
+  const [filter, setFilter] = useState('')
 
   useEffect(() => {
     if (!section) return
@@ -160,19 +161,27 @@ function MarketplacePage() {
     document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', desc)
   }, [section, activeSub])
 
-  useEffect(() => { setPage(1) }, [subcategory])
+  useEffect(() => { setPage(1); setFilter('') }, [category, subcategory])
 
   if (!section) return <Navigate to="/marketplace" replace />
   if (subcategory && subs && !activeSub) return <Navigate to={`/marketplace/${category}`} replace />
 
   const sectionProducts = products.filter(p => p.site_section === section.sectionName)
 
-  const filtered = activeSub
+  const subFiltered = activeSub
     ? sectionProducts.filter(p => {
         const text = p.title.toLowerCase() + ' ' + (p.tags || []).join(' ').toLowerCase()
         return activeSub.keywords.some(kw => text.includes(kw))
       })
     : sectionProducts
+
+  const filterWords = filter.toLowerCase().split(/\s+/).filter(Boolean)
+  const filtered = filterWords.length
+    ? subFiltered.filter(p => {
+        const text = p.title.toLowerCase() + ' ' + (p.tags || []).join(' ').toLowerCase() + ' ' + (p.store_name || '').toLowerCase()
+        return filterWords.every(w => text.includes(w))
+      })
+    : subFiltered
 
   const sorted = [...filtered].sort((a, b) => (a.available === false ? 1 : 0) - (b.available === false ? 1 : 0))
   const totalPages = Math.ceil(sorted.length / PER_PAGE)
@@ -248,6 +257,15 @@ function MarketplacePage() {
               {!loaded ? 'Loading…' : products.length > 0 ? `${filtered.length} product${filtered.length !== 1 ? 's' : ''}` : ''}
             </p>
           </div>
+          {loaded && subFiltered.length > 20 && (
+            <input
+              type="text"
+              value={filter}
+              onChange={e => { setFilter(e.target.value); setPage(1) }}
+              placeholder={`Filter ${(activeSub ? activeSub.label : section.label).toLowerCase()}…`}
+              className="w-full mb-4 px-3 py-2 text-sm border border-gray-200 rounded-lg bg-[#f5f5f7] focus:outline-none focus:border-[#004cb9] focus:ring-1 focus:ring-[#004cb9] placeholder-gray-400"
+            />
+          )}
 
           {paged.length > 0 ? (
             <>
