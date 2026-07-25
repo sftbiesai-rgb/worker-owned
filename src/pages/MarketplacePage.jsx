@@ -75,8 +75,8 @@ const SUBCATEGORIES = {
   ],
   'media-publishing': [
     { slug: 'books', label: 'Books', keywords: ['book', 'paperback', 'hardcover', 'novel', 'memoir', 'anthology', ' zine', 'zines', 'pamphlet', 'guide', 'handbook', 'reader', 'edition', 'volume', 'press'] },
-    { slug: 'news-journalism', label: 'News & Journalism', keywords: ['journalism', 'news', 'magazine', 'newsletter', 'subscription', 'investigative', 'reporting', 'essay'] },
-    { slug: 'music-audio', label: 'Music & Audio', keywords: ['music', 'album', 'vinyl', 'record', 'podcast', 'streaming', 'audio', 'listen'] },
+    { slug: 'news-journalism', label: 'News & Journalism', keywords: ['news-subscription'] },
+    { slug: 'music-audio', label: 'Music & Audio', keywords: ['music-subscription', 'music', 'album', 'vinyl', 'record', 'podcast', 'streaming', 'audio', 'listen'] },
     { slug: 'maps-prints', label: 'Maps & Prints', keywords: ['map', 'poster', 'print', 'wall map', 'sticker', 'patch', 'button'] },
   ],
 }
