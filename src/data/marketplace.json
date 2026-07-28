@@ -1341,5 +1341,15 @@
     "status": "verified active",
     "notes": "100% employee-owned pharmacy chain. 96 drugstores across MN, ND, SD, MT, WI, IA. Online store sells OTC meds, vitamins, supplements, personal care, and beauty products.",
     "site_section": "Personal Care"
+  },
+  {
+    "id": 168,
+    "name": "Garlic and Roses Media Cooperative",
+    "url": "https://garlicandroses.coop",
+    "category": "food co-op journalism",
+    "ownership_type": "worker co-op",
+    "status": "verified active",
+    "notes": "Worker-owned media cooperative based in Washington DC. News publication covering the food co-op sector. Subscription and donation supported.",
+    "site_section": "Media & Publishing"
   }
 ]
