@@ -1351,5 +1351,25 @@
     "status": "verified active",
     "notes": "Worker-owned media cooperative based in Washington DC. News publication covering the food co-op sector. Subscription and donation supported.",
     "site_section": "Media & Publishing"
+  },
+  {
+    "id": 169,
+    "name": "The 51st",
+    "url": "https://51st.news",
+    "category": "local news",
+    "ownership_type": "worker co-op",
+    "status": "verified active",
+    "notes": "Worker-led nonprofit newsroom covering Washington DC. Founded by former DCist/WAMU journalists. Contributed to a Pulitzer Prize-winning investigation. Reader-supported.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 170,
+    "name": "Long Beach Watchdog",
+    "url": "https://lbwatchdog.com",
+    "category": "local news",
+    "ownership_type": "worker co-op",
+    "status": "verified active",
+    "notes": "Worker-owned news cooperative in Long Beach CA. Founded April 2024 by journalists laid off after unionizing at the Long Beach Post. Reader and ad supported.",
+    "site_section": "Media & Publishing"
   }
 ]
