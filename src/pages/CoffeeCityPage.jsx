@@ -28,8 +28,11 @@ function CoffeeCityPage() {
       document.title = `Worker-Owned Coffee Shops in ${config.label} | Worker Owned`
       document.querySelector('meta[name="description"]')?.setAttribute('content',
         `Find ${shops.length} worker-owned coffee shops, cafes, and bakeries in ${config.label}. Support cooperatively owned businesses near you.`)
+      const canonical = `https://www.workerowned.info/guides/worker-owned-coffee/${city}`
+      document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
+      document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
     }
-  }, [config, shops.length])
+  }, [config, shops.length, city])
 
   if (!config) {
     return (
