@@ -56,6 +56,9 @@ function CompaniesPage() {
     document.title = 'All Worker Owned Companies | Worker Owned Marketplace'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
       'Browse all worker owned and employee-owned companies in the Worker Owned marketplace directory, sorted by category.')
+    const canonical = 'https://www.workerowned.info/marketplace/companies'
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
+    document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
   }, [])
 
   return (

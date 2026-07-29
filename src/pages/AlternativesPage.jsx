@@ -79,6 +79,9 @@ function AlternativesPage() {
     document.title = 'Worker-Owned Alternatives to Amazon, Etsy & More | Worker Owned Marketplace'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
       'Skip Amazon and Etsy. Shop worker-owned cooperatives that sell coffee, food, books, clothing, art, and more. Every purchase supports worker ownership.')
+    const canonical = 'https://www.workerowned.info/guides/alternatives'
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
+    document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
   }, [])
 
   useEffect(() => {

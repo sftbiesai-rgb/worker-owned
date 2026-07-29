@@ -6,6 +6,9 @@ function WhatIsCoopPage() {
     document.title = 'What Is a Worker Cooperative? | Worker Owned Marketplace'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
       'A worker cooperative is a business owned and governed by the people who work there. Learn how co-ops work, how they differ from traditional companies, and where to find them.')
+    const canonical = 'https://www.workerowned.info/guides/what-is-a-worker-cooperative'
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
+    document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
   }, [])
 
   return (

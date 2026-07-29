@@ -56,10 +56,15 @@ function BrowsePage({ category }) {
     grocery: { title: 'Worker Owned Grocery Stores in the US | Worker Owned', desc: 'Browse all worker owned grocery stores and food co-ops across the United States. Find cooperatively owned groceries near you.', heading: 'Worker Owned Grocery Stores', sub: 'Cooperatively owned grocery stores and food co-ops across the United States', label: 'grocery store' },
   }[category] || {}
 
+  const categorySlug = { coffee: 'coffee', restaurant: 'restaurants', grocery: 'grocery' }[category] || category
+
   useEffect(() => {
     if (meta.title) {
       document.title = meta.title
       document.querySelector('meta[name="description"]')?.setAttribute('content', meta.desc)
+      const canonical = `https://www.workerowned.info/${categorySlug}`
+      document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
+      document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
     }
   }, [category])
 

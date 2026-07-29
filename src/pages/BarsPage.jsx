@@ -58,6 +58,9 @@ function BarsPage() {
     document.title = 'Worker Owned Bars & Breweries in the US | Worker Owned'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
       'Browse all worker owned bars, brewpubs, and breweries across the United States. Find cooperatively owned bars near you.')
+    const canonical = 'https://www.workerowned.info/bars'
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
+    document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
   }, [])
 
   const filtered = bars

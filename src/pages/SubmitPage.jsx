@@ -7,6 +7,9 @@ function SubmitPage() {
     document.title = 'Submit a Worker Owned Business | Worker Owned'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
       'Submit a worker owned business to the Worker Owned directory. Add your cooperative coffee shop, restaurant, or online store.')
+    const canonical = 'https://www.workerowned.info/submit'
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
+    document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
   }, [])
 
   const [formName, setFormName] = useState('')

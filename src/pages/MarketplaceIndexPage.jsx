@@ -82,6 +82,9 @@ function MarketplaceIndexPage() {
     document.title = 'Market Place | Shop worker owned online stores for apparel, home goods, food and more'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
       'Browse worker owned online stores by category or search thousands of products from cooperatives and employee-owned companies.')
+    const canonical = 'https://www.workerowned.info/marketplace'
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
+    document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
   }, [])
 
   useEffect(() => {
