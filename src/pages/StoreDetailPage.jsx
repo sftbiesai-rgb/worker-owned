@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
+import { track } from '@vercel/analytics'
 import marketplaceData from '../data/marketplace.json'
 
 function slugify(name) {
@@ -126,6 +127,7 @@ function StoreDetailPage() {
                   href={entry.url}
                   target="_blank"
                   rel="noopener"
+                  onClick={() => track('store_visit', { store: entry.name })}
                   className="text-lg font-bold text-[#004cb9] hover:text-[#003a8c] transition-colors leading-snug"
                 >
                   {entry.name} ↗
@@ -155,6 +157,7 @@ function StoreDetailPage() {
                     href={p.url}
                     target="_blank"
                     rel="noopener"
+                    onClick={() => track('product_click', { store: p.store_name })}
                     className="bg-[#f5f5f7] rounded-xl overflow-hidden hover:ring-1 hover:ring-[#004cb9] transition-all group"
                   >
                     {p.image && (
@@ -186,6 +189,7 @@ function StoreDetailPage() {
                 href={entry.url}
                 target="_blank"
                 rel="noopener"
+                onClick={() => track('store_visit', { store: entry.name })}
                 className="text-sm font-semibold text-[#004cb9] hover:text-[#003a8c] transition-colors"
               >
                 Visit {entry.name} →

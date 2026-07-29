@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { Search, ArrowUpDown } from 'lucide-react'
+import { track } from '@vercel/analytics'
 
 function slugify(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
@@ -328,6 +329,7 @@ function MarketplaceIndexPage() {
                         href={p.url}
                         target="_blank"
                         rel="noopener"
+                        onClick={() => track('product_click', { store: p.store_name })}
                         className="block hover:opacity-90 transition-opacity"
                       >
                         {p.image && (
