@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
+import { track } from '@vercel/analytics'
 import marketplaceData from '../data/marketplace.json'
 
 function slugify(name) {
@@ -276,6 +277,7 @@ function MarketplacePage() {
                       href={p.url}
                       target="_blank"
                       rel="noopener"
+                      onClick={() => track('product_click', { store: p.store_name })}
                       className="block hover:opacity-90 transition-opacity"
                     >
                       {p.image && (
