@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Outreach Emails</title>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; background: #f5f5f7; color: #222; }
+  h1 { font-size: 20px; margin-bottom: 6px; }
+  .subtitle { font-size: 13px; color: #888; margin-bottom: 30px; }
+  .section-label { font-size: 13px; font-weight: 600; color: #555; margin: 28px 0 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .email { background: #fff; border-radius: 12px; border: 1px solid #ddd; padding: 24px; margin-bottom: 24px; }
+  .email h2 { font-size: 15px; margin: 0 0 4px; color: #555; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .email .badge { font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: normal; white-space: nowrap; }
+  .badge.dm { background: #e8daef; color: #6c3483; }
+  .badge.email-badge { background: #d5e8d4; color: #2d6a4f; }
+  .badge.form { background: #fdebd0; color: #935116; }
+  .badge.sent { background: #d4edda; color: #2d6a4f; }
+  .badge.replied { background: #cce5ff; color: #004085; }
+  .badge.skipped { background: #e2e3e5; color: #6c757d; }
+  .badge.followup { background: #fff3cd; color: #856404; }
+  .email .meta { font-size: 13px; color: #888; margin-bottom: 2px; }
+  .email .subject { font-size: 13px; color: #888; margin-bottom: 12px; }
+  .email .body { font-size: 14px; line-height: 1.6; }
+  .email .body p { margin: 0 0 14px; }
+  .email .body a { color: #1a73e8; }
+  .copy-btn { margin-top: 12px; padding: 6px 16px; font-size: 13px; border: 1px solid #ccc; border-radius: 6px; background: #f9f9f9; cursor: pointer; }
+  .copy-btn:hover { background: #eee; }
+  .copy-btn.copied { background: #d4edda; border-color: #b7dfc6; }
+  .note { font-size: 12px; color: #999; margin-top: 6px; font-style: italic; }
+  .sent-section { margin-top: 40px; border-top: 2px solid #ddd; padding-top: 20px; }
+  .collapse-toggle { background: none; border: 1px solid #ccc; border-radius: 6px; padding: 8px 16px; font-size: 13px; color: #555; cursor: pointer; display: flex; align-items: center; gap: 6px; }
+  .collapse-toggle:hover { background: #f0f0f0; }
+  .collapse-toggle .arrow { transition: transform 0.2s; display: inline-block; }
+  .collapse-toggle .arrow.open { transform: rotate(90deg); }
+  .collapsed { display: none; }
+  .sent-email { background: #fff; border-radius: 12px; border: 1px solid #e8e8e8; padding: 16px 20px; margin-bottom: 12px; opacity: 0.6; }
+  .sent-email h2 { font-size: 14px; margin: 0; color: #555; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .sent-email .meta { font-size: 12px; color: #999; margin-top: 4px; }
+  .sent-email .body { display: none; }
+  .sent-email.expanded .body { display: block; font-size: 13px; line-height: 1.5; margin-top: 10px; color: #666; border-top: 1px solid #eee; padding-top: 10px; }
+  .sent-email.expanded .body p { margin: 0 0 10px; }
+  .sent-email .expand-btn { font-size: 11px; color: #1a73e8; cursor: pointer; background: none; border: none; padding: 0; margin-top: 4px; }
+</style>
+</head>
+<body>
+<h1>Outreach Emails</h1>
+<div class="subtitle">Consolidated outreach. Unsent on top, sent at bottom.</div>
+
+<!-- ============================================ -->
+<!-- TO SEND: Schneider reply -->
+<!-- ============================================ -->
+
+
+<!-- ============================================ -->
+<!-- TO SEND: Bluesky DMs -->
+<!-- ============================================ -->
+
+<div class="section-label">Newsletter / journalist emails</div>
+
+
+<div class="email">
+  <h2>Brian Merchant (Blood in the Machine) <span class="badge dm">Bluesky DM</span></h2>
+  <div class="meta">Bluesky: @bcmerchant.bsky.social | Tech-labor journalist, Blood in the Machine newsletter</div>
+  <div class="subject">Subject: Searchable marketplace of worker-owned businesses</div>
+  <div class="body" id="email-brianmerchant">
+    <p>Hi Brian,</p>
+    <p>I built workerowned.info, a searchable marketplace of 32,000+ products from 160+ worker-owned cooperatives and employee-owned businesses. People search and buy directly from the co-op's store. No commissions, no ads, no tracking.</p>
+    <p>Given your work on labor and tech, I thought you might be interested. It covers worker-owned media (Defector, 404 Media, Hell Gate), plus co-ops selling coffee, groceries, books, apparel, and more. Also has 115+ worker-owned coffee shops and restaurants by location.</p>
+    <p>It was recently linked on Pluralistic and featured in GEO. Thought your readers might find it useful.</p>
+    <p>Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('email-brianmerchant', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>404 Media <span class="badge email-badge">Email</span></h2>
+  <div class="meta">jason@404media.co | Worker-owned tech journalism (already in our marketplace)</div>
+  <div class="subject">Subject: workerowned.info - you're in it</div>
+  <div class="body" id="email-404media">
+    <p>Hi Jason,</p>
+    <p>I built <a href="https://workerowned.info">workerowned.info</a>, a searchable marketplace of 32,000+ products from 160+ worker-owned cooperatives and employee-owned businesses. 404 Media is listed alongside Defector, Hell Gate, and other worker-owned outlets.</p>
+    <p>The site was recently linked on <a href="https://pluralistic.net">Pluralistic</a> and <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">featured in GEO</a>, and hit #2 on Hacker News. Would you consider mentioning it or linking from your About page? Your audience already gets worker ownership. Showing them the full ecosystem of co-ops they can buy from feels like a natural fit.</p>
+    <p>No pressure. Thanks for proving worker-owned media works.</p>
+    <p>Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('email-404media', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>Douglas Rushkoff (Team Human) <span class="badge email-badge">Email</span></h2>
+  <div class="meta">rushkoff@rushkoff.com | Team Human podcast, cooperative economics advocate</div>
+  <div class="subject">Subject: Searchable marketplace of products from worker-owned cooperatives</div>
+  <div class="body" id="email-rushkoff">
+    <p>Hi Douglas,</p>
+    <p>I built <a href="https://workerowned.info">workerowned.info</a>, a searchable marketplace of 32,000+ products from 160+ worker-owned cooperatives and employee-owned businesses across the US. People search for what they need and buy directly from the co-op's store. No commissions, no ads, no tracking.</p>
+    <p>Given your work on cooperative economics and solidarity, I thought this might interest you. It covers everything from worker-owned media outlets to co-ops selling coffee, groceries, books, and apparel. There's also a directory of 115+ worker-owned coffee shops, restaurants, and groceries by location.</p>
+    <p>It was recently linked on <a href="https://pluralistic.net">Pluralistic</a> and <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">featured in GEO</a>. I thought your Team Human audience would be interested in a practical tool for supporting the cooperative economy.</p>
+    <p>Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('email-rushkoff', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>This Machine Kills (Jathan Sadowski) <span class="badge email-badge">Email</span></h2>
+  <div class="meta">Jathan.Sadowski@monash.edu | Anti-tech-capital podcast with Edward Ongweso Jr.</div>
+  <div class="subject">Subject: Searchable marketplace of products from worker-owned cooperatives</div>
+  <div class="body" id="email-tmk">
+    <p>Hi Jathan,</p>
+    <p>I built <a href="https://workerowned.info">workerowned.info</a>, a searchable marketplace of 32,000+ products from 160+ worker-owned cooperatives and employee-owned businesses across the US. People search for what they need and buy directly from the co-op's store. No commissions, no ads, no tracking.</p>
+    <p>It covers worker-owned media like Defector, 404 Media, and Hell Gate, plus co-ops selling coffee, groceries, books, apparel, and more. Also has 115+ worker-owned coffee shops and restaurants by location.</p>
+    <p>It was recently linked on <a href="https://pluralistic.net">Pluralistic</a> and <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">featured in GEO</a>. I thought TMK's audience would appreciate a practical tool for supporting alternatives to corporate ownership.</p>
+    <p>Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('email-tmk', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>Aral Balkan (Small Technology Foundation) <span class="badge dm">Bluesky DM</span></h2>
+  <div class="meta">Mastodon: @aral@mastodon.ar.al | Small/indie web advocate, anti-big-tech</div>
+  <div class="subject">Subject: Worker-owned marketplace</div>
+  <div class="body" id="email-aralbalkan">
+    <p>Hi Aral,</p>
+    <p>I built workerowned.info, a searchable marketplace of 32,000+ products from 160+ worker-owned cooperatives and employee-owned businesses. No commissions, no ads, no tracking. People search and buy directly from the co-op.</p>
+    <p>It was recently linked on Pluralistic and featured in GEO. I thought it might align with the small tech / indie web ethos. It's a volunteer project.</p>
+    <p>Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('email-aralbalkan', this)">Copy</button>
+  <div class="note">Aral is on Mastodon, not Bluesky. May need to DM there or find email.</div>
+</div>
+
+
+
+<div class="section-label">Academic</div>
+
+<div class="email">
+  <h2>UW-Madison Center for Cooperatives <span class="badge email-badge">Email</span></h2>
+  <div class="meta">info@uwcc.wisc.edu | Premier US academic center for cooperative research</div>
+  <div class="subject">Subject: Searchable marketplace of products from worker-owned cooperatives</div>
+  <div class="body" id="email-uwcc">
+    <p>Hi,</p>
+    <p>I built <a href="https://workerowned.info">workerowned.info</a>, a searchable marketplace of 32,000+ products from 160+ worker-owned cooperatives and employee-owned businesses across the US. People search for what they need and buy directly from the co-op's store. No commissions, no ads, no tracking.</p>
+    <p>It was recently <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">featured in Grassroots Economic Organizing</a> and gets steady daily use. I thought it might be useful as a resource for your students and researchers, or worth sharing in your newsletter.</p>
+    <p>If there are cooperatives in your network that should be listed, I'd love to add them. It's a volunteer project.</p>
+    <p>Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('email-uwcc', this)">Copy</button>
+  <div class="note">A .edu backlink is extremely valuable for SEO</div>
+</div>
+
+<!-- ============================================ -->
+<!-- TO SEND: Co-op backlinks -->
+<!-- ============================================ -->
+
+<div class="section-label">Co-op backlink emails (unsent)</div>
+
+<div class="email">
+  <h2>Alvarado Street Bakery <span class="badge form">Contact form</span></h2>
+  <div class="meta">alvaradostreetbakery.com | Organic sprouted grain breads, bagels, tortillas</div>
+  <div class="subject">Subject: Searchable marketplace featuring Alvarado Street Bakery products</div>
+  <div class="body" id="email-alvarado">
+    <p>Hi,</p>
+    <p>I built workerowned.info, a searchable marketplace of products from worker-owned cooperatives. Alvarado Street Bakery is featured in it. The site indexes over 32,000 products from 60+ co-op stores so people can search and find what worker-owned businesses actually sell. No ads, no commissions, no fees.</p>
+    <p>As the oldest and largest worker-owned bakery in the US, Alvarado Street is exactly the kind of business the marketplace exists to highlight. I'm just a hobbyist doing this because I believe in worker ownership. I don't earn anything from the site.</p>
+    <p>Would you consider adding a link to workerowned.info from your website? Even a mention on your cooperative page would help people discover the broader world of worker-owned businesses.</p>
+    <p>No pressure. I know you're busy making 50,000 loaves a day. Thanks for being an inspiration to the movement for over 40 years.</p>
+    <p>Best,<br>workerowned.info</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('email-alvarado', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>Defector <span class="badge dm">Bluesky DM</span></h2>
+  <div class="meta">defector.com | Worker-owned sports and culture journalism (subscription)</div>
+  <div class="subject">Subject: Searchable marketplace of worker-owned businesses (Defector is in it)</div>
+  <div class="body" id="email-defector">
+    <p>Hi,</p>
+    <p>I made workerowned.info, a searchable marketplace of worker-owned businesses. Defector is listed. The site covers 60+ worker-owned co-ops with 32,000+ products, plus 110+ worker-owned coffee shops and restaurants across the US. No ads, no commissions, no tracking.</p>
+    <p>I'm a hobbyist doing this because I believe in the model. I don't make anything from it. Defector's story, walking out together and building something worker-owned, is one of the most compelling examples of what's possible, and you've written about it beautifully.</p>
+    <p>Would you consider mentioning workerowned.info in an article or linking from your About page? Your audience already gets worker ownership. Showing them the full ecosystem of co-ops they can support feels like a natural fit.</p>
+    <p>No pressure at all. Thanks for proving that worker-owned media can work.</p>
+    <p>Best,<br>workerowned.info</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('email-defector', this)">Copy</button>
+</div>
+
+<!-- ============================================ -->
+<!-- TO SEND: Follow-ups -->
+<!-- ============================================ -->
+
+<div class="section-label">Follow-up emails</div>
+
+<div class="email">
+  <h2>NYC NOWC <span class="badge followup">Follow-up</span></h2>
+  <div class="meta">To: info@nycworker.coop</div>
+  <div class="subject">Subject: Re: Searchable marketplace for worker owned businesses</div>
+  <div class="body" id="fu-nycnowc">
+    <p>Hi,</p>
+    <p>Just following up on my email from a couple weeks ago about <a href="https://workerowned.info">workerowned.info</a>. Since then the site has grown. It now has over 32,000 products from 160+ worker owned stores, searchable by category. We also recently had <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">an article featured in Grassroots Economic Organizing</a> about the directory, and the site is getting steady daily use.</p>
+    <p>The site already features several NYC-area co-ops and credits NYC NOWC as a source. Would you be open to sharing it with your members or linking to it on your site?</p>
+    <p>Happy to add any member co-ops I'm missing.</p>
+    <p>Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('fu-nycnowc', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>DAWI <span class="badge followup">Follow-up</span></h2>
+  <div class="meta">To: info@institute.coop (Karina Pacheco)</div>
+  <div class="subject">Subject: Re: workerowned.info social share</div>
+  <div class="body" id="fu-dawi">
+    <p>Hi Karina,</p>
+    <p>Just checking in on the social media share we discussed back in June. The site has grown a lot since then, now over 32,000 products from 160+ worker owned stores. We also had <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">an article published in Grassroots Economic Organizing</a> about the directory.</p>
+    <p>Were you able to share <a href="https://workerowned.info">workerowned.info</a> on DAWI's socials? No worries either way. I sent a blurb and promo image in my last reply, happy to resend if needed.</p>
+    <p>Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('fu-dawi', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>CooperationWorks <span class="badge followup">Follow-up</span></h2>
+  <div class="meta">To: alex@cooperationworks.coop</div>
+  <div class="subject">Subject: Re: Searchable marketplace for worker owned businesses</div>
+  <div class="body" id="fu-cooperationworks">
+    <p>Hi,</p>
+    <p>Just following up on my email from a couple weeks ago about <a href="https://workerowned.info">workerowned.info</a>. Since then the site has grown to over 32,000 products from 160+ worker owned stores. We also recently had <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">an article featured in Grassroots Economic Organizing</a> about the directory, and the site is getting steady daily use.</p>
+    <p>Would you be open to sharing it with your network or adding a link on your resources page?</p>
+    <p>Happy to add any co-ops I'm missing.</p>
+    <p>Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('fu-cooperationworks', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>Equal Exchange <span class="badge followup">Follow-up</span></h2>
+  <div class="meta">To: info@equalexchange.coop</div>
+  <div class="subject">Subject: Re: Searchable marketplace featuring Equal Exchange</div>
+  <div class="body" id="fu-equalexchange">
+    <p>Hi,</p>
+    <p>Just following up on my email from a couple weeks ago about <a href="https://workerowned.info">workerowned.info</a>. Since then the site has grown to over 32,000 products from 160+ worker owned stores. We also recently had <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">an article featured in Grassroots Economic Organizing</a> about the directory, and the site is getting steady daily use.</p>
+    <p>Equal Exchange is one of the most searched co-ops on the site. A link from your blog or resources section would help more people discover the full ecosystem of worker owned businesses.</p>
+    <p>No pressure at all. Thanks for everything you do.</p>
+    <p>Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('fu-equalexchange', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>King Arthur Baking <span class="badge followup">Follow-up</span></h2>
+  <div class="meta">To: customercare@kingarthurbaking.com</div>
+  <div class="subject">Subject: Re: Searchable marketplace featuring King Arthur Baking</div>
+  <div class="body" id="fu-kingarthur">
+    <p>Hi,</p>
+    <p>Just following up on my email from a couple weeks ago about <a href="https://workerowned.info">workerowned.info</a>. Since then the site has grown to over 32,000 products from 160+ worker owned stores. We also recently had <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">an article featured in Grassroots Economic Organizing</a> about the directory, and the site is getting steady daily use.</p>
+    <p>King Arthur is one of the most recognized employee owned brands on the site. A link from your Impact page or resources section would help more people discover other employee owned businesses too.</p>
+    <p>No pressure at all. Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('fu-kingarthur', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>Organic Valley <span class="badge followup">Follow-up</span></h2>
+  <div class="meta">To: contact.us@organicvalley.coop</div>
+  <div class="subject">Subject: Re: Searchable marketplace featuring Organic Valley</div>
+  <div class="body" id="fu-organicvalley">
+    <p>Hi,</p>
+    <p>Just following up on my email from a couple weeks ago about <a href="https://workerowned.info">workerowned.info</a>. Since then the site has grown to over 32,000 products from 160+ worker owned stores. We also recently had <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">an article featured in Grassroots Economic Organizing</a> about the directory, and the site is getting steady daily use.</p>
+    <p>Organic Valley is a great example of farmer owned cooperation and your products get a lot of attention on the site. A link from your blog or resources section would help more people discover other cooperative businesses.</p>
+    <p>No pressure at all. Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('fu-organicvalley', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>Microcosm Publishing <span class="badge followup">Follow-up</span></h2>
+  <div class="meta">To: sales@microcosmpublishing.com</div>
+  <div class="subject">Subject: Re: Searchable marketplace featuring Microcosm</div>
+  <div class="body" id="fu-microcosm">
+    <p>Hi,</p>
+    <p>Just following up on my email from a couple weeks ago about <a href="https://workerowned.info">workerowned.info</a>. Since then the site has grown to over 32,000 products from 160+ worker owned stores. We also recently had <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">an article featured in Grassroots Economic Organizing</a> about the directory, and the site is getting steady daily use.</p>
+    <p>Would you consider linking to <a href="https://workerowned.info">workerowned.info</a> from your blog or about page? It fits naturally with Microcosm's DIY ethos and would help people find more worker owned businesses.</p>
+    <p>No pressure. Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('fu-microcosm', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>AK Press <span class="badge followup">Follow-up</span></h2>
+  <div class="meta">To: info@akpress.org</div>
+  <div class="subject">Subject: Re: Searchable marketplace featuring AK Press</div>
+  <div class="body" id="fu-akpress">
+    <p>Hi,</p>
+    <p>Just following up on my email from a couple weeks ago about <a href="https://workerowned.info">workerowned.info</a>. Since then the site has grown to over 32,000 products from 160+ worker owned stores. We also recently had <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">an article featured in Grassroots Economic Organizing</a> about the directory, and the site is getting steady daily use.</p>
+    <p>Would you consider linking to <a href="https://workerowned.info">workerowned.info</a> from your blog or resources page? Your audience already cares about worker power and cooperative economics. A link would help them find more worker owned businesses to support.</p>
+    <p>No pressure. Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('fu-akpress', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>Divine Chocolate <span class="badge followup">Follow-up</span></h2>
+  <div class="meta">To: divinechocolate@worldpantry.com</div>
+  <div class="subject">Subject: Re: Searchable marketplace featuring Divine Chocolate</div>
+  <div class="body" id="fu-divine">
+    <p>Hi,</p>
+    <p>Just following up on my email from a couple weeks ago about <a href="https://workerowned.info">workerowned.info</a>. Since then the site has grown to over 32,000 products from 160+ worker owned stores. We also recently had <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">an article featured in Grassroots Economic Organizing</a> about the directory, and the site is getting steady daily use.</p>
+    <p>Divine's farmer ownership model is exactly the kind of story the marketplace exists to amplify. A link from your Impact or Our Story page would help more people discover other cooperative businesses too.</p>
+    <p>No pressure. Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('fu-divine', this)">Copy</button>
+</div>
+
+<div class="email">
+  <h2>Artisans Cooperative <span class="badge followup">Follow-up</span></h2>
+  <div class="meta">To: hi@artisans.coop</div>
+  <div class="subject">Subject: Re: Searchable marketplace featuring Artisans Cooperative</div>
+  <div class="body" id="fu-artisans">
+    <p>Hi,</p>
+    <p>Just following up on my email from a couple weeks ago about <a href="https://workerowned.info">workerowned.info</a>. Since then the site has grown to over 32,000 products from 160+ worker owned stores. We also recently had <a href="https://geo.coop/articles/new-directory-worker-co-ops-products">an article featured in Grassroots Economic Organizing</a> about the directory, and the site is getting steady daily use.</p>
+    <p>We're both working to make cooperative businesses more visible. Would you consider linking to <a href="https://workerowned.info">workerowned.info</a> from your blog or about page? It would help people discover the full ecosystem.</p>
+    <p>No pressure. Love what you're building. Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('fu-artisans', this)">Copy</button>
+</div>
+
+<!-- ============================================ -->
+<!-- SENT: Collapsed section -->
+<!-- ============================================ -->
+
+<div class="sent-section">
+  <button class="collapse-toggle" onclick="toggleSent()">
+    <span class="arrow" id="sent-arrow">&#9654;</span> Sent &amp; completed (30 emails)
+  </button>
+
+  <div id="sent-emails" class="collapsed">
+
+    <div class="section-label">Newsletter / journalist outreach</div>
+
+    <div class="sent-email">
+      <h2>Paris Marx (Tech Won't Save Us) <span class="badge sent">Sent 2026-07-28</span></h2>
+      <div class="meta">paris@parismarx.com | Anti-big-tech podcast, Disconnect newsletter</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Molly White (Citation Needed) <span class="badge sent">Sent 2026-07-28</span></h2>
+      <div class="meta">molly@mollywhite.net | Tech accountability, pro-alternatives</div>
+    </div>
+
+    <div class="sent-email" onclick="this.classList.toggle('expanded')">
+      <h2>Cory Doctorow / Pluralistic <span class="badge replied">Replied — will post</span></h2>
+      <div class="meta">doctorow@craphound.com | Anti-monopoly, enshittification</div>
+      <button class="expand-btn">show/hide</button>
+      <div class="body" id="sent-doctorow">
+        <p>Hi,</p>
+        <p>You've written extensively about how platforms extract value from the people who actually make things. I built something that tries to route around that: workerowned.info, a searchable marketplace of 32,000+ products from 160+ worker-owned cooperatives.</p>
+        <p>No platform fees, no algorithmic ranking, no tracking, no accounts. People search for a product, see which worker-owned co-ops sell it, and click through to buy from their store directly. The co-ops keep everything.</p>
+        <p>It was recently featured in Grassroots Economic Organizing and hit the front page of Hacker News. It's a volunteer project. I don't make anything from it.</p>
+        <p>If it fits the kind of thing you'd link to on Pluralistic, even a short mention would help a lot of people find these businesses.</p>
+      </div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Heather Cox Richardson <span class="badge sent">Sent 2026-07-27</span></h2>
+      <div class="meta">heather.richardson@bc.edu | Letters from an American</div>
+    </div>
+
+    <div class="sent-email" onclick="this.classList.toggle('expanded')">
+      <h2>Nathan Schneider <span class="badge replied">Replied — will share</span></h2>
+      <div class="meta">nathan.schneider@colorado.edu | CU Boulder, cooperative economics, platform cooperativism</div>
+      <button class="expand-btn">show/hide</button>
+      <div class="body">
+        <p>Hi,</p>
+        <p>Your work on cooperative economics and democratic ownership has been a big influence on this project. I built workerowned.info, a searchable marketplace of 32,000+ products from 160+ worker-owned cooperatives and employee-owned businesses.</p>
+        <p>The problem it solves is simple: people want to buy from co-ops but can't find them. The site indexes product catalogs from co-op stores and makes them searchable in one place. Every listing links directly to the co-op's own store. No commissions, no ads, no tracking.</p>
+        <p>It was recently featured in Grassroots Economic Organizing and gets steady daily use. If it's something you'd share with your students or readers, that would mean a lot. It's a volunteer project.</p>
+        <p><strong>Reply sent 2026-07-27:</strong> Thanks so much! I've been reading your writing on AI and cooperatives. I'm relatively new to this space but deeply interested. I've been struggling to make the case to people that AI is an opportunity for the left, not something to dismiss or disparage, and your stuff articulates that really well. If there are co-ops in your network through start.coop or social.coop that should be listed on the site, I'd love to add them. And if you ever see opportunities where I could be useful, I'd love to stay connected.</p>
+      </div>
+    </div>
+
+    <div class="sent-email" onclick="this.classList.toggle('expanded')">
+      <h2>ILSR / Reggie Rucker &amp; Danny Caine <span class="badge replied">Replied — will share</span></h2>
+      <div class="meta">info@ilsr.org | Anti-monopoly, local economies, independent business</div>
+      <button class="expand-btn">show/hide</button>
+      <div class="body">
+        <p>Hi,</p>
+        <p>ILSR's work on building local, independent economies is exactly the vision behind this project. I built workerowned.info, a searchable marketplace of 32,000+ products from 160+ worker-owned cooperatives and employee-owned businesses.</p>
+        <p>People search for what they need and buy directly from the co-op's own store. No Amazon, no middleman, no commissions, no tracking. Every sale goes straight to a worker-owned business.</p>
+        <p>It was recently featured in Grassroots Economic Organizing and gets steady daily use. It's a volunteer project. I don't make anything from it.</p>
+        <p>Would ILSR be open to sharing it in your newsletter or linking to it as a resource? It fits naturally with your Independent Business initiative.</p>
+      </div>
+    </div>
+
+    <div class="sent-email">
+      <h2>David Dayen / The American Prospect <span class="badge sent">Sent (Bluesky DM)</span></h2>
+      <div class="meta">@ddayen.bsky.social | 83K followers</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Kim Kelly <span class="badge sent">Sent (Bluesky DM)</span></h2>
+      <div class="meta">@kimkelly.bsky.social | 112K followers</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Sarah Lazare / Workday Magazine <span class="badge sent">Sent (Bluesky DM)</span></h2>
+      <div class="meta">@sarahlazare.bsky.social | 7K followers</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>The Cooperative Economy <span class="badge sent">Sent (Bluesky DM)</span></h2>
+      <div class="meta">@cooperatives.bsky.social | 27K followers</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Shareable <span class="badge sent">Sent</span></h2>
+      <div class="meta">info@shareable.net</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Truthout <span class="badge sent">Sent (resent to editor@)</span></h2>
+      <div class="meta">contact@truthout.org bounced, resent to editor@truthout.org</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Jacobin <span class="badge sent">Sent</span></h2>
+      <div class="meta">editor@jacobin.com</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Hamilton Nolan / How Things Work <span class="badge sent">Sent</span></h2>
+      <div class="meta">Hamilton.Nolan@gmail.com | 44K Substack subscribers</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>The Lever (David Sirota) <span class="badge sent">Sent</span></h2>
+      <div class="meta">tips@levernews.com | Investigative journalism on corporate power</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Matt Bruenig / People's Policy Project <span class="badge sent">Sent</span></h2>
+      <div class="meta">contact@peoplespolicyproject.org | Economic policy, wealth inequality</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Robert Reich <span class="badge skipped">Skipped — DMs closed, no email</span></h2>
+      <div class="meta">@rbreich.bsky.social | 810K followers</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Edward Ongweso Jr. <span class="badge skipped">Skipped — no contact found</span></h2>
+      <div class="meta">Site under construction, DMs closed</div>
+    </div>
+
+    <div class="section-label">Org outreach</div>
+
+    <div class="sent-email">
+      <h2>USFWC <span class="badge sent">Sent (resent 2026-07-11)</span></h2>
+      <div class="meta">info@usworker.coop | No reply</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>DAWI <span class="badge replied">Replied — offered social share</span></h2>
+      <div class="meta">info@institute.coop | Karina Pacheco, Director of Marketing. No social post confirmed yet.</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>NYC NOWC <span class="badge sent">Sent (resent 2026-07-11)</span></h2>
+      <div class="meta">info@nycworker.coop | No reply</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>GEO <span class="badge replied">Replied — article published</span></h2>
+      <div class="meta">editors@geo.coop | Josh Davis. Article: geo.coop/articles/new-directory-worker-co-ops-products</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>CooperationWorks <span class="badge sent">Sent</span></h2>
+      <div class="meta">alex@cooperationworks.coop | No reply</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>NCBA CLUSA <span class="badge sent">Sent 2026-07-12</span></h2>
+      <div class="meta">ncbaclusa.coop contact form</div>
+    </div>
+
+    <div class="section-label">Co-op backlink outreach</div>
+
+    <div class="sent-email">
+      <h2>Equal Exchange <span class="badge sent">Sent</span></h2>
+      <div class="meta">info@equalexchange.coop | No reply</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>King Arthur Baking <span class="badge sent">Sent</span></h2>
+      <div class="meta">customercare@kingarthurbaking.com | No reply</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Organic Valley <span class="badge sent">Sent</span></h2>
+      <div class="meta">contact.us@organicvalley.coop | No reply</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Bob's Red Mill <span class="badge sent">Sent</span></h2>
+      <div class="meta">bobsredmill.com contact form | No reply</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Microcosm Publishing <span class="badge sent">Sent</span></h2>
+      <div class="meta">sales@microcosmpublishing.com | No reply</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>AK Press <span class="badge sent">Sent</span></h2>
+      <div class="meta">info@akpress.org | No reply</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Divine Chocolate <span class="badge sent">Sent</span></h2>
+      <div class="meta">divinechocolate@worldpantry.com | No reply</div>
+    </div>
+
+    <div class="sent-email">
+      <h2>Artisans Cooperative <span class="badge sent">Sent</span></h2>
+      <div class="meta">hi@artisans.coop | No reply</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function copyEmail(id, btn) {
+  const el = document.getElementById(id);
+  const html = el.innerHTML;
+  const text = el.innerText;
+  const blob = new Blob([html], { type: 'text/html' });
+  const textBlob = new Blob([text], { type: 'text/plain' });
+  const item = new ClipboardItem({ 'text/html': blob, 'text/plain': textBlob });
+  navigator.clipboard.write([item]).then(() => {
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+function toggleSent() {
+  const el = document.getElementById('sent-emails');
+  const arrow = document.getElementById('sent-arrow');
+  el.classList.toggle('collapsed');
+  arrow.classList.toggle('open');
+}
+</script>
+</body>
+</html>
