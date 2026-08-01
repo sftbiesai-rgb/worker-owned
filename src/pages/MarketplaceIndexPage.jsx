@@ -79,9 +79,9 @@ function MarketplaceIndexPage() {
   const fetchedRef = useRef(false)
 
   useEffect(() => {
-    document.title = 'Market Place | Shop worker owned online stores for apparel, home goods, food and more'
+    document.title = 'Market Place | Shop worker and employee owned online stores for apparel, home goods, food and more'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
-      'Browse worker owned online stores by category or search thousands of products from cooperatives and employee-owned companies.')
+      'Browse worker and employee owned online stores by category or search thousands of products from cooperatives and employee-owned companies.')
     const canonical = 'https://www.workerowned.info/marketplace'
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
@@ -279,7 +279,7 @@ function MarketplaceIndexPage() {
             <img src="/logo-marketplace.png" alt="Worker Owned Marketplace" width="48" height="48" className="shrink-0" />
             <h1><Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Market Place</Link></h1>
           </div>
-          <p className="text-center text-sm text-gray-500 mb-4">Shop worker owned businesses online</p>
+          <p className="text-center text-sm text-gray-500 mb-4">Shop worker and employee owned businesses online</p>
 
           <div className="relative">
             <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -428,13 +428,13 @@ function MarketplaceIndexPage() {
 
         <p className="text-center text-xs text-gray-400 mt-3">
           {products.length > 0
-            ? <>{products.length.toLocaleString()} products from <Link to="/marketplace/companies" className="text-[#004cb9] hover:text-[#BF0A30] transition-colors">{storeCount} worker owned companies</Link></>
-            : <>32,000+ products from <Link to="/marketplace/companies" className="text-[#004cb9] hover:text-[#BF0A30] transition-colors">60+ worker owned companies</Link></>}
+            ? <>{products.length.toLocaleString()} products from <Link to="/marketplace/companies" className="text-[#004cb9] hover:text-[#BF0A30] transition-colors">{storeCount} worker and employee owned companies</Link></>
+            : <>32,000+ products from <Link to="/marketplace/companies" className="text-[#004cb9] hover:text-[#BF0A30] transition-colors">60+ worker and employee owned companies</Link></>}
         </p>
 
         <div className="mt-2 text-center">
           <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
-            Submit a worker owned business &rarr;
+            Submit a worker or employee owned business &rarr;
           </Link>
         </div>
       </main>

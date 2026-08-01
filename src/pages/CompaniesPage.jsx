@@ -53,9 +53,9 @@ const allStores = dedupeByUrl(marketplaceData)
 
 function CompaniesPage() {
   useEffect(() => {
-    document.title = 'All Worker Owned Companies | Worker Owned Marketplace'
+    document.title = 'All Worker and Employee Owned Companies | Worker Owned Marketplace'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
-      'Browse all worker owned and employee-owned companies in the Worker Owned marketplace directory, sorted by category.')
+      'Browse all worker and employee owned companies in the Worker Owned marketplace directory, sorted by category.')
     const canonical = 'https://www.workerowned.info/marketplace/companies'
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
@@ -68,7 +68,7 @@ function CompaniesPage() {
 
           <div className="flex items-center justify-center gap-3 mb-2">
             <img src="/logo-marketplace.png" alt="" width="48" height="48" className="shrink-0" />
-            <h1><Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Worker Owned Companies</Link></h1>
+            <h1><Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Worker and Employee Owned Companies</Link></h1>
           </div>
           <p className="text-center text-sm text-gray-500 mb-6">
             {allStores.length} companies across {SECTIONS.length} categories

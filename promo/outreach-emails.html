@@ -73,6 +73,23 @@
 <!-- TO SEND: Garlic and Roses guest article -->
 <!-- ============================================ -->
 
+<div class="section-label">Reply to Mark Hand (The Stakehold)</div>
+
+<div class="email">
+  <h2>Mark Hand — Reply <span class="badge email-badge">Email</span></h2>
+  <div class="meta">mark.c.hand@gmail.com | The Stakehold newsletter, UT Arlington</div>
+  <div class="subject">Subject: Re: Worker Owned submission</div>
+  <div class="body" id="email-markhand-reply">
+    <p>Hi Mark,</p>
+    <p>A "Shop" link on The Stakehold's nav would be amazing, yes please.</p>
+    <p>Great call on "worker and employee owned." I'll update the site copy to use that phrasing. And I'd love to see whatever other mentions you've spotted — that kind of intel is really helpful since I have no way to track it otherwise.</p>
+    <p>The employee ownership trust link is interesting too. I'll dig into that list and see which ones have consumer-facing products.</p>
+    <p>Really appreciate the support. This is exactly the kind of help I need.</p>
+    <p>Thanks!</p>
+  </div>
+  <button class="copy-btn" onclick="copyEmail('email-markhand-reply', this)">Copy</button>
+</div>
+
 <div class="section-label">Guest article for Garlic and Roses</div>
 
 <div class="email">
@@ -215,12 +232,11 @@
   <div class="meta">info@defector.com | Worker-owned sports and culture journalism (subscription)</div>
   <div class="subject">Subject: mailbag question + a worker-owned marketplace thing</div>
   <div class="body" id="email-defector">
-    <p>I am a devoted Distraction listener and Defector subscriber (different email address). I love all the bits: we're back, the idea that, lawyer listeners, Maine, the sandwich in the bathroom, sandwiches. I am a longtime reader of David. I'm talking yakking baseball, Clay Buchholz's wet hair, scotch. Why Your Team Sucks has been an important resource for my discussions with other dads about their shitty teams for years. I say this not to butter you up in preparation for the next paragraph but authentically, and to thank you for your fine work.</p>
-    <p>I made a searchable marketplace that pulls together products made by worker-owned companies. Defector is in there. I think the real power is in the Amazon-like functionality where someone can look for a belt, mouthwash, a hoodie, or a board game based on space cats defeating fascism. My hope here is that you will see fit to mention this work on your site or gosh even on the podcast. I'm happy to answer any questions you have about it.</p>
-    <p>This is a motivated hobby right now. I have a few connections and I am doing this kind of outreach with cold messaging and well that's actually it. If you have any feedback on the site or outreach strategies you could share I would appreciate it. If you have any co-ops you would like to suggest, I'll take them.</p>
-    <p>Maybe it goes without saying but of course no pressure. Thanks for the work. You guys do keep enjoying your many many many vacations.</p>
-    <p>PS I'm still thinking about whether Trump believes in ghosts. Drew kind of said what I think which is I don't really believe in ghosts but I don't want Trump to also not really believe in ghosts because I just don't wanna be aligned with him on the matter. Which brings me to a larger point about all these villains. I fear death. It is overwhelming at times. But one thing that has helped me is that many of these terrible people also fear death and it is clearly overwhelming to them as well. When I consider this and again that I cannot be aligned with them on any important question and they are fucking stupid, I think shit, fearing death is for dickheads and if I don't wanna be a dickhead, I should steer my brain away from that. Does that help?</p>
-    <p>You're welcome to take nothing from this email other than this question: what positions of assholes did you once have that you have now abandoned only because they are held by assholes? These guys are making drugs lame. It's such a bummer.</p>
+    <p>I am a devoted Distraction listener and Defector subscriber (different email address). I love all the bits: we're back!, lawyer listeners, Maine, the sandwich in the bathroom, sandwiches. I am a longtime reader of David. I'm talking yakking baseball, Clay Buchholz's wet hair, scotch. Why Your Team Sucks has been an important resource for my discussions with other dads about their shitty teams for years. I say this not to butter you up in preparation for the next paragraph, but genuinely, and to thank you for your fine work.</p>
+    <p>OK so I made a searchable marketplace that pulls together products made by worker-owned companies. I think the real power is in the Amazon-like functionality, where someone can look for and find a belt, mouthwash, a hoodie, or a board game based on space cats defeating fascism. My hope here is that you will see fit to mention this work on your site or gosh even on the podcast. I'm happy to answer any questions you have about it. The site also collects worker-run companies, so obviously Defector is there with 404, Flaming Hydra, and others. Oh and there is a tool where u can enter in the city you're in and it will tell u where worker-owned coffe-shops, bars, and groceries are.</p>
+    <p>This is a motivated hobby right now. I have few connections and I am doing this kind of outreach with cold messaging and well that's actually it. So that's why I'm asking for a mention. No pressure of course. If you guys just want to use it for yourselves, or suggest some new entries, that's cool.</p>
+    <p>PS I'm still thinking about whether Trump believes in ghosts. Drew kind of said what I think, which is I don't really believe in ghosts, but I also don't want Trump to not really believe in ghosts, because I just don't wanna be aligned with him on the matter. Which brings me to a larger point about all these rotted villains. Like, I fear death. It is overwhelming at times isn't it. But one thing that has helped me is that many of these villains also fear death and it is clearly overwhelming to them. When I consider this, and again, that I cannot be aligned with them on any important question, I think shit, fearing death is for rotted villains, I should steer my brain away from that.&nbsp;</p>
+    <p>You're welcome to take nothing from this email other than this question: what positions or beliefs have you had that you have abandoned because they are held by assholes? Drugs, conspiracies, getting with lots of girls use to be cool. But these rotted villains are making them lame, and I'm facing the daunting task of reprogramming myself to think drugs, conspiracies, and getting with lots of girls is lame?!</p>
   </div>
   <button class="copy-btn" onclick="copyEmail('email-defector', this)">Copy</button>
 </div>
@@ -370,7 +386,7 @@
 
 <div class="sent-section">
   <button class="collapse-toggle" onclick="toggleSent()">
-    <span class="arrow" id="sent-arrow">&#9654;</span> Sent &amp; completed (30 emails)
+    <span class="arrow" id="sent-arrow">▶</span> Sent &amp; completed (30 emails)
   </button>
 
   <div id="sent-emails" class="collapsed">
@@ -569,9 +585,11 @@
 </div>
 
 <script>
-// Make all unsent email bodies editable
-document.querySelectorAll('.email .body').forEach(el => {
-  el.setAttribute('contenteditable', 'true');
+// Make unsent email bodies editable (skip sent ones)
+document.querySelectorAll('.email').forEach(card => {
+  if (card.querySelector('.badge.sent')) return;
+  const body = card.querySelector('.body');
+  if (body) body.setAttribute('contenteditable', 'true');
 });
 
 // Show toolbar when editing
@@ -631,5 +649,7 @@ function saveFile(btn) {
   setTimeout(() => { btn.textContent = 'Save'; btn.classList.remove('saved'); }, 2000);
 }
 </script>
+
+
 </body>
 </html>
