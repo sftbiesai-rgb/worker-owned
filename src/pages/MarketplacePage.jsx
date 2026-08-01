@@ -200,7 +200,7 @@ function MarketplacePage() {
             <img src="/logo-marketplace.png" alt="Worker Owned Marketplace" width="48" height="48" className="shrink-0" />
             <h1><Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Market Place</Link></h1>
           </div>
-          <p className="text-center text-sm text-gray-500 mb-4">Shop worker owned businesses online</p>
+          <p className="text-center text-sm text-gray-500 mb-4">Shop worker and employee owned businesses online</p>
 
           {/* Category tabs */}
           <div className="flex flex-wrap gap-1.5 mb-4 justify-center">

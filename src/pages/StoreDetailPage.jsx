@@ -115,7 +115,7 @@ function StoreDetailPage() {
             <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Market Place</Link>
           </div>
 
-          <p className="text-center text-sm text-gray-500 mb-5">Shop worker owned online</p>
+          <p className="text-center text-sm text-gray-500 mb-5">Shop worker and employee owned online</p>
 
           {/* Store header */}
           <div className="mb-4">
