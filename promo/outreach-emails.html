@@ -26,6 +26,15 @@
   .copy-btn { margin-top: 12px; padding: 6px 16px; font-size: 13px; border: 1px solid #ccc; border-radius: 6px; background: #f9f9f9; cursor: pointer; }
   .copy-btn:hover { background: #eee; }
   .copy-btn.copied { background: #d4edda; border-color: #b7dfc6; }
+  .save-btn { position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; font-size: 14px; font-weight: 600; border: 1px solid #004cb9; border-radius: 8px; background: #004cb9; color: #fff; cursor: pointer; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+  .save-btn:hover { background: #003a8c; }
+  .save-btn.saved { background: #2d6a4f; border-color: #2d6a4f; }
+  .email .body[contenteditable] { outline: none; border-left: 2px solid transparent; padding-left: 8px; transition: border-color 0.2s; }
+  .email .body[contenteditable]:focus { border-left-color: #004cb9; }
+  .toolbar { display: none; position: sticky; top: 0; z-index: 50; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 6px 12px; margin-bottom: 12px; gap: 4px; flex-wrap: wrap; }
+  .toolbar.active { display: flex; }
+  .toolbar button { padding: 4px 10px; font-size: 13px; border: 1px solid #ccc; border-radius: 4px; background: #f9f9f9; cursor: pointer; }
+  .toolbar button:hover { background: #eee; }
   .note { font-size: 12px; color: #999; margin-top: 6px; font-style: italic; }
   .sent-section { margin-top: 40px; border-top: 2px solid #ddd; padding-top: 20px; }
   .collapse-toggle { background: none; border: 1px solid #ccc; border-radius: 6px; padding: 8px 16px; font-size: 13px; color: #555; cursor: pointer; display: flex; align-items: center; gap: 6px; }
@@ -44,7 +53,16 @@
 </head>
 <body>
 <h1>Outreach Emails</h1>
-<div class="subtitle">Consolidated outreach. Unsent on top, sent at bottom.</div>
+<div class="subtitle">Consolidated outreach. Unsent on top, sent at bottom. Click any email body to edit.</div>
+
+<div class="toolbar" id="toolbar">
+  <button onclick="execCmd('bold')"><b>B</b></button>
+  <button onclick="execCmd('italic')"><i>I</i></button>
+  <button onclick="addLink()">Link</button>
+  <button onclick="execCmd('removeFormat')">Clear</button>
+</div>
+
+<button class="save-btn" onclick="saveFile(this)">Save</button>
 
 <!-- ============================================ -->
 <!-- TO SEND: Schneider reply -->
@@ -58,17 +76,17 @@
 <div class="section-label">Guest article for Garlic and Roses</div>
 
 <div class="email">
-  <h2>Garlic and Roses — Guest Article <span class="badge replied">Replied — invited to write</span></h2>
+  <h2>Garlic and Roses — Guest Article <span class="badge sent">Sent 2026-08-01</span></h2>
   <div class="meta">Mike Houston, Managing Editor | garlicandroses.coop | Worker-owned co-op media for food co-ops</div>
   <div class="subject">Article: How I Built a Searchable Marketplace of Worker-Owned Businesses</div>
   <div class="body" id="email-garlicandroses-article">
     <p>I made <a href="https://workerowned.info">workerowned.info</a> to make it easy to buy from worker-owned companies online. You can enter "<a href="https://workerowned.info/marketplace?q=men%27s+pants">men's pants</a>" or "<a href="https://workerowned.info/marketplace?q=light+roast+coffee">light roast coffee</a>" or "<a href="https://workerowned.info/marketplace?q=board+game+space+cats+fascism">board game space cats fascism</a>" and get pointed towards wonderful products sold by people whose focus is customers, not shareholders.</p>
     <p>This project started when I was in Denver a few months ago. Denver is secretly a prairie city, who knew? I flew in from the east and landed on flat land that stretches all the way to West Virginia. Just before snow covered mountains abruptly wall off a terrain of uninhabited wonder, there is an urban center that boasts dozens of coffee shops.</p>
-    <p>With so many choices I figured it would be easy to choose a worker-owned coffee shop like my beloved <a href="https://rockcitycoffee.com">Rock City</a> in Rockland, Maine. But it was hard! It took a bunch of searching and reading on my phone and in the end, well, I don't think there is a worker-owned coffee shop in Denver.</p>
-    <p>So I made a little web app that lets you enter in a city and it returns the locations of worker-owned shops. No one would be surprised to learn there are a lot in the Bay Area. I love <a href="https://arizmendibakery.com">Arizmendi</a>, the fresh berry scones are truly incredible. But apparently people love <a href="https://www.grayowlcoffee.com/">Grey Owl</a> in Oklahoma, which, fair or unfair, doesn't have the same reputation for worker activism I think.</p>
+    <p>With so many choices I figured it would be easy to choose a worker-owned coffee shop like my beloved <a href="https://rockcitycoffee.com">Rock City</a> in Rockland, Maine. But it was hard! It took a bunch of searching and reading on my phone, I nearly tripped over a discarded scooter at one point. And in the end, well, I don't think there is a worker-owned coffee shop in Denver.</p>
+    <p>So I made a web app that lets you enter in a city and it returns the locations of worker-owned shops. No one would be surprised to learn there are a lot in the Bay Area. I love <a href="https://arizmendibakery.com">Arizmendi</a>, the fresh berry scones are truly incredible. But apparently people love <a href="https://www.grayowlcoffee.com/">Grey Owl</a> in Oklahoma, which, fair or unfair, doesn't have the same reputation for worker activism I think.</p>
     <p>From there I realized I could grow the tool to be a marketplace of products scraped from co-op websites. Like I said, you can find <a href="https://store.tesacollective.com">Space Cats Fight Fascism</a> board games, but there are also plenty of practical items: <a href="https://workerowned.info/marketplace?q=belts">belts</a>, <a href="https://workerowned.info/marketplace?q=mouthwash">mouthwash</a>, and <a href="https://workerowned.info/marketplace?q=hoodies">hoodies</a>.</p>
     <p>The site sends users to the worker-owned store's site. They get the traffic. It doesn't track you or store any information. One of the nice things about not centering your work around shareholders is you're not compelled to surreptitiously squeeze all you can from customers.</p>
-    <p>"Shareholder primacy" is the guiding doctrine of US business law. It serves those with enough wealth to set aside resources. Indirectly it serves customers. The bank shots usually go in: Starbucks is convenient, Amazon delivers quickly. But in this environment, co-ops get crowded out, consumers settle into Walmart and Kroger patterns. So I wanted to make shopping at worker-owned companies easier, and through that I want to make shoppers aware of alternatives to these near-monopolies. You go to the site looking for coffee, you leave with coffee and a <a href="https://defector.com">Defector</a> subscription (where David Roth writes about photography in the 1970s and current baseball player hair trends with an unequaled flair).</p>
+    <p>"Shareholder primacy" is the guiding doctrine of US business law. It serves those with enough wealth to set aside resources. Indirectly it serves customers. The bank shots usually go in: Starbucks is convenient, Amazon delivers quickly. But in this environment, co-ops get crowded out, consumers settle into Walmart and Kroger patterns. So I wanted to make shopping at worker-owned companies easier, and through that I want to introduce shoppers to alternatives to these near-monopolies. You go to the site looking for coffee, you leave with coffee and a <a href="https://defector.com">Defector</a> subscription (where David Roth writes about photography in the 1970s and current baseball player hair trends with an unequaled flair).</p>
     <p>If your co-op has an online store on Shopify, WooCommerce, BigCommerce, or Squarespace, it can be on <a href="https://workerowned.info">workerowned.info</a>. If it's not, please <a href="https://workerowned.info/submit">reach out anyway</a>. We can add you to the directory or figure something else out. And if you don't have anything to submit, just poke around and buy something.</p>
   </div>
   <button class="copy-btn" onclick="copyEmail('email-garlicandroses-article', this)">Copy</button>
@@ -111,7 +129,7 @@
 </div>
 
 <div class="email">
-  <h2>Douglas Rushkoff (Team Human) <span class="badge email-badge">Email</span></h2>
+  <h2>Douglas Rushkoff (Team Human) <span class="badge sent">Sent 2026-08-01</span></h2>
   <div class="meta">rushkoff@rushkoff.com | Team Human podcast, cooperative economics advocate</div>
   <div class="subject">Subject: Searchable marketplace of products from worker-owned cooperatives</div>
   <div class="body" id="email-rushkoff">
@@ -125,7 +143,7 @@
 </div>
 
 <div class="email">
-  <h2>This Machine Kills (Jathan Sadowski) <span class="badge email-badge">Email</span></h2>
+  <h2>This Machine Kills (Jathan Sadowski) <span class="badge sent">Sent 2026-08-01</span></h2>
   <div class="meta">Jathan.Sadowski@monash.edu | Anti-tech-capital podcast with Edward Ongweso Jr.</div>
   <div class="subject">Subject: Searchable marketplace of products from worker-owned cooperatives</div>
   <div class="body" id="email-tmk">
@@ -157,7 +175,7 @@
 <div class="section-label">Academic</div>
 
 <div class="email">
-  <h2>UW-Madison Center for Cooperatives <span class="badge email-badge">Email</span></h2>
+  <h2>UW-Madison Center for Cooperatives <span class="badge sent">Sent 2026-08-01</span></h2>
   <div class="meta">info@uwcc.wisc.edu | Premier US academic center for cooperative research</div>
   <div class="subject">Subject: Searchable marketplace of products from worker-owned cooperatives</div>
   <div class="body" id="email-uwcc">
@@ -193,16 +211,16 @@
 </div>
 
 <div class="email">
-  <h2>Defector <span class="badge dm">Bluesky DM</span></h2>
-  <div class="meta">defector.com | Worker-owned sports and culture journalism (subscription)</div>
-  <div class="subject">Subject: Searchable marketplace of worker-owned businesses (Defector is in it)</div>
+  <h2>Defector <span class="badge email-badge">Email</span></h2>
+  <div class="meta">info@defector.com | Worker-owned sports and culture journalism (subscription)</div>
+  <div class="subject">Subject: mailbag question + a worker-owned marketplace thing</div>
   <div class="body" id="email-defector">
-    <p>Hi,</p>
-    <p>I made workerowned.info, a searchable marketplace of worker-owned businesses. Defector is listed. The site covers 60+ worker-owned co-ops with 32,000+ products, plus 110+ worker-owned coffee shops and restaurants across the US. No ads, no commissions, no tracking.</p>
-    <p>I'm a hobbyist doing this because I believe in the model. I don't make anything from it. Defector's story, walking out together and building something worker-owned, is one of the most compelling examples of what's possible, and you've written about it beautifully.</p>
-    <p>Would you consider mentioning workerowned.info in an article or linking from your About page? Your audience already gets worker ownership. Showing them the full ecosystem of co-ops they can support feels like a natural fit.</p>
-    <p>No pressure at all. Thanks for proving that worker-owned media can work.</p>
-    <p>Best,<br>workerowned.info</p>
+    <p>I am a devoted Distraction listener and Defector subscriber (different email address). I love all the bits: we're back, the idea that, lawyer listeners, Maine, the sandwich in the bathroom, sandwiches. I am a longtime reader of David. I'm talking yakking baseball, Clay Buchholz's wet hair, scotch. Why Your Team Sucks has been an important resource for my discussions with other dads about their shitty teams for years. I say this not to butter you up in preparation for the next paragraph but authentically, and to thank you for your fine work.</p>
+    <p>I made a searchable marketplace that pulls together products made by worker-owned companies. Defector is in there. I think the real power is in the Amazon-like functionality where someone can look for a belt, mouthwash, a hoodie, or a board game based on space cats defeating fascism. My hope here is that you will see fit to mention this work on your site or gosh even on the podcast. I'm happy to answer any questions you have about it.</p>
+    <p>This is a motivated hobby right now. I have a few connections and I am doing this kind of outreach with cold messaging and well that's actually it. If you have any feedback on the site or outreach strategies you could share I would appreciate it. If you have any co-ops you would like to suggest, I'll take them.</p>
+    <p>Maybe it goes without saying but of course no pressure. Thanks for the work. You guys do keep enjoying your many many many vacations.</p>
+    <p>PS I'm still thinking about whether Trump believes in ghosts. Drew kind of said what I think which is I don't really believe in ghosts but I don't want Trump to also not really believe in ghosts because I just don't wanna be aligned with him on the matter. Which brings me to a larger point about all these villains. I fear death. It is overwhelming at times. But one thing that has helped me is that many of these terrible people also fear death and it is clearly overwhelming to them as well. When I consider this and again that I cannot be aligned with them on any important question and they are fucking stupid, I think shit, fearing death is for dickheads and if I don't wanna be a dickhead, I should steer my brain away from that. Does that help?</p>
+    <p>You're welcome to take nothing from this email other than this question: what positions of assholes did you once have that you have now abandoned only because they are held by assholes? These guys are making drugs lame. It's such a bummer.</p>
   </div>
   <button class="copy-btn" onclick="copyEmail('email-defector', this)">Copy</button>
 </div>
@@ -551,6 +569,30 @@
 </div>
 
 <script>
+// Make all unsent email bodies editable
+document.querySelectorAll('.email .body').forEach(el => {
+  el.setAttribute('contenteditable', 'true');
+});
+
+// Show toolbar when editing
+const toolbar = document.getElementById('toolbar');
+document.addEventListener('focusin', e => {
+  if (e.target.closest('.email .body[contenteditable]')) toolbar.classList.add('active');
+});
+document.addEventListener('focusout', e => {
+  setTimeout(() => {
+    if (!document.activeElement?.closest('.email .body[contenteditable]') && !document.activeElement?.closest('.toolbar')) {
+      toolbar.classList.remove('active');
+    }
+  }, 200);
+});
+
+function execCmd(cmd) { document.execCommand(cmd, false, null); }
+function addLink() {
+  const url = prompt('URL:');
+  if (url) document.execCommand('createLink', false, url);
+}
+
 function copyEmail(id, btn) {
   const el = document.getElementById(id);
   const html = el.innerHTML;
@@ -564,11 +606,29 @@ function copyEmail(id, btn) {
     setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
   });
 }
+
 function toggleSent() {
   const el = document.getElementById('sent-emails');
   const arrow = document.getElementById('sent-arrow');
   el.classList.toggle('collapsed');
   arrow.classList.toggle('open');
+}
+
+function saveFile(btn) {
+  // Remove contenteditable before saving
+  const clone = document.documentElement.cloneNode(true);
+  clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+  clone.querySelector('.toolbar')?.classList.remove('active');
+  const html = '<!DOCTYPE html>\n<html lang="en">\n' + clone.innerHTML + '\n</html>\n';
+  const blob = new Blob([html], { type: 'text/html' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'outreach-emails.html';
+  a.click();
+  URL.revokeObjectURL(a.href);
+  btn.textContent = 'Saved!';
+  btn.classList.add('saved');
+  setTimeout(() => { btn.textContent = 'Save'; btn.classList.remove('saved'); }, 2000);
 }
 </script>
 </body>
