@@ -1371,5 +1371,49 @@
     "status": "verified active",
     "notes": "Worker-owned news cooperative in Long Beach CA. Founded April 2024 by journalists laid off after unionizing at the Long Beach Post. Reader and ad supported.",
     "site_section": "Media & Publishing"
+  },
+  {
+    "id": 171,
+    "name": "Taylor Guitars",
+    "url": "https://www.taylorguitars.com",
+    "category": "guitars / musical instruments",
+    "ownership_type": "ESOP",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP since 2021). Founded 1974 in El Cajon, CA by Bob Taylor and Kurt Listug. One of the world's leading acoustic guitar manufacturers. Online store sells guitars, accessories, strings, and parts. Free shipping on orders $39.99+.",
+    "site_section": "Music"
+  },
+  {
+    "id": 172,
+    "name": "Switchback Brewing Co.",
+    "url": "https://www.switchbackvt.com",
+    "category": "brewery",
+    "ownership_type": "ESOP",
+    "ships": "US (limited)",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP since 2017). First Vermont brewery with an ESOP. Founded 2002 in Burlington, VT. Brews ales, lagers, and N.A. beer. Also produces spirits. Online store ships beer, spirits, and merchandise.",
+    "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 173,
+    "name": "Litehouse Foods",
+    "url": "https://www.litehousefoods.com",
+    "category": "dressings / dips / herbs",
+    "ownership_type": "ESOP",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP since 2014, started at 30% in 2006). Based in Sandpoint, ID. Makes salad dressings, dips, freeze-dried herbs, cheeses, and sauces. Also operates Organicville and Sky Valley Foods brands. Certified EO. Sells online via own site and Amazon/Walmart.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 174,
+    "name": "Room & Board",
+    "url": "https://www.roomandboard.com",
+    "category": "furniture",
+    "ownership_type": "ESOP",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP since 2024). Founded 1980 in Minneapolis, MN. Modern furniture retailer with 22+ stores and full e-commerce. B-Corp certified. 90%+ products made in USA. $500M+ annual revenue.",
+    "site_section": "Home Goods & Services"
   }
 ]
