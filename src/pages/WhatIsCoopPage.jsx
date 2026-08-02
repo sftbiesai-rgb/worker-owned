@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 function WhatIsCoopPage() {
   useEffect(() => {
@@ -129,14 +130,7 @@ function WhatIsCoopPage() {
         </div>
       </main>
 
-      <footer className="pb-6 pt-2 text-center">
-        <p className="text-xs text-gray-400 mb-1">
-          <a href="https://yourfairshare.info" target="_blank" rel="noopener" className="inline-flex items-center gap-1 hover:text-[#004cb9] transition-colors">
-            <img src="/logo-yourfairshare.png" alt="" className="h-3 w-3 inline" />
-            Your Fair Share
-          </a>
-        </p>
-      </footer>
+      <Footer />
     </div>
   )
 }

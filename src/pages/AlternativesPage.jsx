@@ -1,16 +1,8 @@
 import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
-
-function slugify(name) {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-}
-
-function faviconUrl(siteUrl) {
-  if (!siteUrl) return null
-  try { return 'https://www.google.com/s2/favicons?domain=' + new URL(siteUrl).hostname + '&sz=16' }
-  catch { return null }
-}
+import { slugify, faviconUrl } from '../lib/utils'
+import Footer from '../components/Footer'
 
 // Hand-picked stores for the Amazon alternative section (variety across categories)
 const AMAZON_PICKS = [
@@ -203,14 +195,7 @@ function AlternativesPage() {
         </div>
       </main>
 
-      <footer className="pb-6 pt-2 text-center">
-        <p className="text-xs text-gray-400 mb-1">
-          <a href="https://yourfairshare.info" target="_blank" rel="noopener" className="inline-flex items-center gap-1 hover:text-[#004cb9] transition-colors">
-            <img src="/logo-yourfairshare.png" alt="" className="h-3 w-3 inline" />
-            Your Fair Share
-          </a>
-        </p>
-      </footer>
+      <Footer />
     </div>
   )
 }
