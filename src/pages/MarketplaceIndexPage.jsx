@@ -225,23 +225,14 @@ function MarketplaceIndexPage() {
         ) : (
           <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
             <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Browse by category</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div className="flex flex-wrap justify-center gap-2">
               {SECTIONS.map(cat => (
                 <Link
                   key={cat.slug}
                   to={`/marketplace/${cat.slug}`}
-                  className="rounded-xl overflow-hidden hover:ring-1 hover:ring-[#004cb9] transition-all bg-[#f5f5f7] group"
+                  className="py-2 px-4 rounded-lg text-sm font-medium bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors"
                 >
-                  {cat.image ? (
-                    <div className="aspect-[4/3] w-full overflow-hidden bg-gray-100">
-                      <img src={cat.image + '?width=400'} alt={cat.label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" loading="lazy" />
-                    </div>
-                  ) : (
-                    <div className="aspect-[4/3] w-full bg-gradient-to-br from-blue-50 to-gray-100 flex items-center justify-center">
-                      <span className="text-2xl text-gray-300">{cat.label.charAt(0)}</span>
-                    </div>
-                  )}
-                  <p className="px-3 py-2 text-sm font-semibold text-gray-700 text-center">{cat.label}</p>
+                  {cat.label}
                 </Link>
               ))}
             </div>
