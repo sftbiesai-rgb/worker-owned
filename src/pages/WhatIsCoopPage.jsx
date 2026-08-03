@@ -110,12 +110,6 @@ function WhatIsCoopPage() {
               <p>
                 In a worker co-op, profits stay with the people who created them. It's a simple idea: the people who do the work share in what the business earns.
               </p>
-              <p className="mt-2">
-                Curious how much profit your employer keeps?{' '}
-                <a href="https://yourfairshare.info" target="_blank" rel="noopener" className="text-[#004cb9] hover:text-[#003a8c] font-medium">
-                  Check your fair share &rarr;
-                </a>
-              </p>
             </section>
           </div>
         </div>
