@@ -40,7 +40,7 @@ function FAQPage() {
               </p>
               <ul className="mt-2 space-y-1 list-disc list-inside">
                 <li><strong>Worker cooperatives</strong> - businesses owned and democratically governed by the workers</li>
-                <li><strong>ESOPs</strong> - companies with Employee Stock Ownership Plans</li>
+                <li><strong>ESOPs</strong> - companies where employees own more than 50% through an Employee Stock Ownership Plan</li>
                 <li><strong>Employee-owned companies</strong> - other structures where employees hold significant ownership</li>
                 <li><strong>Multi-stakeholder cooperatives</strong> - co-ops with worker-members alongside other stakeholder groups</li>
               </ul>
