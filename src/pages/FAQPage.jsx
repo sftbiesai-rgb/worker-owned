@@ -52,7 +52,7 @@ function FAQPage() {
             <section>
               <h2 className="text-base font-bold text-gray-900 mb-2">How do you decide what to list?</h2>
               <p>
-                We research businesses using public sources including the <a href="https://www.usworker.coop/directory/" target="_blank" rel="noopener" className="text-[#004cb9] hover:text-[#003a8c]">US Federation of Worker Cooperatives directory</a>, the <a href="https://institute.coop" target="_blank" rel="noopener" className="text-[#004cb9] hover:text-[#003a8c]">Democracy at Work Institute</a>, regional cooperative networks, and direct submissions. We verify ownership structure before adding a business.
+                We research businesses using public sources including the <a href="https://www.usworker.coop/directory/" target="_blank" rel="noopener" className="text-[#004cb9] hover:text-[#003a8c]">US Federation of Worker Cooperatives directory</a>, the <a href="https://institute.coop" target="_blank" rel="noopener" className="text-[#004cb9] hover:text-[#003a8c]">Democracy at Work Institute</a>, regional cooperative networks, and direct submissions. We do our best to verify ownership structure before adding a business.
               </p>
             </section>
 
