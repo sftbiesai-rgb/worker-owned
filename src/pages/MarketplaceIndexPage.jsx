@@ -266,10 +266,17 @@ function MarketplaceIndexPage() {
             : <>32,000+ products from <Link to="/marketplace/companies" className="text-[#004cb9] hover:text-[#BF0A30] transition-colors">60+ worker and employee owned companies</Link></>}
         </p>
 
-        <div className="mt-2 text-center">
-          <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
-            Submit a worker or employee owned business &rarr;
-          </Link>
+        <div className="mt-2 text-center space-y-1">
+          <div>
+            <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+              Submit a worker or employee owned business &rarr;
+            </Link>
+          </div>
+          <div>
+            <Link to="/faq" className="text-xs text-gray-400 hover:text-[#004cb9] transition-colors">
+              FAQ
+            </Link>
+          </div>
         </div>
       </main>
 
