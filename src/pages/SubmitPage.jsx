@@ -167,9 +167,12 @@ function SubmitPage() {
           )}
         </div>
 
-        <div className="mt-3 text-center">
+        <div className="mt-3 flex justify-center gap-4">
           <Link to="/" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
             &larr; Back home
+          </Link>
+          <Link to="/faq" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+            FAQ &rarr;
           </Link>
         </div>
       </main>
