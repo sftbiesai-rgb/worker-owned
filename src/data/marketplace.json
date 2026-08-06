@@ -1426,5 +1426,228 @@
     "status": "verified active",
     "notes": "100% employee-owned (ESOP since 2024). Founded 1980 in Minneapolis, MN. Modern furniture retailer with 22+ stores and full e-commerce. B-Corp certified. 90%+ products made in USA. $500M+ annual revenue.",
     "site_section": "Home Goods & Services"
+  },
+  {
+    "id": 176,
+    "name": "Bull Moose",
+    "url": "https://www.bullmoose.com",
+    "category": "music / movies / books / games",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP since 2022). Independent retailer in Maine and New Hampshire. Sells vinyl, CDs, movies, video games, books, and trading cards. New and used.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 177,
+    "name": "Zia Records",
+    "url": "https://www.ziarecords.com",
+    "category": "music / movies / merch",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Employee-owned record store chain. Phoenix, Tucson, and Las Vegas locations. Sells vinyl, CDs, cassettes, movies, books, and merch online.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 178,
+    "name": "Dye Mad Yarns",
+    "url": "https://dyemadyarns.com",
+    "category": "yarn / fiber arts",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Employee-owned indie yarn dyeing studio in Columbus, OH. Hand-dyed yarn, fiber, patterns, and knitting classes.",
+    "site_section": "Home Goods & Services"
+  },
+  {
+    "id": 179,
+    "name": "Pilsen Community Books",
+    "url": "https://www.pilsencommunitybooks.com",
+    "category": "bookstore",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker cooperative bookstore in Chicago's Pilsen neighborhood since 2020. Leftist politics, lit in translation, poetry, graphic novels, children's books, Spanish-language. Online via Bookshop.org.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 180,
+    "name": "New Harbinger Publications",
+    "url": "https://www.newharbinger.com",
+    "category": "publisher / psychology / self-help",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Majority employee-owned (ESOP) publisher since 1973. Oakland, CA. Psychology, mental health, and self-help books and workbooks.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 181,
+    "name": "Boydell & Brewer",
+    "url": "https://boydellandbrewer.com",
+    "category": "academic publisher",
+    "ownership_type": "employee-owned",
+    "ships": "worldwide",
+    "status": "verified active",
+    "notes": "Employee Ownership Trust since 2015. Academic publisher of humanities and social sciences. Offices in UK and Rochester, NY. Imprints include University of Rochester Press and Camden House.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 182,
+    "name": "Four Buds Floral Studio",
+    "url": "https://www.fourbudsfloral.com",
+    "category": "florist",
+    "ownership_type": "worker co-op",
+    "ships": "Rhode Island / MA delivery",
+    "status": "verified active",
+    "notes": "Rhode Island's only worker-owned floral studio. Providence, RI. Fresh flowers, plants, sympathy arrangements, wedding florals. Delivers across RI and nearby MA.",
+    "site_section": "Home Goods & Services"
+  },
+  {
+    "id": 183,
+    "name": "The Flytrap",
+    "url": "https://www.theflytrapmedia.com",
+    "category": "feminist journalism",
+    "ownership_type": "worker-owned",
+    "status": "verified active",
+    "notes": "Worker-owned intersectional feminist journalism. Founded October 2024 by 10 co-owners. Reader-supported, no ads.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 184,
+    "name": "Second Wind",
+    "url": "https://www.secondwindgroup.com",
+    "category": "gaming media / video essays",
+    "ownership_type": "employee-owned",
+    "status": "verified active",
+    "notes": "Worker-owned gaming media company. Video essays, podcasts, and livestreams about video games, movies and TV. Founded Nov 2023 after The Escapist walkout. Kansas City area.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 185,
+    "name": "Autonomy News",
+    "url": "https://autonomynews.co",
+    "category": "reproductive rights journalism",
+    "ownership_type": "worker-owned",
+    "status": "verified active",
+    "notes": "Worker-owned reproductive rights and justice publication.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 186,
+    "name": "RANGE Media",
+    "url": "https://rangemedia.co",
+    "category": "local news / Spokane",
+    "ownership_type": "worker-owned",
+    "status": "verified active",
+    "notes": "Worker-owned independent online news covering Spokane and the Inland Northwest.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 187,
+    "name": "Pop Heist",
+    "url": "https://popheist.com",
+    "category": "pop culture journalism",
+    "ownership_type": "worker-owned",
+    "status": "verified active",
+    "notes": "Worker-owned pop culture media company. Reader-funded, subscription model.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 188,
+    "name": "Ravenous",
+    "url": "https://weareravenous.com",
+    "category": "food journalism",
+    "ownership_type": "worker-owned",
+    "status": "verified active",
+    "notes": "Worker-owned food culture journalism. Reader-supported.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 189,
+    "name": "Darker Times",
+    "url": "https://darkertimes.com",
+    "category": "horror culture magazine",
+    "ownership_type": "worker-owned",
+    "status": "verified active",
+    "notes": "Worker-owned horror culture magazine. Criticism and commentary.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 190,
+    "name": "Skybox",
+    "url": "https://skyboxcritics.com",
+    "category": "games media",
+    "ownership_type": "worker-owned",
+    "status": "verified active",
+    "notes": "Worker-owned games media. Reviews, features, and podcasts.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 191,
+    "name": "Loomio",
+    "url": "https://www.loomio.com",
+    "category": "decision-making software",
+    "ownership_type": "worker co-op",
+    "ships": "worldwide (digital)",
+    "status": "verified active",
+    "notes": "Worker cooperative in Wellington, New Zealand. Open-source collaborative decision-making software. Used by cooperatives, nonprofits, and community organizations worldwide.",
+    "site_section": "Tech & Software"
+  },
+  {
+    "id": 192,
+    "name": "ReVision Energy",
+    "url": "https://www.revisionenergy.com",
+    "category": "solar installation / clean energy",
+    "ownership_type": "employee-owned",
+    "ships": "ME / NH / MA (service area)",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP) solar company. Certified B Corp. Solar installation, heat pumps, battery storage, EV charging. Maine, New Hampshire, and Massachusetts.",
+    "site_section": "Tech & Software"
+  },
+  {
+    "id": 193,
+    "name": "Pixel Pushers Union 512",
+    "url": "https://pixelpushersunion.com",
+    "category": "video game studio",
+    "ownership_type": "worker co-op",
+    "ships": "worldwide (digital)",
+    "status": "verified active",
+    "notes": "Worker-owned cooperative game studio in Texas. Made Tonight We Riot. Equal profit sharing among all workers.",
+    "site_section": "Games"
+  },
+  {
+    "id": 194,
+    "name": "Lucid Tales",
+    "url": "https://lucidtales.coop",
+    "category": "video game studio",
+    "ownership_type": "worker co-op",
+    "ships": "worldwide (digital)",
+    "status": "verified active",
+    "notes": "Worker cooperative game studio in Montreal, Quebec. Making Sally, a wholesome life-simulation game about community and belonging.",
+    "site_section": "Games"
+  },
+  {
+    "id": 195,
+    "name": "Aesthetician Labs",
+    "url": "https://aesthetic.games",
+    "category": "video game studio / merch",
+    "ownership_type": "worker co-op",
+    "ships": "worldwide (digital)",
+    "status": "verified active",
+    "notes": "Worker-owned cooperative game studio in Rochester, NY since 2018. Games include Australia Did It, Udder, Crazy Platez. Also offers game dev services and merch.",
+    "site_section": "Games"
+  },
+  {
+    "id": 196,
+    "name": "TWB Co-operative Brewing",
+    "url": "https://www.twbbrewing.com",
+    "category": "craft brewery",
+    "ownership_type": "worker co-op",
+    "ships": "Kitchener ON (taproom + online)",
+    "status": "verified active",
+    "notes": "Worker cooperative brewery in Kitchener, Ontario. 6 worker-owners. Certified living wage employer, no-tip establishment. Founded 2013, opened 2016. Sells cans online at shop.twbbrewing.com.",
+    "site_section": "Beer & Brewing"
   }
 ]

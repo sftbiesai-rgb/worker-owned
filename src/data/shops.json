@@ -1233,5 +1233,17 @@
     "id": 133,
     "lat": 44.9855,
     "lng": -93.4555
+  },
+  {
+    "name": "Beanchain Coffee",
+    "city": "Mesa",
+    "state": "AZ",
+    "website": "https://bchain.coffee",
+    "category": "coffee",
+    "ownership_type": "worker-directed",
+    "notes": "Worker-directed coffee shop in Mesa, AZ. Coffee, breakfast, lunch, bakery items.",
+    "id": 134,
+    "lat": 33.3918,
+    "lng": -111.8449
   }
 ]
