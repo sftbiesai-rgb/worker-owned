@@ -381,17 +381,43 @@ async function tryWooCommerce(entry) {
   } catch { return null; }
 }
 
+// --only 178,182 flag: scrape specific store IDs and merge into existing products.json
+const onlyArg = process.argv.find(a => a.startsWith('--only'));
+const onlyIds = onlyArg ? new Set(onlyArg.split('=')[1]?.split(',').map(Number) || process.argv[process.argv.indexOf('--only') + 1]?.split(',').map(Number)) : null;
+
 async function main() {
   mkdirSync(dirname(OUT_FILE), { recursive: true });
 
-  const allProducts = [];
+  let allProducts = [];
   let scraped = 0, skipped = 0;
+
+  // In --only mode, load existing products and remove entries for the target stores
+  if (onlyIds) {
+    try {
+      const existing = JSON.parse(readFileSync(OUT_FILE, 'utf8'));
+      const targetEntries = entries.filter(e => onlyIds.has(e.id));
+      const targetUrls = new Set(targetEntries.map(e => getBaseUrl(e.url)).filter(Boolean));
+      // Keep products not from target stores, and not synthetic entries for target stores
+      allProducts = existing.filter(p => {
+        if (typeof p.id === 'string' && p.id.startsWith('synth-')) {
+          // Check if this synthetic entry belongs to a target store
+          const synthEntry = entries.find(e => e.name === p.store_name);
+          return !synthEntry || !onlyIds.has(synthEntry.id);
+        }
+        const pBase = getBaseUrl(p.store_url || p.url);
+        return !targetUrls.has(pBase);
+      });
+      console.log(`--only mode: kept ${allProducts.length} existing products, re-scraping ${onlyIds.size} stores`);
+    } catch { /* no existing file, start fresh */ }
+  }
 
   // Deduplicate entries by store base URL so we don't hit the same store twice
   // (some stores appear multiple times with different entry names)
   const seen = new Set();
 
-  for (const entry of entries) {
+  const entriesToScrape = onlyIds ? entries.filter(e => onlyIds.has(e.id)) : entries;
+
+  for (const entry of entriesToScrape) {
     if (!entry.url) { skipped++; continue; }
     const base = getBaseUrl(entry.url);
     if (!base) { skipped++; continue; }
@@ -440,6 +466,14 @@ async function main() {
     { id: 'synth-rascalnews', storeId: 93, title: 'Rascal News — Tabletop RPG Journalism', price: '5.00', url: 'https://rascal.news/', tags: ['news-subscription', 'journalism', 'tabletop', 'board games', 'rpg'] },
     { id: 'synth-meanstv', storeId: 108, title: 'Means TV — Worker-Owned Streaming Service', price: '10.00', url: 'https://means.tv/', tags: ['news-subscription', 'streaming', 'documentaries', 'video'] },
     { id: 'synth-librofm', storeId: 175, title: 'Libro.fm — DRM-Free Audiobooks', price: '14.99', url: 'https://libro.fm/', tags: ['audiobooks', 'books', 'audiobook', 'reading', 'ebooks'] },
+    { id: 'synth-flytrap', storeId: 183, title: 'The Flytrap — Feminist Journalism Subscription', price: '8.00', url: 'https://www.theflytrapmedia.com/', tags: ['news-subscription', 'journalism', 'feminism'] },
+    { id: 'synth-secondwind', storeId: 184, title: 'Second Wind — Gaming Media Subscription', price: '5.00', url: 'https://www.patreon.com/SecondWindGroup', tags: ['news-subscription', 'gaming', 'video games', 'podcasts'] },
+    { id: 'synth-autonomynews', storeId: 185, title: 'Autonomy News — Reproductive Rights Journalism', price: '8.00', url: 'https://autonomynews.co/', tags: ['news-subscription', 'journalism', 'reproductive rights'] },
+    { id: 'synth-rangemedia', storeId: 186, title: 'RANGE Media — Spokane Local News', price: '8.00', url: 'https://rangemedia.co/', tags: ['news-subscription', 'journalism', 'spokane', 'local news'] },
+    { id: 'synth-popheist', storeId: 187, title: 'Pop Heist — Pop Culture Journalism', price: '7.00', url: 'https://popheist.com/', tags: ['news-subscription', 'journalism', 'pop culture'] },
+    { id: 'synth-ravenous', storeId: 188, title: 'Ravenous — Food Culture Journalism', price: '7.00', url: 'https://weareravenous.com/', tags: ['news-subscription', 'journalism', 'food'] },
+    { id: 'synth-darkertimes', storeId: 189, title: 'Darker Times — Horror Culture Magazine', price: '5.00', url: 'https://darkertimes.com/', tags: ['news-subscription', 'journalism', 'horror', 'culture'] },
+    { id: 'synth-skybox', storeId: 190, title: 'Skybox — Games Media', price: '5.00', url: 'https://skyboxcritics.com/', tags: ['news-subscription', 'journalism', 'video games', 'gaming'] },
   ];
 
   for (const s of SYNTHETIC) {
