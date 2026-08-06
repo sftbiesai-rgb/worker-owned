@@ -254,9 +254,6 @@ function MarketplaceIndexPage() {
             <Link to="/guides/alternatives#corporate-news" className="py-2 px-4 rounded-lg text-sm font-medium bg-blue-50 text-[#004cb9] hover:bg-[#004cb9] hover:text-white transition-colors">
               Instead of Corporate News
             </Link>
-            <Link to="/guides/what-is-a-worker-cooperative" className="py-2 px-4 rounded-lg text-sm font-medium bg-blue-50 text-[#004cb9] hover:bg-[#004cb9] hover:text-white transition-colors">
-              What is a co-op?
-            </Link>
           </div>
         </div>
 
