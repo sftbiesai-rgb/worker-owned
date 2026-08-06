@@ -49,6 +49,13 @@ const ALTERNATIVES = [
     ],
   },
   {
+    instead: 'Audible',
+    why: 'Audible is Amazon. Libro.fm is 100% employee-owned and splits profits with an independent bookstore you choose.',
+    picks: [
+      { name: 'Libro.fm', product: 'DRM-free audiobooks from a catalog of 600,000+ titles.', detail: '100% employee-owned, B Corp. 28% of revenue stays local vs 4% with Amazon.' },
+    ],
+  },
+  {
     instead: 'Corporate News',
     why: 'These media outlets are owned by the journalists and writers who produce them.',
     picks: [
