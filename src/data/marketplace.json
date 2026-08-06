@@ -1406,6 +1406,17 @@
     "site_section": "Food & Pantry"
   },
   {
+    "id": 175,
+    "name": "Libro.fm",
+    "url": "https://libro.fm",
+    "category": "audiobooks",
+    "ownership_type": "employee-owned",
+    "ships": "worldwide",
+    "status": "verified active",
+    "notes": "100% employee-owned audiobook platform. Certified B Corp. Social Purpose Corporation. DRM-free audiobooks with 600,000+ titles. Splits profits with an independent bookstore of the customer's choosing. Partners with 1,400+ indie bookstores. 28% of revenue recirculates locally vs 4% with Amazon/Audible.",
+    "site_section": "Media & Publishing"
+  },
+  {
     "id": 174,
     "name": "Room & Board",
     "url": "https://www.roomandboard.com",
