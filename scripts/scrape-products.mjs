@@ -426,8 +426,43 @@ async function main() {
     await new Promise(r => setTimeout(r, DELAY_BETWEEN_STORES_MS));
   }
 
-  writeFileSync(OUT_FILE, JSON.stringify(allProducts, null, 2));
-  console.log(`\nDone: ${scraped} stores with products, ${skipped} skipped`);
+  // Synthetic entries for stores without scrapeable product pages
+  const SYNTHETIC = [
+    { id: 'synth-defector', storeId: 84, title: 'Defector — Sports & Culture Subscription', price: '8.00', url: 'https://defector.com/subscribe', tags: ['news-subscription', 'journalism', 'sports', 'culture'] },
+    { id: 'synth-404media', storeId: 85, title: '404 Media — Tech Journalism Subscription', price: '10.00', url: 'https://www.404media.co/membership/', tags: ['news-subscription', 'journalism', 'tech', 'investigative'] },
+    { id: 'synth-aftermath', storeId: 86, title: 'Aftermath — Video Game Journalism Subscription', price: '7.00', url: 'https://aftermath.site/', tags: ['news-subscription', 'journalism', 'video games', 'gaming'] },
+    { id: 'synth-hellgate', storeId: 87, title: 'Hell Gate — NYC Local News Subscription', price: '8.00', url: 'https://hellgatenyc.com/subscribe', tags: ['news-subscription', 'journalism', 'nyc', 'local news'] },
+    { id: 'synth-flaminghydra', storeId: 88, title: 'Flaming Hydra — Cooperative Newsletter', price: '8.00', url: 'https://flaminghydra.com/', tags: ['news-subscription', 'essays', 'newsletter'] },
+    { id: 'synth-hearingthings', storeId: 89, title: 'Hearing Things — Music Journalism Subscription', price: '5.00', url: 'https://www.hearingthings.co/', tags: ['news-subscription', 'journalism', 'music', 'music-audio'] },
+    { id: 'synth-racketmn', storeId: 90, title: 'Racket MN — Minneapolis Arts & Culture', price: '7.00', url: 'https://racketmn.com/', tags: ['news-subscription', 'journalism', 'minneapolis', 'arts', 'culture'] },
+    { id: 'synth-maxfun', storeId: 91, title: 'Maximum Fun — Podcast Network Membership', price: '5.00', url: 'https://maximumfun.org/join/', tags: ['news-subscription', 'podcasts', 'music-audio', 'comedy'] },
+    { id: 'synth-coloradosun', storeId: 92, title: 'The Colorado Sun — Statewide News Subscription', price: '10.00', url: 'https://coloradosun.com/memberships/', tags: ['news-subscription', 'journalism', 'colorado', 'local news'] },
+    { id: 'synth-rascalnews', storeId: 93, title: 'Rascal News — Tabletop RPG Journalism', price: '5.00', url: 'https://rascal.news/', tags: ['news-subscription', 'journalism', 'tabletop', 'board games', 'rpg'] },
+    { id: 'synth-meanstv', storeId: 108, title: 'Means TV — Worker-Owned Streaming Service', price: '10.00', url: 'https://means.tv/', tags: ['news-subscription', 'streaming', 'documentaries', 'video'] },
+    { id: 'synth-librofm', storeId: 175, title: 'Libro.fm — DRM-Free Audiobooks', price: '14.99', url: 'https://libro.fm/', tags: ['audiobooks', 'books', 'audiobook', 'reading', 'ebooks'] },
+  ];
+
+  for (const s of SYNTHETIC) {
+    const entry = entries.find(e => e.id === s.storeId);
+    if (!entry) continue;
+    allProducts.push({
+      id: s.id,
+      title: s.title,
+      price: s.price,
+      available: true,
+      image: null,
+      url: s.url,
+      store_name: entry.name,
+      store_url: entry.url,
+      ownership_type: entry.ownership_type,
+      site_section: entry.site_section,
+      tags: s.tags,
+    });
+  }
+  console.log(`\nAdded ${SYNTHETIC.length} synthetic entries`);
+
+  writeFileSync(OUT_FILE, JSON.stringify(allProducts));
+  console.log(`Done: ${scraped} stores with products, ${skipped} skipped`);
   console.log(`Total products: ${allProducts.length}`);
   console.log(`Written to: ${OUT_FILE}`);
 }
