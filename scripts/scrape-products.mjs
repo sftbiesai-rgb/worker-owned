@@ -476,7 +476,9 @@ async function main() {
     { id: 'synth-skybox', storeId: 190, title: 'Skybox — Games Media', price: '5.00', url: 'https://skyboxcritics.com/', tags: ['news-subscription', 'journalism', 'video games', 'gaming'] },
   ];
 
+  const existingSynthIds = new Set(allProducts.filter(p => typeof p.id === 'string' && p.id.startsWith('synth-')).map(p => p.id));
   for (const s of SYNTHETIC) {
+    if (existingSynthIds.has(s.id)) continue;
     const entry = entries.find(e => e.id === s.storeId);
     if (!entry) continue;
     allProducts.push({
