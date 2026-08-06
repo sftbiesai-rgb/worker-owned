@@ -47,7 +47,11 @@ async function fetchWithTimeout(url, opts = {}) {
       signal: ctrl.signal,
       headers: { 'User-Agent': 'Mozilla/5.0', ...(opts.headers ?? {}) },
     });
-    clearTimeout(timer);
+    // Wrap .text() and .json() to keep the timeout active through body reading
+    const origText = res.text.bind(res);
+    const origJson = res.json.bind(res);
+    res.text = async () => { try { return await origText(); } finally { clearTimeout(timer); } };
+    res.json = async () => { try { return await origJson(); } finally { clearTimeout(timer); } };
     return res;
   } catch (e) {
     clearTimeout(timer);

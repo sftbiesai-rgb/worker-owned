@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import { slugify, displayTags, thumbUrl, faviconUrl } from '../lib/utils'
+import { slugify, displayTags, faviconUrl } from '../lib/utils'
 import OwnershipBadge from './OwnershipBadge'
+import ProductImage from './ProductImage'
 
 export default function ProductCard({ product: p, showStore = true }) {
   return (
@@ -13,7 +14,7 @@ export default function ProductCard({ product: p, showStore = true }) {
       >
         {p.image && (
           <div className="aspect-square w-full overflow-hidden bg-gray-100 relative">
-            <img src={thumbUrl(p.image)} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+            <ProductImage src={p.image} alt={p.title} />
             {p.available === false && (
               <span className="absolute top-1.5 left-1.5 bg-gray-800/75 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded">Sold out</span>
             )}

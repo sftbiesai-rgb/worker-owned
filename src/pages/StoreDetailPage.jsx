@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
-import { slugify, displayTags, thumbUrl, faviconUrl, dedupeByUrl } from '../lib/utils'
+import { slugify, displayTags, faviconUrl, dedupeByUrl } from '../lib/utils'
 import { SECTION_SLUGS } from '../lib/categories'
 import OwnershipBadge from '../components/OwnershipBadge'
+import ProductImage from '../components/ProductImage'
 import Footer from '../components/Footer'
 import Breadcrumbs from '../components/Breadcrumbs'
 
@@ -103,7 +104,7 @@ function StoreDetailPage() {
                   >
                     {p.image && (
                       <div className="aspect-square w-full overflow-hidden bg-gray-100 relative">
-                        <img src={thumbUrl(p.image)} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+                        <ProductImage src={p.image} alt={p.title} />
                         {p.available === false && (
                           <span className="absolute top-1.5 left-1.5 bg-gray-800/75 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded">Sold out</span>
                         )}
