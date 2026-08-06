@@ -167,7 +167,7 @@ function MarketplaceIndexPage() {
               </div>
             </div>
           ) : (
-            <div className="flex gap-4 items-start">
+            <div className="flex flex-col xl:flex-row gap-4 xl:items-start">
               <FilterSidebar
                 products={results}
                 activeCategory={filterCat}
