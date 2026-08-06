@@ -117,7 +117,7 @@ function MarketplaceIndexPage() {
 
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
-      <main className="flex-1 max-w-xl lg:max-w-5xl mx-auto w-full px-5 py-8 flex flex-col">
+      <main className="flex-1 max-w-xl xl:max-w-5xl mx-auto w-full px-5 py-8 flex flex-col">
 
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-6 mb-3">
           <div className="flex items-center justify-center gap-3 mb-1">
@@ -210,7 +210,7 @@ function MarketplaceIndexPage() {
                     </div>
                   ) : (
                     <>
-                      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3">
                         {pagedResults.map(p => (
                           <ProductCard key={p.id} product={p} />
                         ))}

@@ -151,15 +151,15 @@ export default function FilterSidebar({
   return (
     <>
       {/* Desktop sidebar */}
-      <aside className="hidden lg:block w-56 shrink-0">
+      <aside className="hidden xl:block w-56 shrink-0">
         <div className="sticky top-4 bg-white rounded-2xl border border-gray-200 shadow-sm px-4 py-4">
           <h2 className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-3">Filters</h2>
           {filterContent}
         </div>
       </aside>
 
-      {/* Mobile filter toggle */}
-      <div className="lg:hidden mb-3">
+      {/* Mobile/tablet filter toggle */}
+      <div className="xl:hidden mb-3">
         <button
           onClick={() => setExpanded(e => !e)}
           className="w-full bg-white rounded-xl border border-gray-200 shadow-sm px-4 py-2.5 flex items-center justify-between"
