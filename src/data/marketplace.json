@@ -1649,5 +1649,203 @@
     "status": "verified active",
     "notes": "Worker cooperative brewery in Kitchener, Ontario. 6 worker-owners. Certified living wage employer, no-tip establishment. Founded 2013, opened 2016. Sells cans online at shop.twbbrewing.com.",
     "site_section": "Beer & Brewing"
+  },
+  {
+    "id": 197,
+    "name": "Cardboard Revolution",
+    "url": "https://cardboardrevolution.com",
+    "category": "tabletop games",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker-owned tabletop game design cooperative. Makes original board games including Loam. Online shop available.",
+    "site_section": "Games"
+  },
+  {
+    "id": 198,
+    "name": "No Borders Books",
+    "url": "https://bookshop.org/shop/NoBorders",
+    "category": "bookstore",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker-owned bookstore and cafe in Astoria, Queens NYC. Currently between physical spaces but online shop active via Bookshop.org.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 199,
+    "name": "Heartleaf Books",
+    "url": "https://heartleafbooks.com",
+    "category": "bookstore",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker and consumer-owned co-op bookshop in Providence, RI. Online bookshop, audiobooks via Libro.fm, ebooks via Bookshop.org. Co-op memberships available.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 200,
+    "name": "Feminist Book Club",
+    "url": "https://feministbookclub.com",
+    "category": "book subscription",
+    "ownership_type": "worker-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker-owned since 2024. Monthly book subscription service with podcast. Based in Minnesota.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 201,
+    "name": "Homeward Books Collective",
+    "url": "https://homewardbooksaz.com",
+    "category": "bookstore",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Worker-owned bookstore in Tucson, AZ. New and used books, games, and comics. Online shop via Bookshop.org and audiobooks via Libro.fm.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 202,
+    "name": "Turnsol Books",
+    "url": "https://turnsolbooks.net",
+    "category": "bookstore / coffee shop",
+    "ownership_type": "worker co-op",
+    "ships": "verify online availability",
+    "status": "verified active",
+    "notes": "Worker-owned bookstore, coffee shop, and writers' studio in Kansas City, MO.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 203,
+    "name": "Casa Nueva",
+    "url": "https://casanueva.com",
+    "category": "restaurant",
+    "ownership_type": "worker co-op",
+    "ships": "local only — Athens OH",
+    "status": "verified active",
+    "notes": "40+ year old worker-owned cooperative in Athens, OH. Mexican-inspired food. One of the longest-running worker co-ops in the US. Online ordering and gift cards available.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 204,
+    "name": "For Everyone Collective",
+    "url": "https://foreveryonecollective.com",
+    "category": "clothing",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Radical clothing co-op, worker-owned by formerly incarcerated people. Shopify online store with apparel.",
+    "site_section": "Apparel"
+  },
+  {
+    "id": 205,
+    "name": "Mirisata",
+    "url": "https://mirisata.com",
+    "category": "restaurant",
+    "ownership_type": "worker-owned",
+    "ships": "local only — Portland OR",
+    "status": "verified active",
+    "notes": "BIPOC worker-owned, 100% vegan, tipless Sri Lankan restaurant and drinks in Portland, OR. Online ordering available.",
+    "site_section": "Food & Pantry"
+  },
+  {
+    "id": 206,
+    "name": "Union Cab Co-op",
+    "url": "https://unioncab.coop",
+    "category": "taxi / ride service",
+    "ownership_type": "worker co-op",
+    "ships": "local only — Madison WI",
+    "status": "verified active",
+    "notes": "Worker-owned taxi cooperative since 1979. 24/7 service in Madison, WI. One of the oldest worker co-ops in the country. Rides via phone or app.",
+    "site_section": "Home Goods & Services"
+  },
+  {
+    "id": 207,
+    "name": "Catamount Solar",
+    "url": "https://catamountsolar.com",
+    "category": "solar installation",
+    "ownership_type": "worker co-op",
+    "ships": "Vermont service area",
+    "status": "verified active",
+    "notes": "Member-owned worker's cooperative in Randolph, VT. Solar panel and battery installation. Free quotes available online.",
+    "site_section": "Home Goods & Services"
+  },
+  {
+    "id": 208,
+    "name": "Cooperation Jackson",
+    "url": "https://cooperationjackson.org",
+    "category": "cooperative network / merch",
+    "ownership_type": "worker co-op",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Network of cooperatives and worker-owned enterprises building a solidarity economy in Jackson, Mississippi. Online merch shop (CJ Gear) and sustainer memberships.",
+    "site_section": "Home Goods & Services"
+  },
+  {
+    "id": 209,
+    "name": "Tattoo Readymade",
+    "url": "https://tattooreadymade.com",
+    "category": "tattoo shop / merch",
+    "ownership_type": "worker-owned",
+    "ships": "US (merch)",
+    "status": "verified active",
+    "notes": "Worker-owned street tattoo shop in Pittsburgh, PA. BigCartel online merch store and Substack newsletter.",
+    "site_section": "Art & Prints"
+  },
+  {
+    "id": 210,
+    "name": "Manzanita Interactive",
+    "url": "https://store.steampowered.com/search/?developer=Manzanita%20Interactive",
+    "category": "video game studio",
+    "ownership_type": "worker co-op",
+    "ships": "worldwide (digital)",
+    "status": "verified active",
+    "notes": "Worker-owned and operated game studio in Los Angeles, CA since 2025. Games available on Steam including Dandelion Void.",
+    "site_section": "Games"
+  },
+  {
+    "id": 211,
+    "name": "Tape Trade",
+    "url": "https://tapetrade.io",
+    "category": "music app",
+    "ownership_type": "worker-owned",
+    "ships": "worldwide (digital)",
+    "status": "verified active",
+    "notes": "Worker-owned cross-platform app for playback, storage, and sharing of mixes, demos, beats, and masters. Subscriptions from $1-10/mo.",
+    "site_section": "Music"
+  },
+  {
+    "id": 212,
+    "name": "Strange Matters Magazine",
+    "url": "https://strangematters.coop",
+    "category": "cooperative magazine",
+    "ownership_type": "worker co-op",
+    "ships": "worldwide (digital)",
+    "status": "verified active",
+    "notes": "Cooperative literary and intellectual magazine of new and unconventional thinking in politics, economics, and culture. Subscription memberships available. Founded 2020.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 213,
+    "name": "Big Duck",
+    "url": "https://bigduck.com",
+    "category": "nonprofit communications",
+    "ownership_type": "worker co-op",
+    "ships": "US (services)",
+    "status": "verified active",
+    "notes": "Worker-owned cooperative since 1994 in Brooklyn, NY. Builds brands and campaigns for nonprofits. Employees guide operations and share profits equally.",
+    "site_section": "Tech & Software"
+  },
+  {
+    "id": 214,
+    "name": "Chick Habit Beauty Collective",
+    "url": "https://chickhabitbeauty.com",
+    "category": "salon",
+    "ownership_type": "worker co-op",
+    "ships": "local only — Muncie IN",
+    "status": "verified active",
+    "notes": "Queer-focused, worker-owned beauty collective in Muncie, IN. Salon services and gift cards available.",
+    "site_section": "Personal Care"
   }
 ]

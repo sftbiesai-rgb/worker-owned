@@ -474,6 +474,9 @@ async function main() {
     { id: 'synth-ravenous', storeId: 188, title: 'Ravenous — Food Culture Journalism', price: '7.00', url: 'https://weareravenous.com/', tags: ['news-subscription', 'journalism', 'food'] },
     { id: 'synth-darkertimes', storeId: 189, title: 'Darker Times — Horror Culture Magazine', price: '5.00', url: 'https://darkertimes.com/', tags: ['news-subscription', 'journalism', 'horror', 'culture'] },
     { id: 'synth-skybox', storeId: 190, title: 'Skybox — Games Media', price: '5.00', url: 'https://skyboxcritics.com/', tags: ['news-subscription', 'journalism', 'video games', 'gaming'] },
+    { id: 'synth-feministbookclub', storeId: 200, title: 'Feminist Book Club — Monthly Book Subscription', price: '16.99', url: 'https://feministbookclub.com/', tags: ['books', 'subscription', 'feminism', 'reading'] },
+    { id: 'synth-tapetrade', storeId: 211, title: 'Tape Trade — Music Storage & Sharing App', price: '5.00', url: 'https://tapetrade.io/', tags: ['music', 'music-audio', 'app', 'subscription'] },
+    { id: 'synth-strangematters', storeId: 212, title: 'Strange Matters — Cooperative Magazine Subscription', price: '5.00', url: 'https://strangematters.coop/membership-account/membership-levels/', tags: ['news-subscription', 'magazine', 'economics', 'politics', 'culture'] },
   ];
 
   const existingSynthIds = new Set(allProducts.filter(p => typeof p.id === 'string' && p.id.startsWith('synth-')).map(p => p.id));
