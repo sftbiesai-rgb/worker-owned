@@ -1847,5 +1847,16 @@
     "status": "verified active",
     "notes": "Queer-focused, worker-owned beauty collective in Muncie, IN. Salon services and gift cards available.",
     "site_section": "Personal Care"
+  },
+  {
+    "id": 215,
+    "name": "Baltimore Bicycle Works",
+    "url": "https://baltimorebicycleworks.com",
+    "category": "bike shop",
+    "ownership_type": "worker co-op",
+    "ships": "local (Baltimore MD)",
+    "status": "verified active",
+    "notes": "Baltimore's only worker-owned and democratically operated bicycle shop. Every staff member is an equal owner or working toward ownership. Full-service repairs, tune-ups, and parts.",
+    "site_section": "Home Goods & Services"
   }
 ]
