@@ -2,7 +2,10 @@ import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { Search, ArrowUpDown } from 'lucide-react'
 import { SECTIONS } from '../lib/categories'
-import { searchProducts } from '../lib/search'
+import { searchProducts, searchCompanies } from '../lib/search'
+import marketplaceData from '../data/marketplace.json'
+import { slugify, faviconUrl, dedupeByUrl } from '../lib/utils'
+import OwnershipBadge from '../components/OwnershipBadge'
 import ProductCard from '../components/ProductCard'
 import Pagination from '../components/Pagination'
 import Footer from '../components/Footer'
@@ -70,6 +73,8 @@ function MarketplaceIndexPage() {
       .catch(() => {})
   }, [inputValue, query])
 
+  const allCompanies = useMemo(() => dedupeByUrl(marketplaceData), [])
+  const companyResults = useMemo(() => searchCompanies(inputValue, allCompanies), [inputValue, allCompanies])
   const results = useMemo(() => searchProducts(inputValue, products), [inputValue, products])
 
   // Apply filters: category → store → price
@@ -147,8 +152,29 @@ function MarketplaceIndexPage() {
           </div>
         </Link>
 
+        {searching && companyResults.length > 0 && (
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mb-3">
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Companies</p>
+            <div className="space-y-2">
+              {companyResults.slice(0, 5).map(c => (
+                <Link key={c.id} to={`/marketplace/store/${slugify(c.name)}`} className="flex items-center gap-3 bg-[#f5f5f7] rounded-xl px-4 py-3 hover:bg-blue-50 transition-colors">
+                  {c.url && <img src={faviconUrl(c.url)} alt="" width="16" height="16" className="shrink-0" />}
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-semibold text-gray-900 truncate">{c.name}</span>
+                      <OwnershipBadge type={c.ownership_type} />
+                    </div>
+                    {c.notes && <p className="text-xs text-gray-500 truncate">{c.notes}</p>}
+                  </div>
+                  <span className="text-xs text-gray-400 shrink-0">{c.site_section}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
         {searching ? (
-          results.length === 0 ? (
+          results.length === 0 && companyResults.length === 0 ? (
             <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
               <div className="text-center py-4">
                 <p className="text-sm text-gray-500 mb-4">No results for "{inputValue}"</p>
