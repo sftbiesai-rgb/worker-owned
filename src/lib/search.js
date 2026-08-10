@@ -59,6 +59,40 @@ function urlWords(url) {
   } catch { return '' }
 }
 
+export function searchCompanies(inputValue, companies) {
+  if (!inputValue.trim()) return []
+  const words = inputValue.toLowerCase().trim().replace(/['']/g, '').split(/\s+/).filter(Boolean)
+  const wordStems = words.map(w => {
+    const stems = stemWord(w)
+    const syns = SYNONYMS[w]
+    if (syns) for (const s of syns) stems.push(...stemWord(s))
+    return [...new Set(stems)]
+  })
+  const scored = []
+  for (const c of companies) {
+    let allMatch = true
+    let score = 0
+    const nameLower = (c.name || '').toLowerCase().replace(/['']/g, '')
+    const notesLower = (c.notes || '').toLowerCase()
+    const catLower = (c.category || '').toLowerCase()
+    const slugText = urlWords(c.url)
+    for (const stems of wordStems) {
+      const inName = wordMatch(nameLower, stems)
+      const inNotes = wordMatch(notesLower, stems)
+      const inCat = wordMatch(catLower, stems)
+      const inSlug = wordMatch(slugText, stems)
+      if (!inName && !inNotes && !inCat && !inSlug) { allMatch = false; break }
+      if (inName) score += 5
+      else if (inCat) score += 2
+      else if (inNotes) score += 1
+      else if (inSlug) score += 1
+    }
+    if (allMatch) scored.push({ c, score })
+  }
+  scored.sort((a, b) => b.score - a.score)
+  return scored.map(s => s.c)
+}
+
 export function searchProducts(inputValue, products) {
   if (!inputValue.trim()) return []
 
