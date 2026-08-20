@@ -9,8 +9,10 @@ import Footer from '../components/Footer'
 import Breadcrumbs from '../components/Breadcrumbs'
 
 const ALL_STORES = dedupeByUrl(marketplaceData)
+// Build slug lookup from ALL entries (before dedup) so that every name variant resolves.
+// Earlier entries win — the base "Equal Exchange" beats "Equal Exchange — Food".
 const STORE_BY_SLUG = Object.fromEntries(
-  ALL_STORES.map(s => [slugify(s.name), s])
+  [...marketplaceData].reverse().map(s => [slugify(s.name), s])
 )
 
 function StoreDetailPage() {
