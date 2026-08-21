@@ -1858,5 +1858,16 @@
     "status": "verified active",
     "notes": "Baltimore's only worker-owned and democratically operated bicycle shop. Every staff member is an equal owner or working toward ownership. Full-service repairs, tune-ups, and parts.",
     "site_section": "Home Goods & Services"
+  },
+  {
+    "id": 216,
+    "name": "Maximum Fun Studio",
+    "url": "https://www.maxfunstudio.com",
+    "category": "recording studio rental",
+    "ownership_type": "employee-owned",
+    "ships": "local (Los Angeles CA)",
+    "status": "verified active",
+    "notes": "Employee-owned recording studio in Los Angeles available for rent. Professional audio and video recording space operated by the team behind the Maximum Fun podcast network.",
+    "site_section": "Media & Publishing"
   }
 ]
