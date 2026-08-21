@@ -477,8 +477,8 @@ async function main() {
     { id: 'synth-feministbookclub', storeId: 200, title: 'Feminist Book Club — Monthly Book Subscription', price: '16.99', url: 'https://feministbookclub.com/', tags: ['books', 'subscription', 'feminism', 'reading'] },
     { id: 'synth-tapetrade', storeId: 211, title: 'Tape Trade — Music Storage & Sharing App', price: '5.00', url: 'https://tapetrade.io/', tags: ['music', 'music-audio', 'app', 'subscription'] },
     { id: 'synth-strangematters', storeId: 212, title: 'Strange Matters — Cooperative Magazine Subscription', price: '5.00', url: 'https://strangematters.coop/membership-account/membership-levels/', tags: ['news-subscription', 'magazine', 'economics', 'politics', 'culture'] },
-    { id: 'synth-maxfunstudio-audio', storeId: 216, title: 'Maximum Fun Studio — Audio Recording Session', price: '0', url: 'https://www.maxfunstudio.com/', tags: ['recording', 'audio', 'studio', 'podcasts', 'music-audio'] },
-    { id: 'synth-maxfunstudio-video', storeId: 216, title: 'Maximum Fun Studio — Audio/Video Recording Session', price: '0', url: 'https://www.maxfunstudio.com/', tags: ['recording', 'audio', 'video', 'studio', 'podcasts', 'music-audio'] },
+    { id: 'synth-maxfunstudio-audio', storeId: 216, title: 'Maximum Fun Studio — Audio Recording Session', price: '150.00', url: 'https://www.maxfunstudio.com/', tags: ['recording', 'audio', 'studio', 'podcasts', 'music-audio'] },
+    { id: 'synth-maxfunstudio-video', storeId: 216, title: 'Maximum Fun Studio — Audio/Video Recording Session', price: '250.00', url: 'https://www.maxfunstudio.com/', tags: ['recording', 'audio', 'video', 'studio', 'podcasts', 'music-audio'] },
   ];
 
   const existingSynthIds = new Set(allProducts.filter(p => typeof p.id === 'string' && p.id.startsWith('synth-')).map(p => p.id));
