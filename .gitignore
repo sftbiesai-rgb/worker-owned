@@ -28,3 +28,6 @@ raw/
 candidates/
 RUNBOOK.md
 .gmail-app-password
+$PAYLOAD_FILE
+.mcp.json
+__pycache__/
