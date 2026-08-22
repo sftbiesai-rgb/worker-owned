@@ -242,27 +242,29 @@ function MarketplaceIndexPage() {
             </div>
           )
         ) : (
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
-            <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Browse by category</p>
-            <div className="flex flex-wrap justify-center gap-2">
-              {SECTIONS.map(cat => (
-                <Link
-                  key={cat.slug}
-                  to={`/marketplace/${cat.slug}`}
-                  className="py-2 px-4 rounded-lg text-sm font-medium bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors"
-                >
-                  {cat.label}
-                </Link>
-              ))}
+          <>
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
+              <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Browse by category</p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {SECTIONS.map(cat => (
+                  <Link
+                    key={cat.slug}
+                    to={`/marketplace/${cat.slug}`}
+                    className="py-2 px-4 rounded-lg text-sm font-medium bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors"
+                  >
+                    {cat.label}
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <Link to="/coffee" className="block bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-4 mt-3 hover:border-[#004cb9] transition-colors">
-            <div className="flex items-center justify-center gap-2.5">
-              <img src="/logo-coffee.png" alt="" width="28" height="28" className="shrink-0" />
-              <span className="text-sm text-[#004cb9] font-semibold"><strong>Quick Tool:</strong> worker owned coffee shops, bars, restaurants, and groceries near you!</span>
-            </div>
-          </Link>
+            <Link to="/coffee" className="block bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-4 mt-3 hover:border-[#004cb9] transition-colors">
+              <div className="flex items-center justify-center gap-2.5">
+                <img src="/logo-coffee.png" alt="" width="28" height="28" className="shrink-0" />
+                <span className="text-sm text-[#004cb9] font-semibold"><strong>Quick Tool:</strong> worker owned coffee shops, bars, restaurants, and groceries near you!</span>
+              </div>
+            </Link>
+          </>
         )}
 
         <p className="text-center text-xs text-gray-400 mt-3">
