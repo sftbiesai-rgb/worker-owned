@@ -1436,7 +1436,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "100% employee-owned (ESOP since 2022). Independent retailer in Maine and New Hampshire. Sells vinyl, CDs, movies, video games, books, and trading cards. New and used.",
-    "site_section": "Media & Publishing"
+    "site_section": "Movies & TV"
   },
   {
     "id": 177,
@@ -1869,5 +1869,49 @@
     "status": "verified active",
     "notes": "Employee-owned recording studio in Los Angeles available for rent. Professional audio and video recording space operated by the team behind the Maximum Fun podcast network.",
     "site_section": "Media & Publishing"
+  },
+  {
+    "id": 217,
+    "name": "Bull Moose",
+    "url": "https://www.bullmoose.com",
+    "category": "music",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP). Vinyl, CDs, cassettes — new and used.",
+    "site_section": "Music"
+  },
+  {
+    "id": 218,
+    "name": "Bull Moose",
+    "url": "https://www.bullmoose.com",
+    "category": "books",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP). Fiction, nonfiction, graphic novels, manga, and more.",
+    "site_section": "Books"
+  },
+  {
+    "id": 219,
+    "name": "Bull Moose",
+    "url": "https://www.bullmoose.com",
+    "category": "games",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP). Video games, board games, trading cards.",
+    "site_section": "Games"
+  },
+  {
+    "id": 220,
+    "name": "Bull Moose",
+    "url": "https://www.bullmoose.com",
+    "category": "movies",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP). DVDs, Blu-rays, 4K UHD — new and used.",
+    "site_section": "Movies & TV"
   }
 ]
