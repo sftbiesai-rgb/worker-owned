@@ -7,7 +7,7 @@ export const SECTIONS = [
   { slug: 'music',            label: 'Music',                 sectionName: 'Music',                 title: 'Worker Owned Music Platforms | Worker Owned Marketplace',                              description: 'Stream and buy music on cooperatively owned platforms. Worker owned Bandcamp alternatives where artists keep more.' },
   { slug: 'home-goods',       label: 'Home Goods & Services', sectionName: 'Home Goods & Services', title: 'Worker Owned Home Goods & Services | Worker Owned Marketplace',                        description: 'Shop worker owned home goods and services. Cooperatively made ceramics, textiles, candles, and worker owned home services.',               image: 'https://cdn.shopify.com/s/files/1/0762/3806/1868/files/Wncgwdg3K3.jpg' },
   { slug: 'personal-care',    label: 'Personal Care',         sectionName: 'Personal Care',         title: 'Worker Owned Soap & Personal Care Online | Worker Owned Marketplace',                  description: 'Shop worker owned soaps and personal care products online. Cooperatively made with natural ingredients.',                                  image: 'https://cdn.shopify.com/s/files/1/0579/2369/8848/files/IMG_2523_2.jpg' },
-  { slug: 'games',            label: 'Games',                 sectionName: 'Games',                 title: 'Worker Owned Board Games Online | Worker Owned Marketplace',                           description: 'Buy board games from worker owned cooperatives. Social justice and cooperative games made in the USA.',                                    image: 'https://cdn.shopify.com/s/files/1/0465/1991/0550/files/4055FF5688575AF11091603CAB995EBF_1.jpg' },
+  { slug: 'games',            label: 'Games',                 sectionName: 'Games',                 title: 'Worker Owned Games & Video Games Online | Worker Owned Marketplace',                   description: 'Shop video games, board games, and trading cards from worker owned companies. PS5, Switch, Xbox, and tabletop games.',                     image: 'https://cdn.shopify.com/s/files/1/0465/1991/0550/files/4055FF5688575AF11091603CAB995EBF_1.jpg' },
   { slug: 'beer-brewing',     label: 'Beer & Brewing',        sectionName: 'Beer & Brewing',        title: 'Worker Owned Breweries & Craft Beer | Worker Owned Marketplace',                       description: 'Find worker owned and cooperatively owned breweries. Craft beer made by and for the workers who brew it.',                                 image: 'https://cdn.shopify.com/s/files/1/0696/0712/9224/files/Spigleau_SQ.png' },
   { slug: 'tech-software',    label: 'Tech & Software',       sectionName: 'Tech & Software',       title: 'Worker Owned Tech & Software | Worker Owned Marketplace',                             description: 'Worker owned technology companies, software co-ops, and platform cooperatives. Tech built by the people who make it.' },
 ]
@@ -21,6 +21,11 @@ export const SECTION_NAMES = Object.fromEntries(
 )
 
 export const SUBCATEGORIES = {
+  music: [
+    { slug: 'vinyl', label: 'Vinyl Records', keywords: ['vinyl lp', 'vinyl 7"', 'vinyl 12"', 'vinyl 10"', 'vinyl 3"', 'record'] },
+    { slug: 'cds', label: 'CDs', keywords: ['audio cd', 'cd'] },
+    { slug: 'cassettes', label: 'Cassettes', keywords: ['audio cassette', 'cassette', 'tape'] },
+  ],
   apparel: [
     { slug: 'shoes', label: 'Shoes & Footwear', keywords: ['shoe', 'boot', 'sandal', 'sneaker', 'clog', 'slipper', 'slide', 'mule', 'loafer', 'flat ', 'heel', 'wedge'] },
     { slug: 'shirts', label: 'Shirts & Tops', keywords: ['shirt', 't-shirt', 'tee ', 'top', 'blouse', 'tank ', 'tank top', 'polo', 'henley', 'camisole'] },
@@ -57,14 +62,22 @@ export const SUBCATEGORIES = {
     { slug: 'chocolate', label: 'Chocolate & Cocoa', keywords: ['chocolate', 'cocoa', 'cacao', 'hot chocolate'] },
   ],
   'games': [
-    { slug: 'board-games', label: 'Board Games', keywords: ['board game', 'game', 'card game', 'dice', 'strategy', 'party game', 'family game'] },
+    { slug: 'video-games', label: 'Video Games', keywords: ['video games', 'nintendo switch', 'playstation', 'xbox', 'ps5', 'ps4'] },
+    { slug: 'ps5', label: 'PlayStation 5', keywords: ['playstation 5 game'] },
+    { slug: 'ps4', label: 'PlayStation 4', keywords: ['playstation 4 game'] },
+    { slug: 'switch', label: 'Nintendo Switch', keywords: ['nintendo switch game', 'nintendo switch 2'] },
+    { slug: 'xbox', label: 'Xbox', keywords: ['xbox series x game'] },
+    { slug: 'trading-cards', label: 'Trading Cards', keywords: ['trading cards', 'tcg', 'mtg', 'card game', 'booster', 'yugioh', 'lorcana', 'digimon', 'pokemon'] },
+    { slug: 'board-games', label: 'Board Games', keywords: ['board game', 'dice', 'strategy', 'party game', 'family game', 'munchkin'] },
     { slug: 'puzzles', label: 'Puzzles', keywords: ['puzzle', 'jigsaw'] },
     { slug: 'toys', label: 'Toys & Kids', keywords: ['toy', 'plush', 'stuffed', 'figure', 'doll', 'kid', 'children', 'building'] },
   ],
   'media-publishing': [
+    { slug: 'movies', label: 'Movies & TV', keywords: ['movies', 'dvd', 'blu-ray', '4k ultra hd', 'film', 'television', 'vhs'] },
     { slug: 'books', label: 'Books', keywords: ['book', 'paperback', 'hardcover', 'novel', 'memoir', 'anthology', ' zine', 'zines', 'pamphlet', 'guide', 'handbook', 'reader', 'edition', 'volume', 'press'] },
+    { slug: 'fiction', label: 'Fiction', keywords: ['subject-fiction', 'novel', 'fiction'] },
+    { slug: 'nonfiction', label: 'Nonfiction', keywords: ['subject-history', 'subject-philosophy', 'subject-political', 'subject-economics', 'subject-anthropology', 'subject-biography', 'nonfiction'] },
     { slug: 'news-journalism', label: 'News & Journalism', keywords: ['news-subscription'] },
-    { slug: 'music-audio', label: 'Music & Audio', keywords: ['music-subscription', 'music', 'album', 'vinyl', 'record', 'podcast', 'streaming', 'audio', 'listen'] },
     { slug: 'maps-prints', label: 'Maps & Prints', keywords: ['map', 'poster', 'print', 'wall map', 'sticker', 'patch', 'button'] },
   ],
 }
