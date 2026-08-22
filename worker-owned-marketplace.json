@@ -18,7 +18,7 @@
     "ownership_type": "worker co-op",
     "ships": "US",
     "status": "verified active",
-    "notes": "Asheville NC worker co-op. Roasts to order Mon\u2013Thu, ships nationally. Single origins and blends. Subscription club available.",
+    "notes": "Asheville NC worker co-op. Roasts to order Mon–Thu, ships nationally. Single origins and blends. Subscription club available.",
     "site_section": "Coffee & Tea"
   },
   {
@@ -51,7 +51,7 @@
     "ownership_type": "worker co-op",
     "ships": "US",
     "status": "verified active",
-    "notes": "Richmond VA worker co-op since 2021. Former Lamplighter employees. Ships Mon\u2013Thu. Online shop at afterglowcoffee.com/shop.",
+    "notes": "Richmond VA worker co-op since 2021. Former Lamplighter employees. Ships Mon–Thu. Online shop at afterglowcoffee.com/shop.",
     "site_section": "Coffee & Tea"
   },
   {
@@ -60,7 +60,7 @@
     "url": "https://morningbellcoffeeroasters.square.site",
     "category": "coffee roaster",
     "ownership_type": "worker co-op",
-    "ships": "US \u2014 verify national shipping",
+    "ships": "US — verify national shipping",
     "status": "verified active",
     "notes": "Iowa's first worker co-op, Ames IA since 2022. Cafe and roaster. Wholesale coffee available. Verify online national shipping.",
     "site_section": "Coffee & Tea"
@@ -140,7 +140,7 @@
     "ships": "worldwide",
     "status": "verified active",
     "notes": "Worker co-op publisher and distributor of radical books since 1990. Oakland CA. Largest anarchist publisher in the English-speaking world. Ships worldwide.",
-    "site_section": "Media & Publishing"
+    "site_section": "Books"
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "West Philadelphia nonprofit worker co-op bookstore. Abolition, autonomy, Black/Brown/Indigenous liberation focus. Online store and Bookshop.org storefront.",
-    "site_section": "Media & Publishing"
+    "site_section": "Books"
   },
   {
     "id": 15,
@@ -173,11 +173,11 @@
     "ships": "verify online availability",
     "status": "verify online store",
     "notes": "San Francisco Mission District volunteer worker co-op since 2013. Beloved community institution. Bookshop.org storefront: bookshop.org/shop/adobebooks.",
-    "site_section": "Media & Publishing"
+    "site_section": "Books"
   },
   {
     "id": 18,
-    "name": "Equal Exchange \u2014 Food",
+    "name": "Equal Exchange — Food",
     "url": "https://shop.equalexchange.coop",
     "category": "coffee, tea, chocolate, olive oil, nuts, snacks",
     "ownership_type": "worker co-op",
@@ -215,8 +215,8 @@
     "category": "tempeh",
     "ownership_type": "worker co-op",
     "ships": "in-store only (ME to NJ region, Whole Foods New England)",
-    "status": "no online shipping \u2014 in-store only",
-    "notes": "Biddeford ME worker co-op. Plastic-free fermentation. No direct online sales \u2014 perishable product. Find at Whole Foods New England and natural food stores.",
+    "status": "no online shipping — in-store only",
+    "notes": "Biddeford ME worker co-op. Plastic-free fermentation. No direct online sales — perishable product. Find at Whole Foods New England and natural food stores.",
     "site_section": "Food & Pantry"
   },
   {
@@ -225,9 +225,9 @@
     "url": "https://democracybrewing.com",
     "category": "worker-owned brewpub",
     "ownership_type": "worker co-op",
-    "ships": "taproom \u2014 Boston MA (possible online merch)",
+    "ships": "taproom — Boston MA (possible online merch)",
     "status": "verified active",
-    "notes": "100% worker-owned brewery and pub in Boston MA since 2018. 'Fermenting rebellion.' Craft beer, scratch-made food. Has online shop \u2014 check site for current offerings.",
+    "notes": "100% worker-owned brewery and pub in Boston MA since 2018. 'Fermenting rebellion.' Craft beer, scratch-made food. Has online shop — check site for current offerings.",
     "site_section": "Beer & Brewing"
   },
   {
@@ -236,7 +236,7 @@
     "url": "https://drifabrewingcompany.com",
     "category": "cooperative brewery",
     "ownership_type": "worker co-op",
-    "ships": "taproom only \u2014 Marquette MI",
+    "ships": "taproom only — Marquette MI",
     "status": "verified active",
     "notes": "One of nine cooperative breweries in the US, the only one in Michigan. Taproom and beer garden in Marquette MI. Worker co-op since founding.",
     "site_section": "Beer & Brewing"
@@ -287,7 +287,7 @@
   },
   {
     "id": 30,
-    "name": "Microcosm Publishing \u2014 Zines & Art",
+    "name": "Microcosm Publishing — Zines & Art",
     "url": "https://microcosmpublishing.com",
     "category": "zines / art prints / patches / stickers",
     "ownership_type": "worker-owned",
@@ -399,7 +399,7 @@
     "id": 41,
     "name": "Artisans Cooperative",
     "url": "https://artisans.coop",
-    "category": "handmade marketplace \u2014 ceramics, textiles, home decor, art, jewelry",
+    "category": "handmade marketplace — ceramics, textiles, home decor, art, jewelry",
     "ownership_type": "multi-stakeholder co-op",
     "ships": "worldwide",
     "status": "verified active",
@@ -412,14 +412,14 @@
     "url": "https://www.woodshop.coop",
     "category": "custom furniture / woodworking",
     "ownership_type": "worker co-op",
-    "ships": "Canada (Vancouver) \u2014 verify US shipping",
+    "ships": "Canada (Vancouver) — verify US shipping",
     "status": "verified active",
     "notes": "Vancouver BC worker co-op. Custom reclaimed wood furniture and millwork for homes and businesses. Founded 2014.",
     "site_section": "Home Goods & Services"
   },
   {
     "id": 43,
-    "name": "Handwork \u2014 Ithaca's Artisan Cooperative",
+    "name": "Handwork — Ithaca's Artisan Cooperative",
     "url": "https://www.handwork.coop",
     "category": "handmade home goods / art / crafts",
     "ownership_type": "worker co-op",
@@ -452,7 +452,7 @@
   },
   {
     "id": 54,
-    "name": "Equal Exchange \u2014 Tea",
+    "name": "Equal Exchange — Tea",
     "url": "https://shop.equalexchange.coop/collections/tea",
     "category": "tea",
     "ownership_type": "worker co-op",
@@ -463,7 +463,7 @@
   },
   {
     "id": 55,
-    "name": "Equal Exchange \u2014 Chocolate",
+    "name": "Equal Exchange — Chocolate",
     "url": "https://shop.equalexchange.coop/collections/chocolate",
     "category": "chocolate",
     "ownership_type": "worker co-op",
@@ -480,12 +480,12 @@
     "ownership_type": "member co-op (retailers as members)",
     "ships": "US",
     "status": "verified active",
-    "notes": "Member-owned co-op since 1976. Herbs, spices, teas, seasonings. NOTE: member co-op (stores are members), not worker co-op \u2014 flag distinction on site.",
+    "notes": "Member-owned co-op since 1976. Herbs, spices, teas, seasonings. NOTE: member co-op (stores are members), not worker co-op — flag distinction on site.",
     "site_section": "Food & Pantry"
   },
   {
     "id": 62,
-    "name": "Afterglow Coffee \u2014 Shop",
+    "name": "Afterglow Coffee — Shop",
     "url": "https://www.afterglowcoffee.com/shop",
     "category": "coffee roaster",
     "ownership_type": "worker co-op",
@@ -496,7 +496,7 @@
   },
   {
     "id": 63,
-    "name": "Thread Coffee \u2014 Store",
+    "name": "Thread Coffee — Store",
     "url": "https://threadcoffee.com/store",
     "category": "coffee roaster",
     "ownership_type": "worker co-op",
@@ -507,7 +507,7 @@
   },
   {
     "id": 66,
-    "name": "Worx Printing \u2014 Shop",
+    "name": "Worx Printing — Shop",
     "url": "https://shop.goodpress.coop/collections/worx-merch",
     "category": "union-made apparel / merch",
     "ownership_type": "worker co-op",
@@ -518,7 +518,7 @@
   },
   {
     "id": 74,
-    "name": "Slow Bloom \u2014 Coffee Shop",
+    "name": "Slow Bloom — Coffee Shop",
     "url": "https://www.slowbloomcoffee.com/shopcoffee",
     "category": "coffee roaster",
     "ownership_type": "worker co-op",
@@ -594,7 +594,7 @@
     "category": "local arts & culture / Minneapolis",
     "ownership_type": "worker co-op",
     "status": "verified active",
-    "notes": "Subscriber-backed alternative source for local arts, news, and food culture across the Minneapolis\u2013St. Paul Twin Cities. Worker-owned, independent.",
+    "notes": "Subscriber-backed alternative source for local arts, news, and food culture across the Minneapolis–St. Paul Twin Cities. Worker-owned, independent.",
     "site_section": "Media & Publishing"
   },
   {
@@ -635,7 +635,7 @@
     "ownership_type": "worker co-op",
     "ships": "Local (Spokane WA)",
     "status": "verified active",
-    "notes": "Worker and farmer-owned cooperative brewery and bakery in Spokane WA. Uses regionally grown grain. Taproom open Wed\u2013Sun.",
+    "notes": "Worker and farmer-owned cooperative brewery and bakery in Spokane WA. Uses regionally grown grain. Taproom open Wed–Sun.",
     "site_section": "Beer & Brewing"
   },
   {
@@ -778,7 +778,7 @@
     "ownership_type": "worker co-op",
     "ships": "US",
     "status": "verified active",
-    "notes": "Worker co-op game shop in Syracuse, NY (founded 2022). Magic: The Gathering, Pok\u00e9mon, D&D, Pathfinder, Lorcana, board games, accessories. Starts pricing at 10% off MSRP. Free shipping over $125.",
+    "notes": "Worker co-op game shop in Syracuse, NY (founded 2022). Magic: The Gathering, Pokémon, D&D, Pathfinder, Lorcana, board games, accessories. Starts pricing at 10% off MSRP. Free shipping over $125.",
     "site_section": "Games"
   },
   {
@@ -970,7 +970,7 @@
   },
   {
     "id": 130,
-    "name": "Cora\u00e7ao Chocolate",
+    "name": "Coraçao Chocolate",
     "url": "https://www.coracaoconfections.com",
     "category": "vegan chocolate / handcrafted confections",
     "ownership_type": "employee-owned",
@@ -1042,7 +1042,7 @@
     "ownership_type": "employee-owned",
     "ships": "US",
     "status": "verified active",
-    "notes": "100% employee-owned (ESOP) since 2020. Based in Tucson, AZ. Founded 1991 by Dennis Arnold; one of Arizona's oldest craft breweries. Online shop sells branded merch \u2014 hats, glassware, shirts, anniversary items. WooCommerce store.",
+    "notes": "100% employee-owned (ESOP) since 2020. Based in Tucson, AZ. Founded 1991 by Dennis Arnold; one of Arizona's oldest craft breweries. Online shop sells branded merch — hats, glassware, shirts, anniversary items. WooCommerce store.",
     "site_section": "Beer & Brewing"
   },
   {
@@ -1086,7 +1086,7 @@
     "ownership_type": "employee-owned",
     "ships": "US",
     "status": "verified active",
-    "notes": "Employee-owned (ESOP) since 1986. Based in Burlington, VT. One of the largest independent garden supply retailers in the US. Sells raised beds, planters, tools, seeds, composting equipment, and outdoor d\u00e9cor. Committed to sustainability and Vermont community.",
+    "notes": "Employee-owned (ESOP) since 1986. Based in Burlington, VT. One of the largest independent garden supply retailers in the US. Sells raised beds, planters, tools, seeds, composting equipment, and outdoor décor. Committed to sustainability and Vermont community.",
     "site_section": "Home & Garden"
   },
   {
@@ -1152,7 +1152,7 @@
     "ownership_type": "worker collective",
     "ships": "worldwide",
     "status": "verified active",
-    "notes": "Brooklyn NY worker collective making vegan, organic, zero-waste personal care products. Known for plastic-free packaging \u2014 compostable and recyclable. Products include deodorant, body oil, face care, and lip balm.",
+    "notes": "Brooklyn NY worker collective making vegan, organic, zero-waste personal care products. Known for plastic-free packaging — compostable and recyclable. Products include deodorant, body oil, face care, and lip balm.",
     "site_section": "Personal Care"
   },
   {
@@ -1175,7 +1175,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "Worker co-op publishing house founded 1970 in London, with offices in Brooklyn NY. Largest independent radical publishing house in the English-speaking world. 750+ titles in print covering politics, history, philosophy, and culture.",
-    "site_section": "Media & Publishing"
+    "site_section": "Books"
   },
   {
     "id": 153,
@@ -1186,7 +1186,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "Oakland CA worker co-op independent publisher founded 2007. Focuses on labor, anarchist, feminist, and social movement literature. Publishes books, e-books, DVDs, and music. Ships worldwide.",
-    "site_section": "Media & Publishing"
+    "site_section": "Books"
   },
   {
     "id": 154,
@@ -1194,9 +1194,9 @@
     "url": "https://resonate.coop",
     "category": "ethical music streaming platform",
     "ownership_type": "multi-stakeholder co-op",
-    "ships": "digital \u2014 worldwide",
+    "ships": "digital — worldwide",
     "status": "verified active",
-    "notes": "Multi-stakeholder co-op music streaming platform owned by artists, listeners, and workers. Uses stream2own model \u2014 listeners eventually own the music they stream. Alternative to Spotify owned by its community.",
+    "notes": "Multi-stakeholder co-op music streaming platform owned by artists, listeners, and workers. Uses stream2own model — listeners eventually own the music they stream. Alternative to Spotify owned by its community.",
     "site_section": "Music"
   },
   {
@@ -1414,7 +1414,7 @@
     "ships": "worldwide",
     "status": "verified active",
     "notes": "100% employee-owned audiobook platform. Certified B Corp. Social Purpose Corporation. DRM-free audiobooks with 600,000+ titles. Splits profits with an independent bookstore of the customer's choosing. Partners with 1,400+ indie bookstores. 28% of revenue recirculates locally vs 4% with Amazon/Audible.",
-    "site_section": "Media & Publishing"
+    "site_section": "Books"
   },
   {
     "id": 174,
@@ -1436,7 +1436,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "100% employee-owned (ESOP since 2022). Independent retailer in Maine and New Hampshire. Sells vinyl, CDs, movies, video games, books, and trading cards. New and used.",
-    "site_section": "Media & Publishing"
+    "site_section": "Movies & TV"
   },
   {
     "id": 177,
@@ -1491,7 +1491,7 @@
     "ships": "worldwide",
     "status": "verified active",
     "notes": "Employee Ownership Trust since 2015. Academic publisher of humanities and social sciences. Offices in UK and Rochester, NY. Imprints include University of Rochester Press and Camden House.",
-    "site_section": "Media & Publishing"
+    "site_section": "Books"
   },
   {
     "id": 182,
@@ -1692,7 +1692,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "Worker-owned since 2024. Monthly book subscription service with podcast. Based in Minnesota.",
-    "site_section": "Media & Publishing"
+    "site_section": "Books"
   },
   {
     "id": 201,
@@ -1869,5 +1869,49 @@
     "status": "verified active",
     "notes": "Employee-owned recording studio in Los Angeles available for rent. Professional audio and video recording space operated by the team behind the Maximum Fun podcast network.",
     "site_section": "Media & Publishing"
+  },
+  {
+    "id": 217,
+    "name": "Bull Moose",
+    "url": "https://www.bullmoose.com",
+    "category": "music",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP). Vinyl, CDs, cassettes — new and used.",
+    "site_section": "Music"
+  },
+  {
+    "id": 218,
+    "name": "Bull Moose",
+    "url": "https://www.bullmoose.com",
+    "category": "books",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP). Fiction, nonfiction, graphic novels, manga, and more.",
+    "site_section": "Books"
+  },
+  {
+    "id": 219,
+    "name": "Bull Moose",
+    "url": "https://www.bullmoose.com",
+    "category": "games",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP). Video games, board games, trading cards.",
+    "site_section": "Games"
+  },
+  {
+    "id": 220,
+    "name": "Bull Moose",
+    "url": "https://www.bullmoose.com",
+    "category": "movies",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP). DVDs, Blu-rays, 4K UHD — new and used.",
+    "site_section": "Movies & TV"
   }
 ]
