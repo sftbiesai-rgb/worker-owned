@@ -64,11 +64,14 @@ export const SUBCATEGORIES = {
     { slug: 'chocolate', label: 'Chocolate & Cocoa', keywords: ['chocolate', 'cocoa', 'cacao', 'hot chocolate'] },
   ],
   'games': [
-    { slug: 'video-games', label: 'Video Games', keywords: ['video games', 'nintendo switch', 'playstation', 'xbox', 'ps5', 'ps4'] },
     { slug: 'ps5', label: 'PlayStation 5', keywords: ['playstation 5 game'] },
     { slug: 'ps4', label: 'PlayStation 4', keywords: ['playstation 4 game'] },
     { slug: 'switch', label: 'Nintendo Switch', keywords: ['nintendo switch game', 'nintendo switch 2'] },
-    { slug: 'xbox', label: 'Xbox', keywords: ['xbox series x game'] },
+    { slug: 'xbox', label: 'Xbox Series', keywords: ['xbox series x game'] },
+    { slug: 'retro-playstation', label: 'Retro PlayStation', keywords: ['playstation 3', 'playstation 2', 'playstation 1', 'playstation portable', 'playstation vita'] },
+    { slug: 'retro-nintendo', label: 'Retro Nintendo', keywords: ['nintendo wii', 'nintendo ds', 'nintendo 3ds', 'gamecube', 'game boy advance', 'nintendo 64', 'snes', 'nes ', 'game boy'] },
+    { slug: 'retro-xbox', label: 'Retro Xbox', keywords: ['xbox 360', 'xbox one', 'xbox accessories'] },
+    { slug: 'retro-sega', label: 'Retro Sega', keywords: ['sega', 'dreamcast', 'genesis', 'saturn', 'gamegear'] },
     { slug: 'trading-cards', label: 'Trading Cards', keywords: ['trading cards', 'tcg', 'mtg', 'card game', 'booster', 'yugioh', 'lorcana', 'digimon', 'pokemon'] },
     { slug: 'board-games', label: 'Board Games', keywords: ['board game', 'dice', 'strategy', 'party game', 'family game', 'munchkin'] },
     { slug: 'puzzles', label: 'Puzzles', keywords: ['puzzle', 'jigsaw'] },
@@ -95,5 +98,30 @@ export const SUBCATEGORIES = {
   'media-publishing': [
     { slug: 'news-journalism', label: 'News & Journalism', keywords: ['news-subscription'] },
     { slug: 'maps-prints', label: 'Maps & Prints', keywords: ['map', 'poster', 'print', 'wall map', 'sticker', 'patch', 'button'] },
+  ],
+}
+
+// Format/tag filters that appear as a secondary filter row on category pages.
+// These work independently from subcategories — users can combine them.
+export const FILTERS = {
+  music: [
+    { label: 'Vinyl', tag: 'vinyl lp' },
+    { label: 'CD', tag: 'audio cd' },
+    { label: 'Cassette', tag: 'audio cassette' },
+  ],
+  books: [
+    { label: 'Paperback', tag: 'book - paperback' },
+    { label: 'Hardcover', tag: 'book - hardcover' },
+  ],
+  'movies-tv': [
+    { label: 'DVD', tag: 'dvd' },
+    { label: 'Blu-ray', tag: 'blu-ray' },
+    { label: '4K UHD', tag: '4k ultra hd' },
+  ],
+  games: [
+    { label: 'PS5', tag: 'playstation 5 game' },
+    { label: 'PS4', tag: 'playstation 4 game' },
+    { label: 'Switch', tag: 'nintendo switch game' },
+    { label: 'Xbox Series', tag: 'xbox series x game' },
   ],
 }

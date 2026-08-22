@@ -269,6 +269,79 @@ function decodeHtmlEntities(str) {
     .replace(/&#39;/g, "'");
 }
 
+// Popular search terms to supplement category scraping.
+// Category pages don't return all products — popular items often get missed.
+const SEARCH_TERMS = [
+  // Bestselling book authors/series
+  'hunger games', 'harry potter', 'lord of the rings', 'game of thrones', 'percy jackson',
+  'stephen king', 'colleen hoover', 'taylor jenkins', 'james patterson', 'rick riordan',
+  'brandon sanderson', 'sarah j maas', 'diary of a wimpy kid', 'dog man', 'cat in the hat',
+  // Popular music
+  'taylor swift', 'beyonce', 'beatles', 'pink floyd', 'led zeppelin', 'radiohead',
+  'kendrick lamar', 'tyler the creator', 'billie eilish', 'olivia rodrigo', 'sabrina carpenter',
+  // Popular movies/TV
+  'star wars', 'marvel', 'disney', 'batman', 'lord of the rings', 'game of thrones',
+  'breaking bad', 'the office', 'friends tv', 'stranger things',
+  // Popular games
+  'zelda', 'mario', 'pokemon', 'final fantasy', 'call of duty', 'minecraft',
+  'elden ring', 'god of war', 'spider-man', 'animal crossing',
+]
+
+async function fetchSearch(query) {
+  const searchUrl = `${BASE}/search?q=${encodeURIComponent(query)}&so=0`;
+  const res = await fetch(searchUrl, {
+    headers: { 'User-Agent': 'Mozilla/5.0' },
+  });
+  if (!res.ok) return [];
+
+  const html = await res.text();
+  const searchIdMatch = html.match(/SearchId:\s*'([^']+)'/);
+  if (!searchIdMatch) return [];
+  const searchId = searchIdMatch[1];
+
+  const cookies = res.headers.getSetCookie?.() ?? [];
+  const cookieStr = cookies.map(c => c.split(';')[0]).join('; ');
+
+  const products = [];
+  let page = 1;
+  let totalPages = 1;
+
+  while (page <= totalPages) {
+    const r = await fetch(`${BASE}/gsrp/${page}`, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0',
+        'X-Search-Guid': searchId,
+        'X-Requested-With': 'XMLHttpRequest',
+        'Cookie': cookieStr,
+      },
+    });
+    if (!r.ok) break;
+    const data = await r.json();
+    if (!data.success) break;
+
+    totalPages = data.data.totalPages || 1;
+    const parsed = parseProducts(data.data.data || '', 'search');
+    products.push(...parsed);
+
+    page++;
+    if (page <= totalPages) await sleep(DELAY_MS);
+  }
+
+  return products;
+}
+
+// Guess the primary category tag from format tags
+function inferCategoryTag(tags) {
+  const format = tags[1]?.toLowerCase() || '';
+  if (format.includes('vinyl') || format.includes('audio cd') || format.includes('cassette') || format.includes('sacd')) return 'music';
+  if (format.includes('dvd') || format.includes('blu-ray') || format.includes('4k ultra') || format.includes('vhs') || format.includes('laserdisc')) return 'movies';
+  if (format.includes('game') || format.includes('playstation') || format.includes('nintendo') || format.includes('xbox') || format.includes('sega')) return 'video games';
+  if (format.includes('book') || format.includes('paperback') || format.includes('hardcover')) return 'books';
+  if (format.includes('card game') || format.includes('tcg')) return 'trading cards';
+  if (format.includes('board game') || format.includes('puzzle')) return 'board games';
+  return 'books'; // default for items without clear format
+}
+
 async function main() {
   const marketplace = JSON.parse(readFileSync(MARKETPLACE_FILE, 'utf8'));
   const bmEntry = marketplace.find(e => e.name === 'Bull Moose');
@@ -306,7 +379,30 @@ async function main() {
     await sleep(500); // Extra delay between categories
   }
 
-  console.log(`\nTotal: ${totalFetched} fetched, ${byId.size} unique products`);
+  console.log(`\nCategories: ${totalFetched} fetched, ${byId.size} unique products`);
+
+  // Supplemental search scrape for popular items missed by category pages
+  console.log(`\nSearching ${SEARCH_TERMS.length} popular terms...`);
+  let searchNew = 0;
+  for (const term of SEARCH_TERMS) {
+    process.stdout.write(`  "${term}"... `);
+    const results = await fetchSearch(term);
+    let newCount = 0;
+    for (const p of results) {
+      if (!byId.has(p.productId)) {
+        // Fix the 'search' tag with real category
+        p.tags[0] = inferCategoryTag(p.tags);
+        byId.set(p.productId, p);
+        newCount++;
+      }
+    }
+    searchNew += newCount;
+    console.log(`${results.length} fetched, ${newCount} new (${byId.size} unique total)`);
+    await sleep(300);
+  }
+  console.log(`Search: ${searchNew} new products found`);
+
+  console.log(`\nTotal: ${byId.size} unique products`);
 
   if (DRY_RUN) {
     console.log('Dry run — not writing to file');

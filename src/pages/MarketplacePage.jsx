@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
 import { slugify, faviconUrl, dedupeByUrl, interleaveByStore } from '../lib/utils'
-import { SECTIONS, SUBCATEGORIES } from '../lib/categories'
+import { SECTIONS, SUBCATEGORIES, FILTERS } from '../lib/categories'
 import OwnershipBadge from '../components/OwnershipBadge'
 import ProductCard from '../components/ProductCard'
 import Pagination from '../components/Pagination'
@@ -21,6 +21,8 @@ function MarketplacePage() {
   const [page, setPage] = useState(1)
   const [showStores, setShowStores] = useState(category === 'tech-software' || category === 'art-prints' || category === 'music')
   const [filter, setFilter] = useState('')
+  const [activeFilter, setActiveFilter] = useState(null)
+  const categoryFilters = FILTERS[category] || null
 
   useEffect(() => {
     if (!section) return
@@ -51,7 +53,7 @@ function MarketplacePage() {
     document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', desc)
   }, [section, activeSub])
 
-  useEffect(() => { setPage(1); setFilter('') }, [category, subcategory])
+  useEffect(() => { setPage(1); setFilter(''); setActiveFilter(null) }, [category, subcategory])
 
   if (!section) return <Navigate to="/marketplace" replace />
   if (subcategory && subs && !activeSub) return <Navigate to={`/marketplace/${category}`} replace />
@@ -65,13 +67,17 @@ function MarketplacePage() {
       })
     : sectionProducts
 
+  const tagFiltered = activeFilter
+    ? subFiltered.filter(p => (p.tags || []).some(t => t.toLowerCase().includes(activeFilter.toLowerCase())))
+    : subFiltered
+
   const filterWords = filter.toLowerCase().split(/\s+/).filter(Boolean)
   const filtered = filterWords.length
-    ? subFiltered.filter(p => {
+    ? tagFiltered.filter(p => {
         const text = p.title.toLowerCase() + ' ' + (p.tags || []).join(' ').toLowerCase() + ' ' + (p.store_name || '').toLowerCase()
         return filterWords.every(w => text.includes(w))
       })
-    : subFiltered
+    : tagFiltered
 
   const available = filtered.filter(p => p.available !== false)
   const soldOut = filtered.filter(p => p.available === false)
@@ -144,6 +150,25 @@ function MarketplacePage() {
                 >
                   {s.label}
                 </Link>
+              ))}
+            </div>
+          )}
+
+          {/* Format filters */}
+          {categoryFilters && (
+            <div className="flex flex-wrap gap-1.5 justify-center mt-2">
+              {categoryFilters.map(f => (
+                <button
+                  key={f.tag}
+                  onClick={() => { setActiveFilter(activeFilter === f.tag ? null : f.tag); setPage(1) }}
+                  className={`px-2.5 py-0.5 rounded-full text-[11px] font-medium transition-colors border ${
+                    activeFilter === f.tag
+                      ? 'bg-[#004cb9] text-white border-[#004cb9]'
+                      : 'bg-white text-gray-400 border-gray-200 hover:text-[#004cb9] hover:border-[#004cb9]'
+                  }`}
+                >
+                  {f.label}
+                </button>
               ))}
             </div>
           )}
