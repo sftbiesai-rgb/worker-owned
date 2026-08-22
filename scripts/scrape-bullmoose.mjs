@@ -41,6 +41,18 @@ const CATEGORIES = [
   { id: '597', slug: 'bull-moose-exclusive-vinyl', tag: 'music' },
   { id: '663', slug: 'local-music', tag: 'music' },
   { id: '527', slug: 'in-case-you-missed-it', tag: 'music' },
+  // Music — vinyl clearance genres
+  { id: '706', slug: 'vinyl-clearance-rock-pop', tag: 'music' },
+  { id: '696', slug: 'vinyl-clearance-metal-punk', tag: 'music' },
+  { id: '697', slug: 'vinyl-clearance-electronic', tag: 'music' },
+  { id: '698', slug: 'vinyl-clearance-jazz', tag: 'music' },
+  { id: '699', slug: 'vinyl-clearance-country', tag: 'music' },
+  { id: '700', slug: 'vinyl-clearance-rap', tag: 'music' },
+  { id: '701', slug: 'vinyl-clearance-soundtracks', tag: 'music' },
+  { id: '702', slug: 'vinyl-clearance-folk-blues', tag: 'music' },
+  { id: '703', slug: 'vinyl-clearance-soul-rb', tag: 'music' },
+  { id: '704', slug: 'vinyl-clearance-classical', tag: 'music' },
+  { id: '694', slug: 'vinyl-clearance-intl', tag: 'music' },
 
   // Movies & TV
   { id: '292', slug: 'television-series', tag: 'movies' },
@@ -53,18 +65,69 @@ const CATEGORIES = [
   { id: '333', slug: 'family-friendly-movies', tag: 'movies' },
   { id: '545', slug: 'western-films', tag: 'movies' },
   { id: '549', slug: 'movies-criterion', tag: 'movies' },
+  { id: '539', slug: 'music-on-video', tag: 'movies' },
+  { id: '215', slug: 'arrow-films', tag: 'movies' },
+  { id: '550', slug: 'movies-kino', tag: 'movies' },
+  { id: '738', slug: 'studio-ghibli', tag: 'movies' },
 
-  // Video Games
+  // Video Games — current gen
   { id: '209', slug: 'nintendo-switch-games', tag: 'video games' },
   { id: '760', slug: 'playstation-5-games', tag: 'video games' },
   { id: '762', slug: 'xbox-series-xs-games', tag: 'video games' },
   { id: '222', slug: 'playstation-4-games', tag: 'video games' },
   { id: '842', slug: 'nintendo-switch-2-games', tag: 'video games' },
+  { id: '219', slug: 'xbox-one-games', tag: 'video games' },
+  // Video Games — retro
+  { id: '257', slug: 'retrogames', tag: 'video games' },
+  { id: '250', slug: 'playstation-3', tag: 'video games' },
+  { id: '274', slug: 'playstation-2', tag: 'video games' },
+  { id: '275', slug: 'playstation-1', tag: 'video games' },
+  { id: '251', slug: 'xbox-360', tag: 'video games' },
+  { id: '273', slug: 'xbox', tag: 'video games' },
+  { id: '254', slug: 'wii-u', tag: 'video games' },
+  { id: '253', slug: 'wii', tag: 'video games' },
+  { id: '252', slug: 'nintendo-3ds', tag: 'video games' },
+  { id: '256', slug: 'nintendo-ds', tag: 'video games' },
+  { id: '277', slug: 'gamecube', tag: 'video games' },
+  { id: '268', slug: 'nintendo-64', tag: 'video games' },
+  { id: '278', slug: 'snes', tag: 'video games' },
+  { id: '280', slug: 'gameboy-advance', tag: 'video games' },
+  { id: '281', slug: 'gameboy-gbc', tag: 'video games' },
+  { id: '279', slug: 'nes', tag: 'video games' },
+  { id: '255', slug: 'playstation-vita', tag: 'video games' },
+  { id: '276', slug: 'psp', tag: 'video games' },
+  { id: '283', slug: 'sega-dreamcast', tag: 'video games' },
+  { id: '285', slug: 'sega-saturn', tag: 'video games' },
+  { id: '284', slug: 'sega-gamegear', tag: 'video games' },
+  { id: '282', slug: 'sega-genesis-cd-32x', tag: 'video games' },
+  { id: '286', slug: 'atari', tag: 'video games' },
 
-  // Books
-  { id: '227', slug: 'graphic-novels', tag: 'books' },
+  // Books — fiction genres
   { id: '245', slug: 'fiction-literature', tag: 'books' },
+  { id: '322', slug: 'horror', tag: 'books' },
+  { id: '323', slug: 'fantasy', tag: 'books' },
+  { id: '324', slug: 'sci-fi', tag: 'books' },
+  { id: '325', slug: 'mystery-thriller', tag: 'books' },
+  { id: '427', slug: 'historical-fiction', tag: 'books' },
+  { id: '428', slug: 'poetry', tag: 'books' },
+  { id: '429', slug: 'romance', tag: 'books' },
+  // Books — nonfiction genres
   { id: '246', slug: 'nonfiction', tag: 'books' },
+  { id: '326', slug: 'biography-memoir', tag: 'books' },
+  { id: '466', slug: 'true-crime', tag: 'books' },
+  { id: '400', slug: 'history', tag: 'books' },
+  { id: '411', slug: 'science', tag: 'books' },
+  { id: '399', slug: 'cookbooks', tag: 'books' },
+  { id: '407', slug: 'self-help', tag: 'books' },
+  { id: '430', slug: 'nature-outdoors', tag: 'books' },
+  { id: '426', slug: 'health', tag: 'books' },
+  { id: '409', slug: 'politics-current-events', tag: 'books' },
+  { id: '412', slug: 'social-science', tag: 'books' },
+  { id: '425', slug: 'crafts-hobbies', tag: 'books' },
+  { id: '406', slug: 'gardening', tag: 'books' },
+  { id: '416', slug: 'house-home', tag: 'books' },
+  // Books — other
+  { id: '227', slug: 'graphic-novels', tag: 'books' },
   { id: '401', slug: 'manga', tag: 'books' },
   { id: '228', slug: 'childrens-books', tag: 'books' },
   { id: '248', slug: 'young-adult', tag: 'books' },
@@ -72,6 +135,7 @@ const CATEGORIES = [
   // Games & Collectibles
   { id: '230', slug: 'board-games-puzzles', tag: 'board games' },
   { id: '337', slug: 'magic-the-gathering', tag: 'trading cards' },
+  { id: '836', slug: 'disney-lorcana', tag: 'trading cards' },
   { id: '339', slug: 'pokemon-tcg', tag: 'trading cards' },
   { id: '340', slug: 'yu-gi-oh-tcg', tag: 'trading cards' },
 
@@ -161,11 +225,12 @@ function parseProducts(html, categoryTag) {
     if (!linkMatch) continue;
     const [, productId, slug, title] = linkMatch;
 
-    // Extract image URL
+    // Extract image URL (skip Bull Moose's "no art" placeholder)
     const imgMatch = card.match(/data-src="([^"]+)"/);
-    const image = imgMatch
-      ? (imgMatch[1].startsWith('//') ? 'https:' + imgMatch[1] : imgMatch[1])
-      : null;
+    let image = null;
+    if (imgMatch && !imgMatch[1].includes('ArtNotAvailable')) {
+      image = imgMatch[1].startsWith('//') ? 'https:' + imgMatch[1] : imgMatch[1];
+    }
 
     // Extract price (use the itemprop="price" which has the clean number)
     const priceMatch = card.match(/itemprop="price">([^<]+)</);
