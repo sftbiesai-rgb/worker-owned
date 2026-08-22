@@ -146,7 +146,7 @@ const CATEGORIES = [
 // Map the primary category tag to the correct site_section for split-products.mjs
 const TAG_TO_SECTION = {
   'music': 'Music',
-  'movies': 'Media & Publishing',
+  'movies': 'Movies & TV',
   'video games': 'Games',
   'books': 'Books',
   'board games': 'Games',

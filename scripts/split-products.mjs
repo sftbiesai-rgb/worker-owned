@@ -15,6 +15,7 @@ const SECTIONS = {
   'Coffee & Tea': 'coffee-tea',
   'Media & Publishing': 'media-publishing',
   'Books': 'books',
+  'Movies & TV': 'movies-tv',
   'Food & Pantry': 'food-pantry',
   'Apparel': 'apparel',
   'Art & Prints': 'art-prints',
