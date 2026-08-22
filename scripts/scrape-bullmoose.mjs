@@ -79,6 +79,17 @@ const CATEGORIES = [
   { id: '651', slug: 'bullmoosemerch', tag: 'merch' },
 ];
 
+// Map the primary category tag to the correct site_section for split-products.mjs
+const TAG_TO_SECTION = {
+  'music': 'Music',
+  'movies': 'Media & Publishing',
+  'video games': 'Games',
+  'books': 'Media & Publishing',
+  'board games': 'Games',
+  'trading cards': 'Games',
+  'merch': 'Apparel',
+};
+
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function fetchCategory(cat) {
@@ -248,7 +259,7 @@ async function main() {
     store_name: bmEntry.name,
     store_url: bmEntry.url,
     ownership_type: bmEntry.ownership_type,
-    site_section: bmEntry.site_section,
+    site_section: TAG_TO_SECTION[p.tags[0]] || bmEntry.site_section,
     tags: p.tags,
   }));
 
