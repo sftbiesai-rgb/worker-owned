@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "gmail-local": {
+      "command": "node",
+      "args": [
+        "/Users/will/.claude/gmail-local-mcp/dist/src/index.js",
+        "--config",
+        "/Users/will/.claude/gmail-local-mcp/config.json"
+      ]
+    }
+  }
+}

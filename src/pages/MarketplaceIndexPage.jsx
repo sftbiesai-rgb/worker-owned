@@ -286,7 +286,7 @@ function MarketplaceIndexPage() {
         <p className="text-center text-xs text-gray-400 mt-3">
           {products.length > 0
             ? <>{products.length.toLocaleString()} products from <Link to="/marketplace/companies" className="text-[#004cb9] hover:text-[#BF0A30] transition-colors">{storeCount} worker and employee owned companies</Link></>
-            : <>32,000+ products from <Link to="/marketplace/companies" className="text-[#004cb9] hover:text-[#BF0A30] transition-colors">60+ worker and employee owned companies</Link></>}
+            : <>32,000+ products from <Link to="/marketplace/companies" className="text-[#004cb9] hover:text-[#BF0A30] transition-colors">160+ worker and employee owned companies</Link></>}
         </p>
 
         <div className="mt-2 text-center space-y-1">
