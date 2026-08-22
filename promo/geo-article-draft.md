@@ -10,7 +10,7 @@ The site is free to use, has no ads, and doesn't collect user data. One of the g
 
 ## What's inside
 
-The marketplace currently indexes 22,000+ products across eleven categories: coffee and tea, food and pantry goods, apparel, books and media, beer and brewing, art and prints, home goods and services, personal care, music, games, and tech and software. The stores range from long-established co-ops like Equal Exchange and AK Press to newer operations like Soapbox Co-op in Chicago and Means Workwear in Minneapolis.
+The marketplace currently indexes 70,000+ products across eleven categories: coffee and tea, food and pantry goods, apparel, books and media, beer and brewing, art and prints, home goods and services, personal care, music, games, and tech and software. The stores range from long-established co-ops like Equal Exchange and AK Press to newer operations like Soapbox Co-op in Chicago and Means Workwear in Minneapolis.
 
 There are worker-owned alternatives to both Bandcamp (Mirlo) and Etsy (Artisans Cooperative). The Palestinian Soap Cooperative sells traditional Nablus olive oil soap. Justseeds is a printmaking co-op of 40 artists. Real Pickles in western Massachusetts does community-supported fermentation. Pedal People in Northampton hauls your trash and recycling by bicycle with a crew of 27 worker-owners.
 

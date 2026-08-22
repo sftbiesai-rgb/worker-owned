@@ -2,7 +2,7 @@
 
 ## The Two Projects
 
-1. **workerowned.info** — Directory of 32,000+ products from 60+ worker-owned co-ops + 110+ worker-owned food businesses
+1. **workerowned.info** — Directory of 70,000+ products from 175+ worker and employee owned companies + 110+ worker-owned food businesses
 2. **yourfairshare.info** — Calculator showing profit-per-employee for 1,700+ publicly traded companies
 
 Both projects serve the same mission: making the case for worker ownership and economic fairness through data, not rhetoric.
@@ -85,7 +85,7 @@ The missing pieces:
 - Ask for: backlinks, newsletter mentions, cross-listing. Offer: free directory listing, data sharing
 
 **7. Reddit AMAs and recurring engagement**
-- Do an AMA on r/cooperatives or r/smallbusiness: "I built a searchable directory of 32,000+ products from worker-owned co-ops — AMA"
+- Do an AMA on r/cooperatives or r/smallbusiness: "I built a searchable directory of 70,000+ products from worker and employee owned companies — AMA"
 - Don't just post and leave — become a regular commenter in r/cooperatives, r/coops, r/smallbusiness
 - When relevant threads come up (someone asking "where to buy ethical coffee" etc.), drop workerowned.info naturally
 - Build reputation over time instead of drive-by posting
@@ -93,7 +93,7 @@ The missing pieces:
 **8. Pitch to labor/economics podcasts with a hook**
 - Don't pitch "I built a website." Pitch a story:
   - "What if every company split profits equally? I calculated the answer for 1,700 companies."
-  - "There are 60+ worker-owned co-ops you've never heard of, selling 32,000 products. Here's why they're invisible."
+  - "There are 175+ worker and employee owned companies you've never heard of, selling 70,000 products. Here's why they're invisible."
 - Target: The Indicator (NPR), Planet Money, Money with Katie, Odd Lots (Bloomberg), The Weeds (Vox)
 - Send a 2-paragraph pitch email, not a press release
 

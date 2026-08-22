@@ -8,15 +8,15 @@ All posts link to https://workerowned.info
 
 **Post:**
 
-I built a searchable marketplace of 32,000+ products from 60+ worker-owned co-ops: workerowned.info
+I built a searchable marketplace of 70,000+ products from 175+ worker and employee owned companies: workerowned.info
 
-Coffee, chocolate, books, clothing, home goods - you search, find something, click through to buy directly from the co-op's store. No middleman, no commissions, no tracking.
+Coffee, chocolate, books, clothing, home goods - you search, find something, click through to buy directly from the company's store. No middleman, no commissions, no tracking.
 
 There's also a location tool for finding worker-owned coffee shops, restaurants, and bars across the US (110+ listings).
 
-Independent volunteer project. Just trying to make co-ops easier to find.
+Independent volunteer project. Just trying to make worker-owned companies easier to find.
 
-Know a co-op that should be listed? Let me know.
+Know a worker-owned company that should be listed? Let me know.
 
 #cooperatives #workercoops #workerownership #solidarityeconomy #buycooperative
 
@@ -26,11 +26,11 @@ Know a co-op that should be listed? Let me know.
 
 **Category:** Shopping / Ethical Alternatives
 
-**Title:** workerowned.info - Searchable marketplace of products from worker-owned cooperatives
+**Title:** workerowned.info - Searchable marketplace of products from worker and employee owned companies
 
 **Description:**
 
-A searchable marketplace of 32,000+ products from 60+ worker-owned cooperatives in the US. Search by product name or category and buy directly from the co-op's own store. Also includes a location-based directory of 110+ worker-owned coffee shops, restaurants, and bars.
+A searchable marketplace of 70,000+ products from 175+ worker and employee owned companies in the US. Search by product name or category and buy directly from the company's own store. Also includes a location-based directory of 110+ worker-owned coffee shops, restaurants, and bars.
 
 No ads, no tracking, no commissions, no accounts. Independent volunteer project.
 
@@ -55,7 +55,7 @@ No ads, no tracking, no commissions, no accounts. Independent volunteer project.
 
 '''Description:'''
 
-workerowned.info is a searchable marketplace of products from worker-owned cooperatives. It indexes over 32,000 products from 60+ worker-owned co-op stores in the US, making them searchable by product name and category. Users click through to buy directly from the cooperative's own store.
+workerowned.info is a searchable marketplace of products from worker and employee owned companies. It indexes over 70,000 products from 175+ worker and employee owned companies in the US, making them searchable by product name and category. Users click through to buy directly from the company's own store.
 
 The site also includes a location-based directory of 110+ worker-owned coffee shops, restaurants, and bars across the US.
 
@@ -74,7 +74,7 @@ No ads, no tracking, no commissions. Independent volunteer project. The goal is 
 
 **Status:** Posted 2026-07-12: https://dev.to/sft_f56ae2093b46cc81b3ed8/i-scraped-60-worker-owned-co-op-stores-to-build-a-searchable-product-directory-n08
 
-**Title:** I scraped 60+ worker-owned co-op stores to build a searchable product directory
+**Title:** I scraped 175+ worker and employee owned company stores to build a searchable product directory
 
 **Tags:** #showdev #opensource #webdev #javascript
 
@@ -83,27 +83,27 @@ No ads, no tracking, no commissions. Independent volunteer project. The goal is 
 I wanted to buy from worker-owned cooperatives, but there was no single place to see what they actually sell. So I built one.
 
 **What it does:**
-workerowned.info indexes 32,000+ products from 60+ worker-owned co-op stores. You search for something - coffee, chocolate, books, soap, whatever - and it shows you which co-ops sell it. Click through and buy from their store directly.
+workerowned.info indexes 70,000+ products from 175+ worker and employee owned companies. You search for something - coffee, chocolate, books, soap, whatever - and it shows you which companies sell it. Click through and buy from their store directly.
 
 There's also a location tool for finding worker-owned coffee shops and restaurants by city (110+ listings across the US).
 
 **How it works:**
-- Scraped product catalogs from Shopify, WooCommerce, and Squarespace stores using their public APIs and feeds
+- Scraped product catalogs from Shopify, WooCommerce, Squarespace, and BigCommerce stores using their public APIs and feeds
 - Product data stored as JSON, search is client-side
 - Built with React + Vite, deployed on Vercel
 - No backend, no accounts, no tracking, no ads
 
 **The scraping approach:**
-Most co-op stores run on Shopify (products.json endpoint), WooCommerce (REST API), or Squarespace (RSS/JSON). I wrote scrapers for each platform, normalized the data, and combined it into a single searchable index. The whole catalog refreshes periodically.
+Most stores run on Shopify (products.json endpoint), WooCommerce (REST API), or Squarespace (RSS/JSON). I wrote scrapers for each platform, normalized the data, and combined it into a single searchable index. The whole catalog refreshes periodically.
 
 **Why I built it:**
-Worker-owned cooperatives make great products but they're invisible compared to Amazon. You have to already know they exist to find them. This marketplace is an attempt to fix that.
+Worker and employee owned companies make great products but they're invisible compared to Amazon. You have to already know they exist to find them. This marketplace is an attempt to fix that.
 
 I'm a hobbyist - this is a volunteer project. No monetization, no plans for it.
 
 **Curious about:**
 - Anyone else working on ethical/cooperative tech?
-- Co-ops I should add?
+- Worker-owned companies I should add?
 - Feedback on the search/UX
 
 Link: https://workerowned.info
@@ -112,7 +112,7 @@ Link: https://workerowned.info
 
 ## 5. Indie Hackers
 
-**Title:** I built a searchable marketplace of 32,000+ products from worker-owned co-ops
+**Title:** I built a searchable marketplace of 70,000+ products from worker and employee owned companies
 
 **Body:**
 
@@ -120,17 +120,17 @@ Hey IH,
 
 Sharing a side project that's a little different from the usual SaaS - it's a searchable marketplace, not a business.
 
-**The problem:** Worker-owned cooperatives make genuinely good products (coffee, chocolate, books, clothing, home goods) but they're nearly impossible to discover. You have to already know they exist. There was no single place to search across all of them.
+**The problem:** Worker and employee owned companies make genuinely good products (coffee, chocolate, books, clothing, home goods) but they're nearly impossible to discover. You have to already know they exist. There was no single place to search across all of them.
 
-**The solution:** workerowned.info - I scraped the product catalogs from 60+ worker-owned co-op stores and made them searchable. 32,000+ products, all linking directly to the co-op's own store. There's also a location tool for 110+ worker-owned coffee shops and restaurants across the US.
+**The solution:** workerowned.info - I scraped the product catalogs from 175+ worker and employee owned companies and made them searchable. 70,000+ products, all linking directly to the company's own store. There's also a location tool for 110+ worker-owned coffee shops and restaurants across the US.
 
 **The non-business model:** No ads, no tracking, no commissions, no accounts. This isn't a startup - it's a volunteer project. I don't make anything from it.
 
-**Traction:** Got 30,000+ views in 2 days from a Hacker News post. Steady organic traffic since. The demand is real - people want to buy from co-ops, they just can't find them.
+**Traction:** Got 30,000+ views in 2 days from a Hacker News post. Steady organic traffic since. The demand is real - people want to buy from worker-owned companies, they just can't find them.
 
 **Stack:** React, Vite, Vercel. Product data scraped from Shopify/WooCommerce/Squarespace APIs, stored as JSON, searched client-side.
 
-Would love feedback or co-op suggestions.
+Would love feedback or suggestions for companies to add.
 
 Link: https://workerowned.info
 
@@ -145,7 +145,7 @@ Link: https://workerowned.info
 **Entry to add:**
 
 ```
-- [workerowned.info](https://workerowned.info) - Searchable marketplace of 32,000+ products from 60+ worker-owned cooperatives, plus 110+ worker-owned coffee shops and restaurants across the US.
+- [workerowned.info](https://workerowned.info) - Searchable marketplace of 70,000+ products from 175+ worker and employee owned companies, plus 110+ worker-owned coffee shops and restaurants across the US.
 ```
 
 ### 6b. Search for and submit to awesome-cooperatives or awesome-ethical-alternatives
@@ -153,7 +153,7 @@ Link: https://workerowned.info
 **Entry to add:**
 
 ```
-- [workerowned.info](https://workerowned.info) - Searchable product directory for worker-owned co-ops. 32,000+ products from 60+ stores. No ads, no tracking, no commissions.
+- [workerowned.info](https://workerowned.info) - Searchable product directory for worker and employee owned companies. 70,000+ products from 175+ stores. No ads, no tracking, no commissions.
 ```
 
 ---
@@ -170,21 +170,21 @@ Link: https://workerowned.info
 
 Space these out by a few days.
 
-**Title:** Searchable marketplace of 32,000+ products from worker-owned co-ops
+**Title:** Searchable marketplace of 70,000+ products from worker and employee owned companies
 
 **URL:** https://workerowned.info
 
 **Body:**
 
-I built a searchable marketplace of products from worker-owned cooperatives. 32,000+ products from 60+ co-op stores, coffee, chocolate, books, clothing, home goods, etc.
+I built a searchable marketplace of products from worker and employee owned companies. 70,000+ products from 175+ companies - coffee, chocolate, books, clothing, home goods, etc.
 
-You search for something, see which co-ops sell it, and click through to buy from their store directly. No middleman, no commissions, no tracking.
+You search for something, see which companies sell it, and click through to buy from their store directly. No middleman, no commissions, no tracking.
 
 There's also a section for finding worker-owned coffee shops, restaurants, and bars by city (110+ listings across the US).
 
-Volunteer project, I don't make anything from it. Just trying to make co-ops easier to find.
+Volunteer project, I don't make anything from it. Just trying to make worker-owned companies easier to find.
 
-Let me know if you know co-ops I should add.
+Let me know if you know companies I should add.
 
 ---
 
@@ -196,7 +196,7 @@ Let me know if you know co-ops I should add.
 
 Sharing a free resource I put together: workerowned.info
 
-It's a searchable marketplace of 32,000+ products from 60+ worker-owned cooperatives. You can search for anything, coffee, chocolate, books, soap, clothing, and see which worker-owned co-ops sell it. Every listing links directly to the co-op's store.
+It's a searchable marketplace of 70,000+ products from 175+ worker and employee owned companies. You can search for anything - coffee, chocolate, books, soap, clothing - and see which companies sell it. Every listing links directly to the company's store.
 
 There's also a tool for finding worker-owned coffee shops, restaurants, and bars by city (110+ across the US).
 
@@ -214,7 +214,7 @@ workerowned.info
 
 I built something I want to share: workerowned.info
 
-It's a searchable marketplace of 32,000+ products from 60+ worker-owned cooperatives in the US. Coffee, chocolate, books, baked goods, home supplies - you name it. Every listing links directly to the co-op's own store.
+It's a searchable marketplace of 70,000+ products from 175+ worker and employee owned companies in the US. Coffee, chocolate, books, baked goods, home supplies - you name it. Every listing links directly to the company's own store.
 
 There's also a location tool for 110+ worker-owned coffee shops, restaurants, and bars.
 
@@ -236,11 +236,11 @@ If you know a worker-owned business that should be listed, I'd love to hear abou
 
 Hi,
 
-I put together workerowned.info, a searchable marketplace of 32,000+ products from 60+ worker-owned cooperatives. People can search for products and click through to buy directly from the co-op's store. There's also a location directory of 110+ worker-owned coffee shops, restaurants, and bars across the US.
+I put together workerowned.info, a searchable marketplace of 70,000+ products from 175+ worker and employee owned companies. People can search for products and click through to buy directly from the company's store. There's also a location directory of 110+ worker-owned coffee shops, restaurants, and bars across the US.
 
 No ads, no commissions, no tracking. It's a volunteer project - I'm a hobbyist trying to support the cooperative movement in a way I can.
 
-Would NCBA CLUSA be open to sharing it with members or linking to it as a resource? I'd also love to make sure I'm not missing any member co-ops that should be listed.
+Would NCBA CLUSA be open to sharing it with members or linking to it as a resource? I'd also love to make sure I'm not missing any member companies that should be listed.
 
 No pressure either way. Thanks for all the work you do for the cooperative community.
 
