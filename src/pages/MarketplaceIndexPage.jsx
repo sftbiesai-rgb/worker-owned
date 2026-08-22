@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { Search, ArrowUpDown } from 'lucide-react'
-import { SECTIONS } from '../lib/categories'
+import { SECTIONS, SECTION_SLUGS } from '../lib/categories'
 import { searchProducts, searchCompanies } from '../lib/search'
 import marketplaceData from '../data/marketplace.json'
 import { slugify, faviconUrl, dedupeByUrl } from '../lib/utils'
@@ -10,6 +10,35 @@ import ProductCard from '../components/ProductCard'
 import Pagination from '../components/Pagination'
 import Footer from '../components/Footer'
 import FilterSidebar from '../components/FilterSidebar'
+
+const PICK_LABELS = { hits: 'The Hits', staff: 'Staff', cool: 'Cool', movement: 'Movement' }
+const PICK_COLORS = { hits: 'text-[#004cb9]', staff: 'text-emerald-600', cool: 'text-purple-600', movement: 'text-[#BF0A30]' }
+const PICK_ORDER = ['hits', 'staff', 'cool', 'movement']
+
+function pickFeatured(items) {
+  // Pick 2 per bucket from pre-curated pool
+  // Rules: one per store globally, different categories within each bucket,
+  // max 2 of the same ownership type across all 8 picks
+  const usedStores = new Set()
+  const ownershipCounts = {}
+  const columns = PICK_ORDER.map(bucket => {
+    const pool = items.filter(i => i.pick === bucket && !usedStores.has(i.store_name))
+      .sort(() => Math.random() - 0.5)
+    const picked = []
+    const bucketSections = new Set()
+    for (const item of pool) {
+      if (picked.length >= 2) break
+      if (bucketSections.has(item.site_section)) continue
+      if ((ownershipCounts[item.ownership_type] || 0) >= 2) continue
+      usedStores.add(item.store_name)
+      bucketSections.add(item.site_section)
+      ownershipCounts[item.ownership_type] = (ownershipCounts[item.ownership_type] || 0) + 1
+      picked.push(item)
+    }
+    return picked
+  })
+  return columns
+}
 
 function MarketplaceIndexPage() {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -21,6 +50,7 @@ function MarketplaceIndexPage() {
   const filterPmin = searchParams.get('pmin') || ''
   const filterPmax = searchParams.get('pmax') || ''
   const [products, setProducts] = useState([])
+  const [featured, setFeatured] = useState([])
   const [inputValue, setInputValue] = useState(query)
   const debounceRef = useRef(null)
   const priceDebounceRef = useRef(null)
@@ -53,6 +83,13 @@ function MarketplaceIndexPage() {
   useEffect(() => { setLocalPmax(filterPmax) }, [filterPmax])
 
   const fetchedRef = useRef(false)
+
+  useEffect(() => {
+    fetch('/data/featured.json')
+      .then(r => r.json())
+      .then(items => setFeatured(pickFeatured(items)))
+      .catch(() => {})
+  }, [])
 
   useEffect(() => {
     document.title = 'Market Place | Shop worker and employee owned online stores for apparel, home goods, food and more'
@@ -272,6 +309,33 @@ function MarketplaceIndexPage() {
               </div>
             </div>
 
+            {featured.some(col => col.length > 0) && (
+              <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mt-3">
+                <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-wide mb-4">Featured Products</p>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  {featured.map((col, i) => (
+                    <div key={PICK_ORDER[i]}>
+                      <p className={`text-xs font-bold mb-2 text-center ${PICK_COLORS[PICK_ORDER[i]]}`}>{PICK_LABELS[PICK_ORDER[i]]}</p>
+                      <div className="space-y-3">
+                        {col.map(p => (
+                          <div key={p.id} className="flex flex-col">
+                            <div className="flex-1">
+                              <ProductCard product={p} compact />
+                            </div>
+                            {p.site_section && SECTION_SLUGS[p.site_section] && (
+                              <Link to={`/marketplace/${SECTION_SLUGS[p.site_section]}`} className="text-[10px] text-[#004cb9] hover:text-[#BF0A30] transition-colors mt-1 text-center block">
+                                Browse more {p.site_section.toLowerCase()} &rarr;
+                              </Link>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <Link to="/coffee" className="block bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-4 mt-3 hover:border-[#004cb9] transition-colors">
               <div className="flex items-center justify-center gap-2.5">
                 <img src="/logo-coffee.png" alt="" width="28" height="28" className="shrink-0" />
@@ -284,7 +348,7 @@ function MarketplaceIndexPage() {
         <p className="text-center text-xs text-gray-400 mt-3">
           {products.length > 0
             ? <>{products.length.toLocaleString()} products from {storeCount} worker and employee owned companies</>
-            : <>98,000+ products from 160+ worker and employee owned companies</>}
+            : <>70,000+ products from 160+ worker and employee owned companies</>}
         </p>
 
         <div className="mt-2 text-center space-y-1">

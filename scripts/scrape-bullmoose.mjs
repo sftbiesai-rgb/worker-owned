@@ -23,7 +23,7 @@ const PRODUCTS_FILE = join(__dirname, '..', 'public', 'data', 'products.json');
 const MARKETPLACE_FILE = join(__dirname, '..', 'src', 'data', 'marketplace.json');
 const BASE = 'https://www.bullmoose.com';
 const DRY_RUN = process.argv.includes('--dry-run');
-const DELAY_MS = 300;
+const DELAY_MS = 800;
 
 // Categories to scrape — picked to cover the full catalog with minimal overlap.
 // Each category is capped at ~1000 results by FieldStack, so we use genre-level
@@ -41,6 +41,8 @@ const CATEGORIES = [
   { id: '597', slug: 'bull-moose-exclusive-vinyl', tag: 'music' },
   { id: '663', slug: 'local-music', tag: 'music' },
   { id: '527', slug: 'in-case-you-missed-it', tag: 'music' },
+  { id: '357', slug: 'upcoming-music', tag: 'music' },
+  { id: '888', slug: 'rsd-2026', tag: 'music' },
   // Music — vinyl clearance genres
   { id: '706', slug: 'vinyl-clearance-rock-pop', tag: 'music' },
   { id: '696', slug: 'vinyl-clearance-metal-punk', tag: 'music' },
@@ -69,6 +71,7 @@ const CATEGORIES = [
   { id: '215', slug: 'arrow-films', tag: 'movies' },
   { id: '550', slug: 'movies-kino', tag: 'movies' },
   { id: '738', slug: 'studio-ghibli', tag: 'movies' },
+  { id: '381', slug: 'new-movies', tag: 'movies' },
 
   // Video Games — current gen
   { id: '209', slug: 'nintendo-switch-games', tag: 'video games' },
@@ -102,6 +105,16 @@ const CATEGORIES = [
   { id: '282', slug: 'sega-genesis-cd-32x', tag: 'video games' },
   { id: '286', slug: 'atari', tag: 'video games' },
 
+  // Video Games — extra sort passes for categories near the 1000-item cap
+  { id: '209', slug: 'nintendo-switch-games', tag: 'video games', sort: 1 },
+  { id: '760', slug: 'playstation-5-games', tag: 'video games', sort: 1 },
+  { id: '222', slug: 'playstation-4-games', tag: 'video games', sort: 1 },
+  // Video Games — accessories
+  { id: '476', slug: 'nintendo-switch-accessories', tag: 'video games' },
+  { id: '761', slug: 'playstation-5-accessories', tag: 'video games' },
+  { id: '763', slug: 'xbox-series-xs-accessories', tag: 'video games' },
+  { id: '225', slug: 'gaming', tag: 'video games' },
+
   // Books — fiction genres
   { id: '245', slug: 'fiction-literature', tag: 'books' },
   { id: '322', slug: 'horror', tag: 'books' },
@@ -127,6 +140,13 @@ const CATEGORIES = [
   { id: '406', slug: 'gardening', tag: 'books' },
   { id: '416', slug: 'house-home', tag: 'books' },
   // Books — other
+  { id: '249', slug: 'audiobooks', tag: 'books' },
+  { id: '422', slug: 'music-books', tag: 'books' },
+  { id: '423', slug: 'movie-and-tv-books', tag: 'books' },
+  { id: '424', slug: 'humor-books', tag: 'books' },
+  { id: '465', slug: 'astrology-and-witchcraft', tag: 'books' },
+  { id: '266', slug: 'upcoming-book-releases', tag: 'books' },
+  { id: '895', slug: 'local-authors', tag: 'books' },
   { id: '227', slug: 'graphic-novels', tag: 'books' },
   { id: '401', slug: 'manga', tag: 'books' },
   { id: '228', slug: 'childrens-books', tag: 'books' },
@@ -147,8 +167,14 @@ const CATEGORIES = [
   { id: '339', slug: 'pokemon-tcg', tag: 'trading cards' },
   { id: '340', slug: 'yu-gi-oh-tcg', tag: 'trading cards' },
 
-  // Merch
+  // Merch & Gifts
   { id: '651', slug: 'bullmoosemerch', tag: 'merch' },
+  { id: '881', slug: 'woobles', tag: 'merch' },
+  { id: '756', slug: 'baggu', tag: 'merch' },
+
+  // Specials / catch-all
+  { id: '259', slug: 'new-this-week', tag: 'books' },
+  { id: '876', slug: 'uncle-stinkys-discount-den', tag: 'books' },
 ];
 
 // Map the primary category tag to the correct site_section for split-products.mjs
@@ -164,12 +190,30 @@ const TAG_TO_SECTION = {
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
+async function fetchWithRetry(url, options, retries = 3) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      return await fetch(url, options);
+    } catch (err) {
+      if (i === retries - 1) throw err;
+      console.log(`  (retry ${i + 1}/${retries} after ${err.code || err.message})`);
+      await sleep(2000 * (i + 1));
+    }
+  }
+}
+
 async function fetchCategory(cat) {
   // Step 1: Load category page for session cookie + SearchId
-  const catUrl = `${BASE}/c/${cat.id}/${cat.slug}`;
-  const catRes = await fetch(catUrl, {
-    headers: { 'User-Agent': 'Mozilla/5.0' },
-  });
+  // so= controls sort: 0=Relevance, 1=Name A-Z, 3=Price Low-High, 5=Best Seller, 9=Newest
+  const sort = cat.sort || 0;
+  const catUrl = `${BASE}/c/${cat.id}/${cat.slug}?so=${sort}`;
+  let catRes;
+  try {
+    catRes = await fetchWithRetry(catUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  } catch (err) {
+    console.log(`  FAIL: ${err.code || err.message}`);
+    return [];
+  }
   if (!catRes.ok) {
     console.log(`  FAIL: ${catRes.status} loading ${catUrl}`);
     return [];
@@ -192,14 +236,20 @@ async function fetchCategory(cat) {
   let totalPages = 1;
 
   while (page <= totalPages) {
-    const res = await fetch(`${BASE}/gsrp/${page}`, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0',
-        'X-Search-Guid': searchId,
-        'X-Requested-With': 'XMLHttpRequest',
-        'Cookie': cookieStr,
-      },
-    });
+    let res;
+    try {
+      res = await fetchWithRetry(`${BASE}/gsrp/${page}`, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0',
+          'X-Search-Guid': searchId,
+          'X-Requested-With': 'XMLHttpRequest',
+          'Cookie': cookieStr,
+        },
+      });
+    } catch (err) {
+      console.log(`  (page ${page} failed: ${err.code || err.message}, stopping category)`);
+      break;
+    }
 
     if (!res.ok) break;
     const data = await res.json();
@@ -232,6 +282,15 @@ function parseProducts(html, categoryTag) {
     const linkMatch = card.match(/href="\/p\/(\d+)\/([^"]+)"\s+title="([^"]+)"/);
     if (!linkMatch) continue;
     const [, productId, slug, title] = linkMatch;
+
+    // Check SHIPPING availability (not Curbside Pickup — items can be out of stock
+    // locally but still shippable). Skip only if shipping is Back-order (av30) or
+    // Out of Stock (av50). Keep: In Stock (av10/av11), Pre-order (av40), Special Order (av21).
+    const shipMatch = card.match(/Shipping[^<]*<span class="av\s+([^"]+)"/s);
+    if (shipMatch) {
+      const cls = shipMatch[1];
+      if (cls.includes('av30') || cls.includes('av50')) continue;
+    }
 
     // Extract image URL (skip Bull Moose's "no art" placeholder)
     const imgMatch = card.match(/data-src="([^"]+)"/);
@@ -316,9 +375,13 @@ const SEARCH_TERMS = [
 
 async function fetchSearch(query) {
   const searchUrl = `${BASE}/search?q=${encodeURIComponent(query)}&so=0`;
-  const res = await fetch(searchUrl, {
-    headers: { 'User-Agent': 'Mozilla/5.0' },
-  });
+  let res;
+  try {
+    res = await fetchWithRetry(searchUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  } catch (err) {
+    console.log(`FAIL: ${err.code || err.message}`);
+    return [];
+  }
   if (!res.ok) return [];
 
   const html = await res.text();
@@ -334,14 +397,19 @@ async function fetchSearch(query) {
   let totalPages = 1;
 
   while (page <= totalPages) {
-    const r = await fetch(`${BASE}/gsrp/${page}`, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0',
-        'X-Search-Guid': searchId,
-        'X-Requested-With': 'XMLHttpRequest',
-        'Cookie': cookieStr,
-      },
-    });
+    let r;
+    try {
+      r = await fetchWithRetry(`${BASE}/gsrp/${page}`, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0',
+          'X-Search-Guid': searchId,
+          'X-Requested-With': 'XMLHttpRequest',
+          'Cookie': cookieStr,
+        },
+      });
+    } catch (err) {
+      break;
+    }
     if (!r.ok) break;
     const data = await r.json();
     if (!data.success) break;
@@ -403,7 +471,7 @@ async function main() {
 
     totalFetched += products.length;
     console.log(`${products.length} fetched, ${newCount} new (${byId.size} unique total)`);
-    await sleep(500); // Extra delay between categories
+    await sleep(2000); // Extra delay between categories to avoid throttling
   }
 
   console.log(`\nCategories: ${totalFetched} fetched, ${byId.size} unique products`);
@@ -451,15 +519,23 @@ async function main() {
     tags: p.tags,
   }));
 
-  // Merge into existing products.json
+  // Merge into existing products.json (additive — keep old BM products, update/add new)
   const existing = JSON.parse(readFileSync(PRODUCTS_FILE, 'utf8'));
-  // Remove any old Bull Moose products
-  const filtered = existing.filter(p => p.store_name !== 'Bull Moose');
-  filtered.push(...bmProducts);
+  const nonBM = existing.filter(p => p.store_name !== 'Bull Moose');
+  const oldBM = new Map(existing.filter(p => p.store_name === 'Bull Moose').map(p => [p.id, p]));
 
-  writeFileSync(PRODUCTS_FILE, JSON.stringify(filtered, null, 2));
-  console.log(`\nWrote ${filtered.length} total products to products.json`);
-  console.log(`  (${bmProducts.length} Bull Moose + ${filtered.length - bmProducts.length} other stores)`);
+  // Merge: new scrape wins for any product found in both, old products kept if not re-found
+  const newBMMap = new Map(bmProducts.map(p => [p.id, p]));
+  for (const [id, p] of oldBM) {
+    if (!newBMMap.has(id)) newBMMap.set(id, p);
+  }
+  const mergedBM = [...newBMMap.values()];
+
+  const final = [...nonBM, ...mergedBM];
+  writeFileSync(PRODUCTS_FILE, JSON.stringify(final, null, 2));
+  console.log(`\nWrote ${final.length} total products to products.json`);
+  console.log(`  (${mergedBM.length} Bull Moose: ${bmProducts.length} from this scrape + ${mergedBM.length - bmProducts.length} kept from previous)`);
+  console.log(`  (${nonBM.length} other stores)`);
 
   // Run validation to fill any remaining gaps
   console.log('\n--- Running validation ---');

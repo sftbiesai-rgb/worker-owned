@@ -3,7 +3,36 @@ import { slugify, displayTags, faviconUrl } from '../lib/utils'
 import OwnershipBadge from './OwnershipBadge'
 import ProductImage from './ProductImage'
 
-export default function ProductCard({ product: p, showStore = true }) {
+export default function ProductCard({ product: p, showStore = true, compact = false }) {
+  if (compact) {
+    return (
+      <div className="bg-[#f5f5f7] rounded-xl overflow-hidden">
+        <a href={p.url} target="_blank" rel="noopener" className="block hover:opacity-90 transition-opacity">
+          {p.image && (
+            <div className="h-24 w-full overflow-hidden bg-gray-100">
+              <ProductImage src={p.image} alt={p.title} />
+            </div>
+          )}
+          <div className="px-2.5 pt-1.5 pb-1">
+            <p className="text-[11px] font-semibold text-gray-800 leading-snug truncate">{p.title} <span className="text-gray-400 font-normal">↗</span></p>
+            {p.price && <p className="text-[11px] font-semibold text-[#004cb9] mt-0.5">${p.price}</p>}
+          </div>
+        </a>
+        {p.store_name && (
+          <div className="px-2.5 pb-1.5">
+            <Link
+              to={`/marketplace/store/${slugify(p.store_name)}`}
+              className="text-[9px] text-gray-400 hover:text-[#004cb9] transition-colors truncate flex items-center gap-1"
+            >
+              {faviconUrl(p.store_url) && <img src={faviconUrl(p.store_url)} alt="" className="w-3 h-3 shrink-0" loading="lazy" />}
+              {p.store_name}
+            </Link>
+          </div>
+        )}
+      </div>
+    )
+  }
+
   return (
     <div className="bg-[#f5f5f7] rounded-xl overflow-hidden group">
       <a

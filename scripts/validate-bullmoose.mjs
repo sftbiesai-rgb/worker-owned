@@ -124,6 +124,13 @@ function parseProducts(html) {
     const linkMatch = card.match(/href="\/p\/(\d+)\/([^"]+)"\s+title="([^"]+)"/);
     if (!linkMatch) continue;
     const [, productId, slug, title] = linkMatch;
+    // Check SHIPPING availability (not Curbside Pickup). Skip only if shipping
+    // is Back-order (av30) or Out of Stock (av50).
+    const shipMatch = card.match(/Shipping[^<]*<span class="av\s+([^"]+)"/s);
+    if (shipMatch) {
+      const cls = shipMatch[1];
+      if (cls.includes('av30') || cls.includes('av50')) continue;
+    }
     const imgMatch = card.match(/data-src="([^"]+)"/);
     let image = null;
     if (imgMatch && !imgMatch[1].includes('ArtNotAvailable')) {

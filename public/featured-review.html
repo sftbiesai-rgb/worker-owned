@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html><head>
+<title>Featured Products Review</title>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f7; }
+  h1 { text-align: center; }
+  .toolbar { text-align: center; margin: 16px 0; position: sticky; top: 0; background: #f5f5f7; padding: 12px 0; z-index: 10; border-bottom: 1px solid #ddd; }
+  .toolbar button { padding: 8px 20px; border-radius: 8px; border: none; font-size: 14px; font-weight: 600; cursor: pointer; margin: 0 6px; }
+  .toolbar .submit { background: #004cb9; color: white; }
+  .toolbar .submit:hover { background: #003a8c; }
+  .toolbar .download { background: #059669; color: white; }
+  .toolbar .download:hover { background: #047857; }
+  .stats { font-size: 13px; color: #666; margin: 0 12px; display: inline; }
+  h2 { margin-top: 30px; padding: 10px; border-radius: 8px; }
+  h2.hits { background: #e8f0fe; color: #004cb9; }
+  h2.staff { background: #d1fae5; color: #059669; }
+  h2.cool { background: #f3e8ff; color: #7c3aed; }
+  h2.movement { background: #fee2e2; color: #BF0A30; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+  .card { background: white; border-radius: 12px; overflow: hidden; border: 2px solid #e5e7eb; position: relative; transition: border-color 0.15s, opacity 0.15s; }
+  .card.rejected { border-color: #f87171; opacity: 0.5; }
+  .card.approved { border-color: #34d399; }
+  .card.new-item { border-color: #fbbf24; animation: pulse 0.5s; }
+  @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.02); } }
+  .card img { width: 100%; height: 100px; object-fit: cover; background: #eee; }
+  .card .no-img { height: 100px; background: #eee; display: flex; align-items: center; justify-content: center; color: #ccc; font-size: 11px; }
+  .card .info { padding: 8px 10px; }
+  .card .title { font-size: 11px; font-weight: 600; line-height: 1.3; margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card .title a { color: inherit; text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .price { font-size: 11px; color: #004cb9; font-weight: 600; }
+  .card .store { font-size: 10px; color: #999; margin-top: 3px; }
+  .card .section { font-size: 9px; color: #bbb; }
+  .card .vote-btns { display: flex; border-top: 1px solid #eee; }
+  .card .vote-btns button { flex: 1; padding: 6px; border: none; font-size: 16px; cursor: pointer; background: white; transition: background 0.1s; }
+  .card .vote-btns button:hover { background: #f3f4f6; }
+  .card .vote-btns .yes-btn.active { background: #d1fae5; }
+  .card .vote-btns .no-btn.active { background: #fee2e2; }
+  .count { font-size: 14px; color: #999; font-weight: normal; }
+  .round-info { text-align: center; color: #999; font-size: 13px; margin-bottom: 8px; }
+</style>
+</head><body>
+<h1>Featured Products Review</h1>
+<div class="toolbar">
+  <button class="submit" onclick="submitVotes()">Replace rejected items</button>
+  <button class="download" onclick="downloadJSON()">Download featured.json</button>
+  <span class="stats" id="stats"></span>
+</div>
+<div class="round-info" id="round-info"></div>
+<div id="content"></div>
+<script>
+let featured = [];
+let allProducts = [];
+let votes = {};  // id -> 'yes' | 'no'
+let round = 1;
+let usedIds = new Set();
+
+const BUCKET_ORDER = ['hits', 'staff', 'cool', 'movement'];
+const LABELS = { hits: 'The Hits', staff: 'Staff', cool: 'Cool', movement: 'Movement' };
+
+Promise.all([
+  fetch('/data/featured.json').then(r => r.json()),
+  fetch('/data/products.json').then(r => r.json()),
+]).then(([feat, prods]) => {
+  featured = feat;
+  allProducts = prods.filter(p => p.image && p.price && parseFloat(p.price) > 0);
+  featured.forEach(f => usedIds.add(f.id));
+  // Default all to approved
+  featured.forEach(f => votes[f.id] = 'yes');
+  render();
+});
+
+function updateStats() {
+  const yes = featured.filter(f => votes[f.id] === 'yes').length;
+  const no = featured.filter(f => votes[f.id] === 'no').length;
+  document.getElementById('stats').textContent = yes + ' approved / ' + no + ' rejected / ' + featured.length + ' total';
+  document.getElementById('round-info').textContent = 'Round ' + round + ' — click items to reject, then hit "Replace rejected items" to swap in new ones';
+}
+
+function render() {
+  const buckets = { hits: [], staff: [], cool: [], movement: [] };
+  featured.forEach(f => buckets[f.pick]?.push(f));
+
+  const el = document.getElementById('content');
+  el.innerHTML = '';
+  for (const key of BUCKET_ORDER) {
+    const list = buckets[key];
+    el.innerHTML += '<h2 class="' + key + '">' + LABELS[key] + ' <span class="count">(' + list.length + ' items)</span></h2>';
+    let grid = '<div class="grid">';
+    list.forEach(p => {
+      const vote = votes[p.id] || 'yes';
+      const cls = vote === 'no' ? 'rejected' : 'approved';
+      const isNew = p._new ? ' new-item' : '';
+      grid += '<div class="card ' + cls + isNew + '" data-id="' + p.id + '">' +
+        (p.image ? '<img src="' + p.image + '" alt="" loading="lazy">' : '<div class="no-img">No image</div>') +
+        '<div class="info">' +
+        '<div class="title"><a href="' + p.url + '" target="_blank">' + escHtml(p.title) + '</a></div>' +
+        '<div class="price">$' + p.price + '</div>' +
+        '<div class="store">' + escHtml(p.store_name) + '</div>' +
+        '<div class="section">' + escHtml(p.site_section || '') + '</div>' +
+        '</div>' +
+        '<div class="vote-btns">' +
+        '<button class="yes-btn' + (vote === 'yes' ? ' active' : '') + '" onclick="setVote(\'' + p.id + '\',\'yes\')">&#10003;</button>' +
+        '<button class="no-btn' + (vote === 'no' ? ' active' : '') + '" onclick="setVote(\'' + p.id + '\',\'no\')">&#10007;</button>' +
+        '</div></div>';
+    });
+    grid += '</div>';
+    el.innerHTML += grid;
+  }
+  // Clear new flags
+  featured.forEach(f => delete f._new);
+  updateStats();
+}
+
+function escHtml(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function setVote(id, vote) {
+  votes[id] = vote;
+  const card = document.querySelector('.card[data-id="' + id + '"]');
+  if (card) {
+    card.className = 'card ' + (vote === 'no' ? 'rejected' : 'approved');
+    card.querySelector('.yes-btn').className = 'yes-btn' + (vote === 'yes' ? ' active' : '');
+    card.querySelector('.no-btn').className = 'no-btn' + (vote === 'no' ? ' active' : '');
+  }
+  updateStats();
+}
+
+function submitVotes() {
+  const rejected = featured.filter(f => votes[f.id] === 'no');
+  if (rejected.length === 0) {
+    alert('Nothing to replace — all items are approved!');
+    return;
+  }
+
+  // Group rejected by bucket
+  const rejByBucket = {};
+  rejected.forEach(r => {
+    if (!rejByBucket[r.pick]) rejByBucket[r.pick] = [];
+    rejByBucket[r.pick].push(r);
+  });
+
+  // Remove rejected from featured
+  featured = featured.filter(f => votes[f.id] !== 'no');
+  rejected.forEach(r => {
+    delete votes[r.id];
+    // Don't remove from usedIds — avoid re-showing rejected items
+  });
+
+  // Find replacements from product catalog
+  let replaced = 0;
+  for (const [bucket, rejs] of Object.entries(rejByBucket)) {
+    const currentStores = new Set(featured.filter(f => f.pick === bucket).map(f => f.store_name));
+
+    for (const rej of rejs) {
+      // Try to find a replacement: same section preferred, different store, has image
+      const candidates = allProducts.filter(p =>
+        !usedIds.has(p.id) &&
+        !currentStores.has(p.store_name) &&
+        p.image &&
+        p.store_name !== 'Bull Moose' // diversify away from dominant store
+      );
+
+      // Prefer same section, then any
+      let pick = candidates.find(p => p.site_section === rej.site_section);
+      if (!pick) pick = candidates[Math.floor(Math.random() * candidates.length)];
+
+      if (pick) {
+        const newItem = { ...pick, pick: bucket, _new: true };
+        featured.push(newItem);
+        usedIds.add(pick.id);
+        currentStores.add(pick.store_name);
+        votes[pick.id] = 'yes';
+        replaced++;
+      }
+    }
+  }
+
+  round++;
+  render();
+  window.scrollTo(0, 0);
+  alert('Replaced ' + replaced + ' items (round ' + round + '). New items have gold borders. Review and repeat!');
+}
+
+function downloadJSON() {
+  // Only export approved items, strip internal flags
+  const output = featured
+    .filter(f => votes[f.id] === 'yes')
+    .map(({ _new, ...rest }) => rest);
+  const blob = new Blob([JSON.stringify(output, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'featured.json';
+  a.click();
+}
+</script>
+</body></html>
