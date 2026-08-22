@@ -148,7 +148,7 @@ const TAG_TO_SECTION = {
   'music': 'Music',
   'movies': 'Media & Publishing',
   'video games': 'Games',
-  'books': 'Media & Publishing',
+  'books': 'Books',
   'board games': 'Games',
   'trading cards': 'Games',
   'merch': 'Apparel',
