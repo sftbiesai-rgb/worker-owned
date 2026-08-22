@@ -25,7 +25,16 @@ export default function ProductCard({ product: p, showStore = true }) {
           {p.price && <p className="text-xs font-semibold text-[#004cb9] mt-0.5">${p.price}</p>}
         </div>
       </a>
-      {displayTags(p.tags)?.length > 0 && (
+      {p.formats && p.formats.length > 1 && (
+        <div className="px-3 pb-1 flex flex-wrap gap-1">
+          {p.formats.map(f => (
+            <a key={f.label} href={f.url} target="_blank" rel="noopener" className="text-[9px] bg-white border border-gray-200 rounded px-1.5 py-0.5 text-gray-500 hover:text-[#004cb9] hover:border-[#004cb9] transition-colors">
+              {f.label} ${f.price}
+            </a>
+          ))}
+        </div>
+      )}
+      {displayTags(p.tags)?.length > 0 && !p.formats && (
         <div className="px-3 pb-1 hidden group-hover:block">
           <p className="text-[10px] text-gray-400 leading-snug line-clamp-1">{displayTags(p.tags).join(' · ')}</p>
         </div>

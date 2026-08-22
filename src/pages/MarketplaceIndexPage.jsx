@@ -67,9 +67,23 @@ function MarketplaceIndexPage() {
     if (fetchedRef.current) return
     if (!inputValue.trim() && !query.trim()) return
     fetchedRef.current = true
-    fetch('/data/products.json')
+    fetch('/data/search.json')
       .then(r => r.json())
-      .then(setProducts)
+      .then(data => {
+        // Hydrate compact format: [id, title, price, image, url, storeIdx, section, tags, available, formats?]
+        const stores = data.s
+        const hydrated = data.p.map(p => {
+          const store = stores[p[5]]
+          const product = {
+            id: p[0], title: p[1], price: p[2] || null, image: p[3] || null,
+            url: p[4], store_name: store.n, store_url: store.u, ownership_type: store.o,
+            site_section: p[6], tags: p[7], available: p[8] !== 0,
+          }
+          if (p[9]) product.formats = p[9]
+          return product
+        })
+        setProducts(hydrated)
+      })
       .catch(() => {})
   }, [inputValue, query])
 
@@ -270,7 +284,7 @@ function MarketplaceIndexPage() {
         <p className="text-center text-xs text-gray-400 mt-3">
           {products.length > 0
             ? <>{products.length.toLocaleString()} products from {storeCount} worker and employee owned companies</>
-            : <>88,000+ products from 160+ worker and employee owned companies</>}
+            : <>90,000+ products from 160+ worker and employee owned companies</>}
         </p>
 
         <div className="mt-2 text-center space-y-1">
