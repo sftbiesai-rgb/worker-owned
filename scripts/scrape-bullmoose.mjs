@@ -132,6 +132,14 @@ const CATEGORIES = [
   { id: '228', slug: 'childrens-books', tag: 'books' },
   { id: '248', slug: 'young-adult', tag: 'books' },
 
+  // Featured / Bestseller (curated lists of popular items often missing from genre pages)
+  { id: '462', slug: 'bestsellers', tag: 'books' },
+  { id: '385', slug: 'new-books', tag: 'books' },
+  { id: '572', slug: 'new-in-paperback', tag: 'books' },
+  { id: '827', slug: 'featured-music', tag: 'music' },
+  { id: '212', slug: 'featured-movies', tag: 'movies' },
+  { id: '852', slug: 'coming-soon-to-home-video', tag: 'movies' },
+
   // Games & Collectibles
   { id: '230', slug: 'board-games-puzzles', tag: 'board games' },
   { id: '337', slug: 'magic-the-gathering', tag: 'trading cards' },
@@ -272,19 +280,38 @@ function decodeHtmlEntities(str) {
 // Popular search terms to supplement category scraping.
 // Category pages don't return all products — popular items often get missed.
 const SEARCH_TERMS = [
-  // Bestselling book authors/series
+  // Bestselling book authors
   'hunger games', 'harry potter', 'lord of the rings', 'game of thrones', 'percy jackson',
-  'stephen king', 'colleen hoover', 'taylor jenkins', 'james patterson', 'rick riordan',
-  'brandon sanderson', 'sarah j maas', 'diary of a wimpy kid', 'dog man', 'cat in the hat',
+  'stephen king', 'colleen hoover', 'taylor jenkins reid', 'james patterson', 'rick riordan',
+  'brandon sanderson', 'sarah j maas', 'diary of a wimpy kid', 'dog man', 'dav pilkey',
+  'john grisham', 'danielle steel', 'nora roberts', 'lee child', 'jack reacher',
+  'agatha christie', 'neil gaiman', 'margaret atwood', 'toni morrison', 'george orwell',
+  'jk rowling', 'suzanne collins', 'veronica roth', 'divergent', 'maze runner',
+  'jeff kinney', 'dr seuss', 'eric carle', 'mo willems', 'pete the cat',
+  'rebecca yarros', 'fourth wing', 'iron flame', 'holly black', 'leigh bardugo',
+  'freida mcfadden', 'bonnie garmus', 'lessons chemistry', 'project hail mary',
+  'atomic habits', 'where crawdads sing', 'midnight library', 'it ends with us',
   // Popular music
   'taylor swift', 'beyonce', 'beatles', 'pink floyd', 'led zeppelin', 'radiohead',
   'kendrick lamar', 'tyler the creator', 'billie eilish', 'olivia rodrigo', 'sabrina carpenter',
+  'drake', 'adele', 'the weeknd', 'kanye west', 'nirvana', 'bob dylan', 'david bowie',
+  'fleetwood mac', 'queen', 'rolling stones', 'bruce springsteen', 'johnny cash',
+  'bob marley', 'miles davis', 'john coltrane', 'dolly parton', 'willie nelson',
+  'hozier', 'chappell roan', 'sza', 'dua lipa', 'post malone', 'bad bunny',
   // Popular movies/TV
-  'star wars', 'marvel', 'disney', 'batman', 'lord of the rings', 'game of thrones',
-  'breaking bad', 'the office', 'friends tv', 'stranger things',
+  'star wars', 'marvel', 'disney', 'batman', 'lord of the rings',
+  'breaking bad', 'the office', 'friends tv', 'stranger things', 'game of thrones',
+  'jurassic park', 'indiana jones', 'james bond', 'mission impossible', 'fast furious',
+  'pixar', 'studio ghibli', 'miyazaki', 'scorsese', 'tarantino', 'nolan',
+  'the sopranos', 'the wire', 'seinfeld', 'simpsons', 'south park',
+  'succession', 'house of dragon', 'yellowstone', 'last of us', 'mandalorian',
   // Popular games
   'zelda', 'mario', 'pokemon', 'final fantasy', 'call of duty', 'minecraft',
   'elden ring', 'god of war', 'spider-man', 'animal crossing',
+  'halo', 'resident evil', 'grand theft auto', 'assassins creed', 'dark souls',
+  'super smash bros', 'metroid', 'kirby', 'sonic', 'mega man',
+  'dragon quest', 'persona', 'fire emblem', 'kingdom hearts', 'monster hunter',
+  'lego', 'madden', 'fifa', 'nba 2k', 'fortnite',
 ]
 
 async function fetchSearch(query) {
@@ -433,6 +460,11 @@ async function main() {
   writeFileSync(PRODUCTS_FILE, JSON.stringify(filtered, null, 2));
   console.log(`\nWrote ${filtered.length} total products to products.json`);
   console.log(`  (${bmProducts.length} Bull Moose + ${filtered.length - bmProducts.length} other stores)`);
+
+  // Run validation to fill any remaining gaps
+  console.log('\n--- Running validation ---');
+  const { execSync } = await import('child_process');
+  execSync('node scripts/validate-bullmoose.mjs', { cwd: join(__dirname, '..'), stdio: 'inherit' });
 }
 
 main().catch(console.error);
