@@ -32,3 +32,5 @@ $PAYLOAD_FILE
 .mcp.json
 __pycache__/
 promo/outreach-emails.html
+promo/outreach.md
+promo/submission-emails.md
