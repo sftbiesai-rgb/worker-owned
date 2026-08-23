@@ -144,7 +144,7 @@ export function searchProducts(inputValue, products) {
       const matchCount = words.filter(w => titleStripped.includes(w)).length
       score += titleWords.length > 0 ? (matchCount / titleWords.length) : 0
     }
-    if (allMatch && p.available === false) score -= 1
+    if (allMatch && p.available === false) score -= 100
     if (allMatch && score < 1.5) score -= 2
     if (allMatch) scored.push({ p, score })
   }

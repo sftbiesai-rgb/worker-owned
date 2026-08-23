@@ -519,22 +519,20 @@ async function main() {
     tags: p.tags,
   }));
 
-  // Merge into existing products.json (additive — keep old BM products, update/add new)
+  // Merge into existing products.json
+  // Replace strategy: only keep products found in this scrape. Old products not
+  // re-found are dropped — they likely went out of stock or were delisted. This
+  // avoids accumulating stale out-of-stock items from previous scrapes.
   const existing = JSON.parse(readFileSync(PRODUCTS_FILE, 'utf8'));
   const nonBM = existing.filter(p => p.store_name !== 'Bull Moose');
   const oldBM = new Map(existing.filter(p => p.store_name === 'Bull Moose').map(p => [p.id, p]));
-
-  // Merge: new scrape wins for any product found in both, old products kept if not re-found
-  const newBMMap = new Map(bmProducts.map(p => [p.id, p]));
-  for (const [id, p] of oldBM) {
-    if (!newBMMap.has(id)) newBMMap.set(id, p);
-  }
-  const mergedBM = [...newBMMap.values()];
+  const dropped = [...oldBM.keys()].filter(id => !new Map(bmProducts.map(p => [p.id, p])).has(id)).length;
+  const mergedBM = bmProducts;
 
   const final = [...nonBM, ...mergedBM];
   writeFileSync(PRODUCTS_FILE, JSON.stringify(final, null, 2));
   console.log(`\nWrote ${final.length} total products to products.json`);
-  console.log(`  (${mergedBM.length} Bull Moose: ${bmProducts.length} from this scrape + ${mergedBM.length - bmProducts.length} kept from previous)`);
+  console.log(`  (${mergedBM.length} Bull Moose from this scrape, ${dropped} old products dropped)`);
   console.log(`  (${nonBM.length} other stores)`);
 
   // Run validation to fill any remaining gaps
