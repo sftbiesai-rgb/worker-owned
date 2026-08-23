@@ -13,6 +13,7 @@ import FilterSidebar from '../components/FilterSidebar'
 
 const PICK_LABELS = { hits: 'The Hits', staff: 'Staff', cool: 'Cool', movement: 'Movement' }
 const PICK_COLORS = { hits: 'text-[#004cb9]', staff: 'text-emerald-600', cool: 'text-purple-600', movement: 'text-[#BF0A30]' }
+const PICK_BORDER_COLORS = { hits: '#004cb9', staff: '#059669', cool: '#7c3aed', movement: '#BF0A30' }
 const PICK_ORDER = ['hits', 'staff', 'cool', 'movement']
 
 function pickFeatured(items) {
@@ -29,7 +30,7 @@ function pickFeatured(items) {
     for (const item of pool) {
       if (picked.length >= 2) break
       if (bucketSections.has(item.site_section)) continue
-      if ((ownershipCounts[item.ownership_type] || 0) >= 2) continue
+      if ((ownershipCounts[item.ownership_type] || 0) >= 4) continue
       usedStores.add(item.store_name)
       bucketSections.add(item.site_section)
       ownershipCounts[item.ownership_type] = (ownershipCounts[item.ownership_type] || 0) + 1
@@ -320,7 +321,7 @@ function MarketplaceIndexPage() {
                         {col.map(p => (
                           <div key={p.id} className="flex flex-col">
                             <div className="flex-1">
-                              <ProductCard product={p} compact />
+                              <ProductCard product={p} compact borderColor={PICK_BORDER_COLORS[PICK_ORDER[i]]} />
                             </div>
                             {p.site_section && SECTION_SLUGS[p.site_section] && (
                               <Link to={`/marketplace/${SECTION_SLUGS[p.site_section]}`} className="text-[10px] text-[#004cb9] hover:text-[#BF0A30] transition-colors mt-1 text-center block">

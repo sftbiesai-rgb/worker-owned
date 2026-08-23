@@ -3,13 +3,13 @@ import { slugify, displayTags, faviconUrl } from '../lib/utils'
 import OwnershipBadge from './OwnershipBadge'
 import ProductImage from './ProductImage'
 
-export default function ProductCard({ product: p, showStore = true, compact = false }) {
+export default function ProductCard({ product: p, showStore = true, compact = false, borderColor }) {
   if (compact) {
     return (
-      <div className="bg-[#f5f5f7] rounded-xl overflow-hidden">
+      <div className="bg-[#f5f5f7] rounded-xl overflow-hidden border-2" style={borderColor ? { borderColor } : { borderColor: '#e5e7eb' }}>
         <a href={p.url} target="_blank" rel="noopener" className="block hover:opacity-90 transition-opacity">
           {p.image && (
-            <div className="h-24 w-full overflow-hidden bg-gray-100">
+            <div className="h-24 w-full overflow-hidden bg-gray-100 rounded-t-[10px]">
               <ProductImage src={p.image} alt={p.title} />
             </div>
           )}
