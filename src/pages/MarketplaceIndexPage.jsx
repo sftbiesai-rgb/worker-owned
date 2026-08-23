@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { Search, ArrowUpDown } from 'lucide-react'
+import { Search, ArrowUpDown, ChevronDown } from 'lucide-react'
 import { SECTIONS, SECTION_SLUGS } from '../lib/categories'
 import { searchProducts, searchCompanies } from '../lib/search'
 import marketplaceData from '../data/marketplace.json'
@@ -64,6 +64,7 @@ function MarketplaceIndexPage() {
   const [featured, setFeatured] = useState([])
   const [inputValue, setInputValue] = useState(query)
   const [searchCat, setSearchCat] = useState('')
+  const [companiesExpanded, setCompaniesExpanded] = useState(false)
   const priceDebounceRef = useRef(null)
   const [localPmin, setLocalPmin] = useState(filterPmin)
   const [localPmax, setLocalPmax] = useState(filterPmax)
@@ -86,7 +87,7 @@ function MarketplaceIndexPage() {
     setLocalPmax('')
   }, [inputValue, searchCat, updateParams])
 
-  useEffect(() => { setInputValue(query) }, [query])
+  useEffect(() => { setInputValue(query); setCompaniesExpanded(false) }, [query])
   useEffect(() => { setLocalPmin(filterPmin) }, [filterPmin])
   useEffect(() => { setLocalPmax(filterPmax) }, [filterPmax])
 
@@ -294,23 +295,31 @@ function MarketplaceIndexPage() {
                   )}
                 </div>
                 {companyResults.length > 0 && (
-                  <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mt-4">
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Companies</p>
-                    <div className="space-y-2">
-                      {companyResults.slice(0, 5).map(c => (
-                        <Link key={c.id} to={`/marketplace/store/${slugify(c.name)}`} className="flex items-center gap-3 bg-[#f5f5f7] rounded-xl px-4 py-3 hover:bg-blue-50 transition-colors">
-                          {c.url && <img src={faviconUrl(c.url)} alt="" width="16" height="16" className="shrink-0" />}
-                          <div className="min-w-0 flex-1">
-                            <div className="flex items-center gap-2">
-                              <span className="text-sm font-semibold text-gray-900 truncate">{c.name}</span>
-                              <OwnershipBadge type={c.ownership_type} />
+                  <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full mt-4">
+                    <button
+                      onClick={() => setCompaniesExpanded(e => !e)}
+                      className="w-full px-6 py-4 flex items-center justify-between"
+                    >
+                      <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Companies that may carry this item ({companyResults.length})</p>
+                      <ChevronDown size={14} className={`text-gray-400 transition-transform ${companiesExpanded ? 'rotate-180' : ''}`} />
+                    </button>
+                    {companiesExpanded && (
+                      <div className="px-6 pb-5 space-y-2">
+                        {companyResults.slice(0, 10).map(c => (
+                          <Link key={c.id} to={`/marketplace/store/${slugify(c.name)}`} className="flex items-center gap-3 bg-[#f5f5f7] rounded-xl px-4 py-3 hover:bg-blue-50 transition-colors">
+                            {c.url && <img src={faviconUrl(c.url)} alt="" width="16" height="16" className="shrink-0" />}
+                            <div className="min-w-0 flex-1">
+                              <div className="flex items-center gap-2">
+                                <span className="text-sm font-semibold text-gray-900 truncate">{c.name}</span>
+                                <OwnershipBadge type={c.ownership_type} />
+                              </div>
+                              {c.notes && <p className="text-xs text-gray-500 truncate">{c.notes}</p>}
                             </div>
-                            {c.notes && <p className="text-xs text-gray-500 truncate">{c.notes}</p>}
-                          </div>
-                          <span className="text-xs text-gray-400 shrink-0">{c.site_section}</span>
-                        </Link>
-                      ))}
-                    </div>
+                            <span className="text-xs text-gray-400 shrink-0">{c.site_section}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 )}
               </div>

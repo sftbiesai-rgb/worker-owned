@@ -76,20 +76,17 @@ export function searchCompanies(inputValue, companies) {
     const notesLower = (c.notes || '').toLowerCase()
     const catLower = (c.category || '').toLowerCase()
     const slugText = urlWords(c.url)
-    let nameOrCatHit = false
     for (const stems of wordStems) {
       const inName = wordMatch(nameLower, stems)
       const inCat = wordMatch(catLower, stems)
       const inNotes = wordMatch(notesLower, stems)
       const inSlug = wordMatch(slugText, stems)
       if (!inName && !inCat && !inNotes && !inSlug) { allMatch = false; break }
-      if (inName) { score += 5; nameOrCatHit = true }
-      else if (inCat) { score += 2; nameOrCatHit = true }
+      if (inName) score += 5
+      else if (inCat) score += 2
       else if (inNotes) score += 1
       else if (inSlug) score += 1
     }
-    // Only include if at least one word matched name or category
-    if (!nameOrCatHit) allMatch = false
     if (allMatch) scored.push({ c, score })
   }
   scored.sort((a, b) => b.score - a.score)
