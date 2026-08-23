@@ -303,7 +303,7 @@ function MarketplaceIndexPage() {
                       onClick={() => setCompaniesExpanded(e => !e)}
                       className="w-full px-6 py-4 flex items-center justify-between"
                     >
-                      <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Companies that may carry this item ({companyResults.length})</p>
+                      <p className="text-xs text-gray-400 text-left">You may find similar items at these worker or employee owned companies — visit their sites too</p>
                       <ChevronDown size={14} className={`text-gray-400 transition-transform ${companiesExpanded ? 'rotate-180' : ''}`} />
                     </button>
                     {companiesExpanded && (

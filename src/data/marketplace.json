@@ -1329,7 +1329,7 @@
     "ships": "US",
     "status": "verified active",
     "notes": "100% employee-owned sporting goods retailer. 34 stores across 16 states. Full online store with outdoor gear, apparel, footwear, and more.",
-    "site_section": "Apparel"
+    "site_section": "Sporting Goods & Outdoors"
   },
   {
     "id": 167,
@@ -1857,7 +1857,7 @@
     "ships": "local (Baltimore MD)",
     "status": "verified active",
     "notes": "Baltimore's only worker-owned and democratically operated bicycle shop. Every staff member is an equal owner or working toward ownership. Full-service repairs, tune-ups, and parts.",
-    "site_section": "Home Goods & Services"
+    "site_section": "Sporting Goods & Outdoors"
   },
   {
     "id": 216,
@@ -1913,5 +1913,38 @@
     "status": "verified active",
     "notes": "100% employee-owned (ESOP). DVDs, Blu-rays, 4K UHD — new and used.",
     "site_section": "Movies & TV"
+  },
+  {
+    "id": 221,
+    "name": "Cane Creek Cycling Components",
+    "url": "https://www.canecreek.com",
+    "category": "bicycle components",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP) since 1999. Certified EO. Based in Fletcher, NC. Manufactures premium bicycle components including headsets, suspension seatposts, cranks, shocks, forks, bottom brackets, and brakes. Direct-to-consumer online store.",
+    "site_section": "Sporting Goods & Outdoors"
+  },
+  {
+    "id": 222,
+    "name": "Landry's Bicycles",
+    "url": "https://www.landrys.com",
+    "category": "bicycle shop",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP) since 2022. Family-owned since 1922, 100-year-old business. 8 stores in Massachusetts. Online store ships parts and accessories ($99+ free shipping). Carries Specialized, Trek, Santa Cruz, and more.",
+    "site_section": "Sporting Goods & Outdoors"
+  },
+  {
+    "id": 223,
+    "name": "Urbane Cyclist",
+    "url": "https://www.ucycle.com",
+    "category": "bicycle shop",
+    "ownership_type": "worker co-op",
+    "ships": "Canada",
+    "status": "verified active",
+    "notes": "Worker-owned cooperative bike shop in Toronto. Specializes in urban, commuter, cargo, and e-bikes from Tern, Riese & Muller, Gazelle, Urban Arrow, and more. Free shipping on orders over $250 Canada-wide.",
+    "site_section": "Sporting Goods & Outdoors"
   }
 ]
