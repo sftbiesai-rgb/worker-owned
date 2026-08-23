@@ -61,6 +61,7 @@ function MarketplaceIndexPage() {
   const filterPmin = searchParams.get('pmin') || ''
   const filterPmax = searchParams.get('pmax') || ''
   const [products, setProducts] = useState([])
+  const [loadingProducts, setLoadingProducts] = useState(false)
   const [featured, setFeatured] = useState([])
   const [inputValue, setInputValue] = useState(query)
   const [searchCat, setSearchCat] = useState('')
@@ -113,6 +114,7 @@ function MarketplaceIndexPage() {
     if (fetchedRef.current) return
     if (!query.trim()) return
     fetchedRef.current = true
+    setLoadingProducts(true)
     fetch('/data/search.json')
       .then(r => r.json())
       .then(data => {
@@ -131,6 +133,7 @@ function MarketplaceIndexPage() {
         setProducts(hydrated)
       })
       .catch(() => {})
+      .finally(() => setLoadingProducts(false))
   }, [query])
 
   const allCompanies = useMemo(() => dedupeByUrl(marketplaceData), [])
@@ -226,7 +229,13 @@ function MarketplaceIndexPage() {
         </div>
 
         {searching ? (
-          results.length === 0 && companyResults.length === 0 ? (
+          loadingProducts ? (
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
+              <div className="text-center py-4">
+                <p className="text-sm text-gray-500">Searching...</p>
+              </div>
+            </div>
+          ) : results.length === 0 && companyResults.length === 0 ? (
             <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
               <div className="text-center py-4">
                 <p className="text-sm text-gray-500 mb-4">No results for "{query}"</p>
