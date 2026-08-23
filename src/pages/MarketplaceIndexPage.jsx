@@ -110,7 +110,7 @@ function MarketplaceIndexPage() {
 
   useEffect(() => {
     if (fetchedRef.current) return
-    if (!inputValue.trim() && !query.trim()) return
+    if (!query.trim()) return
     fetchedRef.current = true
     fetch('/data/search.json')
       .then(r => r.json())
@@ -130,11 +130,11 @@ function MarketplaceIndexPage() {
         setProducts(hydrated)
       })
       .catch(() => {})
-  }, [inputValue, query])
+  }, [query])
 
   const allCompanies = useMemo(() => dedupeByUrl(marketplaceData), [])
-  const companyResults = useMemo(() => searchCompanies(inputValue, allCompanies), [inputValue, allCompanies])
-  const results = useMemo(() => searchProducts(inputValue, products), [inputValue, products])
+  const companyResults = useMemo(() => searchCompanies(query, allCompanies), [query, allCompanies])
+  const results = useMemo(() => searchProducts(query, products), [query, products])
 
   // Apply filters: category → store → price
   const filteredResults = useMemo(() => {
@@ -162,7 +162,7 @@ function MarketplaceIndexPage() {
 
   const storeCount = useMemo(() => new Set(products.map(p => p.store_url)).size, [products])
 
-  const searching = inputValue.trim().length > 0
+  const searching = query.trim().length > 0
 
   const handlePriceChange = useCallback((pmin, pmax) => {
     setLocalPmin(pmin)
@@ -246,7 +246,7 @@ function MarketplaceIndexPage() {
           results.length === 0 && companyResults.length === 0 ? (
             <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
               <div className="text-center py-4">
-                <p className="text-sm text-gray-500 mb-4">No results for "{inputValue}"</p>
+                <p className="text-sm text-gray-500 mb-4">No results for "{query}"</p>
                 <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Browse by category</p>
                 <div className="flex flex-wrap justify-center gap-2">
                   {SECTIONS.map(cat => (
