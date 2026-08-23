@@ -69,18 +69,24 @@ function updateStats() {
   document.getElementById('swaps').textContent = swapCount > 0 ? swapCount + ' swaps made' : '';
 }
 
+function safeUrl(u) {
+  return /^https?:\/\//i.test(u || '') ? u : '';
+}
+
 function renderCard(p) {
-  return '<div class="card" data-id="' + p.id + '" data-bucket="' + p.pick + '">' +
-    (p.image ? '<img src="' + p.image + '" alt="" loading="lazy">' : '<div class="no-img">No image</div>') +
+  const url = safeUrl(p.url);
+  const img = safeUrl(p.image);
+  return '<div class="card" data-id="' + escHtml(p.id) + '" data-bucket="' + escHtml(p.pick) + '">' +
+    (img ? '<img src="' + escHtml(img) + '" alt="" loading="lazy">' : '<div class="no-img">No image</div>') +
     '<div class="info">' +
-    '<div class="title"><a href="' + p.url + '" target="_blank">' + escHtml(p.title) + '</a></div>' +
-    '<div class="price">$' + p.price + '</div>' +
+    '<div class="title"><a href="' + escHtml(url) + '" target="_blank" rel="noopener noreferrer">' + escHtml(p.title) + '</a></div>' +
+    '<div class="price">$' + escHtml(String(p.price)) + '</div>' +
     '<div class="store">' + escHtml(p.store_name) + '</div>' +
     '<div class="section">' + escHtml(p.site_section || '') + '</div>' +
     '</div>' +
     '<div class="vote-btns">' +
     '<button class="yes-btn" title="Keep">&#10003;</button>' +
-    '<button class="no-btn" onclick="rejectItem(\'' + p.id + '\')">&#10007;</button>' +
+    '<button class="no-btn" onclick="rejectItem(this.closest(\'.card\').dataset.id)">&#10007;</button>' +
     '</div></div>';
 }
 

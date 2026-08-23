@@ -132,6 +132,27 @@ const routes = [
     canonical: 'https://www.workerowned.info/marketplace/beer-brewing',
   },
   {
+    url: '/marketplace/books',
+    title: 'Worker Owned Bookstores Online | Worker Owned Marketplace',
+    description: 'Buy books from worker owned bookstores and publishing cooperatives. Independent, cooperatively owned alternatives to Amazon for books.',
+    canonical: 'https://www.workerowned.info/marketplace/books',
+    keywords: 'worker owned bookstore, cooperative bookstore online, buy books not amazon, worker cooperative publisher',
+  },
+  {
+    url: '/marketplace/movies-tv',
+    title: 'Movies & TV from Worker Owned Stores | Worker Owned Marketplace',
+    description: 'Buy movies, Blu-rays, and DVDs from worker owned and employee owned stores. Physical media from cooperatively owned retailers.',
+    canonical: 'https://www.workerowned.info/marketplace/movies-tv',
+    keywords: 'buy movies worker owned, blu-ray dvd employee owned store, physical media cooperative',
+  },
+  {
+    url: '/marketplace/sporting-goods',
+    title: 'Worker Owned Sporting Goods & Outdoors | Worker Owned Marketplace',
+    description: 'Shop sporting goods, bikes, and outdoor gear from worker owned and employee owned companies. Cooperatively owned bike shops and outfitters.',
+    canonical: 'https://www.workerowned.info/marketplace/sporting-goods',
+    keywords: 'worker owned sporting goods, employee owned bike shop, cooperative outdoor gear, worker owned cycling',
+  },
+  {
     url: '/marketplace/tech-software',
     title: 'Worker Owned Tech & Software | Worker Owned Marketplace',
     description: 'Worker owned technology companies, software co-ops, and platform cooperatives. Tech built by the people who make it.',
@@ -287,23 +308,29 @@ await build({
 const { render } = await import(resolve(root, 'dist/server/entry-server.js'))
 const template = readFileSync(resolve(root, 'dist/index.html'), 'utf-8')
 
+function escMeta(s) {
+  return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;')
+}
+
 for (const route of routes) {
   const appHtml = render(route.url)
   const outDir = resolve(root, `dist${route.url}`)
+  const title = escMeta(route.title)
+  const description = escMeta(route.description)
 
   let html = template
     .replace('<!--app-html-->', appHtml)
-    .replace(/<title>[^<]*<\/title>/, `<title>${route.title}</title>`)
-    .replace(/(<meta name="description" content=")[^"]*"/, `$1${route.description}"`)
+    .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
+    .replace(/(<meta name="description" content=")[^"]*"/, `$1${description}"`)
     .replace(/(<link rel="canonical" href=")[^"]*"/, `$1${route.canonical}"`)
     .replace(/(<meta property="og:url" content=")[^"]*"/, `$1${route.canonical}"`)
-    .replace(/(<meta property="og:title" content=")[^"]*"/, `$1${route.title}"`)
-    .replace(/(<meta property="og:description" content=")[^"]*"/, `$1${route.description}"`)
-    .replace(/(<meta name="twitter:title" content=")[^"]*"/, `$1${route.title}"`)
-    .replace(/(<meta name="twitter:description" content=")[^"]*"/, `$1${route.description}"`)
+    .replace(/(<meta property="og:title" content=")[^"]*"/, `$1${title}"`)
+    .replace(/(<meta property="og:description" content=")[^"]*"/, `$1${description}"`)
+    .replace(/(<meta name="twitter:title" content=")[^"]*"/, `$1${title}"`)
+    .replace(/(<meta name="twitter:description" content=")[^"]*"/, `$1${description}"`)
 
   if (route.keywords) {
-    html = html.replace(/(<meta name="keywords" content=")[^"]*"/, `$1${route.keywords}"`)
+    html = html.replace(/(<meta name="keywords" content=")[^"]*"/, `$1${escMeta(route.keywords)}"`)
   }
 
   if (route.ogImage) {

@@ -35,7 +35,8 @@ function BarMap({ items }) {
         if (!bar.lat || !bar.lng) continue
         const marker = L.circleMarker([bar.lat, bar.lng], { radius: 7, fillColor: '#004cb9', color: '#fff', weight: 2, fillOpacity: 0.9 }).addTo(map)
         const url = bar.website?.startsWith('http') ? bar.website : `https://${bar.website}`
-        marker.bindPopup(`<strong>${bar.name}</strong><br>${bar.city}, ${bar.state}${bar.website ? `<br><a href="${url}" target="_blank" rel="noopener">Visit site</a>` : ''}`)
+        const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+        marker.bindPopup(`<strong>${esc(bar.name)}</strong><br>${esc(bar.city)}, ${esc(bar.state)}${bar.website ? `<br><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Visit site</a>` : ''}`)
         markers.push(marker)
       }
 

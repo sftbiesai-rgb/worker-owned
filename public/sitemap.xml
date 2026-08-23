@@ -86,6 +86,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.workerowned.info/marketplace/books</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.workerowned.info/marketplace/movies-tv</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.workerowned.info/marketplace/sporting-goods</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.workerowned.info/guides/alternatives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

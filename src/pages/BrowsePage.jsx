@@ -31,7 +31,8 @@ function ShopMap({ shops }) {
         if (!shop.lat || !shop.lng) continue
         const marker = L.circleMarker([shop.lat, shop.lng], { radius: 7, fillColor: '#004cb9', color: '#fff', weight: 2, fillOpacity: 0.9 }).addTo(map)
         const url = shop.website?.startsWith('http') ? shop.website : `https://${shop.website}`
-        marker.bindPopup(`<strong>${shop.name}</strong><br>${shop.city}, ${shop.state}${shop.website ? `<br><a href="${url}" target="_blank" rel="noopener">Visit site</a>` : ''}`)
+        const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+        marker.bindPopup(`<strong>${esc(shop.name)}</strong><br>${esc(shop.city)}, ${esc(shop.state)}${shop.website ? `<br><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Visit site</a>` : ''}`)
         markers.push(marker)
       }
 

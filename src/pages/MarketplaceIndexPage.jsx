@@ -24,7 +24,7 @@ function pickFeatured(items) {
   const pickOrder = ['movement', 'cool', 'staff', 'hits']
   const result = {}
   for (const bucket of pickOrder) {
-    const pool = items.filter(i => i.pick === bucket && !usedStores.has(i.store_name))
+    const pool = items.filter(i => i.pick === bucket && i.available !== false && !usedStores.has(i.store_name))
       .sort(() => Math.random() - 0.5)
     const picked = []
     const bucketSections = new Set()
