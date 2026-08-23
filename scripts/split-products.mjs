@@ -8,7 +8,6 @@ const root = resolve(__dirname, '..')
 const REMAP = {
   'Home & Garden': 'Home Goods & Services',
   'Chocolate & Sweets': 'Food & Pantry',
-  'Sporting Goods & Outdoors': 'Apparel',
 }
 
 const SECTIONS = {
@@ -25,7 +24,23 @@ const SECTIONS = {
   'Games': 'games',
   'Beer & Brewing': 'beer-brewing',
   'Tech & Software': 'tech-software',
+  'Sporting Goods & Outdoors': 'sporting-goods',
 }
+
+// Product-level category detection for multi-category stores
+// Overrides the store-level site_section based on product title keywords
+const PRODUCT_CATEGORY_RULES = [
+  { match: /candy|gummy|chocolate|pez|snack|jerky|cookie|fudge|jam|jelly|honey|sauce|seasoning|spice|syrup|butter|pretzel|chip|popcorn|salt |sugar|pickle|relish|mustard|dressing|vinegar|nuts|trail mix|granola|cereal|food|baking|flour|olive oil|hot sauce|bbq|rub |marinade|coffee|tea /i, section: 'Food & Pantry' },
+  { match: /soap|lotion|cream|shampoo|conditioner|balm|lip |sunscreen|deodorant|bath|body wash|candle|moistur|cleanser|serum|toner|face |skin/i, section: 'Personal Care' },
+  { match: /vitamin|supplement|probiotic|mineral|omega|calcium|iron|zinc|magnesium|biotin|melatonin|collagen|fiber|medicine|tylenol|advil|ibuprofen|aspirin|antacid|allergy|cough|cold |pain relief|first aid|bandage|gauze|thermometer/i, section: 'Personal Care' },
+  { match: /toy |toys|game|puzzle|doll|stuffed|plush|lego|playset|action figure/i, section: 'Games' },
+  { match: /book |books|journal|notebook|novel /i, section: 'Books' },
+  { match: /mug|cup |glass |plate|bowl|towel|blanket|pillow|ornament|magnet|sticker|sign |frame|decor|pot |planter|vase|coaster/i, section: 'Home Goods & Services' },
+  { match: /diaper|baby|infant|formula|pacifier|sippy/i, section: 'Personal Care' },
+]
+
+// Stores that need product-level categorization (large multi-category stores)
+const MULTI_CATEGORY_STORES = new Set(['Mast General Store', 'Thrifty White Pharmacy'])
 
 // Human-readable format labels from raw tag values
 const FORMAT_LABELS = {
@@ -117,8 +132,30 @@ for (const p of products) {
 }
 
 if (remapped > 0) {
-  writeFileSync(resolve(root, 'public/data/products.json'), JSON.stringify(products))
   console.log(`Remapped ${remapped} products to correct sections`)
+}
+
+// Product-level categorization for multi-category stores
+let recategorized = 0
+for (const p of products) {
+  if (!MULTI_CATEGORY_STORES.has(p.store_name)) continue
+  const title = p.title || ''
+  for (const rule of PRODUCT_CATEGORY_RULES) {
+    if (rule.match.test(title)) {
+      if (p.site_section !== rule.section) {
+        p.site_section = rule.section
+        recategorized++
+      }
+      break
+    }
+  }
+}
+if (recategorized > 0) {
+  console.log(`Recategorized ${recategorized} products from multi-category stores`)
+}
+
+if (remapped > 0 || recategorized > 0) {
+  writeFileSync(resolve(root, 'public/data/products.json'), JSON.stringify(products))
 }
 
 // ── Per-category files (grouped) ──
