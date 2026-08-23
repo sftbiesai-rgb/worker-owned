@@ -2,7 +2,7 @@
 
 ## The Two Projects
 
-1. **workerowned.info** — Directory of 70,000+ products from 175+ worker and employee owned companies + 110+ worker-owned food businesses
+1. **workerowned.info** — Directory of 50,000+ products from 175+ worker and employee owned companies + 110+ worker-owned food businesses
 2. **yourfairshare.info** — Calculator showing profit-per-employee for 1,700+ publicly traded companies
 
 Both projects serve the same mission: making the case for worker ownership and economic fairness through data, not rhetoric.
@@ -93,7 +93,7 @@ The missing pieces:
 **8. Pitch to labor/economics podcasts with a hook**
 - Don't pitch "I built a website." Pitch a story:
   - "What if every company split profits equally? I calculated the answer for 1,700 companies."
-  - "There are 175+ worker and employee owned companies you've never heard of, selling 70,000 products. Here's why they're invisible."
+  - "There are 175+ worker and employee owned companies you've never heard of, selling 50,000 products. Here's why they're invisible."
 - Target: The Indicator (NPR), Planet Money, Money with Katie, Odd Lots (Bloomberg), The Weeds (Vox)
 - Send a 2-paragraph pitch email, not a press release
 
