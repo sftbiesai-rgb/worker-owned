@@ -63,7 +63,7 @@ function MarketplaceIndexPage() {
   const [products, setProducts] = useState([])
   const [featured, setFeatured] = useState([])
   const [inputValue, setInputValue] = useState(query)
-  const debounceRef = useRef(null)
+  const [searchCat, setSearchCat] = useState('')
   const priceDebounceRef = useRef(null)
   const [localPmin, setLocalPmin] = useState(filterPmin)
   const [localPmax, setLocalPmax] = useState(filterPmax)
@@ -79,15 +79,12 @@ function MarketplaceIndexPage() {
     }, { replace: true })
   }, [setSearchParams])
 
-  const handleSearchInput = useCallback((value) => {
-    setInputValue(value)
-    clearTimeout(debounceRef.current)
-    debounceRef.current = setTimeout(() => {
-      updateParams({ q: value, page: '1', cat: '', store: '', pmin: '', pmax: '' })
-      setLocalPmin('')
-      setLocalPmax('')
-    }, 250)
-  }, [updateParams])
+  const handleSearchSubmit = useCallback((e) => {
+    e?.preventDefault()
+    updateParams({ q: inputValue, page: '1', cat: searchCat, store: '', pmin: '', pmax: '' })
+    setLocalPmin('')
+    setLocalPmax('')
+  }, [inputValue, searchCat, updateParams])
 
   useEffect(() => { setInputValue(query) }, [query])
   useEffect(() => { setLocalPmin(filterPmin) }, [filterPmin])
@@ -193,17 +190,34 @@ function MarketplaceIndexPage() {
           </div>
           <p className="text-center text-sm text-gray-500 mb-4">Shop worker and employee owned businesses online</p>
 
-          <div className="relative">
-            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search products or stores…"
-              className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
-              value={inputValue}
-              onChange={e => handleSearchInput(e.target.value)}
-              autoFocus
-            />
-          </div>
+          <form onSubmit={handleSearchSubmit} className="flex">
+            <select
+              value={searchCat}
+              onChange={e => setSearchCat(e.target.value)}
+              className="border border-gray-300 border-r-0 rounded-l-lg px-2 py-2.5 text-xs text-gray-600 bg-gray-50 outline-none focus:border-[#004cb9] shrink-0 cursor-pointer"
+            >
+              <option value="">All</option>
+              {SECTIONS.map(s => (
+                <option key={s.slug} value={s.sectionName}>{s.label}</option>
+              ))}
+            </select>
+            <div className="relative flex-1">
+              <input
+                type="text"
+                placeholder="Search products or stores…"
+                className="w-full border border-gray-300 px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
+                value={inputValue}
+                onChange={e => setInputValue(e.target.value)}
+                autoFocus
+              />
+            </div>
+            <button
+              type="submit"
+              className="bg-[#004cb9] hover:bg-[#003a8c] text-white px-4 rounded-r-lg border border-[#004cb9] transition-colors shrink-0"
+            >
+              <Search size={16} />
+            </button>
+          </form>
           <p className="text-[11px] text-gray-400 mt-2 text-center">Results are links to company sites. We don't sell anything or earn a commission.</p>
         </div>
 
