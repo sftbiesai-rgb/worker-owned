@@ -44,7 +44,6 @@ const ALTERNATIVES = [
     picks: [
       { name: 'Mirlo', product: 'Music downloads and streaming.', detail: 'Worker-owned platform where artists set their own prices.' },
       { name: 'Subvert', product: 'Music marketplace for records and digital downloads.', detail: 'Multi-stakeholder co-op connecting fans to artists.' },
-      { name: 'Resonate Cooperative', product: 'Music streaming with a listen-to-own model.', detail: 'Co-op owned by artists and listeners.' },
       { name: 'Catalytic Sound', product: 'Experimental and improvised music recordings.', detail: 'Artist-owned cooperative label.' },
     ],
   },
