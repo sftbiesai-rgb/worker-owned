@@ -134,7 +134,10 @@ function MarketplaceIndexPage() {
   }, [query])
 
   const allCompanies = useMemo(() => dedupeByUrl(marketplaceData), [])
-  const companyResults = useMemo(() => searchCompanies(query, allCompanies), [query, allCompanies])
+  const scrapedStores = useMemo(() => new Set(products.map(p => p.store_name)), [products])
+  const companyResults = useMemo(() =>
+    searchCompanies(query, allCompanies).filter(c => !scrapedStores.has(c.name)),
+    [query, allCompanies, scrapedStores])
   const results = useMemo(() => searchProducts(query, products), [query, products])
 
   // Apply filters: category → store → price
