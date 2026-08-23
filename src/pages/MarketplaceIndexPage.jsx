@@ -13,32 +13,42 @@ import FilterSidebar from '../components/FilterSidebar'
 
 const PICK_LABELS = { hits: 'The Hits', staff: 'Staff', cool: 'Cool', movement: 'Movement' }
 const PICK_COLORS = { hits: 'text-[#004cb9]', staff: 'text-emerald-600', cool: 'text-purple-600', movement: 'text-[#BF0A30]' }
-const PICK_BORDER_COLORS = { hits: '#004cb9', staff: '#059669', cool: '#7c3aed', movement: '#BF0A30' }
+const PICK_BORDER_COLORS = { hits: '#809ED8', staff: '#82CBAF', cool: '#BDA0F0', movement: '#DF8598' }
 const PICK_ORDER = ['hits', 'staff', 'cool', 'movement']
 
 function pickFeatured(items) {
   // Pick 2 per bucket from pre-curated pool
-  // Rules: one per store globally, different categories within each bucket,
-  // max 2 of the same ownership type across all 8 picks
+  // Rules: one per store globally, prefer different categories within each bucket
+  // Pick order: most constrained buckets first (movement has fewest stores)
   const usedStores = new Set()
-  const ownershipCounts = {}
-  const columns = PICK_ORDER.map(bucket => {
+  const pickOrder = ['movement', 'cool', 'staff', 'hits']
+  const result = {}
+  for (const bucket of pickOrder) {
     const pool = items.filter(i => i.pick === bucket && !usedStores.has(i.store_name))
       .sort(() => Math.random() - 0.5)
     const picked = []
     const bucketSections = new Set()
+    // First pass: prefer different sections
     for (const item of pool) {
       if (picked.length >= 2) break
       if (bucketSections.has(item.site_section)) continue
-      if ((ownershipCounts[item.ownership_type] || 0) >= 4) continue
       usedStores.add(item.store_name)
       bucketSections.add(item.site_section)
-      ownershipCounts[item.ownership_type] = (ownershipCounts[item.ownership_type] || 0) + 1
       picked.push(item)
     }
-    return picked
-  })
-  return columns
+    // Second pass: drop section constraint if needed
+    if (picked.length < 2) {
+      for (const item of pool) {
+        if (picked.length >= 2) break
+        if (picked.some(p => p.id === item.id)) continue
+        if (usedStores.has(item.store_name)) continue
+        usedStores.add(item.store_name)
+        picked.push(item)
+      }
+    }
+    result[bucket] = picked
+  }
+  return PICK_ORDER.map(b => result[b])
 }
 
 function MarketplaceIndexPage() {
