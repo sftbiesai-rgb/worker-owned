@@ -17,11 +17,12 @@ import { fileURLToPath } from 'url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const PRODUCTS_FILE = join(__dirname, '..', 'public', 'data', 'products.json')
 const DRY_RUN = process.argv.includes('--dry-run')
-const CONCURRENCY = 15
-const TIMEOUT_MS = 10000
+const CONCURRENCY = parseInt(process.env.BM_CONCURRENCY || '15')
+const TIMEOUT_MS = 15000
 
 const products = JSON.parse(readFileSync(PRODUCTS_FILE, 'utf8'))
-const bmProducts = products.filter(p => p.store_name === 'Bull Moose')
+const onlyAvailable = process.argv.includes('--only-available')
+const bmProducts = products.filter(p => p.store_name === 'Bull Moose' && (!onlyAvailable || p.available !== false))
 console.log(`Checking ${bmProducts.length} Bull Moose products for availability...`)
 
 let checked = 0
@@ -72,10 +73,12 @@ async function checkAvailability(product) {
   }
 }
 
-// Process in batches
+// Process in batches with delay to avoid rate limiting
+const BATCH_DELAY = parseInt(process.env.BM_DELAY || '500')
 for (let i = 0; i < bmProducts.length; i += CONCURRENCY) {
   const batch = bmProducts.slice(i, i + CONCURRENCY)
   await Promise.all(batch.map(p => checkAvailability(p)))
+  if (i + CONCURRENCY < bmProducts.length) await new Promise(r => setTimeout(r, BATCH_DELAY))
 }
 
 console.log(`\nDone: ${checked} checked, ${outOfStock} out of stock, ${errors} errors`)

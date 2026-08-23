@@ -172,9 +172,27 @@ const CATEGORIES = [
   { id: '881', slug: 'woobles', tag: 'merch' },
   { id: '756', slug: 'baggu', tag: 'merch' },
 
+  // Curated / trending (catches popular items not in genre pages)
+  { id: '301', slug: 'hot-pre-orders', tag: 'music' },
+  { id: '672', slug: 'new-music', tag: 'music' },
+
   // Specials / catch-all
   { id: '259', slug: 'new-this-week', tag: 'books' },
   { id: '876', slug: 'uncle-stinkys-discount-den', tag: 'books' },
+
+  // Bestseller sort passes — same categories re-scraped sorted by Best Seller
+  // to catch popular items that fall off the default relevance sort at 1000-item cap
+  { id: '469', slug: 'rock-pop', tag: 'music', sort: 5 },
+  { id: '470', slug: 'rap-hip-hop', tag: 'music', sort: 5 },
+  { id: '245', slug: 'fiction-literature', tag: 'books', sort: 5 },
+  { id: '246', slug: 'nonfiction', tag: 'books', sort: 5 },
+  { id: '228', slug: 'childrens-books', tag: 'books', sort: 5 },
+  { id: '292', slug: 'television-series', tag: 'movies', sort: 5 },
+  { id: '334', slug: 'horror-films', tag: 'movies', sort: 5 },
+  { id: '335', slug: 'comedy-movies', tag: 'movies', sort: 5 },
+  { id: '548', slug: 'drama', tag: 'movies', sort: 5 },
+  { id: '227', slug: 'graphic-novels', tag: 'books', sort: 5 },
+  { id: '401', slug: 'manga', tag: 'books', sort: 5 },
 ];
 
 // Map the primary category tag to the correct site_section for split-products.mjs
@@ -337,9 +355,10 @@ function decodeHtmlEntities(str) {
 }
 
 // Popular search terms to supplement category scraping.
-// Category pages don't return all products — popular items often get missed.
+// Category pages cap at ~1000 results so popular items get missed.
+// These terms catch mainstream products that people actually search for.
 const SEARCH_TERMS = [
-  // Bestselling book authors
+  // ── Books: bestselling authors & series ──
   'hunger games', 'harry potter', 'lord of the rings', 'game of thrones', 'percy jackson',
   'stephen king', 'colleen hoover', 'taylor jenkins reid', 'james patterson', 'rick riordan',
   'brandon sanderson', 'sarah j maas', 'diary of a wimpy kid', 'dog man', 'dav pilkey',
@@ -350,27 +369,98 @@ const SEARCH_TERMS = [
   'rebecca yarros', 'fourth wing', 'iron flame', 'holly black', 'leigh bardugo',
   'freida mcfadden', 'bonnie garmus', 'lessons chemistry', 'project hail mary',
   'atomic habits', 'where crawdads sing', 'midnight library', 'it ends with us',
-  // Popular music
+  // Books: more bestselling / classic authors
+  'haruki murakami', 'tana french', 'chimamanda ngozi', 'kazuo ishiguro', 'ann patchett',
+  'min jin lee', 'pachinko', 'donna tartt', 'secret history', 'cormac mccarthy',
+  'blood meridian', 'the road mccarthy', 'normal people rooney', 'beautiful world',
+  'tomorrow and tomorrow', 'babel rf kuang', 'yellowface', 'piranesi', 'house in the cerulean',
+  'anxious people', 'a man called ove', 'circe madeline miller', 'song of achilles',
+  'priory of the orange tree', 'ninth house', 'the poppy war',
+  'all the light we cannot see', 'demon copperhead', 'james mcbride',
+  'heaven and earth grocery', 'hernan diaz',
+  // Books: children's & YA bestsellers
+  'wings of fire', 'captain underpants', 'magic tree house', 'bad guys',
+  'big nate', 'goosebumps', 'warrior cats', 'amulet', 'baby sitters club',
+  'raina telgemeier', 'heartstopper', 'wonder palacio', 'hatchet paulsen',
+  'keeper of the lost cities', 'six of crows', 'shadow and bone',
+  // Books: nonfiction bestsellers
+  'sapiens', 'thinking fast and slow', 'freakonomics', 'outliers gladwell',
+  'shoe dog phil knight', 'born a crime', 'greenlights mcconaughey',
+  'untamed glennon doyle', 'brene brown', 'dare to lead',
+  'subtle art not giving', 'mans search for meaning', 'the body keeps the score',
+  'how to win friends', 'brief history of time', 'guns germs steel',
+  'braiding sweetgrass', 'entangled life', 'breath james nestor',
+  // Books: cooking
+  'salt fat acid heat', 'ottolenghi', 'kenji lopez alt', 'ina garten',
+  // Books: graphic novels & manga bestsellers
+  'one piece', 'naruto', 'my hero academia', 'demon slayer', 'jujutsu kaisen',
+  'attack on titan', 'chainsaw man', 'spy x family', 'dragon ball',
+  'berserk', 'vinland saga', 'fullmetal alchemist', 'death note',
+  'saga vaughan', 'sandman gaiman', 'maus spiegelman', 'persepolis',
+  'watchmen', 'v for vendetta', 'invincible kirkman', 'walking dead compendium',
+
+  // ── Music: artists & albums ──
   'taylor swift', 'beyonce', 'beatles', 'pink floyd', 'led zeppelin', 'radiohead',
   'kendrick lamar', 'tyler the creator', 'billie eilish', 'olivia rodrigo', 'sabrina carpenter',
   'drake', 'adele', 'the weeknd', 'kanye west', 'nirvana', 'bob dylan', 'david bowie',
   'fleetwood mac', 'queen', 'rolling stones', 'bruce springsteen', 'johnny cash',
   'bob marley', 'miles davis', 'john coltrane', 'dolly parton', 'willie nelson',
   'hozier', 'chappell roan', 'sza', 'dua lipa', 'post malone', 'bad bunny',
-  // Popular movies/TV
+  // Music: more popular artists
+  'arctic monkeys', 'tame impala', 'the national', 'phoebe bridgers', 'bon iver',
+  'frank ocean', 'mac demarco', 'king gizzard', 'khruangbin', 'japanese breakfast',
+  'mitski', 'boygenius', 'big thief', 'alvvays', 'beach house',
+  'foo fighters', 'green day', 'blink 182', 'my chemical romance', 'paramore',
+  'lana del rey', 'charli xcx', 'doja cat', 'megan thee stallion',
+  'jack white', 'the black keys', 'sturgill simpson', 'tyler childers',
+  'jason isbell', 'colter wall', 'zach bryan', 'morgan wallen', 'chris stapleton',
+  'thelonious monk', 'charles mingus', 'bill evans', 'sonny rollins',
+  'stevie wonder', 'marvin gaye', 'prince', 'michael jackson', 'whitney houston',
+  'elton john', 'billy joel', 'tom petty', 'the cure', 'depeche mode',
+  'tool', 'metallica', 'iron maiden', 'black sabbath',
+  'wu tang clan', 'nas', 'outkast', 'a tribe called quest',
+  'elliott smith', 'jeff buckley', 'nick drake', 'leonard cohen', 'joni mitchell',
+  'sufjan stevens', 'fleet foxes', 'neutral milk hotel',
+
+  // ── Movies & TV ──
   'star wars', 'marvel', 'disney', 'batman', 'lord of the rings',
   'breaking bad', 'the office', 'friends tv', 'stranger things', 'game of thrones',
   'jurassic park', 'indiana jones', 'james bond', 'mission impossible', 'fast furious',
   'pixar', 'studio ghibli', 'miyazaki', 'scorsese', 'tarantino', 'nolan',
   'the sopranos', 'the wire', 'seinfeld', 'simpsons', 'south park',
   'succession', 'house of dragon', 'yellowstone', 'last of us', 'mandalorian',
-  // Popular games
+  // Movies: more popular titles
+  'alien', 'blade runner', 'terminator', 'john wick', 'mad max fury road',
+  'dune villeneuve', 'oppenheimer', 'everything everywhere all at once', 'parasite bong',
+  'wes anderson', 'grand budapest', 'david lynch', 'twin peaks',
+  'stanley kubrick', 'clockwork orange', '2001 space odyssey',
+  'coen brothers', 'fargo', 'no country for old men', 'big lebowski',
+  'a24', 'midsommar', 'hereditary', 'uncut gems',
+  'harry potter movie', 'top gun maverick',
+  // TV series
+  'the bear tv', 'ted lasso', 'severance', 'white lotus', 'shogun',
+  'true detective', 'better call saul', 'ozark', 'fleabag', 'schitts creek',
+  'avatar last airbender', 'rick and morty', 'doctor who', 'star trek',
+
+  // ── Video Games ──
   'zelda', 'mario', 'pokemon', 'final fantasy', 'call of duty', 'minecraft',
   'elden ring', 'god of war', 'spider-man', 'animal crossing',
   'halo', 'resident evil', 'grand theft auto', 'assassins creed', 'dark souls',
   'super smash bros', 'metroid', 'kirby', 'sonic', 'mega man',
   'dragon quest', 'persona', 'fire emblem', 'kingdom hearts', 'monster hunter',
   'lego', 'madden', 'fifa', 'nba 2k', 'fortnite',
+  // Games: more popular titles
+  'baldurs gate', 'hogwarts legacy', 'jedi survivor',
+  'alan wake', 'dead space', 'mario wonder', 'pikmin', 'splatoon',
+  'luigi mansion', 'donkey kong', 'ratchet clank', 'horizon forbidden west',
+  'gran turismo', 'hollow knight', 'hades', 'cuphead',
+  'switch controller', 'ps5 controller', 'xbox controller', 'amiibo',
+
+  // ── Board games & merch ──
+  'catan', 'ticket to ride', 'pandemic board game', 'wingspan', 'azul',
+  'codenames', 'terraforming mars', 'spirit island', 'gloomhaven',
+  'dungeons dragons', 'jigsaw puzzle', 'ravensburger',
+  't-shirt', 'poster', 'funko pop', 'tote bag',
 ]
 
 async function fetchSearch(query) {
