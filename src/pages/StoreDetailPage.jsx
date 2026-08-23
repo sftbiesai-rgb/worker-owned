@@ -26,7 +26,18 @@ function StoreDetailPage() {
     const file = categorySlug ? `/data/products-${categorySlug}.json` : '/data/products.json'
     fetch(file)
       .then(r => r.json())
-      .then(data => setProducts(data.filter(p => p.store_url === entry.url).slice(0, 100)))
+      .then(data => {
+        const matched = data.filter(p => p.store_url === entry.url).slice(0, 100)
+        if (matched.length > 0 || !categorySlug) {
+          setProducts(matched)
+        } else {
+          // Products may be in a different category than the store listing
+          fetch('/data/products.json')
+            .then(r => r.json())
+            .then(all => setProducts(all.filter(p => p.store_url === entry.url).slice(0, 100)))
+            .catch(() => {})
+        }
+      })
       .catch(() => {})
   }, [entry, categorySlug])
 
