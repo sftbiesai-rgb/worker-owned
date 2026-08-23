@@ -13,7 +13,7 @@ import FilterSidebar from '../components/FilterSidebar'
 
 const PICK_LABELS = { hits: 'The Hits', staff: 'Staff', cool: 'Cool', movement: 'Movement' }
 const PICK_COLORS = { hits: 'text-[#004cb9]', staff: 'text-emerald-600', cool: 'text-purple-600', movement: 'text-[#BF0A30]' }
-const PICK_BORDER_COLORS = { hits: '#809ED8', staff: '#82CBAF', cool: '#BDA0F0', movement: '#DF8598' }
+const PICK_BORDER_COLORS = { hits: '#BFC9E8', staff: '#B8E2D3', cool: '#DCCFF7', movement: '#EFC2CB' }
 const PICK_ORDER = ['hits', 'staff', 'cool', 'movement']
 
 function pickFeatured(items) {
