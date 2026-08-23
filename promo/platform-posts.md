@@ -8,7 +8,7 @@ All posts link to https://workerowned.info
 
 **Post:**
 
-I built a searchable marketplace of 50,000+ products from 175+ worker and employee owned companies: workerowned.info
+I built a searchable marketplace of 70,000+ products from 175+ worker and employee owned companies: workerowned.info
 
 Coffee, chocolate, books, clothing, home goods - you search, find something, click through to buy directly from the company's store. No middleman, no commissions, no tracking.
 
@@ -30,7 +30,7 @@ Know a worker-owned company that should be listed? Let me know.
 
 **Description:**
 
-A searchable marketplace of 50,000+ products from 175+ worker and employee owned companies in the US. Search by product name or category and buy directly from the company's own store. Also includes a location-based directory of 110+ worker-owned coffee shops, restaurants, and bars.
+A searchable marketplace of 70,000+ products from 175+ worker and employee owned companies in the US. Search by product name or category and buy directly from the company's own store. Also includes a location-based directory of 110+ worker-owned coffee shops, restaurants, and bars.
 
 No ads, no tracking, no commissions, no accounts. Independent volunteer project.
 
@@ -55,7 +55,7 @@ No ads, no tracking, no commissions, no accounts. Independent volunteer project.
 
 '''Description:'''
 
-workerowned.info is a searchable marketplace of products from worker and employee owned companies. It indexes over 50,000 products from 175+ worker and employee owned companies in the US, making them searchable by product name and category. Users click through to buy directly from the company's own store.
+workerowned.info is a searchable marketplace of products from worker and employee owned companies. It indexes over 70,000 products from 175+ worker and employee owned companies in the US, making them searchable by product name and category. Users click through to buy directly from the company's own store.
 
 The site also includes a location-based directory of 110+ worker-owned coffee shops, restaurants, and bars across the US.
 
@@ -83,7 +83,7 @@ No ads, no tracking, no commissions. Independent volunteer project. The goal is 
 I wanted to buy from worker-owned cooperatives, but there was no single place to see what they actually sell. So I built one.
 
 **What it does:**
-workerowned.info indexes 50,000+ products from 175+ worker and employee owned companies. You search for something - coffee, chocolate, books, soap, whatever - and it shows you which companies sell it. Click through and buy from their store directly.
+workerowned.info indexes 70,000+ products from 175+ worker and employee owned companies. You search for something - coffee, chocolate, books, soap, whatever - and it shows you which companies sell it. Click through and buy from their store directly.
 
 There's also a location tool for finding worker-owned coffee shops and restaurants by city (110+ listings across the US).
 
@@ -145,7 +145,7 @@ Link: https://workerowned.info
 **Entry to add:**
 
 ```
-- [workerowned.info](https://workerowned.info) - Searchable marketplace of 50,000+ products from 175+ worker and employee owned companies, plus 110+ worker-owned coffee shops and restaurants across the US.
+- [workerowned.info](https://workerowned.info) - Searchable marketplace of 70,000+ products from 175+ worker and employee owned companies, plus 110+ worker-owned coffee shops and restaurants across the US.
 ```
 
 ### 6b. Search for and submit to awesome-cooperatives or awesome-ethical-alternatives
@@ -153,7 +153,7 @@ Link: https://workerowned.info
 **Entry to add:**
 
 ```
-- [workerowned.info](https://workerowned.info) - Searchable product directory for worker and employee owned companies. 50,000+ products from 175+ stores. No ads, no tracking, no commissions.
+- [workerowned.info](https://workerowned.info) - Searchable product directory for worker and employee owned companies. 70,000+ products from 175+ stores. No ads, no tracking, no commissions.
 ```
 
 ---
@@ -176,7 +176,7 @@ Space these out by a few days.
 
 **Body:**
 
-I built a searchable marketplace of products from worker and employee owned companies. 50,000+ products from 175+ companies - coffee, chocolate, books, clothing, home goods, etc.
+I built a searchable marketplace of products from worker and employee owned companies. 70,000+ products from 175+ companies - coffee, chocolate, books, clothing, home goods, etc.
 
 You search for something, see which companies sell it, and click through to buy from their store directly. No middleman, no commissions, no tracking.
 
@@ -196,7 +196,7 @@ Let me know if you know companies I should add.
 
 Sharing a free resource I put together: workerowned.info
 
-It's a searchable marketplace of 50,000+ products from 175+ worker and employee owned companies. You can search for anything - coffee, chocolate, books, soap, clothing - and see which companies sell it. Every listing links directly to the company's store.
+It's a searchable marketplace of 70,000+ products from 175+ worker and employee owned companies. You can search for anything - coffee, chocolate, books, soap, clothing - and see which companies sell it. Every listing links directly to the company's store.
 
 There's also a tool for finding worker-owned coffee shops, restaurants, and bars by city (110+ across the US).
 
@@ -214,7 +214,7 @@ workerowned.info
 
 I built something I want to share: workerowned.info
 
-It's a searchable marketplace of 50,000+ products from 175+ worker and employee owned companies in the US. Coffee, chocolate, books, baked goods, home supplies - you name it. Every listing links directly to the company's own store.
+It's a searchable marketplace of 70,000+ products from 175+ worker and employee owned companies in the US. Coffee, chocolate, books, baked goods, home supplies - you name it. Every listing links directly to the company's own store.
 
 There's also a location tool for 110+ worker-owned coffee shops, restaurants, and bars.
 
@@ -236,7 +236,7 @@ If you know a worker-owned business that should be listed, I'd love to hear abou
 
 Hi,
 
-I put together workerowned.info, a searchable marketplace of 50,000+ products from 175+ worker and employee owned companies. People can search for products and click through to buy directly from the company's store. There's also a location directory of 110+ worker-owned coffee shops, restaurants, and bars across the US.
+I put together workerowned.info, a searchable marketplace of 70,000+ products from 175+ worker and employee owned companies. People can search for products and click through to buy directly from the company's store. There's also a location directory of 110+ worker-owned coffee shops, restaurants, and bars across the US.
 
 No ads, no commissions, no tracking. It's a volunteer project - I'm a hobbyist trying to support the cooperative movement in a way I can.
 
