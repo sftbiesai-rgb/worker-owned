@@ -78,6 +78,15 @@ export const SUBCATEGORIES = {
     { slug: 'puzzles', label: 'Puzzles', keywords: ['puzzle', 'jigsaw'] },
     { slug: 'toys', label: 'Toys & Kids', keywords: ['toy', 'plush', 'stuffed', 'figure', 'doll', 'kid', 'children', 'building'] },
   ],
+  'sporting-goods': [
+    { slug: 'bikes', label: 'Bikes & Cycling', keywords: ['bike', 'bicycle', 'cycling', 'cycle', 'pedal', 'handlebar', 'headset', 'crankset', 'derailleur', 'chainring', 'seatpost', 'bottom bracket'] },
+    { slug: 'shoes', label: 'Shoes & Footwear', keywords: ['shoe', 'boot', 'sandal', 'sneaker', 'cleat', 'hiking boot', 'trail runner', 'wading boot'] },
+    { slug: 'shirts', label: 'Shirts & Tops', keywords: ['shirt', 't-shirt', 'tee ', 'jersey', 'tank ', 'polo', 'base layer', 'athletic top'] },
+    { slug: 'outerwear', label: 'Jackets & Outerwear', keywords: ['jacket', 'coat', 'hoodie', 'vest', 'pullover', 'fleece', 'parka', 'windbreaker', 'rain jacket'] },
+    { slug: 'camping', label: 'Camping & Outdoors', keywords: ['tent', 'sleeping bag', 'camp', 'backpack', 'hiking', 'trail', 'cooler', 'lantern', 'compass', 'knife', 'hammock'] },
+    { slug: 'fishing', label: 'Fishing & Hunting', keywords: ['fishing', 'rod', 'reel', 'lure', 'tackle', 'hunting', 'ammo', 'scope', 'decoy'] },
+    { slug: 'fitness', label: 'Fitness & Training', keywords: ['fitness', 'weight', 'dumbbell', 'kettlebell', 'resistance', 'yoga', 'exercise', 'training', 'gym'] },
+  ],
   'books': [
     { slug: 'fiction', label: 'Fiction', keywords: ['subject-fiction', 'novel', 'fiction', 'romance', 'fantasy', 'sci-fi', 'mystery', 'thriller', 'horror', 'historical-fiction', 'poetry'] },
     { slug: 'nonfiction', label: 'Nonfiction', keywords: ['subject-history', 'subject-philosophy', 'subject-political', 'subject-economics', 'subject-anthropology', 'subject-biography', 'nonfiction', 'self-help', 'true-crime', 'science', 'cookbooks', 'health', 'nature'] },
