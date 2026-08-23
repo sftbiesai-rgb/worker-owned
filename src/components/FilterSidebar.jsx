@@ -56,6 +56,29 @@ export default function FilterSidebar({
         </button>
       )}
 
+      {/* Price filter */}
+      <div>
+        <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Price</h3>
+        <div className="flex gap-2">
+          <input
+            type="number"
+            placeholder="Min"
+            value={priceMin}
+            onChange={e => onPriceChange(e.target.value, priceMax)}
+            className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#004cb9] placeholder-gray-400"
+            min="0"
+          />
+          <input
+            type="number"
+            placeholder="Max"
+            value={priceMax}
+            onChange={e => onPriceChange(priceMin, e.target.value)}
+            className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#004cb9] placeholder-gray-400"
+            min="0"
+          />
+        </div>
+      </div>
+
       {/* Category filter */}
       {categories.length > 1 && (
         <div>
@@ -97,7 +120,7 @@ export default function FilterSidebar({
               className="w-full mb-2 px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#004cb9] placeholder-gray-400"
             />
           )}
-          <div className="space-y-0.5 max-h-48 overflow-y-auto">
+          <div className="space-y-0.5 max-h-96 overflow-y-auto">
             {activeStore && (
               <button
                 onClick={() => onStoreChange('')}
@@ -122,29 +145,6 @@ export default function FilterSidebar({
           </div>
         </div>
       )}
-
-      {/* Price filter */}
-      <div>
-        <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Price</h3>
-        <div className="flex gap-2">
-          <input
-            type="number"
-            placeholder="Min"
-            value={priceMin}
-            onChange={e => onPriceChange(e.target.value, priceMax)}
-            className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#004cb9] placeholder-gray-400"
-            min="0"
-          />
-          <input
-            type="number"
-            placeholder="Max"
-            value={priceMax}
-            onChange={e => onPriceChange(priceMin, e.target.value)}
-            className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#004cb9] placeholder-gray-400"
-            min="0"
-          />
-        </div>
-      </div>
     </div>
   )
 
