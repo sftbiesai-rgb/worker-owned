@@ -7,9 +7,11 @@ export default function FilterSidebar({
   activeStore,
   priceMin,
   priceMax,
+  refine,
   onCategoryChange,
   onStoreChange,
   onPriceChange,
+  onRefineChange,
   onClear,
 }) {
   const [expanded, setExpanded] = useState(false)
@@ -42,7 +44,7 @@ export default function FilterSidebar({
     ? stores.filter(([name]) => name.toLowerCase().includes(storeSearch.toLowerCase()))
     : stores
 
-  const hasFilters = activeCategory || activeStore || priceMin || priceMax
+  const hasFilters = activeCategory || activeStore || priceMin || priceMax || refine
 
   const filterContent = (
     <div className="space-y-4">
@@ -55,6 +57,18 @@ export default function FilterSidebar({
           Clear all filters
         </button>
       )}
+
+      {/* Refine keyword filter */}
+      <div>
+        <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Refine</h3>
+        <input
+          type="text"
+          value={refine}
+          onChange={e => onRefineChange(e.target.value)}
+          placeholder='e.g. "red", "womens"…'
+          className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#004cb9] placeholder-gray-400"
+        />
+      </div>
 
       {/* Price filter */}
       <div>

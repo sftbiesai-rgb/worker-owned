@@ -60,6 +60,7 @@ function MarketplaceIndexPage() {
   const filterStore = searchParams.get('store') || ''
   const filterPmin = searchParams.get('pmin') || ''
   const filterPmax = searchParams.get('pmax') || ''
+  const filterRefine = searchParams.get('refine') || ''
   const [products, setProducts] = useState([])
   const [loadingProducts, setLoadingProducts] = useState(false)
   const [featured, setFeatured] = useState([])
@@ -67,8 +68,10 @@ function MarketplaceIndexPage() {
   const [searchCat, setSearchCat] = useState('')
   const [companiesExpanded, setCompaniesExpanded] = useState(false)
   const priceDebounceRef = useRef(null)
+  const refineDebounceRef = useRef(null)
   const [localPmin, setLocalPmin] = useState(filterPmin)
   const [localPmax, setLocalPmax] = useState(filterPmax)
+  const [localRefine, setLocalRefine] = useState(filterRefine)
 
   const updateParams = useCallback((updates) => {
     setSearchParams(prev => {
@@ -83,14 +86,16 @@ function MarketplaceIndexPage() {
 
   const handleSearchSubmit = useCallback((e) => {
     e?.preventDefault()
-    updateParams({ q: inputValue, page: '1', cat: searchCat, store: '', pmin: '', pmax: '' })
+    updateParams({ q: inputValue, page: '1', cat: searchCat, store: '', pmin: '', pmax: '', refine: '' })
     setLocalPmin('')
     setLocalPmax('')
+    setLocalRefine('')
   }, [inputValue, searchCat, updateParams])
 
   useEffect(() => { setInputValue(query); setCompaniesExpanded(false) }, [query])
   useEffect(() => { setLocalPmin(filterPmin) }, [filterPmin])
   useEffect(() => { setLocalPmax(filterPmax) }, [filterPmax])
+  useEffect(() => { setLocalRefine(filterRefine) }, [filterRefine])
 
   const fetchedRef = useRef(false)
 
@@ -143,15 +148,22 @@ function MarketplaceIndexPage() {
     [query, allCompanies, scrapedStores])
   const results = useMemo(() => searchProducts(query, products), [query, products])
 
-  // Apply filters: category → store → price
+  // Apply filters: category → store → price → refine keywords
   const filteredResults = useMemo(() => {
     let r = results
     if (filterCat) r = r.filter(p => p.site_section === filterCat)
     if (filterStore) r = r.filter(p => p.store_name === filterStore)
     if (filterPmin) r = r.filter(p => p.price && parseFloat(p.price) >= parseFloat(filterPmin))
     if (filterPmax) r = r.filter(p => p.price && parseFloat(p.price) <= parseFloat(filterPmax))
+    const terms = filterRefine.toLowerCase().split(/\s+/).filter(Boolean)
+    if (terms.length > 0) {
+      r = r.filter(p => {
+        const title = (p.title || '').toLowerCase()
+        return terms.every(t => title.includes(t) || (p.tags || []).some(tag => tag.toLowerCase().includes(t)))
+      })
+    }
     return r
-  }, [results, filterCat, filterStore, filterPmin, filterPmax])
+  }, [results, filterCat, filterStore, filterPmin, filterPmax, filterRefine])
 
   const PER_PAGE = 40
 
@@ -180,10 +192,19 @@ function MarketplaceIndexPage() {
     }, 300)
   }, [updateParams])
 
+  const handleRefineChange = useCallback((refine) => {
+    setLocalRefine(refine)
+    clearTimeout(refineDebounceRef.current)
+    refineDebounceRef.current = setTimeout(() => {
+      updateParams({ refine, page: '1' })
+    }, 300)
+  }, [updateParams])
+
   const handleClearFilters = useCallback(() => {
     setLocalPmin('')
     setLocalPmax('')
-    updateParams({ cat: '', store: '', pmin: '', pmax: '', page: '1' })
+    setLocalRefine('')
+    updateParams({ cat: '', store: '', pmin: '', pmax: '', refine: '', page: '1' })
   }, [updateParams])
 
   return (
@@ -261,9 +282,11 @@ function MarketplaceIndexPage() {
                 activeStore={filterStore}
                 priceMin={localPmin}
                 priceMax={localPmax}
+                refine={localRefine}
                 onCategoryChange={cat => updateParams({ cat, page: '1', store: '' })}
                 onStoreChange={store => updateParams({ store, page: '1' })}
                 onPriceChange={handlePriceChange}
+                onRefineChange={handleRefineChange}
                 onClear={handleClearFilters}
               />
               <div className="flex-1 min-w-0">
