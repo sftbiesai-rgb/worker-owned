@@ -173,7 +173,7 @@ function MarketplacePage() {
             </div>
           )}
 
-          <div className="flex justify-center gap-2 text-xs mt-3">
+          <div className="flex justify-end gap-2 text-xs mt-3">
             <span className="px-3 py-1.5 rounded-md bg-gray-700 text-white font-medium">
               Products
             </span>
