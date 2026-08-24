@@ -173,16 +173,9 @@ function MarketplacePage() {
             </div>
           )}
 
-          <div className="flex justify-end gap-2 text-xs mt-3">
-            <span className="px-3 py-1.5 rounded-md bg-gray-700 text-white font-medium">
-              Products
-            </span>
-            <Link
-              to={`/marketplace/${category}/directory`}
-              className="px-3 py-1.5 rounded-md border border-gray-200 text-gray-500 hover:text-[#004cb9] hover:border-[#004cb9] transition-colors"
-            >
-              Directory
-            </Link>
+          <div className="flex justify-end gap-3 text-xs mt-3">
+            <span className="font-semibold text-[#BF0A30]">Products</span>
+            <Link to={`/marketplace/${category}/directory`} className="text-[#004cb9] hover:text-[#003a8c] transition-colors">Directory</Link>
           </div>
         </div>
 

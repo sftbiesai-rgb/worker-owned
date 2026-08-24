@@ -97,16 +97,9 @@ function CategoryDirectoryPage() {
             ))}
           </div>
 
-          <div className="flex justify-end gap-2 text-xs">
-            <Link
-              to={`/marketplace/${category}`}
-              className="px-3 py-1.5 rounded-md border border-gray-200 text-gray-500 hover:text-[#004cb9] hover:border-[#004cb9] transition-colors"
-            >
-              Products
-            </Link>
-            <span className="px-3 py-1.5 rounded-md bg-gray-700 text-white font-medium">
-              Directory
-            </span>
+          <div className="flex justify-end gap-3 text-xs">
+            <Link to={`/marketplace/${category}`} className="text-[#BF0A30] hover:text-[#8c0722] transition-colors">Products</Link>
+            <span className="font-semibold text-[#004cb9]">Directory</span>
           </div>
         </div>
 
