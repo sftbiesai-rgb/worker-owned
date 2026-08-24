@@ -7,6 +7,7 @@ import MarketplacePage from './pages/MarketplacePage.jsx'
 import MarketplaceIndexPage from './pages/MarketplaceIndexPage.jsx'
 import StoreDetailPage from './pages/StoreDetailPage.jsx'
 import CompaniesPage from './pages/CompaniesPage.jsx'
+import CategoryDirectoryPage from './pages/CategoryDirectoryPage.jsx'
 import AlternativesPage from './pages/AlternativesPage.jsx'
 import WhatIsCoopPage from './pages/WhatIsCoopPage.jsx'
 import CoffeeCityPage from './pages/CoffeeCityPage.jsx'
@@ -31,6 +32,7 @@ export default function App() {
       <Route path="/marketplace" element={<MarketplaceIndexPage />} />
       <Route path="/marketplace/companies" element={<CompaniesPage />} />
       <Route path="/marketplace/store/:store" element={<StoreDetailPage />} />
+      <Route path="/marketplace/:category/directory" element={<CategoryDirectoryPage />} />
       <Route path="/marketplace/:category/:subcategory" element={<MarketplacePage />} />
       <Route path="/marketplace/:category" element={<MarketplacePage />} />
     </Routes>
