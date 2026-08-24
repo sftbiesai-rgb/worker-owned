@@ -124,13 +124,12 @@ function parseProducts(html) {
     const linkMatch = card.match(/href="\/p\/(\d+)\/([^"]+)"\s+title="([^"]+)"/);
     if (!linkMatch) continue;
     const [, productId, slug, title] = linkMatch;
-    // Check SHIPPING availability (not Curbside Pickup). Skip only if shipping
-    // is Back-order (av30) or Out of Stock (av50).
+    // Check SHIPPING availability (not Curbside Pickup). Keep only In Stock
+    // (av10/av11), Special Order (av21), or Pre-order (av40). Fully-unshippable
+    // items render NO "Shipping:" line at all, so a missing span means skip.
     const shipMatch = card.match(/Shipping[^<]*<span class="av\s+([^"]+)"/s);
-    if (shipMatch) {
-      const cls = shipMatch[1];
-      if (cls.includes('av30') || cls.includes('av50')) continue;
-    }
+    const shipCls = shipMatch?.[1] || '';
+    if (!/av10|av11|av21|av40/.test(shipCls)) continue;
     const imgMatch = card.match(/data-src="([^"]+)"/);
     let image = null;
     if (imgMatch && !imgMatch[1].includes('ArtNotAvailable')) {

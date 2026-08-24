@@ -23,7 +23,20 @@ const PRODUCTS_FILE = join(__dirname, '..', 'public', 'data', 'products.json');
 const MARKETPLACE_FILE = join(__dirname, '..', 'src', 'data', 'marketplace.json');
 const BASE = 'https://www.bullmoose.com';
 const DRY_RUN = process.argv.includes('--dry-run');
+const PILOT = process.argv.includes('--pilot');
+const MERGE_ONLY = process.argv.includes('--merge-only');
 const DELAY_MS = 800;
+const CHECKPOINT_FILE = '/tmp/bm-scrape-raw.json';
+const PILOT_FILE = '/tmp/bm-pilot.json';
+
+// Small representative subset for --pilot runs (verify filter before full scrape)
+const PILOT_CATEGORIES = [
+  { id: '469', slug: 'rock-pop', tag: 'music' },
+  { id: '209', slug: 'nintendo-switch-games', tag: 'video games' },
+  { id: '245', slug: 'fiction-literature', tag: 'books' },
+  { id: '301', slug: 'hot-pre-orders', tag: 'music' },
+];
+const PILOT_SEARCH_TERMS = ['taylor swift', 'zelda'];
 
 // Categories to scrape — picked to cover the full catalog with minimal overlap.
 // Each category is capped at ~1000 results by FieldStack, so we use genre-level
@@ -287,6 +300,11 @@ async function fetchCategory(cat) {
   return products;
 }
 
+// Running tally of shipping-status decisions, logged at end of run for auditing.
+const avStats = { av10: 0, av11: 0, av21: 0, av40: 0, skipped_av30: 0, skipped_av50: 0, skipped_no_span: 0 };
+// Sample of skipped items (with reason) for pilot verification.
+const skippedSamples = [];
+
 function parseProducts(html, categoryTag) {
   const products = [];
 
@@ -302,13 +320,29 @@ function parseProducts(html, categoryTag) {
     const [, productId, slug, title] = linkMatch;
 
     // Check SHIPPING availability (not Curbside Pickup — items can be out of stock
-    // locally but still shippable). Skip only if shipping is Back-order (av30) or
-    // Out of Stock (av50). Keep: In Stock (av10/av11), Pre-order (av40), Special Order (av21).
+    // locally but still shippable). Keep only cards whose Shipping line shows
+    // In Stock (av10/av11), Special Order (av21), or Pre-order (av40).
+    // IMPORTANT: fully-unshippable items render NO "Shipping:" line at all (only a
+    // Pickup line with av50), so a missing span means unshippable — skip it.
     const shipMatch = card.match(/Shipping[^<]*<span class="av\s+([^"]+)"/s);
-    if (shipMatch) {
-      const cls = shipMatch[1];
-      if (cls.includes('av30') || cls.includes('av50')) continue;
+    const shipCls = shipMatch?.[1] || '';
+    const keepMatch = shipCls.match(/av10|av11|av21|av40/);
+    if (!keepMatch) {
+      if (shipCls.includes('av30')) avStats.skipped_av30++;
+      else if (shipCls.includes('av50')) avStats.skipped_av50++;
+      else avStats.skipped_no_span++;
+      if (skippedSamples.length < 1000) {
+        // For no-span cards, record whatever av class the card DOES show (pickup status)
+        const anyAv = card.match(/<span class="av\s+([^"]+)"/);
+        skippedSamples.push({
+          title: decodeHtmlEntities(title),
+          url: `${BASE}/p/${productId}/${slug}`,
+          reason: shipCls ? `shipping:${shipCls.trim()}` : `no-shipping-line (card av: ${anyAv?.[1]?.trim() || 'none'})`,
+        });
+      }
+      continue;
     }
+    avStats[keepMatch[0]]++;
 
     // Extract image URL (skip Bull Moose's "no art" placeholder)
     const imgMatch = card.match(/data-src="([^"]+)"/);
@@ -338,6 +372,7 @@ function parseProducts(html, categoryTag) {
       url: `${BASE}/p/${productId}/${slug}`,
       format,
       tags,
+      shipStatus: keepMatch[0], // av10/av11 = In Stock, av21 = Special Order, av40 = Pre-order
     });
   }
 
@@ -535,63 +570,109 @@ async function main() {
     process.exit(1);
   }
 
-  console.log(`Scraping Bull Moose across ${CATEGORIES.length} categories...`);
+  const categories = PILOT ? PILOT_CATEGORIES : CATEGORIES;
+  const searchTerms = PILOT ? PILOT_SEARCH_TERMS : SEARCH_TERMS;
 
   // Deduplicate by product ID across categories
   const byId = new Map();
-  let totalFetched = 0;
+  let zeroCategories = 0;
 
-  for (const cat of CATEGORIES) {
-    process.stdout.write(`  ${cat.slug}... `);
-    const products = await fetchCategory(cat);
-    let newCount = 0;
+  const saveCheckpoint = () => {
+    if (PILOT) return;
+    writeFileSync(CHECKPOINT_FILE, JSON.stringify({
+      zeroCategories, avStats, products: [...byId.values()],
+    }));
+  };
 
-    for (const p of products) {
-      if (!byId.has(p.productId)) {
-        byId.set(p.productId, p);
-        newCount++;
-      } else {
-        // Merge tags from duplicate appearances
-        const existing = byId.get(p.productId);
-        for (const tag of p.tags) {
-          if (!existing.tags.includes(tag)) existing.tags.push(tag);
+  if (MERGE_ONLY) {
+    const cp = JSON.parse(readFileSync(CHECKPOINT_FILE, 'utf8'));
+    zeroCategories = cp.zeroCategories;
+    Object.assign(avStats, cp.avStats);
+    for (const p of cp.products) byId.set(p.productId, p);
+    console.log(`Loaded checkpoint: ${byId.size} products, ${zeroCategories} zero-result categories`);
+  } else {
+    console.log(`Scraping Bull Moose across ${categories.length} categories...`);
+    let totalFetched = 0;
+
+    for (const cat of categories) {
+      process.stdout.write(`  ${cat.slug}... `);
+      const products = await fetchCategory(cat);
+      if (products.length === 0) zeroCategories++;
+      let newCount = 0;
+
+      for (const p of products) {
+        if (!byId.has(p.productId)) {
+          byId.set(p.productId, p);
+          newCount++;
+        } else {
+          // Merge tags from duplicate appearances
+          const existing = byId.get(p.productId);
+          for (const tag of p.tags) {
+            if (!existing.tags.includes(tag)) existing.tags.push(tag);
+          }
         }
       }
+
+      totalFetched += products.length;
+      console.log(`${products.length} fetched, ${newCount} new (${byId.size} unique total)`);
+      saveCheckpoint();
+      await sleep(2000); // Extra delay between categories to avoid throttling
     }
 
-    totalFetched += products.length;
-    console.log(`${products.length} fetched, ${newCount} new (${byId.size} unique total)`);
-    await sleep(2000); // Extra delay between categories to avoid throttling
-  }
+    console.log(`\nCategories: ${totalFetched} fetched, ${byId.size} unique products`);
 
-  console.log(`\nCategories: ${totalFetched} fetched, ${byId.size} unique products`);
-
-  // Supplemental search scrape for popular items missed by category pages
-  console.log(`\nSearching ${SEARCH_TERMS.length} popular terms...`);
-  let searchNew = 0;
-  for (const term of SEARCH_TERMS) {
-    process.stdout.write(`  "${term}"... `);
-    const results = await fetchSearch(term);
-    let newCount = 0;
-    for (const p of results) {
-      if (!byId.has(p.productId)) {
-        // Fix the 'search' tag with real category
-        p.tags[0] = inferCategoryTag(p.tags);
-        byId.set(p.productId, p);
-        newCount++;
+    // Supplemental search scrape for popular items missed by category pages
+    console.log(`\nSearching ${searchTerms.length} popular terms...`);
+    let searchNew = 0;
+    let termCount = 0;
+    for (const term of searchTerms) {
+      process.stdout.write(`  "${term}"... `);
+      const results = await fetchSearch(term);
+      let newCount = 0;
+      for (const p of results) {
+        if (!byId.has(p.productId)) {
+          // Fix the 'search' tag with real category
+          p.tags[0] = inferCategoryTag(p.tags);
+          byId.set(p.productId, p);
+          newCount++;
+        }
       }
+      searchNew += newCount;
+      console.log(`${results.length} fetched, ${newCount} new (${byId.size} unique total)`);
+      if (++termCount % 25 === 0) saveCheckpoint();
+      await sleep(300);
     }
-    searchNew += newCount;
-    console.log(`${results.length} fetched, ${newCount} new (${byId.size} unique total)`);
-    await sleep(300);
+    console.log(`Search: ${searchNew} new products found`);
+    saveCheckpoint();
   }
-  console.log(`Search: ${searchNew} new products found`);
 
   console.log(`\nTotal: ${byId.size} unique products`);
+  console.log(`Shipping-status audit: kept ${JSON.stringify({ av10: avStats.av10, av11: avStats.av11, av21: avStats.av21, av40: avStats.av40 })}`);
+  console.log(`                    skipped ${JSON.stringify({ av30: avStats.skipped_av30, av50: avStats.skipped_av50, no_shipping_line: avStats.skipped_no_span })}`);
+
+  if (PILOT) {
+    writeFileSync(PILOT_FILE, JSON.stringify({
+      avStats,
+      kept: [...byId.values()],
+      skippedSamples,
+    }, null, 2));
+    console.log(`\nPilot run — wrote ${byId.size} kept + ${skippedSamples.length} skipped samples to ${PILOT_FILE}`);
+    console.log('(products.json untouched)');
+    return;
+  }
 
   if (DRY_RUN) {
     console.log('Dry run — not writing to file');
     return;
+  }
+
+  // Guardrails: refuse to merge a scrape that looks partial. The replace
+  // strategy below drops every old product not re-found, so merging a bad
+  // scrape would silently gut the catalog.
+  if (zeroCategories > 3 || byId.size < 5000) {
+    console.error(`\nABORTING MERGE: scrape looks partial (${zeroCategories} categories returned 0 products, ${byId.size} unique products).`);
+    console.error(`Checkpoint preserved at ${CHECKPOINT_FILE}. Investigate, then re-run or use --merge-only.`);
+    process.exit(1);
   }
 
   // Format for products.json
