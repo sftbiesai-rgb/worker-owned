@@ -491,6 +491,11 @@ const SEARCH_TERMS = [
   'gran turismo', 'hollow knight', 'hades', 'cuphead',
   'switch controller', 'ps5 controller', 'xbox controller', 'amiibo',
 
+  // ── Personal favorites (owner-requested coverage) ──
+  'adrian tchaikovsky', 'aphex twin', 'boards of canada', 'techno', 'house music',
+  'electro', 'electronic music', 'nabokov', 'thomas pynchon', 'paul thomas anderson',
+  'boston red sox', 'red sox', 'x-files', 'no pressure',
+
   // ── Board games & merch ──
   'catan', 'ticket to ride', 'pandemic board game', 'wingspan', 'azul',
   'codenames', 'terraforming mars', 'spirit island', 'gloomhaven',
