@@ -674,7 +674,7 @@ async function main() {
   // Guardrails: refuse to merge a scrape that looks partial. The replace
   // strategy below drops every old product not re-found, so merging a bad
   // scrape would silently gut the catalog.
-  if (zeroCategories > 3 || byId.size < 5000) {
+  if (zeroCategories > 20 || byId.size < 5000) {
     console.error(`\nABORTING MERGE: scrape looks partial (${zeroCategories} categories returned 0 products, ${byId.size} unique products).`);
     console.error(`Checkpoint preserved at ${CHECKPOINT_FILE}. Investigate, then re-run or use --merge-only.`);
     process.exit(1);
