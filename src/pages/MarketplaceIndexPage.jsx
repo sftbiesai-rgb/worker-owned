@@ -416,7 +416,7 @@ function MarketplaceIndexPage() {
         <p className="text-center text-xs text-gray-400 mt-3">
           {products.length > 0
             ? <>{products.length.toLocaleString()} products from {storeCount} worker and employee owned companies</>
-            : <>70,000+ products from 175+ worker and employee owned companies</>}
+            : <>50,000+ products from 175+ worker and employee owned companies</>}
         </p>
 
         <div className="mt-2 text-center space-y-1">
