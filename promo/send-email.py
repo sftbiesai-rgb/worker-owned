@@ -43,6 +43,7 @@ def parse_emails():
         r'<div class="meta">(.*?)</div>\s*'
         r'(?:<div class="subject">(.*?)</div>\s*)?'
         r'<div class="body"[^>]*>(.*?)</div>\s*'
+        r'(?:<button class="send-btn"[^>]*>[^<]*</button>\s*)?'
         r'<button class="copy-btn"',
         html, re.DOTALL
     )

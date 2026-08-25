@@ -102,41 +102,49 @@ async function tryShopify(entry) {
 async function trySouthernExposure(entry) {
   if (!entry.url.includes('southernexposure.com')) return null;
   const IMAGE_BASE = 'https://www.southernexposure.com/media/';
+  const PER_PAGE = 50;
   try {
-    const res = await fetchWithTimeout('https://www.southernexposure.com/api/products/search', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0' },
-      body: JSON.stringify({
-        query: '', searchDescription: false,
-        filterOrganic: false, filterHeirloom: false,
-        filterRegional: false, filterSmallGrower: false,
-        page: 1, perPage: MAX_PER_STORE,
-      }),
-    });
-    if (!res.ok) return null;
-    const data = await res.json();
-    if (!Array.isArray(data?.products)) return null;
-
-    const products = data.products
-      .filter(p => p.product?.images?.length > 0 && p.variants?.[0]?.price > 0)
-      .map((p, i) => {
-        const prod = p.product;
-        const price = p.variants[0].salePrice ?? p.variants[0].price;
-        return {
-          id: `${entry.id}-se-${prod.id}`,
-          title: prod.name,
-          price: (price / 100).toFixed(2),
-          image: `${IMAGE_BASE}${(prod.images[0].md ?? prod.images[0].sm ?? prod.images[0].lg)?.src ?? prod.images[0].original}`,
-          url: `https://www.southernexposure.com/products/${prod.slug}.html`,
-          store_name: entry.name,
-          store_url: entry.url,
-          ownership_type: entry.ownership_type,
-          site_section: entry.site_section,
-          tags: [],
-        };
+    const allProducts = [];
+    for (let page = 1; ; page++) {
+      const res = await fetchWithTimeout('https://www.southernexposure.com/api/products/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0' },
+        body: JSON.stringify({
+          query: '', searchDescription: false,
+          filterOrganic: false, filterHeirloom: false,
+          filterRegional: false, filterSmallGrower: false,
+          page, perPage: PER_PAGE,
+        }),
       });
+      if (!res.ok) break;
+      const data = await res.json();
+      if (!Array.isArray(data?.products) || data.products.length === 0) break;
 
-    return products.length ? products : null;
+      const products = data.products
+        .filter(p => p.product?.images?.length > 0 && p.variants?.[0]?.price > 0)
+        .map((p) => {
+          const prod = p.product;
+          const price = p.variants[0].salePrice ?? p.variants[0].price;
+          return {
+            id: `${entry.id}-se-${prod.id}`,
+            title: prod.name,
+            price: (price / 100).toFixed(2),
+            image: `${IMAGE_BASE}${(prod.images[0].md ?? prod.images[0].sm ?? prod.images[0].lg)?.src ?? prod.images[0].original}`,
+            url: `https://www.southernexposure.com/products/${prod.slug}.html`,
+            store_name: entry.name,
+            store_url: entry.url,
+            ownership_type: entry.ownership_type,
+            site_section: entry.site_section,
+            tags: [],
+          };
+        });
+      allProducts.push(...products);
+
+      if (data.products.length < PER_PAGE) break;
+      await new Promise(r => setTimeout(r, 300));
+    }
+
+    return allProducts.length ? allProducts : null;
   } catch { return null; }
 }
 
