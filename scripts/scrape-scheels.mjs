@@ -16,6 +16,7 @@
  *   node scripts/scrape-scheels.mjs --dry-run    # show counts without writing
  *   node scripts/scrape-scheels.mjs --resume     # resume from checkpoint
  *   node scripts/scrape-scheels.mjs --merge-only # merge existing checkpoint into products.json
+ *   node scripts/scrape-scheels.mjs --enrich    # fetch prices from product pages for category-scraped products
  */
 
 import { readFileSync, writeFileSync, existsSync } from 'fs';

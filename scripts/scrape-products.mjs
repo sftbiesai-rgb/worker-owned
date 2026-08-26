@@ -140,7 +140,7 @@ async function trySouthernExposure(entry) {
         });
       allProducts.push(...products);
 
-      if (data.products.length < PER_PAGE) break;
+      if (data.products.length === 0) break;
       await new Promise(r => setTimeout(r, 300));
     }
 
