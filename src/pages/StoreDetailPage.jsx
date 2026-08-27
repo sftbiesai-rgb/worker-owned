@@ -15,31 +15,66 @@ const STORE_BY_SLUG = Object.fromEntries(
   [...marketplaceData].reverse().map(s => [slugify(s.name), s])
 )
 
+function ProductCard({ p }) {
+  return (
+    <a
+      href={p.url}
+      target="_blank"
+      rel="noopener"
+      className="bg-[#f5f5f7] rounded-xl overflow-hidden hover:ring-1 hover:ring-[#004cb9] transition-all group"
+    >
+      {p.image && (
+        <div className="aspect-square w-full overflow-hidden bg-gray-100 relative">
+          <ProductImage src={p.image} alt={p.title} />
+          {p.available === false && (
+            <span className="absolute top-1.5 left-1.5 bg-gray-800/75 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded">Sold out</span>
+          )}
+        </div>
+      )}
+      <div className="px-3 py-2">
+        <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{p.title}</p>
+        {p.price && <p className="text-xs font-semibold text-[#004cb9] mt-0.5">${p.price}</p>}
+      </div>
+      {displayTags(p.tags)?.length > 0 && (
+        <div className="px-3 pb-2 hidden group-hover:block">
+          <p className="text-[10px] text-gray-400 leading-snug line-clamp-1">{displayTags(p.tags).join(' · ')}</p>
+        </div>
+      )}
+    </a>
+  )
+}
+
 function StoreDetailPage() {
   const { store } = useParams()
   const entry = STORE_BY_SLUG[store]
   const [products, setProducts] = useState([])
+  const [storeSummary, setStoreSummary] = useState(null)
   const categorySlug = entry ? SECTION_SLUGS[entry.site_section] : null
 
   useEffect(() => {
     if (!entry) return
-    const file = categorySlug ? `/data/products-${categorySlug}.json` : '/data/products.json'
-    fetch(file)
-      .then(r => r.json())
+    // Try store summary file first (generated for stores with 500+ products)
+    fetch(`/data/stores/${store}.json`)
+      .then(r => { if (!r.ok) throw new Error(); return r.json() })
       .then(data => {
-        const matched = data.filter(p => p.store_url === entry.url).slice(0, 100)
-        if (matched.length > 0 || !categorySlug) {
-          setProducts(matched)
-        } else {
-          // Products may be in a different category than the store listing
-          fetch('/data/products.json')
-            .then(r => r.json())
-            .then(all => setProducts(all.filter(p => p.store_url === entry.url).slice(0, 100)))
-            .catch(() => {})
-        }
+        setStoreSummary(data)
+        // Flatten all section products for the grid
+        const all = data.sections.flatMap(s => s.products)
+        setProducts(all)
       })
-      .catch(() => {})
-  }, [entry, categorySlug])
+      .catch(() => {
+        // Fall back to category file
+        const file = categorySlug ? `/data/products-${categorySlug}.json` : null
+        if (!file) return
+        fetch(file)
+          .then(r => r.json())
+          .then(data => {
+            const matched = data.filter(p => p.store_url === entry.url).slice(0, 100)
+            setProducts(matched)
+          })
+          .catch(() => {})
+      })
+  }, [entry, store, categorySlug])
 
   useEffect(() => {
     if (!entry) return
@@ -103,42 +138,32 @@ function StoreDetailPage() {
           </div>
 
           {/* Products */}
-          {products.length > 0 && (
+          {storeSummary ? (
+            <>
+              <p className="text-sm text-gray-500 mb-4">{storeSummary.total.toLocaleString()} products available</p>
+              {storeSummary.sections.map(section => (
+                <div key={section.label} className="mb-5">
+                  <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2 capitalize">
+                    {section.label} <span className="text-gray-400 font-normal">({section.count.toLocaleString()})</span>
+                  </h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                    {section.products.map(p => (
+                      <ProductCard key={p.id} p={p} />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </>
+          ) : products.length > 0 ? (
             <>
               <h2 className="text-sm font-bold text-gray-700 mb-3">{products.length} products</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                 {products.map(p => (
-                  <a
-                    key={p.id}
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener"
-                    className="bg-[#f5f5f7] rounded-xl overflow-hidden hover:ring-1 hover:ring-[#004cb9] transition-all group"
-                  >
-                    {p.image && (
-                      <div className="aspect-square w-full overflow-hidden bg-gray-100 relative">
-                        <ProductImage src={p.image} alt={p.title} />
-                        {p.available === false && (
-                          <span className="absolute top-1.5 left-1.5 bg-gray-800/75 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded">Sold out</span>
-                        )}
-                      </div>
-                    )}
-                    <div className="px-3 py-2">
-                      <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{p.title}</p>
-                      {p.price && <p className="text-xs font-semibold text-[#004cb9] mt-0.5">${p.price}</p>}
-                    </div>
-                    {displayTags(p.tags)?.length > 0 && (
-                      <div className="px-3 pb-2 hidden group-hover:block">
-                        <p className="text-[10px] text-gray-400 leading-snug line-clamp-1">{displayTags(p.tags).join(' · ')}</p>
-                      </div>
-                    )}
-                  </a>
+                  <ProductCard key={p.id} p={p} />
                 ))}
               </div>
             </>
-          )}
-
-          {products.length === 0 && (
+          ) : (
             <div className="bg-[#f5f5f7] rounded-xl px-4 py-4 text-center">
               <a
                 href={entry.url}

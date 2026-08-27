@@ -234,4 +234,133 @@ writeFileSync(resolve(root, 'public/data/search.json'), searchJson)
 const sizeMB = (Buffer.byteLength(searchJson) / 1024 / 1024).toFixed(1)
 console.log(`search.json: ${searchGrouped.length} products (${sizeMB} MB)`)
 
+// ── Store summary files for large stores ──
+// Group products by store, and for stores with 500+ products generate a
+// representative cross-section organized by subcategory.
+
+const byStore = new Map()
+for (const p of products) {
+  const key = slugify(p.store_name)
+  if (!byStore.has(key)) byStore.set(key, [])
+  byStore.get(key).push(p)
+}
+
+function slugify(str) {
+  return str.toLowerCase().replace(/['']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+}
+
+// Pick representative products: sample across subcategories, prefer items with images
+function inferCategory(p) {
+  // Use category path from tags if it looks like a category (contains >)
+  const catTag = (p.tags || []).find(t => t.includes(' > ') || t.includes(' › '))
+  if (catTag) return catTag.split(' > ').pop().split(' › ').pop().trim()
+
+  // Use site_section + title keywords to infer subcategory
+  const title = (p.title || '').toLowerCase()
+  const section = p.site_section || ''
+
+  if (section.includes('Apparel') || section.includes('Clothing')) {
+    if (/\bboot|shoe|sneaker|sandal|clog|slipper|loafer/i.test(title)) return 'Shoes & Footwear'
+    if (/\bjacket|coat|vest|parka|fleece/i.test(title)) return 'Jackets & Outerwear'
+    if (/\bshirt|tee |t-shirt|polo|tank |blouse|top /i.test(title)) return 'Shirts & Tops'
+    if (/\bpant|jean|short|legging|bottom/i.test(title)) return 'Pants & Bottoms'
+    if (/\bhat|cap |beanie|visor/i.test(title)) return 'Hats & Caps'
+    if (/\bsock|underwear|bra /i.test(title)) return 'Undergarments'
+    if (/\bdress|skirt|romper/i.test(title)) return 'Dresses & Skirts'
+    if (/\bhoodie|sweatshirt|pullover|sweater/i.test(title)) return 'Hoodies & Sweaters'
+    return 'Apparel'
+  }
+  if (section.includes('Sporting')) {
+    if (/\bfish|rod|reel|lure|tackle/i.test(title)) return 'Fishing'
+    if (/\bgolf|putter|driver|wedge|iron /i.test(title)) return 'Golf'
+    if (/\bbike|cycling|helmet|pedal/i.test(title)) return 'Cycling'
+    if (/\btent|camp|hike|backpack|sleeping/i.test(title)) return 'Camp & Hike'
+    if (/\bbaseball|bat |glove|mitt/i.test(title)) return 'Baseball & Softball'
+    if (/\bbasketball|soccer|football|volleyball|hockey/i.test(title)) return 'Team Sports'
+    if (/\brunning|trail/i.test(title)) return 'Running'
+    if (/\bski|snowboard|snow /i.test(title)) return 'Winter Sports'
+    if (/\bkayak|paddle|swim|water/i.test(title)) return 'Water Sports'
+    if (/\bfitness|weight|yoga|exercise|dumbbell/i.test(title)) return 'Fitness'
+    if (/\bgun|ammo|rifle|pistol|shotgun|holster/i.test(title)) return 'Shooting & Hunting'
+    return 'Sporting Goods'
+  }
+  if (section.includes('Home')) {
+    if (/\btoy|lego|puzzle|game|plush/i.test(title)) return 'Toys & Games'
+    if (/\bgrill|smoker|charcoal|bbq/i.test(title)) return 'Outdoor Cooking'
+    if (/\bdog|cat|pet /i.test(title)) return 'Pet Supplies'
+    if (/\bmug|cup|tumbler|water bottle|drinkware/i.test(title)) return 'Drinkware'
+    return 'Home & Yard'
+  }
+  // For other stores, use the first non-brand tag
+  const tag = (p.tags || []).find(t => t.length > 3 && !['esop', 'worker co-op', 'cooperative'].includes(t))
+  return tag || section || 'Other'
+}
+
+function buildStoreSummary(storeProducts) {
+  const byCat = new Map()
+  for (const p of storeProducts) {
+    const cat = inferCategory(p)
+    if (!byCat.has(cat)) byCat.set(cat, [])
+    byCat.get(cat).push(p)
+  }
+
+  // Sort categories by size (biggest first)
+  const sortedCats = [...byCat.entries()].sort((a, b) => b[1].length - a[1].length)
+
+  // Build sections: take top categories, sample products from each
+  const sections = []
+  const usedIds = new Set()
+  const TARGET_TOTAL = 120
+  const MAX_SECTIONS = 12
+  const MIN_PER_SECTION = 4
+
+  const topCats = sortedCats.slice(0, MAX_SECTIONS)
+  const perSection = Math.max(MIN_PER_SECTION, Math.floor(TARGET_TOTAL / topCats.length))
+
+  for (const [catName, catProducts] of topCats) {
+    // Prefer products with images, then sort by price (show range)
+    const withImage = catProducts.filter(p => p.image)
+    const pool = withImage.length >= perSection ? withImage : catProducts
+
+    // Sample evenly: sort by price, pick evenly spaced
+    const sorted = [...pool].sort((a, b) => parseFloat(a.price || 0) - parseFloat(b.price || 0))
+    const step = Math.max(1, Math.floor(sorted.length / perSection))
+    const picked = []
+    for (let i = 0; i < sorted.length && picked.length < perSection; i += step) {
+      if (!usedIds.has(sorted[i].id)) {
+        picked.push(sorted[i])
+        usedIds.add(sorted[i].id)
+      }
+    }
+
+    if (picked.length > 0) {
+      // Clean up category name for display
+      const label = catName.replace(/^all > /i, '').replace(/ > /g, ' › ')
+      sections.push({ label, count: catProducts.length, products: picked })
+    }
+  }
+
+  return sections
+}
+
+let storeSummaryCount = 0
+const storeDir = resolve(root, 'public/data/stores')
+import { mkdirSync } from 'fs'
+try { mkdirSync(storeDir, { recursive: true }) } catch {}
+
+for (const [storeSlug, storeProducts] of byStore) {
+  if (storeProducts.length < 500) continue
+  const summary = buildStoreSummary(storeProducts)
+  const totalShown = summary.reduce((n, s) => n + s.products.length, 0)
+  writeFileSync(
+    resolve(storeDir, `${storeSlug}.json`),
+    JSON.stringify({ total: storeProducts.length, sections: summary })
+  )
+  storeSummaryCount++
+  console.log(`store/${storeSlug}.json: ${totalShown} featured across ${summary.length} categories (${storeProducts.length} total)`)
+}
+if (storeSummaryCount > 0) {
+  console.log(`Generated ${storeSummaryCount} store summary files`)
+}
+
 console.log('Split complete.')
