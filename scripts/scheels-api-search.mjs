@@ -70,9 +70,9 @@ function inferSection(categoryPath, title) {
 }
 
 function buildImageUrl(imageCode) {
-  if (!imageCode) return '';
-  // Scheels image CDN pattern
-  return `https://media.scheels.com/is/image/scheabornnato/${imageCode}`;
+  // Scheels CDN (media.scheels.com) is behind Cloudflare and returns 403
+  // for external requests, so images won't load on our site.
+  return '';
 }
 
 function buildProductUrl(objectID) {

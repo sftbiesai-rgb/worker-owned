@@ -31,6 +31,8 @@ RUNBOOK.md
 $PAYLOAD_FILE
 .mcp.json
 __pycache__/
+checkpoints/
 promo/outreach-emails.html
 promo/outreach.md
 promo/submission-emails.md
+products.json
