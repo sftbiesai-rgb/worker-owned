@@ -70,9 +70,9 @@ function inferSection(categoryPath, title) {
 }
 
 function buildImageUrl(imageCode) {
-  // Scheels CDN (media.scheels.com) is behind Cloudflare and returns 403
-  // for external requests, so images won't load on our site.
-  return '';
+  if (!imageCode) return '';
+  // Amplience CDN — open access, supports resizing
+  return `https://cdn.media.amplience.net/i/scheelspoc/${imageCode}?w=400&fmt=webp`;
 }
 
 function buildProductUrl(objectID) {
