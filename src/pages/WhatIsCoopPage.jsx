@@ -91,7 +91,7 @@ function WhatIsCoopPage() {
                 <li><strong>AK Press</strong> - Independent books and publishing. Worker-owned since 1990.</li>
               </ul>
               <Link to="/marketplace/companies" className="inline-block mt-2 text-[#004cb9] hover:text-[#003a8c] font-medium text-xs">
-                Browse all 175+ worker and employee owned companies &rarr;
+                Browse all 170+ worker and employee owned companies &rarr;
               </Link>
             </section>
 
