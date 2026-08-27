@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync, writeFileSync, existsSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -122,7 +122,13 @@ function groupProducts(products) {
 
 // ── Main ──
 
-const products = JSON.parse(readFileSync(resolve(root, 'public/data/products.json'), 'utf-8'))
+const productsPath = resolve(root, 'public/data/products.json')
+if (!existsSync(productsPath)) {
+  console.log('products.json not found — skipping split (using pre-built data files)')
+  process.exit(0)
+}
+
+const products = JSON.parse(readFileSync(productsPath, 'utf-8'))
 
 let remapped = 0
 for (const p of products) {
