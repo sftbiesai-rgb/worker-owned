@@ -7,8 +7,11 @@ const root = resolve(__dirname, '..')
 
 const REMAP = {
   'Home & Garden': 'Home Goods & Services',
+  'Home Goods': 'Home Goods & Services',
   'Chocolate & Sweets': 'Food & Pantry',
+  'Food & Pantry': 'Food & Pantry',
   'Books & Media': 'Books',
+  'Sporting Goods': 'Sporting Goods & Outdoors',
 }
 
 const SECTIONS = {
