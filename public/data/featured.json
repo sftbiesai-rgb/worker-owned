@@ -228,18 +228,6 @@
     "pick": "staff"
   },
   {
-    "id": "141-9547485282529",
-    "title": "Milky Spore",
-    "price": "19.99",
-    "image": "https://cdn.shopify.com/s/files/1/0770/9032/4705/files/05153RS.webp?v=1783968070",
-    "url": "https://www.gardeners.com/products/milky-spore",
-    "store_name": "Gardener's Supply Company",
-    "store_url": "https://www.gardeners.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Home Goods & Services",
-    "pick": "staff"
-  },
-  {
     "id": "140-9309785161955",
     "title": "Stewart's Socks In A Can",
     "price": "14.99",
@@ -1559,43 +1547,6 @@
     "pick": "staff"
   },
   {
-    "id": "54-8667804598462",
-    "title": "Organic Decaf Earl Grey Tea",
-    "price": "23.40",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/1709/6425/files/13325_Decaf-Earl-Grey-01.jpg?v=1769190415",
-    "url": "https://shop.equalexchange.coop/products/organic-decaf-earl-grey-tea",
-    "store_name": "Equal Exchange",
-    "store_url": "https://shop.equalexchange.coop/collections/tea",
-    "ownership_type": "worker co-op",
-    "site_section": "Coffee & Tea",
-    "tags": [
-      "13325",
-      "Black Tea",
-      "Decaf",
-      "Kosher",
-      "New",
-      "no-img-hover",
-      "Organic",
-      "Tea"
-    ],
-    "pick": "staff"
-  },
-  {
-    "id": "2-8433173102884",
-    "title": "Diner Mug",
-    "price": "12.00",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0253/5129/0968/files/newmugs.jpg?v=1755708490",
-    "url": "https://cooperativecoffeeroasters.com/products/diner-mug",
-    "store_name": "Cooperative Coffee Roasters",
-    "store_url": "https://cooperativecoffeeroasters.com",
-    "ownership_type": "worker co-op",
-    "site_section": "Coffee & Tea",
-    "tags": [],
-    "pick": "staff"
-  },
-  {
     "id": "38-9220484661410",
     "title": "TOSS Art Print: Daffodil Flats",
     "price": "33.00",
@@ -1720,30 +1671,6 @@
       "subject-history"
     ],
     "pick": "hits"
-  },
-  {
-    "id": "129-4614545670234",
-    "title": "Birdwatcher's Blend",
-    "price": "19.59",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0060/7895/5610/files/Birdwatcher_s-Blend-F.png?v=1773860963",
-    "url": "https://www.deansbeans.com/products/birdwatcher-s-blend",
-    "store_name": "Dean's Beans Organic Coffee",
-    "store_url": "https://www.deansbeans.com",
-    "ownership_type": "worker co-op",
-    "site_section": "Coffee & Tea",
-    "tags": [
-      "All Coffees",
-      "Blending - Art",
-      "Guatemala",
-      "Medium Roasts",
-      "Mexico",
-      "Our Products",
-      "Roasted Coffees",
-      "Science and Alchemy",
-      "Subscribable"
-    ],
-    "pick": "staff"
   },
   {
     "id": "120-7827104661546",
@@ -1884,5 +1811,41 @@
       "keyword-vietnam"
     ],
     "pick": "cool"
+  },
+  {
+    "id": "176-bm-28097530",
+    "title": "Adrian Tchaikovsky/Children of Ruin",
+    "price": "14.97",
+    "image": "https://cache.fieldstackintelligence.com/images/1714/8572310-T.JPG",
+    "url": "https://www.bullmoose.com/p/28097530/adrian-tchaikovsky-children-of-ruin",
+    "store_name": "Bull Moose",
+    "store_url": "https://www.bullmoose.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Books",
+    "pick": "staff"
+  },
+  {
+    "id": "176-bm-35426334",
+    "title": "Adrian Tchaikovsky/Children of Memory",
+    "price": "14.97",
+    "image": "https://cache.fieldstackintelligence.com/images/1888/9444190-T.JPG",
+    "url": "https://www.bullmoose.com/p/35426334/adrian-tchaikovsky-children-of-memory",
+    "store_name": "Bull Moose",
+    "store_url": "https://www.bullmoose.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Books",
+    "pick": "staff"
+  },
+  {
+    "id": "176-bm-37144393",
+    "title": "Adrian Tchaikovsky/Days of Shattered Faith@ Shortlisted for the Hugo Award for Best Series 20",
+    "price": "23.97",
+    "image": "https://cache.fieldstackintelligence.com/images/1945/9728586-T.JPG",
+    "url": "https://www.bullmoose.com/p/37144393/adrian-tchaikovsky-days-of-shattered-faith-shortlisted-for-the-hugo-award-for-best-series-20",
+    "store_name": "Bull Moose",
+    "store_url": "https://www.bullmoose.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Books",
+    "pick": "staff"
   }
 ]
