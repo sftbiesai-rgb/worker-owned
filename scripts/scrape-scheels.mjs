@@ -27,15 +27,17 @@ import puppeteer from 'puppeteer-core';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PRODUCTS_FILE = join(__dirname, '..', 'public', 'data', 'products.json');
 const MARKETPLACE_FILE = join(__dirname, '..', 'src', 'data', 'marketplace.json');
-const CHECKPOINT_FILE = '/tmp/scheels-scrape-checkpoint.json';
+const CHECKPOINT_FILE = '/tmp/scheels-categories-checkpoint.json';
 
 const DRY_RUN = process.argv.includes('--dry-run');
 const RESUME = process.argv.includes('--resume');
 const MERGE_ONLY = process.argv.includes('--merge-only');
+const ENRICH = process.argv.includes('--enrich');
 
-const PARALLEL_TABS = 5;
-const DELAY_MS = 500;
+const PARALLEL_TABS = ENRICH ? 10 : 5;
+const DELAY_MS = ENRICH ? 300 : 500;
 const CHECKPOINT_INTERVAL = 50;
+const ENRICH_CHECKPOINT_FILE = '/tmp/scheels-enrich-checkpoint.json';
 const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
@@ -339,6 +341,189 @@ async function main() {
   mergeIntoProductsJson(products, scheelsEntry);
 }
 
+/**
+ * Enrich mode: load category checkpoint, visit each product page to get price
+ * from JSON-LD. Much faster than scraping all 168K sitemap URLs since we only
+ * visit the ~36K products we know exist from category scraping.
+ */
+async function enrichMain() {
+  const marketplace = JSON.parse(readFileSync(MARKETPLACE_FILE, 'utf8'));
+  const scheelsEntry = marketplace.find(e => e.name === 'Scheels All Sports');
+  if (!scheelsEntry) {
+    console.error('Scheels All Sports not found in marketplace.json');
+    process.exit(1);
+  }
+
+  if (!existsSync(CHECKPOINT_FILE)) {
+    console.error('No category checkpoint found. Run without --enrich first.');
+    process.exit(1);
+  }
+
+  const cp = JSON.parse(readFileSync(CHECKPOINT_FILE, 'utf8'));
+  const products = new Map();
+  for (const p of cp.products) products.set(p.id, p);
+  console.log(`Loaded ${products.size} products from category checkpoint`);
+
+  // Load enrich checkpoint if resuming
+  const enrichedIds = new Set();
+  if (RESUME && existsSync(ENRICH_CHECKPOINT_FILE)) {
+    const ecp = JSON.parse(readFileSync(ENRICH_CHECKPOINT_FILE, 'utf8'));
+    for (const p of ecp.products) {
+      products.set(p.id, p);
+      enrichedIds.add(p.id);
+    }
+    console.log(`Resumed: ${enrichedIds.size} already enriched`);
+  }
+
+  // Filter to products that still need prices
+  const needsPrice = [...products.values()].filter(p => !p.price && !enrichedIds.has(p.id));
+  console.log(`Products needing prices: ${needsPrice.length}\n`);
+
+  if (needsPrice.length === 0) {
+    console.log('All products enriched!');
+    if (!DRY_RUN) mergeIntoProductsJson(products, scheelsEntry);
+    return;
+  }
+
+  console.log('Launching browser...');
+  const browser = await puppeteer.launch({
+    executablePath: CHROME_PATH,
+    headless: 'new',
+    args: ['--disable-blink-features=AutomationControlled', '--no-sandbox'],
+  });
+
+  try {
+    const mainPage = await solveCloudflareThenGetPage(browser);
+    await mainPage.close();
+
+    // Create worker tabs
+    const tabs = [];
+    for (let i = 0; i < PARALLEL_TABS; i++) {
+      const page = await browser.newPage();
+      await page.setUserAgent(USER_AGENT);
+      await page.setRequestInterception(true);
+      page.on('request', req => {
+        const type = req.resourceType();
+        if (['image', 'font', 'media', 'stylesheet'].includes(type)) req.abort();
+        else req.continue();
+      });
+      tabs.push(page);
+    }
+
+    let processed = 0;
+    let enriched = 0;
+    let failed = 0;
+    const startTime = Date.now();
+
+    for (let i = 0; i < needsPrice.length; i += PARALLEL_TABS) {
+      const batch = needsPrice.slice(i, i + PARALLEL_TABS);
+      const results = await Promise.all(
+        batch.map((p, idx) => enrichProduct(tabs[idx], p))
+      );
+
+      for (let j = 0; j < results.length; j++) {
+        const result = results[j];
+        const original = batch[j];
+        processed++;
+
+        if (result) {
+          products.set(original.id, { ...original, ...result });
+          enrichedIds.add(original.id);
+          enriched++;
+        } else {
+          failed++;
+        }
+      }
+
+      if (processed % 50 === 0 || i + PARALLEL_TABS >= needsPrice.length) {
+        const elapsed = (Date.now() - startTime) / 1000;
+        const rate = processed / elapsed;
+        const remaining = (needsPrice.length - processed) / rate;
+        const pct = ((processed / needsPrice.length) * 100).toFixed(1);
+        process.stdout.write(
+          `\r  ${processed}/${needsPrice.length} (${pct}%) | ` +
+          `${enriched} enriched, ${failed} failed | ` +
+          `${rate.toFixed(1)}/s | ~${Math.round(remaining / 60)}min left   `
+        );
+      }
+
+      if (processed % (CHECKPOINT_INTERVAL * 2) === 0) {
+        writeFileSync(ENRICH_CHECKPOINT_FILE, JSON.stringify({
+          products: [...products.values()].filter(p => p.price),
+          timestamp: new Date().toISOString(),
+        }));
+      }
+
+      await new Promise(r => setTimeout(r, DELAY_MS));
+    }
+
+    console.log('\n');
+
+    // Save final enrich checkpoint
+    writeFileSync(ENRICH_CHECKPOINT_FILE, JSON.stringify({
+      products: [...products.values()].filter(p => p.price),
+      timestamp: new Date().toISOString(),
+    }));
+
+    const withPrice = [...products.values()].filter(p => p.price).length;
+    console.log(`Enrich complete: ${withPrice} products with prices (${enriched} new this run)`);
+
+    for (const tab of tabs) await tab.close();
+  } finally {
+    await browser.close();
+  }
+
+  if (DRY_RUN) {
+    console.log('Dry run — not writing to products.json');
+    return;
+  }
+
+  mergeIntoProductsJson(products, scheelsEntry);
+}
+
+async function enrichProduct(page, product, retries = 2) {
+  try {
+    // Clean URL — remove queryID params
+    const cleanUrl = product.url.split('?')[0];
+    await page.goto(cleanUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
+    await new Promise(r => setTimeout(r, 1500));
+
+    const data = await page.evaluate(() => {
+      const ldScripts = [...document.querySelectorAll('script[type="application/ld+json"]')];
+      for (const script of ldScripts) {
+        try {
+          const d = JSON.parse(script.textContent);
+          if (d['@type'] === 'ProductGroup' || d['@type'] === 'Product') {
+            const price = d.offers?.price ?? d.hasVariant?.[0]?.offers?.price ??
+              d.hasVariant?.[0]?.offers?.[0]?.price;
+            const availability = d.offers?.availability ?? d.hasVariant?.[0]?.offers?.availability ??
+              d.hasVariant?.[0]?.offers?.[0]?.availability ?? '';
+            const inStock = availability.includes('InStock') ||
+              (d.hasVariant || []).some(v => {
+                const a = v.offers?.availability ?? v.offers?.[0]?.availability ?? '';
+                return a.includes('InStock');
+              });
+            const brand = d.brand?.name || '';
+            const ogImage = document.querySelector('meta[property="og:image"]')?.content || '';
+            const image = ogImage && !ogImage.includes('favicon') ? ogImage : '';
+            return { price: price ? String(price) : '', brand, image, inStock };
+          }
+        } catch {}
+      }
+      return null;
+    });
+
+    if (!data || !data.price || !data.inStock) return null;
+    return { price: data.price, brand: data.brand || product.brand, image: data.image || product.image };
+  } catch (err) {
+    if (retries > 0) {
+      await new Promise(r => setTimeout(r, 2000));
+      return enrichProduct(page, product, retries - 1);
+    }
+    return null;
+  }
+}
+
 function mergeIntoProductsJson(products, scheelsEntry) {
   const scheelsProducts = [...products.values()]
     .filter(p => p.title && p.price)
@@ -348,7 +533,7 @@ function mergeIntoProductsJson(products, scheelsEntry) {
       price: p.price,
       available: true,
       image: p.image || '',
-      url: p.url,
+      url: p.url.split('?')[0],
       store_name: scheelsEntry.name,
       store_url: scheelsEntry.url,
       ownership_type: scheelsEntry.ownership_type,
@@ -366,7 +551,7 @@ function mergeIntoProductsJson(products, scheelsEntry) {
   console.log(`  (${nonScheels.length} other stores)`);
 }
 
-main().catch(err => {
+(ENRICH ? enrichMain() : main()).catch(err => {
   console.error('Fatal error:', err);
   process.exit(1);
 });
