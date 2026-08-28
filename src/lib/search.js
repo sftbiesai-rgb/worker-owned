@@ -105,9 +105,10 @@ export function searchProducts(inputValue, products) {
   })
 
   const queryLower = inputValue.toLowerCase().trim().replace(/['']/g, '')
+  const totalWords = wordStems.length
   const scored = []
   for (const p of products) {
-    let allMatch = true
+    let matchedWords = 0
     let score = 0
     const storeLower = (p.store_name || '').toLowerCase().replace(/['']/g, '')
     const titleLower = (p.title || '').toLowerCase().replace(/[''™℠®©]/g, '').replace(/&#x[0-9a-f]+;/gi, '').replace(/&#\d+;/g, '')
@@ -118,7 +119,8 @@ export function searchProducts(inputValue, products) {
       const inStore = wordMatch(p.store_name, stems)
       const inTags = p.tags?.some(t => wordMatch(t, stems))
       const inSlug = wordMatch(slugText, stems)
-      if (!inTitle && !inStore && !inTags && !inSlug) { allMatch = false; break }
+      if (!inTitle && !inStore && !inTags && !inSlug) continue
+      matchedWords++
       if (inTitle) {
         const inTitleStripped = stems.some(s => { const idx = titleStripped.indexOf(s); return idx !== -1 && (idx === 0 || !/[a-z]/.test(titleStripped[idx - 1])) })
         score += inTitleStripped ? 3 : 1
@@ -129,24 +131,29 @@ export function searchProducts(inputValue, products) {
       else if (inSlug) score += 0.5
       else if (inStore) score += 0.5
     }
+    // Require at least 2 words matched, or all words if query is 1-2 words
+    const allMatch = matchedWords === totalWords
+    if (matchedWords < Math.min(2, totalWords)) continue
+    // Partial matches get a penalty proportional to missed words
+    if (!allMatch) score -= (totalWords - matchedWords) * 4
     if (allMatch && titleStripped.includes(queryLower)) score += 5
-    if (allMatch && p.site_section) {
+    if (p.site_section) {
       const sectionLower = p.site_section.toLowerCase()
       if (words.some(w => sectionLower.includes(w))) score += 4
     }
-    if (allMatch) {
+    {
       const ot = (p.ownership_type || '').toLowerCase()
       if (ot.includes('worker co-op') || ot === 'worker owned') score += 2
       else if (ot.includes('multi-stakeholder')) score += 1
     }
-    if (allMatch) {
+    {
       const titleWords = titleStripped.trim().split(/\s+/).filter(Boolean)
       const matchCount = words.filter(w => titleStripped.includes(w)).length
       score += titleWords.length > 0 ? (matchCount / titleWords.length) : 0
     }
-    if (allMatch && p.available === false) score -= 100
+    if (p.available === false) score -= 100
     if (allMatch && score < 1.5) score -= 2
-    if (allMatch) scored.push({ p, score })
+    scored.push({ p, score })
   }
 
   // Sort by score with store fatigue
