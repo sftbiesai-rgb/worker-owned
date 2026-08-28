@@ -218,33 +218,33 @@ function MarketplaceIndexPage() {
           </div>
           <p className="text-center text-sm text-gray-500 mb-4">Shop worker and employee owned businesses online</p>
 
-          <form onSubmit={handleSearchSubmit} className="flex">
+          <form onSubmit={handleSearchSubmit} className="flex flex-col sm:flex-row gap-2 sm:gap-0">
             <select
               value={searchCat}
               onChange={e => setSearchCat(e.target.value)}
-              className="border border-gray-300 border-r-0 rounded-l-lg px-2 py-2.5 text-xs text-gray-600 bg-gray-50 outline-none focus:border-[#004cb9] shrink-0 cursor-pointer"
+              className="border border-gray-300 rounded-lg sm:rounded-l-lg sm:rounded-r-none sm:border-r-0 px-2 py-2.5 text-xs text-gray-600 bg-gray-50 outline-none focus:border-[#004cb9] shrink-0 cursor-pointer"
             >
-              <option value="">All</option>
+              <option value="">All categories</option>
               {SECTIONS.map(s => (
                 <option key={s.slug} value={s.sectionName}>{s.label}</option>
               ))}
             </select>
-            <div className="relative flex-1">
+            <div className="relative flex-1 flex">
               <input
                 type="text"
                 placeholder="Search products or stores…"
-                className="w-full border border-gray-300 px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
+                className="w-full border border-gray-300 rounded-l-lg sm:rounded-l-none px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
                 value={inputValue}
                 onChange={e => setInputValue(e.target.value)}
                 autoFocus
               />
+              <button
+                type="submit"
+                className="bg-[#004cb9] hover:bg-[#003a8c] text-white px-4 rounded-r-lg border border-[#004cb9] transition-colors shrink-0"
+              >
+                <Search size={16} />
+              </button>
             </div>
-            <button
-              type="submit"
-              className="bg-[#004cb9] hover:bg-[#003a8c] text-white px-4 rounded-r-lg border border-[#004cb9] transition-colors shrink-0"
-            >
-              <Search size={16} />
-            </button>
           </form>
           <p className="text-[11px] text-gray-400 mt-2 text-center">Results are links to company sites. We don't sell anything or earn a commission.</p>
         </div>
