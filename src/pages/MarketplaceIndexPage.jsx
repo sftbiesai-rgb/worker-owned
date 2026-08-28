@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { Search, ArrowUpDown, ChevronDown } from 'lucide-react'
+import { Search, ArrowUpDown, ChevronDown, SlidersHorizontal } from 'lucide-react'
 import { SECTIONS, SECTION_SLUGS } from '../lib/categories'
 import { searchProducts, searchCompanies } from '../lib/search'
 import marketplaceData from '../data/marketplace.json'
@@ -157,9 +157,10 @@ function MarketplaceIndexPage() {
     if (filterPmax) r = r.filter(p => p.price && parseFloat(p.price) <= parseFloat(filterPmax))
     const terms = filterRefine.toLowerCase().split(/\s+/).filter(Boolean)
     if (terms.length > 0) {
+      const termPatterns = terms.map(t => new RegExp(`(?:^|[^a-z])${t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'i'))
       r = r.filter(p => {
-        const title = (p.title || '').toLowerCase()
-        return terms.every(t => title.includes(t) || (p.tags || []).some(tag => tag.toLowerCase().includes(t)))
+        const text = (p.title || '') + ' ' + (p.tags || []).join(' ')
+        return termPatterns.every(re => re.test(text))
       })
     }
     return r
@@ -290,6 +291,25 @@ function MarketplaceIndexPage() {
                 onClear={handleClearFilters}
               />
               <div className="flex-1 min-w-0">
+                {/* Inline refine bar - always visible */}
+                <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-4 py-3 mb-3 flex items-center gap-2">
+                  <SlidersHorizontal size={14} className="text-gray-400 shrink-0" />
+                  <input
+                    type="text"
+                    value={localRefine}
+                    onChange={e => handleRefineChange(e.target.value)}
+                    placeholder="Narrow results (e.g. red, mens, large)..."
+                    className="flex-1 text-sm outline-none bg-transparent placeholder-gray-400"
+                  />
+                  {localRefine && (
+                    <button
+                      onClick={() => handleRefineChange('')}
+                      className="text-xs text-gray-400 hover:text-gray-600 shrink-0"
+                    >
+                      Clear
+                    </button>
+                  )}
+                </div>
                 <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
                   <div className="flex items-center justify-between mb-3">
                     <p className="text-xs text-gray-400">
