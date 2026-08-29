@@ -141,18 +141,28 @@ function StoreDetailPage() {
           {storeSummary ? (
             <>
               <p className="text-sm text-gray-500 mb-4">{storeSummary.total.toLocaleString()} products available</p>
-              {storeSummary.sections.map(section => (
-                <div key={section.label} className="mb-5">
-                  <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2 capitalize">
-                    {section.label} <span className="text-gray-400 font-normal">({section.count.toLocaleString()})</span>
-                  </h3>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-                    {section.products.map(p => (
-                      <ProductCard key={p.id} p={p} />
-                    ))}
+              {storeSummary.sections.map(section => {
+                const sectionSlug = section.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+                return (
+                  <div key={section.label} className="mb-5">
+                    <div className="flex items-baseline justify-between mb-2">
+                      <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wide capitalize">
+                        {section.label} <span className="text-gray-400 font-normal">({section.count.toLocaleString()})</span>
+                      </h3>
+                      {section.count > section.products.length && (
+                        <Link to={`/marketplace/store/${store}/${sectionSlug}`} className="text-xs text-[#004cb9] hover:text-[#003a8c] font-medium transition-colors">
+                          View all {section.count.toLocaleString()} →
+                        </Link>
+                      )}
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                      {section.products.map(p => (
+                        <ProductCard key={p.id} p={p} />
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </>
           ) : products.length > 0 ? (
             <>

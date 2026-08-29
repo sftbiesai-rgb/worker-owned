@@ -173,8 +173,9 @@ function MarketplacePage() {
             </div>
           )}
 
-          <div className="flex justify-end gap-3 text-xs mt-3">
-            <span className="font-semibold text-[#BF0A30]">Products</span>
+          <div className="flex justify-end items-center gap-0 text-sm font-bold uppercase tracking-wide mt-3">
+            <span className="text-[#BF0A30]">Products</span>
+            <span className="text-gray-300 mx-2">|</span>
             <Link to={`/marketplace/${category}/directory`} className="text-[#004cb9] hover:text-[#003a8c] transition-colors">Directory</Link>
           </div>
         </div>

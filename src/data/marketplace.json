@@ -297,6 +297,17 @@
     "site_section": "Art & Prints"
   },
   {
+    "id": 224,
+    "name": "Microcosm Publishing — Books",
+    "url": "https://microcosmpublishing.com",
+    "category": "books / zines / graphic novels / nonfiction",
+    "ownership_type": "worker-owned",
+    "ships": "worldwide",
+    "status": "verified active",
+    "notes": "Portland OR worker-ownership program since 1996. Publishers Weekly Fastest Growing Publisher 2022-2024. DIY, punk, social justice zines and books.",
+    "site_section": "Books"
+  },
+  {
     "id": 32,
     "name": "Subvert",
     "url": "https://www.subvert.fm",

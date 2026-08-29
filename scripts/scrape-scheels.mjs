@@ -17,6 +17,7 @@
  *   node scripts/scrape-scheels.mjs --resume     # resume from checkpoint
  *   node scripts/scrape-scheels.mjs --merge-only # merge existing checkpoint into products.json
  *   node scripts/scrape-scheels.mjs --enrich    # fetch prices from product pages for category-scraped products
+ *   node scripts/scrape-scheels.mjs --enrich-details  # fetch color/size/attributes from product pages
  */
 
 import { readFileSync, writeFileSync, existsSync } from 'fs';
@@ -32,12 +33,14 @@ const CHECKPOINT_FILE = '/tmp/scheels-categories-checkpoint.json';
 const DRY_RUN = process.argv.includes('--dry-run');
 const RESUME = process.argv.includes('--resume');
 const MERGE_ONLY = process.argv.includes('--merge-only');
-const ENRICH = process.argv.includes('--enrich');
+const ENRICH = process.argv.includes('--enrich') && !process.argv.includes('--enrich-details');
+const ENRICH_DETAILS = process.argv.includes('--enrich-details');
 
-const PARALLEL_TABS = ENRICH ? 10 : 5;
-const DELAY_MS = ENRICH ? 300 : 500;
+const PARALLEL_TABS = ENRICH_DETAILS ? 3 : (ENRICH ? 10 : 5);
+const DELAY_MS = ENRICH_DETAILS ? 1500 : (ENRICH ? 300 : 500);
 const CHECKPOINT_INTERVAL = 50;
 const ENRICH_CHECKPOINT_FILE = '/tmp/scheels-enrich-checkpoint.json';
+const DETAILS_CHECKPOINT_FILE = '/tmp/scheels-details-checkpoint.json';
 const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
@@ -551,7 +554,355 @@ function mergeIntoProductsJson(products, scheelsEntry) {
   console.log(`  (${nonScheels.length} other stores)`);
 }
 
-(ENRICH ? enrichMain() : main()).catch(err => {
+/**
+ * Enrich-details mode: visit each Scheels product page to extract color, size,
+ * and other attributes from the Next.js RSC payload. Works from existing
+ * products.json so we don't need the category checkpoint.
+ */
+async function enrichDetailsMain() {
+  const existing = JSON.parse(readFileSync(PRODUCTS_FILE, 'utf8'));
+  const scheelsProducts = existing.filter(p => p.store_name === 'Scheels All Sports');
+  const nonScheels = existing.filter(p => p.store_name !== 'Scheels All Sports');
+  console.log(`Loaded ${scheelsProducts.length} Scheels products from products.json`);
+
+  // Load checkpoint if resuming
+  const enrichedMap = new Map(); // id -> { color, ageGroup, ... }
+  if (existsSync(DETAILS_CHECKPOINT_FILE)) {
+    const cp = JSON.parse(readFileSync(DETAILS_CHECKPOINT_FILE, 'utf8'));
+    for (const [id, details] of Object.entries(cp.details || {})) {
+      enrichedMap.set(id, details);
+    }
+    console.log(`Resumed: ${enrichedMap.size} already enriched from checkpoint`);
+  }
+
+  const needsDetails = scheelsProducts.filter(p => !enrichedMap.has(p.id));
+  console.log(`Products needing details: ${needsDetails.length}\n`);
+
+  if (needsDetails.length === 0) {
+    console.log('All products enriched!');
+    applyDetailsAndSave(scheelsProducts, nonScheels, enrichedMap);
+    return;
+  }
+
+  if (DRY_RUN) {
+    console.log('Dry run — would enrich', needsDetails.length, 'products');
+    return;
+  }
+
+  console.log('Launching browser...');
+  const browser = await puppeteer.launch({
+    executablePath: CHROME_PATH,
+    headless: 'new',
+    args: ['--disable-blink-features=AutomationControlled', '--no-sandbox'],
+  });
+
+  try {
+    const mainPage = await solveCloudflareThenGetPage(browser);
+    await mainPage.close();
+
+    const tabs = [];
+    for (let i = 0; i < PARALLEL_TABS; i++) {
+      const page = await browser.newPage();
+      await page.setUserAgent(USER_AGENT);
+      await page.setRequestInterception(true);
+      page.on('request', req => {
+        const type = req.resourceType();
+        if (['image', 'font', 'media', 'stylesheet'].includes(type)) req.abort();
+        else req.continue();
+      });
+      tabs.push(page);
+    }
+    console.log(`Created ${tabs.length} worker tabs, warming up...`);
+
+    // Warm up — navigate tab[0] to verify Cloudflare cookies work
+    const testUrl = needsDetails[0].url.split('?')[0];
+    await tabs[0].goto(testUrl, { waitUntil: 'domcontentloaded', timeout: 25000 });
+    await new Promise(r => setTimeout(r, 3000));
+    const testTitle = await tabs[0].title();
+    console.log(`Warmup: ${testTitle.slice(0, 60)}`);
+    if (testTitle === 'Just a moment...') {
+      console.log('Cloudflare blocking tabs — waiting...');
+      for (let w = 0; w < 30; w++) {
+        await new Promise(r => setTimeout(r, 2000));
+        const t = await tabs[0].title();
+        if (t !== 'Just a moment...') { console.log(`Cleared after ${(w+1)*2}s`); break; }
+      }
+    }
+
+    let processed = 0;
+    let enriched = 0;
+    let failed = 0;
+    let consecutiveFails = 0;
+    const startTime = Date.now();
+
+    for (let i = 0; i < needsDetails.length; i += PARALLEL_TABS) {
+      // If too many consecutive failures, re-solve Cloudflare with fresh tabs
+      if (consecutiveFails >= 30) {
+        console.log('  [re-solving Cloudflare — closing old tabs, opening fresh...]');
+        // Save checkpoint before re-solve attempt
+        saveDetailsCheckpoint(enrichedMap);
+        try {
+          // Close old tabs
+          for (const tab of tabs) { try { await tab.close(); } catch {} }
+          tabs.length = 0;
+
+          // Open a fresh page and solve CF
+          const freshPage = await browser.newPage();
+          await freshPage.setUserAgent(USER_AGENT);
+          await freshPage.goto('https://www.scheels.com/', { waitUntil: 'domcontentloaded', timeout: 45000 });
+          for (let w = 0; w < 30; w++) {
+            await new Promise(r => setTimeout(r, 2000));
+            const title = await freshPage.title();
+            if (title !== 'Just a moment...') {
+              console.log(`  [Cloudflare re-cleared after ${(w+1)*2}s]`);
+              break;
+            }
+          }
+          await freshPage.close();
+
+          // Create fresh worker tabs (cookies are shared at browser level)
+          for (let t = 0; t < PARALLEL_TABS; t++) {
+            const page = await browser.newPage();
+            await page.setUserAgent(USER_AGENT);
+            await page.setRequestInterception(true);
+            page.on('request', req => {
+              const type = req.resourceType();
+              if (['image', 'font', 'media', 'stylesheet'].includes(type)) req.abort();
+              else req.continue();
+            });
+            tabs.push(page);
+          }
+          console.log(`  [Created ${tabs.length} fresh tabs]`);
+        } catch (e) {
+          console.log('  [CF re-solve error:', e.message.slice(0, 80), ']');
+          // If browser is totally dead, bail out
+          if (e.message.includes('Connection closed') || e.message.includes('Target closed')) {
+            console.log('  [Browser died — saving checkpoint and exiting]');
+            saveDetailsCheckpoint(enrichedMap);
+            process.exit(1);
+          }
+        }
+        consecutiveFails = 0;
+        await new Promise(r => setTimeout(r, 5000));
+      }
+
+      const batch = needsDetails.slice(i, i + PARALLEL_TABS);
+      const results = await Promise.all(
+        batch.map((p, idx) => extractProductDetails(tabs[idx], p))
+      );
+
+      let batchSuccess = 0;
+      for (let j = 0; j < results.length; j++) {
+        const result = results[j];
+        const product = batch[j];
+        processed++;
+
+        if (result) {
+          enrichedMap.set(product.id, result);
+          enriched++;
+          batchSuccess++;
+        } else {
+          // Mark as attempted with empty result so we don't retry
+          enrichedMap.set(product.id, {});
+          failed++;
+        }
+      }
+
+      if (batchSuccess > 0) consecutiveFails = 0;
+      else consecutiveFails += batch.length;
+
+      // Progress display — every 10 for single-tab mode
+      if (processed % 10 === 0 || i + PARALLEL_TABS >= needsDetails.length) {
+        const elapsed = (Date.now() - startTime) / 1000;
+        const rate = processed / elapsed;
+        const remaining = (needsDetails.length - processed) / rate;
+        const pct = ((processed / needsDetails.length) * 100).toFixed(1);
+        console.log(
+          `  ${processed}/${needsDetails.length} (${pct}%) | ` +
+          `${enriched} enriched, ${failed} failed | ` +
+          `${rate.toFixed(1)}/s | ~${Math.round(remaining / 60)}min left`
+        );
+      }
+
+      // Checkpoint every 100 products
+      if (processed % 100 === 0) {
+        saveDetailsCheckpoint(enrichedMap);
+      }
+
+      const jitter = Math.floor(Math.random() * 1000);
+      await new Promise(r => setTimeout(r, DELAY_MS + jitter));
+    }
+
+    console.log('\n');
+    saveDetailsCheckpoint(enrichedMap);
+
+    const withColor = [...enrichedMap.values()].filter(d => d.color).length;
+    console.log(`Detail enrich complete: ${withColor} products with color data (${enriched} enriched this run, ${failed} failed)`);
+
+    for (const tab of tabs) await tab.close();
+  } finally {
+    await browser.close();
+  }
+
+  applyDetailsAndSave(scheelsProducts, nonScheels, enrichedMap);
+}
+
+function saveDetailsCheckpoint(enrichedMap) {
+  const details = {};
+  for (const [id, d] of enrichedMap) details[id] = d;
+  writeFileSync(DETAILS_CHECKPOINT_FILE, JSON.stringify({
+    details,
+    count: enrichedMap.size,
+    timestamp: new Date().toISOString(),
+  }));
+  console.log(`\n  [checkpoint saved: ${enrichedMap.size} products]`);
+}
+
+async function extractProductDetails(page, product, retries = 2) {
+  try {
+    const cleanUrl = product.url.split('?')[0];
+    await page.goto(cleanUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
+    await new Promise(r => setTimeout(r, 2500));
+
+    const data = await page.evaluate((Q) => {
+      // RSC payload uses escaped quotes. The actual textContent has \\\" as the
+      // quote delimiter. We pass Q='\\\"' from Node to avoid escaping confusion.
+      function extract(text, key) {
+        const marker = key + Q + ':' + Q;
+        const idx = text.indexOf(marker);
+        if (idx === -1) return '';
+        const start = idx + marker.length;
+        const end = text.indexOf(Q, start);
+        return end === -1 ? '' : text.slice(start, end);
+      }
+      function extractArray(text, key) {
+        const marker = key + Q + ':[' + Q;
+        const idx = text.indexOf(marker);
+        if (idx === -1) return '';
+        const start = idx + marker.length;
+        const end = text.indexOf(Q, start);
+        return end === -1 ? '' : text.slice(start, end);
+      }
+      function extractNum(text, key) {
+        const marker = key + Q + ':';
+        const idx = text.indexOf(marker);
+        if (idx === -1) return '';
+        const start = idx + marker.length;
+        const numMatch = text.slice(start, start + 20).match(/^(\d+\.?\d*)/);
+        return numMatch ? numMatch[1] : '';
+      }
+
+      const scripts = [...document.querySelectorAll('script')];
+      for (const s of scripts) {
+        const t = s.textContent || '';
+        if (!t.includes('self.__next_f.push') || !t.includes('definingAttributes')) continue;
+
+        // Color: skip label entries (\"color\":\"Color\"), find one with ::
+        let color = '';
+        const colorPattern = 'color' + Q + ':' + Q;
+        let colorIdx = t.indexOf(colorPattern);
+        while (colorIdx !== -1) {
+          const cStart = colorIdx + colorPattern.length;
+          const cEnd = t.indexOf(Q, cStart);
+          if (cEnd !== -1) {
+            const val = t.slice(cStart, cEnd);
+            if (val.includes('::')) { color = val.split('::')[1]; break; }
+          }
+          colorIdx = t.indexOf(colorPattern, colorIdx + 1);
+        }
+
+        const ageGroup = extractArray(t, 'ageGroup');
+        const gender = extractArray(t, 'gender');
+
+        // Width: same :: pattern as color
+        let width = '';
+        const widthPattern = 'width' + Q + ':' + Q;
+        let widthIdx = t.indexOf(widthPattern);
+        while (widthIdx !== -1) {
+          const wStart = widthIdx + widthPattern.length;
+          const wEnd = t.indexOf(Q, wStart);
+          if (wEnd !== -1) {
+            const val = t.slice(wStart, wEnd);
+            if (val.includes('::')) { width = val.split('::')[1]; break; }
+          }
+          widthIdx = t.indexOf(widthPattern, widthIdx + 1);
+        }
+
+        const brand = extract(t, 'brand');
+
+        // Price: discountedPrice centAmount preferred, else price centAmount (cents)
+        const discountIdx = t.indexOf('discountedPrice');
+        const priceIdx = t.indexOf(Q + 'price' + Q + ':{');
+        let centAmount = '';
+        if (discountIdx !== -1) {
+          centAmount = extractNum(t.slice(discountIdx), 'centAmount');
+        } else if (priceIdx !== -1) {
+          centAmount = extractNum(t.slice(priceIdx), 'centAmount');
+        }
+        const price = centAmount ? String(parseInt(centAmount) / 100) : '';
+
+        const inStock = t.includes(Q + 'isOnStock' + Q + ':true') ? true :
+                        t.includes(Q + 'isOnStock' + Q + ':false') ? false : null;
+
+        if (color || ageGroup || gender || brand) {
+          return { color, ageGroup, width, gender, brand, price, inStock };
+        }
+      }
+      return null;
+    }, '\\"');
+
+    return data;
+  } catch (err) {
+    if (retries > 0) {
+      await new Promise(r => setTimeout(r, 2000));
+      return extractProductDetails(page, product, retries - 1);
+    }
+    return null;
+  }
+}
+
+function applyDetailsAndSave(scheelsProducts, nonScheels, enrichedMap) {
+  let colorCount = 0;
+  const updated = scheelsProducts.map(p => {
+    const details = enrichedMap.get(p.id);
+    if (!details || !details.color) return p;
+
+    colorCount++;
+    // Parse color — e.g. "Black/Black/Anthracite/Mtlc Dark Grey" → dedupe
+    const colorParts = [...new Set(details.color.split('/').map(c => c.trim()))];
+    const colorTag = colorParts.join('/');
+
+    // Build enriched tags
+    const existingTags = p.tags || [];
+    const newTags = [...existingTags];
+    if (colorTag) newTags.push(colorTag.toLowerCase());
+    if (details.gender) newTags.push(details.gender.toLowerCase());
+    if (details.ageGroup && details.ageGroup !== 'Adult') newTags.push(details.ageGroup.toLowerCase());
+
+    // Update brand if we got a better one
+    const brand = details.brand || '';
+    if (brand && !existingTags.some(t => t.toLowerCase() === brand.toLowerCase())) {
+      newTags[0] = brand.toLowerCase(); // replace first tag (brand position)
+    }
+
+    // Update price if we got one and product doesn't have one
+    const price = details.price && (!p.price || p.price === '') ? details.price : p.price;
+
+    // Update availability
+    const available = details.inStock === false ? false : p.available;
+
+    return { ...p, tags: newTags, price, available };
+  });
+
+  const final = [...nonScheels, ...updated];
+  writeFileSync(PRODUCTS_FILE, JSON.stringify(final, null, 2));
+
+  console.log(`\nWrote ${final.length} total products to products.json`);
+  console.log(`  ${colorCount} Scheels products enriched with color/attributes`);
+  console.log(`  ${nonScheels.length} other store products unchanged`);
+}
+
+(ENRICH_DETAILS ? enrichDetailsMain() : ENRICH ? enrichMain() : main()).catch(err => {
   console.error('Fatal error:', err);
   process.exit(1);
 });

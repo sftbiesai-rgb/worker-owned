@@ -348,16 +348,50 @@ const storeDir = resolve(root, 'public/data/stores')
 import { mkdirSync } from 'fs'
 try { mkdirSync(storeDir, { recursive: true }) } catch {}
 
+const STORE_PAGE_SIZE = 40
+
 for (const [storeSlug, storeProducts] of byStore) {
   if (storeProducts.length < 500) continue
   const summary = buildStoreSummary(storeProducts)
   const totalShown = summary.reduce((n, s) => n + s.products.length, 0)
+
+  // Generate per-section paginated files for "View all" pages
+  const sectionIndex = []
+  const storeSubdir = resolve(storeDir, storeSlug)
+  try { mkdirSync(storeSubdir, { recursive: true }) } catch {}
+
+  // Group all products by their inferred category
+  const allByCat = new Map()
+  for (const p of storeProducts) {
+    const cat = inferCategory(p)
+    if (!allByCat.has(cat)) allByCat.set(cat, [])
+    allByCat.get(cat).push(p)
+  }
+
+  for (const section of summary) {
+    const sectionSlug = section.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+    const allProducts = allByCat.get(section.label) || allByCat.get(
+      [...allByCat.keys()].find(k => k.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === sectionSlug)
+    ) || []
+
+    const totalPages = Math.ceil(allProducts.length / STORE_PAGE_SIZE)
+    for (let page = 1; page <= totalPages; page++) {
+      const start = (page - 1) * STORE_PAGE_SIZE
+      const pageProducts = allProducts.slice(start, start + STORE_PAGE_SIZE)
+      writeFileSync(
+        resolve(storeSubdir, `${sectionSlug}-${page}.json`),
+        JSON.stringify({ products: pageProducts, total: allProducts.length, page, totalPages })
+      )
+    }
+    sectionIndex.push({ slug: sectionSlug, label: section.label, count: section.count, totalPages })
+  }
+
   writeFileSync(
     resolve(storeDir, `${storeSlug}.json`),
-    JSON.stringify({ total: storeProducts.length, sections: summary })
+    JSON.stringify({ total: storeProducts.length, sections: summary, sectionIndex })
   )
   storeSummaryCount++
-  console.log(`store/${storeSlug}.json: ${totalShown} featured across ${summary.length} categories (${storeProducts.length} total)`)
+  console.log(`store/${storeSlug}.json: ${totalShown} featured across ${summary.length} categories (${storeProducts.length} total), ${sectionIndex.reduce((n,s) => n + s.totalPages, 0)} pages`)
 }
 if (storeSummaryCount > 0) {
   console.log(`Generated ${storeSummaryCount} store summary files`)
