@@ -97,11 +97,12 @@ function CategoryDirectoryPage() {
             ))}
           </div>
 
-          <div className="flex justify-end items-center gap-0 text-sm font-bold uppercase tracking-wide">
-            <Link to={`/marketplace/${category}`} className="text-[#BF0A30] hover:text-[#8c0722] transition-colors">Products</Link>
-            <span className="text-gray-300 mx-2">|</span>
-            <span className="text-[#004cb9]">Directory</span>
-          </div>
+        </div>
+
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-4 py-3 mb-3 flex justify-center items-center gap-0 text-sm font-bold uppercase tracking-wide">
+          <Link to={`/marketplace/${category}`} className="text-[#BF0A30] hover:text-[#8c0722] transition-colors">Products</Link>
+          <span className="text-gray-300 mx-2">|</span>
+          <span className="text-[#004cb9]">Directory</span>
         </div>
 
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">

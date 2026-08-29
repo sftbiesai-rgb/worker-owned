@@ -173,11 +173,12 @@ function MarketplacePage() {
             </div>
           )}
 
-          <div className="flex justify-end items-center gap-0 text-sm font-bold uppercase tracking-wide mt-3">
-            <span className="text-[#BF0A30]">Products</span>
-            <span className="text-gray-300 mx-2">|</span>
-            <Link to={`/marketplace/${category}/directory`} className="text-[#004cb9] hover:text-[#003a8c] transition-colors">Directory</Link>
-          </div>
+        </div>
+
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-4 py-3 mb-3 flex justify-center items-center gap-0 text-sm font-bold uppercase tracking-wide">
+          <span className="text-[#BF0A30]">Products</span>
+          <span className="text-gray-300 mx-2">|</span>
+          <Link to={`/marketplace/${category}/directory`} className="text-[#004cb9] hover:text-[#003a8c] transition-colors">Directory</Link>
         </div>
 
         {/* Products grid */}
