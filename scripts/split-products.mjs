@@ -310,12 +310,14 @@ function buildStoreSummary(storeProducts) {
   // Build sections: take top categories, sample products from each
   const sections = []
   const usedIds = new Set()
-  const TARGET_TOTAL = 120
+  const TARGET_TOTAL = 144
   const MAX_SECTIONS = 12
   const MIN_PER_SECTION = 4
 
   const topCats = sortedCats.slice(0, MAX_SECTIONS)
-  const perSection = Math.max(MIN_PER_SECTION, Math.floor(TARGET_TOTAL / topCats.length))
+  // Round to multiple of 4 so the grid has no gaps on 2/3/4 column layouts
+  const rawPerSection = Math.max(MIN_PER_SECTION, Math.floor(TARGET_TOTAL / topCats.length))
+  const perSection = Math.floor(rawPerSection / 4) * 4 || 4
 
   for (const [catName, catProducts] of topCats) {
     // Prefer products with images, then sort by price (show range)
