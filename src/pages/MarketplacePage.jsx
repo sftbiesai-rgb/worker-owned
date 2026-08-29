@@ -7,7 +7,6 @@ import OwnershipBadge from '../components/OwnershipBadge'
 import ProductCard from '../components/ProductCard'
 import Pagination from '../components/Pagination'
 import Footer from '../components/Footer'
-import Breadcrumbs from '../components/Breadcrumbs'
 
 const PER_PAGE = 40
 
@@ -93,13 +92,6 @@ function MarketplacePage() {
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
       <main className="flex-1 max-w-xl lg:max-w-4xl mx-auto w-full px-5 py-8 flex flex-col">
 
-        <Breadcrumbs items={[
-          { label: 'Marketplace', to: '/marketplace' },
-          ...(activeSub
-            ? [{ label: section.label, to: `/marketplace/${category}` }, { label: activeSub.label }]
-            : [{ label: section.label }]
-          ),
-        ]} />
 
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-6 mb-3">
           <div className="flex items-center justify-center gap-3 mb-1">
