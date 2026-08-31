@@ -135,11 +135,7 @@ async function main() {
             indexName: 'commercetools_products',
             page: pNum,
             pageSize: pSize,
-            filters: 'inStock:true',
-            attributesToRetrieve: [
-              'title', 'brand', 'pricing', 'variants', 'objectID',
-              'slug', 'categoryHierarchy'
-            ]
+            filters: 'inStock:true'
           };
           if (filter) query.facetFilters = [[filter]];
           const resp = await fetch('https://search.scheels.com/api/search', {
@@ -152,14 +148,27 @@ async function main() {
           const r = data.results?.[0];
           if (!r) return { error: 'No results' };
           return {
-            hits: (r.hits || []).map(h => ({
-              objectID: h.data?.objectID || h.id,
-              title: h.data?.title || '',
-              brand: h.data?.brand || '',
-              price: h.data?.pricing?.minRetail || h.data?.pricing?.maxRetail || null,
-              image: h.data?.variants?.[0]?.images?.[0] || '',
-              categories: h.data?.categoryHierarchy || {},
-            })),
+            hits: (r.hits || []).map(h => {
+              const d = h.data || {};
+              const attrs = d.attributes || {};
+              const vAttrs = d.variants?.[0]?.attributes || {};
+              return {
+                objectID: d.objectID || h.id,
+                title: d.title || '',
+                brand: d.brand || '',
+                price: d.pricing?.minRetail || d.pricing?.maxRetail || null,
+                salePrice: d.pricing?.groups?.default?.onSale ? (d.pricing?.groups?.default?.minSale || null) : null,
+                image: d.variants?.[0]?.images?.[0] || '',
+                categories: d.categoryHierarchy || {},
+                color: attrs.color?.[0] || vAttrs.color?.[0] || '',
+                refinementColor: attrs.refinementColor?.[0] || vAttrs.refinementColor?.[0] || '',
+                gender: attrs.gender?.[0] || vAttrs.gender?.[0] || '',
+                sport: attrs.sport?.[0] || '',
+                activity: attrs.activity?.[0] || '',
+                productType: d.productType || '',
+                description: (d.description || '').slice(0, 200),
+              };
+            }),
             totalHits: r.totalHits,
           };
         } catch (e) { return { error: e.message }; }
@@ -312,10 +321,24 @@ function mergeIntoProductsJson(products, scheelsEntry) {
       const deepest = cats.categories5?.[0] || cats.categories4?.[0] || cats.categories3?.[0] || '';
       const categoryPath = deepest.replace(/^All > /, '');
 
+      const tags = [p.brand, categoryPath].filter(Boolean).map(t => t.toLowerCase().replace(/-/g, ' '));
+
+      // Add color
+      if (p.color) {
+        const colorClean = p.color.includes('::') ? p.color.split('::')[1] : p.color;
+        tags.push(colorClean.toLowerCase());
+      }
+
+      // Add gender, sport, activity, productType
+      if (p.gender) tags.push(p.gender.toLowerCase());
+      if (p.sport) tags.push(p.sport.toLowerCase());
+      if (p.activity) tags.push(p.activity.toLowerCase());
+      if (p.productType) tags.push(p.productType.toLowerCase());
+
       return {
         id: `166-scheels-${p.objectID}`,
         title: p.title,
-        price: String(p.price),
+        price: String(p.salePrice || p.price),
         available: true,
         image: buildImageUrl(p.image),
         url: buildProductUrl(p.objectID),
@@ -323,7 +346,7 @@ function mergeIntoProductsJson(products, scheelsEntry) {
         store_url: scheelsEntry.url,
         ownership_type: scheelsEntry.ownership_type,
         site_section: inferSection(categoryPath, p.title),
-        tags: [p.brand, categoryPath].filter(Boolean).map(t => t.toLowerCase().replace(/-/g, ' ')),
+        tags,
       };
     });
 
