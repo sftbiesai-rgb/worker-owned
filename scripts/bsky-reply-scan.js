@@ -112,6 +112,26 @@ const SEARCH_QUERIES = [
   'platform cooperativism',
   'cooperative business',
   'worker ownership',
+  // Anti-Amazon / anti-Walmart / ethical shopping
+  'quit amazon',
+  'stop buying from amazon',
+  'boycott amazon',
+  'amazon alternative',
+  'hate amazon',
+  'done with amazon',
+  'delete amazon',
+  'fuck amazon',
+  'boycott walmart',
+  'walmart alternative',
+  'stop buying from walmart',
+  'ethical shopping',
+  'ethical alternative',
+  'shop small instead',
+  'conscious consumer',
+  'where else can I buy',
+  'where to buy instead',
+  'shop ethical',
+  'buy ethical',
 ];
 
 let authToken = null;

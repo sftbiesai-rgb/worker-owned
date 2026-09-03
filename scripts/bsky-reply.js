@@ -11,19 +11,14 @@ const API = 'https://bsky.social/xrpc';
 
 const REPLIES = [
   {
-    // 404 Media — 3-year milestone (116 likes)
-    url: 'https://bsky.app/profile/josephcox.bsky.social/post/3mu37r5q55c2x',
-    text: "Booya, three years! 404 Media is one of the best examples of what worker ownership in journalism looks like. You're listed on workerowned.info alongside other worker-owned outlets like Defector, Hell Gate, and The 51st.",
+    // Greg Pak — "doing my gat damnedest not to buy from obvious monsters" (604 likes)
+    url: 'https://bsky.app/profile/gregpak.net/post/3mtks5pvgws26',
+    text: "If it helps, workerowned.info is a searchable marketplace of 200+ worker co-ops and employee-owned companies. Coffee, books, sporting goods, apparel, all owned by the people who make and sell it. Makes it easier to find the non-monster option.",
   },
   {
-    // USFWC — Mayday salon co-op (3 likes)
-    url: 'https://bsky.app/profile/usworker.coop/post/3mu6cee7gxs2h',
-    text: "Love seeing co-ops in industries you don't usually expect. We have 170+ worker-owned businesses listed at workerowned.info — would be great to get more salons and service co-ops represented.",
-  },
-  {
-    // More Perfect Union — Starbucks boycott (5,197 likes)
-    url: 'https://bsky.app/profile/moreperfectunion.bsky.social/post/3mtwagg56c22i',
-    text: "If you're looking for where to get your coffee instead, workerowned.info has a directory of worker-owned businesses including coffee roasters and cafes. Companies where the workers already have a fair contract because they own the place.",
+    // Gil Duran — recommending Bookshop.org as Amazon alternative (344 likes)
+    url: 'https://bsky.app/profile/gilduran.com/post/3mtyyfbdn4s26',
+    text: "Bookshop.org is great. If you're looking for more alternatives beyond books, workerowned.info is a searchable marketplace of 200+ worker co-ops and employee-owned companies. Coffee, music, sporting goods, all worker-owned.",
   },
 ];
 
