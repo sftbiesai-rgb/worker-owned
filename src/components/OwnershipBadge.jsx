@@ -2,7 +2,7 @@ export default function OwnershipBadge({ type, size = 'sm' }) {
   if (!type) return null
   const clean = type.toLowerCase()
   let color = 'bg-gray-100 text-gray-500'
-  if (clean.includes('worker co-op') || clean === 'worker owned') color = 'bg-blue-50 text-[#004cb9]'
+  if (clean.includes('worker co-op') || clean === 'worker owned') color = 'bg-blue-50 text-[#003580]'
   else if (clean.includes('esop') || clean.includes('employee')) color = 'bg-green-50 text-green-700'
   else if (clean.includes('multi-stakeholder') || clean.includes('consumer')) color = 'bg-purple-50 text-purple-700'
   const sizeClass = size === 'xs'

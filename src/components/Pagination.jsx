@@ -5,7 +5,7 @@ export default function Pagination({ page, totalPages, onPageChange }) {
       <button
         onClick={() => { onPageChange(page - 1); window.scrollTo(0, 0) }}
         disabled={page === 1}
-        className="min-w-[32px] h-8 rounded-lg text-xs font-medium transition-colors bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 disabled:opacity-30 disabled:hover:text-gray-600 disabled:hover:bg-[#f5f5f7]"
+        className="min-w-[32px] h-8 rounded-lg text-xs font-medium transition-colors bg-[#f5f5f7] text-gray-600 hover:text-[#003580] hover:bg-blue-50 disabled:opacity-30 disabled:hover:text-gray-600 disabled:hover:bg-[#f5f5f7]"
       >
         ‹
       </button>
@@ -13,7 +13,7 @@ export default function Pagination({ page, totalPages, onPageChange }) {
       <button
         onClick={() => { onPageChange(page + 1); window.scrollTo(0, 0) }}
         disabled={page === totalPages}
-        className="min-w-[32px] h-8 rounded-lg text-xs font-medium transition-colors bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 disabled:opacity-30 disabled:hover:text-gray-600 disabled:hover:bg-[#f5f5f7]"
+        className="min-w-[32px] h-8 rounded-lg text-xs font-medium transition-colors bg-[#f5f5f7] text-gray-600 hover:text-[#003580] hover:bg-blue-50 disabled:opacity-30 disabled:hover:text-gray-600 disabled:hover:bg-[#f5f5f7]"
       >
         ›
       </button>

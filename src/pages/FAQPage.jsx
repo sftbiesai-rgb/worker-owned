@@ -52,14 +52,14 @@ function FAQPage() {
             <section>
               <h2 className="text-base font-bold text-gray-900 mb-2">How do you decide what to list?</h2>
               <p>
-                We research businesses using public sources including the <a href="https://www.usworker.coop/directory/" target="_blank" rel="noopener" className="text-[#004cb9] hover:text-[#003a8c]">US Federation of Worker Cooperatives directory</a>, the <a href="https://institute.coop" target="_blank" rel="noopener" className="text-[#004cb9] hover:text-[#003a8c]">Democracy at Work Institute</a>, regional cooperative networks, and direct submissions. We do our best to verify ownership structure before adding a business.
+                We research businesses using public sources including the <a href="https://www.usworker.coop/directory/" target="_blank" rel="noopener" className="text-[#003580] hover:text-[#002660]">US Federation of Worker Cooperatives directory</a>, the <a href="https://institute.coop" target="_blank" rel="noopener" className="text-[#003580] hover:text-[#002660]">Democracy at Work Institute</a>, regional cooperative networks, and direct submissions. We do our best to verify ownership structure before adding a business.
               </p>
             </section>
 
             <section>
               <h2 className="text-base font-bold text-gray-900 mb-2">How can I submit a business?</h2>
               <p>
-                Use our <Link to="/submit" className="text-[#004cb9] hover:text-[#003a8c] font-medium">submission form</Link> to suggest a worker or employee owned business for inclusion. We review every submission.
+                Use our <Link to="/submit" className="text-[#003580] hover:text-[#002660] font-medium">submission form</Link> to suggest a worker or employee owned business for inclusion. We review every submission.
               </p>
             </section>
 
@@ -80,24 +80,24 @@ function FAQPage() {
             <section>
               <h2 className="text-base font-bold text-gray-900 mb-2">I want my company or products de-listed.</h2>
               <p>
-                No problem. Use our <Link to="/contact" className="text-[#004cb9] hover:text-[#003a8c] font-medium">general inquiries form</Link> and we'll take care of it promptly.
+                No problem. Use our <Link to="/contact" className="text-[#003580] hover:text-[#002660] font-medium">general inquiries form</Link> and we'll take care of it promptly.
               </p>
             </section>
 
             <section>
               <h2 className="text-base font-bold text-gray-900 mb-2">I have another question.</h2>
               <p>
-                For anything else, reach out through our <Link to="/contact" className="text-[#004cb9] hover:text-[#003a8c] font-medium">general inquiries form</Link>.
+                For anything else, reach out through our <Link to="/contact" className="text-[#003580] hover:text-[#002660] font-medium">general inquiries form</Link>.
               </p>
             </section>
           </div>
         </div>
 
         <div className="mt-3 flex justify-center gap-4">
-          <Link to="/" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; Back home
           </Link>
-          <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/submit" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             Submit a business &rarr;
           </Link>
         </div>

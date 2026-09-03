@@ -12,7 +12,7 @@ import Footer from '../components/Footer'
 import FilterSidebar from '../components/FilterSidebar'
 
 const PICK_LABELS = { hits: 'The Hits', staff: 'Staff', cool: 'Cool', movement: 'Movement' }
-const PICK_COLORS = { hits: 'text-[#004cb9]', staff: 'text-emerald-600', cool: 'text-purple-600', movement: 'text-[#BF0A30]' }
+const PICK_COLORS = { hits: 'text-[#003580]', staff: 'text-emerald-600', cool: 'text-purple-600', movement: 'text-[#9B0620]' }
 const PICK_BORDER_COLORS = { hits: '#BFC9E8', staff: '#B8E2D3', cool: '#DCCFF7', movement: '#EFC2CB' }
 const PICK_ORDER = ['hits', 'staff', 'cool', 'movement']
 
@@ -223,7 +223,7 @@ function MarketplaceIndexPage() {
             <select
               value={searchCat}
               onChange={e => setSearchCat(e.target.value)}
-              className="border border-gray-300 rounded-lg sm:rounded-l-lg sm:rounded-r-none sm:border-r-0 px-2 py-2.5 text-xs text-gray-600 bg-gray-50 outline-none focus:border-[#004cb9] shrink-0 cursor-pointer"
+              className="border border-gray-300 rounded-lg sm:rounded-l-lg sm:rounded-r-none sm:border-r-0 px-2 py-2.5 text-xs text-gray-600 bg-gray-50 outline-none focus:border-[#003580] shrink-0 cursor-pointer"
             >
               <option value="">All categories</option>
               {SECTIONS.map(s => (
@@ -234,14 +234,14 @@ function MarketplaceIndexPage() {
               <input
                 type="text"
                 placeholder="Search products or stores…"
-                className="w-full border border-gray-300 rounded-l-lg sm:rounded-l-none px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
+                className="w-full border border-gray-300 rounded-l-lg sm:rounded-l-none px-3 py-2.5 text-sm outline-none focus:border-[#003580] transition-colors bg-white"
                 value={inputValue}
                 onChange={e => setInputValue(e.target.value)}
                 autoFocus
               />
               <button
                 type="submit"
-                className="bg-[#004cb9] hover:bg-[#003a8c] text-white px-4 rounded-r-lg border border-[#004cb9] transition-colors shrink-0"
+                className="bg-[#003580] hover:bg-[#002660] text-white px-4 rounded-r-lg border border-[#003580] transition-colors shrink-0"
               >
                 <Search size={16} />
               </button>
@@ -267,7 +267,7 @@ function MarketplaceIndexPage() {
                     <Link
                       key={cat.slug}
                       to={`/marketplace/${cat.slug}`}
-                      className="py-1.5 px-3 rounded-lg text-xs font-medium bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors"
+                      className="py-1.5 px-3 rounded-lg text-xs font-medium bg-[#f5f5f7] text-gray-600 hover:text-[#003580] hover:bg-blue-50 transition-colors"
                     >
                       {cat.label}
                     </Link>
@@ -334,7 +334,7 @@ function MarketplaceIndexPage() {
                   {filteredResults.length === 0 ? (
                     <div className="text-center py-4">
                       <p className="text-sm text-gray-500 mb-2">No results match your filters.</p>
-                      <button onClick={handleClearFilters} className="text-xs text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+                      <button onClick={handleClearFilters} className="text-xs text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
                         Clear all filters
                       </button>
                     </div>
@@ -389,7 +389,7 @@ function MarketplaceIndexPage() {
                   <Link
                     key={cat.slug}
                     to={`/marketplace/${cat.slug}`}
-                    className="py-2 px-4 rounded-lg text-sm font-medium bg-[#f5f5f7] text-gray-600 hover:text-[#004cb9] hover:bg-blue-50 transition-colors"
+                    className="py-2 px-4 rounded-lg text-sm font-medium bg-[#f5f5f7] text-gray-600 hover:text-[#003580] hover:bg-blue-50 transition-colors"
                   >
                     {cat.label}
                   </Link>
@@ -411,7 +411,7 @@ function MarketplaceIndexPage() {
                               <ProductCard product={p} compact borderColor={PICK_BORDER_COLORS[PICK_ORDER[i]]} />
                             </div>
                             {p.site_section && SECTION_SLUGS[p.site_section] && (
-                              <Link to={`/marketplace/${SECTION_SLUGS[p.site_section]}`} className="text-[10px] text-[#004cb9] hover:text-[#BF0A30] transition-colors mt-1 text-center block">
+                              <Link to={`/marketplace/${SECTION_SLUGS[p.site_section]}`} className="text-[10px] text-[#003580] hover:text-[#9B0620] transition-colors mt-1 text-center block">
                                 Browse more {p.site_section.toLowerCase()} &rarr;
                               </Link>
                             )}
@@ -424,10 +424,10 @@ function MarketplaceIndexPage() {
               </div>
             )}
 
-            <Link to="/coffee" className="block bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-4 mt-3 hover:border-[#004cb9] transition-colors">
+            <Link to="/coffee" className="block bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-4 mt-3 hover:border-[#003580] transition-colors">
               <div className="flex items-center justify-center gap-2.5">
                 <img src="/logo-coffee.png" alt="" width="28" height="28" className="shrink-0" />
-                <span className="text-sm text-[#004cb9] font-semibold"><strong>Quick Tool:</strong> worker owned coffee shops, bars, restaurants, and groceries near you!</span>
+                <span className="text-sm text-[#003580] font-semibold"><strong>Quick Tool:</strong> worker owned coffee shops, bars, restaurants, and groceries near you!</span>
               </div>
             </Link>
           </>
@@ -441,12 +441,12 @@ function MarketplaceIndexPage() {
 
         <div className="mt-2 text-center space-y-1">
           <div>
-            <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+            <Link to="/submit" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
               Submit a worker or employee owned business &rarr;
             </Link>
           </div>
           <div>
-            <Link to="/faq" className="text-xs text-gray-400 hover:text-[#004cb9] transition-colors">
+            <Link to="/faq" className="text-xs text-gray-400 hover:text-[#003580] transition-colors">
               FAQ
             </Link>
           </div>

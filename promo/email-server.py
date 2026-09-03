@@ -71,6 +71,30 @@ class Handler(SimpleHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write(json.dumps({'error': str(e)}).encode())
                 print(f"  FAILED: {to} — {e}")
+
+        elif self.path == '/save':
+            length = int(self.headers['Content-Length'])
+            body = json.loads(self.rfile.read(length))
+            html = body.get('html', '')
+
+            try:
+                html_file = Path(__file__).parent / 'outreach-emails.html'
+                html_file.write_text(html, encoding='utf-8')
+
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps({'ok': True}).encode())
+                print(f"  Saved outreach-emails.html")
+
+            except Exception as e:
+                self.send_response(500)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps({'error': str(e)}).encode())
+                print(f"  SAVE FAILED: {e}")
         else:
             self.send_response(404)
             self.end_headers()

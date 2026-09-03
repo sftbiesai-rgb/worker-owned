@@ -39,7 +39,7 @@ function CoffeeCityPage() {
     return (
       <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col items-center justify-center">
         <p className="text-gray-500">City not found.</p>
-        <Link to="/coffee" className="mt-2 text-sm text-[#004cb9]">&larr; All coffee shops</Link>
+        <Link to="/coffee" className="mt-2 text-sm text-[#003580]">&larr; All coffee shops</Link>
       </div>
     )
   }
@@ -74,7 +74,7 @@ function CoffeeCityPage() {
                         href={url}
                         target="_blank"
                         rel="noopener"
-                        className="text-xs text-[#004cb9] hover:text-[#003a8c] font-medium shrink-0"
+                        className="text-xs text-[#003580] hover:text-[#002660] font-medium shrink-0"
                       >
                         Visit &rarr;
                       </a>
@@ -94,10 +94,10 @@ function CoffeeCityPage() {
         </div>
 
         <div className="mt-3 flex justify-center gap-4">
-          <Link to="/coffee" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/coffee" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; All coffee shops
           </Link>
-          <Link to="/guides/what-is-a-worker-cooperative" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/guides/what-is-a-worker-cooperative" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             What is a co-op? &rarr;
           </Link>
         </div>

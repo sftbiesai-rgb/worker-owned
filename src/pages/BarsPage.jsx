@@ -33,7 +33,7 @@ function BarMap({ items }) {
       const markers = []
       for (const bar of items) {
         if (!bar.lat || !bar.lng) continue
-        const marker = L.circleMarker([bar.lat, bar.lng], { radius: 7, fillColor: '#004cb9', color: '#fff', weight: 2, fillOpacity: 0.9 }).addTo(map)
+        const marker = L.circleMarker([bar.lat, bar.lng], { radius: 7, fillColor: '#003580', color: '#fff', weight: 2, fillOpacity: 0.9 }).addTo(map)
         const url = bar.website?.startsWith('http') ? bar.website : `https://${bar.website}`
         const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
         marker.bindPopup(`<strong>${esc(bar.name)}</strong><br>${esc(bar.city)}, ${esc(bar.state)}${bar.website ? `<br><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Visit site</a>` : ''}`)
@@ -110,8 +110,8 @@ function BarsPage() {
                 to={tab.to}
                 className={`flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors ${
                   tab.cat === 'bars'
-                    ? 'bg-[#004cb9] text-white'
-                    : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+                    ? 'bg-[#003580] text-white'
+                    : 'bg-[#f5f5f7] text-gray-500 hover:text-[#003580]'
                 }`}
               >
                 {tab.label}
@@ -124,7 +124,7 @@ function BarsPage() {
             <input
               type="text"
               placeholder="Filter by city, state, or name"
-              className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
+              className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm outline-none focus:border-[#003580] transition-colors bg-white"
               value={search}
               onChange={e => setSearch(e.target.value)}
             />
@@ -135,8 +135,8 @@ function BarsPage() {
               {filtered.length} bar{filtered.length !== 1 ? 's' : ''}
             </p>
             <div className="flex gap-1">
-              <button onClick={() => setView('list')} className={`p-1.5 rounded-lg transition-colors ${view === 'list' ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-400 hover:text-[#004cb9]'}`}><List size={14} /></button>
-              <button onClick={() => setView('map')} className={`p-1.5 rounded-lg transition-colors ${view === 'map' ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-400 hover:text-[#004cb9]'}`}><Map size={14} /></button>
+              <button onClick={() => setView('list')} className={`p-1.5 rounded-lg transition-colors ${view === 'list' ? 'bg-[#003580] text-white' : 'bg-[#f5f5f7] text-gray-400 hover:text-[#003580]'}`}><List size={14} /></button>
+              <button onClick={() => setView('map')} className={`p-1.5 rounded-lg transition-colors ${view === 'map' ? 'bg-[#003580] text-white' : 'bg-[#f5f5f7] text-gray-400 hover:text-[#003580]'}`}><Map size={14} /></button>
             </div>
           </div>
 
@@ -151,24 +151,24 @@ function BarsPage() {
                     href={bar.website.startsWith('http') ? bar.website : `https://${bar.website}`}
                     target="_blank"
                     rel="noopener"
-                    className="font-semibold text-sm block text-[#004cb9] hover:text-[#003a8c] transition-colors truncate"
+                    className="font-semibold text-sm block text-[#003580] hover:text-[#002660] transition-colors truncate"
                   >
                     {bar.name}
                   </a>
                 ) : (
-                  <div className="font-semibold text-sm text-[#004cb9] truncate">{bar.name}</div>
+                  <div className="font-semibold text-sm text-[#003580] truncate">{bar.name}</div>
                 )}
                 {bar.location && bar.location !== `${bar.city}, ${bar.state}` ? (
                   <a
                     href={`https://maps.google.com/?q=${encodeURIComponent(bar.location)}`}
                     target="_blank"
                     rel="noopener"
-                    className="text-xs text-[#BF0A30] hover:underline truncate mt-0.5 block transition-colors"
+                    className="text-xs text-[#9B0620] hover:underline truncate mt-0.5 block transition-colors"
                   >
                     {bar.location}
                   </a>
                 ) : (
-                  <div className="text-xs text-[#BF0A30] truncate mt-0.5">{bar.city}, {bar.state}</div>
+                  <div className="text-xs text-[#9B0620] truncate mt-0.5">{bar.city}, {bar.state}</div>
                 )}
               </div>
             ))}
@@ -177,7 +177,7 @@ function BarsPage() {
         </div>
 
         <div className="mt-3 text-center">
-          <Link to="/" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; Search
           </Link>
         </div>

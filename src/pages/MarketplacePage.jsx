@@ -108,8 +108,8 @@ function MarketplacePage() {
                 to={`/marketplace/${s.slug}`}
                 className={`px-3 py-1 rounded-full text-xs font-semibold transition-colors ${
                   s.slug === category
-                    ? 'bg-[#004cb9] text-white'
-                    : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+                    ? 'bg-[#003580] text-white'
+                    : 'bg-[#f5f5f7] text-gray-500 hover:text-[#003580]'
                 }`}
               >
                 {s.label}
@@ -125,7 +125,7 @@ function MarketplacePage() {
                 className={`px-3 py-1 rounded-full text-xs font-medium transition-colors border ${
                   !activeSub
                     ? 'bg-gray-700 text-white border-gray-700'
-                    : 'bg-white text-gray-500 border-gray-200 hover:text-[#004cb9] hover:border-[#004cb9]'
+                    : 'bg-white text-gray-500 border-gray-200 hover:text-[#003580] hover:border-[#003580]'
                 }`}
               >
                 All
@@ -137,7 +137,7 @@ function MarketplacePage() {
                   className={`px-3 py-1 rounded-full text-xs font-medium transition-colors border ${
                     s.slug === subcategory
                       ? 'bg-gray-700 text-white border-gray-700'
-                      : 'bg-white text-gray-500 border-gray-200 hover:text-[#004cb9] hover:border-[#004cb9]'
+                      : 'bg-white text-gray-500 border-gray-200 hover:text-[#003580] hover:border-[#003580]'
                   }`}
                 >
                   {s.label}
@@ -155,8 +155,8 @@ function MarketplacePage() {
                   onClick={() => { setActiveFilter(activeFilter === f.tag ? null : f.tag); setPage(1) }}
                   className={`px-2.5 py-0.5 rounded-full text-[11px] font-medium transition-colors border ${
                     activeFilter === f.tag
-                      ? 'bg-[#004cb9] text-white border-[#004cb9]'
-                      : 'bg-white text-gray-400 border-gray-200 hover:text-[#004cb9] hover:border-[#004cb9]'
+                      ? 'bg-[#003580] text-white border-[#003580]'
+                      : 'bg-white text-gray-400 border-gray-200 hover:text-[#003580] hover:border-[#003580]'
                   }`}
                 >
                   {f.label}
@@ -168,9 +168,9 @@ function MarketplacePage() {
         </div>
 
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-4 py-3 mb-3 flex justify-center items-center gap-0 text-sm font-bold uppercase tracking-wide">
-          <span className="text-[#BF0A30]">Products</span>
+          <span className="text-[#9B0620]">Products</span>
           <span className="text-gray-300 mx-2">|</span>
-          <Link to={`/marketplace/${category}/directory`} className="text-[#004cb9] hover:text-[#003a8c] transition-colors">Directory</Link>
+          <Link to={`/marketplace/${category}/directory`} className="text-[#003580] hover:text-[#002660] transition-colors">Directory</Link>
         </div>
 
         {/* Products grid */}
@@ -187,7 +187,7 @@ function MarketplacePage() {
               value={filter}
               onChange={e => { setFilter(e.target.value); setPage(1) }}
               placeholder={`Filter ${(activeSub ? activeSub.label : section.label).toLowerCase()}…`}
-              className="w-full mb-4 px-3 py-2 text-sm border border-gray-200 rounded-lg bg-[#f5f5f7] focus:outline-none focus:border-[#004cb9] focus:ring-1 focus:ring-[#004cb9] placeholder-gray-400"
+              className="w-full mb-4 px-3 py-2 text-sm border border-gray-200 rounded-lg bg-[#f5f5f7] focus:outline-none focus:border-[#003580] focus:ring-1 focus:ring-[#003580] placeholder-gray-400"
             />
           )}
 
@@ -217,9 +217,9 @@ function MarketplacePage() {
           {showStores && (
             <div className="space-y-3 mt-4">
               {entries.map(entry => (
-                <Link key={entry.id} to={`/marketplace/store/${slugify(entry.name)}`} className="block bg-[#f5f5f7] rounded-xl px-4 py-3 hover:ring-1 hover:ring-[#004cb9] transition-all">
+                <Link key={entry.id} to={`/marketplace/store/${slugify(entry.name)}`} className="block bg-[#f5f5f7] rounded-xl px-4 py-3 hover:ring-1 hover:ring-[#003580] transition-all">
                   <div className="flex items-start justify-between gap-2 mb-1">
-                    <span className="font-semibold text-sm text-[#004cb9] leading-snug flex items-center gap-1.5">
+                    <span className="font-semibold text-sm text-[#003580] leading-snug flex items-center gap-1.5">
                       {faviconUrl(entry.url) && <img src={faviconUrl(entry.url)} alt="" className="w-4 h-4 shrink-0" loading="lazy" />}
                       {entry.name}
                     </span>
@@ -238,7 +238,7 @@ function MarketplacePage() {
         </div>
 
         <div className="mt-3 text-center">
-          <Link to="/marketplace" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/marketplace" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; All categories
           </Link>
         </div>

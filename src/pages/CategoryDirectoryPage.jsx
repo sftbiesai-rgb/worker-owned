@@ -82,8 +82,8 @@ function CategoryDirectoryPage() {
                 to={`/marketplace/${s.slug}/directory`}
                 className={`px-3 py-1 rounded-full text-xs font-semibold transition-colors ${
                   s.slug === category
-                    ? 'bg-[#004cb9] text-white'
-                    : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+                    ? 'bg-[#003580] text-white'
+                    : 'bg-[#f5f5f7] text-gray-500 hover:text-[#003580]'
                 }`}
               >
                 {s.label}
@@ -94,9 +94,9 @@ function CategoryDirectoryPage() {
         </div>
 
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-4 py-3 mb-3 flex justify-center items-center gap-0 text-sm font-bold uppercase tracking-wide">
-          <Link to={`/marketplace/${category}`} className="text-[#BF0A30] hover:text-[#8c0722] transition-colors">Products</Link>
+          <Link to={`/marketplace/${category}`} className="text-[#9B0620] hover:text-[#700518] transition-colors">Products</Link>
           <span className="text-gray-300 mx-2">|</span>
-          <span className="text-[#004cb9]">Directory</span>
+          <span className="text-[#003580]">Directory</span>
         </div>
 
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
@@ -106,7 +106,7 @@ function CategoryDirectoryPage() {
               value={filter}
               onChange={e => setFilter(e.target.value)}
               placeholder={`Filter ${section.label.toLowerCase()} companies…`}
-              className="w-full mb-4 px-3 py-2 text-sm border border-gray-200 rounded-lg bg-[#f5f5f7] focus:outline-none focus:border-[#004cb9] focus:ring-1 focus:ring-[#004cb9] placeholder-gray-400"
+              className="w-full mb-4 px-3 py-2 text-sm border border-gray-200 rounded-lg bg-[#f5f5f7] focus:outline-none focus:border-[#003580] focus:ring-1 focus:ring-[#003580] placeholder-gray-400"
             />
           )}
 
@@ -117,10 +117,10 @@ function CategoryDirectoryPage() {
                 <Link
                   key={entry.id}
                   to={`/marketplace/store/${slugify(entry.name)}`}
-                  className="block bg-[#f5f5f7] rounded-xl px-4 py-3 hover:ring-1 hover:ring-[#004cb9] transition-all"
+                  className="block bg-[#f5f5f7] rounded-xl px-4 py-3 hover:ring-1 hover:ring-[#003580] transition-all"
                 >
                   <div className="flex items-start justify-between gap-2 mb-1">
-                    <span className="font-semibold text-sm text-[#004cb9] leading-snug flex items-center gap-1.5">
+                    <span className="font-semibold text-sm text-[#003580] leading-snug flex items-center gap-1.5">
                       {faviconUrl(entry.url) && <img src={faviconUrl(entry.url)} alt="" className="w-4 h-4 shrink-0" loading="lazy" />}
                       {entry.name}
                     </span>
@@ -153,10 +153,10 @@ function CategoryDirectoryPage() {
         </div>
 
         <div className="mt-3 text-center flex flex-col gap-1">
-          <Link to={`/marketplace/${category}`} className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to={`/marketplace/${category}`} className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; {section.label} products
           </Link>
-          <Link to="/marketplace" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/marketplace" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; All categories
           </Link>
         </div>

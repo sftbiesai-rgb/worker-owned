@@ -29,7 +29,7 @@ function ShopMap({ shops }) {
       const markers = []
       for (const shop of shops) {
         if (!shop.lat || !shop.lng) continue
-        const marker = L.circleMarker([shop.lat, shop.lng], { radius: 7, fillColor: '#004cb9', color: '#fff', weight: 2, fillOpacity: 0.9 }).addTo(map)
+        const marker = L.circleMarker([shop.lat, shop.lng], { radius: 7, fillColor: '#003580', color: '#fff', weight: 2, fillOpacity: 0.9 }).addTo(map)
         const url = shop.website?.startsWith('http') ? shop.website : `https://${shop.website}`
         const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
         marker.bindPopup(`<strong>${esc(shop.name)}</strong><br>${esc(shop.city)}, ${esc(shop.state)}${shop.website ? `<br><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Visit site</a>` : ''}`)
@@ -116,8 +116,8 @@ function BrowsePage({ category }) {
                 to={tab.to}
                 className={`flex-1 py-2 rounded-lg text-sm font-semibold text-center transition-colors ${
                   category === tab.cat
-                    ? 'bg-[#004cb9] text-white'
-                    : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+                    ? 'bg-[#003580] text-white'
+                    : 'bg-[#f5f5f7] text-gray-500 hover:text-[#003580]'
                 }`}
               >
                 {tab.label}
@@ -130,7 +130,7 @@ function BrowsePage({ category }) {
             <input
               type="text"
               placeholder="Filter by city, state, or name"
-              className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
+              className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm outline-none focus:border-[#003580] transition-colors bg-white"
               value={search}
               onChange={e => setSearch(e.target.value)}
             />
@@ -141,8 +141,8 @@ function BrowsePage({ category }) {
               {shops.length} {meta.label}{shops.length !== 1 ? 's' : ''}
             </p>
             <div className="flex gap-1">
-              <button onClick={() => setView('list')} className={`p-1.5 rounded-lg transition-colors ${view === 'list' ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-400 hover:text-[#004cb9]'}`}><List size={14} /></button>
-              <button onClick={() => setView('map')} className={`p-1.5 rounded-lg transition-colors ${view === 'map' ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-400 hover:text-[#004cb9]'}`}><Map size={14} /></button>
+              <button onClick={() => setView('list')} className={`p-1.5 rounded-lg transition-colors ${view === 'list' ? 'bg-[#003580] text-white' : 'bg-[#f5f5f7] text-gray-400 hover:text-[#003580]'}`}><List size={14} /></button>
+              <button onClick={() => setView('map')} className={`p-1.5 rounded-lg transition-colors ${view === 'map' ? 'bg-[#003580] text-white' : 'bg-[#f5f5f7] text-gray-400 hover:text-[#003580]'}`}><Map size={14} /></button>
             </div>
           </div>
 
@@ -158,16 +158,16 @@ function BrowsePage({ category }) {
                       href={shop.website.startsWith('http') ? shop.website : `https://${shop.website}`}
                       target="_blank"
                       rel="noopener"
-                      className="font-semibold text-sm text-[#004cb9] hover:text-[#003a8c] transition-colors truncate"
+                      className="font-semibold text-sm text-[#003580] hover:text-[#002660] transition-colors truncate"
                     >
                       {shop.name}
                     </a>
                   ) : (
-                    <span className="font-semibold text-sm text-[#004cb9] truncate">{shop.name}</span>
+                    <span className="font-semibold text-sm text-[#003580] truncate">{shop.name}</span>
                   )}
                   {shop.ownership_type && (
                     <span className={`text-[9px] font-semibold px-1.5 py-0.5 rounded-full shrink-0 ${
-                      shop.ownership_type.toLowerCase().includes('worker co-op') ? 'bg-blue-50 text-[#004cb9]'
+                      shop.ownership_type.toLowerCase().includes('worker co-op') ? 'bg-blue-50 text-[#003580]'
                       : shop.ownership_type.toLowerCase().includes('multi-stakeholder') ? 'bg-purple-50 text-purple-700'
                       : 'bg-green-50 text-green-700'
                     }`}>{shop.ownership_type}</span>
@@ -178,12 +178,12 @@ function BrowsePage({ category }) {
                     href={`https://maps.google.com/?q=${encodeURIComponent(shop.location)}`}
                     target="_blank"
                     rel="noopener"
-                    className="text-xs text-[#BF0A30] hover:underline truncate mt-0.5 block transition-colors"
+                    className="text-xs text-[#9B0620] hover:underline truncate mt-0.5 block transition-colors"
                   >
                     {shop.location}
                   </a>
                 ) : (
-                  <div className="text-xs text-[#BF0A30] truncate mt-0.5">{shop.city}, {shop.state}</div>
+                  <div className="text-xs text-[#9B0620] truncate mt-0.5">{shop.city}, {shop.state}</div>
                 )}
                 {shop.notes && <div className="text-[10px] text-gray-400 mt-0.5 truncate">{shop.notes}</div>}
               </div>
@@ -193,7 +193,7 @@ function BrowsePage({ category }) {
         </div>
 
         <div className="mt-3 text-center">
-          <Link to="/" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; Search
           </Link>
         </div>

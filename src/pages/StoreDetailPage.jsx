@@ -21,7 +21,7 @@ function ProductCard({ p }) {
       href={p.url}
       target="_blank"
       rel="noopener"
-      className="bg-[#f5f5f7] rounded-xl overflow-hidden hover:ring-1 hover:ring-[#004cb9] transition-all group"
+      className="bg-[#f5f5f7] rounded-xl overflow-hidden hover:ring-1 hover:ring-[#003580] transition-all group"
     >
       {p.image && (
         <div className="aspect-square w-full overflow-hidden bg-gray-100 relative">
@@ -33,7 +33,7 @@ function ProductCard({ p }) {
       )}
       <div className="px-3 py-2">
         <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{p.title}</p>
-        {p.price && <p className="text-xs font-semibold text-[#004cb9] mt-0.5">${p.price}</p>}
+        {p.price && <p className="text-xs font-semibold text-[#003580] mt-0.5">${p.price}</p>}
       </div>
       {displayTags(p.tags)?.length > 0 && (
         <div className="px-3 pb-2 hidden group-hover:block">
@@ -119,7 +119,7 @@ function StoreDetailPage() {
                   href={entry.url}
                   target="_blank"
                   rel="noopener"
-                  className="text-lg font-bold text-[#004cb9] hover:text-[#003a8c] transition-colors leading-snug"
+                  className="text-lg font-bold text-[#003580] hover:text-[#002660] transition-colors leading-snug"
                 >
                   {entry.name} ↗
                 </a>
@@ -150,7 +150,7 @@ function StoreDetailPage() {
                         {section.label} <span className="text-gray-400 font-normal">({section.count.toLocaleString()})</span>
                       </h3>
                       {section.count > section.products.length && (
-                        <Link to={`/marketplace/store/${store}/${sectionSlug}`} className="text-xs text-[#004cb9] hover:text-[#003a8c] font-medium transition-colors">
+                        <Link to={`/marketplace/store/${store}/${sectionSlug}`} className="text-xs text-[#003580] hover:text-[#002660] font-medium transition-colors">
                           View all {section.count.toLocaleString()} →
                         </Link>
                       )}
@@ -179,7 +179,7 @@ function StoreDetailPage() {
                 href={entry.url}
                 target="_blank"
                 rel="noopener"
-                className="text-sm font-semibold text-[#004cb9] hover:text-[#003a8c] transition-colors"
+                className="text-sm font-semibold text-[#003580] hover:text-[#002660] transition-colors"
               >
                 Visit {entry.name} →
               </a>
@@ -189,11 +189,11 @@ function StoreDetailPage() {
 
         <div className="mt-3 text-center flex flex-col gap-1">
           {categorySlug && (
-            <Link to={`/marketplace/${categorySlug}`} className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+            <Link to={`/marketplace/${categorySlug}`} className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
               ← {entry.site_section}
             </Link>
           )}
-          <Link to="/marketplace" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/marketplace" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             ← All categories
           </Link>
         </div>

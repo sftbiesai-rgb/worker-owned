@@ -52,7 +52,7 @@ export default function FilterSidebar({
       {hasFilters && (
         <button
           onClick={onClear}
-          className="text-xs text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium"
+          className="text-xs text-[#003580] hover:text-[#9B0620] transition-colors font-medium"
         >
           Clear all filters
         </button>
@@ -66,7 +66,7 @@ export default function FilterSidebar({
           value={refine}
           onChange={e => onRefineChange(e.target.value)}
           placeholder='e.g. "red", "womens"…'
-          className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#004cb9] placeholder-gray-400"
+          className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#003580] placeholder-gray-400"
         />
       </div>
 
@@ -79,7 +79,7 @@ export default function FilterSidebar({
             placeholder="Min"
             value={priceMin}
             onChange={e => onPriceChange(e.target.value, priceMax)}
-            className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#004cb9] placeholder-gray-400"
+            className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#003580] placeholder-gray-400"
             min="0"
           />
           <input
@@ -87,7 +87,7 @@ export default function FilterSidebar({
             placeholder="Max"
             value={priceMax}
             onChange={e => onPriceChange(priceMin, e.target.value)}
-            className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#004cb9] placeholder-gray-400"
+            className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#003580] placeholder-gray-400"
             min="0"
           />
         </div>
@@ -101,7 +101,7 @@ export default function FilterSidebar({
             <button
               onClick={() => onCategoryChange('')}
               className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
-                !activeCategory ? 'bg-[#004cb9] text-white font-semibold' : 'text-gray-600 hover:bg-gray-50'
+                !activeCategory ? 'bg-[#003580] text-white font-semibold' : 'text-gray-600 hover:bg-gray-50'
               }`}
             >
               All ({products.length})
@@ -111,7 +111,7 @@ export default function FilterSidebar({
                 key={cat}
                 onClick={() => onCategoryChange(cat === activeCategory ? '' : cat)}
                 className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
-                  cat === activeCategory ? 'bg-[#004cb9] text-white font-semibold' : 'text-gray-600 hover:bg-gray-50'
+                  cat === activeCategory ? 'bg-[#003580] text-white font-semibold' : 'text-gray-600 hover:bg-gray-50'
                 }`}
               >
                 {cat} ({count})
@@ -131,7 +131,7 @@ export default function FilterSidebar({
               value={storeSearch}
               onChange={e => setStoreSearch(e.target.value)}
               placeholder="Filter stores…"
-              className="w-full mb-2 px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#004cb9] placeholder-gray-400"
+              className="w-full mb-2 px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#003580] placeholder-gray-400"
             />
           )}
           <div className="space-y-0.5 max-h-96 overflow-y-auto">
@@ -148,7 +148,7 @@ export default function FilterSidebar({
                 key={name}
                 onClick={() => onStoreChange(name === activeStore ? '' : name)}
                 className={`w-full text-left px-2 py-1 rounded text-xs transition-colors flex items-center gap-1.5 ${
-                  name === activeStore ? 'bg-[#004cb9] text-white font-semibold' : 'text-gray-600 hover:bg-gray-50'
+                  name === activeStore ? 'bg-[#003580] text-white font-semibold' : 'text-gray-600 hover:bg-gray-50'
                 }`}
               >
                 {storeUrls[name] && <img src={faviconUrl(storeUrls[name])} alt="" className="w-3 h-3 shrink-0" loading="lazy" />}
@@ -179,7 +179,7 @@ export default function FilterSidebar({
           className="w-full bg-white rounded-xl border border-gray-200 shadow-sm px-4 py-2.5 flex items-center justify-between"
         >
           <span className="text-xs font-bold text-gray-500 uppercase tracking-wide">
-            Filters {hasFilters && <span className="text-[#004cb9]">Active</span>}
+            Filters {hasFilters && <span className="text-[#003580]">Active</span>}
           </span>
           <span className="text-xs text-gray-400">{expanded ? '▲' : '▼'}</span>
         </button>

@@ -1946,5 +1946,16 @@
     "status": "verified active",
     "notes": "Worker-owned cooperative bike shop in Toronto. Specializes in urban, commuter, cargo, and e-bikes from Tern, Riese & Muller, Gazelle, Urban Arrow, and more. Free shipping on orders over $250 Canada-wide.",
     "site_section": "Sporting Goods & Outdoors"
+  },
+  {
+    "id": 224,
+    "name": "Jam",
+    "url": "https://jam.coop",
+    "category": "music platform",
+    "ownership_type": "worker co-op",
+    "ships": "digital / worldwide",
+    "status": "verified active",
+    "notes": "Co-operatively owned music store, 100% run by and for the benefit of musicians, fans, and the people who work there. UK-based. Direct-to-fan album sales with fair artist compensation.",
+    "site_section": "Music"
   }
 ]

@@ -48,7 +48,7 @@ function HomePage() {
             <button
               onClick={() => { setCategory('coffee'); setSearchTerm('') }}
               className={`flex-1 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                category === 'coffee' ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+                category === 'coffee' ? 'bg-[#003580] text-white' : 'bg-[#f5f5f7] text-gray-500 hover:text-[#003580]'
               }`}
             >
               Coffee
@@ -56,7 +56,7 @@ function HomePage() {
             <button
               onClick={() => { setCategory('restaurant'); setSearchTerm('') }}
               className={`flex-1 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                category === 'restaurant' ? 'bg-[#004cb9] text-white' : 'bg-[#f5f5f7] text-gray-500 hover:text-[#004cb9]'
+                category === 'restaurant' ? 'bg-[#003580] text-white' : 'bg-[#f5f5f7] text-gray-500 hover:text-[#003580]'
               }`}
             >
               Restaurants
@@ -70,7 +70,7 @@ function HomePage() {
               <input
                 type="text"
                 placeholder="e.g. Brooklyn"
-                className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
+                className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm outline-none focus:border-[#003580] transition-colors bg-white"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 autoFocus
@@ -86,13 +86,13 @@ function HomePage() {
                   {filteredShops.map(shop => (
                     <div key={shop.id} className="bg-[#f5f5f7] rounded-xl px-4 py-3">
                       {shop.website ? (
-                        <a href={shop.website.startsWith('http') ? shop.website : `https://${shop.website}`} target="_blank" rel="noopener" className="font-semibold text-sm truncate block text-[#004cb9] hover:text-[#003a8c] transition-colors">
+                        <a href={shop.website.startsWith('http') ? shop.website : `https://${shop.website}`} target="_blank" rel="noopener" className="font-semibold text-sm truncate block text-[#003580] hover:text-[#002660] transition-colors">
                           {shop.name}
                         </a>
                       ) : (
-                        <div className="font-semibold text-sm truncate text-[#004cb9]">{shop.name}</div>
+                        <div className="font-semibold text-sm truncate text-[#003580]">{shop.name}</div>
                       )}
-                      <a href={`https://maps.google.com/?q=${encodeURIComponent(shop.location)}`} target="_blank" rel="noopener" className="text-xs text-[#BF0A30] hover:underline truncate mt-0.5 block transition-colors">
+                      <a href={`https://maps.google.com/?q=${encodeURIComponent(shop.location)}`} target="_blank" rel="noopener" className="text-xs text-[#9B0620] hover:underline truncate mt-0.5 block transition-colors">
                         {shop.location}
                       </a>
                     </div>
@@ -106,7 +106,7 @@ function HomePage() {
 
           {(searchTerm ? filteredShops.length > 0 : true) && (
             <div className={`text-center ${searchTerm ? 'mt-4 pt-4 border-t border-gray-100' : ''}`}>
-              <Link to={category === 'coffee' ? '/coffee' : '/restaurants'} className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+              <Link to={category === 'coffee' ? '/coffee' : '/restaurants'} className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
                 Browse all {category === 'coffee' ? coffeeCount : restaurantCount} {category === 'coffee' ? 'coffee shops' : 'restaurants'} &rarr;
               </Link>
             </div>
@@ -114,10 +114,10 @@ function HomePage() {
         </div>
 
         <div className="mt-3 flex flex-col gap-2 text-center">
-          <Link to="/marketplace" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/marketplace" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             Shop worker and employee owned businesses online &rarr;
           </Link>
-          <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/submit" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             Submit a worker or employee owned business &rarr;
           </Link>
         </div>

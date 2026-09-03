@@ -69,37 +69,37 @@ function ContactPage() {
               <div className="text-3xl mb-3">&#10003;</div>
               <h2 className="text-lg font-bold text-gray-900 mb-2">Message received</h2>
               <p className="text-gray-500 text-sm mb-5">Thanks! We'll get back to you soon.</p>
-              <Link to="/" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">&larr; Back home</Link>
+              <Link to="/" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">&larr; Back home</Link>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Name</label>
                 <input type="text" value={formName} onChange={e => setFormName(e.target.value)}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#003580] transition-colors"
                   placeholder="Your name" />
               </div>
               <div>
                 <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Email *</label>
                 <input type="email" value={formEmail} onChange={e => setFormEmail(e.target.value)}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#003580] transition-colors"
                   placeholder="your@email.com" />
               </div>
               <div>
                 <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Message *</label>
                 <textarea rows={5} value={formMessage} onChange={e => setFormMessage(e.target.value)}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#004cb9] transition-colors resize-none"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#003580] transition-colors resize-none"
                   placeholder="How can we help?" />
               </div>
               <div className="bg-[#f5f5f7] rounded-xl px-4 py-3">
                 <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Not a robot: what is {captchaA} + {captchaB}?</label>
                 <input type="text" value={captchaAnswer} onChange={e => setCaptchaAnswer(e.target.value)}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:border-[#004cb9] transition-colors bg-white"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:border-[#003580] transition-colors bg-white"
                   placeholder="Answer" />
               </div>
               {formError && <p className="text-red-600 text-sm">{formError}</p>}
               <button type="submit"
-                className="w-full bg-[#004cb9] text-white font-semibold py-3 rounded-lg text-sm hover:bg-[#003a8c] transition-colors flex items-center justify-center gap-2">
+                className="w-full bg-[#003580] text-white font-semibold py-3 rounded-lg text-sm hover:bg-[#002660] transition-colors flex items-center justify-center gap-2">
                 <Send size={15} /> Send
               </button>
             </form>
@@ -107,10 +107,10 @@ function ContactPage() {
         </div>
 
         <div className="mt-3 flex justify-center gap-4">
-          <Link to="/" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; Back home
           </Link>
-          <Link to="/faq" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/faq" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             FAQ &rarr;
           </Link>
         </div>

@@ -139,12 +139,12 @@ function AlternativesPage() {
                       <div className="flex items-center gap-2">
                         <Link
                           to={`/marketplace/store/${slugify(store.name)}`}
-                          className="font-semibold text-sm text-[#004cb9] hover:text-[#003a8c] transition-colors truncate flex items-center gap-1.5"
+                          className="font-semibold text-sm text-[#003580] hover:text-[#002660] transition-colors truncate flex items-center gap-1.5"
                         >
                           {faviconUrl(store.url) && <img src={faviconUrl(store.url)} alt="" className="w-4 h-4 shrink-0" loading="lazy" />}
                           {store.name}
                         </Link>
-                        <span className="text-[9px] font-semibold px-1.5 py-0.5 rounded-full shrink-0 bg-blue-50 text-[#004cb9]">
+                        <span className="text-[9px] font-semibold px-1.5 py-0.5 rounded-full shrink-0 bg-blue-50 text-[#003580]">
                           {store.ownership_type}
                         </span>
                       </div>
@@ -163,7 +163,7 @@ function AlternativesPage() {
                 {alt.categories && stores.length > 8 && (
                   <Link
                     to={`/marketplace/${slugify(alt.categories[0].section)}`}
-                    className="inline-block mt-2 text-xs text-[#004cb9] hover:text-[#003a8c] font-medium"
+                    className="inline-block mt-2 text-xs text-[#003580] hover:text-[#002660] font-medium"
                   >
                     View all {stores.length} stores &rarr;
                   </Link>
@@ -171,7 +171,7 @@ function AlternativesPage() {
                 {alt.picks && (
                   <Link
                     to="/marketplace/companies"
-                    className="inline-block mt-2 text-xs text-[#004cb9] hover:text-[#003a8c] font-medium"
+                    className="inline-block mt-2 text-xs text-[#003580] hover:text-[#002660] font-medium"
                   >
                     Browse all companies &rarr;
                   </Link>
@@ -192,10 +192,10 @@ function AlternativesPage() {
         </div>
 
         <div className="mt-3 flex justify-center gap-4">
-          <Link to="/" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; Search all products
           </Link>
-          <Link to="/guides/what-is-a-worker-cooperative" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/guides/what-is-a-worker-cooperative" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             What is a co-op? &rarr;
           </Link>
         </div>

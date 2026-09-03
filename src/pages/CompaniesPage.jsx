@@ -50,7 +50,7 @@ function CompaniesPage() {
                       <div className="flex items-center gap-2">
                         <Link
                           to={`/marketplace/store/${slugify(store.name)}`}
-                          className="font-semibold text-sm text-[#004cb9] hover:text-[#003a8c] transition-colors truncate flex items-center gap-1.5"
+                          className="font-semibold text-sm text-[#003580] hover:text-[#002660] transition-colors truncate flex items-center gap-1.5"
                         >
                           {faviconUrl(store.url) && <img src={faviconUrl(store.url)} alt="" className="w-4 h-4 shrink-0" loading="lazy" />}
                           {store.name}
@@ -69,10 +69,10 @@ function CompaniesPage() {
         </div>
 
         <div className="mt-3 flex justify-center gap-4">
-          <Link to="/" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; Search
           </Link>
-          <Link to="/submit" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/submit" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             Submit a business &rarr;
           </Link>
         </div>

@@ -41,7 +41,7 @@ function WhatIsCoopPage() {
                     <tr className="bg-[#f5f5f7]">
                       <th className="px-3 py-2 text-left font-semibold text-gray-500"></th>
                       <th className="px-3 py-2 text-left font-semibold text-gray-500">Traditional Company</th>
-                      <th className="px-3 py-2 text-left font-semibold text-[#004cb9]">Worker Co-op</th>
+                      <th className="px-3 py-2 text-left font-semibold text-[#003580]">Worker Co-op</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100">
@@ -90,7 +90,7 @@ function WhatIsCoopPage() {
                 <li><strong>Cooperative Coffee Roasters</strong> - Small-batch coffee from Asheville, NC.</li>
                 <li><strong>AK Press</strong> - Independent books and publishing. Worker-owned since 1990.</li>
               </ul>
-              <Link to="/marketplace/companies" className="inline-block mt-2 text-[#004cb9] hover:text-[#003a8c] font-medium text-xs">
+              <Link to="/marketplace/companies" className="inline-block mt-2 text-[#003580] hover:text-[#002660] font-medium text-xs">
                 Browse all 170+ worker and employee owned companies &rarr;
               </Link>
             </section>
@@ -99,9 +99,9 @@ function WhatIsCoopPage() {
               <h2 className="text-base font-bold text-gray-900 mb-2">How do I start one?</h2>
               <p>These organizations help people start worker cooperatives:</p>
               <ul className="mt-2 space-y-1">
-                <li><a href="https://usworker.coop" target="_blank" rel="noopener" className="text-[#004cb9] hover:text-[#003a8c]">US Federation of Worker Cooperatives</a> - National federation, resources and networking</li>
-                <li><a href="https://institute.coop" target="_blank" rel="noopener" className="text-[#004cb9] hover:text-[#003a8c]">Democracy at Work Institute</a> - Training, technical assistance, research</li>
-                <li><a href="https://cooperationworks.coop" target="_blank" rel="noopener" className="text-[#004cb9] hover:text-[#003a8c]">CooperationWorks!</a> - Network of cooperative development centers</li>
+                <li><a href="https://usworker.coop" target="_blank" rel="noopener" className="text-[#003580] hover:text-[#002660]">US Federation of Worker Cooperatives</a> - National federation, resources and networking</li>
+                <li><a href="https://institute.coop" target="_blank" rel="noopener" className="text-[#003580] hover:text-[#002660]">Democracy at Work Institute</a> - Training, technical assistance, research</li>
+                <li><a href="https://cooperationworks.coop" target="_blank" rel="noopener" className="text-[#003580] hover:text-[#002660]">CooperationWorks!</a> - Network of cooperative development centers</li>
               </ul>
             </section>
 
@@ -115,10 +115,10 @@ function WhatIsCoopPage() {
         </div>
 
         <div className="mt-3 flex justify-center gap-4">
-          <Link to="/" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; Search all products
           </Link>
-          <Link to="/guides/alternatives" className="text-sm text-[#004cb9] hover:text-[#BF0A30] transition-colors font-medium">
+          <Link to="/guides/alternatives" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             Worker-owned alternatives &rarr;
           </Link>
         </div>

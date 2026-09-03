@@ -35,6 +35,8 @@ const RESUME = process.argv.includes('--resume');
 const MERGE_ONLY = process.argv.includes('--merge-only');
 const ENRICH = process.argv.includes('--enrich') && !process.argv.includes('--enrich-details');
 const ENRICH_DETAILS = process.argv.includes('--enrich-details');
+const SITEMAP = process.argv.includes('--sitemap');
+const SITEMAP_CHECKPOINT_FILE = '/tmp/scheels-sitemap-checkpoint.json';
 
 const PARALLEL_TABS = ENRICH_DETAILS ? 3 : (ENRICH ? 10 : 5);
 const DELAY_MS = ENRICH_DETAILS ? 1500 : (ENRICH ? 300 : 500);
@@ -69,8 +71,8 @@ const BREADCRUMB_TO_SECTION = {
   'furniture': 'Home Goods', 'bedding': 'Home Goods', 'bath': 'Home Goods',
   'outdoor living': 'Home Goods', 'patio': 'Home Goods', 'grill': 'Home Goods',
   'toys': 'Games', 'games': 'Games', 'lego': 'Games', 'puzzles': 'Games',
-  'electronics': 'Tech & Software', 'gopro': 'Tech & Software', 'garmin': 'Tech & Software',
-  'optics': 'Tech & Software',
+  'electronics': 'Tech & Software', 'gopro': 'Sporting Goods', 'garmin': 'Sporting Goods',
+  'optics': 'Sporting Goods',
   'pet': 'Home Goods',
 };
 
@@ -675,12 +677,10 @@ async function enrichDetailsMain() {
           console.log(`  [Created ${tabs.length} fresh tabs]`);
         } catch (e) {
           console.log('  [CF re-solve error:', e.message.slice(0, 80), ']');
-          // If browser is totally dead, bail out
-          if (e.message.includes('Connection closed') || e.message.includes('Target closed')) {
-            console.log('  [Browser died — saving checkpoint and exiting]');
-            saveDetailsCheckpoint(enrichedMap);
-            process.exit(1);
-          }
+          console.log('  [Cloudflare session dead — saving checkpoint and exiting. Restart to resume.]');
+          saveDetailsCheckpoint(enrichedMap);
+          try { await browser.close(); } catch {}
+          process.exit(1);
         }
         consecutiveFails = 0;
         await new Promise(r => setTimeout(r, 5000));
@@ -697,13 +697,12 @@ async function enrichDetailsMain() {
         const product = batch[j];
         processed++;
 
-        if (result) {
+        if (result && result.color) {
           enrichedMap.set(product.id, result);
           enriched++;
           batchSuccess++;
         } else {
-          // Mark as attempted with empty result so we don't retry
-          enrichedMap.set(product.id, {});
+          // Don't mark in checkpoint — will be retried on next run
           failed++;
         }
       }
@@ -902,7 +901,127 @@ function applyDetailsAndSave(scheelsProducts, nonScheels, enrichedMap) {
   console.log(`  ${nonScheels.length} other store products unchanged`);
 }
 
-(ENRICH_DETAILS ? enrichDetailsMain() : ENRICH ? enrichMain() : main()).catch(err => {
+/**
+ * Sitemap mode: fetch all 9 product sitemaps to get fresh URLs.
+ * Product titles are derived from URL slugs (e.g. /p/mens-nike-pegasus/12345 → "Mens Nike Pegasus").
+ * This gives us all ~169K products with working links immediately.
+ * Then use --enrich or --enrich-details to add prices/images/color.
+ */
+async function sitemapMain() {
+  const marketplace = JSON.parse(readFileSync(MARKETPLACE_FILE, 'utf8'));
+  const scheelsEntry = marketplace.find(e => e.name === 'Scheels All Sports');
+
+  console.log('Launching browser for sitemap scrape...');
+  const browser = await puppeteer.launch({
+    executablePath: CHROME_PATH,
+    headless: 'new',
+    args: ['--disable-blink-features=AutomationControlled', '--no-sandbox'],
+  });
+
+  try {
+    const mainPage = await solveCloudflareThenGetPage(browser);
+
+    const allUrls = [];
+    for (let i = 1; i <= 9; i++) {
+      const sitemapUrl = `https://www.scheels.com/sitemap/sitemap-products_${i}.xml`;
+      console.log(`Fetching sitemap ${i}/9...`);
+      await mainPage.goto(sitemapUrl, { waitUntil: 'networkidle2', timeout: 30000 });
+      const urls = await mainPage.evaluate(() => {
+        return [...document.querySelectorAll('loc')].map(l => l.textContent);
+      });
+      console.log(`  ${urls.length} URLs`);
+      allUrls.push(...urls);
+      await new Promise(r => setTimeout(r, 1000));
+    }
+    await mainPage.close();
+    await browser.close();
+
+    console.log(`\nTotal sitemap URLs: ${allUrls.length}`);
+
+    // Dedupe and parse into products
+    const seen = new Set();
+    const products = [];
+    for (const url of allUrls) {
+      const clean = url.split('?')[0];
+      if (seen.has(clean)) continue;
+      seen.add(clean);
+
+      // Extract title from URL slug: /p/mens-nike-pegasus-running-shoes/12345 → "Mens Nike Pegasus Running Shoes"
+      const pathPart = clean.replace('https://www.scheels.com/p/', '');
+      const slugPart = pathPart.includes('/') ? pathPart.split('/')[0] : pathPart;
+      const title = slugPart
+        .replace(/-/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase())
+        .trim();
+
+      // Extract product ID (last path segment or the whole thing if no slash)
+      const id = pathPart.includes('/') ? pathPart.split('/').pop() : pathPart;
+
+      // Infer section from slug keywords
+      const section = inferSection(slugPart, title);
+
+      // Infer brand from common patterns in slug
+      let brand = '';
+      const brandPatterns = /^(mens|womens|boys|girls|kids|youth|unisex)[-\s]+([\w]+)/i;
+      const brandMatch = slugPart.match(brandPatterns);
+      if (brandMatch) brand = brandMatch[2].charAt(0).toUpperCase() + brandMatch[2].slice(1);
+
+      products.push({
+        id,
+        title,
+        price: '',
+        image: '',
+        url: clean,
+        brand,
+        categoryPath: slugPart,
+        section,
+      });
+    }
+
+    console.log(`Unique products: ${products.length}`);
+
+    // Save checkpoint
+    writeFileSync(SITEMAP_CHECKPOINT_FILE, JSON.stringify({
+      products,
+      timestamp: new Date().toISOString(),
+    }));
+    console.log(`Saved sitemap checkpoint: ${SITEMAP_CHECKPOINT_FILE}`);
+
+    if (DRY_RUN) {
+      console.log('Dry run — not writing to products.json');
+      return;
+    }
+
+    // Merge into products.json
+    const scheelsProducts = products.map(p => ({
+      id: `166-scheels-${p.id}`,
+      title: p.title,
+      price: p.price,
+      available: true,
+      image: p.image,
+      url: p.url,
+      store_name: scheelsEntry.name,
+      store_url: scheelsEntry.url,
+      ownership_type: scheelsEntry.ownership_type,
+      site_section: p.section,
+      tags: [p.brand, p.categoryPath].filter(Boolean).map(t => t.toLowerCase().replace(/-/g, ' ')),
+    }));
+
+    const existing = JSON.parse(readFileSync(PRODUCTS_FILE, 'utf8'));
+    const nonScheels = existing.filter(p => p.store_name !== 'Scheels All Sports');
+    const final = [...nonScheels, ...scheelsProducts];
+    writeFileSync(PRODUCTS_FILE, JSON.stringify(final));
+
+    console.log(`\nWrote ${final.length} total products to products.json`);
+    console.log(`  ${scheelsProducts.length} Scheels from sitemaps`);
+    console.log(`  ${nonScheels.length} other stores`);
+  } catch (err) {
+    try { await browser.close(); } catch {}
+    throw err;
+  }
+}
+
+(SITEMAP ? sitemapMain() : ENRICH_DETAILS ? enrichDetailsMain() : ENRICH ? enrichMain() : main()).catch(err => {
   console.error('Fatal error:', err);
   process.exit(1);
 });
