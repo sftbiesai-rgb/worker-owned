@@ -1957,5 +1957,16 @@
     "status": "verified active",
     "notes": "Co-operatively owned music store, 100% run by and for the benefit of musicians, fans, and the people who work there. UK-based. Direct-to-fan album sales with fair artist compensation.",
     "site_section": "Music"
+  },
+  {
+    "id": 225,
+    "name": "Cape Cod Lumber",
+    "url": "https://capecodlumber.com",
+    "category": "building materials / lumber / hardware",
+    "ownership_type": "ESOP",
+    "ships": "Local (southeastern MA)",
+    "status": "verified active",
+    "notes": "100% employee-owned building materials supplier since 1958. Lumber, decking, windows, doors, roofing, siding, hardware, and kitchen/bath cabinetry. 12-acre campus in Abington, MA with HomeScapes design showroom.",
+    "site_section": "Home Goods & Services"
   }
 ]
