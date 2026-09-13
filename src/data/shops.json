@@ -1245,5 +1245,17 @@
     "id": 134,
     "lat": 33.3918,
     "lng": -111.8449
+  },
+  {
+    "name": "Prospect Butcher Co.",
+    "city": "Brooklyn",
+    "state": "NY",
+    "location": "665 Vanderbilt Ave, Brooklyn, NY 11238",
+    "website": "prospectbutcher.com",
+    "category": "grocery",
+    "notes": "Worker-owned butcher shop in Prospect Heights. Two locations (also Greenpoint).",
+    "id": 135,
+    "lat": 40.6770321,
+    "lng": -73.9688373
   }
 ]

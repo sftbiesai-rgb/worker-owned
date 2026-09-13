@@ -190,5 +190,17 @@
     "notes": "Employee-owned via ESOP since 2018. Brewpub and taproom in Ohio City neighborhood. Pioneered craft beer in Ohio.",
     "lat": 41.4996574,
     "lng": -81.6936772
+  },
+  {
+    "id": 19,
+    "name": "Skylark",
+    "city": "Chicago",
+    "state": "IL",
+    "location": "2149 S Halsted St, Chicago, IL 60608",
+    "website": "skylarkchicago.com",
+    "category": "bar",
+    "notes": "Employee-owned dive bar in Pilsen. Bought by six longtime employees in 2024.",
+    "lat": 41.8546,
+    "lng": -87.6466
   }
 ]
