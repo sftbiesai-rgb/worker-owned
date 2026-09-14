@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <img src="../icons/icon-48.png" alt="">
+    <h1>Worker Owned Alternatives</h1>
+  </div>
+
+  <!-- Loading state -->
+  <div id="state-loading" class="state active">
+    <p class="loading">Checking for alternatives...</p>
+  </div>
+
+  <!-- Product match (green) — Phase 2 -->
+  <div id="state-product" class="state match-product">
+    <span class="badge">Exact match</span>
+    <div class="nudge-title" id="product-headline"></div>
+    <div class="nudge-subtitle" id="product-subtitle"></div>
+    <div class="product-cards" id="product-cards"></div>
+    <a class="cta" id="product-cta" href="#" target="_blank">Browse all on Worker Owned</a>
+    <a class="cta-secondary" id="product-cta-search" href="https://www.workerowned.info/marketplace" target="_blank">Search full marketplace</a>
+  </div>
+
+  <!-- Category match (orange) -->
+  <div id="state-category" class="state match-category">
+    <span class="badge">Alternatives available</span>
+    <div class="nudge-title" id="category-headline"></div>
+    <div class="nudge-subtitle" id="category-subtitle"></div>
+    <div class="stores" id="category-stores"></div>
+    <a class="cta" id="category-cta" href="#" target="_blank">Browse worker-owned alternatives</a>
+    <a class="cta-secondary" href="https://www.workerowned.info/marketplace" target="_blank">Search full marketplace</a>
+  </div>
+
+  <!-- No match -->
+  <div id="state-none" class="state">
+    <div class="no-match-text">
+      <strong>No alternatives found</strong>
+      We don't have a match for this product yet, but our marketplace has 220,000+ products from worker-owned businesses.
+    </div>
+    <a class="cta" href="https://www.workerowned.info/marketplace" target="_blank">Browse the marketplace</a>
+  </div>
+
+  <!-- Not on a product page -->
+  <div id="state-idle" class="state">
+    <div class="no-match-text">
+      <strong>Visit an Amazon product page</strong>
+      We'll check if worker-owned alternatives exist for whatever you're looking at.
+    </div>
+    <a class="cta" href="https://www.workerowned.info/marketplace" target="_blank">Browse the marketplace</a>
+  </div>
+
+  <div class="footer">
+    <a href="https://www.workerowned.info" target="_blank">workerowned.info</a> &mdash; shop worker-owned
+    <div class="legend">
+      <span><span class="legend-dot green"></span>Exact match</span>
+      <span><span class="legend-dot orange"></span>Category match</span>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

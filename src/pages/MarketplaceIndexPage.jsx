@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { Search, ArrowUpDown, ChevronDown, SlidersHorizontal } from 'lucide-react'
 import { SECTIONS, SECTION_SLUGS } from '../lib/categories'
-import { searchProducts, searchCompanies } from '../lib/search'
+import { searchProducts, searchCompanies, buildProductIndex } from '../lib/search'
 import marketplaceData from '../data/marketplace.json'
 import { slugify, faviconUrl, dedupeByUrl } from '../lib/utils'
 import OwnershipBadge from '../components/OwnershipBadge'
@@ -62,6 +62,7 @@ function MarketplaceIndexPage() {
   const filterPmax = searchParams.get('pmax') || ''
   const filterRefine = searchParams.get('refine') || ''
   const [products, setProducts] = useState([])
+  const [searchIndex, setSearchIndex] = useState(null)
   const [loadingProducts, setLoadingProducts] = useState(false)
   const [featured, setFeatured] = useState([])
   const [inputValue, setInputValue] = useState(query)
@@ -136,6 +137,7 @@ function MarketplaceIndexPage() {
           return product
         })
         setProducts(hydrated)
+        setSearchIndex(buildProductIndex(hydrated))
       })
       .catch(() => {})
       .finally(() => setLoadingProducts(false))
@@ -146,7 +148,7 @@ function MarketplaceIndexPage() {
   const companyResults = useMemo(() =>
     searchCompanies(query, allCompanies).filter(c => !scrapedStores.has(c.name)),
     [query, allCompanies, scrapedStores])
-  const results = useMemo(() => searchProducts(query, products).filter(p => p.available !== false), [query, products])
+  const results = useMemo(() => searchProducts(query, products, searchIndex), [query, products, searchIndex])
 
   // Apply filters: category → store → price → refine keywords
   const filteredResults = useMemo(() => {

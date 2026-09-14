@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #fff;
+  color: #1a1a2e;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Header */
+.header {
+  background: #003580;
+  color: #fff;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header img {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+}
+
+.header h1 {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* States */
+.state {
+  display: none;
+  padding: 20px 16px;
+}
+
+.state.active {
+  display: block;
+}
+
+/* Product match (green) — Phase 2 */
+.match-product .badge {
+  background: #27AE60;
+}
+
+/* Category match (orange) */
+.match-category .badge {
+  background: #E67E22;
+}
+
+.badge {
+  display: inline-block;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+/* Category nudge */
+.nudge-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.nudge-subtitle {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+/* Store pills */
+.stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.store-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #f0f4f8;
+  border: 1px solid #dde3ea;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 12px;
+  color: #1a1a2e;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.store-pill:hover {
+  background: #dde3ea;
+}
+
+.store-pill .ownership {
+  font-size: 10px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Product cards (Phase 2) */
+.product-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.product-card {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.product-card:hover {
+  border-color: #003580;
+  box-shadow: 0 2px 8px rgba(0, 53, 128, 0.1);
+}
+
+.product-card img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #f8f9fa;
+}
+
+.product-card .info {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-card .title {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-card .meta {
+  font-size: 12px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.product-card .price {
+  font-weight: 700;
+  color: #27AE60;
+}
+
+.product-card .store {
+  color: #003580;
+}
+
+/* CTA button */
+.cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #003580;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.cta:hover {
+  background: #002a66;
+}
+
+.cta-secondary {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #003580;
+  padding: 8px 16px;
+  font-size: 13px;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.cta-secondary:hover {
+  text-decoration: underline;
+}
+
+/* No match state */
+.no-match-text {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.no-match-text strong {
+  display: block;
+  color: #1a1a2e;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  color: #999;
+  padding: 30px 16px;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #eee;
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 11px;
+  color: #999;
+}
+
+.footer a {
+  color: #003580;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Color legend */
+.legend {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 6px;
+  font-size: 10px;
+  color: #888;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+.legend-dot.green { background: #27AE60; }
+.legend-dot.orange { background: #E67E22; }

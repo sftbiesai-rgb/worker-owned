@@ -10,17 +10,67 @@ const BSKY_APP_PASSWORD = 'cRbdqFsy4M9GzmL';
 const API = 'https://bsky.social/xrpc';
 
 const REPLIES = [
+  // #1 Blizzard union mega-contract (aftermath.site, 3K likes)
   {
-    // Greg Pak — "doing my gat damnedest not to buy from obvious monsters" (604 likes)
-    url: 'https://bsky.app/profile/gregpak.net/post/3mtks5pvgws26',
-    text: "If it helps, workerowned.info is a searchable marketplace of 200+ worker co-ops and employee-owned companies. Coffee, books, sporting goods, apparel, all owned by the people who make and sell it. Makes it easier to find the non-monster option.",
+    url: 'https://bsky.app/profile/aftermath.site/post/3mv3lrwmzzh2q',
+    text: "Let's go. Once workers see what collective power can do at the bargaining table, the next question becomes: what about ownership? Worker-owned businesses take that a step further. You can find hundreds of them at workerowned.info",
   },
+  // #2 NYC Office of Worker Power (ddayen, 1.8K likes)
   {
-    // Gil Duran — recommending Bookshop.org as Amazon alternative (344 likes)
-    url: 'https://bsky.app/profile/gilduran.com/post/3mtyyfbdn4s26',
-    text: "Bookshop.org is great. If you're looking for more alternatives beyond books, workerowned.info is a searchable marketplace of 200+ worker co-ops and employee-owned companies. Coffee, music, sporting goods, all worker-owned.",
+    url: 'https://bsky.app/profile/ddayen.bsky.social/post/3muwnn4wtt22m',
+    text: "This is great to see. Connecting workers to resources is exactly what's needed. On a related note, we built workerowned.info as a searchable marketplace of worker-owned businesses — so people can actually put their money where their values are too.",
+  },
+  // #3 Union membership grew most since 2008 (moreperfectunion, 428 likes)
+  {
+    url: 'https://bsky.app/profile/moreperfectunion.bsky.social/post/3muz3su7ji22s',
+    text: "Let's go, unions rule. With robust worker ownership we can make the economy work more for workers and consumers, less for owners and shareholders. We made workerowned.info, an Amazon-like site for buying from worker-owned businesses.",
+  },
+  // #4 $1.7B union-busting industry tool (ddayen, 310 likes)
+  {
+    url: 'https://bsky.app/profile/ddayen.bsky.social/post/3muz5ohbaps2l',
+    text: "What a resource. Exposing the money behind union-busting is critical. On the flip side, if you want to support businesses that don't need busting because workers already own them, we've been building a searchable marketplace at workerowned.info",
+  },
+  // #5 Boycott Amazon/Walmart/Target (archeryfan93, 449 likes)
+  {
+    url: 'https://bsky.app/profile/archeryfan93.bsky.social/post/3mv4yhtvpr223',
+    text: "If you're looking for where to shop instead, workerowned.info is a searchable marketplace of worker-owned businesses — co-ops, employee-owned companies, and independent shops across the US. Clothing, groceries, outdoor gear, books, and more.",
+  },
+  // #6 Worker-owned bookstore article (cooperatives, 38 likes)
+  {
+    url: 'https://bsky.app/profile/cooperatives.bsky.social/post/3muux2ffcsk2b',
+    text: "Dig it. Bol is a great example. If anyone wants to find more businesses like this, we built workerowned.info — a searchable marketplace of worker-owned companies across the US. Bookstores, groceries, outdoor gear, and more.",
+  },
+  // #7 Avi Lewis on worker ownership (avilewis.ca, 50 likes)
+  {
+    url: 'https://bsky.app/profile/avilewis.ca/post/3muxoind5522m',
+    text: "Workplace democracy and worker ownership in the same breath — you love to see it. If folks want to actually shop worker-owned right now, workerowned.info is a searchable marketplace with hundreds of businesses across the US.",
   },
 ];
+
+const SENT_LOG = 'scripts/.bsky-sent.json';
+const fs = require('fs');
+
+// CLI args
+// --all         Send all unsent, spaced by --gap minutes (default 90)
+// --gap 120     Minutes between replies (default 90)
+// --next        Send only the next unsent reply, then exit
+// --dry         Preview what would be sent without posting
+// (no args)     Same as --next
+const cliArgs = process.argv.slice(2);
+const DRY_RUN = cliArgs.includes('--dry');
+const SEND_ALL = cliArgs.includes('--all');
+function getArg(name, fallback) {
+  const idx = cliArgs.indexOf('--' + name);
+  return idx >= 0 && cliArgs[idx + 1] ? Number(cliArgs[idx + 1]) : fallback;
+}
+const GAP_MINUTES = getArg('gap', 90);
+
+function loadSent() {
+  try { return JSON.parse(fs.readFileSync(SENT_LOG, 'utf8')); } catch { return []; }
+}
+function saveSent(sent) {
+  fs.writeFileSync(SENT_LOG, JSON.stringify(sent, null, 2) + '\n');
+}
 
 let authToken = null;
 let authorDid = null;
@@ -103,15 +153,42 @@ async function postReply(text, parentUri, parentCid) {
   return `https://bsky.app/profile/iesai.bsky.social/post/${rkey}`;
 }
 
+function fmtWait(ms) {
+  const m = Math.round(ms / 60000);
+  return m >= 60 ? `${(m / 60).toFixed(1)}h` : `${m}m`;
+}
+
 async function main() {
   if (REPLIES.length === 0) {
     console.log('No replies defined. Add entries to the REPLIES array.');
     process.exit(0);
   }
 
+  const sent = new Set(loadSent());
+  const unsent = REPLIES.filter(r => !sent.has(r.url));
+
+  if (unsent.length === 0) {
+    console.log('All replies already sent.');
+    process.exit(0);
+  }
+
+  console.log(`${unsent.length} unsent of ${REPLIES.length} total (gap: ${GAP_MINUTES}m)\n`);
+
+  if (DRY_RUN) {
+    for (const [i, reply] of unsent.entries()) {
+      console.log(`[${i + 1}] ${reply.url}`);
+      console.log(`    ${reply.text.slice(0, 120)}...`);
+      if (SEND_ALL && i < unsent.length - 1) console.log(`    ⏳ wait ${GAP_MINUTES}m`);
+    }
+    console.log('\n(dry run — nothing sent)');
+    process.exit(0);
+  }
+
   await authenticate();
 
-  for (const reply of REPLIES) {
+  const toSend = SEND_ALL ? unsent : [unsent[0]];
+
+  for (const [i, reply] of toSend.entries()) {
     const facets = buildFacets(reply.text);
     console.log(`Resolving: ${reply.url}`);
     console.log(`Links detected: ${facets.map(f => f.features[0].uri).join(', ') || 'none'}`);
@@ -119,10 +196,21 @@ async function main() {
     const postedUrl = await postReply(reply.text, uri, cid);
     console.log(`Posted: ${postedUrl}`);
     console.log(`Text: ${reply.text}\n`);
-    await new Promise(r => setTimeout(r, 1500));
+
+    // Track sent
+    sent.add(reply.url);
+    saveSent([...sent]);
+
+    // Wait between replies (skip after last one)
+    if (SEND_ALL && i < toSend.length - 1) {
+      const waitMs = GAP_MINUTES * 60 * 1000;
+      console.log(`⏳ Waiting ${fmtWait(waitMs)} before next reply...`);
+      await new Promise(r => setTimeout(r, waitMs));
+    }
   }
 
-  console.log('Done.');
+  const remaining = REPLIES.length - sent.size;
+  console.log(`Done. ${remaining > 0 ? `${remaining} replies remaining — run again to continue.` : 'All replies sent!'}`);
 }
 
 main().catch(console.error);

@@ -1,0 +1,375 @@
+{
+  "amazonCategories": {
+    "Books": "books",
+    "Kindle Store": "books",
+    "Kindle eBooks": "books",
+    "Audible Books & Originals": "books",
+    "CDs & Vinyl": "music",
+    "Digital Music": "music",
+    "Movies & TV": "movies-tv",
+    "Blu-ray": "movies-tv",
+    "DVD": "movies-tv",
+    "Prime Video": "movies-tv",
+    "Video Games": "games",
+    "Toys & Games": "games",
+    "Board Games": "games",
+    "Card Games": "games",
+    "Sports & Outdoors": "sporting-goods",
+    "Exercise & Fitness": "sporting-goods",
+    "Cycling": "sporting-goods",
+    "Hunting & Fishing": "sporting-goods",
+    "Clothing, Shoes & Jewelry": "apparel",
+    "Women's Fashion": "apparel",
+    "Men's Fashion": "apparel",
+    "Girls' Fashion": "apparel",
+    "Boys' Fashion": "apparel",
+    "Luggage": "apparel",
+    "Grocery & Gourmet Food": "food-pantry",
+    "Pantry Staples": "food-pantry",
+    "Coffee": "coffee-tea",
+    "Tea": "coffee-tea",
+    "Coffee, Tea & Espresso": "coffee-tea",
+    "Beauty & Personal Care": "personal-care",
+    "Health & Household": "personal-care",
+    "Vitamins & Dietary Supplements": "personal-care",
+    "Health, Household & Baby Care": "personal-care",
+    "Home & Kitchen": "home-goods",
+    "Kitchen & Dining": "home-goods",
+    "Arts, Crafts & Sewing": "home-goods",
+    "Handmade Products": "home-goods",
+    "Garden & Outdoor": "home-goods",
+    "Beer, Wine & Spirits": "beer-brewing",
+    "Software": "tech-software",
+    "Apps & Games": "tech-software"
+  },
+  "sections": {
+    "coffee-tea": {
+      "label": "Coffee & Tea",
+      "count": 637,
+      "storeCount": 11,
+      "stores": [
+        {
+          "name": "Equal Exchange",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Dean's Beans Organic Coffee",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Gimme Coffee Cooperative",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Rock City Coffee",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Cafe Campesino",
+          "ownershipType": "cooperative affiliated"
+        },
+        {
+          "name": "Thread Coffee Roasters",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/marketplace/coffee-tea"
+    },
+    "books": {
+      "label": "Books",
+      "count": 53745,
+      "storeCount": 9,
+      "stores": [
+        {
+          "name": "Microcosm Publishing",
+          "ownershipType": "worker-owned"
+        },
+        {
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Verso Books",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Thrifty White Pharmacy",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Boydell & Brewer",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Adobe Books & Arts Cooperative",
+          "ownershipType": "volunteer worker co-op"
+        }
+      ],
+      "url": "/marketplace/books"
+    },
+    "food-pantry": {
+      "label": "Food & Pantry",
+      "count": 3433,
+      "storeCount": 18,
+      "stores": [
+        {
+          "name": "Sow True Seed",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "King Arthur Baking Company",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Thrifty White Pharmacy",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "The Local Butcher Shop",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Cabot Creamery",
+          "ownershipType": "farmer co-op"
+        },
+        {
+          "name": "Grass Roots Farmers' Cooperative",
+          "ownershipType": "farmer co-op"
+        }
+      ],
+      "url": "/marketplace/food-pantry"
+    },
+    "personal-care": {
+      "label": "Personal Care",
+      "count": 6652,
+      "storeCount": 5,
+      "stores": [
+        {
+          "name": "Thrifty White Pharmacy",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Alaffia",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Meow Meow Tweet",
+          "ownershipType": "worker collective"
+        },
+        {
+          "name": "Palestinian Soap Cooperative",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Soapbox Co-op",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/marketplace/personal-care"
+    },
+    "games": {
+      "label": "Games",
+      "count": 3641,
+      "storeCount": 6,
+      "stores": [
+        {
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Microcosm Publishing",
+          "ownershipType": "worker-owned"
+        },
+        {
+          "name": "TableTop Gaming",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Thrifty White Pharmacy",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "TESA Collective",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        }
+      ],
+      "url": "/marketplace/games"
+    },
+    "apparel": {
+      "label": "Apparel",
+      "count": 56402,
+      "storeCount": 15,
+      "stores": [
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Tradehome Shoes",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Landry's Bicycles",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Dansko",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Microcosm Publishing",
+          "ownershipType": "worker-owned"
+        },
+        {
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
+        }
+      ],
+      "url": "/marketplace/apparel"
+    },
+    "home-goods": {
+      "label": "Home Goods & Services",
+      "count": 19801,
+      "storeCount": 11,
+      "stores": [
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Artisans Cooperative",
+          "ownershipType": "multi-stakeholder co-op"
+        },
+        {
+          "name": "Gardener's Supply Company",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Handwork — Ithaca's Artisan Cooperative",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Dye Mad Yarns",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Thrifty White Pharmacy",
+          "ownershipType": "ESOP"
+        }
+      ],
+      "url": "/marketplace/home-goods"
+    },
+    "media-publishing": {
+      "label": "Media & Publishing",
+      "count": 108,
+      "storeCount": 22,
+      "stores": [
+        {
+          "name": "RADIX",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Strange Matters Magazine",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Maximum Fun Studio",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Defector",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "404 Media",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Aftermath",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/marketplace/media-publishing"
+    },
+    "beer-brewing": {
+      "label": "Beer & Brewing",
+      "count": 286,
+      "storeCount": 4,
+      "stores": [
+        {
+          "name": "Odell Brewing Company",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Deschutes Brewery",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Harpoon Brewery",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Left Hand Brewing Company",
+          "ownershipType": "employee-owned"
+        }
+      ],
+      "url": "/marketplace/beer-brewing"
+    },
+    "sporting-goods": {
+      "label": "Sporting Goods & Outdoors",
+      "count": 65516,
+      "storeCount": 4,
+      "stores": [
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Landry's Bicycles",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Cane Creek Cycling Components",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Independent Fabrication",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/marketplace/sporting-goods"
+    },
+    "music": {
+      "label": "Music",
+      "count": 9493,
+      "storeCount": 2,
+      "stores": [
+        {
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Tape Trade",
+          "ownershipType": "worker-owned"
+        }
+      ],
+      "url": "/marketplace/music"
+    },
+    "movies-tv": {
+      "label": "Movies & TV",
+      "count": 3592,
+      "storeCount": 1,
+      "stores": [
+        {
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
+        }
+      ],
+      "url": "/marketplace/movies-tv"
+    }
+  }
+}

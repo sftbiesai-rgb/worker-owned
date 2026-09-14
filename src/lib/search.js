@@ -1,4 +1,103 @@
-// Stem a word: plurals, -ing, -ed, -er, -ly
+import MiniSearch from 'minisearch'
+
+// Normalize compound terms so multi-word concepts become single tokens.
+// Applied to both product text (at index time) and queries (at search time).
+function normalizeText(text) {
+  return text.toLowerCase()
+    .replace(/t[-\s]shirts?\b/g, 'tshirt')
+    .replace(/long[-\s]sleev\w*/g, 'longsleeve')
+    .replace(/short[-\s]sleev\w*/g, 'shortsleeve')
+    .replace(/v[-\s]neck/g, 'vneck')
+    .replace(/crew[-\s]neck/g, 'crewneck')
+    .replace(/button[-\s]down/g, 'buttondown')
+    .replace(/button[-\s]up/g, 'buttonup')
+    .replace(/polo\s+shirt/g, 'poloshirt')
+    .replace(/dress\s+shirt/g, 'dressshirt')
+    .replace(/hot\s+sauce/g, 'hotsauce')
+    .replace(/nut\s+butter/g, 'nutbutter')
+    .replace(/peanut\s+butter/g, 'peanutbutter')
+    .replace(/olive\s+oil/g, 'oliveoil')
+    .replace(/ice\s+cream/g, 'icecream')
+    .replace(/maple\s+syrup/g, 'maplesyrup')
+    .replace(/board\s+games?\b/g, 'boardgame')
+    .replace(/card\s+games?\b/g, 'cardgame')
+    .replace(/video\s+games?\b/g, 'videogame')
+    .replace(/blu[-\s]?ray/g, 'bluray')
+    .replace(/fair\s+trade/g, 'fairtrade')
+    .replace(/sea\s+vegetables?/g, 'seavegetable')
+    .replace(/dark\s+roast/g, 'darkroast')
+    .replace(/medium\s+roast/g, 'mediumroast')
+    .replace(/light\s+roast/g, 'lightroast')
+    .replace(/cold\s+brew/g, 'coldbrew')
+    .replace(/rain\s+jacket/g, 'rainjacket')
+    .replace(/face\s+wash/g, 'facewash')
+    .replace(/body\s+wash/g, 'bodywash')
+    .replace(/hand\s+soap/g, 'handsoap')
+    .replace(/lip\s+balm/g, 'lipbalm')
+    .replace(/red\s+mill/g, 'redmill')
+}
+
+export function buildProductIndex(products) {
+  const ms = new MiniSearch({
+    fields: ['title', 'tagsText'],
+    searchOptions: {
+      boost: { title: 3, tagsText: 1 },
+      prefix: true,
+      fuzzy: 0.15,
+      combineWith: 'AND',
+    },
+  })
+
+  ms.addAll(products.map((p, i) => ({
+    id: i,
+    title: normalizeText(p.title || ''),
+    tagsText: normalizeText((p.tags || []).join(' ')),
+  })))
+
+  return ms
+}
+
+export function searchProducts(query, products, index) {
+  if (!query.trim() || !index) return []
+
+  const normalized = normalizeText(query.trim())
+  const words = normalized.split(/\s+/).filter(w => w.length > 1)
+  if (words.length === 0) return []
+
+  const results = index.search(words.join(' '))
+
+  // Apply store fatigue so one store doesn't dominate results
+  const storeCounts = new Map()
+  const scored = results
+    .filter(r => products[r.id]?.available !== false)
+    .map(r => {
+      const p = products[r.id]
+      const store = p.store_name || ''
+      const prior = storeCounts.get(store) || 0
+      storeCounts.set(store, prior + 1)
+      // Small co-op boost
+      const ot = (p.ownership_type || '').toLowerCase()
+      const coopBonus = (ot.includes('worker co-op') || ot === 'worker owned') ? 0.05 * r.score
+        : ot.includes('multi-stakeholder') ? 0.02 * r.score : 0
+      return { p, effective: r.score + coopBonus - (prior * 0.003 * r.score) }
+    })
+
+  scored.sort((a, b) => b.effective - a.effective)
+  return scored.map(s => s.p)
+}
+
+// Company search — small dataset, no index needed
+function wordMatch(text, stems) {
+  if (!text) return false
+  const lower = text.toLowerCase().replace(/['']/g, '')
+  return stems.some(s => {
+    const idx = lower.indexOf(s)
+    if (idx === -1) return false
+    if (idx > 0 && /[a-z]/.test(lower[idx - 1])) return false
+    return true
+  })
+}
+
 function stemWord(w) {
   const forms = new Set([w])
   if (w.endsWith('ies')) forms.add(w.slice(0, -3) + 'y')
@@ -24,7 +123,7 @@ function stemWord(w) {
 }
 
 const SYNONYMS = {
-  tee: ['t-shirt', 'tee'], tshirt: ['t-shirt', 'tee'], 'shirt': ['t-shirt', 'tee', 'shirt'],
+  tee: ['tshirt', 'tee'], tshirt: ['tshirt', 'tee'],
   mug: ['cup', 'mug'], cup: ['mug', 'cup'],
   pants: ['trousers', 'jeans', 'pants'], trousers: ['pants', 'trousers'],
   sneakers: ['shoes', 'sneakers'], shoes: ['sneakers', 'footwear', 'shoes'],
@@ -32,31 +131,17 @@ const SYNONYMS = {
   bag: ['tote', 'bag', 'pouch'], tote: ['bag', 'tote'],
   chocolate: ['cocoa', 'cacao', 'chocolate'], cocoa: ['chocolate', 'cocoa', 'cacao'],
   tea: ['chai', 'tea'], chai: ['tea', 'chai'],
-  soap: ['bar soap', 'soap'], lotion: ['moisturizer', 'lotion', 'cream'],
   cap: ['hat', 'cap', 'beanie'], hat: ['cap', 'hat', 'beanie'],
   vinyl: ['record', 'lp', 'vinyl'], record: ['vinyl', 'lp', 'record'],
-  poster: ['print', 'poster', 'art print'], print: ['poster', 'print', 'art print'],
+  poster: ['print', 'poster'], print: ['poster', 'print'],
   jam: ['preserve', 'jelly', 'jam'], jelly: ['jam', 'preserve', 'jelly'],
-  'hot sauce': ['hot sauce', 'salsa', 'chili sauce'], salsa: ['hot sauce', 'salsa'],
-}
-
-function wordMatch(text, stems) {
-  if (!text) return false
-  const lower = text.toLowerCase().replace(/['']/g, '')
-  return stems.some(s => {
-    const idx = lower.indexOf(s)
-    if (idx === -1) return false
-    if (idx > 0 && /[a-z]/.test(lower[idx - 1])) return false
-    return true
-  })
+  hotsauce: ['hotsauce', 'salsa'], salsa: ['hotsauce', 'salsa'],
 }
 
 function urlWords(url) {
   if (!url) return ''
-  try {
-    const path = new URL(url).pathname
-    return path.replace(/[^a-z0-9]+/gi, ' ').toLowerCase()
-  } catch { return '' }
+  try { return new URL(url).pathname.replace(/[^a-z0-9]+/gi, ' ').toLowerCase() }
+  catch { return '' }
 }
 
 export function searchCompanies(inputValue, companies) {
@@ -91,81 +176,4 @@ export function searchCompanies(inputValue, companies) {
   }
   scored.sort((a, b) => b.score - a.score)
   return scored.map(s => s.c)
-}
-
-export function searchProducts(inputValue, products) {
-  if (!inputValue.trim()) return []
-
-  const words = inputValue.toLowerCase().trim().replace(/['']/g, '').split(/\s+/).filter(Boolean)
-  const wordStems = words.map(w => {
-    const stems = stemWord(w)
-    const syns = SYNONYMS[w]
-    if (syns) for (const s of syns) stems.push(...stemWord(s))
-    return [...new Set(stems)]
-  })
-
-  const queryLower = inputValue.toLowerCase().trim().replace(/['']/g, '')
-  const totalWords = wordStems.length
-  const scored = []
-  for (const p of products) {
-    let matchedWords = 0
-    let score = 0
-    const storeLower = (p.store_name || '').toLowerCase().replace(/['']/g, '')
-    const titleLower = (p.title || '').toLowerCase().replace(/[''™℠®©]/g, '').replace(/&#x[0-9a-f]+;/gi, '').replace(/&#\d+;/g, '')
-    const titleStripped = storeLower ? titleLower.replace(storeLower, '').replace(storeLower.replace(/\s+(co-op|cooperative|roasters|brewing|press)$/i, ''), '') : titleLower
-    const slugText = urlWords(p.url)
-    for (const stems of wordStems) {
-      const inTitle = wordMatch(p.title, stems)
-      const inStore = wordMatch(p.store_name, stems)
-      const inTags = p.tags?.some(t => wordMatch(t, stems))
-      const inSlug = wordMatch(slugText, stems)
-      if (!inTitle && !inStore && !inTags && !inSlug) continue
-      matchedWords++
-      if (inTitle) {
-        const inTitleStripped = stems.some(s => { const idx = titleStripped.indexOf(s); return idx !== -1 && (idx === 0 || !/[a-z]/.test(titleStripped[idx - 1])) })
-        score += inTitleStripped ? 3 : 1
-        if (inTags) score += 2
-      }
-      else if (inStore && inTags) score += 2
-      else if (inTags) score += 1
-      else if (inSlug) score += 0.5
-      else if (inStore) score += 0.5
-    }
-    // Require at least 2 words matched, or all words if query is 1-2 words
-    const allMatch = matchedWords === totalWords
-    if (matchedWords < Math.min(2, totalWords)) continue
-    // Partial matches get a penalty proportional to missed words
-    if (!allMatch) score -= (totalWords - matchedWords) * 4
-    if (allMatch && titleStripped.includes(queryLower)) score += 5
-    if (p.site_section) {
-      const sectionLower = p.site_section.toLowerCase()
-      if (words.some(w => sectionLower.includes(w))) score += 4
-    }
-    {
-      const ot = (p.ownership_type || '').toLowerCase()
-      if (ot.includes('worker co-op') || ot === 'worker owned') score += 2
-      else if (ot.includes('multi-stakeholder')) score += 1
-    }
-    {
-      const titleWords = titleStripped.trim().split(/\s+/).filter(Boolean)
-      const matchCount = words.filter(w => titleStripped.includes(w)).length
-      score += titleWords.length > 0 ? (matchCount / titleWords.length) : 0
-    }
-    if (p.available === false) score -= 100
-    if (allMatch && score < 1.5) score -= 2
-    scored.push({ p, score })
-  }
-
-  // Sort by score with store fatigue
-  scored.sort((a, b) => b.score - a.score)
-  const storeCounts = new Map()
-  const FATIGUE = 0.3
-  const withFatigue = scored.map(item => {
-    const store = item.p.store_name || ''
-    const prior = storeCounts.get(store) || 0
-    storeCounts.set(store, prior + 1)
-    return { ...item, effective: item.score - (prior * FATIGUE) }
-  })
-  withFatigue.sort((a, b) => b.effective - a.effective)
-  return withFatigue.map(s => s.p)
 }

@@ -1,0 +1,357 @@
+OUTREACH TRACKER - workerowned.info
+Updated: 2026-09-13
+=====================================
+
+LEGEND:
+  ACK = Acknowledged (auto-reply or ticket confirmation)
+  RESP = Real human response
+  CONV = Ongoing conversation (multiple exchanges)
+  BOUNCE = Email bounced (excluded from confirmed contacts)
+  NONE = No response
+
+=== REAL RESPONSES (human replies) ===
+
+Organization                    | Contact Email                        | Status | Summary
+--------------------------------|--------------------------------------|--------|--------
+508.dev                         | hello@508.dev                        | CONV   | Caleb thanked us, invited us to join their co-op
+Cory Doctorow                   | doctorow@craphound.com               | RESP   | "Thanks, will do!" -- later featured us on Pluralistic
+Nathan Schneider                | nathan.schneider@colorado.edu        | CONV   | "Thank you for doing this!" Discussed AI and co-ops, curious about vibe-coding
+Reggie Rucker / ILSR            | reggie@ilsr.org                      | RESP   | "Thanks for sharing this resource -- we'll see what we can come up with"
+Josh Davis / GEO                | josh@geo.coop / editors@geo.coop     | CONV   | Published our article on geo.coop, ongoing relationship
+DAWI / Karina                   | kpacheco@institute.coop              | RESP   | Offered to share on social media, newsletter system being rebuilt
+Mark Hand / The Stakehold       | mark.c.hand@gmail.com                | CONV   | Featured us in newsletter, suggested ESOP language, asked about widget and legal questions, now asking for C-suite emails
+Equal Exchange                  | info@equalexchange.coop              | RESP   | "What a cool resource!" Shared About Us page and farmer resources
+Palestinian Soap / Chris        | help@palestiniansoap.coop            | RESP   | Chris at olive.coop: "This is absolutely wonderful. Thanks so much!"
+Tape Trade                      | info@tapetrade.io                    | CONV   | "Thanks for including us, that is a cool project! How did you find us?"
+Hearing Things / Ryan           | info@hearingthings.co                | RESP   | Ryan: "thanks for including us!" Sent follow-up with growth update
+Subvert                         | info@subvert.fm                      | RESP   | "Thanks for reaching out and for including us in the directory"
+Mirlo                           | hi@mirlo.space                       | CONV   | Thanked us, suggested adding jam.coop and fairplayer.band
+Flaming Hydra / Maria           | maria@flaminghydra.com               | RESP   | Maria: "Yay!!! thank you so much!!!!!!!!!!!!!!!!!!!"
+Maximum Fun / KT                | kt@maximumfun.org                    | CONV   | KT submitted via form, we added listings, she confirmed "Excellent, thanks!"
+Garlic & Roses / Mike           | mike@garlicandroses.coop             | CONV   | Added us to their resources page, invited us to write about the marketplace
+Juliet Schor                    | juliet.schor@bc.edu                  | CONV   | BC professor: "What a wonderful idea" -- writing about platform co-ops, will keep us posted
+
+=== AUTO-REPLIES ONLY (no human follow-up) ===
+
+Organization                    | Contact Email                        | Status | Notes
+--------------------------------|--------------------------------------|--------|------
+Thorogood USA                   | csd@weinbrennerusa.com               | ACK    | Auto-reply: 24-48hr response time, M-F only
+W.W. Norton                     | customerservice@wwnorton.com         | ACK    | Zendesk ticket created
+Ravenous                        | info@weareravenous.com               | ACK    | Auto-reply: 1-2 business days
+Frontier Co-op                  | customercare@frontiercoop.com        | ACK    | Auto-reply: 24-48hr response time
+Bluestockings                   | info@bluestockings.com               | ACK    | Auto-reply explaining shared inbox
+The 51st                        | hello@51st.news                      | ACK    | Canned response: "small team cannot reply to every message"
+King Arthur Baking              | customercare@kingarthurbaking.com    | ACK    | Auto-reply: "will respond as soon as possible"
+
+=== NO RESPONSE (confirmed delivered, no reply) ===
+
+Organization                    | Contact Email                        | Date Sent
+--------------------------------|--------------------------------------|----------
+1620 Workwear                   | info@1620usa.com                     | 2026-08-22
+Aesthetician Labs               | info@aesthetic.games                 | 2026-08-22
+Afterglow Coffee                | afterglowcoffee@gmail.com            | 2026-08-22
+Agaric                          | ask@agaric.coop                      | 2026-08-22
+AK Press                        | info@akpress.org                     | 2026-07-12
+Alaffia                         | info@alaffia.com                     | 2026-08-22
+Aftermath                       | mail@aftermath.site                  | 2026-08-22
+American Roots                  | info@americanrootswear.com           | 2026-08-22
+Applewood Seed Company          | info@applewoodseed.com               | 2026-08-22
+Artisan Beverage Cooperative    | info@artbev.coop                     | 2026-08-22
+Bainbridge Vineyards            | info@bainbridgevineyards.com         | 2026-08-22
+Baltimore Bicycle Works         | contact@baltimorebicycleworks.com    | 2026-08-22
+Barrio Brewing Co.              | info@barriobrewing.com               | 2026-08-22
+Bathtub Row Brewing Co-op       | info@bathtubrowbrewing.coop          | 2026-08-22
+Big Duck                        | info@bigduck.com                     | 2026-08-22
+Blue Tin Production             | hello@bluetinproduction.com          | 2026-08-22
+Bob's Red Mill                  | customerservice@bobsredmill.com      | 2026-08-23
+Boydell & Brewer                | marketing@boydell.co.uk              | 2026-08-22
+Broken Clock Brewing            | info@brokenclockbrew.com             | 2026-08-22
+Cabot Creamery                  | info@cabotcreamery.com               | 2026-08-22
+Cafe Campesino                  | info@cafecampesino.com               | 2026-08-22
+Cane Creek                      | support@canecreek.com                | 2026-08-23
+Cardboard Revolution            | CardboardRevolution20@gmail.com      | 2026-08-23
+Catalytic Sound                 | info@catalyticsound.com              | 2026-08-23
+Catamount Solar                 | info@catamountsolar.com              | 2026-08-23
+Chick Habit Beauty Collective   | chickhabitbeauty@gmail.com           | 2026-08-24
+Cleveland Embodiment Collective | info@clevelandembodiment.org         | 2026-07-04
+CoLab Cooperative               | hello@colab.coop                     | 2026-08-23
+Cooperative Coffee Roasters     | cooperativecoffeeroasters@gmail.com  | 2026-08-22
+Cooperative Home Care Assoc.    | info@chcany.org                      | 2026-08-23
+Cooperation Jackson             | cooperationjackson@gmail.com         | 2026-08-23
+Coracaoao Chocolate             | orders@coracaoconfections.com        | 2026-08-23
+Create the Collection           | info@createthecollection.com         | 2026-08-23
+Dansko                          | customerservice@dansko.com           | 2026-08-23
+Darker Times                    | jessica@darkertimes.com              | 2026-08-23
+Dean's Beans                    | info@deansbeans.com                  | 2026-08-21
+Defector                        | info@defector.com                    | 2026-08-04
+Democracy Brewing               | hello@democracybrewing.com           | 2026-08-22
+Deschutes Brewery               | info@deschutesbrewery.com            | 2026-08-23
+Drifa Brewing Company           | drifabrewingco@gmail.com             | 2026-08-23
+Dye Mad Yarns                   | hello@dyemadyarns.com                | 2026-08-23
+Feminist Book Club              | hello@feministbookclub.com           | 2026-08-24
+The Flytrap                     | flyteam@theflytrapmedia.com          | 2026-08-25
+For Everyone Collective         | info@foreveryonecollective.com       | 2026-08-23
+Four Buds Floral Studio         | hello@fourbudsfloral.com             | 2026-08-23
+404 Media                       | jason@404media.co                    | 2026-08-07
+Gardener's Supply Company       | service@gardeners.com                | 2026-08-23
+Gimme Coffee                    | info@gimmecoffee.com                 | 2026-08-23
+Golden Artist Colors            | goldenart@goldenpaints.com           | 2026-08-23
+Green Mountain Spinnery         | spinnery@spinnery.com                | 2026-08-22
+Harpoon Brewery                 | info@harpoonbrewery.com              | 2026-08-23
+Heartleaf Books                 | hello@heartleafbooks.com             | 2026-08-23
+Hell Gate                       | tips@hellgatenyc.com                 | 2026-08-22
+Homeward Books Collective       | homewardbookscollective@gmail.com    | 2026-08-23
+Hypha Worker Co-operative       | hello@hypha.coop                     | 2026-08-23
+Independent Fabrication         | sales@ifbikes.com                    | 2026-08-23
+Just Coffee                     | info@justcoffee.coop                 | 2026-08-22
+Just Us! Coffee Roasters        | info@justuscoffee.com                | 2026-08-23
+Justseeds                       | info@justseeds.org                   | 2026-08-22
+Landry's Bicycles               | web-orders@landrys.com               | 2026-08-23
+Left Hand Brewing               | info@lefthandbrewing.com             | 2026-08-23
+Litehouse Foods                 | contactus@litehouseinc.com           | 2026-08-24
+Long Beach Watchdog             | hello@lbwatchdog.com                 | 2026-08-23
+Loomio                          | contact@loomio.com                   | 2026-08-23
+Lucid Tales                     | info@lucidtales.coop                 | 2026-08-23
+Maggie's Organics               | info@maggiesorganics.com             | 2026-08-22
+Maine Coast Sea Vegetables      | info@seaveg.com                      | 2026-08-23
+Making Worlds Bookstore         | info@makingworldsbooks.org           | 2026-08-23
+Mast General Store              | customerservice@mastgeneralstore.com | 2026-08-23
+Meow Meow Tweet                 | hello@meowmeowtweet.com              | 2026-08-23
+Mirisata                        | MirisataPDX@gmail.com                | 2026-08-24
+Morning Bell Coffee             | sip@morningbellcoffee.com            | 2026-08-24
+New Harbinger Publications      | customerservice@newharbinger.com     | 2026-08-24
+No Gods No Masters              | info@no-gods-no-masters.com          | 2026-08-24
+Once Again Nut Butter           | hello@onceagain.com                  | 2026-08-22
+Opportunity Threads             | customerservice@opportunitythreads.com| 2026-08-25
+Organic Valley                  | contact.us@organicvalley.coop        | 2026-07-12
+Pedal People                    | mail@pedalpeople.coop                | 2026-08-25
+Pilsen Community Books          | bookspilsen@gmail.com                | 2026-08-25
+PM Press                        | info@pmpress.org                     | 2026-08-23
+Pop Heist                       | info@popheist.com                    | 2026-08-25
+Racket                          | info@racketmn.com                    | 2026-08-22
+RADIX                           | info@radix.coop                      | 2026-08-25
+Rascal News                     | info@rascal.news                     | 2026-08-25
+Real Pickles                    | info@realpickles.com                 | 2026-08-22
+Recology                        | info@recology.com                    | 2026-08-25
+ReVision Energy                 | hello@revisionenergy.com             | 2026-08-25
+Rock City Coffee                | info@rockcitycoffee.com              | 2026-08-25
+Room & Board                    | shop@roomandboard.com                | 2026-08-25
+Sassafras Tech Collective       | info@sassafras.coop                  | 2026-08-25
+Skybox                          | pitches@skyboxcritics.com            | 2026-08-25
+Slow Bloom Coffee               | gabriel@slowbloomcoffee.com          | 2026-08-25
+Southern Exposure Seed Exchange | gardens@southernexposure.com         | 2026-08-25
+Stewart's Shops                 | customerservice@stewartsshops.com    | 2026-08-25
+Strange Matters Magazine        | support@strangematters.coop          | 2026-08-25
+Switchback Brewing Co.          | info@switchbackvt.com                | 2026-08-25
+TableTop Gaming                 | sales@ttgaming.net                   | 2026-08-25
+Taharka Brothers                | info@taharkabrothers.com             | 2026-08-22
+Tattoo Readymade                | tattoo@tattooreadymade.com           | 2026-08-25
+Taylor Guitars                  | support@taylorguitars.com            | 2026-08-25
+TESA Collective                 | contact@tesacollective.com           | 2026-08-22
+Thrifty White Pharmacy          | info@thriftywhite.com                | 2026-08-25
+Tillamook                       | info@tillamook.com                   | 2026-08-25
+The Colorado Sun                | newsroom@coloradosun.com             | 2026-08-22
+Tradehome Shoes                 | CustomerSupport@tradehome.com        | 2026-08-25
+Trama Textiles                  | coordinator@tramatextiles.org        | 2026-08-25
+TWB Co-operative Brewing        | info@twbbrewing.com                  | 2026-08-25
+Union Cab Co-op                 | info@unioncab.coop                   | 2026-08-25
+Verso Books                     | verso@versobooks.com                 | 2026-08-22
+Wood Shop Workers Co-op         | hello@woodshop.coop                  | 2026-08-29
+Worx Printing                   | info@worxprinting.coop               | 2026-08-25
+Zia Records                     | info@ziarecords.com                  | 2026-08-25
+The Local Butcher Shop          | info@thelocalbutchershop.com         | 2026-08-29
+Bi-Mart                         | customerservice@bimart.com           | 2026-07-05
+JMP.chat                        | team@mboa.dev                        | 2026-07-05
+
+=== SEPT 2026 BATCH (sent 2026-09-13, too early for responses) ===
+
+Organization                    | Contact Email                        | Status
+--------------------------------|--------------------------------------|-------
+Adobe Books & Arts Cooperative  | adobesf@gmail.com                    | NONE
+Autonomy News                   | autonomynewsco@gmail.com             | NONE
+Cape Cod Lumber                 | info@capecodlumber.com               | NONE
+Handwork                        | HandworkOnlineShop@gmail.com         | NONE
+Jam                             | contact@jam.coop                     | NONE
+RANGE Media                     | sponsorships@rangemedia.co           | NONE
+Scheels All Sports              | customerservice@scheels.com          | NONE
+Sow True Seed                   | art@sowtrue.com                      | NONE
+Tootie's Tempeh                 | info@tootiestempeh.com               | NONE
+
+=== ORG/ACADEMIC OUTREACH (not directory listings) ===
+
+Organization                    | Contact Email                        | Status | Summary
+--------------------------------|--------------------------------------|--------|--------
+Adria Scharf / Rutgers          | adria.scharf@rutgers.edu             | NONE   | Employee ownership researcher
+Jessica Nembhard / CUNY         | jnembhard@jjay.cuny.edu              | NONE   | Co-op economics professor
+Lenore Palladino / UMass        | lpalladino@umass.edu                 | NONE   | Employee ownership researcher
+Democracy at Work               | info@democracyatwork.info            | NONE   | Richard Wolff's org
+Cooperation Works               | info@cooperationworks.coop           | NONE   | Co-op development org
+Project Equity                  | info@project-equity.org              | NONE   | Employee ownership transition org
+NCEO                            | customerservice@nceo.org             | NONE   | National Center for Employee Ownership
+Certified EO                    | info@certifiedeo.com                 | NONE   | Employee ownership certification
+Worldmap.coop                   | data@worldmap.coop / support@worldmap.coop | NONE | Global co-op data collaboration pitch
+
+=== BOUNCED EMAILS (do not re-use) ===
+
+Organization                    | Bounced Email                        | Reason
+--------------------------------|--------------------------------------|-------
+Second Wind                     | info@secondwindgroup.com             | Address not found
+Odell Brewing                   | info@odellbrewing.com                | Address not found
+Urbane Cyclist                  | info@ucycle.com                      | Address not found
+Urbane Cyclist                  | shop@ucycle.com                      | Address not found
+Urbane Cyclist                  | inquiries@ucycle.com                 | Address not found
+Casa Nueva                      | salsa@casanueva.com                  | Address not found
+Grass Roots Farmers' Co-op      | info@grassrootscoop.com              | Group not found / no permission
+Soapbox Co-op                   | info@soapbox.com                     | 550 rejected (sent via SMTP)
+
+=== CONTACT EMAILS FOR MARK HAND (The Stakehold cold outreach) ===
+
+All confirmed-deliverable contact emails from the directory:
+
+info@1620usa.com
+info@aesthetic.games
+afterglowcoffee@gmail.com
+ask@agaric.coop
+info@akpress.org
+info@alaffia.com
+mail@aftermath.site
+info@americanrootswear.com
+info@applewoodseed.com
+info@artbev.coop
+info@bainbridgevineyards.com
+contact@baltimorebicycleworks.com
+info@barriobrewing.com
+info@bathtubrowbrewing.coop
+info@bigduck.com
+hello@bluetinproduction.com
+customerservice@bobsredmill.com
+marketing@boydell.co.uk
+info@brokenclockbrew.com
+info@cabotcreamery.com
+info@cafecampesino.com
+support@canecreek.com
+CardboardRevolution20@gmail.com
+info@catalyticsound.com
+info@catamountsolar.com
+chickhabitbeauty@gmail.com
+info@chcany.org
+info@clevelandembodiment.org
+hello@colab.coop
+cooperativecoffeeroasters@gmail.com
+cooperationjackson@gmail.com
+orders@coracaoconfections.com
+info@createthecollection.com
+customerservice@dansko.com
+jessica@darkertimes.com
+info@deansbeans.com
+info@defector.com
+hello@democracybrewing.com
+info@deschutesbrewery.com
+drifabrewingco@gmail.com
+hello@dyemadyarns.com
+info@equalexchange.coop
+hello@feministbookclub.com
+flyteam@theflytrapmedia.com
+info@foreveryonecollective.com
+hello@fourbudsfloral.com
+jason@404media.co
+customercare@frontiercoop.com
+service@gardeners.com
+info@gimmecoffee.com
+goldenart@goldenpaints.com
+spinnery@spinnery.com
+info@harpoonbrewery.com
+hello@heartleafbooks.com
+tips@hellgatenyc.com
+info@hearingthings.co
+homewardbookscollective@gmail.com
+hello@hypha.coop
+sales@ifbikes.com
+info@justcoffee.coop
+info@justuscoffee.com
+info@justseeds.org
+web-orders@landrys.com
+info@lefthandbrewing.com
+contactus@litehouseinc.com
+hello@lbwatchdog.com
+contact@loomio.com
+info@lucidtales.coop
+info@maggiesorganics.com
+info@seaveg.com
+info@makingworldsbooks.org
+customerservice@mastgeneralstore.com
+hello@meowmeowtweet.com
+MirisataPDX@gmail.com
+hi@mirlo.space
+sip@morningbellcoffee.com
+customerservice@newharbinger.com
+info@no-gods-no-masters.com
+hello@onceagain.com
+customerservice@opportunitythreads.com
+contact.us@organicvalley.coop
+help@palestiniansoap.coop
+mail@pedalpeople.coop
+bookspilsen@gmail.com
+info@pmpress.org
+info@popheist.com
+info@racketmn.com
+info@radix.coop
+info@rascal.news
+info@realpickles.com
+info@recology.com
+hello@revisionenergy.com
+info@rockcitycoffee.com
+shop@roomandboard.com
+info@sassafras.coop
+pitches@skyboxcritics.com
+gabriel@slowbloomcoffee.com
+gardens@southernexposure.com
+customerservice@stewartsshops.com
+support@strangematters.coop
+info@subvert.fm
+info@switchbackvt.com
+sales@ttgaming.net
+info@taharkabrothers.com
+info@tapetrade.io
+tattoo@tattooreadymade.com
+support@taylorguitars.com
+contact@tesacollective.com
+info@thriftywhite.com
+info@tillamook.com
+newsroom@coloradosun.com
+CustomerSupport@tradehome.com
+coordinator@tramatextiles.org
+info@twbbrewing.com
+info@unioncab.coop
+verso@versobooks.com
+hello@woodshop.coop
+info@worxprinting.coop
+info@ziarecords.com
+info@thelocalbutchershop.com
+customerservice@bimart.com
+team@mboa.dev
+hello@508.dev
+hello@51st.news
+info@bluestockings.com
+csd@weinbrennerusa.com
+customerservice@wwnorton.com
+info@weareravenous.com
+customercare@kingarthurbaking.com
+adobesf@gmail.com
+autonomynewsco@gmail.com
+info@capecodlumber.com
+HandworkOnlineShop@gmail.com
+contact@jam.coop
+sponsorships@rangemedia.co
+customerservice@scheels.com
+art@sowtrue.com
+info@tootiestempeh.com
+service@grassrootscoop.com
+mike@garlicandroses.coop
+maria@flaminghydra.com
+kt@maximumfun.org
+
+TOTAL CONFIRMED DELIVERABLE: ~140 emails
+TOTAL BOUNCED: 8 addresses (6 orgs)
+TOTAL REAL RESPONSES: 17
+TOTAL AUTO-REPLY ONLY: 7

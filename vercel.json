@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/((?!sitemap\\.txt|sitemap\\.xml|robots\\.txt|data\\/)..*)", "destination": "/index.html" }
+    { "source": "/((?!sitemap\\.txt|sitemap\\.xml|robots\\.txt|data\\/|api\\/)..*)", "destination": "/index.html" }
   ],
   "headers": [
     {
@@ -9,6 +9,21 @@
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "DENY" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
     }
   ]
