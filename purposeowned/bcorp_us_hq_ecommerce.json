@@ -18,7 +18,7 @@
     "website": "https://www.1338tryon.com/",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 7,
+    "ecommerce_score": 5,
     "wholesale_only": false
   },
   {
@@ -40,9 +40,9 @@
     "size": "10-49",
     "slug": "4ocean-pbc",
     "website": "https://www.4ocean.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 43,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -62,9 +62,9 @@
     "size": "10-49",
     "slug": "686",
     "website": "https://www.686.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 40,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -108,7 +108,7 @@
     "slug": "actus-nutrition",
     "website": "https://actus.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
+    "ecommerce_platform": null,
     "ecommerce_score": 4,
     "wholesale_only": false
   },
@@ -146,9 +146,9 @@
     "size": "10-49",
     "slug": "adelsheim-vineyard",
     "website": "https://www.adelsheim.com/",
-    "ecommerce": false,
-    "ecommerce_platform": null,
-    "ecommerce_score": 0,
+    "ecommerce": true,
+    "ecommerce_platform": "WooCommerce",
+    "ecommerce_score": 13,
     "wholesale_only": false
   },
   {
@@ -172,7 +172,7 @@
     "website": "https://www.adoreme.com/",
     "ecommerce": true,
     "ecommerce_platform": null,
-    "ecommerce_score": 8,
+    "ecommerce_score": 7,
     "wholesale_only": false
   },
   {
@@ -192,10 +192,10 @@
     "size": "0",
     "slug": "alaska-glacial-mud-co",
     "website": "https://www.alaskaglacial.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 39,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -214,9 +214,9 @@
     "size": "10-49",
     "slug": "aldea-coffee",
     "website": "https://www.aldeacoffee.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 40,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -238,8 +238,8 @@
     "slug": "alex-crane",
     "website": "https://www.alex.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 6,
+    "ecommerce_platform": null,
+    "ecommerce_score": 4,
     "wholesale_only": false
   },
   {
@@ -304,8 +304,8 @@
     "slug": "allagash-brewing-company",
     "website": "https://www.allagash.com",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 9,
+    "ecommerce_platform": null,
+    "ecommerce_score": 7,
     "wholesale_only": false
   },
   {
@@ -327,7 +327,7 @@
     "website": "https://www.alliancegraphics.com/",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 8,
+    "ecommerce_score": 5,
     "wholesale_only": false
   },
   {
@@ -347,10 +347,10 @@
     "size": "10-49",
     "slug": "aloha",
     "website": "https://aloha.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 40,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -370,9 +370,9 @@
     "size": "10-49",
     "slug": "alp-n-rock",
     "website": "https://alpnrock.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 38,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -395,8 +395,8 @@
     "slug": "alter-eco",
     "website": "https://www.altereco.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -448,9 +448,9 @@
     "size": "0",
     "slug": "alwrld",
     "website": "https://alwrld.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 34,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -495,7 +495,7 @@
     "website": "https://amavida.com",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 31,
+    "ecommerce_score": 29,
     "wholesale_only": false
   },
   {
@@ -515,10 +515,10 @@
     "size": "10-49",
     "slug": "american-halal-company-pbc-dba-saffron-road-foods",
     "website": "https://www.saffronroadfood.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 35,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -606,9 +606,9 @@
     "size": "10-49",
     "slug": "anji-mountain",
     "website": "https://anjimountain.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 39,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -629,8 +629,8 @@
     "slug": "another-tomorrow-inc",
     "website": "https://www.anothertomorrow.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 13,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 11,
     "wholesale_only": false
   },
   {
@@ -650,9 +650,9 @@
     "size": "1-9",
     "slug": "apolis-holdings-llc",
     "website": "https://www.apolisglobal.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 36,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -675,9 +675,9 @@
     "size": "250-999",
     "slug": "arbonne",
     "website": "https://www.arbonne.com",
-    "ecommerce": false,
+    "ecommerce": true,
     "ecommerce_platform": null,
-    "ecommerce_score": 0,
+    "ecommerce_score": 5,
     "wholesale_only": false
   },
   {
@@ -743,8 +743,8 @@
     "slug": "athleta",
     "website": "https://athleta.gap.com/?cookieInitializationAttempted=true",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 7,
+    "ecommerce_platform": null,
+    "ecommerce_score": 4,
     "wholesale_only": true
   },
   {
@@ -768,10 +768,10 @@
     "size": "250-999",
     "slug": "athletic-brewing-company",
     "website": "https://athleticbrewing.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 36,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -790,10 +790,10 @@
     "size": "1-9",
     "slug": "attn-grace-inc",
     "website": "https://attngrace.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 35,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -812,9 +812,9 @@
     "size": "1000+",
     "slug": "aveda-corporation",
     "website": "https://www.aveda.com",
-    "ecommerce": false,
+    "ecommerce": true,
     "ecommerce_platform": null,
-    "ecommerce_score": 0,
+    "ecommerce_score": 25,
     "wholesale_only": false
   },
   {
@@ -835,9 +835,9 @@
     "size": "250-999",
     "slug": "avocado-green-brands",
     "website": "https://www.avocadogreenmattress.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 35,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -857,9 +857,9 @@
     "size": "10-49",
     "slug": "azurous-inc-dba-cabeau",
     "website": "https://www.cabeau.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 40,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -880,8 +880,8 @@
     "slug": "backyard-beans-coffee-company",
     "website": "https://www.backyardbeanscoffee.com",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 22,
+    "ecommerce_platform": null,
+    "ecommerce_score": 20,
     "wholesale_only": false
   },
   {
@@ -904,9 +904,9 @@
     "size": "1-9",
     "slug": "bambu",
     "website": "https://bambu.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 34,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -927,9 +927,9 @@
     "size": "10-49",
     "slug": "barnana",
     "website": "https://barnana.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 39,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -949,10 +949,10 @@
     "size": "1-9",
     "slug": "barvecue",
     "website": "https://barvecue.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 35,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -971,10 +971,10 @@
     "size": "0",
     "slug": "bear-lake-coffee-company-llc",
     "website": "https://bearlakecoffee.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 38,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -1015,9 +1015,9 @@
     "size": "10-49",
     "slug": "beehive-cheese-company-llc",
     "website": "https://www.beehivecheese.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 43,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -1037,10 +1037,10 @@
     "size": "10-49",
     "slug": "bees-wrap",
     "website": "https://www.beeswrap.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 36,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -1082,8 +1082,8 @@
     "slug": "berkshire-cider-project",
     "website": "https://www.berkshire-cider.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 9,
+    "ecommerce_platform": null,
+    "ecommerce_score": 7,
     "wholesale_only": false
   },
   {
@@ -1104,8 +1104,8 @@
     "slug": "blue-star-marketing",
     "website": "https://www.betterbybluestar.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": null,
+    "ecommerce_score": 8,
     "wholesale_only": false
   },
   {
@@ -1126,8 +1126,8 @@
     "slug": "better-earth",
     "website": "https://www.betterearth.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -1174,9 +1174,9 @@
     "size": "10-49",
     "slug": "big-spoon-roasters",
     "website": "https://bigspoonroasters.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 42,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -1196,9 +1196,9 @@
     "size": "250-999",
     "slug": "bigelow-tea",
     "website": "https://www.bigelowtea.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 31,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -1218,10 +1218,10 @@
     "size": "10-49",
     "slug": "bioforce-usa",
     "website": "https://www.avogel.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -1242,7 +1242,7 @@
     "website": "https://biotic.com/",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 11,
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -1264,8 +1264,8 @@
     "website": "https://biritemarket.com/",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 15,
-    "wholesale_only": true
+    "ecommerce_score": 13,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -1307,8 +1307,8 @@
     "slug": "blk-bold-specialty-beverages",
     "website": "https://blk.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -1329,8 +1329,8 @@
     "slug": "blue-beautifly-llc",
     "website": "https://www.bluebeautifly.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 40,
+    "ecommerce_platform": "WooCommerce",
+    "ecommerce_score": 34,
     "wholesale_only": false
   },
   {
@@ -1351,8 +1351,8 @@
     "slug": "blue-earth-compost-inc",
     "website": "https://www.blueearthcompost.com",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 22,
+    "ecommerce_platform": null,
+    "ecommerce_score": 20,
     "wholesale_only": false
   },
   {
@@ -1372,9 +1372,9 @@
     "size": "1-9",
     "slug": "bluebird-botanicals",
     "website": "https://bluebirdbotanicals.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 38,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -1396,7 +1396,7 @@
     "website": "https://www.blueland.com/",
     "ecommerce": true,
     "ecommerce_platform": "Shopify",
-    "ecommerce_score": 29,
+    "ecommerce_score": 23,
     "wholesale_only": true
   },
   {
@@ -1416,9 +1416,9 @@
     "size": "1-9",
     "slug": "boma-jewelry",
     "website": "https://www.bomajewelry.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 37,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -1440,7 +1440,7 @@
     "website": "https://bombas.com/",
     "ecommerce": true,
     "ecommerce_platform": "Shopify",
-    "ecommerce_score": 17,
+    "ecommerce_score": 11,
     "wholesale_only": false
   },
   {
@@ -1460,10 +1460,10 @@
     "size": "1-9",
     "slug": "bona-furtuna-north-america-l-l-c",
     "website": "https://bonafurtuna.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 34,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -1484,7 +1484,7 @@
     "website": "https://bonduelleamericas.com/",
     "ecommerce": false,
     "ecommerce_platform": null,
-    "ecommerce_score": 0,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -1505,8 +1505,8 @@
     "slug": "fetzer-vineyards",
     "website": "https://www.bonterra.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 7,
+    "ecommerce_platform": null,
+    "ecommerce_score": 5,
     "wholesale_only": false
   },
   {
@@ -1526,10 +1526,10 @@
     "size": "50-249",
     "slug": "boochcraft",
     "website": "https://boochcraft.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 37,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -1548,9 +1548,9 @@
     "size": "10-49",
     "slug": "boon-boona-coffee",
     "website": "https://www.boonboonacoffee.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 31,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -1570,10 +1570,10 @@
     "size": "50-249",
     "slug": "bragg-live-food-products-llc",
     "website": "https://www.bragg.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 40,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -1614,9 +1614,9 @@
     "size": "0",
     "slug": "brehd",
     "website": "https://www.brehd.com/password",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 25,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -1636,9 +1636,9 @@
     "size": "50-249",
     "slug": "brew-dr-kombucha",
     "website": "https://www.brewdrkombucha.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -1659,8 +1659,8 @@
     "slug": "bridgetown-natural-foods",
     "website": "https://www.bridgetownnaturalfoods.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 9,
+    "ecommerce_platform": null,
+    "ecommerce_score": 7,
     "wholesale_only": false
   },
   {
@@ -1680,9 +1680,9 @@
     "size": "0",
     "slug": "build-it-boldly-llc",
     "website": "https://builditboldly.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 38,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -1702,10 +1702,10 @@
     "size": "50-249",
     "slug": "butcher-box",
     "website": "https://www.butcherbox.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 28,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -1725,8 +1725,8 @@
     "slug": "cabot-creamery-co-operative",
     "website": "https://cabot.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 7,
+    "ecommerce_platform": null,
+    "ecommerce_score": 4,
     "wholesale_only": false
   },
   {
@@ -1747,8 +1747,8 @@
     "slug": "cafe-campesino-and-sweetwater-organic-coffee",
     "website": "https://cafe.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce_platform": null,
+    "ecommerce_score": 17,
     "wholesale_only": false
   },
   {
@@ -1772,8 +1772,8 @@
     "slug": "cafe-imports",
     "website": "https://cafe.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce_platform": null,
+    "ecommerce_score": 17,
     "wholesale_only": false
   },
   {
@@ -1794,8 +1794,8 @@
     "slug": "california-naturals-inc",
     "website": "https://www.california-naturals.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 23,
+    "ecommerce_platform": null,
+    "ecommerce_score": 20,
     "wholesale_only": false
   },
   {
@@ -1877,7 +1877,7 @@
     "website": "https://www.cariloha.com/",
     "ecommerce": true,
     "ecommerce_platform": "BigCommerce",
-    "ecommerce_score": 22,
+    "ecommerce_score": 19,
     "wholesale_only": false
   },
   {
@@ -1899,7 +1899,7 @@
     "website": "https://carnegiefabrics.com/",
     "ecommerce": true,
     "ecommerce_platform": "Magento",
-    "ecommerce_score": 22,
+    "ecommerce_score": 17,
     "wholesale_only": false
   },
   {
@@ -1920,8 +1920,8 @@
     "slug": "cartograph-wines",
     "website": "https://www.cartographwines.com",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 6,
+    "ecommerce_platform": null,
+    "ecommerce_score": 4,
     "wholesale_only": false
   },
   {
@@ -1941,9 +1941,9 @@
     "size": "1-9",
     "slug": "causemedic",
     "website": "https://causemedic.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 35,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -1964,8 +1964,8 @@
     "slug": "chabaso-bakery",
     "website": "https://www.chabaso.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": null,
+    "ecommerce_score": 9,
     "wholesale_only": true
   },
   {
@@ -2008,10 +2008,10 @@
     "size": "50-249",
     "slug": "charlottes-web-holdings-inc",
     "website": "https://www.charlottesweb.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 36,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -2054,7 +2054,7 @@
     "website": "https://www.chicobag.com/",
     "ecommerce": true,
     "ecommerce_platform": null,
-    "ecommerce_score": 10,
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -2074,9 +2074,9 @@
     "size": "0",
     "slug": "chocolat-e-inc",
     "website": "https://chocolate.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 37,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2096,10 +2096,10 @@
     "size": "50-249",
     "slug": "chomps",
     "website": "https://chomps.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 39,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -2142,9 +2142,9 @@
     "size": "50-249",
     "slug": "chosen-foods",
     "website": "https://chosenfoods.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 30,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2168,8 +2168,8 @@
     "slug": "chroma-technology-corp",
     "website": "https://www.chroma.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 6,
+    "ecommerce_platform": null,
+    "ecommerce_score": 4,
     "wholesale_only": false
   },
   {
@@ -2189,9 +2189,9 @@
     "size": "10-49",
     "slug": "circle",
     "website": "https://www.circle.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -2211,9 +2211,9 @@
     "size": "10-49",
     "slug": "city-apparel",
     "website": "https://cityapparel.net",
-    "ecommerce": false,
+    "ecommerce": true,
     "ecommerce_platform": null,
-    "ecommerce_score": 0,
+    "ecommerce_score": 4,
     "wholesale_only": false
   },
   {
@@ -2233,9 +2233,9 @@
     "size": "10-49",
     "slug": "cleobella-llc",
     "website": "https://cleobella.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 36,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2256,8 +2256,8 @@
     "slug": "clover-sonoma",
     "website": "https://cloversonoma.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 6,
+    "ecommerce_platform": null,
+    "ecommerce_score": 4,
     "wholesale_only": true
   },
   {
@@ -2277,9 +2277,9 @@
     "size": "0",
     "slug": "cloztalk",
     "website": "https://cloztalk.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 31,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2300,8 +2300,8 @@
     "slug": "natural-force-benefit-co",
     "website": "https://www.conorth.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2321,9 +2321,9 @@
     "size": "50-249",
     "slug": "coast-of-maine-organic-products-inc",
     "website": "https://www.coastofmaine.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 35,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2343,9 +2343,9 @@
     "size": "0",
     "slug": "colorado-threads",
     "website": "https://coloradothreads.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 33,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2365,9 +2365,9 @@
     "size": "0",
     "slug": "comet-skateboards",
     "website": "https://cometskateboards.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 37,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2410,8 +2410,8 @@
     "slug": "cooperative-coffees-inc",
     "website": "https://coopcoffees.coop",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": null,
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -2435,8 +2435,8 @@
     "slug": "greylock-enterprises-inc",
     "website": "https://www.coop-s.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 5,
+    "ecommerce_platform": null,
+    "ecommerce_score": 3,
     "wholesale_only": false
   },
   {
@@ -2456,9 +2456,9 @@
     "size": "10-49",
     "slug": "lyv-life-inc",
     "website": "https://cora.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 30,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2481,8 +2481,8 @@
     "slug": "coradorablesllc",
     "website": "https://coradorables.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 20,
+    "ecommerce_platform": "WooCommerce",
+    "ecommerce_score": 14,
     "wholesale_only": false
   },
   {
@@ -2504,7 +2504,7 @@
     "website": "https://www.cotopaxi.com/",
     "ecommerce": true,
     "ecommerce_platform": "Shopify",
-    "ecommerce_score": 31,
+    "ecommerce_score": 28,
     "wholesale_only": false
   },
   {
@@ -2524,9 +2524,9 @@
     "size": "50-249",
     "slug": "counter-culture-coffee-inc",
     "website": "https://www.counter.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 35,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2570,8 +2570,8 @@
     "slug": "crosby-hop-farm-llc",
     "website": "https://www.crosbyhops.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2591,10 +2591,10 @@
     "size": "1-9",
     "slug": "cure-hydration",
     "website": "https://www.curehydration.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 40,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -2636,8 +2636,8 @@
     "slug": "danone-north-america",
     "website": "https://www.danone.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2658,8 +2658,8 @@
     "slug": "danone-waters-of-america-inc",
     "website": "https://www.danone.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2723,9 +2723,9 @@
     "size": "1-9",
     "slug": "dental-lace-inc",
     "website": "https://www.dentallace.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 36,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2790,9 +2790,9 @@
     "size": "50-249",
     "slug": "devocion-usa",
     "website": "https://www.devocion.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 39,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2812,9 +2812,9 @@
     "size": "1-9",
     "slug": "dogeared",
     "website": "https://www.dogeared.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 38,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2858,7 +2858,7 @@
     "website": "https://www.drsquatch.com/",
     "ecommerce": true,
     "ecommerce_platform": "Shopify",
-    "ecommerce_score": 40,
+    "ecommerce_score": 34,
     "wholesale_only": false
   },
   {
@@ -2878,10 +2878,10 @@
     "size": "10-49",
     "slug": "dropps",
     "website": "https://www.dropps.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 42,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -2954,8 +2954,8 @@
     "slug": "earth-animal",
     "website": "https://www.earth.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -2976,10 +2976,10 @@
     "size": "50-249",
     "slug": "earth-breeze-inc",
     "website": "https://earthbreeze.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 27,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -2999,8 +2999,8 @@
     "slug": "the-white-lotus-life-llc",
     "website": "https://www.earth.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -3020,10 +3020,10 @@
     "size": "50-249",
     "slug": "east-fork-pottery-l-l-c",
     "website": "https://eastfork.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 35,
-    "wholesale_only": true
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -3044,7 +3044,7 @@
     "website": "https://www.yogiproducts.com",
     "ecommerce": true,
     "ecommerce_platform": "Shopify",
-    "ecommerce_score": 17,
+    "ecommerce_score": 12,
     "wholesale_only": true
   },
   {
@@ -3086,9 +3086,9 @@
     "size": "1-9",
     "slug": "eco-bags-products",
     "website": "https://www.ecobags.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 34,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -3109,8 +3109,8 @@
     "slug": "ecologic-solutions-inc",
     "website": "https://www.ecologicsolutions.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce_platform": null,
+    "ecommerce_score": 6,
     "wholesale_only": false
   },
   {
@@ -3134,9 +3134,9 @@
     "size": "1-9",
     "slug": "eco-packables-llc",
     "website": "https://www.ecopackables.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 33,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -3157,8 +3157,8 @@
     "slug": "ecoplum",
     "website": "https://ecoplum.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 13,
+    "ecommerce_platform": null,
+    "ecommerce_score": 11,
     "wholesale_only": false
   },
   {
@@ -3180,7 +3180,7 @@
     "website": "https://ecoproducts.com/",
     "ecommerce": true,
     "ecommerce_platform": "BigCommerce",
-    "ecommerce_score": 20,
+    "ecommerce_score": 17,
     "wholesale_only": true
   },
   {
@@ -3224,8 +3224,8 @@
     "website": "https://ecosmithrecyclers.com/",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 7,
-    "wholesale_only": true
+    "ecommerce_score": 5,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -3246,8 +3246,8 @@
     "slug": "eddy-aesthetic",
     "website": "https://eddy.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 6,
+    "ecommerce_platform": null,
+    "ecommerce_score": 4,
     "wholesale_only": false
   },
   {
@@ -3292,8 +3292,8 @@
     "slug": "eileen-fisher-inc",
     "website": "https://www.eileenfisher.org/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -3313,9 +3313,9 @@
     "size": "50-249",
     "slug": "eldorado-artesian-springs-inc",
     "website": "https://www.eldoradosprings.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -3359,8 +3359,8 @@
     "slug": "elk-cove-vineyards",
     "website": "https://www.elkcove.com",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 14,
+    "ecommerce_platform": null,
+    "ecommerce_score": 12,
     "wholesale_only": false
   },
   {
@@ -3537,9 +3537,9 @@
     "slug": "et-fille-wines",
     "website": "https://www.etfillewines.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 13,
-    "wholesale_only": true
+    "ecommerce_platform": null,
+    "ecommerce_score": 11,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -3695,8 +3695,8 @@
     "slug": "excel-packaging-inc",
     "website": "https://excelpackaging.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -3762,7 +3762,7 @@
     "website": "https://www.exquisitecrystals.com",
     "ecommerce": true,
     "ecommerce_platform": "BigCommerce",
-    "ecommerce_score": 12,
+    "ecommerce_score": 11,
     "wholesale_only": false
   },
   {
@@ -3784,7 +3784,7 @@
     "website": "https://factdesign.nl/",
     "ecommerce": false,
     "ecommerce_platform": null,
-    "ecommerce_score": 2,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -3827,8 +3827,8 @@
     "slug": "fair-harbor",
     "website": "https://www.fair.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -3849,8 +3849,8 @@
     "slug": "fast-penny-spirits",
     "website": "https://www.fastpennyspirits.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": null,
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -3893,8 +3893,8 @@
     "slug": "exilior-coffee",
     "website": "https://www.fire.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -3937,8 +3937,8 @@
     "slug": "firsthand-foods",
     "website": "https://www.firsthandfoods.com",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 6,
+    "ecommerce_platform": null,
+    "ecommerce_score": 4,
     "wholesale_only": false
   },
   {
@@ -3959,9 +3959,9 @@
     "slug": "fishpond-inc",
     "website": "https://www.fishpond.com:443/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 6,
-    "wholesale_only": true
+    "ecommerce_platform": null,
+    "ecommerce_score": 4,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -4003,8 +4003,8 @@
     "slug": "fiveadrift-llc",
     "website": "https://fiveadrift.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": null,
+    "ecommerce_score": 8,
     "wholesale_only": false
   },
   {
@@ -4157,8 +4157,8 @@
     "slug": "business-interiors-of-idaho",
     "website": "https://www.freeform.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -4285,9 +4285,9 @@
     "size": "1-9",
     "slug": "gallant-international-inc",
     "website": "https://www.gallant.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 6,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -4311,8 +4311,8 @@
     "slug": "garden-of-life-llc",
     "website": "https://garden-of-life.com/ar",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -4334,7 +4334,7 @@
     "website": "https://www.gibbs-smith.com",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 10,
+    "ecommerce_score": 8,
     "wholesale_only": false
   },
   {
@@ -4422,7 +4422,7 @@
     "website": "https://www.glorybee.com",
     "ecommerce": true,
     "ecommerce_platform": "Magento",
-    "ecommerce_score": 23,
+    "ecommerce_score": 18,
     "wholesale_only": true
   },
   {
@@ -4532,8 +4532,8 @@
     "slug": "good-culture",
     "website": "https://goodculture.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 8,
+    "ecommerce_platform": null,
+    "ecommerce_score": 6,
     "wholesale_only": true
   },
   {
@@ -4555,7 +4555,7 @@
     "website": "https://www.goodstartpackaging.com/",
     "ecommerce": true,
     "ecommerce_platform": "BigCommerce",
-    "ecommerce_score": 26,
+    "ecommerce_score": 22,
     "wholesale_only": false
   },
   {
@@ -4575,9 +4575,9 @@
     "size": "10-49",
     "slug": "good-worldwide-inc",
     "website": "https://www.good.inc",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -4646,8 +4646,8 @@
     "slug": "good-sam-pbc-dba-good-sam-foods",
     "website": "https://www.goodsam.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 7,
+    "ecommerce_platform": null,
+    "ecommerce_score": 5,
     "wholesale_only": false
   },
   {
@@ -4711,9 +4711,9 @@
     "size": "1-9",
     "slug": "grain",
     "website": "https://grain.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -4734,8 +4734,8 @@
     "slug": "grand-central-bakery",
     "website": "https://www.grandcentralbakery.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": null,
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -4756,8 +4756,8 @@
     "slug": "granny-squibbs-organic-iced-tea",
     "website": "https://www.grannysquibbs.com",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 15,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 13,
     "wholesale_only": false
   },
   {
@@ -4780,8 +4780,8 @@
     "slug": "green-gear-supply-company-inc",
     "website": "https://www.greengearsupply.com",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 26,
+    "ecommerce_platform": null,
+    "ecommerce_score": 22,
     "wholesale_only": false
   },
   {
@@ -4801,9 +4801,9 @@
     "size": "50-249",
     "slug": "greyston-bakery-inc",
     "website": "https://greyston.org",
-    "ecommerce": false,
+    "ecommerce": true,
     "ecommerce_platform": null,
-    "ecommerce_score": 0,
+    "ecommerce_score": 4,
     "wholesale_only": false
   },
   {
@@ -4981,8 +4981,8 @@
     "slug": "happy-family-brands",
     "website": "https://www.happyfamilyorganics.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 12,
+    "ecommerce_platform": null,
+    "ecommerce_score": 8,
     "wholesale_only": true
   },
   {
@@ -5070,8 +5070,8 @@
     "slug": "farm-ferments",
     "website": "https://www.hawthornefoods.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -5114,8 +5114,8 @@
     "slug": "helpsy",
     "website": "https://www.helpsy.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": null,
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -5273,7 +5273,7 @@
     "website": "https://www.homefreetreats.com",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 7,
+    "ecommerce_score": 5,
     "wholesale_only": false
   },
   {
@@ -5315,10 +5315,10 @@
     "size": "250-999",
     "slug": "horizon-organic",
     "website": "https://www.horizonorganic.com",
-    "ecommerce": false,
+    "ecommerce": true,
     "ecommerce_platform": null,
-    "ecommerce_score": 0,
-    "wholesale_only": false
+    "ecommerce_score": 4,
+    "wholesale_only": true
   },
   {
     "countries": [
@@ -5338,8 +5338,8 @@
     "slug": "hugo-hoby",
     "website": "https://www.hugoboss.com/us/home",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 20,
+    "ecommerce_platform": null,
+    "ecommerce_score": 17,
     "wholesale_only": true
   },
   {
@@ -5454,8 +5454,8 @@
     "slug": "ikaria-design-company-llc",
     "website": "https://www.ikariadesign.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 19,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 16,
     "wholesale_only": false
   },
   {
@@ -5476,8 +5476,8 @@
     "slug": "ind-hemp-llc",
     "website": "https://indhemp.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 6,
+    "ecommerce_platform": null,
+    "ecommerce_score": 4,
     "wholesale_only": false
   },
   {
@@ -5499,7 +5499,7 @@
     "website": "https://inesscents.com/",
     "ecommerce": true,
     "ecommerce_platform": "BigCommerce",
-    "ecommerce_score": 27,
+    "ecommerce_score": 25,
     "wholesale_only": true
   },
   {
@@ -5630,7 +5630,7 @@
     "website": "https://www.instructionalcoaching.com",
     "ecommerce": true,
     "ecommerce_platform": "Shopify",
-    "ecommerce_score": 8,
+    "ecommerce_score": 3,
     "wholesale_only": false
   },
   {
@@ -5693,7 +5693,7 @@
     "website": "https://islandmist.com/",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 25,
+    "ecommerce_score": 22,
     "wholesale_only": false
   },
   {
@@ -5739,9 +5739,9 @@
     "slug": "jd-staron-llc",
     "website": "https://www.jdstaron.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 25,
-    "wholesale_only": true
+    "ecommerce_platform": null,
+    "ecommerce_score": 22,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -5963,7 +5963,7 @@
     "slug": "kalsec",
     "website": "https://kalsec.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
+    "ecommerce_platform": null,
     "ecommerce_score": 4,
     "wholesale_only": false
   },
@@ -5985,8 +5985,8 @@
     "slug": "kalsoni",
     "website": "https://www.kalsoni.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 16,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 13,
     "wholesale_only": false
   },
   {
@@ -6335,8 +6335,8 @@
     "slug": "stonyfield-farm",
     "website": "https://www.lactalis.com/fr/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -6379,8 +6379,8 @@
     "slug": "land-betterment-corp",
     "website": "https://www.landbetterment.com",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -6445,8 +6445,8 @@
     "slug": "lawsons-finest-liquids",
     "website": "https://www.lawsonsfinest.com",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 8,
+    "ecommerce_platform": null,
+    "ecommerce_score": 6,
     "wholesale_only": false
   },
   {
@@ -6582,7 +6582,7 @@
     "website": "https://www.liability.com/",
     "ecommerce": false,
     "ecommerce_platform": null,
-    "ecommerce_score": 2,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -6630,7 +6630,7 @@
     "website": "https://lineacaffe.com/",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 24,
+    "ecommerce_score": 22,
     "wholesale_only": false
   },
   {
@@ -6696,7 +6696,7 @@
     "website": "https://www.looptworks.com",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 13,
+    "ecommerce_score": 11,
     "wholesale_only": false
   },
   {
@@ -6717,8 +6717,8 @@
     "slug": "lost-grove-brewing",
     "website": "https://lostgrovebrewing.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -6783,8 +6783,8 @@
     "slug": "love-bottle",
     "website": "https://www.lovebottle.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -6953,9 +6953,9 @@
     "size": "10-49",
     "slug": "macher-usa",
     "website": "https://macher.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -6975,9 +6975,9 @@
     "size": "50-249",
     "slug": "mad-tree-brewing-llc",
     "website": "https://madtree.com",
-    "ecommerce": false,
+    "ecommerce": true,
     "ecommerce_platform": null,
-    "ecommerce_score": 0,
+    "ecommerce_score": 6,
     "wholesale_only": false
   },
   {
@@ -6998,8 +6998,8 @@
     "slug": "mainstem-malt-spc",
     "website": "https://www.mainstemmalt.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -7020,8 +7020,8 @@
     "slug": "makers-mark-distillery",
     "website": "https://www.makers.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -7087,7 +7087,7 @@
     "website": "https://masienda.com/",
     "ecommerce": true,
     "ecommerce_platform": "Shopify",
-    "ecommerce_score": 38,
+    "ecommerce_score": 35,
     "wholesale_only": true
   },
   {
@@ -7130,9 +7130,9 @@
     "slug": "maud-borup-inc",
     "website": "https://maudborup.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
-    "wholesale_only": true
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -7575,8 +7575,8 @@
     "slug": "montanya-distillers-llc",
     "website": "https://www.montanyarum.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 19,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 14,
     "wholesale_only": true
   },
   {
@@ -7618,9 +7618,9 @@
     "size": "10-49",
     "slug": "mother-kombucha",
     "website": "https://motherkombucha.com/",
-    "ecommerce": false,
-    "ecommerce_platform": null,
-    "ecommerce_score": 0,
+    "ecommerce": true,
+    "ecommerce_platform": "WooCommerce",
+    "ecommerce_score": 20,
     "wholesale_only": false
   },
   {
@@ -7886,8 +7886,8 @@
     "slug": "natures-crops-inc",
     "website": "https://www.naturescrops.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": null,
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -7974,9 +7974,9 @@
     "size": "10-49",
     "slug": "nepal-tea-collective",
     "website": "https://www.nepal.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -8063,8 +8063,8 @@
     "slug": "new-seasons-market",
     "website": "https://www.newseasonsmarket.com:443/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 8,
+    "ecommerce_platform": null,
+    "ecommerce_score": 6,
     "wholesale_only": true
   },
   {
@@ -8130,9 +8130,9 @@
     "size": "50-249",
     "slug": "north-coast-brewing-co-inc",
     "website": "https://www.northcoastbrewing.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -8175,9 +8175,9 @@
     "size": "10-49",
     "slug": "nuliv-science-usa-inc",
     "website": "https://nulivscience.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -8198,8 +8198,8 @@
     "slug": "numi-organic-tea",
     "website": "https://numi.co/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 8,
+    "ecommerce_platform": null,
+    "ecommerce_score": 5,
     "wholesale_only": false
   },
   {
@@ -8221,7 +8221,7 @@
     "slug": "nutricia-north-america",
     "website": "https://www.nutricia.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
+    "ecommerce_platform": null,
     "ecommerce_score": 4,
     "wholesale_only": false
   },
@@ -8332,7 +8332,7 @@
     "website": "https://olukai.com/",
     "ecommerce": true,
     "ecommerce_platform": "Shopify",
-    "ecommerce_score": 40,
+    "ecommerce_score": 37,
     "wholesale_only": true
   },
   {
@@ -8441,8 +8441,8 @@
     "slug": "oneill-vintners-distillers",
     "website": "https://www.oneillwine.com",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -8508,8 +8508,8 @@
     "slug": "on-line-instrument-systems-inc-olis",
     "website": "https://www.olisweb.com",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -8595,9 +8595,9 @@
     "size": "10-49",
     "slug": "open-water",
     "website": "https://openwater.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -8618,8 +8618,8 @@
     "slug": "opportunity-threads-llc",
     "website": "https://www.opportunitythreads.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": null,
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -8640,8 +8640,8 @@
     "slug": "orange-bike-brewing-company",
     "website": "https://www.orange.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -8752,7 +8752,7 @@
     "website": "https://www.packedwithpurpose.gifts",
     "ecommerce": true,
     "ecommerce_platform": "Shopify",
-    "ecommerce_score": 15,
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -8846,9 +8846,9 @@
     "size": "1000+",
     "slug": "patagonia-inc",
     "website": "https://www.patagonia.com/",
-    "ecommerce": false,
+    "ecommerce": true,
     "ecommerce_platform": null,
-    "ecommerce_score": 0,
+    "ecommerce_score": 10,
     "wholesale_only": false
   },
   {
@@ -8935,8 +8935,8 @@
     "slug": "peak-design",
     "website": "https://peak.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 6,
+    "ecommerce_platform": null,
+    "ecommerce_score": 4,
     "wholesale_only": false
   },
   {
@@ -9000,9 +9000,9 @@
     "size": "50-249",
     "slug": "perpay-inc",
     "website": "https://perpay.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -9045,8 +9045,8 @@
     "slug": "pete-gerrys-organics-llc",
     "website": "https://www.pete.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -9110,9 +9110,9 @@
     "size": "1-9",
     "slug": "plant-people",
     "website": "https://www.plant-people.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -9200,8 +9200,8 @@
     "slug": "portland-garment-factory",
     "website": "https://www.portlandgarmentfactory.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 14,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 12,
     "wholesale_only": false
   },
   {
@@ -9244,7 +9244,7 @@
     "slug": "print-pack-llc",
     "website": "https://www.printpack.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
+    "ecommerce_platform": null,
     "ecommerce_score": 4,
     "wholesale_only": false
   },
@@ -9313,8 +9313,8 @@
     "slug": "prose",
     "website": "https://prose.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 6,
+    "ecommerce_platform": null,
+    "ecommerce_score": 4,
     "wholesale_only": false
   },
   {
@@ -9334,9 +9334,9 @@
     "size": "1-9",
     "slug": "prosperity-candle",
     "website": "https://www.prosperity.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -9359,7 +9359,7 @@
     "website": "https://protafiori.com",
     "ecommerce": true,
     "ecommerce_platform": "Shopify",
-    "ecommerce_score": 12,
+    "ecommerce_score": 7,
     "wholesale_only": false
   },
   {
@@ -9403,7 +9403,7 @@
     "website": "https://pura.com/",
     "ecommerce": true,
     "ecommerce_platform": "Shopify",
-    "ecommerce_score": 25,
+    "ecommerce_score": 19,
     "wholesale_only": true
   },
   {
@@ -9578,8 +9578,8 @@
     "slug": "q-l-e",
     "website": "https://www.qle.co/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 8,
+    "ecommerce_platform": null,
+    "ecommerce_score": 5,
     "wholesale_only": false
   },
   {
@@ -9602,7 +9602,7 @@
     "website": "https://www.qbp.com",
     "ecommerce": false,
     "ecommerce_platform": null,
-    "ecommerce_score": 2,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -9646,7 +9646,7 @@
     "website": "https://www.torani.com",
     "ecommerce": true,
     "ecommerce_platform": "Magento",
-    "ecommerce_score": 26,
+    "ecommerce_score": 20,
     "wholesale_only": false
   },
   {
@@ -9716,8 +9716,8 @@
     "slug": "real-thread",
     "website": "https://www.realthread.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce_platform": null,
+    "ecommerce_score": 6,
     "wholesale_only": false
   },
   {
@@ -9739,9 +9739,9 @@
     "slug": "rebel-green",
     "website": "https://www.rebel.com/en",
     "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 16,
-    "wholesale_only": true
+    "ecommerce_platform": "WooCommerce",
+    "ecommerce_score": 13,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -9849,8 +9849,8 @@
     "slug": "bagito",
     "website": "https://www.revolusation.co/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 5,
+    "ecommerce_platform": null,
+    "ecommerce_score": 3,
     "wholesale_only": false
   },
   {
@@ -9872,7 +9872,7 @@
     "website": "https://www.revolution.com/",
     "ecommerce": true,
     "ecommerce_platform": "BigCommerce",
-    "ecommerce_score": 5,
+    "ecommerce_score": 3,
     "wholesale_only": false
   },
   {
@@ -9893,7 +9893,7 @@
     "slug": "rhino-foods",
     "website": "https://www.rhinofoods.com",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
+    "ecommerce_platform": null,
     "ecommerce_score": 4,
     "wholesale_only": false
   },
@@ -10007,7 +10007,7 @@
     "website": "https://roadsriversandtrails.com/",
     "ecommerce": true,
     "ecommerce_platform": "BigCommerce",
-    "ecommerce_score": 16,
+    "ecommerce_score": 14,
     "wholesale_only": false
   },
   {
@@ -10181,8 +10181,8 @@
     "slug": "rubicon-bakers",
     "website": "https://www.rubiconbakers.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 13,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 11,
     "wholesale_only": false
   },
   {
@@ -10312,7 +10312,7 @@
     "website": "https://savvyrest.com/",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 29,
+    "ecommerce_score": 26,
     "wholesale_only": false
   },
   {
@@ -10355,8 +10355,8 @@
     "slug": "scratch-and-peck-feeds",
     "website": "https://www.scratch.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -10488,7 +10488,7 @@
     "website": "https://www.sencha.com/",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 12,
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -10509,8 +10509,8 @@
     "slug": "seven-sundays",
     "website": "https://www.seven-sundays.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 9,
+    "ecommerce_platform": null,
+    "ecommerce_score": 7,
     "wholesale_only": false
   },
   {
@@ -10530,9 +10530,9 @@
     "size": "50-249",
     "slug": "seventh-generation",
     "website": "https://www.seventhgeneration.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 5,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": true
   },
   {
@@ -10619,8 +10619,8 @@
     "slug": "simeks",
     "website": "https://simeks.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 8,
+    "ecommerce_platform": null,
+    "ecommerce_score": 6,
     "wholesale_only": true
   },
   {
@@ -10663,8 +10663,8 @@
     "slug": "siponey",
     "website": "https://www.siponey.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 18,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 16,
     "wholesale_only": false
   },
   {
@@ -10796,7 +10796,7 @@
     "website": "https://www.softstarshoes.com/",
     "ecommerce": true,
     "ecommerce_platform": "Magento",
-    "ecommerce_score": 27,
+    "ecommerce_score": 21,
     "wholesale_only": false
   },
   {
@@ -10883,9 +10883,9 @@
     "size": "10-49",
     "slug": "soter-vineyards",
     "website": "https://www.sotervineyards.com/",
-    "ecommerce": false,
-    "ecommerce_platform": null,
-    "ecommerce_score": 0,
+    "ecommerce": true,
+    "ecommerce_platform": "WooCommerce",
+    "ecommerce_score": 19,
     "wholesale_only": false
   },
   {
@@ -10972,8 +10972,8 @@
     "slug": "stick-and-ball",
     "website": "https://www.nystickball.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 20,
+    "ecommerce_platform": null,
+    "ecommerce_score": 18,
     "wholesale_only": false
   },
   {
@@ -11017,7 +11017,7 @@
     "website": "https://stone.com/",
     "ecommerce": true,
     "ecommerce_platform": null,
-    "ecommerce_score": 4,
+    "ecommerce_score": 6,
     "wholesale_only": false
   },
   {
@@ -11198,9 +11198,9 @@
     "size": "250-999",
     "slug": "sundial-brands-llc",
     "website": "https://sundial.co/",
-    "ecommerce": true,
+    "ecommerce": false,
     "ecommerce_platform": null,
-    "ecommerce_score": 3,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -11222,8 +11222,8 @@
     "slug": "unidos-imports-llc",
     "website": "https://suyopisco.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 12,
+    "ecommerce_platform": null,
+    "ecommerce_score": 9,
     "wholesale_only": true
   },
   {
@@ -11265,9 +11265,9 @@
     "size": "0",
     "slug": "sweet-origins",
     "website": "https://www.sweetorigins.com",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -11288,8 +11288,8 @@
     "slug": "swift-printing-and-commuications-inc",
     "website": "https://www.swiftprinting.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 13,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 11,
     "wholesale_only": false
   },
   {
@@ -11878,8 +11878,8 @@
     "slug": "the-promotions-dept",
     "website": "https://www.thepromotionsdept.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 11,
+    "ecommerce_platform": null,
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -12036,10 +12036,10 @@
     "size": "1-9",
     "slug": "thread-coffee-roasters",
     "website": "https://www.threadcoffee.com",
-    "ecommerce": false,
-    "ecommerce_platform": null,
-    "ecommerce_score": 0,
-    "wholesale_only": false
+    "ecommerce": true,
+    "ecommerce_platform": "WooCommerce",
+    "ecommerce_score": 27,
+    "wholesale_only": true
   },
   {
     "countries": [
@@ -12116,7 +12116,7 @@
     "website": "https://thrivemarket.com/",
     "ecommerce": false,
     "ecommerce_platform": null,
-    "ecommerce_score": 2,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -12138,7 +12138,7 @@
     "website": "https://tillak.com/",
     "ecommerce": true,
     "ecommerce_platform": "Shopify",
-    "ecommerce_score": 22,
+    "ecommerce_score": 16,
     "wholesale_only": false
   },
   {
@@ -12159,8 +12159,8 @@
     "slug": "tillamook-county-creamery-association",
     "website": "https://www.tillamook.com",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 8,
+    "ecommerce_platform": null,
+    "ecommerce_score": 6,
     "wholesale_only": true
   },
   {
@@ -12338,7 +12338,7 @@
     "website": "https://touchstone.com/",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 5,
+    "ecommerce_score": 3,
     "wholesale_only": false
   },
   {
@@ -12358,9 +12358,9 @@
     "size": "0",
     "slug": "town-hall-public-benefit-corporation",
     "website": "https://www.town.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 6,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -12381,8 +12381,8 @@
     "slug": "traditional-medicinals",
     "website": "https://www.traditional.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 10,
+    "ecommerce_platform": null,
+    "ecommerce_score": 7,
     "wholesale_only": false
   },
   {
@@ -12463,8 +12463,8 @@
     "slug": "triple-bottom-brewing",
     "website": "https://triplebottombrewing.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 14,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 12,
     "wholesale_only": false
   },
   {
@@ -12551,9 +12551,9 @@
     "slug": "ts-designs-inc",
     "website": "https://tsdesigns.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 28,
-    "wholesale_only": true
+    "ecommerce_platform": "WooCommerce",
+    "ecommerce_score": 23,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -12596,8 +12596,8 @@
     "slug": "umo-paris",
     "website": "https://www.umo-paris.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -12618,8 +12618,8 @@
     "slug": "uncommongoods",
     "website": "https://www.uncommongoods.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 14,
+    "ecommerce_platform": null,
+    "ecommerce_score": 9,
     "wholesale_only": false
   },
   {
@@ -12640,8 +12640,8 @@
     "slug": "union-wine-company",
     "website": "https://www.unionwinecompany.com",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 13,
+    "ecommerce_platform": null,
+    "ecommerce_score": 10,
     "wholesale_only": false
   },
   {
@@ -12708,7 +12708,7 @@
     "website": "https://www.unspun.io",
     "ecommerce": true,
     "ecommerce_platform": "Shopify",
-    "ecommerce_score": 6,
+    "ecommerce_score": 3,
     "wholesale_only": false
   },
   {
@@ -12752,8 +12752,8 @@
     "website": "https://urbanremedy.com/",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 32,
-    "wholesale_only": true
+    "ecommerce_score": 29,
+    "wholesale_only": false
   },
   {
     "countries": [
@@ -12816,9 +12816,9 @@
     "size": "50-249",
     "slug": "veritable-vegetable",
     "website": "https://veritablevegetable.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -12840,7 +12840,7 @@
     "website": "https://vermont.com/",
     "ecommerce": true,
     "ecommerce_platform": "WooCommerce",
-    "ecommerce_score": 5,
+    "ecommerce_score": 3,
     "wholesale_only": false
   },
   {
@@ -12861,8 +12861,8 @@
     "slug": "vertical-activewear",
     "website": "https://www.verticalactivewear.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Shopify",
-    "ecommerce_score": 19,
+    "ecommerce_platform": "Squarespace",
+    "ecommerce_score": 13,
     "wholesale_only": false
   },
   {
@@ -12913,9 +12913,9 @@
     "size": "250-999",
     "slug": "vital-proteins-llc",
     "website": "https://vital-proteins.com/",
-    "ecommerce": true,
+    "ecommerce": false,
     "ecommerce_platform": null,
-    "ecommerce_score": 3,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
@@ -12980,8 +12980,8 @@
     "slug": "walden-local-meat",
     "website": "https://www.waldenlocalmeat.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 6,
+    "ecommerce_platform": null,
+    "ecommerce_score": 4,
     "wholesale_only": false
   },
   {
@@ -13203,7 +13203,7 @@
     "website": "https://www.white.com/login.htm?c=login",
     "ecommerce": false,
     "ecommerce_platform": null,
-    "ecommerce_score": 2,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -13267,9 +13267,9 @@
     "size": "1-9",
     "slug": "winderlea-vineyard-and-winery",
     "website": "https://winderlea.com/",
-    "ecommerce": false,
-    "ecommerce_platform": null,
-    "ecommerce_score": 0,
+    "ecommerce": true,
+    "ecommerce_platform": "WooCommerce",
+    "ecommerce_score": 18,
     "wholesale_only": false
   },
   {
@@ -13335,8 +13335,8 @@
     "slug": "world-centric",
     "website": "https://www.worldcentric.com/",
     "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 8,
+    "ecommerce_platform": null,
+    "ecommerce_score": 6,
     "wholesale_only": true
   },
   {
@@ -13403,8 +13403,8 @@
     "slug": "yellow-leaf-hammocks",
     "website": "https://yellow.com/",
     "ecommerce": false,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 2,
+    "ecommerce_platform": null,
+    "ecommerce_score": 0,
     "wholesale_only": false
   },
   {
@@ -13446,9 +13446,9 @@
     "size": "1-9",
     "slug": "zego",
     "website": "https://www.zego.com/",
-    "ecommerce": true,
-    "ecommerce_platform": "Magento",
-    "ecommerce_score": 4,
+    "ecommerce": false,
+    "ecommerce_platform": null,
+    "ecommerce_score": 2,
     "wholesale_only": false
   },
   {
