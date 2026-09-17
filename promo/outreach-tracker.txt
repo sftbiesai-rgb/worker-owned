@@ -19,7 +19,7 @@ Nathan Schneider                | nathan.schneider@colorado.edu        | CONV   
 Reggie Rucker / ILSR            | reggie@ilsr.org                      | RESP   | "Thanks for sharing this resource -- we'll see what we can come up with"
 Josh Davis / GEO                | josh@geo.coop / editors@geo.coop     | CONV   | Published our article on geo.coop, ongoing relationship
 DAWI / Karina                   | kpacheco@institute.coop              | RESP   | Offered to share on social media, newsletter system being rebuilt
-Mark Hand / The Stakehold       | mark.c.hand@gmail.com                | CONV   | Featured us in newsletter, suggested ESOP language, asked about widget and legal questions, now asking for C-suite emails
+Mark Hand / The Stakehold       | mark.c.hand@gmail.com                | CONV   | Featured us in newsletter, suggested ESOP language, asked about widget and legal questions. Sent 140 confirmed contact emails w/ org names & categories (2026-09-15), offered to build ESOP site
 Equal Exchange                  | info@equalexchange.coop              | RESP   | "What a cool resource!" Shared About Us page and farmer resources
 Palestinian Soap / Chris        | help@palestiniansoap.coop            | RESP   | Chris at olive.coop: "This is absolutely wonderful. Thanks so much!"
 Tape Trade                      | info@tapetrade.io                    | CONV   | "Thanks for including us, that is a cool project! How did you find us?"
@@ -208,148 +208,150 @@ Soapbox Co-op                   | info@soapbox.com                     | 550 rej
 
 All confirmed-deliverable contact emails from the directory:
 
-info@1620usa.com
-info@aesthetic.games
-afterglowcoffee@gmail.com
-ask@agaric.coop
-info@akpress.org
-info@alaffia.com
-mail@aftermath.site
-info@americanrootswear.com
-info@applewoodseed.com
-info@artbev.coop
-info@bainbridgevineyards.com
-contact@baltimorebicycleworks.com
-info@barriobrewing.com
-info@bathtubrowbrewing.coop
-info@bigduck.com
-hello@bluetinproduction.com
-customerservice@bobsredmill.com
-marketing@boydell.co.uk
-info@brokenclockbrew.com
-info@cabotcreamery.com
-info@cafecampesino.com
-support@canecreek.com
-CardboardRevolution20@gmail.com
-info@catalyticsound.com
-info@catamountsolar.com
-chickhabitbeauty@gmail.com
-info@chcany.org
-info@clevelandembodiment.org
-hello@colab.coop
-cooperativecoffeeroasters@gmail.com
-cooperationjackson@gmail.com
-orders@coracaoconfections.com
-info@createthecollection.com
-customerservice@dansko.com
-jessica@darkertimes.com
-info@deansbeans.com
-info@defector.com
-hello@democracybrewing.com
-info@deschutesbrewery.com
-drifabrewingco@gmail.com
-hello@dyemadyarns.com
-info@equalexchange.coop
-hello@feministbookclub.com
-flyteam@theflytrapmedia.com
-info@foreveryonecollective.com
-hello@fourbudsfloral.com
-jason@404media.co
-customercare@frontiercoop.com
-service@gardeners.com
-info@gimmecoffee.com
-goldenart@goldenpaints.com
-spinnery@spinnery.com
-info@harpoonbrewery.com
-hello@heartleafbooks.com
-tips@hellgatenyc.com
-info@hearingthings.co
-homewardbookscollective@gmail.com
-hello@hypha.coop
-sales@ifbikes.com
-info@justcoffee.coop
-info@justuscoffee.com
-info@justseeds.org
-web-orders@landrys.com
-info@lefthandbrewing.com
-contactus@litehouseinc.com
-hello@lbwatchdog.com
-contact@loomio.com
-info@lucidtales.coop
-info@maggiesorganics.com
-info@seaveg.com
-info@makingworldsbooks.org
-customerservice@mastgeneralstore.com
-hello@meowmeowtweet.com
-MirisataPDX@gmail.com
-hi@mirlo.space
-sip@morningbellcoffee.com
-customerservice@newharbinger.com
-info@no-gods-no-masters.com
-hello@onceagain.com
-customerservice@opportunitythreads.com
-contact.us@organicvalley.coop
-help@palestiniansoap.coop
-mail@pedalpeople.coop
-bookspilsen@gmail.com
-info@pmpress.org
-info@popheist.com
-info@racketmn.com
-info@radix.coop
-info@rascal.news
-info@realpickles.com
-info@recology.com
-hello@revisionenergy.com
-info@rockcitycoffee.com
-shop@roomandboard.com
-info@sassafras.coop
-pitches@skyboxcritics.com
-gabriel@slowbloomcoffee.com
-gardens@southernexposure.com
-customerservice@stewartsshops.com
-support@strangematters.coop
-info@subvert.fm
-info@switchbackvt.com
-sales@ttgaming.net
-info@taharkabrothers.com
-info@tapetrade.io
-tattoo@tattooreadymade.com
-support@taylorguitars.com
-contact@tesacollective.com
-info@thriftywhite.com
-info@tillamook.com
-newsroom@coloradosun.com
-CustomerSupport@tradehome.com
-coordinator@tramatextiles.org
-info@twbbrewing.com
-info@unioncab.coop
-verso@versobooks.com
-hello@woodshop.coop
-info@worxprinting.coop
-info@ziarecords.com
-info@thelocalbutchershop.com
-customerservice@bimart.com
-team@mboa.dev
-hello@508.dev
-hello@51st.news
-info@bluestockings.com
-csd@weinbrennerusa.com
-customerservice@wwnorton.com
-info@weareravenous.com
-customercare@kingarthurbaking.com
-adobesf@gmail.com
-autonomynewsco@gmail.com
-info@capecodlumber.com
-HandworkOnlineShop@gmail.com
-contact@jam.coop
-sponsorships@rangemedia.co
-customerservice@scheels.com
-art@sowtrue.com
-info@tootiestempeh.com
-service@grassrootscoop.com
-mike@garlicandroses.coop
-maria@flaminghydra.com
-kt@maximumfun.org
+Organization                    | Email                                 | Category
+--------------------------------|---------------------------------------|-------------------------
+1620 Workwear                   | info@1620usa.com                      | Apparel
+Aesthetician Labs               | info@aesthetic.games                  | Games
+Afterglow Coffee                | afterglowcoffee@gmail.com             | Coffee & Tea
+Agaric                          | ask@agaric.coop                       | Tech & Software
+AK Press                        | info@akpress.org                      | Books
+Alaffia                         | info@alaffia.com                      | Personal Care
+Aftermath                       | mail@aftermath.site                   | Media & Publishing
+American Roots                  | info@americanrootswear.com            | Apparel
+Applewood Seed Company          | info@applewoodseed.com                | Home & Garden
+Artisan Beverage Cooperative    | info@artbev.coop                      | Food & Pantry
+Bainbridge Vineyards            | info@bainbridgevineyards.com          | Food & Pantry
+Baltimore Bicycle Works         | contact@baltimorebicycleworks.com     | Sporting Goods & Outdoors
+Barrio Brewing Co.              | info@barriobrewing.com                | Beer & Brewing
+Bathtub Row Brewing Co-op       | info@bathtubrowbrewing.coop           | Beer & Brewing
+Big Duck                        | info@bigduck.com                      | Tech & Software
+Blue Tin Production             | hello@bluetinproduction.com           | Apparel
+Bob's Red Mill                  | customerservice@bobsredmill.com       | Food & Pantry
+Boydell & Brewer                | marketing@boydell.co.uk               | Books
+Broken Clock Brewing            | info@brokenclockbrew.com              | Beer & Brewing
+Cabot Creamery                  | info@cabotcreamery.com                | Food & Pantry
+Cafe Campesino                  | info@cafecampesino.com                | Coffee & Tea
+Cane Creek                      | support@canecreek.com                 | Sporting Goods & Outdoors
+Cardboard Revolution            | CardboardRevolution20@gmail.com       | Games
+Catalytic Sound                 | info@catalyticsound.com               | Music
+Catamount Solar                 | info@catamountsolar.com               | Home Goods & Services
+Chick Habit Beauty Collective   | chickhabitbeauty@gmail.com            | Personal Care
+Cooperative Home Care Assoc.    | info@chcany.org                       | Home Goods & Services
+Cleveland Embodiment Collective | info@clevelandembodiment.org          | Personal Care
+CoLab Cooperative               | hello@colab.coop                      | Tech & Software
+Cooperative Coffee Roasters     | cooperativecoffeeroasters@gmail.com   | Coffee & Tea
+Cooperation Jackson             | cooperationjackson@gmail.com          | Home Goods & Services
+Coracao Chocolate               | orders@coracaoconfections.com         | Food & Pantry
+Create the Collection           | info@createthecollection.com          | Apparel
+Dansko                          | customerservice@dansko.com            | Apparel
+Darker Times                    | jessica@darkertimes.com               | Media & Publishing
+Dean's Beans                    | info@deansbeans.com                   | Coffee & Tea
+Defector                        | info@defector.com                     | Media & Publishing
+Democracy Brewing               | hello@democracybrewing.com            | Beer & Brewing
+Deschutes Brewery               | info@deschutesbrewery.com             | Beer & Brewing
+Drifa Brewing Company           | drifabrewingco@gmail.com              | Beer & Brewing
+Dye Mad Yarns                   | hello@dyemadyarns.com                 | Home Goods & Services
+Equal Exchange                  | info@equalexchange.coop               | Coffee & Tea
+Feminist Book Club              | hello@feministbookclub.com            | Books
+The Flytrap                     | flyteam@theflytrapmedia.com           | Media & Publishing
+For Everyone Collective         | info@foreveryonecollective.com        | Apparel
+Four Buds Floral Studio         | hello@fourbudsfloral.com              | Home Goods & Services
+404 Media                       | jason@404media.co                     | Media & Publishing
+Frontier Co-op                  | customercare@frontiercoop.com         | Food & Pantry
+Gardener's Supply Company       | service@gardeners.com                 | Home & Garden
+Gimme Coffee                    | info@gimmecoffee.com                  | Coffee & Tea
+Golden Artist Colors            | goldenart@goldenpaints.com            | Art & Prints
+Green Mountain Spinnery         | spinnery@spinnery.com                 | Home Goods & Services
+Harpoon Brewery                 | info@harpoonbrewery.com               | Beer & Brewing
+Heartleaf Books                 | hello@heartleafbooks.com              | Media & Publishing
+Hell Gate                       | tips@hellgatenyc.com                  | Media & Publishing
+Hearing Things                  | info@hearingthings.co                 | Media & Publishing
+Homeward Books Collective       | homewardbookscollective@gmail.com     | Media & Publishing
+Hypha Worker Co-operative       | hello@hypha.coop                      | Tech & Software
+Independent Fabrication         | sales@ifbikes.com                     | Sporting Goods & Outdoors
+Just Coffee                     | info@justcoffee.coop                  | Coffee & Tea
+Just Us! Coffee Roasters        | info@justuscoffee.com                 | Coffee & Tea
+Justseeds                       | info@justseeds.org                    | Art & Prints
+Landry's Bicycles               | web-orders@landrys.com                | Sporting Goods & Outdoors
+Left Hand Brewing               | info@lefthandbrewing.com              | Beer & Brewing
+Litehouse Foods                 | contactus@litehouseinc.com            | Food & Pantry
+Long Beach Watchdog             | hello@lbwatchdog.com                  | Media & Publishing
+Loomio                          | contact@loomio.com                    | Tech & Software
+Lucid Tales                     | info@lucidtales.coop                  | Games
+Maggie's Organics               | info@maggiesorganics.com              | Apparel
+Maine Coast Sea Vegetables      | info@seaveg.com                       | Food & Pantry
+Making Worlds Bookstore         | info@makingworldsbooks.org            | Books
+Mast General Store              | customerservice@mastgeneralstore.com  | Apparel
+Meow Meow Tweet                 | hello@meowmeowtweet.com               | Personal Care
+Mirisata                        | MirisataPDX@gmail.com                 | Food & Pantry
+Mirlo                           | hi@mirlo.space                        | Music
+Morning Bell Coffee             | sip@morningbellcoffee.com             | Coffee & Tea
+New Harbinger Publications      | customerservice@newharbinger.com      | Media & Publishing
+No Gods No Masters              | info@no-gods-no-masters.com           | Apparel
+Once Again Nut Butter           | hello@onceagain.com                   | Food & Pantry
+Opportunity Threads             | customerservice@opportunitythreads.com| Apparel
+Organic Valley                  | contact.us@organicvalley.coop         | Food & Pantry
+Palestinian Soap Cooperative    | help@palestiniansoap.coop             | Personal Care
+Pedal People                    | mail@pedalpeople.coop                 | Home Goods & Services
+Pilsen Community Books          | bookspilsen@gmail.com                 | Media & Publishing
+PM Press                        | info@pmpress.org                      | Books
+Pop Heist                       | info@popheist.com                     | Media & Publishing
+Racket                          | info@racketmn.com                     | Media & Publishing
+RADIX                           | info@radix.coop                       | Media & Publishing
+Rascal News                     | info@rascal.news                      | Media & Publishing
+Real Pickles                    | info@realpickles.com                  | Food & Pantry
+Recology                        | info@recology.com                     | Home Goods & Services
+ReVision Energy                 | hello@revisionenergy.com              | Tech & Software
+Rock City Coffee                | info@rockcitycoffee.com               | Coffee & Tea
+Room & Board                    | shop@roomandboard.com                 | Home Goods & Services
+Sassafras Tech Collective       | info@sassafras.coop                   | Tech & Software
+Skybox                          | pitches@skyboxcritics.com             | Media & Publishing
+Slow Bloom Coffee               | gabriel@slowbloomcoffee.com           | Coffee & Tea
+Southern Exposure Seed Exchange | gardens@southernexposure.com          | Food & Pantry
+Stewart's Shops                 | customerservice@stewartsshops.com     | Food & Pantry
+Strange Matters Magazine        | support@strangematters.coop           | Media & Publishing
+Subvert                         | info@subvert.fm                       | Music
+Switchback Brewing Co.          | info@switchbackvt.com                 | Beer & Brewing
+TableTop Gaming                 | sales@ttgaming.net                    | Games
+Taharka Brothers                | info@taharkabrothers.com              | Food & Pantry
+Tape Trade                      | info@tapetrade.io                     | Music
+Tattoo Readymade                | tattoo@tattooreadymade.com            | Art & Prints
+Taylor Guitars                  | support@taylorguitars.com             | Music
+TESA Collective                 | contact@tesacollective.com            | Games
+Thrifty White Pharmacy          | info@thriftywhite.com                 | Personal Care
+Tillamook                       | info@tillamook.com                    | Food & Pantry
+The Colorado Sun                | newsroom@coloradosun.com              | Media & Publishing
+Tradehome Shoes                 | CustomerSupport@tradehome.com         | Apparel
+Trama Textiles                  | coordinator@tramatextiles.org         | Apparel
+TWB Co-operative Brewing        | info@twbbrewing.com                   | Beer & Brewing
+Union Cab Co-op                 | info@unioncab.coop                    | Home Goods & Services
+Verso Books                     | verso@versobooks.com                  | Books
+Wood Shop Workers Co-op         | hello@woodshop.coop                   | Home Goods & Services
+Worx Printing                   | info@worxprinting.coop                | Apparel
+Zia Records                     | info@ziarecords.com                   | Media & Publishing
+The Local Butcher Shop          | info@thelocalbutchershop.com          | Food & Pantry
+Bi-Mart                         | customerservice@bimart.com            | Home Goods & Services
+JMP.chat                        | team@mboa.dev                         | Tech & Software
+508.dev                         | hello@508.dev                         | Tech & Software
+The 51st                        | hello@51st.news                       | Media & Publishing
+Bluestockings                   | info@bluestockings.com                | Media & Publishing
+Thorogood USA                   | csd@weinbrennerusa.com                | Apparel
+W.W. Norton                     | customerservice@wwnorton.com          | Media & Publishing
+Ravenous                        | info@weareravenous.com                | Media & Publishing
+King Arthur Baking              | customercare@kingarthurbaking.com     | Food & Pantry
+Adobe Books & Arts Cooperative  | adobesf@gmail.com                     | Books
+Autonomy News                   | autonomynewsco@gmail.com              | Media & Publishing
+Cape Cod Lumber                 | info@capecodlumber.com                | Home Goods & Services
+Handwork                        | HandworkOnlineShop@gmail.com          | Home Goods & Services
+Jam                             | contact@jam.coop                      | Music
+RANGE Media                     | sponsorships@rangemedia.co            | Media & Publishing
+Scheels All Sports              | customerservice@scheels.com           | Sporting Goods & Outdoors
+Sow True Seed                   | art@sowtrue.com                       | Food & Pantry
+Tootie's Tempeh                 | info@tootiestempeh.com                | Food & Pantry
+Grass Roots Farmers' Co-op      | service@grassrootscoop.com            | Food & Pantry
+Garlic & Roses                  | mike@garlicandroses.coop              | Media & Publishing
+Flaming Hydra                   | maria@flaminghydra.com                | Media & Publishing
+Maximum Fun                     | kt@maximumfun.org                     | Media & Publishing
 
 TOTAL CONFIRMED DELIVERABLE: ~140 emails
 TOTAL BOUNCED: 8 addresses (6 orgs)

@@ -1,0 +1,412 @@
+{
+  "aldea-coffee": {
+    "name": "Aldea Coffee",
+    "website": "https://www.aldeacoffee.com",
+    "industry": "Beverages"
+  },
+  "4ocean-pbc": {
+    "name": "4ocean PBC",
+    "website": "https://www.4ocean.com/",
+    "industry": "Jewelry & related articles"
+  },
+  "alp-n-rock": {
+    "name": "Alp N Rock",
+    "website": "https://alpnrock.com/",
+    "industry": "Apparel"
+  },
+  "alwrld": {
+    "name": "ALWRLD Co.",
+    "website": "https://alwrld.com/",
+    "industry": "Textiles"
+  },
+  "686": {
+    "name": "686 Technical Apparel",
+    "website": "https://www.686.com/",
+    "industry": "Apparel"
+  },
+  "aveda-corporation": {
+    "name": "Aveda Corporation",
+    "website": "https://www.aveda.com",
+    "industry": "Personal care products"
+  },
+  "aloha": {
+    "name": "Aloha",
+    "website": "https://aloha.com/",
+    "industry": "Food products"
+  },
+  "athletic-brewing-company": {
+    "name": "Athletic Brewing Holding Company, LLC",
+    "website": "https://athleticbrewing.com",
+    "industry": "Beverages"
+  },
+  "anji-mountain": {
+    "name": "Anji Mountain",
+    "website": "https://anjimountain.com/",
+    "industry": "Textiles"
+  },
+  "apolis-holdings-llc": {
+    "name": "Apolis Holdings LLC",
+    "website": "https://www.apolisglobal.com",
+    "industry": "Apparel"
+  },
+  "attn-grace-inc": {
+    "name": "Attn: Grace, Inc",
+    "website": "https://attngrace.com/",
+    "industry": "Personal care products"
+  },
+  "avocado-green-brands": {
+    "name": "Avocado Green Brands",
+    "website": "https://www.avocadogreenmattress.com/",
+    "industry": "Other manufacturing"
+  },
+  "bambu": {
+    "name": "bambu",
+    "website": "https://bambu.com/",
+    "industry": "Other manufacturing"
+  },
+  "alaska-glacial-mud-co": {
+    "name": "Alaska Glacial Essentials Skincare",
+    "website": "https://www.alaskaglacial.com",
+    "industry": "Personal care products"
+  },
+  "barvecue": {
+    "name": "Barvecue",
+    "website": "https://barvecue.com/",
+    "industry": "Food products"
+  },
+  "bear-lake-coffee-company-llc": {
+    "name": "Bear Lake Coffee Company, LLC",
+    "website": "https://bearlakecoffee.com",
+    "industry": "Food products"
+  },
+  "bees-wrap": {
+    "name": "BEE'S WRAP",
+    "website": "https://www.beeswrap.com/",
+    "industry": "Other manufacturing"
+  },
+  "bombas": {
+    "name": "Bombas LLC",
+    "website": "https://bombas.com/",
+    "industry": "Apparel"
+  },
+  "bigelow-tea": {
+    "name": "Bigelow Tea",
+    "website": "https://www.bigelowtea.com/",
+    "industry": "Beverages"
+  },
+  "big-spoon-roasters": {
+    "name": "Big Spoon Roasters",
+    "website": "https://bigspoonroasters.com/",
+    "industry": "Food products"
+  },
+  "american-halal-company-pbc-dba-saffron-road-foods": {
+    "name": "American Halal Company, PBC D/B/A Saffron Road Foods",
+    "website": "https://www.saffronroadfood.com",
+    "industry": "Food products"
+  },
+  "bluebird-botanicals": {
+    "name": "Bluebird Botanicals",
+    "website": "https://bluebirdbotanicals.com/",
+    "industry": "Food products"
+  },
+  "barnana": {
+    "name": "Barnana",
+    "website": "https://barnana.com/",
+    "industry": "Food products"
+  },
+  "bona-furtuna-north-america-l-l-c": {
+    "name": "Bona Furtuna",
+    "website": "https://bonafurtuna.com/",
+    "industry": "Food products"
+  },
+  "bragg-live-food-products-llc": {
+    "name": "Bragg Live Food Products, LLC.",
+    "website": "https://www.bragg.com/",
+    "industry": "Food products"
+  },
+  "boon-boona-coffee": {
+    "name": "Boon Boona Coffee",
+    "website": "https://www.boonboonacoffee.com",
+    "industry": "Beverages"
+  },
+  "boochcraft": {
+    "name": "Boochcraft",
+    "website": "https://boochcraft.com/",
+    "industry": "Beverages"
+  },
+  "build-it-boldly-llc": {
+    "name": "Build It Boldly LLC",
+    "website": "https://builditboldly.com/",
+    "industry": "Books or other media"
+  },
+  "boma-jewelry": {
+    "name": "Boma Jewelry",
+    "website": "https://www.bomajewelry.com/",
+    "industry": "Other retail sale"
+  },
+  "charlottes-web-holdings-inc": {
+    "name": "Charlotte's Web, Inc",
+    "website": "https://www.charlottesweb.com/",
+    "industry": "Agricultural Processing"
+  },
+  "causemedic": {
+    "name": "Causemedic",
+    "website": "https://causemedic.com/",
+    "industry": "Other/general wholesale trade"
+  },
+  "beehive-cheese-company-llc": {
+    "name": "Beehive Cheese Company, BLLC",
+    "website": "https://www.beehivecheese.com",
+    "industry": "Food products"
+  },
+  "one-home-brands-inc": {
+    "name": "Blueland",
+    "website": "https://www.blueland.com/",
+    "industry": "Cleaning products"
+  },
+  "chocolat-e-inc": {
+    "name": "Chocolat-e Inc",
+    "website": "https://chocolate.com/",
+    "industry": "Food products"
+  },
+  "butcher-box": {
+    "name": "ButcherBox",
+    "website": "https://www.butcherbox.com/",
+    "industry": "Food products"
+  },
+  "chosen-foods": {
+    "name": "Chosen Foods",
+    "website": "https://chosenfoods.com/",
+    "industry": "Food products"
+  },
+  "crosby-hop-farm-llc": {
+    "name": "Crosby Hops",
+    "website": "https://www.crosbyhops.com/",
+    "industry": "Agricultural Processing"
+  },
+  "cleobella-llc": {
+    "name": "Cleobella LLC",
+    "website": "https://cleobella.com/",
+    "industry": "Apparel"
+  },
+  "comet-skateboards": {
+    "name": "Comet Skateboards",
+    "website": "https://cometskateboards.com/",
+    "industry": "Sports goods"
+  },
+  "coast-of-maine-organic-products-inc": {
+    "name": "Coast of Maine Organic Products Inc.",
+    "website": "https://www.coastofmaine.com",
+    "industry": "Other manufacturing"
+  },
+  "cure-hydration": {
+    "name": "Cure Hydration",
+    "website": "https://www.curehydration.com/",
+    "industry": "Food products"
+  },
+  "counter-culture-coffee-inc": {
+    "name": "Counter Culture Coffee, Inc.",
+    "website": "https://www.counter.com/",
+    "industry": "Food products"
+  },
+  "dental-lace-inc": {
+    "name": "Dental Lace Inc",
+    "website": "https://www.dentallace.com/",
+    "industry": "Personal care products"
+  },
+  "definite-articles": {
+    "name": "Definite Articles",
+    "website": "https://definitearticles.com/",
+    "industry": "Apparel"
+  },
+  "devocion-usa": {
+    "name": "Devoci\u00f3n USA",
+    "website": "https://www.devocion.com",
+    "industry": "Food products"
+  },
+  "dogeared": {
+    "name": "Dogeared",
+    "website": "https://www.dogeared.com/",
+    "industry": "Jewelry & related articles"
+  },
+  "dropps": {
+    "name": "Dropps, PBC",
+    "website": "https://www.dropps.com/",
+    "industry": "Cleaning products"
+  },
+  "ecoplum": {
+    "name": "EcoPlum",
+    "website": "https://ecoplum.com/",
+    "industry": "General retail via Internet"
+  },
+  "eileen-fisher-inc": {
+    "name": "Eileen Fisher",
+    "website": "https://www.eileenfisher.org/",
+    "industry": "Apparel"
+  },
+  "dyper-inc": {
+    "name": "DYPER Inc.",
+    "website": "https://dyper.com/",
+    "industry": "Personal care products"
+  },
+  "curio-spice-co": {
+    "name": "Curio Spice Co.",
+    "website": "https://curiospice.com/",
+    "industry": "Food products"
+  },
+  "eco-packables-llc": {
+    "name": "EcoPackables LLC",
+    "website": "https://www.ecopackables.com/",
+    "industry": "Other/general wholesale trade"
+  },
+  "east-fork-pottery-l-l-c": {
+    "name": "East Fork Pottery LLC",
+    "website": "https://eastfork.com/",
+    "industry": "Other manufacturing"
+  },
+  "eco-bags-products": {
+    "name": "Eco-Bags Products",
+    "website": "https://www.ecobags.com/",
+    "industry": "Other/general wholesale trade"
+  },
+  "cotopaxi": {
+    "name": "Cotopaxi",
+    "website": "https://www.cotopaxi.com/",
+    "industry": "Apparel"
+  },
+  "colorado-threads": {
+    "name": "Colorado Threads",
+    "website": "https://coloradothreads.com/",
+    "industry": "Apparel"
+  },
+  "eo-products": {
+    "name": "EO Products",
+    "website": "https://www.eoproducts.com/",
+    "industry": "Personal care products"
+  },
+  "equator-coffees-teas-inc": {
+    "name": "Equator Coffees, LLC",
+    "website": "https://www.equatorcoffees.com",
+    "industry": "Food products"
+  },
+  "azurous-inc-dba-cabeau": {
+    "name": "Azurous, Inc. dba Cabeau",
+    "website": "https://www.cabeau.com",
+    "industry": "Personal care products"
+  },
+  "exponent-beauty-i-n-c": {
+    "name": "Exponent Beauty, INC",
+    "website": "https://exponentbeauty.com/",
+    "industry": "Personal care products"
+  },
+  "fervor-and-zeal-llc": {
+    "name": "Fervor and Zeal LLC",
+    "website": "https://fervorandzeal.com/",
+    "industry": "Apparel"
+  },
+  "four-objects-ltd": {
+    "name": "Four Objects Ltd",
+    "website": "https://fourobjects.com/",
+    "industry": "Apparel"
+  },
+  "good-worldwide-inc": {
+    "name": "GOOD Worldwide Inc.",
+    "website": "https://www.good.inc",
+    "industry": "Food products"
+  },
+  "flowers-dreams": {
+    "name": "Flowers for Dreams",
+    "website": "https://flowersfordreams.com/",
+    "industry": "Other retail sale"
+  },
+  "farm-ferments": {
+    "name": "Hawthorne Foods",
+    "website": "https://www.hawthornefoods.com/",
+    "industry": "Food products"
+  },
+  "earth-breeze-inc": {
+    "name": "Earth Breeze, Inc.",
+    "website": "https://earthbreeze.com/",
+    "industry": "Cleaning products"
+  },
+  "fiveadrift-llc": {
+    "name": "FiveADRIFT LLC",
+    "website": "https://fiveadrift.com/",
+    "industry": "Textiles"
+  },
+  "humanscale-corporation": {
+    "name": "Humanscale Corporation",
+    "website": "https://www.humanscale.com",
+    "industry": "Furniture"
+  },
+  "gifts-for-good": {
+    "name": "Gifts for Good",
+    "website": "https://www.giftsforgood.com/",
+    "industry": "Other retail sale"
+  },
+  "cloztalk": {
+    "name": "CLOZTALK",
+    "website": "https://cloztalk.com/",
+    "industry": "Apparel"
+  },
+  "ettitude-holdings-inc": {
+    "name": "Ettitude Holdings Inc",
+    "website": "https://www.ettitude.com/",
+    "industry": "Textiles"
+  },
+  "masienda": {
+    "name": "Masienda",
+    "website": "https://masienda.com/",
+    "industry": "Food products"
+  },
+  "nutricia-north-america": {
+    "name": "Nutricia North America",
+    "website": "https://www.nutricia.com/",
+    "industry": "Other manufacturing"
+  },
+  "prose": {
+    "name": "Prose",
+    "website": "https://prose.com/",
+    "industry": "Personal care products"
+  },
+  "fireclay-tile": {
+    "name": "Fireclay Tile",
+    "website": "https://www.fireclaytile.com/",
+    "industry": "Other manufacturing"
+  },
+  "real-thread": {
+    "name": "Real Thread",
+    "website": "https://www.realthread.com/",
+    "industry": "Printing & recorded media"
+  },
+  "sea-witch-botanicals": {
+    "name": "Sea Witch Botanicals",
+    "website": "https://www.sea.com/",
+    "industry": "Personal care products"
+  },
+  "sea-to-table": {
+    "name": "Sea to Table",
+    "website": "https://www.sea.com/",
+    "industry": "Food products"
+  },
+  "sea-k-organics-llc": {
+    "name": "SEA K ORGANICS, LLC",
+    "website": "https://www.sea.com/",
+    "industry": "Personal care products"
+  },
+  "tillamook-county-creamery-association": {
+    "name": "Tillamook County Creamery Association",
+    "website": "https://www.tillamook.com",
+    "industry": "Food products"
+  },
+  "tillak": {
+    "name": "Tillak",
+    "website": "https://tillak.com/",
+    "industry": "Apparel"
+  },
+  "dr-squatch-llc": {
+    "name": "Dr. Squatch, LLC",
+    "website": "https://www.drsquatch.com/",
+    "industry": "Personal care products"
+  }
+}
