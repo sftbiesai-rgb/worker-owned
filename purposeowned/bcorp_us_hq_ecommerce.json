@@ -14,7 +14,8 @@
     "name": "1338Tryon",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "1338tryon"
+    "slug": "1338tryon",
+    "website": "https://www.1338tryon.com/"
   },
   {
     "countries": [
@@ -33,7 +34,8 @@
     "name": "4ocean PBC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "4ocean-pbc"
+    "slug": "4ocean-pbc",
+    "website": "https://www.4ocean.com/"
   },
   {
     "countries": [
@@ -50,7 +52,8 @@
     "name": "686 Technical Apparel",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "686"
+    "slug": "686",
+    "website": "https://www.686.com/"
   },
   {
     "countries": [
@@ -68,7 +71,8 @@
     "name": "818 Spirits Inc",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "818-spirits-inc"
+    "slug": "818-spirits-inc",
+    "website": "https://www.818.com/"
   },
   {
     "countries": [
@@ -85,7 +89,8 @@
     "name": "Actus Nutrition",
     "sector": "Manufacturing",
     "size": "1000+",
-    "slug": "actus-nutrition"
+    "slug": "actus-nutrition",
+    "website": "https://actus.com/"
   },
   {
     "countries": [
@@ -119,7 +124,8 @@
     "name": "Adelsheim Vineyard",
     "sector": "Agriculture/Growers",
     "size": "10-49",
-    "slug": "adelsheim-vineyard"
+    "slug": "adelsheim-vineyard",
+    "website": "https://www.adelsheim.com/"
   },
   {
     "countries": [
@@ -138,7 +144,8 @@
     "name": "Adore Me",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "adore-me"
+    "slug": "adore-me",
+    "website": "https://www.adoreme.com/"
   },
   {
     "countries": [
@@ -155,7 +162,8 @@
     "name": "Alaska Glacial Essentials Skincare",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "alaska-glacial-mud-co"
+    "slug": "alaska-glacial-mud-co",
+    "website": null
   },
   {
     "countries": [
@@ -172,7 +180,8 @@
     "name": "Aldea Coffee",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "aldea-coffee"
+    "slug": "aldea-coffee",
+    "website": null
   },
   {
     "countries": [
@@ -190,7 +199,8 @@
     "name": "Alex Crane",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "alex-crane"
+    "slug": "alex-crane",
+    "website": "https://www.alex.com/"
   },
   {
     "countries": [
@@ -207,7 +217,8 @@
     "name": "All Good",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "all-good-elemental-herbs"
+    "slug": "all-good-elemental-herbs",
+    "website": "https://allgood.com/"
   },
   {
     "countries": [
@@ -224,7 +235,8 @@
     "name": "All Good Books LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "all-good-books-llc"
+    "slug": "all-good-books-llc",
+    "website": null
   },
   {
     "countries": [
@@ -241,7 +253,8 @@
     "name": "Allagash Brewing Company",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "allagash-brewing-company"
+    "slug": "allagash-brewing-company",
+    "website": null
   },
   {
     "countries": [
@@ -258,7 +271,8 @@
     "name": "Alliance Graphics",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "alliance-graphics"
+    "slug": "alliance-graphics",
+    "website": "https://www.alliancegraphics.com/"
   },
   {
     "countries": [
@@ -275,7 +289,8 @@
     "name": "Aloha",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "aloha"
+    "slug": "aloha",
+    "website": "https://aloha.com/"
   },
   {
     "countries": [
@@ -293,7 +308,8 @@
     "name": "Alp N Rock",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "alp-n-rock"
+    "slug": "alp-n-rock",
+    "website": "https://alpnrock.com/"
   },
   {
     "countries": [
@@ -312,7 +328,8 @@
     "name": "Alter Eco LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "alter-eco"
+    "slug": "alter-eco",
+    "website": "https://www.altereco.com/"
   },
   {
     "countries": [
@@ -343,7 +360,8 @@
     "name": "Altos Planos",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "altos-planos"
+    "slug": "altos-planos",
+    "website": null
   },
   {
     "countries": [
@@ -360,7 +378,8 @@
     "name": "ALWRLD Co.",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "alwrld"
+    "slug": "alwrld",
+    "website": "https://alwrld.com/"
   },
   {
     "countries": [
@@ -378,7 +397,8 @@
     "name": "Amasar",
     "sector": "Agriculture/Growers",
     "size": "1-9",
-    "slug": "amasar-llc"
+    "slug": "amasar-llc",
+    "website": null
   },
   {
     "countries": [
@@ -395,7 +415,8 @@
     "name": "Amavida Coffee and Trading Company",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "amavida-coffee-and-trading"
+    "slug": "amavida-coffee-and-trading",
+    "website": null
   },
   {
     "countries": [
@@ -412,7 +433,8 @@
     "name": "American Halal Company, PBC D/B/A Saffron Road Foods",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "american-halal-company-pbc-dba-saffron-road-foods"
+    "slug": "american-halal-company-pbc-dba-saffron-road-foods",
+    "website": null
   },
   {
     "countries": [
@@ -450,7 +472,8 @@
     "name": "Amika",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "amika"
+    "slug": "amika",
+    "website": "https://amika.co/"
   },
   {
     "countries": [
@@ -471,7 +494,8 @@
     "name": "Amy's Kitchen",
     "sector": "Manufacturing",
     "size": "1000+",
-    "slug": "amys-kitchen"
+    "slug": "amys-kitchen",
+    "website": "https://www.amys.com/"
   },
   {
     "countries": [
@@ -488,7 +512,8 @@
     "name": "Anji Mountain",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "anji-mountain"
+    "slug": "anji-mountain",
+    "website": "https://anjimountain.com/"
   },
   {
     "countries": [
@@ -505,7 +530,8 @@
     "name": "Another Tomorrow Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "another-tomorrow-inc"
+    "slug": "another-tomorrow-inc",
+    "website": "https://www.anothertomorrow.com/"
   },
   {
     "countries": [
@@ -522,7 +548,8 @@
     "name": "Apolis Holdings LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "apolis-holdings-llc"
+    "slug": "apolis-holdings-llc",
+    "website": null
   },
   {
     "countries": [
@@ -542,7 +569,8 @@
     "name": "Arbonne",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "arbonne"
+    "slug": "arbonne",
+    "website": null
   },
   {
     "countries": [
@@ -559,7 +587,8 @@
     "name": "Aslan Brewing Company",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "aslan-brewing-company"
+    "slug": "aslan-brewing-company",
+    "website": "http://aslan.com/"
   },
   {
     "countries": [
@@ -576,7 +605,8 @@
     "name": "Atelier Jolie Lifestyle, Inc.",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "atelier-jolie-lifestyle-inc"
+    "slug": "atelier-jolie-lifestyle-inc",
+    "website": null
   },
   {
     "countries": [
@@ -594,7 +624,8 @@
     "name": "Athleta, Inc.",
     "sector": "Wholesale/Retail",
     "size": "1000+",
-    "slug": "athleta"
+    "slug": "athleta",
+    "website": "https://athleta.gap.com/?cookieInitializationAttempted=true"
   },
   {
     "countries": [
@@ -615,7 +646,8 @@
     "name": "Athletic Brewing Holding Company, LLC",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "athletic-brewing-company"
+    "slug": "athletic-brewing-company",
+    "website": null
   },
   {
     "countries": [
@@ -632,7 +664,8 @@
     "name": "Attn: Grace, Inc",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "attn-grace-inc"
+    "slug": "attn-grace-inc",
+    "website": "https://attngrace.com/"
   },
   {
     "countries": [
@@ -649,7 +682,8 @@
     "name": "Aveda Corporation",
     "sector": "Manufacturing",
     "size": "1000+",
-    "slug": "aveda-corporation"
+    "slug": "aveda-corporation",
+    "website": null
   },
   {
     "countries": [
@@ -667,7 +701,8 @@
     "name": "Avocado Green Brands",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "avocado-green-brands"
+    "slug": "avocado-green-brands",
+    "website": "https://www.avocadogreenmattress.com/"
   },
   {
     "countries": [
@@ -684,7 +719,8 @@
     "name": "Azurous, Inc. dba Cabeau",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "azurous-inc-dba-cabeau"
+    "slug": "azurous-inc-dba-cabeau",
+    "website": null
   },
   {
     "countries": [
@@ -701,7 +737,8 @@
     "name": "Backyard Beans Coffee Company",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "backyard-beans-coffee-company"
+    "slug": "backyard-beans-coffee-company",
+    "website": null
   },
   {
     "countries": [
@@ -721,7 +758,8 @@
     "name": "bambu",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "bambu"
+    "slug": "bambu",
+    "website": "https://bambu.com/"
   },
   {
     "countries": [
@@ -739,7 +777,8 @@
     "name": "Barnana",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "barnana"
+    "slug": "barnana",
+    "website": "https://barnana.com/"
   },
   {
     "countries": [
@@ -756,7 +795,8 @@
     "name": "Barvecue",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "barvecue"
+    "slug": "barvecue",
+    "website": "https://barvecue.com/"
   },
   {
     "countries": [
@@ -773,7 +813,8 @@
     "name": "Bear Lake Coffee Company, LLC",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "bear-lake-coffee-company-llc"
+    "slug": "bear-lake-coffee-company-llc",
+    "website": null
   },
   {
     "countries": [
@@ -790,7 +831,8 @@
     "name": "Bee Squared Apiaries",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "bee-squared-apiaries"
+    "slug": "bee-squared-apiaries",
+    "website": "https://beesquaredapiaries.com/"
   },
   {
     "countries": [
@@ -807,7 +849,8 @@
     "name": "Beehive Cheese Company, BLLC",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "beehive-cheese-company-llc"
+    "slug": "beehive-cheese-company-llc",
+    "website": null
   },
   {
     "countries": [
@@ -824,7 +867,8 @@
     "name": "BEE'S WRAP",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "bees-wrap"
+    "slug": "bees-wrap",
+    "website": "https://www.beeswrap.com/"
   },
   {
     "countries": [
@@ -841,7 +885,8 @@
     "name": "Ben & Jerry's Homemade, Inc.",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "ben-and-jerrys"
+    "slug": "ben-and-jerrys",
+    "website": "http://ben.com/"
   },
   {
     "countries": [
@@ -858,7 +903,8 @@
     "name": "Berkshire Cider Project",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "berkshire-cider-project"
+    "slug": "berkshire-cider-project",
+    "website": "https://www.berkshire-cider.com/"
   },
   {
     "countries": [
@@ -875,7 +921,8 @@
     "name": "better. by BlueStar (BlueStar Marketing)",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "blue-star-marketing"
+    "slug": "blue-star-marketing",
+    "website": "https://www.betterbybluestar.com/"
   },
   {
     "countries": [
@@ -892,7 +939,8 @@
     "name": "Better Earth",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "better-earth"
+    "slug": "better-earth",
+    "website": "https://www.betterearth.com/"
   },
   {
     "countries": [
@@ -914,7 +962,8 @@
     "name": "Better World Books",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "better-world-books"
+    "slug": "better-world-books",
+    "website": "https://better.com/"
   },
   {
     "countries": [
@@ -931,7 +980,8 @@
     "name": "Big Spoon Roasters",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "big-spoon-roasters"
+    "slug": "big-spoon-roasters",
+    "website": "https://bigspoonroasters.com/"
   },
   {
     "countries": [
@@ -948,7 +998,8 @@
     "name": "Bigelow Tea",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "bigelow-tea"
+    "slug": "bigelow-tea",
+    "website": "https://www.bigelowtea.com/"
   },
   {
     "countries": [
@@ -965,7 +1016,8 @@
     "name": "Bioforce USA",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "bioforce-usa"
+    "slug": "bioforce-usa",
+    "website": null
   },
   {
     "countries": [
@@ -982,7 +1034,8 @@
     "name": "Biotic Brands, SPC",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "biotic-brands-s-p-c"
+    "slug": "biotic-brands-s-p-c",
+    "website": "https://biotic.com/"
   },
   {
     "countries": [
@@ -999,7 +1052,8 @@
     "name": "Bi-Rite Market",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "bi-rite-market"
+    "slug": "bi-rite-market",
+    "website": "https://biritemarket.com/"
   },
   {
     "countries": [
@@ -1016,7 +1070,8 @@
     "name": "Blending For Good",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "blending-for-good"
+    "slug": "blending-for-good",
+    "website": "https://blending.com/"
   },
   {
     "countries": [
@@ -1033,7 +1088,8 @@
     "name": "BLK & Bold, LLC",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "blk-bold-specialty-beverages"
+    "slug": "blk-bold-specialty-beverages",
+    "website": "https://blk.com/"
   },
   {
     "countries": [
@@ -1050,7 +1106,8 @@
     "name": "Blue Beautifly",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "blue-beautifly-llc"
+    "slug": "blue-beautifly-llc",
+    "website": "https://www.bluebeautifly.com/"
   },
   {
     "countries": [
@@ -1067,7 +1124,8 @@
     "name": "Blue Earth Compost, Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "blue-earth-compost-inc"
+    "slug": "blue-earth-compost-inc",
+    "website": null
   },
   {
     "countries": [
@@ -1084,7 +1142,8 @@
     "name": "Bluebird Botanicals",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "bluebird-botanicals"
+    "slug": "bluebird-botanicals",
+    "website": "https://bluebirdbotanicals.com/"
   },
   {
     "countries": [
@@ -1101,7 +1160,8 @@
     "name": "Blueland",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "one-home-brands-inc"
+    "slug": "one-home-brands-inc",
+    "website": "https://www.blueland.com/"
   },
   {
     "countries": [
@@ -1118,7 +1178,8 @@
     "name": "Boma Jewelry",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "boma-jewelry"
+    "slug": "boma-jewelry",
+    "website": "https://www.bomajewelry.com/"
   },
   {
     "countries": [
@@ -1135,7 +1196,8 @@
     "name": "Bombas LLC",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "bombas"
+    "slug": "bombas",
+    "website": "https://bombas.com/"
   },
   {
     "countries": [
@@ -1152,7 +1214,8 @@
     "name": "Bona Furtuna",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "bona-furtuna-north-america-l-l-c"
+    "slug": "bona-furtuna-north-america-l-l-c",
+    "website": "https://bonafurtuna.com/"
   },
   {
     "countries": [
@@ -1169,7 +1232,8 @@
     "name": "Bonduelle Americas US",
     "sector": "Manufacturing",
     "size": "1000+",
-    "slug": "ready-pac-foods-inc"
+    "slug": "ready-pac-foods-inc",
+    "website": "https://bonduelleamericas.com/"
   },
   {
     "countries": [
@@ -1186,7 +1250,8 @@
     "name": "Bonterra Organic Estates",
     "sector": "Agriculture/Growers",
     "size": "50-249",
-    "slug": "fetzer-vineyards"
+    "slug": "fetzer-vineyards",
+    "website": "https://www.bonterra.com/"
   },
   {
     "countries": [
@@ -1203,7 +1268,8 @@
     "name": "Boochcraft",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "boochcraft"
+    "slug": "boochcraft",
+    "website": "https://boochcraft.com/"
   },
   {
     "countries": [
@@ -1220,7 +1286,8 @@
     "name": "Boon Boona Coffee",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "boon-boona-coffee"
+    "slug": "boon-boona-coffee",
+    "website": null
   },
   {
     "countries": [
@@ -1237,7 +1304,8 @@
     "name": "Bragg Live Food Products, LLC.",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "bragg-live-food-products-llc"
+    "slug": "bragg-live-food-products-llc",
+    "website": "https://www.bragg.com/"
   },
   {
     "countries": [
@@ -1254,7 +1322,8 @@
     "name": "Brand Fuel",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "brand-fuel"
+    "slug": "brand-fuel",
+    "website": "https://brand-fuel.com/"
   },
   {
     "countries": [
@@ -1271,7 +1340,8 @@
     "name": "brehd",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "brehd"
+    "slug": "brehd",
+    "website": "https://www.brehd.com/password"
   },
   {
     "countries": [
@@ -1288,7 +1358,8 @@
     "name": "Brew Dr. Kombucha",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "brew-dr-kombucha"
+    "slug": "brew-dr-kombucha",
+    "website": "https://www.brewdrkombucha.com/"
   },
   {
     "countries": [
@@ -1305,7 +1376,8 @@
     "name": "Bridgetown Natural Foods",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "bridgetown-natural-foods"
+    "slug": "bridgetown-natural-foods",
+    "website": "https://www.bridgetownnaturalfoods.com/"
   },
   {
     "countries": [
@@ -1322,7 +1394,8 @@
     "name": "Build It Boldly LLC",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "build-it-boldly-llc"
+    "slug": "build-it-boldly-llc",
+    "website": "https://builditboldly.com/"
   },
   {
     "countries": [
@@ -1339,7 +1412,8 @@
     "name": "ButcherBox",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "butcher-box"
+    "slug": "butcher-box",
+    "website": "https://www.butcherbox.com/"
   },
   {
     "countries": [
@@ -1356,7 +1430,8 @@
     "name": "Cabot Creamery Cooperative",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "cabot-creamery-co-operative"
+    "slug": "cabot-creamery-co-operative",
+    "website": "https://cabot.com/"
   },
   {
     "countries": [
@@ -1373,7 +1448,8 @@
     "name": "Cafe Campesino and Sweetwater Organic Coffee",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "cafe-campesino-and-sweetwater-organic-coffee"
+    "slug": "cafe-campesino-and-sweetwater-organic-coffee",
+    "website": "https://cafe.com/"
   },
   {
     "countries": [
@@ -1393,7 +1469,8 @@
     "name": "Cafe Imports Fulfillment LLC",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "cafe-imports"
+    "slug": "cafe-imports",
+    "website": "https://cafe.com/"
   },
   {
     "countries": [
@@ -1410,7 +1487,8 @@
     "name": "California Naturals Inc.",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "california-naturals-inc"
+    "slug": "california-naturals-inc",
+    "website": "https://www.california-naturals.com/"
   },
   {
     "countries": [
@@ -1427,7 +1505,8 @@
     "name": "Canary LLC (Canary Marketing)",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "canary-llc-dba-canary-marketing"
+    "slug": "canary-llc-dba-canary-marketing",
+    "website": "https://canary.com/"
   },
   {
     "countries": [
@@ -1446,7 +1525,8 @@
     "name": "Carhartt, Inc.",
     "sector": "Wholesale/Retail",
     "size": "1000+",
-    "slug": "carhartt-inc-developed-market"
+    "slug": "carhartt-inc-developed-market",
+    "website": null
   },
   {
     "countries": [
@@ -1477,7 +1557,8 @@
     "name": "Cariloha",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "cariloha"
+    "slug": "cariloha",
+    "website": "https://www.cariloha.com/"
   },
   {
     "countries": [
@@ -1494,7 +1575,8 @@
     "name": "Carnegie Fabrics LLC",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "carnegie-fabrics-llc"
+    "slug": "carnegie-fabrics-llc",
+    "website": "https://carnegiefabrics.com/"
   },
   {
     "countries": [
@@ -1511,7 +1593,8 @@
     "name": "CARTOGRAPH WINES",
     "sector": "Agriculture/Growers",
     "size": "1-9",
-    "slug": "cartograph-wines"
+    "slug": "cartograph-wines",
+    "website": null
   },
   {
     "countries": [
@@ -1528,7 +1611,8 @@
     "name": "Causemedic",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "causemedic"
+    "slug": "causemedic",
+    "website": "https://causemedic.com/"
   },
   {
     "countries": [
@@ -1545,7 +1629,8 @@
     "name": "Chabaso Bakery",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "chabaso-bakery"
+    "slug": "chabaso-bakery",
+    "website": "https://www.chabaso.com/"
   },
   {
     "countries": [
@@ -1562,7 +1647,8 @@
     "name": "Champlain Chocolate Company",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "lake-champlain-chocolates"
+    "slug": "lake-champlain-chocolates",
+    "website": "https://champlain.com/"
   },
   {
     "countries": [
@@ -1580,7 +1666,8 @@
     "name": "Charlotte's Web, Inc",
     "sector": "Agriculture/Growers",
     "size": "50-249",
-    "slug": "charlottes-web-holdings-inc"
+    "slug": "charlottes-web-holdings-inc",
+    "website": "https://www.charlottesweb.com/"
   },
   {
     "countries": [
@@ -1597,7 +1684,8 @@
     "name": "Chehalem Winery",
     "sector": "Agriculture/Growers",
     "size": "1-9",
-    "slug": "chehalem-winery"
+    "slug": "chehalem-winery",
+    "website": "https://chehalem.com/"
   },
   {
     "countries": [
@@ -1614,7 +1702,8 @@
     "name": "ChicoBag & To-Go Ware",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "chicobag-company"
+    "slug": "chicobag-company",
+    "website": "https://www.chicobag.com/"
   },
   {
     "countries": [
@@ -1631,7 +1720,8 @@
     "name": "Chocolat-e Inc",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "chocolat-e-inc"
+    "slug": "chocolat-e-inc",
+    "website": "https://chocolate.com/"
   },
   {
     "countries": [
@@ -1648,7 +1738,8 @@
     "name": "CHOMPS",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "chomps"
+    "slug": "chomps",
+    "website": "https://chomps.com/"
   },
   {
     "countries": [
@@ -1665,7 +1756,8 @@
     "name": "Chook Chicken",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "chook-chicken"
+    "slug": "chook-chicken",
+    "website": "https://www.chook.com/"
   },
   {
     "countries": [
@@ -1684,7 +1776,8 @@
     "name": "Chosen Foods",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "chosen-foods"
+    "slug": "chosen-foods",
+    "website": "https://chosenfoods.com/"
   },
   {
     "countries": [
@@ -1704,7 +1797,8 @@
     "name": "Chroma Technology Corp",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "chroma-technology-corp"
+    "slug": "chroma-technology-corp",
+    "website": "https://www.chroma.com/"
   },
   {
     "countries": [
@@ -1721,7 +1815,8 @@
     "name": "Circle",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "circle"
+    "slug": "circle",
+    "website": "https://www.circle.com/"
   },
   {
     "countries": [
@@ -1738,7 +1833,8 @@
     "name": "City Apparel + Merch",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "city-apparel"
+    "slug": "city-apparel",
+    "website": "https://cityapparel.net"
   },
   {
     "countries": [
@@ -1755,7 +1851,8 @@
     "name": "Cleobella LLC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "cleobella-llc"
+    "slug": "cleobella-llc",
+    "website": "https://cleobella.com/"
   },
   {
     "countries": [
@@ -1772,7 +1869,8 @@
     "name": "Clover Sonoma",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "clover-sonoma"
+    "slug": "clover-sonoma",
+    "website": "https://cloversonoma.com/"
   },
   {
     "countries": [
@@ -1789,7 +1887,8 @@
     "name": "CLOZTALK",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "cloztalk"
+    "slug": "cloztalk",
+    "website": "https://cloztalk.com/"
   },
   {
     "countries": [
@@ -1806,7 +1905,8 @@
     "name": "Co North, Inc.",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "natural-force-benefit-co"
+    "slug": "natural-force-benefit-co",
+    "website": "https://www.conorth.com/"
   },
   {
     "countries": [
@@ -1823,7 +1923,8 @@
     "name": "Coast of Maine Organic Products Inc.",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "coast-of-maine-organic-products-inc"
+    "slug": "coast-of-maine-organic-products-inc",
+    "website": null
   },
   {
     "countries": [
@@ -1840,7 +1941,8 @@
     "name": "Colorado Threads",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "colorado-threads"
+    "slug": "colorado-threads",
+    "website": "https://coloradothreads.com/"
   },
   {
     "countries": [
@@ -1857,7 +1959,8 @@
     "name": "Comet Skateboards",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "comet-skateboards"
+    "slug": "comet-skateboards",
+    "website": "https://cometskateboards.com/"
   },
   {
     "countries": [
@@ -1874,7 +1977,8 @@
     "name": "COMMUNAUT\u00c9 LTD. dba D\u00d4EN",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "communaut-ltd"
+    "slug": "communaut-ltd",
+    "website": "https://communaut.com/"
   },
   {
     "countries": [
@@ -1891,7 +1995,8 @@
     "name": "Cooperative Coffees, Inc",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "cooperative-coffees-inc"
+    "slug": "cooperative-coffees-inc",
+    "website": null
   },
   {
     "countries": [
@@ -1911,7 +2016,8 @@
     "name": "Coop's",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "greylock-enterprises-inc"
+    "slug": "greylock-enterprises-inc",
+    "website": "https://www.coop-s.com/"
   },
   {
     "countries": [
@@ -1928,7 +2034,8 @@
     "name": "Cora",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "lyv-life-inc"
+    "slug": "lyv-life-inc",
+    "website": "https://cora.com/"
   },
   {
     "countries": [
@@ -1947,7 +2054,8 @@
     "name": "Coradorables Sustainable Corporation",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "coradorablesllc"
+    "slug": "coradorablesllc",
+    "website": "https://coradorables.com/"
   },
   {
     "countries": [
@@ -1964,7 +2072,8 @@
     "name": "Cotopaxi",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "cotopaxi"
+    "slug": "cotopaxi",
+    "website": "https://www.cotopaxi.com/"
   },
   {
     "countries": [
@@ -1981,7 +2090,8 @@
     "name": "Counter Culture Coffee, Inc.",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "counter-culture-coffee-inc"
+    "slug": "counter-culture-coffee-inc",
+    "website": "https://www.counter.com/"
   },
   {
     "countries": [
@@ -1998,7 +2108,8 @@
     "name": "Country Life LLC",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "country-life-llc"
+    "slug": "country-life-llc",
+    "website": null
   },
   {
     "countries": [
@@ -2016,7 +2127,8 @@
     "name": "Crosby Hops",
     "sector": "Agriculture/Growers",
     "size": "50-249",
-    "slug": "crosby-hop-farm-llc"
+    "slug": "crosby-hop-farm-llc",
+    "website": "https://www.crosbyhops.com/"
   },
   {
     "countries": [
@@ -2033,7 +2145,8 @@
     "name": "Cure Hydration",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "cure-hydration"
+    "slug": "cure-hydration",
+    "website": "https://www.curehydration.com/"
   },
   {
     "countries": [
@@ -2050,7 +2163,8 @@
     "name": "Curio Spice Co.",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "curio-spice-co"
+    "slug": "curio-spice-co",
+    "website": "https://curiospice.com/"
   },
   {
     "countries": [
@@ -2067,7 +2181,8 @@
     "name": "Danone USA PBC",
     "sector": "Manufacturing",
     "size": "1000+",
-    "slug": "danone-north-america"
+    "slug": "danone-north-america",
+    "website": "https://www.danone.com/"
   },
   {
     "countries": [
@@ -2084,7 +2199,8 @@
     "name": "Danone Waters of America, Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "danone-waters-of-america-inc"
+    "slug": "danone-waters-of-america-inc",
+    "website": "https://www.danone.com/"
   },
   {
     "countries": [
@@ -2101,7 +2217,8 @@
     "name": "Davis Veterinary Medical Consulting, Inc.",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "balance-it"
+    "slug": "balance-it",
+    "website": null
   },
   {
     "countries": [
@@ -2118,7 +2235,8 @@
     "name": "Definite Articles",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "definite-articles"
+    "slug": "definite-articles",
+    "website": "https://definitearticles.com/"
   },
   {
     "countries": [
@@ -2135,7 +2253,8 @@
     "name": "Dental Lace Inc",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "dental-lace-inc"
+    "slug": "dental-lace-inc",
+    "website": "https://www.dentallace.com/"
   },
   {
     "countries": [
@@ -2152,7 +2271,8 @@
     "name": "Descalza LLC",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "descalza-llc"
+    "slug": "descalza-llc",
+    "website": "https://descalza.com/"
   },
   {
     "countries": [
@@ -2169,7 +2289,8 @@
     "name": "Devil's Foot Beverage, LLC",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "devils-foot-beverage-llc"
+    "slug": "devils-foot-beverage-llc",
+    "website": "https://devils.com/"
   },
   {
     "countries": [
@@ -2187,7 +2308,8 @@
     "name": "Devoci\u00f3n USA",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "devocion-usa"
+    "slug": "devocion-usa",
+    "website": null
   },
   {
     "countries": [
@@ -2204,7 +2326,8 @@
     "name": "Dogeared",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "dogeared"
+    "slug": "dogeared",
+    "website": "https://www.dogeared.com/"
   },
   {
     "countries": [
@@ -2221,7 +2344,8 @@
     "name": "Doorman",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "doorman"
+    "slug": "doorman",
+    "website": "https://doorman.com/"
   },
   {
     "countries": [
@@ -2238,7 +2362,8 @@
     "name": "Dr. Squatch, LLC",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "dr-squatch-llc"
+    "slug": "dr-squatch-llc",
+    "website": "https://www.drsquatch.com/"
   },
   {
     "countries": [
@@ -2255,7 +2380,8 @@
     "name": "Dropps, PBC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "dropps"
+    "slug": "dropps",
+    "website": "https://www.dropps.com/"
   },
   {
     "countries": [
@@ -2273,7 +2399,8 @@
     "name": "DVAA LLC",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "dvaa"
+    "slug": "dvaa",
+    "website": "https://dvaa.com/"
   },
   {
     "countries": [
@@ -2290,7 +2417,8 @@
     "name": "DYPER Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "dyper-inc"
+    "slug": "dyper-inc",
+    "website": "https://dyper.com/"
   },
   {
     "countries": [
@@ -2315,7 +2443,8 @@
     "name": "Earth Animal Ventures, Inc",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "earth-animal"
+    "slug": "earth-animal",
+    "website": "https://www.earth.com/"
   },
   {
     "countries": [
@@ -2333,7 +2462,8 @@
     "name": "Earth Breeze, Inc.",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "earth-breeze-inc"
+    "slug": "earth-breeze-inc",
+    "website": "https://earthbreeze.com/"
   },
   {
     "countries": [
@@ -2350,7 +2480,8 @@
     "name": "Earth Swag, The White Lotus Life LLC",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "the-white-lotus-life-llc"
+    "slug": "the-white-lotus-life-llc",
+    "website": "https://www.earth.com/"
   },
   {
     "countries": [
@@ -2367,7 +2498,8 @@
     "name": "East Fork Pottery LLC",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "east-fork-pottery-l-l-c"
+    "slug": "east-fork-pottery-l-l-c",
+    "website": "https://eastfork.com/"
   },
   {
     "countries": [
@@ -2384,7 +2516,8 @@
     "name": "East West Tea Co. LLC",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "yogi-tea-us"
+    "slug": "yogi-tea-us",
+    "website": null
   },
   {
     "countries": [
@@ -2401,7 +2534,8 @@
     "name": "Eco Lips, Inc.",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "eco-lips-inc"
+    "slug": "eco-lips-inc",
+    "website": "https://ecolips.com/"
   },
   {
     "countries": [
@@ -2418,7 +2552,8 @@
     "name": "Eco-Bags Products",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "eco-bags-products"
+    "slug": "eco-bags-products",
+    "website": "https://www.ecobags.com/"
   },
   {
     "countries": [
@@ -2435,7 +2570,8 @@
     "name": "EcoLogic Solutions Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "ecologic-solutions-inc"
+    "slug": "ecologic-solutions-inc",
+    "website": "https://www.ecologicsolutions.com/"
   },
   {
     "countries": [
@@ -2456,7 +2592,8 @@
     "name": "EcoPackables LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "eco-packables-llc"
+    "slug": "eco-packables-llc",
+    "website": "https://www.ecopackables.com/"
   },
   {
     "countries": [
@@ -2473,7 +2610,8 @@
     "name": "EcoPlum",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "ecoplum"
+    "slug": "ecoplum",
+    "website": "https://ecoplum.com/"
   },
   {
     "countries": [
@@ -2490,7 +2628,8 @@
     "name": "Eco-Products, PBC",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "eco-products-inc"
+    "slug": "eco-products-inc",
+    "website": "https://ecoproducts.com/"
   },
   {
     "countries": [
@@ -2507,7 +2646,8 @@
     "name": "Ecoslay, LLC",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "ecoslay"
+    "slug": "ecoslay",
+    "website": "https://ecoslay.com/"
   },
   {
     "countries": [
@@ -2524,7 +2664,8 @@
     "name": "Ecosmith Recyclers Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "ecosmith-recyclers-inc"
+    "slug": "ecosmith-recyclers-inc",
+    "website": "https://ecosmithrecyclers.com/"
   },
   {
     "countries": [
@@ -2542,7 +2683,8 @@
     "name": "Eddy Aesthetic",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "eddy-aesthetic"
+    "slug": "eddy-aesthetic",
+    "website": "https://eddy.com/"
   },
   {
     "countries": [
@@ -2560,7 +2702,8 @@
     "name": "eightbillion.com LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "eight-billion-stories-ltd"
+    "slug": "eight-billion-stories-ltd",
+    "website": null
   },
   {
     "countries": [
@@ -2578,7 +2721,8 @@
     "name": "Eileen Fisher",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "eileen-fisher-inc"
+    "slug": "eileen-fisher-inc",
+    "website": null
   },
   {
     "countries": [
@@ -2595,7 +2739,8 @@
     "name": "Eldorado Artesian Springs, Inc.",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "eldorado-artesian-springs-inc"
+    "slug": "eldorado-artesian-springs-inc",
+    "website": null
   },
   {
     "countries": [
@@ -2613,7 +2758,8 @@
     "name": "Eleeo Brands",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "eleeo-brands"
+    "slug": "eleeo-brands",
+    "website": "http://eleeo.com/"
   },
   {
     "countries": [
@@ -2630,7 +2776,8 @@
     "name": "Elk Cove Vineyards",
     "sector": "Agriculture/Growers",
     "size": "10-49",
-    "slug": "elk-cove-vineyards"
+    "slug": "elk-cove-vineyards",
+    "website": null
   },
   {
     "countries": [
@@ -2647,7 +2794,8 @@
     "name": "Enroot Organics PBC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "enroot-organics-p-b-c"
+    "slug": "enroot-organics-p-b-c",
+    "website": "https://enrootorganics.com/"
   },
   {
     "countries": [
@@ -2664,7 +2812,8 @@
     "name": "EO Products",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "eo-products"
+    "slug": "eo-products",
+    "website": "https://www.eoproducts.com/"
   },
   {
     "countries": [
@@ -2681,7 +2830,8 @@
     "name": "Equator Coffees, LLC",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "equator-coffees-teas-inc"
+    "slug": "equator-coffees-teas-inc",
+    "website": null
   },
   {
     "countries": [
@@ -2698,7 +2848,8 @@
     "name": "Erbaviva",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "erbaviva"
+    "slug": "erbaviva",
+    "website": "https://erbaviva.com/"
   },
   {
     "countries": [
@@ -2715,7 +2866,8 @@
     "name": "Erewhon",
     "sector": "Wholesale/Retail",
     "size": "1000+",
-    "slug": "erewhon"
+    "slug": "erewhon",
+    "website": null
   },
   {
     "countries": [
@@ -2734,7 +2886,8 @@
     "name": "ESG Luxury LLC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "esg-luxury-llc"
+    "slug": "esg-luxury-llc",
+    "website": "https://www.esg-luxury.com/"
   },
   {
     "countries": [
@@ -2751,7 +2904,8 @@
     "name": "Essential Oxygen",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "essential-oxygen"
+    "slug": "essential-oxygen",
+    "website": "https://essentialoxygen.com/"
   },
   {
     "countries": [
@@ -2768,7 +2922,8 @@
     "name": "Et Fille Wines",
     "sector": "Agriculture/Growers",
     "size": "1-9",
-    "slug": "et-fille-wines"
+    "slug": "et-fille-wines",
+    "website": "https://www.etfillewines.com/"
   },
   {
     "countries": [
@@ -2785,7 +2940,8 @@
     "name": "Ethanology LLC",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "ethanology-distillation"
+    "slug": "ethanology-distillation",
+    "website": "https://ethanology.com/"
   },
   {
     "countries": [
@@ -2802,7 +2958,8 @@
     "name": "Ethos Santa Cruz",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "ethos-santa-cruz"
+    "slug": "ethos-santa-cruz",
+    "website": "https://www.ethos.com/"
   },
   {
     "countries": [
@@ -2820,7 +2977,8 @@
     "name": "Ettitude Holdings Inc",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "ettitude-holdings-inc"
+    "slug": "ettitude-holdings-inc",
+    "website": "https://www.ettitude.com/"
   },
   {
     "countries": [
@@ -2837,7 +2995,8 @@
     "name": "Eva-NYC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "eva-nyc"
+    "slug": "eva-nyc",
+    "website": "https://eva-nyc.com/"
   },
   {
     "countries": [
@@ -2854,7 +3013,8 @@
     "name": "Evermore Pet Food, Inc.",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "evermore-pet-food-inc"
+    "slug": "evermore-pet-food-inc",
+    "website": "https://evermorepetfood.com/"
   },
   {
     "countries": [
@@ -2871,7 +3031,8 @@
     "name": "Every Man Jack",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "every-man-jack"
+    "slug": "every-man-jack",
+    "website": "https://www.everymanjack.com/"
   },
   {
     "countries": [
@@ -2891,7 +3052,8 @@
     "name": "Excel Packaging, Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "excel-packaging-inc"
+    "slug": "excel-packaging-inc",
+    "website": "https://excelpackaging.com/"
   },
   {
     "countries": [
@@ -2908,7 +3070,8 @@
     "name": "Explorer Cold Brew",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "explorer-cold-brew"
+    "slug": "explorer-cold-brew",
+    "website": null
   },
   {
     "countries": [
@@ -2925,7 +3088,8 @@
     "name": "Exponent Beauty, INC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "exponent-beauty-i-n-c"
+    "slug": "exponent-beauty-i-n-c",
+    "website": "https://exponentbeauty.com/"
   },
   {
     "countries": [
@@ -2942,7 +3106,8 @@
     "name": "ExquisiteCrystals.com LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "exquisite-crystalscom-llc"
+    "slug": "exquisite-crystalscom-llc",
+    "website": null
   },
   {
     "countries": [
@@ -2959,7 +3124,8 @@
     "name": "FACT Design, LLC",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "fact-design-llc"
+    "slug": "fact-design-llc",
+    "website": "https://factdesign.nl/"
   },
   {
     "countries": [
@@ -2976,7 +3142,8 @@
     "name": "Faherty Brand LLC",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "faherty-brand-llc"
+    "slug": "faherty-brand-llc",
+    "website": "https://fahertybrand.com/"
   },
   {
     "countries": [
@@ -2993,7 +3160,8 @@
     "name": "Fair Harbor",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "fair-harbor"
+    "slug": "fair-harbor",
+    "website": "https://www.fair.com/"
   },
   {
     "countries": [
@@ -3010,7 +3178,8 @@
     "name": "FAST PENNY SPIRITS",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "fast-penny-spirits"
+    "slug": "fast-penny-spirits",
+    "website": "https://www.fastpennyspirits.com/"
   },
   {
     "countries": [
@@ -3027,7 +3196,8 @@
     "name": "Fervor and Zeal LLC",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "fervor-and-zeal-llc"
+    "slug": "fervor-and-zeal-llc",
+    "website": "https://fervorandzeal.com/"
   },
   {
     "countries": [
@@ -3044,7 +3214,8 @@
     "name": "Fire Lily Coffee",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "exilior-coffee"
+    "slug": "exilior-coffee",
+    "website": "https://www.fire.com/"
   },
   {
     "countries": [
@@ -3061,7 +3232,8 @@
     "name": "Fireclay Tile",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "fireclay-tile"
+    "slug": "fireclay-tile",
+    "website": "https://www.fireclaytile.com/"
   },
   {
     "countries": [
@@ -3078,7 +3250,8 @@
     "name": "Firsthand Foods",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "firsthand-foods"
+    "slug": "firsthand-foods",
+    "website": null
   },
   {
     "countries": [
@@ -3095,7 +3268,8 @@
     "name": "Fishpond Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "fishpond-inc"
+    "slug": "fishpond-inc",
+    "website": "https://www.fishpond.com:443/"
   },
   {
     "countries": [
@@ -3112,7 +3286,8 @@
     "name": "fitppl",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "fitppl"
+    "slug": "fitppl",
+    "website": "https://fitppl.com/"
   },
   {
     "countries": [
@@ -3129,7 +3304,8 @@
     "name": "FiveADRIFT LLC",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "fiveadrift-llc"
+    "slug": "fiveadrift-llc",
+    "website": "https://fiveadrift.com/"
   },
   {
     "countries": [
@@ -3146,7 +3322,8 @@
     "name": "Flowers for Dreams",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "flowers-dreams"
+    "slug": "flowers-dreams",
+    "website": "https://flowersfordreams.com/"
   },
   {
     "countries": [
@@ -3163,7 +3340,8 @@
     "name": "Fly By Jing",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "fly-by-jing"
+    "slug": "fly-by-jing",
+    "website": "https://flybyjing.com/"
   },
   {
     "countries": [
@@ -3180,7 +3358,8 @@
     "name": "Food Huggers Inc",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "food-huggers-inc"
+    "slug": "food-huggers-inc",
+    "website": "https://foodhuggers.com/"
   },
   {
     "countries": [
@@ -3197,7 +3376,8 @@
     "name": "Four Objects Ltd",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "four-objects-ltd"
+    "slug": "four-objects-ltd",
+    "website": "https://fourobjects.com/"
   },
   {
     "countries": [
@@ -3214,7 +3394,8 @@
     "name": "Frank & Eileen",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "frank-eileen"
+    "slug": "frank-eileen",
+    "website": "https://frankeileen.com/"
   },
   {
     "countries": [
@@ -3231,7 +3412,8 @@
     "name": "Free Fly Apparel",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "free-fly-apparel"
+    "slug": "free-fly-apparel",
+    "website": "https://freeflyapparel.com/"
   },
   {
     "countries": [
@@ -3248,7 +3430,8 @@
     "name": "Freeform",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "business-interiors-of-idaho"
+    "slug": "business-interiors-of-idaho",
+    "website": "https://www.freeform.com/"
   },
   {
     "countries": [
@@ -3265,7 +3448,8 @@
     "name": "friend + folk llc",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "friend-folk-llc"
+    "slug": "friend-folk-llc",
+    "website": "https://friend.com/"
   },
   {
     "countries": [
@@ -3282,7 +3466,8 @@
     "name": "Frisky Cow Farm Products",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "frisky-cow-farm-products"
+    "slug": "frisky-cow-farm-products",
+    "website": null
   },
   {
     "countries": [
@@ -3299,7 +3484,8 @@
     "name": "Full Circle",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "full-circle-home"
+    "slug": "full-circle-home",
+    "website": "http://www.full.com/"
   },
   {
     "countries": [
@@ -3317,7 +3503,8 @@
     "name": "Fungi Perfecti, LLC",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "fungi-perfecti-llc"
+    "slug": "fungi-perfecti-llc",
+    "website": "https://fungi.com/"
   },
   {
     "countries": [
@@ -3334,7 +3521,8 @@
     "name": "Future Proof Brands",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "beat-box-beverages"
+    "slug": "beat-box-beverages",
+    "website": "https://futureproof.com/"
   },
   {
     "countries": [
@@ -3351,7 +3539,8 @@
     "name": "Gallant International Inc.",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "gallant-international-inc"
+    "slug": "gallant-international-inc",
+    "website": "https://www.gallant.com/"
   },
   {
     "countries": [
@@ -3371,7 +3560,8 @@
     "name": "Garden of Life US",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "garden-of-life-llc"
+    "slug": "garden-of-life-llc",
+    "website": "https://garden-of-life.com/ar"
   },
   {
     "countries": [
@@ -3388,7 +3578,8 @@
     "name": "Gibbs M. Smith, Inc.",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "gibbs-m-smith-inc"
+    "slug": "gibbs-m-smith-inc",
+    "website": null
   },
   {
     "countries": [
@@ -3405,7 +3596,8 @@
     "name": "Gifted Breads, LLC",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "gifted-breads-llc"
+    "slug": "gifted-breads-llc",
+    "website": "https://giftedbreads.com/"
   },
   {
     "countries": [
@@ -3422,7 +3614,8 @@
     "name": "Gifts for Good",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "gifts-for-good"
+    "slug": "gifts-for-good",
+    "website": "https://www.giftsforgood.com/"
   },
   {
     "countries": [
@@ -3439,7 +3632,8 @@
     "name": "GKCO Holdings, Inc",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "phlur"
+    "slug": "phlur",
+    "website": null
   },
   {
     "countries": [
@@ -3456,7 +3650,8 @@
     "name": "GloryBee",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "glorybee"
+    "slug": "glorybee",
+    "website": null
   },
   {
     "countries": [
@@ -3473,7 +3668,8 @@
     "name": "Go Raw",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "steves-real-food"
+    "slug": "steves-real-food",
+    "website": "https://goraw.com/"
   },
   {
     "countries": [
@@ -3491,7 +3687,8 @@
     "name": "GOEX Apparel",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "the-go-exchange"
+    "slug": "the-go-exchange",
+    "website": "https://goexapparel.com/"
   },
   {
     "countries": [
@@ -3508,7 +3705,8 @@
     "name": "Good American",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "good-american"
+    "slug": "good-american",
+    "website": "https://www.goodamerican.com/"
   },
   {
     "countries": [
@@ -3525,7 +3723,8 @@
     "name": "Good Clean Love",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "good-clean-love"
+    "slug": "good-clean-love",
+    "website": "https://goodcleanlove.com/"
   },
   {
     "countries": [
@@ -3542,7 +3741,8 @@
     "name": "Good Culture",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "good-culture"
+    "slug": "good-culture",
+    "website": "https://goodculture.com/"
   },
   {
     "countries": [
@@ -3559,7 +3759,8 @@
     "name": "Good Start Packaging",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "good-start-packaging"
+    "slug": "good-start-packaging",
+    "website": "https://www.goodstartpackaging.com/"
   },
   {
     "countries": [
@@ -3576,7 +3777,8 @@
     "name": "GOOD Worldwide Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "good-worldwide-inc"
+    "slug": "good-worldwide-inc",
+    "website": null
   },
   {
     "countries": [
@@ -3593,7 +3795,8 @@
     "name": "GoodPop",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "goodpop"
+    "slug": "goodpop",
+    "website": "https://goodpop.co/"
   },
   {
     "countries": [
@@ -3610,7 +3813,8 @@
     "name": "Goods that Matter",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "goods-that-matter"
+    "slug": "goods-that-matter",
+    "website": "https://www.goodsthatmatter.com/"
   },
   {
     "countries": [
@@ -3631,7 +3835,8 @@
     "name": "GoodSam PBC, dba GoodSam Foods",
     "sector": "Agriculture/Growers",
     "size": "10-49",
-    "slug": "good-sam-pbc-dba-good-sam-foods"
+    "slug": "good-sam-pbc-dba-good-sam-foods",
+    "website": "https://www.goodsam.com/"
   },
   {
     "countries": [
@@ -3648,7 +3853,8 @@
     "name": "Gourmend Foods, LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "gourmend-foods-llc"
+    "slug": "gourmend-foods-llc",
+    "website": "https://www.gourmendfoods.com/"
   },
   {
     "countries": [
@@ -3665,7 +3871,8 @@
     "name": "Grace Farms Foods, LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "grace-farms-foods-llc"
+    "slug": "grace-farms-foods-llc",
+    "website": "https://www.sharegracefarms.com/"
   },
   {
     "countries": [
@@ -3682,7 +3889,8 @@
     "name": "Grain",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "grain"
+    "slug": "grain",
+    "website": "https://grain.com/"
   },
   {
     "countries": [
@@ -3699,7 +3907,8 @@
     "name": "Grand Central Bakery",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "grand-central-bakery"
+    "slug": "grand-central-bakery",
+    "website": "https://www.grandcentralbakery.com/"
   },
   {
     "countries": [
@@ -3716,7 +3925,8 @@
     "name": "Granny Squibb\u2019s Organic Iced Tea",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "granny-squibbs-organic-iced-tea"
+    "slug": "granny-squibbs-organic-iced-tea",
+    "website": null
   },
   {
     "countries": [
@@ -3735,7 +3945,8 @@
     "name": "GreenGear Supply Company Inc.",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "green-gear-supply-company-inc"
+    "slug": "green-gear-supply-company-inc",
+    "website": null
   },
   {
     "countries": [
@@ -3752,7 +3963,8 @@
     "name": "Greyston Bakery, Inc.",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "greyston-bakery-inc"
+    "slug": "greyston-bakery-inc",
+    "website": null
   },
   {
     "countries": [
@@ -3769,7 +3981,8 @@
     "name": "Grounds for Change",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "grounds-change"
+    "slug": "grounds-change",
+    "website": "https://groundsforchange.com/"
   },
   {
     "countries": [
@@ -3786,7 +3999,8 @@
     "name": "Groundwork Coffee Roasters LLC",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "groundwork-coffee-holdings-llc"
+    "slug": "groundwork-coffee-holdings-llc",
+    "website": null
   },
   {
     "countries": [
@@ -3805,7 +4019,8 @@
     "name": "GroundWork Renewables, Inc",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "ground-work-renewables-inc"
+    "slug": "ground-work-renewables-inc",
+    "website": null
   },
   {
     "countries": [
@@ -3822,7 +4037,8 @@
     "name": "Grove Collaborative Inc.",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "grove-collaborative"
+    "slug": "grove-collaborative",
+    "website": null
   },
   {
     "countries": [
@@ -3844,7 +4060,8 @@
     "name": "Guayaki Yerba Mate SPC",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "guayaki-sustainable-rainforest-products"
+    "slug": "guayaki-sustainable-rainforest-products",
+    "website": "https://yerbamadre.com/"
   },
   {
     "countries": [
@@ -3861,7 +4078,8 @@
     "name": "Handsome Brook Farms",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "handsome-brook-farms"
+    "slug": "handsome-brook-farms",
+    "website": "https://handsomebrookfarms.com/"
   },
   {
     "countries": [
@@ -3878,7 +4096,8 @@
     "name": "Happy Earth Apparel",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "happy-earth-apparel"
+    "slug": "happy-earth-apparel",
+    "website": "https://www.happyearthapparel.com/"
   },
   {
     "countries": [
@@ -3895,7 +4114,8 @@
     "name": "Happy Family Organics",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "happy-family-brands"
+    "slug": "happy-family-brands",
+    "website": "https://www.happyfamilyorganics.com/"
   },
   {
     "countries": [
@@ -3912,7 +4132,8 @@
     "name": "Happy Valley Meat Company",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "happy-valley-meat-company"
+    "slug": "happy-valley-meat-company",
+    "website": null
   },
   {
     "countries": [
@@ -3930,7 +4151,8 @@
     "name": "Harmless Harvest",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "harmless-harvest"
+    "slug": "harmless-harvest",
+    "website": "https://harmlessharvest.com/"
   },
   {
     "countries": [
@@ -3947,7 +4169,8 @@
     "name": "Harmoni, Inc. dba Uncle Matt's Organic",
     "sector": "Agriculture/Growers",
     "size": "50-249",
-    "slug": "harmoni-inc-dba-uncle-matts-organic"
+    "slug": "harmoni-inc-dba-uncle-matts-organic",
+    "website": "https://harmoni.com/"
   },
   {
     "countries": [
@@ -3964,7 +4187,8 @@
     "name": "Hawthorne Foods",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "farm-ferments"
+    "slug": "farm-ferments",
+    "website": "https://www.hawthornefoods.com/"
   },
   {
     "countries": [
@@ -3981,7 +4205,8 @@
     "name": "Heath Ceramics, LTD",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "heath-ceramics-ltd"
+    "slug": "heath-ceramics-ltd",
+    "website": "https://www.heathceramics.com/"
   },
   {
     "countries": [
@@ -3998,7 +4223,8 @@
     "name": "Helpsy Holdings PBC",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "helpsy"
+    "slug": "helpsy",
+    "website": "https://www.helpsy.com/"
   },
   {
     "countries": [
@@ -4015,7 +4241,8 @@
     "name": "Herbalist & Alchemist",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "herbalist-alchemist"
+    "slug": "herbalist-alchemist",
+    "website": "https://herbalistalchemist.com/"
   },
   {
     "countries": [
@@ -4032,7 +4259,8 @@
     "name": "Here I Am",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "here-i-am-box"
+    "slug": "here-i-am-box",
+    "website": "https://hereiam.com/"
   },
   {
     "countries": [
@@ -4049,7 +4277,8 @@
     "name": "Higher Grounds Trading Company",
     "sector": "Agriculture/Growers",
     "size": "10-49",
-    "slug": "higher-grounds-trading-company"
+    "slug": "higher-grounds-trading-company",
+    "website": null
   },
   {
     "countries": [
@@ -4068,7 +4297,8 @@
     "name": "Hightower Group LLC",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "hightower"
+    "slug": "hightower",
+    "website": "http://hightower.com/"
   },
   {
     "countries": [
@@ -4085,7 +4315,8 @@
     "name": "HoldOn Bags",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "hold-on-bags"
+    "slug": "hold-on-bags",
+    "website": "https://holdonbags.com/"
   },
   {
     "countries": [
@@ -4102,7 +4333,8 @@
     "name": "Holistic Spirits Company",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "holistic-spirits-company"
+    "slug": "holistic-spirits-company",
+    "website": null
   },
   {
     "countries": [
@@ -4125,7 +4357,8 @@
     "name": "Homefree, LLC",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "homefree"
+    "slug": "homefree",
+    "website": null
   },
   {
     "countries": [
@@ -4142,7 +4375,8 @@
     "name": "Hopworks Brewery",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "hopworks-urban-brewery"
+    "slug": "hopworks-urban-brewery",
+    "website": "https://hopworks.com/"
   },
   {
     "countries": [
@@ -4159,7 +4393,8 @@
     "name": "Horizon Organic Dairy, LLC",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "horizon-organic"
+    "slug": "horizon-organic",
+    "website": null
   },
   {
     "countries": [
@@ -4176,7 +4411,8 @@
     "name": "Hugo & Hoby LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "hugo-hoby"
+    "slug": "hugo-hoby",
+    "website": "https://www.hugoboss.com/us/home"
   },
   {
     "countries": [
@@ -4221,7 +4457,8 @@
     "name": "Humanscale Corporation",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "humanscale-corporation"
+    "slug": "humanscale-corporation",
+    "website": null
   },
   {
     "countries": [
@@ -4238,7 +4475,8 @@
     "name": "Hyggelight LLC",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "hyggelight-llc"
+    "slug": "hyggelight-llc",
+    "website": null
   },
   {
     "countries": [
@@ -4255,7 +4493,8 @@
     "name": "Icelantic Skis LLC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "icelantic-skis-llc"
+    "slug": "icelantic-skis-llc",
+    "website": "https://www.icelanticskis.com/"
   },
   {
     "countries": [
@@ -4272,7 +4511,8 @@
     "name": "Ikaria Design Co.",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "ikaria-design-company-llc"
+    "slug": "ikaria-design-company-llc",
+    "website": "https://www.ikariadesign.com/"
   },
   {
     "countries": [
@@ -4289,7 +4529,8 @@
     "name": "IND HEMP, LLC",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "ind-hemp-llc"
+    "slug": "ind-hemp-llc",
+    "website": "https://indhemp.com/"
   },
   {
     "countries": [
@@ -4306,7 +4547,8 @@
     "name": "Inesscents Aromatic Botanicals",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "inesscents-aromatic-botanicals"
+    "slug": "inesscents-aromatic-botanicals",
+    "website": "https://inesscents.com/"
   },
   {
     "countries": [
@@ -4323,7 +4565,8 @@
     "name": "Ingenuity Foods",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "brainiac-kids"
+    "slug": "brainiac-kids",
+    "website": null
   },
   {
     "countries": [
@@ -4340,7 +4583,8 @@
     "name": "Inspiro Tequila, LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "inspiro-tequila-llc"
+    "slug": "inspiro-tequila-llc",
+    "website": "https://inspirotequila.com/"
   },
   {
     "countries": [
@@ -4422,7 +4666,8 @@
     "name": "Instructional Coaching Group",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "instructional-coaching-group"
+    "slug": "instructional-coaching-group",
+    "website": null
   },
   {
     "countries": [
@@ -4458,7 +4703,8 @@
     "name": "Intelligent Nutrients",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "intelligent-nutrients"
+    "slug": "intelligent-nutrients",
+    "website": "https://intelligentnutrients.com/"
   },
   {
     "countries": [
@@ -4475,7 +4721,8 @@
     "name": "Island Mist",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "island-mist"
+    "slug": "island-mist",
+    "website": "https://islandmist.com/"
   },
   {
     "countries": [
@@ -4495,7 +4742,8 @@
     "name": "Jason Markk",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "jason-markk"
+    "slug": "jason-markk",
+    "website": "https://jasonmarkk.com/"
   },
   {
     "countries": [
@@ -4512,7 +4760,8 @@
     "name": "JD Staron LLC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "jd-staron-llc"
+    "slug": "jd-staron-llc",
+    "website": "https://www.jdstaron.com/"
   },
   {
     "countries": [
@@ -4529,7 +4778,8 @@
     "name": "Jeni's Ice Creams",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "jenis-splendid-ice-creams"
+    "slug": "jenis-splendid-ice-creams",
+    "website": "https://jenis.com/"
   },
   {
     "countries": [
@@ -4547,7 +4797,8 @@
     "name": "Jetty",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "jetty"
+    "slug": "jetty",
+    "website": "https://www.jetty.com/"
   },
   {
     "countries": [
@@ -4564,7 +4815,8 @@
     "name": "Joe Bean Coffee LLC",
     "sector": "Agriculture/Growers",
     "size": "1-9",
-    "slug": "joe-bean-coffee-l-l-c"
+    "slug": "joe-bean-coffee-l-l-c",
+    "website": "https://www.joe.com/"
   },
   {
     "countries": [
@@ -4582,7 +4834,8 @@
     "name": "Josie Maran Cosmetics, LLC",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "josie-maran-cosmetics"
+    "slug": "josie-maran-cosmetics",
+    "website": null
   },
   {
     "countries": [
@@ -4599,7 +4852,8 @@
     "name": "Just Coffee Cooperative",
     "sector": "Agriculture/Growers",
     "size": "10-49",
-    "slug": "just-coffee-cooperative"
+    "slug": "just-coffee-cooperative",
+    "website": null
   },
   {
     "countries": [
@@ -4616,7 +4870,8 @@
     "name": "JUST Goods, Inc.",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "just-goods-inc"
+    "slug": "just-goods-inc",
+    "website": "https://www.just-goods.de/"
   },
   {
     "countries": [
@@ -4633,7 +4888,8 @@
     "name": "Just Made Foods, LLC",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "just-made-foods-llc"
+    "slug": "just-made-foods-llc",
+    "website": null
   },
   {
     "countries": [
@@ -4650,7 +4906,8 @@
     "name": "K9 Ballistics Inc.",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "k9-ballistics-inc"
+    "slug": "k9-ballistics-inc",
+    "website": "https://k9ballistics.com/"
   },
   {
     "countries": [
@@ -4667,7 +4924,8 @@
     "name": "KAIBAE",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "kaibae"
+    "slug": "kaibae",
+    "website": null
   },
   {
     "countries": [
@@ -4690,7 +4948,8 @@
     "name": "Kalsec, Inc.",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "kalsec"
+    "slug": "kalsec",
+    "website": "https://kalsec.com/"
   },
   {
     "countries": [
@@ -4707,7 +4966,8 @@
     "name": "Kalsoni",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "kalsoni"
+    "slug": "kalsoni",
+    "website": "https://www.kalsoni.com/"
   },
   {
     "countries": [
@@ -4724,7 +4984,8 @@
     "name": "Kane Footwear LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "kane-footwear-llc"
+    "slug": "kane-footwear-llc",
+    "website": "https://kanefootwear.com/"
   },
   {
     "countries": [
@@ -4741,7 +5002,8 @@
     "name": "Karen Kane",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "karen-kane"
+    "slug": "karen-kane",
+    "website": "https://www.karenkane.com/"
   },
   {
     "countries": [
@@ -4758,7 +5020,8 @@
     "name": "Kase Custom",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "kase-custom"
+    "slug": "kase-custom",
+    "website": "https://kasecustom.com/"
   },
   {
     "countries": [
@@ -4775,7 +5038,8 @@
     "name": "Kaylaan LLC",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "kaylaan"
+    "slug": "kaylaan",
+    "website": "https://www.kaylaan.com/"
   },
   {
     "countries": [
@@ -4793,7 +5057,8 @@
     "name": "KeHE Distributors, LLC",
     "sector": "Wholesale/Retail",
     "size": "1000+",
-    "slug": "kehe"
+    "slug": "kehe",
+    "website": null
   },
   {
     "countries": [
@@ -4810,7 +5075,8 @@
     "name": "Kind Cotton LLC",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "kind-cotton-llc"
+    "slug": "kind-cotton-llc",
+    "website": null
   },
   {
     "countries": [
@@ -4827,7 +5093,8 @@
     "name": "King Arthur Baking Company",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "king-arthur-baking-company"
+    "slug": "king-arthur-baking-company",
+    "website": "https://www.king.com/"
   },
   {
     "countries": [
@@ -4845,7 +5112,8 @@
     "name": "Klean Kanteen",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "klean-kanteen"
+    "slug": "klean-kanteen",
+    "website": "https://www.kleankanteen.com/"
   },
   {
     "countries": [
@@ -4865,7 +5133,8 @@
     "name": "KNOWN SUPPLY",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "known-supply"
+    "slug": "known-supply",
+    "website": "https://knownsupply.com/"
   },
   {
     "countries": [
@@ -4882,7 +5151,8 @@
     "name": "KOA+ROY LLC",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "koaroy-llc"
+    "slug": "koaroy-llc",
+    "website": "https://koaroy.com/"
   },
   {
     "countries": [
@@ -4899,7 +5169,8 @@
     "name": "Krave Beauty, LLC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "krave-beauty-llc"
+    "slug": "krave-beauty-llc",
+    "website": "https://kravebeauty.com/"
   },
   {
     "countries": [
@@ -4916,7 +5187,8 @@
     "name": "Krimson Klover",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "krimson-klover"
+    "slug": "krimson-klover",
+    "website": "https://krimsonklover.com/"
   },
   {
     "countries": [
@@ -4933,7 +5205,8 @@
     "name": "Kuli Kuli Foods",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "kuli-kuli"
+    "slug": "kuli-kuli",
+    "website": "https://www.kulikulifoods.com/"
   },
   {
     "countries": [
@@ -4965,7 +5238,8 @@
     "name": "KYPRIS",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "k-y-p-r-i-s"
+    "slug": "k-y-p-r-i-s",
+    "website": "https://kypris.com/"
   },
   {
     "countries": [
@@ -4982,7 +5256,8 @@
     "name": "Lactalis US Yogurt, Inc. d/b/a Stonyfield Farm, Inc.",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "stonyfield-farm"
+    "slug": "stonyfield-farm",
+    "website": "https://www.lactalis.com/fr/"
   },
   {
     "countries": [
@@ -4999,7 +5274,8 @@
     "name": "Lakefront Brewery, Inc.",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "lakefront-brewery-inc"
+    "slug": "lakefront-brewery-inc",
+    "website": "https://lakefront-brewery.com/"
   },
   {
     "countries": [
@@ -5016,7 +5292,8 @@
     "name": "Land Betterment Corp",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "land-betterment-corp"
+    "slug": "land-betterment-corp",
+    "website": null
   },
   {
     "countries": [
@@ -5033,7 +5310,8 @@
     "name": "Larry's Beans Inc",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "larrys-coffee"
+    "slug": "larrys-coffee",
+    "website": "https://larrys.com/"
   },
   {
     "countries": [
@@ -5050,7 +5328,8 @@
     "name": "Last Mile Cafe",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "last-mile-cafe"
+    "slug": "last-mile-cafe",
+    "website": "https://www.lastmilecafe.com/"
   },
   {
     "countries": [
@@ -5067,7 +5346,8 @@
     "name": "Lawson's Finest Liquids",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "lawsons-finest-liquids"
+    "slug": "lawsons-finest-liquids",
+    "website": null
   },
   {
     "countries": [
@@ -5084,7 +5364,8 @@
     "name": "Le Chic Miami LLC",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "le-chic-miami-llc"
+    "slug": "le-chic-miami-llc",
+    "website": "https://lechicmiami.com/"
   },
   {
     "countries": [
@@ -5102,7 +5383,8 @@
     "name": "Le Labo Holding LLC",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "le-labo-holding-l-l-c"
+    "slug": "le-labo-holding-l-l-c",
+    "website": "https://www.le.com/"
   },
   {
     "countries": [
@@ -5121,7 +5403,8 @@
     "name": "Leader Promotions, Inc.",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "leader-promotions-inc"
+    "slug": "leader-promotions-inc",
+    "website": "https://leader.com/"
   },
   {
     "countries": [
@@ -5139,7 +5422,8 @@
     "name": "Legend Imports",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "legend-imports"
+    "slug": "legend-imports",
+    "website": "https://legendimports.com/"
   },
   {
     "countries": [
@@ -5156,7 +5440,8 @@
     "name": "lemlem",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "lemlem"
+    "slug": "lemlem",
+    "website": "https://www.lemlem.com/"
   },
   {
     "countries": [
@@ -5173,7 +5458,8 @@
     "name": "Liability Brewing Company",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "liability-brewing-company"
+    "slug": "liability-brewing-company",
+    "website": "https://www.liability.com/"
   },
   {
     "countries": [
@@ -5194,7 +5480,8 @@
     "name": "LifeStraw",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "life-straw"
+    "slug": "life-straw",
+    "website": "https://lifestraw.com/"
   },
   {
     "countries": [
@@ -5211,7 +5498,8 @@
     "name": "Linea Caffe",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "linea-caffe"
+    "slug": "linea-caffe",
+    "website": "https://lineacaffe.com/"
   },
   {
     "countries": [
@@ -5228,7 +5516,8 @@
     "name": "LIVSN Designs",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "livsn-designs"
+    "slug": "livsn-designs",
+    "website": "https://www.livsndesigns.com/"
   },
   {
     "countries": [
@@ -5245,7 +5534,8 @@
     "name": "LOOM Imports",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "loom-imports"
+    "slug": "loom-imports",
+    "website": "https://loomimports.com/password"
   },
   {
     "countries": [
@@ -5262,7 +5552,8 @@
     "name": "Looptworks",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "looptworks"
+    "slug": "looptworks",
+    "website": null
   },
   {
     "countries": [
@@ -5279,7 +5570,8 @@
     "name": "Lost Grove Brewing",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "lost-grove-brewing"
+    "slug": "lost-grove-brewing",
+    "website": "https://lostgrovebrewing.com/"
   },
   {
     "countries": [
@@ -5296,7 +5588,8 @@
     "name": "Lotus Foods",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "lotus-foods"
+    "slug": "lotus-foods",
+    "website": "https://www.lotusfoods.com/"
   },
   {
     "countries": [
@@ -5313,7 +5606,8 @@
     "name": "Lotus Sustainables (Golden Eye Media USA Inc / Lotus Trolley Bag)",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "golden-eye-media-usa-inc-dba-lotus-sustainables"
+    "slug": "golden-eye-media-usa-inc-dba-lotus-sustainables",
+    "website": "https://lotus-sustainables.com/"
   },
   {
     "countries": [
@@ -5330,7 +5624,8 @@
     "name": "Love Bottle",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "love-bottle"
+    "slug": "love-bottle",
+    "website": "https://www.lovebottle.com/"
   },
   {
     "countries": [
@@ -5348,7 +5643,8 @@
     "name": "LOVE CORN",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "love-corn"
+    "slug": "love-corn",
+    "website": null
   },
   {
     "countries": [
@@ -5365,7 +5661,8 @@
     "name": "Love Grown, Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "love-grown"
+    "slug": "love-grown",
+    "website": "https://lovegrown.com/"
   },
   {
     "countries": [
@@ -5382,7 +5679,8 @@
     "name": "Lovebiotics LLC d/b/a The Coconut Cult",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "lovebiotics-llc"
+    "slug": "lovebiotics-llc",
+    "website": "https://lovebiotics.com/"
   },
   {
     "countries": [
@@ -5399,7 +5697,8 @@
     "name": "Luke's Lobster",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "lukes-lobster"
+    "slug": "lukes-lobster",
+    "website": "https://lukeslobster.com/"
   },
   {
     "countries": [
@@ -5416,7 +5715,8 @@
     "name": "Lunchskins",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "lunchskins"
+    "slug": "lunchskins",
+    "website": "https://www.lunchskins.com/"
   },
   {
     "countries": [
@@ -5433,7 +5733,8 @@
     "name": "M3 Group, Inc",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "m3-group-inc"
+    "slug": "m3-group-inc",
+    "website": "https://www.m3.com/open/login"
   },
   {
     "countries": [
@@ -5466,7 +5767,8 @@
     "name": "MaCher USA Inc",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "macher-usa"
+    "slug": "macher-usa",
+    "website": "https://macher.com/"
   },
   {
     "countries": [
@@ -5483,7 +5785,8 @@
     "name": "MadTree Brewing,  LLC",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "mad-tree-brewing-llc"
+    "slug": "mad-tree-brewing-llc",
+    "website": "https://madtree.com"
   },
   {
     "countries": [
@@ -5500,7 +5803,8 @@
     "name": "Mainstem Malt",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "mainstem-malt-spc"
+    "slug": "mainstem-malt-spc",
+    "website": "https://www.mainstemmalt.com/"
   },
   {
     "countries": [
@@ -5517,7 +5821,8 @@
     "name": "Maker's Mark Distillery",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "makers-mark-distillery"
+    "slug": "makers-mark-distillery",
+    "website": "https://www.makers.com/"
   },
   {
     "countries": [
@@ -5534,7 +5839,8 @@
     "name": "Mamma Chia",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "mamma-chia"
+    "slug": "mamma-chia",
+    "website": "https://mammachia.com/"
   },
   {
     "countries": [
@@ -5551,7 +5857,8 @@
     "name": "Marine Layer",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "marine-layer"
+    "slug": "marine-layer",
+    "website": "https://www.marinelayer.com/"
   },
   {
     "countries": [
@@ -5568,7 +5875,8 @@
     "name": "Masienda",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "masienda"
+    "slug": "masienda",
+    "website": "https://masienda.com/"
   },
   {
     "countries": [
@@ -5585,7 +5893,8 @@
     "name": "MATE the Label",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "mate-the-label"
+    "slug": "mate-the-label",
+    "website": "https://matethelabel.com/"
   },
   {
     "countries": [
@@ -5602,7 +5911,8 @@
     "name": "Maud Borup Inc.",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "maud-borup-inc"
+    "slug": "maud-borup-inc",
+    "website": "https://maudborup.com/"
   },
   {
     "countries": [
@@ -5620,7 +5930,8 @@
     "name": "Mayfly Outdoors",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "mayfly-outdoors"
+    "slug": "mayfly-outdoors",
+    "website": "https://mayflyoutdoors.com/"
   },
   {
     "countries": [
@@ -5637,7 +5948,8 @@
     "name": "MegaFood",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "megafood"
+    "slug": "megafood",
+    "website": "https://megafood.com/"
   },
   {
     "countries": [
@@ -5654,7 +5966,8 @@
     "name": "Meliora Cleaning Products",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "meliora-cleaning-products"
+    "slug": "meliora-cleaning-products",
+    "website": null
   },
   {
     "countries": [
@@ -5671,7 +5984,8 @@
     "name": "Meow Meow Tweet LLC",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "meow-meow-tweet-llc"
+    "slug": "meow-meow-tweet-llc",
+    "website": "https://meowmeowtweet.com/"
   },
   {
     "countries": [
@@ -5689,7 +6003,8 @@
     "name": "Meraki Hair Wellness",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "meraki-hair-wellness"
+    "slug": "meraki-hair-wellness",
+    "website": "https://www.merakihairwellness.com/"
   },
   {
     "countries": [
@@ -5706,7 +6021,8 @@
     "name": "MERGE4 Mfg, Inc.",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "merge4-mfg-inc"
+    "slug": "merge4-mfg-inc",
+    "website": "https://merge4.com/"
   },
   {
     "countries": [
@@ -5723,7 +6039,8 @@
     "name": "Merry Go Rounds",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "merry-go-rounds"
+    "slug": "merry-go-rounds",
+    "website": "https://merry-go-rounds.com/"
   },
   {
     "countries": [
@@ -5740,7 +6057,8 @@
     "name": "Metric",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "metric-coffee"
+    "slug": "metric-coffee",
+    "website": "https://metric.com/"
   },
   {
     "countries": [
@@ -5757,7 +6075,8 @@
     "name": "Mexicali Blues",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "mexicali-blues"
+    "slug": "mexicali-blues",
+    "website": "https://www.mexicaliblues.com/"
   },
   {
     "countries": [
@@ -5774,7 +6093,8 @@
     "name": "MiaDonna & Company",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "mia-donna-company"
+    "slug": "mia-donna-company",
+    "website": "https://www.miadonna.com/"
   },
   {
     "countries": [
@@ -5791,7 +6111,8 @@
     "name": "Michael Stars, Inc.",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "michael-stars-inc"
+    "slug": "michael-stars-inc",
+    "website": "https://www.michaelstars.com/"
   },
   {
     "countries": [
@@ -5808,7 +6129,8 @@
     "name": "Mickelberry Gardens, LLC",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "mickelberry-gardens-llc"
+    "slug": "mickelberry-gardens-llc",
+    "website": "https://mickelberrygardens.com/"
   },
   {
     "countries": [
@@ -5826,7 +6148,8 @@
     "name": "MiiR",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "miir-inc"
+    "slug": "miir-inc",
+    "website": "https://www.miir.com/"
   },
   {
     "countries": [
@@ -5844,7 +6167,8 @@
     "name": "MIKUNA",
     "sector": "Agriculture/Growers",
     "size": "1-9",
-    "slug": "mikuna"
+    "slug": "mikuna",
+    "website": null
   },
   {
     "countries": [
@@ -5861,7 +6185,8 @@
     "name": "Mila's Keeper",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "blue-dot-rising-inc-dba-milas-keeper"
+    "slug": "blue-dot-rising-inc-dba-milas-keeper",
+    "website": "https://milaskeeper.com/"
   },
   {
     "countries": [
@@ -5878,7 +6203,8 @@
     "name": "Minimal Gear LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "cnoc-outdoors"
+    "slug": "cnoc-outdoors",
+    "website": "https://minimalgear.com/"
   },
   {
     "countries": [
@@ -5895,7 +6221,8 @@
     "name": "MIO Culture / FutureTogether",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "mio"
+    "slug": "mio",
+    "website": null
   },
   {
     "countries": [
@@ -5913,7 +6240,8 @@
     "name": "MODHER",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "modher"
+    "slug": "modher",
+    "website": "https://www.modher.com/"
   },
   {
     "countries": [
@@ -5930,7 +6258,8 @@
     "name": "Monica Rich Kosann",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "monica-rich-kosann"
+    "slug": "monica-rich-kosann",
+    "website": "https://www.monicarichkosann.com/"
   },
   {
     "countries": [
@@ -5947,7 +6276,8 @@
     "name": "Montanya Distillers LLC",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "montanya-distillers-llc"
+    "slug": "montanya-distillers-llc",
+    "website": "https://www.montanyarum.com/"
   },
   {
     "countries": [
@@ -5964,7 +6294,8 @@
     "name": "More Life Liquid LLC.",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "more-life-liquid-llc"
+    "slug": "more-life-liquid-llc",
+    "website": "https://www.morelifeliquid.com/"
   },
   {
     "countries": [
@@ -5981,7 +6312,8 @@
     "name": "Mother Kombucha",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "mother-kombucha"
+    "slug": "mother-kombucha",
+    "website": "https://motherkombucha.com/"
   },
   {
     "countries": [
@@ -5998,7 +6330,8 @@
     "name": "Motherlove Herbal Company",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "motherlove-herbal-company"
+    "slug": "motherlove-herbal-company",
+    "website": "https://motherlove.com/"
   },
   {
     "countries": [
@@ -6015,7 +6348,8 @@
     "name": "mountainFLOW eco-wax",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "mountainflow-eco-wax"
+    "slug": "mountainflow-eco-wax",
+    "website": "https://mountainflow.com/"
   },
   {
     "countries": [
@@ -6032,7 +6366,8 @@
     "name": "MRO MaryRuth, LLC",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "mro-mary-ruth-llc"
+    "slug": "mro-mary-ruth-llc",
+    "website": null
   },
   {
     "countries": [
@@ -6049,7 +6384,8 @@
     "name": "Murphy's Naturals, Inc",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "murphys-naturals-inc"
+    "slug": "murphys-naturals-inc",
+    "website": "https://www.murphysnaturals.com/"
   },
   {
     "countries": [
@@ -6066,7 +6402,8 @@
     "name": "MXCO Polanco LLC",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "mxco-polanco-llc"
+    "slug": "mxco-polanco-llc",
+    "website": "https://mxco.com/"
   },
   {
     "countries": [
@@ -6083,7 +6420,8 @@
     "name": "MZ Wallace",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "mz-wallace"
+    "slug": "mz-wallace",
+    "website": "https://mz-wallace.com/"
   },
   {
     "countries": [
@@ -6100,7 +6438,8 @@
     "name": "Nabs and Babs",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "nabs-and-babs"
+    "slug": "nabs-and-babs",
+    "website": "https://nabsandbabs.com/"
   },
   {
     "countries": [
@@ -6118,7 +6457,8 @@
     "name": "NadaMoo!",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "nada-moo"
+    "slug": "nada-moo",
+    "website": "https://nadamoo.com/password"
   },
   {
     "countries": [
@@ -6135,7 +6475,8 @@
     "name": "Nantucket Spider, LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "nantucket-spider-llc"
+    "slug": "nantucket-spider-llc",
+    "website": "https://nantucketspider.com/"
   },
   {
     "countries": [
@@ -6152,7 +6493,8 @@
     "name": "Narrative Food",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "out-of-the-box-collective"
+    "slug": "out-of-the-box-collective",
+    "website": "https://narrativefood.com/"
   },
   {
     "countries": [
@@ -6169,7 +6511,8 @@
     "name": "Native Trails, Inc.",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "native-trails-inc"
+    "slug": "native-trails-inc",
+    "website": "http://nativetrails.com/"
   },
   {
     "countries": [
@@ -6188,7 +6531,8 @@
     "name": "Natures Crops Inc",
     "sector": "Agriculture/Growers",
     "size": "10-49",
-    "slug": "natures-crops-inc"
+    "slug": "natures-crops-inc",
+    "website": "https://www.naturescrops.com/"
   },
   {
     "countries": [
@@ -6205,7 +6549,8 @@
     "name": "Navitas Organics",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "navitas-organics"
+    "slug": "navitas-organics",
+    "website": "https://navitasorganics.com/"
   },
   {
     "countries": [
@@ -6222,7 +6567,8 @@
     "name": "N\u00e9cessaire, Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "necessaire-inc"
+    "slug": "necessaire-inc",
+    "website": null
   },
   {
     "countries": [
@@ -6239,7 +6585,8 @@
     "name": "Needed PBC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "needed-pbc"
+    "slug": "needed-pbc",
+    "website": "https://needed.co/"
   },
   {
     "countries": [
@@ -6257,7 +6604,8 @@
     "name": "Nepal Tea Collective",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "nepal-tea-collective"
+    "slug": "nepal-tea-collective",
+    "website": "https://www.nepal.com/"
   },
   {
     "countries": [
@@ -6274,7 +6622,8 @@
     "name": "Nestl\u00e9 Health Science US",
     "sector": "Manufacturing",
     "size": "1000+",
-    "slug": "nestle-health-science-us"
+    "slug": "nestle-health-science-us",
+    "website": "https://nestl.com/"
   },
   {
     "countries": [
@@ -6291,7 +6640,8 @@
     "name": "New Belgium Brewing Co, Inc.",
     "sector": "Manufacturing",
     "size": "1000+",
-    "slug": "new-belgium-brewing-co-inc"
+    "slug": "new-belgium-brewing-co-inc",
+    "website": "https://new.com/"
   },
   {
     "countries": [
@@ -6308,7 +6658,8 @@
     "name": "New Chapter, Inc",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "new-chapter-inc"
+    "slug": "new-chapter-inc",
+    "website": "https://newchapter.com/"
   },
   {
     "countries": [
@@ -6325,7 +6676,8 @@
     "name": "New Seasons Market",
     "sector": "Wholesale/Retail",
     "size": "1000+",
-    "slug": "new-seasons-market"
+    "slug": "new-seasons-market",
+    "website": "https://www.newseasonsmarket.com:443/"
   },
   {
     "countries": [
@@ -6344,7 +6696,8 @@
     "name": "NewAge Industries Inc.",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "new-age-industries-inc"
+    "slug": "new-age-industries-inc",
+    "website": null
   },
   {
     "countries": [
@@ -6361,7 +6714,8 @@
     "name": "Noonday Holdings LLC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "noonday-collection"
+    "slug": "noonday-collection",
+    "website": null
   },
   {
     "countries": [
@@ -6378,7 +6732,8 @@
     "name": "North Coast Brewing Co., Inc.",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "north-coast-brewing-co-inc"
+    "slug": "north-coast-brewing-co-inc",
+    "website": null
   },
   {
     "countries": [
@@ -6396,7 +6751,8 @@
     "name": "Nossa Familia Coffee",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "nossa-familia-coffee"
+    "slug": "nossa-familia-coffee",
+    "website": null
   },
   {
     "countries": [
@@ -6413,7 +6769,8 @@
     "name": "Nuliv Science Usa Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "nuliv-science-usa-inc"
+    "slug": "nuliv-science-usa-inc",
+    "website": "https://nulivscience.com/"
   },
   {
     "countries": [
@@ -6430,7 +6787,8 @@
     "name": "Numi",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "numi-organic-tea"
+    "slug": "numi-organic-tea",
+    "website": "https://numi.co/"
   },
   {
     "countries": [
@@ -6448,7 +6806,8 @@
     "name": "Nutricia North America",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "nutricia-north-america"
+    "slug": "nutricia-north-america",
+    "website": "https://www.nutricia.com/"
   },
   {
     "countries": [
@@ -6465,7 +6824,8 @@
     "name": "Nuun",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "nuun"
+    "slug": "nuun",
+    "website": "https://nuunlife.com/"
   },
   {
     "countries": [
@@ -6482,7 +6842,8 @@
     "name": "ocean+main los angeles",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "oceanmain-los-angeles"
+    "slug": "oceanmain-los-angeles",
+    "website": "https://oceanmain.com/"
   },
   {
     "countries": [
@@ -6499,7 +6860,8 @@
     "name": "OLIPOP",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "olipop"
+    "slug": "olipop",
+    "website": "http://olipop.com/"
   },
   {
     "countries": [
@@ -6516,7 +6878,8 @@
     "name": "OLLY PBC",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "olly"
+    "slug": "olly",
+    "website": "https://www.olly.com/"
   },
   {
     "countries": [
@@ -6533,7 +6896,8 @@
     "name": "OluKai",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "olukai"
+    "slug": "olukai",
+    "website": "https://olukai.com/"
   },
   {
     "countries": [
@@ -6550,7 +6914,8 @@
     "name": "Olympia Coffee",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "olympia-coffee"
+    "slug": "olympia-coffee",
+    "website": null
   },
   {
     "countries": [
@@ -6567,7 +6932,8 @@
     "name": "Ombraz Inc",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "ombraz-inc"
+    "slug": "ombraz-inc",
+    "website": "https://ombraz.com/"
   },
   {
     "countries": [
@@ -6584,7 +6950,8 @@
     "name": "Once Upon a Farm PBC",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "once-upon-a-farm-llc"
+    "slug": "once-upon-a-farm-llc",
+    "website": "http://www.onceuponafarm.com"
   },
   {
     "countries": [
@@ -6601,7 +6968,8 @@
     "name": "One Mighty Mill",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "one-mighty-mill"
+    "slug": "one-mighty-mill",
+    "website": "https://www.onemightymill.com/"
   },
   {
     "countries": [
@@ -6618,7 +6986,8 @@
     "name": "O'Neill Vintners & Distillers",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "oneill-vintners-distillers"
+    "slug": "oneill-vintners-distillers",
+    "website": null
   },
   {
     "countries": [
@@ -6680,7 +7049,8 @@
     "name": "On-Line Instrument Systems, Inc. (OLIS)",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "on-line-instrument-systems-inc-olis"
+    "slug": "on-line-instrument-systems-inc-olis",
+    "website": null
   },
   {
     "countries": [
@@ -6697,7 +7067,8 @@
     "name": "Only Natural Pet",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "only-natural-pet"
+    "slug": "only-natural-pet",
+    "website": "https://www.onlynaturalpet.com/"
   },
   {
     "countries": [
@@ -6714,7 +7085,8 @@
     "name": "Onyx Coffee Lab",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "anonymous-coffee-roasters-llc"
+    "slug": "anonymous-coffee-roasters-llc",
+    "website": null
   },
   {
     "countries": [
@@ -6731,7 +7103,8 @@
     "name": "Oolie Inc",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "oolie-inc"
+    "slug": "oolie-inc",
+    "website": "https://oolie.com/"
   },
   {
     "countries": [
@@ -6748,7 +7121,8 @@
     "name": "Open Water",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "open-water"
+    "slug": "open-water",
+    "website": "https://openwater.com/"
   },
   {
     "countries": [
@@ -6765,7 +7139,8 @@
     "name": "Opportunity Threads, LLC",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "opportunity-threads-llc"
+    "slug": "opportunity-threads-llc",
+    "website": "https://www.opportunitythreads.com/"
   },
   {
     "countries": [
@@ -6782,7 +7157,8 @@
     "name": "Orange Bike Brewing Company",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "orange-bike-brewing-company"
+    "slug": "orange-bike-brewing-company",
+    "website": "https://www.orange.com/"
   },
   {
     "countries": [
@@ -6799,7 +7175,8 @@
     "name": "Oregon Ice Cream",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "oregon-ice-cream"
+    "slug": "oregon-ice-cream",
+    "website": "https://oregon.com/"
   },
   {
     "countries": [
@@ -6816,7 +7193,8 @@
     "name": "Orgain",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "orgain"
+    "slug": "orgain",
+    "website": "https://orgain.com/"
   },
   {
     "countries": [
@@ -6834,7 +7212,8 @@
     "name": "ORGANIC INDIA USA",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "organic-india-usa"
+    "slug": "organic-india-usa",
+    "website": "https://organicindia.com/"
   },
   {
     "countries": [
@@ -6851,7 +7230,8 @@
     "name": "Outpatch LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "outpatch"
+    "slug": "outpatch",
+    "website": "https://outpatch.com/"
   },
   {
     "countries": [
@@ -6868,7 +7248,8 @@
     "name": "Packed with Purpose",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "packed-with-purpose"
+    "slug": "packed-with-purpose",
+    "website": null
   },
   {
     "countries": [
@@ -6886,7 +7267,8 @@
     "name": "Paka",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "paka"
+    "slug": "paka",
+    "website": "http://www.paka.com/"
   },
   {
     "countries": [
@@ -6903,7 +7285,8 @@
     "name": "Parks Project",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "httpswwwparksprojectus"
+    "slug": "httpswwwparksprojectus",
+    "website": "http://parks.com/"
   },
   {
     "countries": [
@@ -6920,7 +7303,8 @@
     "name": "Partake Foods, Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "partake-foods-inc"
+    "slug": "partake-foods-inc",
+    "website": "https://partakefoods.com/"
   },
   {
     "countries": [
@@ -6944,7 +7328,8 @@
     "name": "Patagonia",
     "sector": "Wholesale/Retail",
     "size": "1000+",
-    "slug": "patagonia-inc"
+    "slug": "patagonia-inc",
+    "website": "https://www.patagonia.com/"
   },
   {
     "countries": [
@@ -6961,7 +7346,8 @@
     "name": "Patara LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "patara-llc"
+    "slug": "patara-llc",
+    "website": null
   },
   {
     "countries": [
@@ -6978,7 +7364,8 @@
     "name": "Pathmore Food Group d/b/a Inked Bread Co.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "pathmore-food-group"
+    "slug": "pathmore-food-group",
+    "website": "https://pathmore.com/"
   },
   {
     "countries": [
@@ -6995,7 +7382,8 @@
     "name": "Peace Coffee",
     "sector": "Agriculture/Growers",
     "size": "50-249",
-    "slug": "peace-coffee"
+    "slug": "peace-coffee",
+    "website": null
   },
   {
     "countries": [
@@ -7012,7 +7400,8 @@
     "name": "PEAK DESIGN",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "peak-design"
+    "slug": "peak-design",
+    "website": "https://peak.com/"
   },
   {
     "countries": [
@@ -7029,7 +7418,8 @@
     "name": "Pearl Banyan Capital LLC",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "banyan-botanicals"
+    "slug": "banyan-botanicals",
+    "website": null
   },
   {
     "countries": [
@@ -7046,7 +7436,8 @@
     "name": "Perennial Harvest LLC",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "perennial-harvest-llc"
+    "slug": "perennial-harvest-llc",
+    "website": "https://perennial-harvest.com/"
   },
   {
     "countries": [
@@ -7063,7 +7454,8 @@
     "name": "Perpay Inc.",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "perpay-inc"
+    "slug": "perpay-inc",
+    "website": "https://perpay.com/"
   },
   {
     "countries": [
@@ -7080,7 +7472,8 @@
     "name": "Petaluma",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "petaluma"
+    "slug": "petaluma",
+    "website": null
   },
   {
     "countries": [
@@ -7097,7 +7490,8 @@
     "name": "Pete and Gerry's Organics, LLC",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "pete-gerrys-organics-llc"
+    "slug": "pete-gerrys-organics-llc",
+    "website": "https://www.pete.com/"
   },
   {
     "countries": [
@@ -7114,7 +7508,8 @@
     "name": "Pitaya Foods",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "pitaya-plus"
+    "slug": "pitaya-plus",
+    "website": null
   },
   {
     "countries": [
@@ -7131,7 +7526,8 @@
     "name": "Plaine Products",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "plaine-products"
+    "slug": "plaine-products",
+    "website": "https://plaineproducts.com/"
   },
   {
     "countries": [
@@ -7148,7 +7544,8 @@
     "name": "Plant People",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "plant-people"
+    "slug": "plant-people",
+    "website": "https://www.plant-people.com/"
   },
   {
     "countries": [
@@ -7166,7 +7563,8 @@
     "name": "P.L.A.Y. Pet Lifestyle and You Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "play-pet-lifestyle-and-you-inc"
+    "slug": "play-pet-lifestyle-and-you-inc",
+    "website": null
   },
   {
     "countries": [
@@ -7183,7 +7581,8 @@
     "name": "PLENTY Mercantile",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "plenty-mercantile"
+    "slug": "plenty-mercantile",
+    "website": "https://www.plenty.com/splash/"
   },
   {
     "countries": [
@@ -7200,7 +7599,8 @@
     "name": "Popzup Popcorn",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "popzup-popcorn"
+    "slug": "popzup-popcorn",
+    "website": "http://popzuppopcorn.com/"
   },
   {
     "countries": [
@@ -7217,7 +7617,8 @@
     "name": "Portland Garment Factory",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "portland-garment-factory"
+    "slug": "portland-garment-factory",
+    "website": "https://www.portlandgarmentfactory.com/"
   },
   {
     "countries": [
@@ -7234,7 +7635,8 @@
     "name": "Preserve",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "preserve"
+    "slug": "preserve",
+    "website": "http://www.preserve.com/"
   },
   {
     "countries": [
@@ -7251,7 +7653,8 @@
     "name": "Print & Pack LLC",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "print-pack-llc"
+    "slug": "print-pack-llc",
+    "website": "https://www.printpack.com/"
   },
   {
     "countries": [
@@ -7269,7 +7672,8 @@
     "name": "Project Hive Pet Company",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "project-hive-pet-company"
+    "slug": "project-hive-pet-company",
+    "website": null
   },
   {
     "countries": [
@@ -7286,7 +7690,8 @@
     "name": "Project Reef",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "project-reef"
+    "slug": "project-reef",
+    "website": null
   },
   {
     "countries": [
@@ -7305,7 +7710,8 @@
     "name": "Prose",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "prose"
+    "slug": "prose",
+    "website": "https://prose.com/"
   },
   {
     "countries": [
@@ -7322,7 +7728,8 @@
     "name": "Prosperity Candle",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "prosperity-candle"
+    "slug": "prosperity-candle",
+    "website": "https://www.prosperity.com/"
   },
   {
     "countries": [
@@ -7340,7 +7747,8 @@
     "name": "Prota Fiori Public Benefit Corporation",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "prota-fiori-public-benefit-corporation"
+    "slug": "prota-fiori-public-benefit-corporation",
+    "website": null
   },
   {
     "countries": [
@@ -7357,7 +7765,8 @@
     "name": "Proud Source Water",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "proud-source-water"
+    "slug": "proud-source-water",
+    "website": null
   },
   {
     "countries": [
@@ -7374,7 +7783,8 @@
     "name": "Pura Vida Bracelets",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "pura-vida-bracelets"
+    "slug": "pura-vida-bracelets",
+    "website": "https://pura.com/"
   },
   {
     "countries": [
@@ -7391,7 +7801,8 @@
     "name": "Pure Ground Ingredients",
     "sector": "Agriculture/Growers",
     "size": "50-249",
-    "slug": "pure-ground-ingredients"
+    "slug": "pure-ground-ingredients",
+    "website": "https://www.pure.com/"
   },
   {
     "countries": [
@@ -7408,7 +7819,8 @@
     "name": "Pure Madness Brewery Group",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "roadhouse-brewing-company-llc"
+    "slug": "roadhouse-brewing-company-llc",
+    "website": "https://www.pure.com/"
   },
   {
     "countries": [
@@ -7425,7 +7837,8 @@
     "name": "Pure Synergy",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "pure-synergy"
+    "slug": "pure-synergy",
+    "website": "https://puresynergy.com/"
   },
   {
     "countries": [
@@ -7442,7 +7855,8 @@
     "name": "Purely Elizabeth LLC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "purely-elizabeth"
+    "slug": "purely-elizabeth",
+    "website": "https://purely.com/"
   },
   {
     "countries": [
@@ -7459,7 +7873,8 @@
     "name": "Purity Coffee",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "purity-coffee"
+    "slug": "purity-coffee",
+    "website": null
   },
   {
     "countries": [
@@ -7476,7 +7891,8 @@
     "name": "Purse and Clutch",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "purse-and-clutch"
+    "slug": "purse-and-clutch",
+    "website": "https://www.purseandclutch.com/"
   },
   {
     "countries": [
@@ -7493,7 +7909,8 @@
     "name": "Pyzel Surfboards, LLC",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "pyzel-surfboards-llc"
+    "slug": "pyzel-surfboards-llc",
+    "website": null
   },
   {
     "countries": [
@@ -7510,7 +7927,8 @@
     "name": "QLE",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "q-l-e"
+    "slug": "q-l-e",
+    "website": null
   },
   {
     "countries": [
@@ -7528,7 +7946,8 @@
     "name": "Quality Bicycle Products, General Benefit Corporation",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "quality-bicycle-products-general-benefit-corporation"
+    "slug": "quality-bicycle-products-general-benefit-corporation",
+    "website": null
   },
   {
     "countries": [
@@ -7545,7 +7964,8 @@
     "name": "Quinn Foods",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "quinn-foods-wholesale-track"
+    "slug": "quinn-foods-wholesale-track",
+    "website": "https://quinn.com/"
   },
   {
     "countries": [
@@ -7562,7 +7982,8 @@
     "name": "R. Torre & Company",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "torani"
+    "slug": "torani",
+    "website": null
   },
   {
     "countries": [
@@ -7579,7 +8000,8 @@
     "name": "Rare Earth Group, INC (DBA: Fraser Tea)",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "rare-earth-group-inc-dba-fraser-tea"
+    "slug": "rare-earth-group-inc-dba-fraser-tea",
+    "website": "https://rareearth.com/"
   },
   {
     "countries": [
@@ -7601,7 +8023,8 @@
     "name": "Raven + Lily",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "raven-lily"
+    "slug": "raven-lily",
+    "website": "https://ravenlily.com/"
   },
   {
     "countries": [
@@ -7618,7 +8041,8 @@
     "name": "Real Thread",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "real-thread"
+    "slug": "real-thread",
+    "website": "https://www.realthread.com/"
   },
   {
     "countries": [
@@ -7636,7 +8060,8 @@
     "name": "Rebel Green",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "rebel-green"
+    "slug": "rebel-green",
+    "website": "https://www.rebel.com/en"
   },
   {
     "countries": [
@@ -7653,7 +8078,8 @@
     "name": "Red Bay Coffee",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "red-bay-coffee"
+    "slug": "red-bay-coffee",
+    "website": null
   },
   {
     "countries": [
@@ -7670,7 +8096,8 @@
     "name": "Red Cloud LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "red-cloud-llc"
+    "slug": "red-cloud-llc",
+    "website": "https://redcloud.com/"
   },
   {
     "countries": [
@@ -7687,7 +8114,8 @@
     "name": "Remedii Products",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "remedii-products"
+    "slug": "remedii-products",
+    "website": null
   },
   {
     "countries": [
@@ -7704,7 +8132,8 @@
     "name": "Revino Inc.",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "revino-inc"
+    "slug": "revino-inc",
+    "website": "https://revino.com/"
   },
   {
     "countries": [
@@ -7721,7 +8150,8 @@
     "name": "Revolusation Inc DBA Bagito",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "bagito"
+    "slug": "bagito",
+    "website": "https://www.revolusation.co/"
   },
   {
     "countries": [
@@ -7738,7 +8168,8 @@
     "name": "Revolution Foods",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "revolution-foods"
+    "slug": "revolution-foods",
+    "website": "https://www.revolution.com/"
   },
   {
     "countries": [
@@ -7755,7 +8186,8 @@
     "name": "Rhino Foods",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "rhino-foods"
+    "slug": "rhino-foods",
+    "website": null
   },
   {
     "countries": [
@@ -7772,7 +8204,8 @@
     "name": "RidgeCrest Herbals",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "ridge-crest-herbals"
+    "slug": "ridge-crest-herbals",
+    "website": "https://ridgecrest.com/"
   },
   {
     "countries": [
@@ -7789,7 +8222,8 @@
     "name": "Ripple Foods, PBC",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "ripple-foods-pbc"
+    "slug": "ripple-foods-pbc",
+    "website": "https://ripple.com/"
   },
   {
     "countries": [
@@ -7809,7 +8243,8 @@
     "name": "Ritual",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "ritual"
+    "slug": "ritual",
+    "website": "https://ritual.com/"
   },
   {
     "countries": [
@@ -7826,7 +8261,8 @@
     "name": "River Road Family Vineyards and Winery",
     "sector": "Agriculture/Growers",
     "size": "1-9",
-    "slug": "ron-rubin-winery"
+    "slug": "ron-rubin-winery",
+    "website": "https://river.com/"
   },
   {
     "countries": [
@@ -7843,7 +8279,8 @@
     "name": "Roads Rivers and Trails",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "roads-rivers-and-trails"
+    "slug": "roads-rivers-and-trails",
+    "website": "https://roadsriversandtrails.com/"
   },
   {
     "countries": [
@@ -7860,7 +8297,8 @@
     "name": "ROAR",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "roar-good-llc"
+    "slug": "roar-good-llc",
+    "website": "https://roar.com/"
   },
   {
     "countries": [
@@ -7877,7 +8315,8 @@
     "name": "ROCKIN' CAT Organic Coffee & Tea",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "rockin-cat"
+    "slug": "rockin-cat",
+    "website": null
   },
   {
     "countries": [
@@ -7894,7 +8333,8 @@
     "name": "Rogue Creamery",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "rogue-creamery"
+    "slug": "rogue-creamery",
+    "website": "https://roguecreamery.com/"
   },
   {
     "countries": [
@@ -7911,7 +8351,8 @@
     "name": "Room & Board",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "room-board"
+    "slug": "room-board",
+    "website": "https://roomboard.com/"
   },
   {
     "countries": [
@@ -7928,7 +8369,8 @@
     "name": "Rose Code, Inc.",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "rose-code-inc"
+    "slug": "rose-code-inc",
+    "website": null
   },
   {
     "countries": [
@@ -7945,7 +8387,8 @@
     "name": "Rosy Soil, PBC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "rosy-soil-pbc"
+    "slug": "rosy-soil-pbc",
+    "website": null
   },
   {
     "countries": [
@@ -7965,7 +8408,8 @@
     "name": "Ruadh",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "ruadh"
+    "slug": "ruadh",
+    "website": null
   },
   {
     "countries": [
@@ -7982,7 +8426,8 @@
     "name": "Rubicon Bakers",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "rubicon-bakers"
+    "slug": "rubicon-bakers",
+    "website": "https://www.rubiconbakers.com/"
   },
   {
     "countries": [
@@ -7999,7 +8444,8 @@
     "name": "Rumpl",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "rumpl"
+    "slug": "rumpl",
+    "website": null
   },
   {
     "countries": [
@@ -8016,7 +8462,8 @@
     "name": "Saalt, LLC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "saalt-llc"
+    "slug": "saalt-llc",
+    "website": "https://saalt.co/"
   },
   {
     "countries": [
@@ -8033,7 +8480,8 @@
     "name": "Sabai Design",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "sabai-design"
+    "slug": "sabai-design",
+    "website": "https://sabai.com/"
   },
   {
     "countries": [
@@ -8051,7 +8499,8 @@
     "name": "Sachai Tea Benefit Corp",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "sachai-tea-benefit-corp"
+    "slug": "sachai-tea-benefit-corp",
+    "website": null
   },
   {
     "countries": [
@@ -8069,7 +8518,8 @@
     "name": "Sapahn",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "sapahn"
+    "slug": "sapahn",
+    "website": null
   },
   {
     "countries": [
@@ -8086,7 +8536,8 @@
     "name": "Savvy Rest, Inc.",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "savvy-rest-inc"
+    "slug": "savvy-rest-inc",
+    "website": "https://savvyrest.com/"
   },
   {
     "countries": [
@@ -8103,7 +8554,8 @@
     "name": "Scout & Cellar",
     "sector": "Agriculture/Growers",
     "size": "10-49",
-    "slug": "scout-cellar"
+    "slug": "scout-cellar",
+    "website": "https://scout.yahoo.com/"
   },
   {
     "countries": [
@@ -8120,7 +8572,8 @@
     "name": "Scratch and Peck Feeds",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "scratch-and-peck-feeds"
+    "slug": "scratch-and-peck-feeds",
+    "website": "https://www.scratch.com/"
   },
   {
     "countries": [
@@ -8137,7 +8590,8 @@
     "name": "SEA K ORGANICS, LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "sea-k-organics-llc"
+    "slug": "sea-k-organics-llc",
+    "website": "https://www.sea.com/"
   },
   {
     "countries": [
@@ -8154,7 +8608,8 @@
     "name": "Sea to Table",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "sea-to-table"
+    "slug": "sea-to-table",
+    "website": "https://www.sea.com/"
   },
   {
     "countries": [
@@ -8171,7 +8626,8 @@
     "name": "Sea Witch Botanicals",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "sea-witch-botanicals"
+    "slug": "sea-witch-botanicals",
+    "website": "https://www.sea.com/"
   },
   {
     "countries": [
@@ -8188,7 +8644,8 @@
     "name": "Seams To Fit",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "seams-to-fit"
+    "slug": "seams-to-fit",
+    "website": "https://seams.com/"
   },
   {
     "countries": [
@@ -8205,7 +8662,8 @@
     "name": "SEED - Sustainable Entrepreneurial Ecosystem Development",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "seed-sustainable-entrepreneurial-ecosystem-development"
+    "slug": "seed-sustainable-entrepreneurial-ecosystem-development",
+    "website": null
   },
   {
     "countries": [
@@ -8222,7 +8680,8 @@
     "name": "Sencha Naturals",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "sencha-naturals"
+    "slug": "sencha-naturals",
+    "website": "https://www.sencha.com/"
   },
   {
     "countries": [
@@ -8239,7 +8698,8 @@
     "name": "Seven Sundays",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "seven-sundays"
+    "slug": "seven-sundays",
+    "website": "https://www.seven-sundays.com/"
   },
   {
     "countries": [
@@ -8256,7 +8716,8 @@
     "name": "Seventh Generation",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "seventh-generation"
+    "slug": "seventh-generation",
+    "website": "https://www.seventhgeneration.com/"
   },
   {
     "countries": [
@@ -8273,7 +8734,8 @@
     "name": "Shielded Beauty",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "shielded-beauty"
+    "slug": "shielded-beauty",
+    "website": null
   },
   {
     "countries": [
@@ -8290,7 +8752,8 @@
     "name": "Shine Pet Food Co",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "martys-meals-inc"
+    "slug": "martys-meals-inc",
+    "website": "https://shine.com/"
   },
   {
     "countries": [
@@ -8307,7 +8770,8 @@
     "name": "Sijo",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "sijo"
+    "slug": "sijo",
+    "website": null
   },
   {
     "countries": [
@@ -8324,7 +8788,8 @@
     "name": "Simek's",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "simeks"
+    "slug": "simeks",
+    "website": "https://simeks.com/"
   },
   {
     "countries": [
@@ -8341,7 +8806,8 @@
     "name": "Simply Straws",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "simply-straws"
+    "slug": "simply-straws",
+    "website": "https://www.simply.com/en/"
   },
   {
     "countries": [
@@ -8358,7 +8824,8 @@
     "name": "Siponey",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "siponey"
+    "slug": "siponey",
+    "website": "https://www.siponey.com/"
   },
   {
     "countries": [
@@ -8375,7 +8842,8 @@
     "name": "SITCH",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "sitch"
+    "slug": "sitch",
+    "website": "https://sitch.co/"
   },
   {
     "countries": [
@@ -8392,7 +8860,8 @@
     "name": "Skout's Honor",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "skouts-honor"
+    "slug": "skouts-honor",
+    "website": "https://skouts.com/"
   },
   {
     "countries": [
@@ -8409,7 +8878,8 @@
     "name": "So Good Brand, Inc. DBA So Good So You",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "so-good-so-you"
+    "slug": "so-good-so-you",
+    "website": "https://sogoodbrand.com/"
   },
   {
     "countries": [
@@ -8426,7 +8896,8 @@
     "name": "Soapbox",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "soapbox-soaps"
+    "slug": "soapbox-soaps",
+    "website": "https://soapbox.com/"
   },
   {
     "countries": [
@@ -8443,7 +8914,8 @@
     "name": "SoFine Food dba Dress It Up Dressing",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "sofine-food"
+    "slug": "sofine-food",
+    "website": null
   },
   {
     "countries": [
@@ -8460,7 +8932,8 @@
     "name": "Softstar Shoes",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "softstar-shoes"
+    "slug": "softstar-shoes",
+    "website": "https://www.softstarshoes.com/"
   },
   {
     "countries": [
@@ -8478,7 +8951,8 @@
     "name": "Solgaard Design Inc",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "solgaard-design-inc"
+    "slug": "solgaard-design-inc",
+    "website": "http://solgaard.com/"
   },
   {
     "countries": [
@@ -8495,7 +8969,8 @@
     "name": "Solmate Socks",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "solmate-socks"
+    "slug": "solmate-socks",
+    "website": "https://solmatesocks.com/"
   },
   {
     "countries": [
@@ -8512,7 +8987,8 @@
     "name": "SomethingElse",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "something-else"
+    "slug": "something-else",
+    "website": "https://somethingelse.com/"
   },
   {
     "countries": [
@@ -8529,7 +9005,8 @@
     "name": "Soter Vineyards",
     "sector": "Agriculture/Growers",
     "size": "10-49",
-    "slug": "soter-vineyards"
+    "slug": "soter-vineyards",
+    "website": "https://www.sotervineyards.com/"
   },
   {
     "countries": [
@@ -8546,7 +9023,8 @@
     "name": "Spinster Sisters",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "spinster-sisters"
+    "slug": "spinster-sisters",
+    "website": "http://www.spinster.com/"
   },
   {
     "countries": [
@@ -8563,7 +9041,8 @@
     "name": "Sportiqe, LLC",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "sportiqe-llc"
+    "slug": "sportiqe-llc",
+    "website": null
   },
   {
     "countries": [
@@ -8580,7 +9059,8 @@
     "name": "Steeped Coffee",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "steeped-coffee"
+    "slug": "steeped-coffee",
+    "website": null
   },
   {
     "countries": [
@@ -8597,7 +9077,8 @@
     "name": "Stick & Ball",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "stick-and-ball"
+    "slug": "stick-and-ball",
+    "website": "https://www.nystickball.com/"
   },
   {
     "countries": [
@@ -8614,7 +9095,8 @@
     "name": "Stoller Family Estate",
     "sector": "Agriculture/Growers",
     "size": "50-249",
-    "slug": "stoller-family-estate"
+    "slug": "stoller-family-estate",
+    "website": "https://stoller.com/"
   },
   {
     "countries": [
@@ -8631,7 +9113,8 @@
     "name": "Stone Creek Coffee",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "stone-creek-coffee"
+    "slug": "stone-creek-coffee",
+    "website": "https://stone.com/"
   },
   {
     "countries": [
@@ -8648,7 +9131,8 @@
     "name": "Storm Creek",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "tk-trading-co-dba-storm-creek"
+    "slug": "tk-trading-co-dba-storm-creek",
+    "website": null
   },
   {
     "countries": [
@@ -8665,7 +9149,8 @@
     "name": "Straightaway Cocktails",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "straightaway-cocktails"
+    "slug": "straightaway-cocktails",
+    "website": null
   },
   {
     "countries": [
@@ -8682,7 +9167,8 @@
     "name": "stubble + 'stache",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "tubble-stache"
+    "slug": "tubble-stache",
+    "website": "https://stubble.com/"
   },
   {
     "countries": [
@@ -8699,7 +9185,8 @@
     "name": "Studio FSR",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "studio-fsr"
+    "slug": "studio-fsr",
+    "website": "https://studiofsr.com/"
   },
   {
     "countries": [
@@ -8716,7 +9203,8 @@
     "name": "Stumptown Coffee Roasters",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "stumptown-coffee-roasters"
+    "slug": "stumptown-coffee-roasters",
+    "website": null
   },
   {
     "countries": [
@@ -8734,7 +9222,8 @@
     "name": "Sudara Inc.",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "sudara-inc"
+    "slug": "sudara-inc",
+    "website": null
   },
   {
     "countries": [
@@ -8757,7 +9246,8 @@
     "name": "Sunday Riley",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "sunday-riley"
+    "slug": "sunday-riley",
+    "website": "https://sunday-riley.com/"
   },
   {
     "countries": [
@@ -8774,7 +9264,8 @@
     "name": "Sundial Brands, LLC (SheaMoisture and Nubian Heritage)",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "sundial-brands-llc"
+    "slug": "sundial-brands-llc",
+    "website": "https://sundial.co/"
   },
   {
     "countries": [
@@ -8792,7 +9283,8 @@
     "name": "SUYO Pisco",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "unidos-imports-llc"
+    "slug": "unidos-imports-llc",
+    "website": "https://suyopisco.com/"
   },
   {
     "countries": [
@@ -8809,7 +9301,8 @@
     "name": "Sweet Life Baking LLC dba Feed Your Soul",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "feed-your-soul-llc"
+    "slug": "feed-your-soul-llc",
+    "website": "https://sweetlifebaking.com/"
   },
   {
     "countries": [
@@ -8826,7 +9319,8 @@
     "name": "Sweet Origins",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "sweet-origins"
+    "slug": "sweet-origins",
+    "website": null
   },
   {
     "countries": [
@@ -8843,7 +9337,8 @@
     "name": "Swift Printing Co.",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "swift-printing-and-commuications-inc"
+    "slug": "swift-printing-and-commuications-inc",
+    "website": "https://www.swiftprinting.com/"
   },
   {
     "countries": [
@@ -8860,7 +9355,8 @@
     "name": "Sydney Hale Co.",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "sydney-hale-co"
+    "slug": "sydney-hale-co",
+    "website": "http://sydneyhale.com/"
   },
   {
     "countries": [
@@ -8878,7 +9374,8 @@
     "name": "Synergy Products",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "synergy-products"
+    "slug": "synergy-products",
+    "website": "https://synergyproducts.com/"
   },
   {
     "countries": [
@@ -8895,7 +9392,8 @@
     "name": "Tabayer",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "tabayer"
+    "slug": "tabayer",
+    "website": null
   },
   {
     "countries": [
@@ -8916,7 +9414,8 @@
     "name": "Tabeeze",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "tabeeze"
+    "slug": "tabeeze",
+    "website": null
   },
   {
     "countries": [
@@ -8933,7 +9432,8 @@
     "name": "Tatemada LLC",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "siembra-y-cosecha-llc"
+    "slug": "siembra-y-cosecha-llc",
+    "website": "https://tatemada.com/"
   },
   {
     "countries": [
@@ -8950,7 +9450,8 @@
     "name": "TCHO Chocolate",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "t-c-h-o-ventures-inc"
+    "slug": "t-c-h-o-ventures-inc",
+    "website": null
   },
   {
     "countries": [
@@ -8967,7 +9468,8 @@
     "name": "TCK Enterprises trading as PUZZLES & Lewes Gourmet",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "tck-enterprises-trading-as-lewes-gourmet-puzzles"
+    "slug": "tck-enterprises-trading-as-lewes-gourmet-puzzles",
+    "website": "https://tck.com/"
   },
   {
     "countries": [
@@ -8984,7 +9486,8 @@
     "name": "Terminal B Intl LLC",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "terminal-b-intl-llc"
+    "slug": "terminal-b-intl-llc",
+    "website": null
   },
   {
     "countries": [
@@ -9001,7 +9504,8 @@
     "name": "Thanksgiving Coffee Co.",
     "sector": "Agriculture/Growers",
     "size": "10-49",
-    "slug": "thanksgiving-coffee-co"
+    "slug": "thanksgiving-coffee-co",
+    "website": null
   },
   {
     "countries": [
@@ -9018,7 +9522,8 @@
     "name": "The Alchemist",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "the-alchemist"
+    "slug": "the-alchemist",
+    "website": "http://thealchemist.com/"
   },
   {
     "countries": [
@@ -9035,7 +9540,8 @@
     "name": "The Blueberry Hill",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "the-blueberry-hill"
+    "slug": "the-blueberry-hill",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9062,7 +9568,8 @@
     "name": "The Burton Corporation",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "burton"
+    "slug": "burton",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9079,7 +9586,8 @@
     "name": "The FruitGuys",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "the-fruit-guys"
+    "slug": "the-fruit-guys",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9096,7 +9604,8 @@
     "name": "THE FULLEST",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "the-fullest"
+    "slug": "the-fullest",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9114,7 +9623,8 @@
     "name": "The Gem Group Inc (dba Gemline)",
     "sector": "Manufacturing",
     "size": "250-999",
-    "slug": "the-gem-group-inc-dba-gemline"
+    "slug": "the-gem-group-inc-dba-gemline",
+    "website": "https://thegem.com/"
   },
   {
     "countries": [
@@ -9131,7 +9641,8 @@
     "name": "The GFB",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "the-gfb"
+    "slug": "the-gfb",
+    "website": null
   },
   {
     "countries": [
@@ -9148,7 +9659,8 @@
     "name": "The Grain Shed",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "the-grain-shed"
+    "slug": "the-grain-shed",
+    "website": "https://thegrainshed.com/"
   },
   {
     "countries": [
@@ -9165,7 +9677,8 @@
     "name": "The Honest Bison",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "the-honest-bison"
+    "slug": "the-honest-bison",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9182,7 +9695,8 @@
     "name": "The Honest Kitchen",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "the-honest-kitchen"
+    "slug": "the-honest-kitchen",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9200,7 +9714,8 @@
     "name": "The House of LR&C, PBC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "the-house-of-lrc-pbc"
+    "slug": "the-house-of-lrc-pbc",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9217,7 +9732,8 @@
     "name": "The Human Beauty Movement, PBC",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "the-human-beauty-movement-pbc"
+    "slug": "the-human-beauty-movement-pbc",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9234,7 +9750,8 @@
     "name": "The Humble Shoe Company, Inc.",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "the-humble-shoe-company-inc"
+    "slug": "the-humble-shoe-company-inc",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9251,7 +9768,8 @@
     "name": "The Joinery",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "the-joinery"
+    "slug": "the-joinery",
+    "website": "http://the-joinery.com/"
   },
   {
     "countries": [
@@ -9268,7 +9786,8 @@
     "name": "The Kind Lab PBC DBA Bite Toothpaste Bits",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "the-kind-lab-pbc-dba-bite-toothpaste-bits"
+    "slug": "the-kind-lab-pbc-dba-bite-toothpaste-bits",
+    "website": "https://thekindlab.com/"
   },
   {
     "countries": [
@@ -9285,7 +9804,8 @@
     "name": "The Many Company",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "borobabi"
+    "slug": "borobabi",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9303,7 +9823,8 @@
     "name": "The Promotions Dept",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "the-promotions-dept"
+    "slug": "the-promotions-dept",
+    "website": "https://www.thepromotionsdept.com/"
   },
   {
     "countries": [
@@ -9321,7 +9842,8 @@
     "name": "The Radio Flyer Company",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "radio-flyer-inc"
+    "slug": "radio-flyer-inc",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9338,7 +9860,8 @@
     "name": "The Refill Shoppe, Inc.",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "the-refill-shoppe"
+    "slug": "the-refill-shoppe",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9355,7 +9878,8 @@
     "name": "THE SAK BRAND GROUP",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "the-sak-brand-group"
+    "slug": "the-sak-brand-group",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9372,7 +9896,8 @@
     "name": "The Tea Spot PBC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "the-tea-spot-pbc"
+    "slug": "the-tea-spot-pbc",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9389,7 +9914,8 @@
     "name": "The Vervain Collective LLC",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "the-vervain-collective-llc"
+    "slug": "the-vervain-collective-llc",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9410,7 +9936,8 @@
     "name": "The Vita Coco Company",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "the-vita-coco-company"
+    "slug": "the-vita-coco-company",
+    "website": "https://the.com/"
   },
   {
     "countries": [
@@ -9427,7 +9954,8 @@
     "name": "Thread Coffee Roasters",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "thread-coffee-roasters"
+    "slug": "thread-coffee-roasters",
+    "website": null
   },
   {
     "countries": [
@@ -9444,7 +9972,8 @@
     "name": "Thread Talk",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "thread-talk"
+    "slug": "thread-talk",
+    "website": "https://thread-talk.com/"
   },
   {
     "countries": [
@@ -9473,7 +10002,8 @@
     "name": "Thrive Farmers International, Inc.",
     "sector": "Agriculture/Growers",
     "size": "10-49",
-    "slug": "thrive-farmers-international-inc"
+    "slug": "thrive-farmers-international-inc",
+    "website": null
   },
   {
     "countries": [
@@ -9490,7 +10020,8 @@
     "name": "Thrive Market",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "thrive-market"
+    "slug": "thrive-market",
+    "website": "https://thrivemarket.com/"
   },
   {
     "countries": [
@@ -9507,7 +10038,8 @@
     "name": "Tillak",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "tillak"
+    "slug": "tillak",
+    "website": "https://tillak.com/"
   },
   {
     "countries": [
@@ -9524,7 +10056,8 @@
     "name": "Tillamook County Creamery Association",
     "sector": "Manufacturing",
     "size": "1000+",
-    "slug": "tillamook-county-creamery-association"
+    "slug": "tillamook-county-creamery-association",
+    "website": null
   },
   {
     "countries": [
@@ -9541,7 +10074,8 @@
     "name": "Timo & Violet Inc.",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "timo-violet-inc"
+    "slug": "timo-violet-inc",
+    "website": "https://www.timo.com/"
   },
   {
     "countries": [
@@ -9558,7 +10092,8 @@
     "name": "Toad & Co. International, Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "toad-co-international-inc"
+    "slug": "toad-co-international-inc",
+    "website": "https://toad.co/"
   },
   {
     "countries": [
@@ -9575,7 +10110,8 @@
     "name": "TomboyX, PBC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "tomboy-x"
+    "slug": "tomboy-x",
+    "website": "http://tomboyx.co/"
   },
   {
     "countries": [
@@ -9596,7 +10132,8 @@
     "name": "TOMS",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "toms"
+    "slug": "toms",
+    "website": "https://www.toms.com/"
   },
   {
     "countries": [
@@ -9613,7 +10150,8 @@
     "name": "Tom's of Maine",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "toms-of-maine"
+    "slug": "toms-of-maine",
+    "website": "https://www.toms.com/"
   },
   {
     "countries": [
@@ -9672,7 +10210,8 @@
     "name": "Touchstone Essentials",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "touchstone-essentials"
+    "slug": "touchstone-essentials",
+    "website": "https://touchstone.com/"
   },
   {
     "countries": [
@@ -9689,7 +10228,8 @@
     "name": "Town Hall Public Benefit Corporation",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "town-hall-public-benefit-corporation"
+    "slug": "town-hall-public-benefit-corporation",
+    "website": "https://www.town.com/"
   },
   {
     "countries": [
@@ -9706,7 +10246,8 @@
     "name": "Traditional Medicinals",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "traditional-medicinals"
+    "slug": "traditional-medicinals",
+    "website": "https://www.traditional.com/"
   },
   {
     "countries": [
@@ -9723,7 +10264,8 @@
     "name": "Trash Panda Disc Golf",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "trash-panda-disc-golf"
+    "slug": "trash-panda-disc-golf",
+    "website": null
   },
   {
     "countries": [
@@ -9738,7 +10280,8 @@
     "name": "Treve Health LLC",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "treve-health-llc"
+    "slug": "treve-health-llc",
+    "website": "https://trevehealth.com/"
   },
   {
     "countries": [
@@ -9755,7 +10298,8 @@
     "name": "Tribe Organics",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "triibe-inc"
+    "slug": "triibe-inc",
+    "website": null
   },
   {
     "countries": [
@@ -9772,7 +10316,8 @@
     "name": "Triple Bottom Brewing",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "triple-bottom-brewing"
+    "slug": "triple-bottom-brewing",
+    "website": "https://triplebottombrewing.com/"
   },
   {
     "countries": [
@@ -9793,7 +10338,8 @@
     "name": "Trois Noix",
     "sector": "Agriculture/Growers",
     "size": "1-9",
-    "slug": "aca-cellars-llc"
+    "slug": "aca-cellars-llc",
+    "website": null
   },
   {
     "countries": [
@@ -9810,7 +10356,8 @@
     "name": "True Botanicals, Inc",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "true-botanicals-inc"
+    "slug": "true-botanicals-inc",
+    "website": null
   },
   {
     "countries": [
@@ -9827,7 +10374,8 @@
     "name": "True Grace",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "true-grace"
+    "slug": "true-grace",
+    "website": "https://true-grace.com/"
   },
   {
     "countries": [
@@ -9844,7 +10392,8 @@
     "name": "TS Designs, Inc.",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "ts-designs-inc"
+    "slug": "ts-designs-inc",
+    "website": "https://tsdesigns.com/"
   },
   {
     "countries": [
@@ -9861,7 +10410,8 @@
     "name": "Turtle Fur",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "turtle-fur"
+    "slug": "turtle-fur",
+    "website": null
   },
   {
     "countries": [
@@ -9879,7 +10429,8 @@
     "name": "UmoParis",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "umo-paris"
+    "slug": "umo-paris",
+    "website": null
   },
   {
     "countries": [
@@ -9896,7 +10447,8 @@
     "name": "Uncommon Goods",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "uncommongoods"
+    "slug": "uncommongoods",
+    "website": "https://www.uncommongoods.com/"
   },
   {
     "countries": [
@@ -9913,7 +10465,8 @@
     "name": "Union Wine Company",
     "sector": "Agriculture/Growers",
     "size": "50-249",
-    "slug": "union-wine-company"
+    "slug": "union-wine-company",
+    "website": null
   },
   {
     "countries": [
@@ -9930,7 +10483,8 @@
     "name": "United By Blue",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "united-blue"
+    "slug": "united-blue",
+    "website": null
   },
   {
     "countries": [
@@ -9947,7 +10501,8 @@
     "name": "UNNI Corporation",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "unni-corporation"
+    "slug": "unni-corporation",
+    "website": null
   },
   {
     "countries": [
@@ -9965,7 +10520,8 @@
     "name": "unspun",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "unspun"
+    "slug": "unspun",
+    "website": null
   },
   {
     "countries": [
@@ -9982,7 +10538,8 @@
     "name": "Upslope Brewing Company",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "upslope-brewing-company"
+    "slug": "upslope-brewing-company",
+    "website": "https://www.upslope.com/"
   },
   {
     "countries": [
@@ -9999,7 +10556,8 @@
     "name": "Urban Remedy",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "urban-remedy"
+    "slug": "urban-remedy",
+    "website": "https://urbanremedy.com/"
   },
   {
     "countries": [
@@ -10016,7 +10574,8 @@
     "name": "Ursa Major Natural Care, Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "ursa-major"
+    "slug": "ursa-major",
+    "website": null
   },
   {
     "countries": [
@@ -10033,7 +10592,8 @@
     "name": "Vector Apparel Projects, INC",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "vector-apparel-projects-inc"
+    "slug": "vector-apparel-projects-inc",
+    "website": "https://vectorapparelprojects.com/"
   },
   {
     "countries": [
@@ -10050,7 +10610,8 @@
     "name": "Veritable Vegetable",
     "sector": "Agriculture/Growers",
     "size": "50-249",
-    "slug": "veritable-vegetable"
+    "slug": "veritable-vegetable",
+    "website": "https://veritablevegetable.com/"
   },
   {
     "countries": [
@@ -10067,7 +10628,8 @@
     "name": "Vermont Creamery",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "vermont-creamery"
+    "slug": "vermont-creamery",
+    "website": "https://vermont.com/"
   },
   {
     "countries": [
@@ -10084,7 +10646,8 @@
     "name": "Vertical Activewear",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "vertical-activewear"
+    "slug": "vertical-activewear",
+    "website": "https://www.verticalactivewear.com/"
   },
   {
     "countries": [
@@ -10110,7 +10673,8 @@
     "name": "Vintner's Daughter",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "vintners-daughter"
+    "slug": "vintners-daughter",
+    "website": "https://vintners.com/"
   },
   {
     "countries": [
@@ -10127,7 +10691,8 @@
     "name": "Vital Proteins LLC",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "vital-proteins-llc"
+    "slug": "vital-proteins-llc",
+    "website": "https://vital-proteins.com/"
   },
   {
     "countries": [
@@ -10144,7 +10709,8 @@
     "name": "VPL",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "vpl"
+    "slug": "vpl",
+    "website": null
   },
   {
     "countries": [
@@ -10161,7 +10727,8 @@
     "name": "Waiakea, Inc",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "waiakea-inc"
+    "slug": "waiakea-inc",
+    "website": null
   },
   {
     "countries": [
@@ -10178,7 +10745,8 @@
     "name": "Walden Local Meat",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "walden-local-meat"
+    "slug": "walden-local-meat",
+    "website": "https://www.waldenlocalmeat.com/"
   },
   {
     "countries": [
@@ -10196,7 +10764,8 @@
     "name": "Wallaroo Hat Company",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "wallaroo-hat-company"
+    "slug": "wallaroo-hat-company",
+    "website": null
   },
   {
     "countries": [
@@ -10214,7 +10783,8 @@
     "name": "Warby Parker",
     "sector": "Wholesale/Retail",
     "size": "250-999",
-    "slug": "warby-parker"
+    "slug": "warby-parker",
+    "website": "https://warby.com/"
   },
   {
     "countries": [
@@ -10231,7 +10801,8 @@
     "name": "Waterlust LLC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "waterlust"
+    "slug": "waterlust",
+    "website": null
   },
   {
     "countries": [
@@ -10248,7 +10819,8 @@
     "name": "WAYB, Inc.",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "wayb-inc"
+    "slug": "wayb-inc",
+    "website": null
   },
   {
     "countries": [
@@ -10265,7 +10837,8 @@
     "name": "Wellnesse PBC",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "wellnesse-p-b-c"
+    "slug": "wellnesse-p-b-c",
+    "website": null
   },
   {
     "countries": [
@@ -10282,7 +10855,8 @@
     "name": "Welltayl",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "welltayl"
+    "slug": "welltayl",
+    "website": "https://welltayl.co/"
   },
   {
     "countries": [
@@ -10299,7 +10873,8 @@
     "name": "West Paw, LLC",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "west-paw-inc"
+    "slug": "west-paw-inc",
+    "website": "https://west.com/"
   },
   {
     "countries": [
@@ -10316,7 +10891,8 @@
     "name": "Westland Distillery",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "the-westland-distillery-co-ltd"
+    "slug": "the-westland-distillery-co-ltd",
+    "website": null
   },
   {
     "countries": [
@@ -10333,7 +10909,8 @@
     "name": "Weston",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "weston"
+    "slug": "weston",
+    "website": "https://weston.com/"
   },
   {
     "countries": [
@@ -10350,7 +10927,8 @@
     "name": "White Mountain Chaga LLC",
     "sector": "Manufacturing",
     "size": "0",
-    "slug": "peak-state"
+    "slug": "peak-state",
+    "website": "https://www.white.com/login.htm?c=login"
   },
   {
     "countries": [
@@ -10367,7 +10945,8 @@
     "name": "Wicked Joe, Wicked Leaf & Benbows Coffee",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "wicked-joe"
+    "slug": "wicked-joe",
+    "website": "https://www.wicked.com/"
   },
   {
     "countries": [
@@ -10384,7 +10963,8 @@
     "name": "Wild Rye, PBC",
     "sector": "Wholesale/Retail",
     "size": "10-49",
-    "slug": "wild-rye-inc"
+    "slug": "wild-rye-inc",
+    "website": null
   },
   {
     "countries": [
@@ -10401,7 +10981,8 @@
     "name": "Winderlea Vineyard and Winery",
     "sector": "Agriculture/Growers",
     "size": "1-9",
-    "slug": "winderlea-vineyard-and-winery"
+    "slug": "winderlea-vineyard-and-winery",
+    "website": "https://winderlea.com/"
   },
   {
     "countries": [
@@ -10418,7 +10999,8 @@
     "name": "WishGarden Herbs",
     "sector": "Manufacturing",
     "size": "10-49",
-    "slug": "wish-garden-herbs"
+    "slug": "wish-garden-herbs",
+    "website": null
   },
   {
     "countries": [
@@ -10435,7 +11017,8 @@
     "name": "Wonderstate Coffee",
     "sector": "Agriculture/Growers",
     "size": "50-249",
-    "slug": "wonderstate-coffee"
+    "slug": "wonderstate-coffee",
+    "website": null
   },
   {
     "countries": [
@@ -10453,7 +11036,8 @@
     "name": "World Centric",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "world-centric"
+    "slug": "world-centric",
+    "website": "https://www.worldcentric.com/"
   },
   {
     "countries": [
@@ -10470,7 +11054,8 @@
     "name": "W.S. Badger Co, Inc.",
     "sector": "Manufacturing",
     "size": "50-249",
-    "slug": "ws-badger-co-inc"
+    "slug": "ws-badger-co-inc",
+    "website": "https://ws.com/"
   },
   {
     "countries": [
@@ -10488,7 +11073,8 @@
     "name": "YareSafo Hair, LLC (DBA Safo Hair)",
     "sector": "Wholesale/Retail",
     "size": "0",
-    "slug": "yare-safo-hair-llc-dba-safo-hair"
+    "slug": "yare-safo-hair-llc-dba-safo-hair",
+    "website": null
   },
   {
     "countries": [
@@ -10506,7 +11092,8 @@
     "name": "Yellow Leaf Hammocks",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "yellow-leaf-hammocks"
+    "slug": "yellow-leaf-hammocks",
+    "website": "https://yellow.com/"
   },
   {
     "countries": [
@@ -10523,7 +11110,8 @@
     "name": "Your Very Best, LLC",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "your-very-best"
+    "slug": "your-very-best",
+    "website": "https://yourverybest.com/"
   },
   {
     "countries": [
@@ -10540,7 +11128,8 @@
     "name": "ZEGO LLC",
     "sector": "Manufacturing",
     "size": "1-9",
-    "slug": "zego"
+    "slug": "zego",
+    "website": "https://www.zego.com/"
   },
   {
     "countries": [
@@ -10558,7 +11147,8 @@
     "name": "Zevia PBC",
     "sector": "Wholesale/Retail",
     "size": "50-249",
-    "slug": "zevia"
+    "slug": "zevia",
+    "website": "https://zevia.com/"
   },
   {
     "countries": [
@@ -10575,7 +11165,8 @@
     "name": "Zusa",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "zusa"
+    "slug": "zusa",
+    "website": null
   },
   {
     "countries": [
@@ -10592,7 +11183,8 @@
     "name": "ZYN",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "zyn"
+    "slug": "zyn",
+    "website": null
   },
   {
     "countries": [
@@ -10609,6 +11201,7 @@
     "name": "ZZ Driggs",
     "sector": "Wholesale/Retail",
     "size": "1-9",
-    "slug": "zz-driggs"
+    "slug": "zz-driggs",
+    "website": "https://zz.com/"
   }
 ]
