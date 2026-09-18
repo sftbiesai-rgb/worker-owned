@@ -100,7 +100,7 @@
 5. Tags stripped from search.json to keep file size under Vercel limits (was 25MB → 15MB)
 6. Purpose Trusts directory still needs data (Notion page requires JS; ask Mark Hand)
 7. See COVERAGE.md for outstanding stores that couldn't be scraped
-8. 57 stores (6,648 products) have no industry category — need manual mapping
+8. ~~57 stores (6,648 products) have no industry category — need manual mapping~~ ✓ All 234 stores categorized
 9. Custom scrapers needed for: Patagonia, King Arthur, Cariloha, Lake Champlain, Torani
 
 ## Stats for Mark
