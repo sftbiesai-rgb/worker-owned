@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import { slugify, faviconUrl, displayTags } from '../lib/utils'
 
+const TYPE_LABELS = { B: 'B Corp', F: 'Benefit Corp', P: 'Purpose Pledge', S: 'Steward-Owned', '1': '100% for Purpose' }
+const TYPE_COLORS = { B: 'bg-emerald-100 text-emerald-700', F: 'bg-blue-100 text-blue-700', P: 'bg-amber-100 text-amber-700', S: 'bg-purple-100 text-purple-700', '1': 'bg-rose-100 text-rose-700' }
+
 export default function ProductCard({ product: p, showStore = true }) {
   return (
     <div className="bg-[#f5f5f7] rounded-xl overflow-hidden group">
@@ -11,7 +14,7 @@ export default function ProductCard({ product: p, showStore = true }) {
         className="block hover:opacity-90 transition-opacity"
       >
         {p.image && (
-          <div className="aspect-square w-full overflow-hidden bg-gray-100 relative">
+          <div className="aspect-[4/3] w-full overflow-hidden bg-gray-100 relative">
             <img
               src={p.image}
               alt={p.title}
@@ -42,6 +45,15 @@ export default function ProductCard({ product: p, showStore = true }) {
             {faviconUrl(p.store_url) && <img src={faviconUrl(p.store_url)} alt="" className="w-3 h-3 shrink-0" loading="lazy" />}
             {p.store_name}
           </Link>
+          {p.ownership_types?.length > 0 && (
+            <div className="flex flex-wrap gap-1 mt-0.5">
+              {p.ownership_types.map(t => (
+                <span key={t} className={`text-[8px] font-semibold px-1.5 py-0.5 rounded ${TYPE_COLORS[t] || 'bg-gray-100 text-gray-500'}`}>
+                  {TYPE_LABELS[t] || t}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>

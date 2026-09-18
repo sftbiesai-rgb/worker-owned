@@ -6,6 +6,9 @@ import ProductCard from '../components/ProductCard'
 import Pagination from '../components/Pagination'
 import Footer from '../components/Footer'
 
+const TYPE_LABELS = { B: 'B Corp', F: 'Benefit Corp', P: 'Purpose Pledge', S: 'Steward-Owned', '1': '100% for Purpose' }
+const TYPE_COLORS = { B: 'bg-emerald-100 text-emerald-700', F: 'bg-blue-100 text-blue-700', P: 'bg-amber-100 text-amber-700', S: 'bg-purple-100 text-purple-700', '1': 'bg-rose-100 text-rose-700' }
+
 export default function StorePage() {
   const { store: storeSlug } = useParams()
   const [products, setProducts] = useState([])
@@ -18,11 +21,12 @@ export default function StorePage() {
       .then(r => r.json())
       .then(data => {
         const stores = data.s
-        const hydrated = data.p.map(p => ({
-          id: p[0], title: p[1], price: p[2] || null, image: p[3] || null,
-          url: p[4], store_name: stores[p[5]].n, store_url: stores[p[5]].u,
-          store_industry: stores[p[5]].i, product_type: p[6],
-          tags: p[7], available: p[8] !== 0,
+        const hydrated = data.p.map((p, i) => ({
+          id: i, title: p[1], price: (p[2] && parseFloat(p[2]) > 0) ? p[2] : null, image: p[3] || null,
+          url: p[4], store_name: stores[p[0]].n, store_url: stores[p[0]].u,
+          store_industry: stores[p[0]].i, product_type: p[6],
+          tags: p[7], available: p[5] !== 0,
+          ownership_types: stores[p[0]].t || [],
         }))
         setProducts(hydrated)
       })
@@ -65,6 +69,15 @@ export default function StorePage() {
             <div>
               <h1 className="text-xl font-bold text-gray-900">{store?.store_name || storeSlug}</h1>
               {store?.store_industry && <p className="text-xs text-gray-500">{store.store_industry}</p>}
+              {store?.ownership_types?.length > 0 && (
+                <div className="flex flex-wrap gap-1 mt-1">
+                  {store.ownership_types.map(t => (
+                    <span key={t} className={`text-[10px] font-semibold px-2 py-0.5 rounded ${TYPE_COLORS[t] || 'bg-gray-100 text-gray-500'}`}>
+                      {TYPE_LABELS[t] || t}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
           {store?.store_url && (

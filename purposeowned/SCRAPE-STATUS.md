@@ -3,7 +3,7 @@
 ## Site
 - **Live at**: https://purposeowned.vercel.app
 - **Location**: `purposeowned/site/` (Vite + React + Tailwind)
-- **Currently showing**: 26,519 products from 93 stores (B Corp Shopify + WooCommerce)
+- **Currently showing**: 63,545 products from 218 stores
 
 ## Data Sources
 
@@ -12,54 +12,36 @@
 - **Raw data**: `bcorp_us_companies.json` (3,407 US B Corps)
 - **Filtered**: `bcorp_us_hq_ecommerce.json` (593 consumer/retail candidates, 584 with websites)
 - **E-commerce detected**: 206 stores
-  - Shopify: 89 (82 found via sitemap)
-  - WooCommerce: 26
-  - Squarespace: 14
-  - BigCommerce: 7
-  - Magento: 4
-  - Unknown: 66
+  - Shopify: 89 — DONE (25,051 products)
+  - WooCommerce: 26 — DONE (1,468 products)
+  - Squarespace: 14 — DONE (included in squarespace scrape)
+  - BigCommerce: 7 — DONE (included in bigcommerce scrape)
+  - Magento: 4 — DONE (31 products from Softstar; other 3 had no scrapable product data)
+  - Unknown: 66 — DONE (many turned out to be Shopify, scraped in unknown pass)
 
-#### Shopify scraping — DONE
-- 80/82 stores scraped, 25,051 products
-- Method: `/products.json?limit=250&page=N` pagination
-- Saved: `bcorp_products.json` (merged Shopify + WooCommerce = 26,519 products)
-- Also: `bcorp_products_blocked.json` (rescrape results, already merged)
-
-#### WooCommerce scraping — DONE
-- 13/26 stores had products, 1,468 products total
-- Method: Store API (`/wp-json/wc/store/products`) + sitemap HTML fallback
-- Saved: `bcorp_products_woocommerce.json`
-- Already merged into `bcorp_products.json`
-
-#### Not yet scraped from B Corps:
-- Squarespace: 14 stores
-- BigCommerce: 7 stores
-- Unknown platform: 66 stores
-
-### 2. Benefit Corporations (domoregood.com) — IN PROGRESS
+### 2. Benefit Corporations (domoregood.com) — DONE
 - **Source**: Google Sheets CSV at domoregood.com/benefit-corporation-directory
 - **Raw data**: `benefit_corps.json` (2,090 in good standing out of 10,311 total)
 - **Websites found**: 1,735 (83%) via domain guessing
-- **E-commerce detected**: `benefit_corps_ecommerce.json` (419 stores)
-  - New (not overlapping B Corps): 388
-  - Shopify: 50 new, WooCommerce: 108 new, Squarespace: 14, BigCommerce: 3, Unknown: 213
+- **E-commerce detected**: `benefit_corps_ecommerce.json` (419 stores, 388 new)
+  - Shopify: 50 — DONE (2,476 products)
+  - WooCommerce: 108 — DONE (3,454 products)
+  - Squarespace: 14 — DONE (included in squarespace scrape)
+  - BigCommerce: 3 — DONE (included in bigcommerce scrape)
+  - Unknown: 213 — DONE (scraped in unknown pass)
 
-#### Benefit Corp Shopify scraping — DONE
-- 22 stores with products (4 false positives filtered: Brighton, Champion, Boondockers, Love Foundation; also Lafe's, Dolphin Blue)
-- 2,476 products
-- Saved: `benefit_corps_products_shopify.json`
-- **NOT YET merged into main products or deployed to site**
-
-#### Benefit Corp WooCommerce scraping — IN PROGRESS (running at shutdown)
-- Script: `/tmp/bcorp_scrape_benefit_woo.py`
-- 108 stores to scrape
-- PID was running at shutdown; output file `benefit_corps_products_woo.json` not yet saved
-- **NEEDS TO BE RE-RUN** — the script is at `/tmp/bcorp_scrape_benefit_woo.py`
-
-#### Not yet scraped from benefit corps:
-- Squarespace: 14 stores
-- BigCommerce: 3 stores  
-- Unknown platform: 213 stores
+### Platform scrape results
+| Platform | Stores attempted | With products | Products |
+|----------|-----------------|---------------|----------|
+| Shopify (B Corp) | 82 | 80 | 25,051 |
+| WooCommerce (B Corp) | 26 | 13 | 1,468 |
+| Shopify (Benefit Corp) | 50 | 22 | 2,476 |
+| WooCommerce (Benefit Corp) | 108 | 18 | 3,454 |
+| Squarespace (both) | 28 | 11 | 189 |
+| BigCommerce (both) | 10 | 4 | 3,110 |
+| Magento (B Corp) | 4 | 1 | 31 |
+| Unknown (both) | 613 | 71 (all Shopify) | 27,857 |
+| **Total** | | **218** (after dedup) | **63,545** |
 
 ### 3. Purpose Pledge — NOT STARTED
 - Source: https://www.purposepledge.org/companies
@@ -78,28 +60,52 @@
 - Source: https://100forpurpose.org/
 - Only 11 companies (Newman's Own, Patagonia, Ecosia, Mozilla, etc.)
 
-## Scripts (in /tmp — may be lost on restart)
-- `/tmp/bcorp_shopify_scrape.py` — Sitemap-based Shopify scraper (B Corps)
-- `/tmp/bcorp_scrape_blocked.py` — /products.json pagination scraper for blocked stores
-- `/tmp/bcorp_scrape_woocommerce.py` — WooCommerce scraper (B Corps)
-- `/tmp/bcorp_benefit_corps.py` — Benefit corp directory pull + website finding + ecommerce detection
-- `/tmp/bcorp_scrape_benefit_shopify.py` — Benefit corp Shopify scraper
-- `/tmp/bcorp_scrape_benefit_woo.py` — Benefit corp WooCommerce scraper (needs re-run)
-- `/tmp/bcorp_find_shopify.py` — Early Shopify finder via /products.json
-- `/tmp/bcorp_triage_ecommerce.py` — E-commerce triage script
-- `/tmp/bcorp_last40.py` — URL fixer for last 40 missing websites
+## Product files
+- `bcorp_products.json` — merged master file (63,545 products)
+- `products_squarespace.json` — 189 products from 11 stores
+- `products_bigcommerce.json` — 3,110 products from 4 stores
+- `products_magento.json` — 31 products from 1 store
+- `products_unknown.json` — 27,857 products from 71 stores
+
+## Scripts (in `purposeowned/scripts/`)
+- `bcorp_shopify_scrape.py` — Sitemap-based Shopify scraper (B Corps)
+- `bcorp_scrape_blocked.py` — /products.json pagination scraper for blocked stores
+- `bcorp_scrape_woocommerce.py` — WooCommerce scraper (B Corps)
+- `bcorp_benefit_corps.py` — Benefit corp directory pull + website finding + ecommerce detection
+- `bcorp_scrape_benefit_shopify.py` — Benefit corp Shopify scraper
+- `bcorp_scrape_benefit_woo.py` — Benefit corp WooCommerce scraper
+- `scrape_squarespace.py` — Squarespace scraper (both sources)
+- `scrape_bigcommerce.py` — BigCommerce scraper (both sources)
+- `scrape_magento.py` — Magento scraper
+- `scrape_unknown.py` — Unknown platform auto-detect + scrape
+- `bcorp_find_shopify.py` — Early Shopify finder via /products.json
+- `bcorp_triage_ecommerce.py` — E-commerce triage script
+- `bcorp_last40.py` — URL fixer for last 40 missing websites
+
+## UI (2026-09-17)
+- Divergent mobile/desktop: mobile 2-col grid + filter drawer, desktop sidebar facets + grid/list toggle
+- Filters: ownership type, price range, industry, store, in-stock toggle, refine text
+- Dynamic facet counts (update based on current filter state)
+- Round-robin store diversity in search results
+- Autocomplete suggestions on desktop
+- $0.00 prices treated as no price (3,524 products affected)
+- Products without images hidden from search results
+- Image aspect ratio 4:3 for denser grid
 
 ## Next Steps
-1. Re-run benefit corp WooCommerce scraper (`/tmp/bcorp_scrape_benefit_woo.py`)
-2. Merge benefit corp products into main `bcorp_products.json`
-3. Rebuild search.json and redeploy site
-4. Scrape remaining platforms (Squarespace, BigCommerce, unknown) from both sources
-5. Pull remaining data sources (Purpose Pledge, purpose trusts, steward-owned, 100% for Purpose)
-6. Add ownership type labels to products (B Corp, benefit corp, steward-owned, etc.)
+1. ~~Scrape remaining platforms (Squarespace, BigCommerce, Magento, unknown)~~ ✓
+2. ~~Pull remaining data sources (Purpose Pledge, steward-owned, 100% for Purpose)~~ ✓
+3. ~~Add ownership type labels to products (B Corp, benefit corp, steward-owned, etc.)~~ ✓
+4. ~~Divergent mobile/desktop UI with filters~~ ✓
+5. Tags stripped from search.json to keep file size under Vercel limits (was 25MB → 15MB)
+6. Purpose Trusts directory still needs data (Notion page requires JS; ask Mark Hand)
+7. See COVERAGE.md for outstanding stores that couldn't be scraped
+8. 57 stores (6,648 products) have no industry category — need manual mapping
+9. Custom scrapers needed for: Patagonia, King Arthur, Cariloha, Lake Champlain, Torani
 
 ## Stats for Mark
 | Source | Companies | With Website | E-commerce | Products Scraped |
 |--------|-----------|-------------|------------|-----------------|
-| B Corps | 593 candidates | 584 (98%) | 206 | 26,519 |
-| Benefit Corps | 2,090 good standing | 1,735 (83%) | 419 (388 new) | 2,476 (Shopify only, WooCommerce pending) |
-| **Total** | | | | **28,995** |
+| B Corps | 593 candidates | 584 (98%) | 206 | ~28,000 |
+| Benefit Corps | 2,090 good standing | 1,735 (83%) | 419 (388 new) | ~35,500 |
+| **Total** | | | **218 stores** | **63,545** |

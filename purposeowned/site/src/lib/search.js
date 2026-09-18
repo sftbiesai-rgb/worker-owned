@@ -2,11 +2,11 @@ import MiniSearch from 'minisearch'
 
 export function buildProductIndex(products) {
   const ms = new MiniSearch({
-    fields: ['title', 'tagsText'],
+    fields: ['title', 'productType'],
     searchOptions: {
-      boost: { title: 3, tagsText: 1 },
+      boost: { title: 3, productType: 1 },
       prefix: true,
-      fuzzy: 0.15,
+      fuzzy: 0.1,
       combineWith: 'AND',
     },
   })
@@ -14,7 +14,7 @@ export function buildProductIndex(products) {
   ms.addAll(products.map((p, i) => ({
     id: i,
     title: (p.title || '').toLowerCase(),
-    tagsText: (p.tags || []).join(' ').toLowerCase(),
+    productType: (p.product_type || '').toLowerCase(),
   })))
 
   return ms
@@ -27,18 +27,40 @@ export function searchProducts(query, products, index) {
 
   const results = index.search(words.join(' '))
 
-  // Store fatigue: don't let one store dominate
-  const storeCounts = new Map()
-  const scored = results
-    .filter(r => products[r.id]?.available !== false)
-    .map(r => {
-      const p = products[r.id]
-      const store = p.store_name || ''
-      const prior = storeCounts.get(store) || 0
-      storeCounts.set(store, prior + 1)
-      return { p, effective: r.score - (prior * 0.003 * r.score) }
-    })
+  // Store diversity: interleave results from different stores
+  // First pass: group by store and sort each group by score
+  const byStore = new Map()
+  for (const r of results) {
+    const p = products[r.id]
+    if (!p) continue
+    const store = p.store_name || ''
+    if (!byStore.has(store)) byStore.set(store, [])
+    byStore.get(store).push({ p, score: r.score })
+  }
 
-  scored.sort((a, b) => b.effective - a.effective)
-  return scored.map(s => s.p)
+  // Sort each store's results by score
+  for (const arr of byStore.values()) {
+    arr.sort((a, b) => b.score - a.score)
+  }
+
+  // Round-robin interleave: pick top result from each store, then second, etc.
+  // Order stores by their best score so higher-relevance stores come first
+  const storeOrder = [...byStore.entries()]
+    .sort((a, b) => b[1][0].score - a[1][0].score)
+
+  const interleaved = []
+  let round = 0
+  let added = true
+  while (added) {
+    added = false
+    for (const [, arr] of storeOrder) {
+      if (round < arr.length) {
+        interleaved.push(arr[round].p)
+        added = true
+      }
+    }
+    round++
+  }
+
+  return interleaved
 }
