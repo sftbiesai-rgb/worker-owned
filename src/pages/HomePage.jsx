@@ -114,7 +114,7 @@ function HomePage() {
         </div>
 
         <div className="mt-3 flex flex-col gap-2 text-center">
-          <Link to="/marketplace" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
+          <Link to="/" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             Shop worker and employee owned businesses online &rarr;
           </Link>
           <Link to="/submit" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">

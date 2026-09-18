@@ -21,7 +21,7 @@ export default function ProductCard({ product: p, showStore = true, compact = fa
         {p.store_name && (
           <div className="px-2.5 pb-1.5">
             <Link
-              to={`/marketplace/store/${slugify(p.store_name)}`}
+              to={`/store/${slugify(p.store_name)}`}
               className="text-[9px] text-gray-400 hover:text-[#003580] transition-colors truncate flex items-center gap-1"
             >
               {faviconUrl(p.store_url) && <img src={faviconUrl(p.store_url)} alt="" className="w-3 h-3 shrink-0" loading="lazy" />}
@@ -71,7 +71,7 @@ export default function ProductCard({ product: p, showStore = true, compact = fa
       {showStore && p.store_name && (
         <div className="px-3 pb-2">
           <Link
-            to={`/marketplace/store/${slugify(p.store_name)}`}
+            to={`/store/${slugify(p.store_name)}`}
             className="text-[10px] text-gray-400 hover:text-[#003580] transition-colors truncate flex items-center gap-1"
           >
             {faviconUrl(p.store_url) && <img src={faviconUrl(p.store_url)} alt="" className="w-3 h-3 shrink-0" loading="lazy" />}

@@ -41,7 +41,7 @@ function MarketplacePage() {
     const desc = activeSub
       ? `Browse ${activeSub.label.toLowerCase()} from worker owned businesses. Shop cooperatively made products.`
       : section.description
-    const canonical = `https://www.workerowned.info/marketplace/${section.slug}${activeSub ? '/' + activeSub.slug : ''}`
+    const canonical = `https://www.workerowned.info/${section.slug}${activeSub ? '/' + activeSub.slug : ''}`
     document.title = title
     document.querySelector('meta[name="description"]')?.setAttribute('content', desc)
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
@@ -54,8 +54,8 @@ function MarketplacePage() {
 
   useEffect(() => { setPage(1); setFilter(''); setActiveFilter(null) }, [category, subcategory])
 
-  if (!section) return <Navigate to="/marketplace" replace />
-  if (subcategory && subs && !activeSub) return <Navigate to={`/marketplace/${category}`} replace />
+  if (!section) return <Navigate to="/" replace />
+  if (subcategory && subs && !activeSub) return <Navigate to={`/${category}`} replace />
 
   const sectionProducts = products.filter(p => p.site_section === section.sectionName)
 
@@ -105,7 +105,7 @@ function MarketplacePage() {
             {SECTIONS.map(s => (
               <Link
                 key={s.slug}
-                to={`/marketplace/${s.slug}`}
+                to={`/${s.slug}`}
                 className={`px-3 py-1 rounded-full text-xs font-semibold transition-colors ${
                   s.slug === category
                     ? 'bg-[#003580] text-white'
@@ -121,7 +121,7 @@ function MarketplacePage() {
           {subs && (
             <div className="flex flex-wrap gap-1.5 justify-center">
               <Link
-                to={`/marketplace/${category}`}
+                to={`/${category}`}
                 className={`px-3 py-1 rounded-full text-xs font-medium transition-colors border ${
                   !activeSub
                     ? 'bg-gray-700 text-white border-gray-700'
@@ -133,7 +133,7 @@ function MarketplacePage() {
               {subs.map(s => (
                 <Link
                   key={s.slug}
-                  to={`/marketplace/${category}/${s.slug}`}
+                  to={`/${category}/${s.slug}`}
                   className={`px-3 py-1 rounded-full text-xs font-medium transition-colors border ${
                     s.slug === subcategory
                       ? 'bg-gray-700 text-white border-gray-700'
@@ -170,7 +170,7 @@ function MarketplacePage() {
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-4 py-3 mb-3 flex justify-center items-center gap-0 text-sm font-bold uppercase tracking-wide">
           <span className="text-[#9B0620]">Products</span>
           <span className="text-gray-300 mx-2">|</span>
-          <Link to={`/marketplace/${category}/directory`} className="text-[#003580] hover:text-[#002660] transition-colors">Directory</Link>
+          <Link to={`/${category}/directory`} className="text-[#003580] hover:text-[#002660] transition-colors">Directory</Link>
         </div>
 
         {/* Products grid */}
@@ -217,7 +217,7 @@ function MarketplacePage() {
           {showStores && (
             <div className="space-y-3 mt-4">
               {entries.map(entry => (
-                <Link key={entry.id} to={`/marketplace/store/${slugify(entry.name)}`} className="block bg-[#f5f5f7] rounded-xl px-4 py-3 hover:ring-1 hover:ring-[#003580] transition-all">
+                <Link key={entry.id} to={`/store/${slugify(entry.name)}`} className="block bg-[#f5f5f7] rounded-xl px-4 py-3 hover:ring-1 hover:ring-[#003580] transition-all">
                   <div className="flex items-start justify-between gap-2 mb-1">
                     <span className="font-semibold text-sm text-[#003580] leading-snug flex items-center gap-1.5">
                       {faviconUrl(entry.url) && <img src={faviconUrl(entry.url)} alt="" className="w-4 h-4 shrink-0" loading="lazy" />}
@@ -238,7 +238,7 @@ function MarketplacePage() {
         </div>
 
         <div className="mt-3 text-center">
-          <Link to="/marketplace" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
+          <Link to="/" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; All categories
           </Link>
         </div>

@@ -147,7 +147,7 @@ for (const [slug, stats] of Object.entries(sectionStats)) {
       name,
       ownershipType: info.ownershipType,
     })),
-    url: `/marketplace/${slug}`,
+    url: `/${slug}`,
   }
 }
 

@@ -80,14 +80,14 @@ function StoreProductsPage() {
     document.title = `${entry.name} — ${label} | Worker Owned Marketplace`
   }, [entry, sectionLabel, section])
 
-  if (!entry) return <Navigate to="/marketplace" replace />
+  if (!entry) return <Navigate to="/" replace />
 
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
       <main className="flex-1 max-w-xl lg:max-w-4xl mx-auto w-full px-5 py-8 flex flex-col">
         <Breadcrumbs items={[
-          { label: 'Marketplace', to: '/marketplace' },
-          { label: entry.name, to: `/marketplace/store/${store}` },
+          { label: 'Marketplace', to: '/' },
+          { label: entry.name, to: `/store/${store}` },
           { label: sectionLabel },
         ]} />
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-8">
@@ -101,7 +101,7 @@ function StoreProductsPage() {
             <h1 className="flex items-center gap-2 mb-1">
               {faviconUrl(entry.url) && <img src={faviconUrl(entry.url)} alt="" className="w-5 h-5 shrink-0" loading="lazy" />}
               <Link
-                to={`/marketplace/store/${store}`}
+                to={`/store/${store}`}
                 className="text-lg font-bold text-[#003580] hover:text-[#002660] transition-colors leading-snug"
               >
                 {entry.name}
@@ -127,10 +127,10 @@ function StoreProductsPage() {
         </div>
 
         <div className="mt-3 text-center flex flex-col gap-1">
-          <Link to={`/marketplace/store/${store}`} className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
+          <Link to={`/store/${store}`} className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             ← {entry.name}
           </Link>
-          <Link to="/marketplace" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
+          <Link to="/" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             ← All categories
           </Link>
         </div>

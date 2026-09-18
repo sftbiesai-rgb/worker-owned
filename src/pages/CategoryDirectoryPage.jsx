@@ -32,7 +32,7 @@ function CategoryDirectoryPage() {
     if (!section) return
     const title = `${section.label} Companies — Worker Owned Directory`
     const desc = `Browse all worker and employee owned ${section.label.toLowerCase()} companies. Directory of cooperatives and employee-owned businesses.`
-    const canonical = `https://www.workerowned.info/marketplace/${section.slug}/directory`
+    const canonical = `https://www.workerowned.info/${section.slug}/directory`
     document.title = title
     document.querySelector('meta[name="description"]')?.setAttribute('content', desc)
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
@@ -43,7 +43,7 @@ function CategoryDirectoryPage() {
     document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', desc)
   }, [section])
 
-  if (!section) return <Navigate to="/marketplace" replace />
+  if (!section) return <Navigate to="/" replace />
 
   const entries = dedupeByUrl(
     marketplaceData.filter(e => e.site_section === section.sectionName)
@@ -79,7 +79,7 @@ function CategoryDirectoryPage() {
             {SECTIONS.map(s => (
               <Link
                 key={s.slug}
-                to={`/marketplace/${s.slug}/directory`}
+                to={`/${s.slug}/directory`}
                 className={`px-3 py-1 rounded-full text-xs font-semibold transition-colors ${
                   s.slug === category
                     ? 'bg-[#003580] text-white'
@@ -94,7 +94,7 @@ function CategoryDirectoryPage() {
         </div>
 
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-4 py-3 mb-3 flex justify-center items-center gap-0 text-sm font-bold uppercase tracking-wide">
-          <Link to={`/marketplace/${category}`} className="text-[#9B0620] hover:text-[#700518] transition-colors">Products</Link>
+          <Link to={`/${category}`} className="text-[#9B0620] hover:text-[#700518] transition-colors">Products</Link>
           <span className="text-gray-300 mx-2">|</span>
           <span className="text-[#003580]">Directory</span>
         </div>
@@ -116,7 +116,7 @@ function CategoryDirectoryPage() {
               return (
                 <Link
                   key={entry.id}
-                  to={`/marketplace/store/${slugify(entry.name)}`}
+                  to={`/store/${slugify(entry.name)}`}
                   className="block bg-[#f5f5f7] rounded-xl px-4 py-3 hover:ring-1 hover:ring-[#003580] transition-all"
                 >
                   <div className="flex items-start justify-between gap-2 mb-1">
@@ -153,10 +153,10 @@ function CategoryDirectoryPage() {
         </div>
 
         <div className="mt-3 text-center flex flex-col gap-1">
-          <Link to={`/marketplace/${category}`} className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
+          <Link to={`/${category}`} className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; {section.label} products
           </Link>
-          <Link to="/marketplace" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
+          <Link to="/" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             &larr; All categories
           </Link>
         </div>

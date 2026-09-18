@@ -28,7 +28,7 @@ function renderCategoryMatch(result) {
   for (const store of s.stores) {
     const pill = document.createElement('a')
     pill.className = 'store-pill'
-    pill.href = `${SITE}/marketplace/${s.slug}`
+    pill.href = `${SITE}/${s.slug}`
     pill.target = '_blank'
     pill.innerHTML = `
       <span>${store.name}</span>
@@ -37,7 +37,7 @@ function renderCategoryMatch(result) {
     container.appendChild(pill)
   }
 
-  document.getElementById('category-cta').href = `${SITE}/marketplace/${s.slug}`
+  document.getElementById('category-cta').href = `${SITE}/${s.slug}`
 }
 
 function renderProductMatch(result) {
@@ -82,7 +82,7 @@ function renderProductMatch(result) {
   }
 
   if (result.section) {
-    document.getElementById('product-cta').href = `${SITE}/marketplace/${result.section.slug}`
+    document.getElementById('product-cta').href = `${SITE}/${result.section.slug}`
     document.getElementById('product-cta').textContent = `Browse all ${result.section.label}`
   }
 }

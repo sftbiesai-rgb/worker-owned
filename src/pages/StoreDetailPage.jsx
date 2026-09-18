@@ -82,7 +82,7 @@ function StoreDetailPage() {
     const desc = entry.notes || `Shop ${entry.name}, a ${entry.ownership_type} selling ${entry.category}.`
     document.title = title
     document.querySelector('meta[name="description"]')?.setAttribute('content', desc)
-    const canonical = `https://www.workerowned.info/marketplace/store/${store}`
+    const canonical = `https://www.workerowned.info/store/${store}`
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
     document.querySelector('meta[property="og:title"]')?.setAttribute('content', title)
@@ -91,14 +91,14 @@ function StoreDetailPage() {
     document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', desc)
   }, [entry, store])
 
-  if (!entry) return <Navigate to="/marketplace" replace />
+  if (!entry) return <Navigate to="/" replace />
 
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
       <main className="flex-1 max-w-xl lg:max-w-4xl mx-auto w-full px-5 py-8 flex flex-col">
         <Breadcrumbs items={[
-          { label: 'Marketplace', to: '/marketplace' },
-          ...(categorySlug ? [{ label: entry.site_section, to: `/marketplace/${categorySlug}` }] : []),
+          { label: 'Marketplace', to: '/' },
+          ...(categorySlug ? [{ label: entry.site_section, to: `/${categorySlug}` }] : []),
           { label: entry.name },
         ]} />
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-8">
@@ -150,7 +150,7 @@ function StoreDetailPage() {
                         {section.label} <span className="text-gray-400 font-normal">({section.count.toLocaleString()})</span>
                       </h3>
                       {section.count > section.products.length && (
-                        <Link to={`/marketplace/store/${store}/${sectionSlug}`} className="text-xs text-[#003580] hover:text-[#002660] font-medium transition-colors">
+                        <Link to={`/store/${store}/${sectionSlug}`} className="text-xs text-[#003580] hover:text-[#002660] font-medium transition-colors">
                           View all {section.count.toLocaleString()} →
                         </Link>
                       )}
@@ -189,11 +189,11 @@ function StoreDetailPage() {
 
         <div className="mt-3 text-center flex flex-col gap-1">
           {categorySlug && (
-            <Link to={`/marketplace/${categorySlug}`} className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
+            <Link to={`/${categorySlug}`} className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
               ← {entry.site_section}
             </Link>
           )}
-          <Link to="/marketplace" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
+          <Link to="/" className="text-sm text-[#003580] hover:text-[#9B0620] transition-colors font-medium">
             ← All categories
           </Link>
         </div>

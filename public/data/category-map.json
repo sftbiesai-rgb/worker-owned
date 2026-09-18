@@ -73,7 +73,7 @@
           "ownershipType": "worker co-op"
         }
       ],
-      "url": "/marketplace/coffee-tea"
+      "url": "/coffee-tea"
     },
     "books": {
       "label": "Books",
@@ -105,7 +105,7 @@
           "ownershipType": "volunteer worker co-op"
         }
       ],
-      "url": "/marketplace/books"
+      "url": "/books"
     },
     "food-pantry": {
       "label": "Food & Pantry",
@@ -137,7 +137,7 @@
           "ownershipType": "farmer co-op"
         }
       ],
-      "url": "/marketplace/food-pantry"
+      "url": "/food-pantry"
     },
     "personal-care": {
       "label": "Personal Care",
@@ -165,7 +165,7 @@
           "ownershipType": "worker co-op"
         }
       ],
-      "url": "/marketplace/personal-care"
+      "url": "/personal-care"
     },
     "games": {
       "label": "Games",
@@ -197,7 +197,7 @@
           "ownershipType": "ESOP"
         }
       ],
-      "url": "/marketplace/games"
+      "url": "/games"
     },
     "apparel": {
       "label": "Apparel",
@@ -229,7 +229,7 @@
           "ownershipType": "employee-owned"
         }
       ],
-      "url": "/marketplace/apparel"
+      "url": "/apparel"
     },
     "home-goods": {
       "label": "Home Goods & Services",
@@ -261,7 +261,7 @@
           "ownershipType": "ESOP"
         }
       ],
-      "url": "/marketplace/home-goods"
+      "url": "/home-goods"
     },
     "media-publishing": {
       "label": "Media & Publishing",
@@ -293,7 +293,7 @@
           "ownershipType": "worker co-op"
         }
       ],
-      "url": "/marketplace/media-publishing"
+      "url": "/media-publishing"
     },
     "beer-brewing": {
       "label": "Beer & Brewing",
@@ -317,7 +317,7 @@
           "ownershipType": "employee-owned"
         }
       ],
-      "url": "/marketplace/beer-brewing"
+      "url": "/beer-brewing"
     },
     "sporting-goods": {
       "label": "Sporting Goods & Outdoors",
@@ -341,7 +341,7 @@
           "ownershipType": "worker co-op"
         }
       ],
-      "url": "/marketplace/sporting-goods"
+      "url": "/sporting-goods"
     },
     "music": {
       "label": "Music",
@@ -357,7 +357,7 @@
           "ownershipType": "worker-owned"
         }
       ],
-      "url": "/marketplace/music"
+      "url": "/music"
     },
     "movies-tv": {
       "label": "Movies & TV",
@@ -369,7 +369,7 @@
           "ownershipType": "employee-owned"
         }
       ],
-      "url": "/marketplace/movies-tv"
+      "url": "/movies-tv"
     }
   }
 }

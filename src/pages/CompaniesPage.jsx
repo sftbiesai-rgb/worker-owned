@@ -14,7 +14,7 @@ function CompaniesPage() {
     document.title = 'All Worker and Employee Owned Companies | Worker Owned Marketplace'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
       'Browse all worker and employee owned companies in the Worker Owned marketplace directory, sorted by category.')
-    const canonical = 'https://www.workerowned.info/marketplace/companies'
+    const canonical = 'https://www.workerowned.info/companies'
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
   }, [])
@@ -23,7 +23,7 @@ function CompaniesPage() {
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
       <main className="flex-1 max-w-xl mx-auto w-full px-5 py-8 flex flex-col">
         <Breadcrumbs items={[
-          { label: 'Marketplace', to: '/marketplace' },
+          { label: 'Marketplace', to: '/' },
           { label: 'All Companies' },
         ]} />
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-8">
@@ -49,7 +49,7 @@ function CompaniesPage() {
                     <div key={store.id} className="bg-[#f5f5f7] rounded-xl px-4 py-2.5">
                       <div className="flex items-center gap-2">
                         <Link
-                          to={`/marketplace/store/${slugify(store.name)}`}
+                          to={`/store/${slugify(store.name)}`}
                           className="font-semibold text-sm text-[#003580] hover:text-[#002660] transition-colors truncate flex items-center gap-1.5"
                         >
                           {faviconUrl(store.url) && <img src={faviconUrl(store.url)} alt="" className="w-4 h-4 shrink-0" loading="lazy" />}

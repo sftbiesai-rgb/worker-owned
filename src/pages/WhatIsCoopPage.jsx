@@ -90,7 +90,7 @@ function WhatIsCoopPage() {
                 <li><strong>Cooperative Coffee Roasters</strong> - Small-batch coffee from Asheville, NC.</li>
                 <li><strong>AK Press</strong> - Independent books and publishing. Worker-owned since 1990.</li>
               </ul>
-              <Link to="/marketplace/companies" className="inline-block mt-2 text-[#003580] hover:text-[#002660] font-medium text-xs">
+              <Link to="/companies" className="inline-block mt-2 text-[#003580] hover:text-[#002660] font-medium text-xs">
                 Browse all 170+ worker and employee owned companies &rarr;
               </Link>
             </section>

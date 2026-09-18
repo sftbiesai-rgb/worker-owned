@@ -111,7 +111,7 @@ function MarketplaceIndexPage() {
     document.title = 'Market Place | Shop worker and employee owned online stores for apparel, home goods, food and more'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
       'Browse worker and employee owned online stores by category or search thousands of products from cooperatives and employee-owned companies.')
-    const canonical = 'https://www.workerowned.info/marketplace'
+    const canonical = 'https://www.workerowned.info/'
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
   }, [])
@@ -268,7 +268,7 @@ function MarketplaceIndexPage() {
                   {SECTIONS.map(cat => (
                     <Link
                       key={cat.slug}
-                      to={`/marketplace/${cat.slug}`}
+                      to={`/${cat.slug}`}
                       className="py-1.5 px-3 rounded-lg text-xs font-medium bg-[#f5f5f7] text-gray-600 hover:text-[#003580] hover:bg-blue-50 transition-colors"
                     >
                       {cat.label}
@@ -363,7 +363,7 @@ function MarketplaceIndexPage() {
                     {companiesExpanded && (
                       <div className="px-6 pb-5 space-y-2">
                         {companyResults.slice(0, 10).map(c => (
-                          <Link key={c.id} to={`/marketplace/store/${slugify(c.name)}`} className="flex items-center gap-3 bg-[#f5f5f7] rounded-xl px-4 py-3 hover:bg-blue-50 transition-colors">
+                          <Link key={c.id} to={`/store/${slugify(c.name)}`} className="flex items-center gap-3 bg-[#f5f5f7] rounded-xl px-4 py-3 hover:bg-blue-50 transition-colors">
                             {c.url && <img src={faviconUrl(c.url)} alt="" width="16" height="16" className="shrink-0" />}
                             <div className="min-w-0 flex-1">
                               <div className="flex items-center gap-2">
@@ -390,7 +390,7 @@ function MarketplaceIndexPage() {
                 {SECTIONS.map(cat => (
                   <Link
                     key={cat.slug}
-                    to={`/marketplace/${cat.slug}`}
+                    to={`/${cat.slug}`}
                     className="py-2 px-4 rounded-lg text-sm font-medium bg-[#f5f5f7] text-gray-600 hover:text-[#003580] hover:bg-blue-50 transition-colors"
                   >
                     {cat.label}
@@ -413,7 +413,7 @@ function MarketplaceIndexPage() {
                               <ProductCard product={p} compact borderColor={PICK_BORDER_COLORS[PICK_ORDER[i]]} />
                             </div>
                             {p.site_section && SECTION_SLUGS[p.site_section] && (
-                              <Link to={`/marketplace/${SECTION_SLUGS[p.site_section]}`} className="text-[10px] text-[#003580] hover:text-[#9B0620] transition-colors mt-1 text-center block">
+                              <Link to={`/${SECTION_SLUGS[p.site_section]}`} className="text-[10px] text-[#003580] hover:text-[#9B0620] transition-colors mt-1 text-center block">
                                 Browse more {p.site_section.toLowerCase()} &rarr;
                               </Link>
                             )}

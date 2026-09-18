@@ -138,7 +138,7 @@ function AlternativesPage() {
                     <div key={store.id} className="bg-[#f5f5f7] rounded-xl px-4 py-2.5">
                       <div className="flex items-center gap-2">
                         <Link
-                          to={`/marketplace/store/${slugify(store.name)}`}
+                          to={`/store/${slugify(store.name)}`}
                           className="font-semibold text-sm text-[#003580] hover:text-[#002660] transition-colors truncate flex items-center gap-1.5"
                         >
                           {faviconUrl(store.url) && <img src={faviconUrl(store.url)} alt="" className="w-4 h-4 shrink-0" loading="lazy" />}
@@ -162,7 +162,7 @@ function AlternativesPage() {
 
                 {alt.categories && stores.length > 8 && (
                   <Link
-                    to={`/marketplace/${slugify(alt.categories[0].section)}`}
+                    to={`/${slugify(alt.categories[0].section)}`}
                     className="inline-block mt-2 text-xs text-[#003580] hover:text-[#002660] font-medium"
                   >
                     View all {stores.length} stores &rarr;
@@ -170,7 +170,7 @@ function AlternativesPage() {
                 )}
                 {alt.picks && (
                   <Link
-                    to="/marketplace/companies"
+                    to="/companies"
                     className="inline-block mt-2 text-xs text-[#003580] hover:text-[#002660] font-medium"
                   >
                     Browse all companies &rarr;

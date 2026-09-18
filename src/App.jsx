@@ -18,7 +18,7 @@ import ContactPage from './pages/ContactPage.jsx'
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/marketplace" replace />} />
+      <Route path="/" element={<MarketplaceIndexPage />} />
       <Route path="/coffee" element={<BrowsePage category="coffee" />} />
       <Route path="/restaurants" element={<BrowsePage category="restaurant" />} />
       <Route path="/bars" element={<BarsPage />} />
@@ -30,13 +30,16 @@ export default function App() {
       <Route path="/guides/alternatives" element={<AlternativesPage />} />
       <Route path="/guides/what-is-a-worker-cooperative" element={<WhatIsCoopPage />} />
       <Route path="/guides/worker-owned-coffee/:city" element={<CoffeeCityPage />} />
-      <Route path="/marketplace" element={<MarketplaceIndexPage />} />
-      <Route path="/marketplace/companies" element={<CompaniesPage />} />
-      <Route path="/marketplace/store/:store" element={<StoreDetailPage />} />
-      <Route path="/marketplace/store/:store/:section" element={<StoreProductsPage />} />
-      <Route path="/marketplace/:category/directory" element={<CategoryDirectoryPage />} />
-      <Route path="/marketplace/:category/:subcategory" element={<MarketplacePage />} />
-      <Route path="/marketplace/:category" element={<MarketplacePage />} />
+      <Route path="/companies" element={<CompaniesPage />} />
+      <Route path="/store/:store" element={<StoreDetailPage />} />
+      <Route path="/store/:store/:section" element={<StoreProductsPage />} />
+      {/* Backwards compat: redirect old /marketplace URLs */}
+      <Route path="/marketplace" element={<Navigate to="/" replace />} />
+      <Route path="/marketplace/*" element={<Navigate to="/" replace />} />
+      {/* Catch-all category routes must come AFTER all named routes */}
+      <Route path="/:category/directory" element={<CategoryDirectoryPage />} />
+      <Route path="/:category/:subcategory" element={<MarketplacePage />} />
+      <Route path="/:category" element={<MarketplacePage />} />
     </Routes>
   )
 }
