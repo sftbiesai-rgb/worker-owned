@@ -185,9 +185,13 @@ function MarketplaceIndexPage() {
     if (filterPmax) r = r.filter(p => p.price && parseFloat(p.price) <= parseFloat(filterPmax))
     const terms = filterRefine.toLowerCase().split(/\s+/).filter(Boolean)
     if (terms.length > 0) {
-      const termPatterns = terms.map(t => new RegExp(`(?:^|[^a-z])${t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'i'))
+      const termPatterns = terms.map(t => {
+        const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+        const alt = escaped.endsWith('s') ? `(?:${escaped}|${escaped.slice(0, -1)})` : `(?:${escaped}|${escaped}s)`
+        return new RegExp(`(?:^|[^a-z])${alt}(?:[^a-z]|$)`, 'i')
+      })
       r = r.filter(p => {
-        const text = (p.title || '') + ' ' + (p.tags || []).join(' ')
+        const text = (p.title || '') + ' ' + (p.product_type || '') + ' ' + (p.tags || []).join(' ')
         return termPatterns.every(re => re.test(text))
       })
     }

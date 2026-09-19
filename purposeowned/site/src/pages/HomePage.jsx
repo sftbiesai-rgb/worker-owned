@@ -149,9 +149,13 @@ function HomePage() {
     }
     const terms = localRefine.toLowerCase().split(/\s+/).filter(Boolean)
     if (terms.length > 0) {
-      const patterns = terms.map(t => new RegExp(`\\b${t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'i'))
+      const patterns = terms.map(t => {
+        const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+        const alt = escaped.endsWith('s') ? `(?:${escaped}|${escaped.slice(0, -1)})` : `(?:${escaped}|${escaped}s)`
+        return new RegExp(`(?:^|[^a-z])${alt}(?:[^a-z]|$)`, 'i')
+      })
       r = r.filter(p => {
-        const text = (p.title || '') + ' ' + (p.product_type || '') + ' ' + (p.store_name || '')
+        const text = (p.title || '') + ' ' + (p.product_type || '') + ' ' + (p.store_name || '') + ' ' + (p.tags || []).join(' ')
         return patterns.every(re => re.test(text))
       })
     }
