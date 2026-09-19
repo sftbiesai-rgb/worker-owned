@@ -211,6 +211,7 @@ function MarketplaceIndexPage() {
   const storeCount = useMemo(() => new Set(products.map(p => p.store_url)).size, [products])
 
   const searching = query.trim().length > 0
+  const searchLoading = searching && products.length === 0
 
   const handlePriceChange = useCallback((pmin, pmax) => {
     setLocalPmin(pmin)
@@ -280,7 +281,7 @@ function MarketplaceIndexPage() {
         </div>
 
         {searching ? (
-          loadingProducts ? (
+          searchLoading ? (
             <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
               <div className="text-center py-4">
                 <p className="text-sm text-gray-500 animate-pulse">Searching...</p>
