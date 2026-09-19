@@ -107,6 +107,11 @@ function MarketplaceIndexPage() {
     preloadRef.current = fetch('/data/search.json').then(r => r.json())
   }, [])
 
+  const [brokenImages, setBrokenImages] = useState(new Set())
+  const handleFeaturedImageError = useCallback((id) => {
+    setBrokenImages(prev => new Set(prev).add(id))
+  }, [])
+
   useEffect(() => {
     fetch('/data/featured.json')
       .then(r => r.json())
@@ -422,10 +427,10 @@ function MarketplaceIndexPage() {
                     <div key={PICK_ORDER[i]}>
                       <p className={`text-xs font-bold mb-2 text-center ${PICK_COLORS[PICK_ORDER[i]]}`}>{PICK_LABELS[PICK_ORDER[i]]}</p>
                       <div className="space-y-3">
-                        {col.map(p => (
+                        {col.filter(p => !brokenImages.has(p.id)).map(p => (
                           <div key={p.id} className="flex flex-col">
                             <div className="flex-1">
-                              <ProductCard product={p} compact borderColor={PICK_BORDER_COLORS[PICK_ORDER[i]]} />
+                              <ProductCard product={p} compact borderColor={PICK_BORDER_COLORS[PICK_ORDER[i]]} onImageError={() => handleFeaturedImageError(p.id)} />
                             </div>
                             {p.site_section && SECTION_SLUGS[p.site_section] && (
                               <Link to={`/${SECTION_SLUGS[p.site_section]}`} className="text-[10px] text-[#003580] hover:text-[#9B0620] transition-colors mt-1 text-center block">
