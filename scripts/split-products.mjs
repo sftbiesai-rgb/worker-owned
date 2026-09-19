@@ -5,6 +5,48 @@ import { fileURLToPath } from 'url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
 
+// ── Title normalization ──
+
+const HTML_ENTITIES = {
+  '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&apos;': "'",
+  '&#39;': "'", '&nbsp;': ' ', '&ndash;': '–', '&mdash;': '—',
+  '&lsquo;': '\u2018', '&rsquo;': '\u2019', '&ldquo;': '\u201C', '&rdquo;': '\u201D',
+  '&trade;': '\u2122', '&reg;': '\u00AE', '&copy;': '\u00A9',
+}
+
+function decodeEntities(s) {
+  // Named entities
+  s = s.replace(/&\w+;/g, m => HTML_ENTITIES[m] || m)
+  // Numeric decimal &#123;
+  s = s.replace(/&#(\d+);/g, (_, n) => String.fromCharCode(parseInt(n)))
+  // Numeric hex &#x1F;
+  s = s.replace(/&#x([\da-fA-F]+);/g, (_, n) => String.fromCharCode(parseInt(n, 16)))
+  return s
+}
+
+// Words that should stay lowercase in title case (unless first/last)
+const TITLE_LOWER = new Set(['a','an','the','and','but','or','nor','for','yet','so','in','on','at','to','by','of','up','as','is','if','it','no','vs'])
+
+function toTitleCase(s) {
+  return s.toLowerCase().replace(/\b\w+/g, (word, i) => {
+    if (i > 0 && TITLE_LOWER.has(word)) return word
+    return word.charAt(0).toUpperCase() + word.slice(1)
+  })
+}
+
+function normalizeTitle(title) {
+  if (!title) return title
+  // Decode HTML entities
+  title = decodeEntities(title)
+  // Convert ALL CAPS to Title Case (only if entire title is uppercase and > 5 chars)
+  if (title.length > 5 && title === title.toUpperCase() && /[A-Z]/.test(title)) {
+    title = toTitleCase(title)
+  }
+  // Collapse whitespace
+  title = title.replace(/\s+/g, ' ').trim()
+  return title
+}
+
 const REMAP = {
   'Home & Garden': 'Home Goods & Services',
   'Home Goods': 'Home Goods & Services',
@@ -132,6 +174,15 @@ if (!existsSync(productsPath)) {
 }
 
 const products = JSON.parse(readFileSync(productsPath, 'utf-8'))
+
+// Normalize titles: decode HTML entities, fix ALL CAPS
+let normalized = 0
+for (const p of products) {
+  const orig = p.title
+  p.title = normalizeTitle(p.title)
+  if (p.title !== orig) normalized++
+}
+if (normalized > 0) console.log(`Normalized ${normalized} product titles`)
 
 let remapped = 0
 for (const p of products) {
