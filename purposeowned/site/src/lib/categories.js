@@ -1,20 +1,61 @@
-// B Corp industry categories mapped from the data
+// Purpose Owned – 8 product categories
+// Each maps one or more B Corp industry values → a single category slug/label
+
 export const CATEGORIES = [
-  { slug: 'food',           label: 'Food & Pantry',        industry: 'Food products' },
-  { slug: 'apparel',        label: 'Apparel',              industry: 'Apparel' },
-  { slug: 'personal-care',  label: 'Personal Care',        industry: 'Personal care products' },
-  { slug: 'beverages',      label: 'Beverages',            industry: 'Beverages' },
-  { slug: 'home-goods',     label: 'Home Goods',           industry: 'Other manufacturing' },
-  { slug: 'agriculture',    label: 'Agriculture',          industry: 'Agricultural Processing' },
-  { slug: 'sporting-goods', label: 'Sporting Goods',       industry: 'Sports goods' },
-  { slug: 'cleaning',       label: 'Cleaning Products',    industry: 'Cleaning products' },
-  { slug: 'furniture',      label: 'Furniture',            industry: 'Furniture' },
-  { slug: 'textiles',       label: 'Textiles & Rugs',      industry: 'Textiles' },
-  { slug: 'retail',         label: 'Retail & Gifts',       industry: 'Other retail sale' },
-  { slug: 'jewelry',        label: 'Jewelry',              industry: 'Jewelry & related articles' },
-  { slug: 'wholesale',      label: 'Wholesale',            industry: 'Other/general wholesale trade' },
+  {
+    slug: 'food-pantry',
+    label: 'Food & Pantry',
+    industries: ['Food & Pantry'],
+  },
+  {
+    slug: 'apparel',
+    label: 'Apparel',
+    industries: ['Apparel'],
+  },
+  {
+    slug: 'personal-care',
+    label: 'Personal Care',
+    industries: ['Personal Care'],
+  },
+  {
+    slug: 'home-goods',
+    label: 'Home Goods',
+    industries: ['Home Goods'],
+  },
+  {
+    slug: 'sporting-goods',
+    label: 'Sporting Goods',
+    industries: ['Sporting Goods'],
+  },
+  {
+    slug: 'furniture',
+    label: 'Furniture',
+    industries: ['Furniture'],
+  },
+  {
+    slug: 'textiles-rugs',
+    label: 'Textiles & Rugs',
+    industries: ['Textiles & Rugs'],
+  },
+  {
+    slug: 'jewelry',
+    label: 'Jewelry',
+    industries: ['Jewelry'],
+  },
 ]
 
+// Map an industry string (from search.json store.i) → category slug
 export const INDUSTRY_TO_SLUG = Object.fromEntries(
-  CATEGORIES.map(c => [c.industry, c.slug])
+  CATEGORIES.flatMap(c => c.industries.map(ind => [ind, c.slug]))
 )
+
+// Map an industry string → category object
+export function categoryForIndustry(industry) {
+  const slug = INDUSTRY_TO_SLUG[industry]
+  return slug ? CATEGORIES.find(c => c.slug === slug) : null
+}
+
+// Find category by slug
+export function categoryBySlug(slug) {
+  return CATEGORIES.find(c => c.slug === slug) || null
+}

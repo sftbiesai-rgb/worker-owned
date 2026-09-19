@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { Search, ArrowUpDown, SlidersHorizontal, X, List, Grid3X3 } from 'lucide-react'
-import { CATEGORIES } from '../lib/categories'
+import { CATEGORIES, categoryForIndustry } from '../lib/categories'
 import { searchProducts, buildProductIndex } from '../lib/search'
 import { slugify, faviconUrl } from '../lib/utils'
 import ProductCard from '../components/ProductCard'
@@ -120,7 +120,7 @@ function HomePage() {
     let r = baseFiltered
     if (filterCat) {
       const cat = CATEGORIES.find(c => c.slug === filterCat)
-      if (cat) r = r.filter(p => p.store_industry === cat.industry)
+      if (cat) r = r.filter(p => cat.industries.includes(p.store_industry))
     }
     if (filterStore) r = r.filter(p => p.store_name === filterStore)
     if (filterType) r = r.filter(p => (p.ownership_types || []).includes(filterType))
@@ -192,9 +192,13 @@ function HomePage() {
   const industryFacets = useMemo(() => {
     const counts = new Map()
     for (const p of baseFiltered) {
-      if (p.store_industry) counts.set(p.store_industry, (counts.get(p.store_industry) || 0) + 1)
+      const cat = categoryForIndustry(p.store_industry)
+      if (cat) counts.set(cat.slug, (counts.get(cat.slug) || 0) + 1)
     }
-    return [...counts.entries()].sort((a, b) => b[1] - a[1])
+    return CATEGORIES
+      .filter(c => counts.has(c.slug))
+      .map(c => [c.slug, counts.get(c.slug)])
+      .sort((a, b) => b[1] - a[1])
   }, [baseFiltered])
 
   const storeFacets = useMemo(() => {
@@ -307,13 +311,13 @@ function HomePage() {
       {industryFacets.length > 1 && (
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm px-4 py-3">
           <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wide mb-2">Industry</p>
-          {industryFacets.map(([ind, count]) => {
-            const cat = CATEGORIES.find(c => c.industry === ind)
-            const active = cat && filterCat === cat.slug
+          {industryFacets.map(([catSlug, count]) => {
+            const cat = CATEGORIES.find(c => c.slug === catSlug)
+            const active = filterCat === catSlug
             return (
-              <button key={ind} onClick={() => updateParams({ cat: active ? '' : (cat?.slug || ''), page: '1' })}
+              <button key={catSlug} onClick={() => updateParams({ cat: active ? '' : catSlug, page: '1' })}
                 className={`block w-full text-left text-xs py-0.5 transition-colors ${active ? 'text-[#1a6847] font-semibold' : 'text-gray-600 hover:text-[#1a6847]'}`}>
-                {cat?.label || ind} <span className="text-gray-300">({count})</span>
+                {cat?.label || catSlug} <span className="text-gray-300">({count})</span>
               </button>
             )
           })}
@@ -383,13 +387,13 @@ function HomePage() {
             <div>
               <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wide mb-2">Industry</p>
               <div className="flex flex-wrap gap-2">
-                {industryFacets.map(([ind, count]) => {
-                  const cat = CATEGORIES.find(c => c.industry === ind)
-                  const active = cat && filterCat === cat.slug
+                {industryFacets.map(([catSlug, count]) => {
+                  const cat = CATEGORIES.find(c => c.slug === catSlug)
+                  const active = filterCat === catSlug
                   return (
-                    <button key={ind} onClick={() => updateParams({ cat: active ? '' : (cat?.slug || ''), page: '1' })}
+                    <button key={catSlug} onClick={() => updateParams({ cat: active ? '' : catSlug, page: '1' })}
                       className={`py-1.5 px-3 rounded-lg text-xs font-medium transition-colors ${active ? 'bg-[#1a6847] text-white' : 'bg-[#f5f5f7] text-gray-600'}`}>
-                      {cat?.label || ind} ({count})
+                      {cat?.label || catSlug} ({count})
                     </button>
                   )
                 })}
@@ -457,13 +461,13 @@ function HomePage() {
             <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
               <div className="text-center py-4">
                 <p className="text-sm text-gray-500 mb-4">No results for &ldquo;{query}&rdquo;</p>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Browse by industry</p>
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Browse by category</p>
                 <div className="flex flex-wrap justify-center gap-2">
                   {CATEGORIES.map(cat => (
-                    <button key={cat.slug} onClick={() => updateParams({ q: cat.label, page: '1' })}
+                    <Link key={cat.slug} to={`/${cat.slug}`}
                       className="py-1.5 px-3 rounded-lg text-xs font-medium bg-[#f5f5f7] text-gray-600 hover:text-[#1a6847] hover:bg-emerald-50 transition-colors">
                       {cat.label}
-                    </button>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -583,14 +587,14 @@ function HomePage() {
         ) : (
           <>
             <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-5 xl:px-6 py-5">
-              <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Browse by industry</p>
+              <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Browse by category</p>
               <div className="flex flex-wrap justify-center gap-2">
                 {CATEGORIES.map(cat => (
-                  <button key={cat.slug}
-                    onClick={() => { setInputValue(cat.label); updateParams({ q: cat.label, page: '1' }) }}
+                  <Link key={cat.slug}
+                    to={`/${cat.slug}`}
                     className="py-2 px-4 rounded-lg text-sm font-medium bg-[#f5f5f7] text-gray-600 hover:text-[#1a6847] hover:bg-emerald-50 transition-colors">
                     {cat.label}
-                  </button>
+                  </Link>
                 ))}
               </div>
             </div>
