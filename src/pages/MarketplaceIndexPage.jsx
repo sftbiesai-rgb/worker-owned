@@ -108,7 +108,7 @@ function MarketplaceIndexPage() {
   }, [])
 
   useEffect(() => {
-    document.title = 'Market Place | Shop worker and employee owned online stores for apparel, home goods, food and more'
+    document.title = 'Market Place | Shop worker and employee owned online stores for clothing, home goods, food and more'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
       'Browse worker and employee owned online stores by category or search thousands of products from cooperatives and employee-owned companies.')
     const canonical = 'https://www.workerowned.info/'

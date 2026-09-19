@@ -86,18 +86,16 @@ function SubmitPage() {
                 <select value={formCategory} onChange={e => setFormCategory(e.target.value)}
                   className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-[#003580] transition-colors bg-white text-gray-700">
                   <option value="">Select a category...</option>
-                  <option value="Coffee Shop">Coffee Shop</option>
-                  <option value="Restaurant">Restaurant</option>
-                  <option value="Coffee & Tea (online)">Coffee & Tea (online)</option>
-                  <option value="Media & Publishing">Media & Publishing</option>
                   <option value="Food & Pantry">Food & Pantry</option>
-                  <option value="Apparel">Apparel</option>
-                  <option value="Art & Prints">Art & Prints</option>
-                  <option value="Music">Music</option>
-                  <option value="Home Goods & Services">Home Goods & Services</option>
-                  <option value="Personal Care">Personal Care</option>
-                  <option value="Games">Games</option>
-                  <option value="Beer & Brewing">Beer & Brewing</option>
+                  <option value="Clothing & Shoes">Clothing & Shoes</option>
+                  <option value="Jewelry">Jewelry</option>
+                  <option value="Beauty & Personal Care">Beauty & Personal Care</option>
+                  <option value="Home & Kitchen">Home & Kitchen</option>
+                  <option value="Furniture">Furniture</option>
+                  <option value="Textiles & Rugs">Textiles & Rugs</option>
+                  <option value="Sports & Outdoors">Sports & Outdoors</option>
+                  <option value="Books">Books</option>
+                  <option value="Music, Movies & Games">Music, Movies & Games</option>
                   <option value="Other">Other</option>
                 </select>
               </div>

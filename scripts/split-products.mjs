@@ -6,41 +6,49 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
 
 const REMAP = {
-  'Home & Garden': 'Home Goods & Services',
-  'Home Goods': 'Home Goods & Services',
+  'Home & Garden': 'Home & Kitchen',
+  'Home Goods': 'Home & Kitchen',
+  'Home Goods & Services': 'Home & Kitchen',
   'Chocolate & Sweets': 'Food & Pantry',
   'Food & Pantry': 'Food & Pantry',
   'Books & Media': 'Books',
-  'Sporting Goods': 'Sporting Goods & Outdoors',
+  'Coffee & Tea': 'Food & Pantry',
+  'Beer & Brewing': 'Food & Pantry',
+  'Apparel': 'Clothing & Shoes',
+  'Art & Prints': 'Home & Kitchen',
+  'Music': 'Music, Movies & Games',
+  'Movies & TV': 'Music, Movies & Games',
+  'Games': 'Music, Movies & Games',
+  'Media & Publishing': 'Books',
+  'Tech & Software': 'Home & Kitchen',
+  'Personal Care': 'Beauty & Personal Care',
+  'Sporting Goods': 'Sports & Outdoors',
+  'Sporting Goods & Outdoors': 'Sports & Outdoors',
 }
 
 const SECTIONS = {
-  'Coffee & Tea': 'coffee-tea',
-  'Media & Publishing': 'media-publishing',
-  'Books': 'books',
-  'Movies & TV': 'movies-tv',
   'Food & Pantry': 'food-pantry',
-  'Apparel': 'apparel',
-  'Art & Prints': 'art-prints',
-  'Music': 'music',
-  'Home Goods & Services': 'home-goods',
-  'Personal Care': 'personal-care',
-  'Games': 'games',
-  'Beer & Brewing': 'beer-brewing',
-  'Tech & Software': 'tech-software',
-  'Sporting Goods & Outdoors': 'sporting-goods',
+  'Clothing & Shoes': 'clothing-shoes',
+  'Jewelry': 'jewelry',
+  'Beauty & Personal Care': 'beauty-personal-care',
+  'Home & Kitchen': 'home-kitchen',
+  'Furniture': 'furniture',
+  'Textiles & Rugs': 'textiles-rugs',
+  'Sports & Outdoors': 'sports-outdoors',
+  'Books': 'books',
+  'Music, Movies & Games': 'entertainment',
 }
 
 // Product-level category detection for multi-category stores
 // Overrides the store-level site_section based on product title keywords
 const PRODUCT_CATEGORY_RULES = [
   { match: /candy|gummy|chocolate|pez|snack|jerky|cookie|fudge|jam|jelly|honey|sauce|seasoning|spice|syrup|butter|pretzel|chip|popcorn|salt |sugar|pickle|relish|mustard|dressing|vinegar|nuts|trail mix|granola|cereal|food|baking|flour|olive oil|hot sauce|bbq|rub |marinade|coffee|tea /i, section: 'Food & Pantry' },
-  { match: /soap|lotion|cream|shampoo|conditioner|balm|lip |sunscreen|deodorant|bath|body wash|candle|moistur|cleanser|serum|toner|face |skin/i, section: 'Personal Care' },
-  { match: /vitamin|supplement|probiotic|mineral|omega|calcium|iron|zinc|magnesium|biotin|melatonin|collagen|fiber|medicine|tylenol|advil|ibuprofen|aspirin|antacid|allergy|cough|cold |pain relief|first aid|bandage|gauze|thermometer/i, section: 'Personal Care' },
-  { match: /toy |toys|game|puzzle|doll|stuffed|plush|lego|playset|action figure/i, section: 'Games' },
+  { match: /soap|lotion|cream|shampoo|conditioner|balm|lip |sunscreen|deodorant|bath|body wash|candle|moistur|cleanser|serum|toner|face |skin/i, section: 'Beauty & Personal Care' },
+  { match: /vitamin|supplement|probiotic|mineral|omega|calcium|iron|zinc|magnesium|biotin|melatonin|collagen|fiber|medicine|tylenol|advil|ibuprofen|aspirin|antacid|allergy|cough|cold |pain relief|first aid|bandage|gauze|thermometer/i, section: 'Beauty & Personal Care' },
+  { match: /toy |toys|game|puzzle|doll|stuffed|plush|lego|playset|action figure/i, section: 'Music, Movies & Games' },
   { match: /book |books|journal|notebook|novel /i, section: 'Books' },
-  { match: /mug|cup |glass |plate|bowl|towel|blanket|pillow|ornament|magnet|sticker|sign |frame|decor|pot |planter|vase|coaster/i, section: 'Home Goods & Services' },
-  { match: /diaper|baby|infant|formula|pacifier|sippy/i, section: 'Personal Care' },
+  { match: /mug|cup |glass |plate|bowl|towel|blanket|pillow|ornament|magnet|sticker|sign |frame|decor|pot |planter|vase|coaster/i, section: 'Home & Kitchen' },
+  { match: /diaper|baby|infant|formula|pacifier|sippy/i, section: 'Beauty & Personal Care' },
 ]
 
 // Stores that need product-level categorization (large multi-category stores)
