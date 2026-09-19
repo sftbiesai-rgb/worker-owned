@@ -434,37 +434,13 @@ export default function CategoryPage() {
               <Pagination page={page} totalPages={totalPages} onPageChange={setPage} />
             </div>
 
-            {/* Directory section */}
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-5 lg:px-6 py-5">
-              <h2 className="text-sm font-bold text-gray-800 mb-1">{cat.label} Directory</h2>
-              <p className="text-xs text-gray-400 mb-4">{directoryStores.length} purpose-driven companies</p>
-
-              <div className="space-y-2">
-                {directoryStores.map(store => (
-                  <Link key={store.name} to={`/store/${slugify(store.name)}`}
-                    className="block bg-[#f5f5f7] rounded-xl px-4 py-3 hover:ring-1 hover:ring-[#1a6847] transition-all">
-                    <div className="flex items-start justify-between gap-2 mb-0.5">
-                      <span className="font-semibold text-sm text-[#1a6847] leading-snug flex items-center gap-1.5">
-                        {faviconUrl(store.url) && <img src={faviconUrl(store.url)} alt="" className="w-4 h-4 shrink-0" loading="lazy" />}
-                        {store.name}
-                      </span>
-                      <div className="flex items-center gap-1.5 shrink-0">
-                        {store.productCount > 0 && (
-                          <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-emerald-50 text-[#1a6847] whitespace-nowrap">
-                            {store.productCount} product{store.productCount !== 1 ? 's' : ''}
-                          </span>
-                        )}
-                        {store.types.map(t => (
-                          <span key={t} className={`text-[9px] font-semibold px-1.5 py-0.5 rounded ${TYPE_COLORS[t] || 'bg-gray-100 text-gray-500'}`}>
-                            {TYPE_LABELS[t] || t}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
+            {/* Directory link */}
+            <Link to={`/${slug}/directory`}
+              className="block bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-5 lg:px-6 py-5 hover:ring-1 hover:ring-[#1a6847] transition-all text-center">
+              <p className="text-sm font-bold text-gray-800 mb-1">{cat.label} Directory</p>
+              <p className="text-xs text-gray-500">Browse all purpose-driven {cat.label.toLowerCase()} companies, including those without an online store</p>
+              <p className="text-xs text-[#1a6847] font-medium mt-2">View full directory &rarr;</p>
+            </Link>
           </div>
         </div>
 
