@@ -149,9 +149,10 @@ function HomePage() {
     }
     const terms = localRefine.toLowerCase().split(/\s+/).filter(Boolean)
     if (terms.length > 0) {
+      const patterns = terms.map(t => new RegExp(`\\b${t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'i'))
       r = r.filter(p => {
         const text = (p.title || '') + ' ' + (p.product_type || '') + ' ' + (p.store_name || '')
-        return terms.every(t => text.toLowerCase().includes(t))
+        return patterns.every(re => re.test(text))
       })
     }
     return r
