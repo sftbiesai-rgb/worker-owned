@@ -1,4 +1,4 @@
-# Reply to Mark Hand - purposeowned.info scope
+# Update to Mark Hand - purposeowned site progress
 
 **To:** mark.c.hand@gmail.com
 **Subject:** Re: purpose-owned shop page
@@ -7,14 +7,17 @@
 
 Hi Mark,
 
-I've been thinking about this more seriously and I think it's very doable. A few things:
+Quick update on the purpose-owned site. It's live at purposeowned.vercel.app with 68,000+ products from 241 stores. Here's what's in there so far:
 
-**Logistics:** GitHub and Vercel free tiers should still work for a second site, even with a bigger dataset. I'll keep you posted if I run into anything that requires paid upgrades. As I said, the URL cost is fine on my end, but if there end up being monthly service costs I'd want to discuss those before committing.
+- B Corps (from bcorporation.net): ~206 stores, ~28K products
+- Benefit corps (from domoregood.com): ~388 stores detected, products from those with e-commerce
+- Purpose Pledge, steward-owned, and 100% for Purpose companies
+- Custom scrapes for stores that needed special handling (Patagonia, King Arthur, Mountain Rose Herbs, etc.)
 
-**Timeline:** I think 2-3 months to get something up and running. I can reuse most of the scraping scripts from workerowned.info, but it'll be a much bigger project since B Corp alone is huge.
+Filters by ownership type (B Corp, Benefit Corp, Purpose Pledge, Steward-Owned), industry, price, and full-text search all work.
 
-**The line:** I agree with where you drew it. You're the expert here! I do get submissions for workerowned.info that clearly aren't worker-owned, and I reject those. Generally this is small potatoes stuff so there's no reason anyone would want to game the system, but if this gets bigger (fingers crossed), it sounds like you're ready to field questions about what qualifies. My general philosophy is that even if a company is just "not terrible" in some certified way, that's an incremental step better than buying from Amazon or Walmart.
+One thing I could use your help with: the Purpose Trusts directory on your Notion page (trustownership.notion.site/business-directory) requires JavaScript to render, so I can't scrape it programmatically. Would you be able to export that data as a spreadsheet or CSV? Even just company names and URLs would be enough for me to detect their e-commerce platforms and pull products.
 
-Looking forward to getting started on this.
+Let me know what you think of the site and if there are any sources I'm missing.
 
 Will

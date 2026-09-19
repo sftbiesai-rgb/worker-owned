@@ -113,10 +113,15 @@ function CategoryDirectoryPage() {
           <div className="space-y-2">
             {filtered.map(entry => {
               const count = productCounts[entry.url] || 0
+              const hasProducts = count > 0
+              const CardTag = hasProducts ? Link : 'a'
+              const cardProps = hasProducts
+                ? { to: `/store/${slugify(entry.name)}` }
+                : { href: entry.url, target: '_blank', rel: 'noopener' }
               return (
-                <Link
+                <CardTag
                   key={entry.id}
-                  to={`/store/${slugify(entry.name)}`}
+                  {...cardProps}
                   className="block bg-[#f5f5f7] rounded-xl px-4 py-3 hover:ring-1 hover:ring-[#003580] transition-all"
                 >
                   <div className="flex items-start justify-between gap-2 mb-1">
@@ -142,7 +147,10 @@ function CategoryDirectoryPage() {
                   {entry.ships && entry.ships !== 'US' && (
                     <p className="text-[11px] text-gray-400 mt-1">Ships: {entry.ships}</p>
                   )}
-                </Link>
+                  {!hasProducts && (
+                    <p className="text-[10px] text-gray-400 mt-1">Visit website ↗</p>
+                  )}
+                </CardTag>
               )
             })}
           </div>
