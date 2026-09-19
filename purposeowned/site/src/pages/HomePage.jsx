@@ -65,24 +65,40 @@ function HomePage() {
   useEffect(() => { setLocalRefine(filterRefine) }, [filterRefine])
 
   const fetchedRef = useRef(false)
+  const preloadRef = useRef(null)
+
+  // Preload search.json on input focus (before user submits)
+  const preloadSearch = useCallback(() => {
+    if (preloadRef.current || fetchedRef.current) return
+    preloadRef.current = fetch('/data/search.json').then(r => r.json())
+  }, [])
 
   useEffect(() => {
     if (fetchedRef.current) return
     if (!query.trim()) return
     fetchedRef.current = true
     setLoadingProducts(true)
-    fetch('/data/search.json')
-      .then(r => r.json())
+    ;(preloadRef.current || fetch('/data/search.json').then(r => r.json()))
       .then(data => {
         const stores = data.s
+        const tagDict = data.t || []
+        const typeDict = data.y || []
         const hydrated = data.p
-          .map((p, i) => ({
-            id: i, title: p[1], price: (p[2] && parseFloat(p[2]) > 0) ? p[2] : null, image: p[3] || null,
-            url: p[4], store_name: stores[p[0]].n, store_url: stores[p[0]].u,
-            store_industry: stores[p[0]].i, product_type: p[6],
-            tags: p[7], available: p[5] !== 0,
-            ownership_types: stores[p[0]].t || [],
-          }))
+          .map((p, i) => {
+            const store = stores[p[0]]
+            const img = p[3] ? (store.ip || '') + p[3] : null
+            const tags = p[7] === 0 ? [] : (p[7] || []).map(id => tagDict[id])
+            return {
+              id: i, title: p[1], price: p[2] > 0 ? p[2] : null,
+              image: img,
+              url: (store.up || '') + p[4],
+              store_name: store.n, store_url: store.u,
+              store_industry: store.i,
+              product_type: typeof p[6] === 'number' ? (typeDict[p[6]] || '') : (p[6] || ''),
+              tags, available: p[5] !== 0,
+              ownership_types: store.t || [],
+            }
+          })
           .filter(p => p.image) // hide products without images
         setProducts(hydrated)
         setSearchIndex(buildProductIndex(hydrated))
@@ -220,7 +236,7 @@ function HomePage() {
           className="w-full border border-gray-300 rounded-l-lg px-3 py-2.5 text-sm outline-none focus:border-[#1a6847] transition-colors bg-white"
           value={inputValue}
           onChange={e => handleInputChange(e.target.value)}
-          onFocus={() => suggestions.length > 0 && setShowSuggestions(true)}
+          onFocus={() => { preloadSearch(); suggestions.length > 0 && setShowSuggestions(true) }}
           onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
           autoFocus
         />

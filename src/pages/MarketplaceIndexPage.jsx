@@ -99,6 +99,13 @@ function MarketplaceIndexPage() {
   useEffect(() => { setLocalRefine(filterRefine) }, [filterRefine])
 
   const fetchedRef = useRef(false)
+  const preloadRef = useRef(null)
+
+  // Preload search.json on input focus (before user submits)
+  const preloadSearch = useCallback(() => {
+    if (preloadRef.current || fetchedRef.current) return
+    preloadRef.current = fetch('/data/search.json').then(r => r.json())
+  }, [])
 
   useEffect(() => {
     fetch('/data/featured.json')
@@ -121,25 +128,26 @@ function MarketplaceIndexPage() {
     if (!query.trim()) return
     fetchedRef.current = true
     setLoadingProducts(true)
-    fetch('/data/search.json')
-      .then(r => r.json())
+    ;(preloadRef.current || fetch('/data/search.json').then(r => r.json()))
       .then(data => {
-        // Hydrate compact format: [id, title, price, image, url, storeIdx, section, tagIds, available, formats?]
-        // Tags are numeric IDs into data.t dictionary; URLs/images have store prefix stripped
+        // Hydrate compact format: [title, price, image, url, storeIdx, sectionIdx, tagIds, available?, formats?]
+        // ID = array index; tags are numeric IDs into data.t; section is index into data.c
         const stores = data.s
         const tagDict = data.t || []
-        const hydrated = data.p.map(p => {
-          const store = stores[p[5]]
+        const sectionDict = data.c || []
+        const hydrated = data.p.map((p, i) => {
+          const store = stores[p[4]]
+          const tags = p[6] === 0 ? [] : (p[6] || []).map(id => tagDict[id])
           const product = {
-            id: p[0], title: p[1], price: p[2] || null,
-            image: p[3] ? (store.ip || '') + p[3] : null,
-            url: (store.up || '') + p[4],
+            id: i, title: p[0], price: p[1] || null,
+            image: p[2] ? (store.ip || '') + p[2] : null,
+            url: (store.up || '') + p[3],
             store_name: store.n, store_url: store.u, ownership_type: store.o,
-            site_section: p[6],
-            tags: (p[7] || []).map(id => tagDict[id]),
-            available: p[8] !== 0,
+            site_section: sectionDict[p[5]],
+            tags,
+            available: p[7] !== 0,
           }
-          if (p[9]) product.formats = p[9]
+          if (p[8]) product.formats = p[8]
           return product
         })
         setProducts(hydrated)
@@ -245,6 +253,7 @@ function MarketplaceIndexPage() {
                 className="w-full border border-gray-300 rounded-l-lg sm:rounded-l-none px-3 py-2.5 text-sm outline-none focus:border-[#003580] transition-colors bg-white"
                 value={inputValue}
                 onChange={e => setInputValue(e.target.value)}
+                onFocus={preloadSearch}
                 autoFocus
               />
               <button

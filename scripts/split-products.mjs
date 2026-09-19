@@ -246,31 +246,42 @@ const tagDict = [...tagFreq.entries()].sort((a, b) => b[1] - a[1]).map(e => e[0]
 const tagToId = new Map(tagDict.map((t, i) => [t, i]))
 
 // Full product data — used to hydrate search results for display
-// Format: [id, title, price, image, url, storeIdx, sectionName, tagIds, available, formats?]
-// Tags are numeric IDs into searchData.t dictionary
-// URLs/images have store prefix stripped (reconstructed client-side)
+// Format: [title, price, image, url, storeIdx, sectionIdx, tagIds, available?, formats?]
+// - ID is implicit (array index)
+// - Tags are numeric IDs into searchData.t dictionary
+// - Section is numeric index into searchData.c dictionary
+// - Price is a number (not string)
+// - Available field omitted when true (default)
+// - URLs/images have store prefix stripped (reconstructed client-side)
+const sectionDict = [...new Set(searchGrouped.map(p => p.site_section))]
+const sectionToIdx = new Map(sectionDict.map((s, i) => [s, i]))
+
 const fullProducts = searchGrouped.map(p => {
   const storeKey = `${p.store_name}||${p.store_url}||${p.ownership_type}`
   const storeIdx = storeMap.get(storeKey)
   const store = storeList[storeIdx]
   const url = store.up && p.url?.startsWith(store.up) ? p.url.slice(store.up.length) : (p.url || '')
   const img = store.ip && p.image?.startsWith(store.ip) ? p.image.slice(store.ip.length) : (p.image || '')
+  const price = parseFloat(p.price) || 0
+  const tags = (p.tags || []).filter(t => !FORMAT_TAGS.has(t)).map(t => tagToId.get(t)).filter(id => id !== undefined)
   const entry = [
-    p.id,
     p.title,
-    p.price || '',
+    price,
     img,
     url,
     storeIdx,
-    p.site_section,
-    (p.tags || []).filter(t => !FORMAT_TAGS.has(t)).map(t => tagToId.get(t)).filter(id => id !== undefined),
-    p.available === false ? 0 : 1,
+    sectionToIdx.get(p.site_section),
+    tags.length > 0 ? tags : 0,
   ]
-  if (p.formats) entry.push(p.formats)
+  if (p.available === false) entry.push(0)
+  if (p.formats) {
+    if (entry.length < 8) entry.push(1) // available placeholder
+    entry.push(p.formats)
+  }
   return entry
 })
 
-const searchData = { s: storeList, t: tagDict, p: fullProducts }
+const searchData = { s: storeList, t: tagDict, c: sectionDict, p: fullProducts }
 const searchJson = JSON.stringify(searchData)
 writeFileSync(resolve(root, 'public/data/search.json'), searchJson)
 
