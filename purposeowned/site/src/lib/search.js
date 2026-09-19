@@ -6,7 +6,7 @@ export function buildProductIndex(products) {
     searchOptions: {
       boost: { title: 3, productType: 1 },
       prefix: true,
-      fuzzy: 0.1,
+      fuzzy: (term) => term.length > 8 ? 0.15 : false,
       combineWith: 'AND',
     },
   })
