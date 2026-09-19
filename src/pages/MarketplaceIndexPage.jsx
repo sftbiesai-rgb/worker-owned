@@ -63,7 +63,7 @@ function MarketplaceIndexPage() {
   const filterRefine = searchParams.get('refine') || ''
   const [products, setProducts] = useState([])
   const [searchIndex, setSearchIndex] = useState(null)
-  const [loadingProducts, setLoadingProducts] = useState(false)
+  const [loadingProducts, setLoadingProducts] = useState(!!query.trim())
   const [featured, setFeatured] = useState([])
   const [inputValue, setInputValue] = useState(query)
   const [searchCat, setSearchCat] = useState('')

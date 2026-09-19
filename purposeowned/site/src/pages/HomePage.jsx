@@ -32,7 +32,7 @@ function HomePage() {
   const showSoldOut = searchParams.get('soldout') === '1'
   const [products, setProducts] = useState([])
   const [searchIndex, setSearchIndex] = useState(null)
-  const [loadingProducts, setLoadingProducts] = useState(false)
+  const [loadingProducts, setLoadingProducts] = useState(!!query.trim())
   const [inputValue, setInputValue] = useState(query)
   const [localRefine, setLocalRefine] = useState(filterRefine)
   const [showFilters, setShowFilters] = useState(false)
