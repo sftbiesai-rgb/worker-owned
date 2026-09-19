@@ -83,7 +83,7 @@ export default function FAQPage() {
             <section>
               <h2 className="text-base font-bold text-gray-900 mb-2">I want my company or products de-listed.</h2>
               <p>
-                No problem. Email us and we'll take care of it promptly.
+                No problem. Use our <Link to="/contact" className="text-[#1a6847] hover:text-[#145236] font-medium">contact form</Link> and we'll take care of it promptly.
               </p>
             </section>
           </div>
