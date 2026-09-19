@@ -281,7 +281,7 @@ function HomePage() {
 
   // Sidebar facet section (desktop)
   const sidebar = (
-    <div className="hidden xl:block w-56 shrink-0 space-y-3">
+    <div className="hidden lg:block w-56 shrink-0 space-y-3">
       {typeFacets.length > 1 && (
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm px-4 py-3">
           <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wide mb-2">Ownership type</p>
@@ -342,7 +342,7 @@ function HomePage() {
 
   // Mobile filter drawer
   const filterDrawer = showFilters && (
-    <div className="xl:hidden fixed inset-0 z-50 flex flex-col">
+    <div className="lg:hidden fixed inset-0 z-50 flex flex-col">
       <div className="absolute inset-0 bg-black/40" onClick={() => setShowFilters(false)} />
       <div className="relative mt-auto bg-white rounded-t-2xl max-h-[80vh] overflow-y-auto animate-slide-up">
         <div className="sticky top-0 bg-white px-5 py-3 border-b border-gray-100 flex items-center justify-between">
@@ -438,14 +438,14 @@ function HomePage() {
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
       {filterDrawer}
-      <main className="flex-1 max-w-xl xl:max-w-5xl mx-auto w-full px-4 xl:px-5 py-6 xl:py-8 flex flex-col">
+      <main className="flex-1 max-w-xl lg:max-w-5xl mx-auto w-full px-4 lg:px-5 py-6 lg:py-8 flex flex-col">
 
         {/* Header */}
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-5 xl:px-6 py-5 xl:py-6 mb-3">
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-5 lg:px-6 py-5 lg:py-6 mb-3">
           <div className="flex items-center justify-center gap-3 mb-1">
-            <h1 className="text-xl xl:text-2xl font-bold tracking-tight text-gray-900">Purpose Owned</h1>
+            <h1 className="text-xl lg:text-2xl font-bold tracking-tight text-gray-900">Purpose Owned</h1>
           </div>
-          <p className="text-center text-xs xl:text-sm text-gray-500 mb-3 xl:mb-4">Shop B Corps, benefit corporations, and steward-owned businesses</p>
+          <p className="text-center text-xs lg:text-sm text-gray-500 mb-3 lg:mb-4">Shop B Corps, benefit corporations, and steward-owned businesses</p>
           {searchBox}
           <p className="text-[11px] text-gray-400 mt-2 text-center">Results link to company sites. We don't sell anything or earn a commission.</p>
         </div>
@@ -473,10 +473,10 @@ function HomePage() {
               </div>
             </div>
           ) : (
-            <div className="flex flex-col xl:flex-row gap-3 xl:gap-4 xl:items-start">
+            <div className="flex flex-col lg:flex-row gap-3 lg:gap-4 lg:items-start">
 
               {/* Mobile: toolbar with filter button + sort */}
-              <div className="xl:hidden flex items-center gap-2">
+              <div className="lg:hidden flex items-center gap-2">
                 <button onClick={() => setShowFilters(true)}
                   className={`flex items-center gap-1.5 py-2 px-3 rounded-lg text-xs font-medium transition-colors ${activeFilterCount > 0 ? 'bg-[#1a6847] text-white' : 'bg-white border border-gray-200 text-gray-600'}`}>
                   <SlidersHorizontal size={13} />
@@ -493,7 +493,7 @@ function HomePage() {
               </div>
 
               {/* Mobile: active filter chips */}
-              <div className="xl:hidden">
+              <div className="lg:hidden">
                 {activeFilters}
               </div>
 
@@ -503,7 +503,7 @@ function HomePage() {
               {/* Results area */}
               <div className="flex-1 min-w-0">
                 {/* Desktop: refine bar */}
-                <div className="hidden xl:flex bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-4 py-3 mb-3 items-center gap-2 flex-wrap">
+                <div className="hidden lg:flex bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-4 py-3 mb-3 items-center gap-2 flex-wrap">
                   <SlidersHorizontal size={14} className="text-gray-400 shrink-0" />
                   <input type="text" value={localRefine} onChange={e => handleRefineChange(e.target.value)}
                     placeholder="Narrow results (e.g. organic, vegan, white)..."
@@ -520,12 +520,12 @@ function HomePage() {
                 </div>
 
                 {/* Desktop: active filters */}
-                <div className="hidden xl:block">{activeFilters}</div>
+                <div className="hidden lg:block">{activeFilters}</div>
 
                 {/* Results card */}
-                <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-4 xl:px-6 py-4 xl:py-5">
+                <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-4 lg:px-6 py-4 lg:py-5">
                   {/* Desktop header with count, sort, view toggle */}
-                  <div className="hidden xl:flex items-center justify-between mb-3">
+                  <div className="hidden lg:flex items-center justify-between mb-3">
                     <p className="text-xs text-gray-400">
                       {filteredResults.length === baseFiltered.length
                         ? `${baseFiltered.length.toLocaleString()} results`
@@ -556,14 +556,14 @@ function HomePage() {
                   </div>
 
                   {/* Mobile: grid view */}
-                  <div className="xl:hidden grid grid-cols-2 gap-3">
+                  <div className="lg:hidden grid grid-cols-2 gap-3">
                     {pagedResults.map(p => (
                       <ProductCard key={p.id} product={p} />
                     ))}
                   </div>
 
                   {/* Desktop: grid or list */}
-                  <div className="hidden xl:block">
+                  <div className="hidden lg:block">
                     {desktopView === 'grid' ? (
                       <div className="grid grid-cols-4 gap-3">
                         {pagedResults.map(p => (
@@ -586,7 +586,7 @@ function HomePage() {
           )
         ) : (
           <>
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-5 xl:px-6 py-5">
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-5 lg:px-6 py-5">
               <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Browse by category</p>
               <div className="flex flex-wrap justify-center gap-2">
                 {CATEGORIES.map(cat => (
@@ -599,7 +599,7 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-5 xl:px-6 py-5 mt-3">
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-5 lg:px-6 py-5 mt-3">
               <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">What is this?</p>
               <div className="text-sm text-gray-600 space-y-2 max-w-lg mx-auto">
                 <p>Purpose Owned is a searchable directory of products from businesses that have made a <strong>verifiable commitment</strong> to a mission beyond profit:</p>
