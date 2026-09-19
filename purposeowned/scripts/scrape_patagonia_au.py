@@ -9,7 +9,7 @@ import urllib.request
 ssl._create_default_https_context = ssl._create_unverified_context
 
 BASE = "https://www.patagonia.com.au/products.json"
-US_BASE = "https://www.patagonia.com/product"
+AU_BASE = "https://www.patagonia.com.au/products"
 LIMIT = 250
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"}
 
@@ -47,7 +47,7 @@ while True:
 
         # Build US URL from handle
         handle = p.get("handle", "")
-        us_url = f"https://www.patagonia.com/product/{handle}.html"
+        au_url = f"https://www.patagonia.com.au/products/{handle}"
 
         all_products.append({
             "title": p.get("title", ""),
@@ -55,7 +55,7 @@ while True:
             "price": price,
             "available": available,
             "image": image,
-            "url": us_url,
+            "url": au_url,
             "product_type": p.get("product_type", ""),
             "vendor": "Patagonia",
             "tags": p.get("tags", []),

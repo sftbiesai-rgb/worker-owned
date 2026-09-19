@@ -194,45 +194,88 @@ if (totalOriginal > totalGrouped) {
 // ── Compact search index ──
 // Two-tier: lightweight index for matching (small), full data for display (loaded on demand).
 
-// Build store index
+// Build store index — group products by store to compute URL prefixes
 const storeMap = new Map()
 const storeList = []
+const storeProducts = new Map() // storeKey -> [products]
 for (const p of products) {
   const key = `${p.store_name}||${p.store_url}||${p.ownership_type}`
   if (!storeMap.has(key)) {
     storeMap.set(key, storeList.length)
     storeList.push({ n: p.store_name, u: p.store_url, o: p.ownership_type })
+    storeProducts.set(key, [])
   }
+  storeProducts.get(key).push(p)
+}
+
+// Compute common URL and image prefixes per store
+function commonPrefix(strings) {
+  const valid = strings.filter(Boolean)
+  if (valid.length === 0) return ''
+  let prefix = valid[0]
+  for (let i = 1; i < valid.length; i++) {
+    while (!valid[i].startsWith(prefix)) {
+      prefix = prefix.slice(0, -1)
+      if (!prefix) return ''
+    }
+  }
+  // Trim to last slash for clean prefix
+  const lastSlash = prefix.lastIndexOf('/')
+  return lastSlash > 8 ? prefix.slice(0, lastSlash + 1) : ''
+}
+
+for (const [key, prods] of storeProducts) {
+  const idx = storeMap.get(key)
+  const urlPrefix = commonPrefix(prods.map(p => p.url))
+  const imgPrefix = commonPrefix(prods.filter(p => p.image).map(p => p.image))
+  if (urlPrefix.length > 10) storeList[idx].up = urlPrefix
+  if (imgPrefix.length > 10) storeList[idx].ip = imgPrefix
 }
 
 // Group for search
 const searchGrouped = groupProducts(products)
 
+// Build tag dictionary — frequency-sorted for compact IDs
+const tagFreq = new Map()
+for (const p of searchGrouped) {
+  for (const t of (p.tags || []).filter(t => !FORMAT_TAGS.has(t))) {
+    tagFreq.set(t, (tagFreq.get(t) || 0) + 1)
+  }
+}
+const tagDict = [...tagFreq.entries()].sort((a, b) => b[1] - a[1]).map(e => e[0])
+const tagToId = new Map(tagDict.map((t, i) => [t, i]))
+
 // Full product data — used to hydrate search results for display
-// Format: [id, title, price, image, url, storeIdx, sectionName, tags, available, formats?]
+// Format: [id, title, price, image, url, storeIdx, sectionName, tagIds, available, formats?]
+// Tags are numeric IDs into searchData.t dictionary
+// URLs/images have store prefix stripped (reconstructed client-side)
 const fullProducts = searchGrouped.map(p => {
   const storeKey = `${p.store_name}||${p.store_url}||${p.ownership_type}`
+  const storeIdx = storeMap.get(storeKey)
+  const store = storeList[storeIdx]
+  const url = store.up && p.url?.startsWith(store.up) ? p.url.slice(store.up.length) : (p.url || '')
+  const img = store.ip && p.image?.startsWith(store.ip) ? p.image.slice(store.ip.length) : (p.image || '')
   const entry = [
     p.id,
     p.title,
     p.price || '',
-    p.image || '',
-    p.url,
-    storeMap.get(storeKey),
+    img,
+    url,
+    storeIdx,
     p.site_section,
-    (p.tags || []).filter(t => !FORMAT_TAGS.has(t)),
+    (p.tags || []).filter(t => !FORMAT_TAGS.has(t)).map(t => tagToId.get(t)).filter(id => id !== undefined),
     p.available === false ? 0 : 1,
   ]
   if (p.formats) entry.push(p.formats)
   return entry
 })
 
-const searchData = { s: storeList, p: fullProducts }
+const searchData = { s: storeList, t: tagDict, p: fullProducts }
 const searchJson = JSON.stringify(searchData)
 writeFileSync(resolve(root, 'public/data/search.json'), searchJson)
 
 const sizeMB = (Buffer.byteLength(searchJson) / 1024 / 1024).toFixed(1)
-console.log(`search.json: ${searchGrouped.length} products (${sizeMB} MB)`)
+console.log(`search.json: ${searchGrouped.length} products (${sizeMB} MB), ${tagDict.length} unique tags`)
 
 // ── Store summary files for large stores ──
 // Group products by store, and for stores with 500+ products generate a

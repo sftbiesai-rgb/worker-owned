@@ -124,14 +124,20 @@ function MarketplaceIndexPage() {
     fetch('/data/search.json')
       .then(r => r.json())
       .then(data => {
-        // Hydrate compact format: [id, title, price, image, url, storeIdx, section, tags, available, formats?]
+        // Hydrate compact format: [id, title, price, image, url, storeIdx, section, tagIds, available, formats?]
+        // Tags are numeric IDs into data.t dictionary; URLs/images have store prefix stripped
         const stores = data.s
+        const tagDict = data.t || []
         const hydrated = data.p.map(p => {
           const store = stores[p[5]]
           const product = {
-            id: p[0], title: p[1], price: p[2] || null, image: p[3] || null,
-            url: p[4], store_name: store.n, store_url: store.u, ownership_type: store.o,
-            site_section: p[6], tags: p[7], available: p[8] !== 0,
+            id: p[0], title: p[1], price: p[2] || null,
+            image: p[3] ? (store.ip || '') + p[3] : null,
+            url: (store.up || '') + p[4],
+            store_name: store.n, store_url: store.u, ownership_type: store.o,
+            site_section: p[6],
+            tags: (p[7] || []).map(id => tagDict[id]),
+            available: p[8] !== 0,
           }
           if (p[9]) product.formats = p[9]
           return product

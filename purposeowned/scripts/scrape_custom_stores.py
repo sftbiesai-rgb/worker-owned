@@ -40,6 +40,24 @@ def scrape_torani():
 
             html = r.text
 
+            # Extract product image URLs from listing page cards.
+            # Each card has <a href="...url..." ... product-item-photo ...>
+            # followed by an <img src="...media/catalog/product/...">.
+            # Build a map of product URL -> first image URL found in its card.
+            url_to_image = {}
+            for card_match in re.finditer(
+                r'<a\s[^>]*href="([^"]+)"[^>]*product-item-photo[^>]*>',
+                html, re.DOTALL
+            ):
+                card_url = card_match.group(1)
+                block = html[card_match.end():card_match.end() + 2000]
+                img_match = re.search(
+                    r'src="(https://www\.torani\.com/media/catalog/product/[^"]+\.(?:png|jpg|jpeg))',
+                    block
+                )
+                if img_match and card_url not in url_to_image:
+                    url_to_image[card_url] = img_match.group(1).replace('&amp;', '&')
+
             # Extract product links from listing page
             # Torani uses product-item-link class
             name_matches = re.findall(
@@ -69,7 +87,7 @@ def scrape_torani():
                     "handle": prod_url.rstrip("/").split("/")[-1].replace(".html", ""),
                     "price": None,
                     "available": True,
-                    "image": None,
+                    "image": url_to_image.get(prod_url),
                     "url": prod_url,
                     "product_type": "Syrups & Sauces",
                     "vendor": "Torani",
@@ -104,11 +122,13 @@ def scrape_torani():
                 price_match = re.search(r'\$(\d+\.\d{2})', html)
                 if price_match:
                     prod["price"] = price_match.group(1)
-            img_match = re.search(
-                r'(?:src|content)="(https://www\.torani\.com/media/catalog/product/[^"]+\.(?:png|jpg|jpeg))"', html
-            )
-            if img_match:
-                prod["image"] = img_match.group(1)
+            # Image already extracted from listing page; only update if missing
+            if not prod.get("image"):
+                img_match = re.search(
+                    r'(?:src|content)="(https://www\.torani\.com/media/catalog/product/[^"]+\.(?:png|jpg|jpeg))"', html
+                )
+                if img_match:
+                    prod["image"] = img_match.group(1)
             cat_match = re.search(r'"item_category2":\s*"([^"]+)"', html)
             if cat_match:
                 prod["product_type"] = cat_match.group(1)
