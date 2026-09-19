@@ -29,7 +29,7 @@ function FAQPage() {
             <section>
               <h2 className="text-base font-bold text-gray-900 mb-2">What is Worker Owned?</h2>
               <p>
-                Worker Owned is a searchable marketplace for products sold by worker and employee owned businesses. You can browse products across categories like food, clothing, books, and more, and buy directly from the companies that make them.
+                Worker Owned is a searchable marketplace for products sold by worker and employee owned businesses. You can browse products across categories like coffee, food, apparel, and more, and buy directly from the companies that make them.
               </p>
             </section>
 

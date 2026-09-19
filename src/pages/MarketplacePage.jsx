@@ -18,7 +18,7 @@ function MarketplacePage() {
   const [products, setProducts] = useState([])
   const [loaded, setLoaded] = useState(false)
   const [page, setPage] = useState(1)
-  const [showStores, setShowStores] = useState(category === 'jewelry' || category === 'furniture' || category === 'textiles-rugs')
+  const [showStores, setShowStores] = useState(category === 'tech-software' || category === 'art-prints' || category === 'music')
   const [filter, setFilter] = useState('')
   const [activeFilter, setActiveFilter] = useState(null)
   const categoryFilters = FILTERS[category] || null
@@ -26,7 +26,7 @@ function MarketplacePage() {
   useEffect(() => {
     if (!section) return
     setLoaded(false)
-    setShowStores(category === 'jewelry' || category === 'furniture' || category === 'textiles-rugs')
+    setShowStores(category === 'tech-software' || category === 'art-prints' || category === 'music')
     fetch(`/data/products-${section.slug}.json`)
       .then(r => r.json())
       .then(d => { setProducts(d); setLoaded(true) })
