@@ -455,7 +455,8 @@ const storeDir = resolve(root, 'public/data/stores')
 import { mkdirSync } from 'fs'
 try { mkdirSync(storeDir, { recursive: true }) } catch {}
 
-const STORE_PAGE_SIZE = 40
+const STORE_PAGE_SIZE = 100
+const MAX_STORE_PAGES_PER_SECTION = 10
 
 for (const [storeSlug, storeProducts] of byStore) {
   if (storeProducts.length < 500) continue
@@ -481,7 +482,7 @@ for (const [storeSlug, storeProducts] of byStore) {
       [...allByCat.keys()].find(k => k.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === sectionSlug)
     ) || []
 
-    const totalPages = Math.ceil(allProducts.length / STORE_PAGE_SIZE)
+    const totalPages = Math.min(Math.ceil(allProducts.length / STORE_PAGE_SIZE), MAX_STORE_PAGES_PER_SECTION)
     for (let page = 1; page <= totalPages; page++) {
       const start = (page - 1) * STORE_PAGE_SIZE
       const pageProducts = allProducts.slice(start, start + STORE_PAGE_SIZE)
