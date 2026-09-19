@@ -147,9 +147,27 @@ function HomePage() {
         return !isNaN(price) && price >= range.min && price < range.max
       })
     }
+    const COLOR_SYNONYMS = {
+      white: ['white', 'bone', 'cream', 'ivory', 'chalk', 'natural', 'ecru', 'pearl', 'snow', 'sail', 'oatmeal', 'eggshell'],
+      black: ['black', 'onyx', 'jet', 'ebony', 'charcoal', 'midnight'],
+      red: ['red', 'crimson', 'scarlet', 'burgundy', 'maroon', 'cardinal', 'ruby', 'garnet', 'wine'],
+      blue: ['blue', 'navy', 'cobalt', 'indigo', 'azure', 'sapphire', 'royal', 'slate', 'denim'],
+      green: ['green', 'olive', 'sage', 'forest', 'emerald', 'hunter', 'moss', 'pine', 'cedar', 'seaweed', 'basil'],
+      brown: ['brown', 'tan', 'khaki', 'camel', 'mocha', 'coffee', 'espresso', 'walnut', 'chestnut', 'chocolate', 'taupe', 'cinnamon'],
+      pink: ['pink', 'rose', 'blush', 'coral', 'salmon', 'fuchsia', 'magenta', 'mauve'],
+      grey: ['grey', 'gray', 'heather', 'ash', 'pewter', 'silver', 'stone', 'smoke', 'graphite', 'cement'],
+      orange: ['orange', 'rust', 'copper', 'amber', 'tangerine', 'peach', 'apricot'],
+      yellow: ['yellow', 'gold', 'mustard', 'lemon', 'canary', 'honey', 'maize'],
+      purple: ['purple', 'violet', 'plum', 'lavender', 'lilac', 'amethyst', 'eggplant', 'grape'],
+    }
     const terms = localRefine.toLowerCase().split(/\s+/).filter(Boolean)
     if (terms.length > 0) {
       const patterns = terms.map(t => {
+        const synonyms = COLOR_SYNONYMS[t] || COLOR_SYNONYMS[t.replace(/s$/, '')]
+        if (synonyms) {
+          const alts = synonyms.map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')
+          return new RegExp(`(?:^|[^a-z])(?:${alts})(?:[^a-z]|$)`, 'i')
+        }
         const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
         const alt = escaped.endsWith('s') ? `(?:${escaped}|${escaped.slice(0, -1)})` : `(?:${escaped}|${escaped}s)`
         return new RegExp(`(?:^|[^a-z])${alt}(?:[^a-z]|$)`, 'i')
