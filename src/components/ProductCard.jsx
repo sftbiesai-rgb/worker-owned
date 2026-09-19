@@ -63,11 +63,6 @@ export default function ProductCard({ product: p, showStore = true, compact = fa
           ))}
         </div>
       )}
-      {displayTags(p.tags)?.length > 0 && !p.formats && (
-        <div className="px-3 pb-1 hidden group-hover:block">
-          <p className="text-[10px] text-gray-400 leading-snug line-clamp-1">{displayTags(p.tags).join(' · ')}</p>
-        </div>
-      )}
       {showStore && p.store_name && (
         <div className="px-3 pb-2">
           <Link
