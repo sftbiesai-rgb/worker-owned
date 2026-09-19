@@ -31,11 +31,6 @@ export default function ProductCard({ product: p, showStore = true }) {
           {p.price && <p className="text-xs font-semibold text-[#1a6847] mt-0.5">${p.price}</p>}
         </div>
       </a>
-      {displayTags(p.tags)?.length > 0 && (
-        <div className="px-3 pb-1 hidden group-hover:block">
-          <p className="text-[10px] text-gray-400 leading-snug line-clamp-1">{displayTags(p.tags).join(' \u00b7 ')}</p>
-        </div>
-      )}
       {showStore && p.store_name && (
         <div className="px-3 pb-2">
           <Link
