@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { thumbUrl } from '../lib/utils'
 
-export default function ProductImage({ src, alt, onError: onErrorCallback }) {
+export default function ProductImage({ src, alt }) {
   const [error, setError] = useState(false)
   if (error) {
     return (
@@ -11,5 +11,5 @@ export default function ProductImage({ src, alt, onError: onErrorCallback }) {
       </div>
     )
   }
-  return <img src={thumbUrl(src)} alt={alt} className="w-full h-full object-cover" loading="lazy" onError={() => { setError(true); onErrorCallback?.() }} />
+  return <img src={thumbUrl(src)} alt={alt} className="w-full h-full object-cover" loading="lazy" onError={() => setError(true)} />
 }
