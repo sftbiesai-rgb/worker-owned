@@ -9533,8 +9533,8 @@
     "size": "0",
     "slug": "purse-and-clutch",
     "website": "https://www.purseandclutch.com/",
-    "ecommerce": false,
-    "ecommerce_platform": null,
+    "ecommerce": true,
+    "ecommerce_platform": "Shopify",
     "ecommerce_score": 0,
     "wholesale_only": false
   },

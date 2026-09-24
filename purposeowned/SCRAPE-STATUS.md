@@ -1,9 +1,9 @@
-# Purpose Owned — Scrape Status (2026-09-17)
+# Purpose Owned — Scrape Status (2026-09-24)
 
 ## Site
 - **Live at**: https://purposeowned.vercel.app
 - **Location**: `purposeowned/site/` (Vite + React + Tailwind)
-- **Currently showing**: 63,545 products from 218 stores
+- **Currently showing**: 75,983 products from 247 stores
 
 ## Data Sources
 
@@ -41,15 +41,20 @@
 | BigCommerce (both) | 10 | 4 | 3,110 |
 | Magento (B Corp) | 4 | 1 | 31 |
 | Unknown (both) | 613 | 71 (all Shopify) | 27,857 |
-| **Total** | | **218** (after dedup) | **63,545** |
+| Trust Shopify stores | 5 | 5 | 7,344 |
+| Purse and Clutch (fix) | 1 | 1 | 215 |
+| **Total** | | **247** (after dedup) | **75,983** |
 
 ### 3. Purpose Pledge — NOT STARTED
 - Source: https://www.purposepledge.org/companies
 - Only 20 companies, Squarespace site
 
-### 4. Purpose Trusts (Mark's data) — NOT STARTED
-- Source: https://trustownership.notion.site/business-directory
-- Notion page, needs JS rendering or ask Mark for data directly
+### 4. Purpose Trusts (Mark's CSV via PTON) — DONE
+- Source: CSV from Mark Hand (June 2026 export), backed up at Harvard Dataverse doi:10.7910/DVN/EYGHCW
+- Raw data: `trust_companies.json` (83 trust-owned businesses)
+- Trust forms: 46 EOTs, 25 Perpetual Purpose Trusts, 5 MINTs, 3 Purpose Trusts, 1 LTBT, 1 Stewardship, 1 Neighborhood
+- E-commerce: 5 Shopify stores scraped (7,344 products: Berrett-Koehler, Heath Ceramics, HMS Motorsport, Home Again Wilmington, Hummingbird Wholesale)
+- 78 companies new to directory, 5 merged with existing B Corp entries (via aliases)
 
 ### 5. Steward-owned (purpose-economy.org) — NOT STARTED
 - Source: https://purpose-economy.org/en/companies/
@@ -98,14 +103,16 @@
 3. ~~Add ownership type labels to products (B Corp, benefit corp, steward-owned, etc.)~~ ✓
 4. ~~Divergent mobile/desktop UI with filters~~ ✓
 5. Tags stripped from search.json to keep file size under Vercel limits (was 25MB → 15MB)
-6. Purpose Trusts directory still needs data (Notion page requires JS; ask Mark Hand)
+6. ~~Purpose Trusts directory still needs data (Notion page requires JS; ask Mark Hand)~~ ✓ CSV integrated
 7. See COVERAGE.md for outstanding stores that couldn't be scraped
 8. ~~57 stores (6,648 products) have no industry category — need manual mapping~~ ✓ All 234 stores categorized
 9. Custom scrapers needed for: Patagonia, King Arthur, Cariloha, Lake Champlain, Torani
+10. Purse and Clutch ecommerce detection fixed (was false negative); 215 products scraped
 
 ## Stats for Mark
 | Source | Companies | With Website | E-commerce | Products Scraped |
 |--------|-----------|-------------|------------|-----------------|
-| B Corps | 593 candidates | 584 (98%) | 206 | ~28,000 |
+| B Corps | 593 candidates | 584 (98%) | 207 (+Purse & Clutch) | ~28,200 |
 | Benefit Corps | 2,090 good standing | 1,735 (83%) | 419 (388 new) | ~35,500 |
-| **Total** | | | **218 stores** | **63,545** |
+| Purpose Trusts (PTON) | 83 | 77 | 5 | 7,344 |
+| **Total** | | | **247 stores** | **75,983** |

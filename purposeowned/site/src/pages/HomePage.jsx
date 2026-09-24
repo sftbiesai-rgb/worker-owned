@@ -256,7 +256,7 @@ function HomePage() {
         <input
           ref={inputRef}
           type="text"
-          placeholder="Search 64,000+ products..."
+          placeholder="Search 76,000+ products..."
           className="w-full border border-gray-300 rounded-l-lg px-3 py-2.5 text-sm outline-none focus:border-[#1a6847] transition-colors bg-white"
           value={inputValue}
           onChange={e => handleInputChange(e.target.value)}
@@ -485,7 +485,7 @@ function HomePage() {
           <div className="flex items-center justify-center gap-3 mb-1">
             <h1 className="text-xl lg:text-2xl font-bold tracking-tight text-gray-900">Purpose Owned</h1>
           </div>
-          <p className="text-center text-xs lg:text-sm text-gray-500 mb-3 lg:mb-4">Shop B Corps, benefit corporations, and steward-owned businesses</p>
+          <p className="text-center text-xs lg:text-sm text-gray-500 mb-3 lg:mb-4">Shop B Corps, benefit corporations, purpose trusts, and steward-owned businesses</p>
           {searchBox}
           <p className="text-[11px] text-gray-400 mt-2 text-center">Results link to company sites. We don't sell anything or earn a commission.</p>
         </div>
@@ -649,7 +649,7 @@ function HomePage() {
                   <li><strong>Steward-owned &amp; purpose trusts</strong> &mdash; legally committed to a mission (e.g. Newman's Own)</li>
                 </ul>
                 <p>Search for what you need, and buy directly from the company's own website.</p>
-                <p className="text-xs text-gray-400 pt-1">Currently indexing 64,000+ products from 230+ purpose-driven companies, with more being added.</p>
+                <p className="text-xs text-gray-400 pt-1">Currently indexing 76,000+ products from 247 purpose-driven companies, with more being added.</p>
               </div>
             </div>
           </>
@@ -658,7 +658,7 @@ function HomePage() {
         <p className="text-center text-xs text-gray-400 mt-3">
           {products.length > 0
             ? <>{products.length.toLocaleString()} products from {storeCount} purpose-driven companies</>
-            : <>64,000+ products from 230+ purpose-driven companies</>}
+            : <>76,000+ products from 247 purpose-driven companies</>}
         </p>
 
       </main>

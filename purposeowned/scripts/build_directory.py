@@ -169,6 +169,50 @@ def main():
                 'products': store_products.get(name, 0),
             }
 
+    # Trust-owned companies (from Mark's PTON CSV)
+    # Aliases: trust CSV name -> existing B Corp / benefit corp name
+    TRUST_ALIASES = {
+        'Biohabitats': 'Biohabitats, Inc.',
+        'Craftsman Technology Group': 'Craftsman Technology Group, LLC',
+        'Heath Ceramics': 'Heath Ceramics, LTD',
+        'Natural Investments': 'Natural Investments PBLLC',
+        'Geoship': 'GeoShip',
+    }
+    trust_path = os.path.join(ROOT, 'trust_companies.json')
+    if os.path.exists(trust_path):
+        with open(trust_path) as f:
+            trust_cos = json.load(f)
+
+        for t in trust_cos:
+            name = clean_name(t['name'])
+            website = t.get('website', '')
+            # Resolve alias to existing company name
+            canonical = TRUST_ALIASES.get(name, name)
+
+            if canonical in store_urls:
+                website = store_urls[canonical]
+
+            if canonical in companies:
+                # Already exists (e.g. a B Corp that's also trust-owned) -- add type
+                if 'S' not in companies[canonical]['types']:
+                    companies[canonical]['types'].append('S')
+                if not companies[canonical]['url'] and website:
+                    companies[canonical]['url'] = website
+            else:
+                companies[name] = {
+                    'name': name,
+                    'url': website or None,
+                    'types': ['S'],
+                    'category': store_industries.get(name),
+                    'industry': t.get('industry', ''),
+                    'description': t.get('description', ''),
+                    'city': t.get('city', ''),
+                    'state': t.get('state', ''),
+                    'products': store_products.get(name, 0),
+                }
+
+        print(f"Trust companies loaded: {len(trust_cos)}")
+
     all_companies = list(companies.values())
 
     # Filter to only those with a URL (no point listing companies we can't link to)
