@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 22,000% Question</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #f9f7f4;
+    color: #2a2a2a;
+    line-height: 1.75;
+    padding: 40px 20px;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .edit-banner {
+    background: #fff3cd;
+    border: 1px solid #e0c97a;
+    border-radius: 6px;
+    padding: 10px 16px;
+    margin-bottom: 32px;
+    font-family: -apple-system, sans-serif;
+    font-size: 13px;
+    color: #665a30;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .edit-banner span { font-size: 16px; }
+  h1 {
+    font-size: 2.4em;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+  }
+  .subtitle {
+    font-size: 1.1em;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 1.5em;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+    border-bottom: 2px solid #e0d8cc;
+    padding-bottom: 6px;
+  }
+  p {
+    margin-bottom: 18px;
+    font-size: 1.05em;
+  }
+  ul {
+    margin: 16px 0 24px 24px;
+    font-size: 1.05em;
+  }
+  li { margin-bottom: 8px; }
+  .chart-container {
+    background: #fff;
+    border: 1px solid #e0d8cc;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 32px 0;
+  }
+  .chart-title {
+    font-family: -apple-system, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+  }
+  .bar-chart { display: flex; flex-direction: column; gap: 12px; }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .bar-label {
+    font-family: -apple-system, sans-serif;
+    font-size: 13px;
+    color: #555;
+    width: 160px;
+    flex-shrink: 0;
+    text-align: right;
+  }
+  .bar-track {
+    flex: 1;
+    height: 28px;
+    background: #f0ece4;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+    font-family: -apple-system, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    min-width: 50px;
+    transition: width 0.8s ease;
+  }
+  .bar-fill.low { background: #4a9e6e; }
+  .bar-fill.mid { background: #d4a843; }
+  .bar-fill.high { background: #c0583a; }
+  .bar-value-outside {
+    font-family: -apple-system, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    margin-left: 8px;
+    white-space: nowrap;
+  }
+
+  /* Comparison chart */
+  .compare-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 48px;
+    height: 280px;
+    padding-top: 20px;
+  }
+  .compare-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .compare-bar-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 220px;
+  }
+  .compare-bar {
+    width: 80px;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 8px;
+    font-family: -apple-system, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .compare-label {
+    font-family: -apple-system, sans-serif;
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+    max-width: 100px;
+  }
+  .compare-sublabel {
+    font-family: -apple-system, sans-serif;
+    font-size: 11px;
+    color: #999;
+    text-align: center;
+    max-width: 110px;
+  }
+
+  .references {
+    margin-top: 56px;
+    border-top: 2px solid #e0d8cc;
+    padding-top: 24px;
+  }
+  .references h2 { border-bottom: none; margin-top: 0; }
+  .references ol {
+    margin-left: 24px;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.6;
+  }
+  .references li { margin-bottom: 6px; }
+  .references a { color: #6a5d3f; }
+  sup {
+    font-size: 0.7em;
+    color: #888;
+    cursor: help;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="edit-banner">
+  <span>✎</span> This page is editable. Click any text to start editing.
+  <button onclick="saveHTML()" style="margin-left:auto; padding:4px 14px; background:#4a9e6e; color:#fff; border:none; border-radius:4px; font-size:13px; cursor:pointer; font-family:-apple-system,sans-serif;">Save</button>
+</div>
+<script>
+function saveHTML() {
+  const btn = document.querySelector('.edit-banner button');
+  btn.textContent = 'Saving...';
+  const clone = document.documentElement.cloneNode(true);
+  clone.querySelector('.edit-banner button').textContent = 'Save';
+  fetch('/', {method:'POST', body:'<!DOCTYPE html>\n'+clone.outerHTML})
+    .then(r => { btn.textContent = r.ok ? 'Saved!' : 'Error'; setTimeout(() => btn.textContent = 'Save', 1500); })
+    .catch(() => { btn.textContent = 'Error'; setTimeout(() => btn.textContent = 'Save', 1500); });
+}
+</script>
+
+<h1 contenteditable="true">The 22,000% Question</h1>
+<div class="subtitle" contenteditable="true">What if companies spent less on lobbying and more on getting people to vote?</div>
+
+<p contenteditable="true" style="font-style: italic; color: #666; border-left: 3px solid #d4a843; padding-left: 16px; margin-bottom: 28px;">I'm interested in supporting worker-owned business models and experiments intended to tip the scales in favor of workers and voters. I run <a href="https://workerowned.info" style="color: #6a5d3f;">workerowned.info</a>, a searchable marketplace for worker-owned companies.</p>
+
+<p contenteditable="true">Elon Musk spent $288 million to help elect Donald Trump in 2024, making him the largest individual donor in the election cycle.<sup>[9]</sup> In the weeks after the election, Tesla stock jumped 75% on investor expectations that Musk's access to the White House would mean favorable policy and deregulation. His net worth increased by over $200 billion -- roughly $4 billion a day.<sup>[10]</sup> On a $288 million investment, that's a return of about 70,000%.&nbsp;</p>
+
+<p contenteditable="true">That number is eye-popping, but the playbook isn't new. A University of Kansas study found that companies lobbying for the American Jobs Creation Act of 2004 spent roughly $283 million and got $62.5 billion in tax breaks -- $220 back for every dollar spent, a 22,000% return.<sup>[1]</sup> Strategas Research built a stock index of the biggest lobbying spenders and it beat the S&amp;P 500 for fifteen straight years.<sup>[2]</sup></p>
+
+<p contenteditable="true">But there's a different way companies can spend money on politics, and it has its own interesting ROI story. It still makes me uneasy, to be clear. But I think our side -- the side that supports workers and consumers and voters -- should be open to experiments that could tip the scales even slightly against oligarchy.&nbsp;</p>
+
+<p contenteditable="true"><br></p>
+
+<h2 contenteditable="true">The other approach</h2>
+
+<p contenteditable="true">Patagonia gives its employees Election Day off. It co-founded Time to Vote in 2018 with Levi Strauss and PayPal -- a coalition that grew from 411 companies to over 2,000, all pledging paid time off or flexible scheduling so employees can vote.<sup>[3]</sup> In 2020, Patagonia sewed "Vote the Assholes Out" into clothing tags. One designer's idea. Near-zero marginal cost. Enormous earned media.<sup>[4]</sup></p>
+
+<p contenteditable="true">This isn't lobbying. Nobody is buying a specific policy outcome. The investment is in democratic participation itself -- more people voting. A cynic can say it's just PR. I'm sure that's a big part of it. But again, I'm on the lookout for experiments and less-gross options (yes yes, with the hope of bigger steps in the future). If it's just PR it STILL has a better effect than cutting a big check to a politician so you can have meetings and write their policy proposals right?</p>
+
+<p contenteditable="true">OK so what does this cost, and what does it produce?</p>
+
+<h2 contenteditable="true">The math</h2>
+
+<p contenteditable="true">Decades of political science research (primarily Green and Gerber at Yale and Columbia) have nailed down the cost of generating one additional vote through ground-game methods.<sup>[5]</sup> Estimates for TV advertising come from separate campaign finance analyses:<sup>[8]</sup></p>
+
+<div class="chart-container">
+  <div class="chart-title">Cost per additional vote by method</div>
+  <div class="bar-chart">
+    <div class="bar-row">
+      <div class="bar-label">Door-to-door canvassing</div>
+      <div class="bar-track">
+        <div class="bar-fill low" style="width: 12%;">$19-31</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Volunteer phone calls</div>
+      <div class="bar-track">
+        <div class="bar-fill low" style="width: 14%;">$20-35</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Direct mail</div>
+      <div class="bar-track">
+        <div class="bar-fill mid" style="width: 38%;">$91-137</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">TV advertising</div>
+      <div class="bar-track">
+        <div class="bar-fill high" style="width: 80%;">$200-365</div>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label" style="font-style: italic;">Employer paid day off</div>
+      <div class="bar-track">
+        <div class="bar-fill low" style="width: 10%; background: #2d7a4a;">~$230*</div>
+      </div>
+      <div class="bar-value-outside">*per employee, not per vote</div>
+    </div>
+  </div>
+</div>
+
+<p contenteditable="true">Corporate voter mobilization -- giving employees time off, running registration drives, sending reminders -- probably falls at or below the canvassing range. The company already has a direct relationship with the person. No doors to knock on. No strangers to convince. Just "hey, go vote, here's the time to do it." I'm old enough to rememeber MTV's Rock the Vote which always struck me as empty and ineffective. Slogans are probably worthless but giving people the day off, offering them rebates or discounts are real value.&nbsp;</p>
+
+<p contenteditable="true">One day's wages for an employee earning $60,000 is about $230. If even a fraction of those employees vote who otherwise wouldn't have, the cost per additional vote is competitive with the cheapest known method. And unlike canvassing, it scales without hiring anyone.</p>
+
+<h2 contenteditable="true">Gross vs. less gross</h2>
+
+<p contenteditable="true">There's no single civic engagement story as clean as Musk's 70,000% return. It's a different kind of payoff -- slower, less dramatic, harder to put on a chart. But the examples that exist are worth looking at.</p>
+
+<p contenteditable="true"><strong>Dick's Sporting Goods</strong> stopped selling assault weapons after Parkland in 2018. They destroyed $5 million in inventory and lost an estimated $250 million in revenue from the gun category and boycotts.<sup>[11]</sup> The stock dipped. Pundits said they'd made a fatal mistake. But Dick's replaced the revenue with other categories, grew steadily, and by 2025 had acquired Foot Locker. The stock went from ~$30 at the time of the decision to over $130 today. Taking a civic stand cost them real money in the short term and they came out ahead.</p>
+
+<p contenteditable="true"><strong>Patagonia</strong> has been the most aggressive experimenter here. Their "Don't Buy This Jacket" campaign in 2011 got over a million impressions and a 30% sales bump.<sup>[12]</sup> Revenue roughly tripled from $600 million in 2013 to $1.5 billion in 2022 -- a decade of escalating activism that coincided with escalating growth. The "Vote the Assholes Out" shorts sold out immediately. In 2022, the founder gave the entire company to a climate trust. They're private, so the exact numbers are hard to pin down, but nobody is arguing Patagonia's activism hurt their business.</p>
+
+<p contenteditable="true"><strong>The retention math</strong> is quieter but maybe the most compelling. Replacing an employee costs 50-200% of their annual salary according to Gallup and SHRM.<sup>[13]</sup> For a $60,000 employee, that's $30,000-$120,000 per replacement. Giving that same employee Election Day off costs $230. If civic engagement improves retention by even a point or two, the return dwarfs the cost. No lobbyist required.</p>
+
+<p contenteditable="true">None of this adds up to 22,000%. But roughly 8 in 10 consumers say companies should take civic action,<sup>[6]</sup> and partisan donations tend to alienate as many consumers as they attract.<sup>[7]</sup> The civic engagement ROI isn't one explosive number -- it's brand trust, retention, earned media, and revenue growth compounding over time. For a company with a conscience, the math is interesting enough to be worth trying.</p>
+
+<h2 contenteditable="true">The worker-owned angle</h2>
+
+<p contenteditable="true">This is where it connects to something deeper. A worker-owned company has a different incentive structure. The shareholders ARE the workers. The workers ARE the citizens. The gap between "good for the company" and "good for the public" is narrower by design.</p>
+
+<p contenteditable="true">When a worker-owned company invests in civic participation, it's acting in the interest of its owners -- it just happens that its owners are regular people who benefit from a functioning democracy. The incentives line up naturally in a way that's harder to achieve with conventional corporate structure.</p>
+
+<p contenteditable="true">This doesn't make worker-owned companies saints. But it does make civic engagement a particularly natural fit for them. The business case and the values case point in the same direction.</p>
+
+<h2 contenteditable="true">Vote with your dollar (for real this time)</h2>
+
+<p contenteditable="true">Most people reading this aren't CEOs deciding how to allocate a political budget. But you are a customer. If civic engagement is good for brand trust and lobbying is a liability, the signal you send by choosing where to shop actually moves the needle.</p>
+
+<p contenteditable="true">So here's the concrete version of this: support the companies that are doing this. Patagonia is the obvious example -- they gave employees Election Day off before it was trendy, co-founded the Time to Vote coalition, and transferred ownership of the entire company to a trust dedicated to fighting climate change. But they're not alone. Levi Strauss, Ben &amp; Jerry's, Kickstarter, and a growing list of worker-owned co-ops are investing in civic participation instead of (or alongside) traditional political spending.</p>
+
+<p contenteditable="true">When you buy from a company that gives its workers time off to vote instead of spending that money on a lobbyist, you're reinforcing a model. You're making the business case for civic engagement stronger. That's not nothing. It's not everything either, but it's a lever most people actually have access to.</p>
+
+<h2 contenteditable="true">Worth a shot</h2>
+
+<p contenteditable="true">Lobbying will always have a bigger private ROI. That's not the point. The point is that civic engagement is cheap, it scales, consumers respond well to it, and it produces a public good as a side effect. More companies should try it, and more of us should support the ones that do.</p>
+
+<p contenteditable="true">The numbers say it's not crazy.</p>
+
+<div class="references">
+  <h2>References</h2>
+  <ol>
+    <li>Alexander, R., Mazza, S., Scholz, S. "Measuring Rates of Return for Lobbying Expenditures: An Empirical Case Study of Tax Breaks for Multinational Corporations." <em>Journal of Law and Politics</em>, Vol. 25, 2009. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1375082">SSRN</a></li>
+    <li>Strategas Research Partners, "Lobbying Index" (2002-2013). Reported in <a href="https://www.cnbc.com/2014/02/26/buying-alpha-heres-the-easiest-way-to-stock-gains.html">CNBC, Feb 2014</a>. See also <a href="https://www.npr.org/sections/money/2012/01/06/144737864/forget-stocks-or-bonds-invest-in-a-lobbyist">NPR Planet Money, 2012</a>.</li>
+    <li>Time to Vote coalition. Founded 2018 by Patagonia, Levi Strauss, PayPal. <a href="https://www.maketimetovote.org/">maketimetovote.org</a></li>
+    <li>"Patagonia Escalates Activism With Voting Rights Push." <a href="https://www.marketingdive.com/news/patagonia-escalates-activism-with-voting-rights-push-before-elections/585503/">Marketing Dive, 2020</a></li>
+    <li>Green, D. &amp; Gerber, A. <em>Get Out the Vote: How to Increase Voter Turnout</em>. Brookings Institution Press, 3rd ed. <a href="https://www.brookings.edu/books/get-out-the-vote-2/">Brookings</a></li>
+    <li>Global Strategy Group / BallotReady. "Business and Civic Engagement." <a href="https://organizations.ballotready.org/research/civic-engagement-for-brands">BallotReady Research</a></li>
+    <li>Consumer Brands Association / Echelon Insights. "The Voter Perspective on Brand Political Engagement." <a href="https://consumerbrandsassociation.org/posts/the-voter-perspective-on-brand-political-engagement/">Consumer Brands Association</a></li>
+    <li>TV advertising cost-per-vote estimates vary by race type and cycle. Figures derived from FEC spending data and post-election turnout analyses. See Gerber, A. et al. "How Large and Long-lasting Are the Persuasive Effects of Televised Campaign Ads?" <em>American Political Science Review</em>, 2011.</li>
+    <li>"Elon Musk donated $288 million in 2024 election, final tally shows." <a href="https://www.washingtonpost.com/politics/2025/01/31/elon-musk-trump-donor-2024-election/">Washington Post, Jan 2025</a></li>
+    <li>"Elon Musk put $277 million into the election. He's $200 billion richer this year." <a href="https://www.washingtonpost.com/business/2024/12/15/elon-musk-trump-election-wealth/">Washington Post, Dec 2024</a>. See also <a href="https://www.cnbc.com/2024/11/11/elon-musk-is-70-billion-richer-since-trump-victory-due-to-tesla-surge.html">CNBC, Nov 2024</a>.</li>
+    <li>"Dick's Sporting Goods reports $150 million in lost sales after halting assault-weapons sales." <a href="https://www.foxnews.com/us/dicks-sporting-goods-reports-150-million-in-lost-sales-after-halting-assault-weapons-sales">Fox News, 2019</a>. CEO destroyed $5M in inventory: <a href="https://time.com/5694749/dicks-sporting-goods-5-million-assault-rifles/">Time, 2019</a>.</li>
+    <li>Patagonia's "Don't Buy This Jacket" campaign results. <a href="https://www.indigo9digital.com/blog/patagoniastrategy">Indigo9 Digital</a>. Revenue data: <a href="https://sites.lsa.umich.edu/mje/2023/11/22/op-ed-patagonia-proves-the-success-of-sustainable-corporations/">Michigan Journal of Economics, 2023</a>.</li>
+    <li>Employee replacement costs: 50-200% of annual salary. Gallup; SHRM estimates 6-9 months of salary. <a href="https://www.salary.com/resources/hr-glossary/how-much-does-it-cost-to-replace-an-employee-in-2024/">Salary.com, 2024</a>.</li>
+  </ol>
+</div>
+
+</div>
+
+
+</body></html>

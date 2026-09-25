@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { slugify, faviconUrl } from '../lib/utils'
 
-const TYPE_LABELS = { B: 'B Corp', F: 'Benefit Corp', P: 'Purpose Pledge', S: 'Steward-Owned', '1': '100% for Purpose' }
+const TYPE_LABELS = { B: 'B Corp', F: 'Benefit Corp', P: 'Purpose Pledge', S: 'Purpose Trust-Owned', '1': '100% for Purpose' }
 const TYPE_COLORS = { B: 'text-emerald-600', F: 'text-blue-600', P: 'text-amber-600', S: 'text-purple-600', '1': 'text-rose-600' }
 
 export default function ProductListItem({ product: p }) {

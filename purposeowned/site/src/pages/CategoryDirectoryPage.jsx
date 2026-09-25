@@ -5,7 +5,7 @@ import { CATEGORIES, categoryBySlug } from '../lib/categories'
 import { slugify, faviconUrl } from '../lib/utils'
 import Footer from '../components/Footer'
 
-const TYPE_LABELS = { B: 'B Corp', F: 'Benefit Corp', P: 'Purpose Pledge', S: 'Steward-Owned', '1': '100% for Purpose' }
+const TYPE_LABELS = { B: 'B Corp', F: 'Benefit Corp', P: 'Purpose Pledge', S: 'Purpose Trust-Owned', '1': '100% for Purpose' }
 const TYPE_COLORS = { B: 'bg-emerald-100 text-emerald-700', F: 'bg-blue-100 text-blue-700', P: 'bg-amber-100 text-amber-700', S: 'bg-purple-100 text-purple-700', '1': 'bg-rose-100 text-rose-700' }
 
 export default function CategoryDirectoryPage() {

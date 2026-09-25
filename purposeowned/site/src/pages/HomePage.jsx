@@ -9,7 +9,7 @@ import ProductListItem from '../components/ProductListItem'
 import Pagination from '../components/Pagination'
 import Footer from '../components/Footer'
 
-const TYPE_LABELS = { B: 'B Corp', F: 'Benefit Corp', P: 'Purpose Pledge', S: 'Steward-Owned', '1': '100% for Purpose' }
+const TYPE_LABELS = { B: 'B Corp', F: 'Benefit Corp', P: 'Purpose Pledge', S: 'Purpose Trust-Owned', '1': '100% for Purpose' }
 
 const PRICE_RANGES = [
   { key: 'under25', label: 'Under $25', min: 0, max: 25 },
@@ -485,7 +485,7 @@ function HomePage() {
           <div className="flex items-center justify-center gap-3 mb-1">
             <h1 className="text-xl lg:text-2xl font-bold tracking-tight text-gray-900">Purpose Owned</h1>
           </div>
-          <p className="text-center text-xs lg:text-sm text-gray-500 mb-3 lg:mb-4">Shop B Corps, benefit corporations, purpose trusts, and steward-owned businesses</p>
+          <p className="text-center text-xs lg:text-sm text-gray-500 mb-3 lg:mb-4">Shop B Corps, benefit corporations, and purpose trust-owned businesses</p>
           {searchBox}
           <p className="text-[11px] text-gray-400 mt-2 text-center">Results link to company sites. We don't sell anything or earn a commission.</p>
         </div>
@@ -646,10 +646,9 @@ function HomePage() {
                 <ul className="list-disc list-inside text-sm text-gray-600 space-y-1 pl-2">
                   <li><strong>Certified B Corps</strong> &mdash; verified social and environmental performance</li>
                   <li><strong>Benefit corporations &amp; L3Cs</strong> &mdash; legal structure that supports a purpose</li>
-                  <li><strong>Steward-owned &amp; purpose trusts</strong> &mdash; legally committed to a mission (e.g. Newman's Own)</li>
+                  <li><strong>Purpose trust-owned</strong> &mdash; legally committed to a mission (e.g. Newman's Own)</li>
                 </ul>
                 <p>Search for what you need, and buy directly from the company's own website.</p>
-                <p className="text-xs text-gray-400 pt-1">Currently indexing 76,000+ products from 247 purpose-driven companies, with more being added.</p>
               </div>
             </div>
           </>
