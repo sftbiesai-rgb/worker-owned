@@ -1968,5 +1968,38 @@
     "status": "verified active",
     "notes": "100% employee-owned building materials supplier since 1958. Lumber, decking, windows, doors, roofing, siding, hardware, and kitchen/bath cabinetry. 12-acre campus in Abington, MA with HomeScapes design showroom.",
     "site_section": "Home Goods & Services"
+  },
+  {
+    "id": 226,
+    "name": "Ingage Partners",
+    "url": "https://www.ingagepartners.com",
+    "category": "IT consulting / technology services",
+    "ownership_type": "employee-owned",
+    "ships": "US (service area)",
+    "status": "verified active",
+    "notes": "Employee-owned (ESOP) IT consulting firm. Certified B Corp and benefit corporation. Specializes in enterprise technology, data analytics, and digital transformation. Indianapolis, IN.",
+    "site_section": "Tech & Software"
+  },
+  {
+    "id": 227,
+    "name": "Global Prairie",
+    "url": "https://www.globalprairie.com",
+    "category": "marketing / communications agency",
+    "ownership_type": "employee-owned",
+    "ships": "US (service area)",
+    "status": "verified active",
+    "notes": "Employee-owned (ESOP) marketing and communications agency. Certified B Corp and benefit corporation. Purpose-driven brand strategy, creative, and digital services. Kansas City, MO.",
+    "site_section": "Tech & Software"
+  },
+  {
+    "id": 228,
+    "name": "Eileen Fisher",
+    "url": "https://www.eileenfisher.com",
+    "category": "women's clothing / sustainable fashion",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "40% employee-owned (ESOP) women's clothing brand. Certified B Corp and benefit corporation. Known for timeless, sustainable fashion and circular design. Renew resale program. Irvington, NY.",
+    "site_section": "Apparel"
   }
 ]

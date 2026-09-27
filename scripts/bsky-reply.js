@@ -48,7 +48,7 @@ const REPLIES = [
 ];
 
 const SENT_LOG = 'scripts/.bsky-sent.json';
-const fs = require('fs');
+import fs from 'fs';
 
 // CLI args
 // --all         Send all unsent, spaced by --gap minutes (default 90)
