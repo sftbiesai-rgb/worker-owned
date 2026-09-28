@@ -440,28 +440,6 @@
     "site_section": "Food & Pantry"
   },
   {
-    "id": 62,
-    "name": "Afterglow Coffee — Shop",
-    "url": "https://www.afterglowcoffee.com/shop",
-    "category": "coffee roaster",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Direct link to Afterglow shop. Single origin coffees roasted in Richmond VA. Ships nationally.",
-    "site_section": "Coffee & Tea"
-  },
-  {
-    "id": 63,
-    "name": "Thread Coffee — Store",
-    "url": "https://threadcoffee.com/store",
-    "category": "coffee roaster",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Direct link to Thread Coffee store. Subscriptions available. Also sells brewing equipment (Fellow, Chemex, Hario).",
-    "site_section": "Coffee & Tea"
-  },
-  {
     "id": 66,
     "name": "Worx Printing — Shop",
     "url": "https://shop.goodpress.coop/collections/worx-merch",
@@ -471,17 +449,6 @@
     "status": "verified active",
     "notes": "Direct retail shop for union-made tees, hats, bags. Hosted on Good Press platform. Exclusive supplier of union labels for UNITE HERE and Workers United.",
     "site_section": "Apparel"
-  },
-  {
-    "id": 74,
-    "name": "Slow Bloom — Coffee Shop",
-    "url": "https://www.slowbloomcoffee.com/shopcoffee",
-    "category": "coffee roaster",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Direct link to Slow Bloom coffee shop. Single origin coffees, subscriptions available. Founded by workers illegally fired during unionization.",
-    "site_section": "Coffee & Tea"
   },
   {
     "id": 84,
