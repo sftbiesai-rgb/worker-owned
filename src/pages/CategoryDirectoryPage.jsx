@@ -116,7 +116,7 @@ function CategoryDirectoryPage() {
               const hasProducts = count > 0
               const CardTag = hasProducts ? Link : 'a'
               const cardProps = hasProducts
-                ? { to: `/store/${slugify(entry.name)}` }
+                ? { to: `/store/${slugify(entry.name)}/${section.slug}` }
                 : { href: entry.url, target: '_blank', rel: 'noopener' }
               return (
                 <CardTag
