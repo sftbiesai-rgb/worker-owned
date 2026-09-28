@@ -178,7 +178,7 @@ function MarketplacePage() {
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-sm font-bold text-gray-700">{activeSub ? activeSub.label : section.label}</h2>
             <p className="text-xs text-gray-400">
-              {!loaded ? 'Loading…' : products.length > 0 ? `${filtered.length} product${filtered.length !== 1 ? 's' : ''}` : ''}
+              {!loaded ? <span className="animate-pulse">Loading…</span> : products.length > 0 ? `${filtered.length} product${filtered.length !== 1 ? 's' : ''}` : ''}
             </p>
           </div>
           {loaded && subFiltered.length > 20 && (

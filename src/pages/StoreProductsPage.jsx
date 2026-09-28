@@ -122,7 +122,10 @@ function StoreProductsPage() {
               <Pagination page={page} totalPages={totalPages} onPageChange={setPage} />
             </>
           ) : (
-            <p className="text-sm text-gray-400 text-center py-8">Loading...</p>
+            <div className="text-center py-8">
+              <div className="inline-block h-6 w-6 border-2 border-gray-300 border-t-gray-700 rounded-full animate-spin mb-3" />
+              <p className="text-sm text-gray-500 font-medium">Loading...</p>
+            </div>
           )}
         </div>
 
