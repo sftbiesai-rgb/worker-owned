@@ -49,6 +49,7 @@ function StoreProductsPage() {
   const [totalPages, setTotalPages] = useState(1)
   const [total, setTotal] = useState(0)
   const [sectionLabel, setSectionLabel] = useState(section)
+  const [notFound, setNotFound] = useState(false)
 
   useEffect(() => {
     if (!entry) return
@@ -71,7 +72,7 @@ function StoreProductsPage() {
         setTotalPages(data.totalPages)
         setTotal(data.total)
       })
-      .catch(() => setProducts([]))
+      .catch(() => setNotFound(true))
   }, [entry, store, section, page])
 
   useEffect(() => {
@@ -81,6 +82,7 @@ function StoreProductsPage() {
   }, [entry, sectionLabel, section])
 
   if (!entry) return <Navigate to="/" replace />
+  if (notFound) return <Navigate to={`/store/${store}`} replace />
 
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
