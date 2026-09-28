@@ -510,6 +510,39 @@ async function main() {
   }
   console.log(`\nAdded ${SYNTHETIC.length} synthetic entries`);
 
+  // Safety check: compare store counts with existing file before overwriting
+  if (!onlyIds) {
+    try {
+      const existing = JSON.parse(readFileSync(OUT_FILE, 'utf8'));
+      const oldStores = new Map();
+      for (const p of existing) {
+        const name = p.store_name || '';
+        if (name && !p.id?.startsWith?.('synth-')) oldStores.set(name, (oldStores.get(name) || 0) + 1);
+      }
+      const newStores = new Map();
+      for (const p of allProducts) {
+        const name = p.store_name || '';
+        if (name && !p.id?.startsWith?.('synth-')) newStores.set(name, (newStores.get(name) || 0) + 1);
+      }
+      const lost = [];
+      for (const [name, count] of oldStores) {
+        if (!newStores.has(name)) lost.push({ name, count });
+      }
+      if (lost.length > 0) {
+        lost.sort((a, b) => b.count - a.count);
+        console.error(`\n${'!'.repeat(70)}`);
+        console.error(`SAFETY CHECK FAILED: ${lost.length} stores would be LOST (${lost.reduce((s, l) => s + l.count, 0)} products)`);
+        console.error(`${'!'.repeat(70)}`);
+        for (const l of lost) console.error(`  ${l.name}: ${l.count} products`);
+        console.error(`\nRefusing to write. Use --only=<ids> to scrape specific stores,`);
+        console.error(`or --force to override this safety check.\n`);
+        if (!process.argv.includes('--force')) process.exit(1);
+      } else {
+        console.log(`\nSafety check passed: no stores lost (${oldStores.size} before, ${newStores.size} after)`);
+      }
+    } catch { /* no existing file, skip check */ }
+  }
+
   writeFileSync(OUT_FILE, JSON.stringify(allProducts));
   console.log(`Done: ${scraped} stores with products, ${skipped} skipped`);
   console.log(`Total products: ${allProducts.length}`);
