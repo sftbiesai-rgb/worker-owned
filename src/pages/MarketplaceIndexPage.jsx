@@ -305,8 +305,9 @@ function MarketplaceIndexPage() {
         {searching ? (
           searchLoading ? (
             <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">
-              <div className="text-center py-4">
-                <p className="text-sm text-gray-500 animate-pulse">Searching...</p>
+              <div className="text-center py-8">
+                <div className="inline-block h-6 w-6 border-2 border-gray-300 border-t-gray-700 rounded-full animate-spin mb-3" />
+                <p className="text-base text-gray-600 font-medium">Searching...</p>
               </div>
             </div>
           ) : results.length === 0 && companyResults.length === 0 ? (
