@@ -213,12 +213,12 @@
     "tags": []
   },
   {
-    "id": "128-10285459112255",
-    "title": "Hershey Mounds Snack Size Candy - 1 lb.",
+    "id": "128-10285563281727",
+    "title": "Hershey Reese's Peanut Butter Cups Candy - 1 lb.",
     "price": "12.98",
-    "available": false,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/128945_default_01558081-382c-4ce0-a321-3bfeb4f8ae05.jpg?v=1775662628",
-    "url": "https://www.mastgeneralstore.com/products/hershey-mounds-snack-size-candy-1-lb",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18069_default_c3cdc3ed-67b8-4a52-b12e-d12bb1532a29.jpg?v=1775668856",
+    "url": "https://www.mastgeneralstore.com/products/hershey-reeses-peanut-butter-cups-candy-1-lb",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
@@ -274,6 +274,32 @@
     "tags": []
   },
   {
+    "id": "128-10285576847679",
+    "title": "Tootsie Roll Charleston Chew Candy - Vanilla 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18123_default.jpg?v=1775668870",
+    "url": "https://www.mastgeneralstore.com/products/charleston-chew-candy-vanilla-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285576651071",
+    "title": "Tootsie Roll Junior Mints Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18120_default.jpg?v=1775668869",
+    "url": "https://www.mastgeneralstore.com/products/junior-mints-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
     "id": "167-bc-4227",
     "title": "York Peppermint Patties Candy Bars 36/Box",
     "price": "49.00",
@@ -305,21 +331,6 @@
     "available": true,
     "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18504_default.jpg?v=1775668868",
     "url": "https://www.mastgeneralstore.com/products/chick-o-stick-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285484015935",
-    "title": "Atkinson Candy Mary Janes Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/241143_default.jpg?v=1775669785",
-    "url": "https://www.mastgeneralstore.com/products/mary-janes-candy-1-lb",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
@@ -465,70 +476,12 @@
     "tags": []
   },
   {
-    "id": "128-10285479493951",
-    "title": "Goetzes Caramel Brownie Cow Tales Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18223_default_52b6371b-68d6-4eeb-af18-c8f172116498.jpg?v=1775775094",
-    "url": "https://www.mastgeneralstore.com/products/goetzes-chocolate-cow-tales-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285480444223",
-    "title": "Goetzes Honey Bun Cow Tales Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243884_default_6923544b-d107-4bf6-91df-86b3070c83cd.jpg?v=1775775095",
-    "url": "https://www.mastgeneralstore.com/products/goetzes-honey-bun-cow-tales-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
     "id": "128-10610601754943",
     "title": "Goetzes Vanilla Caramel Bullseyes Candy - 1 lb.",
     "price": "12.98",
     "available": true,
     "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18239_default.jpg?v=1789652778",
     "url": "https://www.mastgeneralstore.com/products/goetzes-vanilla-caramel-bullseyes-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285481034047",
-    "title": "Goetzes Vanilla Cow Tales Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18224_default.jpg?v=1775775096",
-    "url": "https://www.mastgeneralstore.com/products/goetzes-vanilla-cow-tales-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285563281727",
-    "title": "Hershey Reese's Peanut Butter Cups Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18069_default_c3cdc3ed-67b8-4a52-b12e-d12bb1532a29.jpg?v=1775668856",
-    "url": "https://www.mastgeneralstore.com/products/hershey-reeses-peanut-butter-cups-candy-1-lb",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
@@ -793,32 +746,6 @@
     "available": true,
     "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18109_default.jpg?v=1775668866",
     "url": "https://www.mastgeneralstore.com/products/tootsie-pops-assorted-flavors-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285576847679",
-    "title": "Tootsie Roll Charleston Chew Candy - Vanilla 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18123_default.jpg?v=1775668870",
-    "url": "https://www.mastgeneralstore.com/products/charleston-chew-candy-vanilla-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285576651071",
-    "title": "Tootsie Roll Junior Mints Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18120_default.jpg?v=1775668869",
-    "url": "https://www.mastgeneralstore.com/products/junior-mints-candy-1-lb",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
@@ -1099,6 +1026,79 @@
     "available": true,
     "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/77952_default_b55ea68e-b4d9-4445-b71e-2407c4c8f066.jpg?v=1775667099",
     "url": "https://www.mastgeneralstore.com/products/watermelon-pop-rocks-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285484015935",
+    "title": "Atkinson Candy Mary Janes Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/241143_default.jpg?v=1775669785",
+    "url": "https://www.mastgeneralstore.com/products/mary-janes-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285479493951",
+    "title": "Goetzes Caramel Brownie Cow Tales Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18223_default_52b6371b-68d6-4eeb-af18-c8f172116498.jpg?v=1775775094",
+    "url": "https://www.mastgeneralstore.com/products/goetzes-chocolate-cow-tales-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285480444223",
+    "title": "Goetzes Honey Bun Cow Tales Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243884_default_6923544b-d107-4bf6-91df-86b3070c83cd.jpg?v=1775775095",
+    "url": "https://www.mastgeneralstore.com/products/goetzes-honey-bun-cow-tales-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285481034047",
+    "title": "Goetzes Vanilla Cow Tales Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18224_default.jpg?v=1775775096",
+    "url": "https://www.mastgeneralstore.com/products/goetzes-vanilla-cow-tales-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285459112255",
+    "title": "Hershey Mounds Snack Size Candy - 1 lb.",
+    "price": "12.98",
+    "available": false,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/128945_default_01558081-382c-4ce0-a321-3bfeb4f8ae05.jpg?v=1775662628",
+    "url": "https://www.mastgeneralstore.com/products/hershey-mounds-snack-size-candy-1-lb",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
