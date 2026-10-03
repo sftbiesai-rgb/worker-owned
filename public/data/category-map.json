@@ -109,8 +109,8 @@
     },
     "personal-care": {
       "label": "Personal Care",
-      "count": 2669,
-      "storeCount": 5,
+      "count": 2769,
+      "storeCount": 6,
       "stores": [
         {
           "name": "Thrifty White Pharmacy",
@@ -119,6 +119,10 @@
         {
           "name": "Mast General Store",
           "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Osmosis Day Spa",
+          "ownershipType": "purpose trust-owned"
         },
         {
           "name": "Alaffia",

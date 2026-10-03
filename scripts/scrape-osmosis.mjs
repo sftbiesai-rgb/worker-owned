@@ -151,8 +151,12 @@ function extractProducts(html, categoryName) {
  * Check if there's a next page in the pagination
  */
 function getNextPageUrl(html) {
-  const nextMatch = html.match(/<a[^>]+class="[^"]*next[^"]*"[^>]+href="([^"]+)"/i);
-  return nextMatch ? nextMatch[1] : null;
+  // WooCommerce pagination uses class='inactive next_page' with single quotes
+  const nextMatch = html.match(/<a[^>]+href=['"]([^'"]+)['"][^>]+class=['"][^'"]*next[_\s]page[^'"]*['"]/i)
+    || html.match(/<a[^>]+class=['"][^'"]*next[_\s]page[^'"]*['"][^>]+href=['"]([^'"]+)['"]/i)
+    || html.match(/<a[^>]+class=['"][^'"]*next[^'"]*['"][^>]+href=['"]([^'"]+)['"]/i);
+  const url = nextMatch ? (nextMatch[1] || nextMatch[2]) : null;
+  return url || null;
 }
 
 async function scrapeCategory(catUrl, catName) {
@@ -344,7 +348,7 @@ async function main() {
     const tagStr = p.tags.join(' ');
     if (tagStr.includes('gift') || tagStr.includes('clothing')) section = 'Gifts & Accessories';
     else if (tagStr.includes('wellness') || tagStr.includes('bath') || tagStr.includes('cbd') || tagStr.includes('aromatherapy')) section = 'Wellness';
-    else if (tagStr.includes('body') && !tagStr.includes('organic skin care')) section = 'Body Care';
+    else if (tagStr.includes('body')) section = 'Body Care';
 
     if (!sections[section]) sections[section] = [];
     sections[section].push({
@@ -354,7 +358,7 @@ async function main() {
       url: p.url,
       image: p.image,
       available: p.available,
-      store_name: 'Osmosis Day Spa Sanctuary',
+      store_name: 'Osmosis Day Spa',
       site_section: 'Health & Wellness',
       ownership_type: 'purpose-trust',
       store_url: 'https://osmosis.com',
