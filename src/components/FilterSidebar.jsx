@@ -66,7 +66,7 @@ export default function FilterSidebar({
           value={refine}
           onChange={e => onRefineChange(e.target.value)}
           placeholder='e.g. "red", "womens"…'
-          className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#003580] placeholder-gray-400"
+          className="w-full px-2 py-1 text-xs border border-[#003580]/40 rounded bg-white focus:outline-none focus:border-[#003580] placeholder-gray-500"
         />
       </div>
 
@@ -79,7 +79,7 @@ export default function FilterSidebar({
             placeholder="Min"
             value={priceMin}
             onChange={e => onPriceChange(e.target.value, priceMax)}
-            className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#003580] placeholder-gray-400"
+            className="w-full px-2 py-1 text-xs border border-[#003580]/40 rounded bg-white focus:outline-none focus:border-[#003580] placeholder-gray-500"
             min="0"
           />
           <input
@@ -87,7 +87,7 @@ export default function FilterSidebar({
             placeholder="Max"
             value={priceMax}
             onChange={e => onPriceChange(priceMin, e.target.value)}
-            className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#003580] placeholder-gray-400"
+            className="w-full px-2 py-1 text-xs border border-[#003580]/40 rounded bg-white focus:outline-none focus:border-[#003580] placeholder-gray-500"
             min="0"
           />
         </div>
@@ -131,7 +131,7 @@ export default function FilterSidebar({
               value={storeSearch}
               onChange={e => setStoreSearch(e.target.value)}
               placeholder="Filter stores…"
-              className="w-full mb-2 px-2 py-1 text-xs border border-gray-200 rounded bg-[#f5f5f7] focus:outline-none focus:border-[#003580] placeholder-gray-400"
+              className="w-full mb-2 px-2 py-1 text-xs border border-[#003580]/40 rounded bg-white focus:outline-none focus:border-[#003580] placeholder-gray-500"
             />
           )}
           <div className="space-y-0.5 max-h-96 overflow-y-auto">

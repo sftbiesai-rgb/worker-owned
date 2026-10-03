@@ -106,7 +106,7 @@ function CategoryDirectoryPage() {
               value={filter}
               onChange={e => setFilter(e.target.value)}
               placeholder={`Filter ${section.label.toLowerCase()} companies…`}
-              className="w-full mb-4 px-3 py-2 text-sm border border-gray-200 rounded-lg bg-[#f5f5f7] focus:outline-none focus:border-[#003580] focus:ring-1 focus:ring-[#003580] placeholder-gray-400"
+              className="w-full mb-4 px-3 py-2 text-sm border border-[#003580]/40 rounded-lg bg-white focus:outline-none focus:border-[#003580] focus:ring-1 focus:ring-[#003580] placeholder-gray-500"
             />
           )}
 
