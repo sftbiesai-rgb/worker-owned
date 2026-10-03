@@ -1,11 +1,237 @@
 [
   {
+    "id": "128-10285458489663",
+    "title": "Atkinson Candy Chick-O-Stick Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18504_default.jpg?v=1775668868",
+    "url": "https://www.mastgeneralstore.com/products/chick-o-stick-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285484015935",
+    "title": "Atkinson Candy Mary Janes Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/241143_default.jpg?v=1775669785",
+    "url": "https://www.mastgeneralstore.com/products/mary-janes-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285846102335",
+    "title": "Atkinson Candy Sugar Free Chick-O-Sticks Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/68168_default_c370f3af-3933-43d6-b93c-de793a1531b8.jpg?v=1775667180",
+    "url": "https://www.mastgeneralstore.com/products/sugar-free-chick-o-sticks-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285575799103",
+    "title": "Bubble Gum Pop Rocks Candy",
+    "price": "1.49",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/108181_default.jpg?v=1775662626",
+    "url": "https://www.mastgeneralstore.com/products/bubble-gum-pop-rocks-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285476446527",
+    "title": "Candy Dynamics Toxic Waste Slime Lickers 2.0 Candy",
+    "price": "2.99",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/244844_default.jpg?v=1775667111",
+    "url": "https://www.mastgeneralstore.com/products/toxic-waste-slime-lickers-2-0-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285478019391",
+    "title": "Candy Dynamics Toxic Waste Slime Lickers 2.0 Candy - 12 Pack",
+    "price": "29.99",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/247498_default.jpg?v=1775668857",
+    "url": "https://www.mastgeneralstore.com/products/toxic-waste-slime-lickers-2-0-candy-12-pack",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285477331263",
+    "title": "Candy Dynamics Toxic Waste Sour Drum Candy",
+    "price": "2.49",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/214144_default_7d6cc280-8498-4c96-bb89-785b6d27a836.jpg?v=1775665351",
+    "url": "https://www.mastgeneralstore.com/products/toxic-waste-sour-drum-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "167-bc-480",
+    "title": "Charleston Chews, Chocolate, 1.785 oz Bars (Pack of 24)",
+    "price": "36.85",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/59756/images/165123/v000169__1__15011.1787722330.500.750.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/charleston-chews-chocolate-1-785-oz-bars-pack-of-24/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285563904319",
+    "title": "Charms Blow Pop Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/214519.jpg?v=1779450327",
+    "url": "https://www.mastgeneralstore.com/products/charms-blow-pop-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285564428607",
+    "title": "Charms Dubble Bubble Gum Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17775_default_d833892e-0e31-467f-a38d-12b5f5b5958d.jpg?v=1775667957",
+    "url": "https://www.mastgeneralstore.com/products/dubble-bubble-gum-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285482246463",
+    "title": "Charms Razzles Candy",
+    "price": "2.49",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18312_default.jpg?v=1775668860",
+    "url": "https://www.mastgeneralstore.com/products/razzles-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285471531327",
+    "title": "Charms Wax Bottles Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18270_default_26265293-9ea8-4b85-ba66-a92b5fca3ba7.jpg?v=1775668869",
+    "url": "https://www.mastgeneralstore.com/products/wax-bottles-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285481754943",
+    "title": "Charms Wax Lips Candy",
+    "price": "2.49",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18268_default.jpg?v=1775668859",
+    "url": "https://www.mastgeneralstore.com/products/wax-lips-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285576225087",
+    "title": "Cherry Pop Rocks Candy",
+    "price": "1.49",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/144053_default.jpg?v=1775662627",
+    "url": "https://www.mastgeneralstore.com/products/cherry-pop-rocks-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285576487231",
+    "title": "Cotton Candy Pop Rocks Candy",
+    "price": "1.49",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/212295_default.jpg?v=1775665355",
+    "url": "https://www.mastgeneralstore.com/products/cotton-candy-pop-rocks-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285483426111",
+    "title": "Ferrara Fun Dip Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/10110502_default.jpg?v=1782481596",
+    "url": "https://www.mastgeneralstore.com/products/fun-dip-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
     "id": "128-10285477691711",
     "title": "Ferrara Grape & Strawberry Nerds Box Candy",
     "price": "2.49",
     "available": true,
     "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/212856_default.jpg?v=1775665353",
     "url": "https://www.mastgeneralstore.com/products/grape-strawberry-nerds-box-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285458817343",
+    "title": "Ferrara Lemonheads Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18510_default_08428cfd-608c-417b-a73d-2b38d4688cdf.jpg?v=1775668870",
+    "url": "https://www.mastgeneralstore.com/products/lemonheads-candy-1-lb",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
@@ -62,6 +288,76 @@
     "ownership_type": "ESOP",
     "site_section": "Food & Pantry",
     "tags": []
+  },
+  {
+    "id": "167-bc-2684",
+    "title": "Goetze's Caramel Cremes 1.9 oz Nostalgic Candy - 20 Count Box",
+    "price": "27.38",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/59602/images/165233/v025486__1__15877.1787718619.500.750.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/goetzes-caramel-cremes-1-9-oz-nostalgic-candy-20-count-box/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285479493951",
+    "title": "Goetzes Caramel Brownie Cow Tales Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18223_default_52b6371b-68d6-4eeb-af18-c8f172116498.jpg?v=1775775094",
+    "url": "https://www.mastgeneralstore.com/products/goetzes-chocolate-cow-tales-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285480444223",
+    "title": "Goetzes Honey Bun Cow Tales Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243884_default_6923544b-d107-4bf6-91df-86b3070c83cd.jpg?v=1775775095",
+    "url": "https://www.mastgeneralstore.com/products/goetzes-honey-bun-cow-tales-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10610601754943",
+    "title": "Goetzes Vanilla Caramel Bullseyes Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18239_default.jpg?v=1789652778",
+    "url": "https://www.mastgeneralstore.com/products/goetzes-vanilla-caramel-bullseyes-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285481034047",
+    "title": "Goetzes Vanilla Cow Tales Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18224_default.jpg?v=1775775096",
+    "url": "https://www.mastgeneralstore.com/products/goetzes-vanilla-cow-tales-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
   },
   {
     "id": "128-10285472940351",
@@ -142,448 +438,6 @@
     "tags": []
   },
   {
-    "id": "128-10285572948287",
-    "title": "Mondelez Red Swedish Fish Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18060_default.jpg?v=1775668858",
-    "url": "https://www.mastgeneralstore.com/products/mondelez-red-swedish-fish-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285573669183",
-    "title": "Mondelez Sour Patch Kids Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18369_default_6708fbd9-9470-471f-a4c4-b2432aa8a0d6.jpg?v=1775668858",
-    "url": "https://www.mastgeneralstore.com/products/mondelez-sour-patch-kids-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285574324543",
-    "title": "Mondelez Sour Patch Watermelon Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/71248_default.jpg?v=1775804653",
-    "url": "https://www.mastgeneralstore.com/products/mondelez-sour-patch-watermelon-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "167-bc-5543",
-    "title": "Skittles Original Fruity Candy 36 Count Box",
-    "price": "48.93",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/59971/images/165242/v010400__1__24903.1787722385.500.750.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/skittles-original-fruity-candy-36-count-box/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "167-bc-7060",
-    "title": "Skittles, Original Candy Sharing Size Bag - 15.6 oz",
-    "price": "5.24",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/65295/images/138459/v105074__1__46754.1787722061.500.750.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/skittles-original-candy-sharing-size-bag-15-6-oz/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285575471423",
-    "title": "Thayer Distro Assorted Swedish Fish Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/182076_default_508feb62-a72a-4a0e-8745-4e1689b54797.jpg?v=1775668865",
-    "url": "https://www.mastgeneralstore.com/products/assorted-swedish-fish-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285575897407",
-    "title": "Thayer Distro Mini TWIX Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/169498_default_3e5e0e55-7c7c-429b-82e9-abcf865e803e.jpg?v=1775667968",
-    "url": "https://www.mastgeneralstore.com/products/mini-twix-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285473202495",
-    "title": "Thayer Distro Starburst Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/213069_default_1fb2ffb0-d815-4f03-98c0-08021382ecf7.jpg?v=1775665348",
-    "url": "https://www.mastgeneralstore.com/products/starburst-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285576323391",
-    "title": "Tootsie Pops Assorted Flavors Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18109_default.jpg?v=1775668866",
-    "url": "https://www.mastgeneralstore.com/products/tootsie-pops-assorted-flavors-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285576847679",
-    "title": "Tootsie Roll Charleston Chew Candy - Vanilla 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18123_default.jpg?v=1775668870",
-    "url": "https://www.mastgeneralstore.com/products/charleston-chew-candy-vanilla-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285576651071",
-    "title": "Tootsie Roll Junior Mints Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18120_default.jpg?v=1775668869",
-    "url": "https://www.mastgeneralstore.com/products/junior-mints-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285476610367",
-    "title": "Tootsie Roll Midgees Assorted Flavors Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18325_default.jpg?v=1775667969",
-    "url": "https://www.mastgeneralstore.com/products/tootsie-roll-midgees-assorted-flavors-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285475823935",
-    "title": "Tootsie Roll Midgees Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18302_default_1d33525b-afb5-478e-a1fa-ef77998c6077.jpg?v=1775668866",
-    "url": "https://www.mastgeneralstore.com/products/tootsie-roll-midgees-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "167-bc-2523",
-    "title": "Tootsie Roll Midgees Laydown Bag Candy - Midgees, 360 ct",
-    "price": "8.55",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/images/stencil/1280x1280/products/41758/159565/v000508__1__67422.1787719182.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/tootsie-roll-midgees-laydown-bag-candy-midgees-360-ct/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285475103039",
-    "title": "Vanilla Tootsie Rolls Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/255630_default.jpg?v=1775804657",
-    "url": "https://www.mastgeneralstore.com/products/vanilla-tootsie-rolls-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285480870207",
-    "title": "Zachary Confections Candy Corn - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17626_default.jpg?v=1775667973",
-    "url": "https://www.mastgeneralstore.com/products/candy-corn-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285573603647",
-    "title": "Albanese Assorted Gourmet Gummi Bears Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18097_default_2f5b28af-af32-4ba2-af89-bcac1234c937.jpg?v=1775668865",
-    "url": "https://www.mastgeneralstore.com/products/assorted-gourmet-gummi-bears-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285572817215",
-    "title": "Albanese Gummi Peach Rings Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17596_default.jpg?v=1775667956",
-    "url": "https://www.mastgeneralstore.com/products/gummi-peach-rings-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285574291775",
-    "title": "Albanese Milk Chocolate Gummi Bears Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/211370_default.jpg?v=1775665349",
-    "url": "https://www.mastgeneralstore.com/products/milk-chocolate-gummi-bears-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285575799103",
-    "title": "Bubble Gum Pop Rocks Candy",
-    "price": "1.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/108181_default.jpg?v=1775662626",
-    "url": "https://www.mastgeneralstore.com/products/bubble-gum-pop-rocks-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "167-bc-480",
-    "title": "Charleston Chews, Chocolate, 1.785 oz Bars (Pack of 24)",
-    "price": "36.85",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/59756/images/165123/v000169__1__15011.1787722330.500.750.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/charleston-chews-chocolate-1-785-oz-bars-pack-of-24/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285563904319",
-    "title": "Charms Blow Pop Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/214519.jpg?v=1779450327",
-    "url": "https://www.mastgeneralstore.com/products/charms-blow-pop-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285471531327",
-    "title": "Charms Wax Bottles Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18270_default_26265293-9ea8-4b85-ba66-a92b5fca3ba7.jpg?v=1775668869",
-    "url": "https://www.mastgeneralstore.com/products/wax-bottles-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285481754943",
-    "title": "Charms Wax Lips Candy",
-    "price": "2.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18268_default.jpg?v=1775668859",
-    "url": "https://www.mastgeneralstore.com/products/wax-lips-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285576225087",
-    "title": "Cherry Pop Rocks Candy",
-    "price": "1.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/144053_default.jpg?v=1775662627",
-    "url": "https://www.mastgeneralstore.com/products/cherry-pop-rocks-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285576487231",
-    "title": "Cotton Candy Pop Rocks Candy",
-    "price": "1.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/212295_default.jpg?v=1775665355",
-    "url": "https://www.mastgeneralstore.com/products/cotton-candy-pop-rocks-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285483426111",
-    "title": "Ferrara Fun Dip Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/10110502_default.jpg?v=1782481596",
-    "url": "https://www.mastgeneralstore.com/products/fun-dip-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285458817343",
-    "title": "Ferrara Lemonheads Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18510_default_08428cfd-608c-417b-a73d-2b38d4688cdf.jpg?v=1775668870",
-    "url": "https://www.mastgeneralstore.com/products/lemonheads-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "167-bc-2684",
-    "title": "Goetze's Caramel Cremes 1.9 oz Nostalgic Candy - 20 Count Box",
-    "price": "27.38",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/59602/images/165233/v025486__1__15877.1787718619.500.750.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/goetzes-caramel-cremes-1-9-oz-nostalgic-candy-20-count-box/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285479493951",
-    "title": "Goetzes Caramel Brownie Cow Tales Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18223_default_52b6371b-68d6-4eeb-af18-c8f172116498.jpg?v=1775775094",
-    "url": "https://www.mastgeneralstore.com/products/goetzes-chocolate-cow-tales-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285480444223",
-    "title": "Goetzes Honey Bun Cow Tales Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243884_default_6923544b-d107-4bf6-91df-86b3070c83cd.jpg?v=1775775095",
-    "url": "https://www.mastgeneralstore.com/products/goetzes-honey-bun-cow-tales-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10610601754943",
-    "title": "Goetzes Vanilla Caramel Bullseyes Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18239_default.jpg?v=1789652778",
-    "url": "https://www.mastgeneralstore.com/products/goetzes-vanilla-caramel-bullseyes-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285481034047",
-    "title": "Goetzes Vanilla Cow Tales Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18224_default.jpg?v=1775775096",
-    "url": "https://www.mastgeneralstore.com/products/goetzes-vanilla-cow-tales-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
     "id": "128-10285484507455",
     "title": "Impact Confections Warhead Super Sour Spray Candy",
     "price": "2.49",
@@ -626,6 +480,69 @@
     "price": "22.79",
     "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/60080/images/164783/v008600__1__42750.1787722282.500.750.jpg?c=2",
     "url": "https://shop.thriftywhite.com/life-savers-wint-o-green-candy-20-84-oz-rolls/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285572948287",
+    "title": "Mondelez Red Swedish Fish Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18060_default.jpg?v=1775668858",
+    "url": "https://www.mastgeneralstore.com/products/mondelez-red-swedish-fish-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285573669183",
+    "title": "Mondelez Sour Patch Kids Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18369_default_6708fbd9-9470-471f-a4c4-b2432aa8a0d6.jpg?v=1775668858",
+    "url": "https://www.mastgeneralstore.com/products/mondelez-sour-patch-kids-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285574324543",
+    "title": "Mondelez Sour Patch Watermelon Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/71248_default.jpg?v=1775804653",
+    "url": "https://www.mastgeneralstore.com/products/mondelez-sour-patch-watermelon-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "167-bc-5395",
+    "title": "Necco Original Wafer Candy All Natural 2.02 oz - 24 ct",
+    "price": "37.88",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/65284/images/165136/v122737__1__63295.1787719636.500.750.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/necco-original-wafer-candy-all-natural-2-02-oz-24-ct/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "167-bc-113",
+    "title": "Necco Wafers-Chocolate 24/Box",
+    "price": "37.88",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/66714/images/165401/v133153__1__68863.1787722040.500.750.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/necco-wafers-chocolate-24-box/",
     "store_name": "Thrifty White Pharmacy",
     "store_url": "https://shop.thriftywhite.com",
     "ownership_type": "ESOP",
@@ -719,36 +636,6 @@
     "tags": []
   },
   {
-    "id": "128-10285564395839",
-    "title": "Redstone Foods Assorted Jelly Belly Beans Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/183484_default_7b662d79-b4a1-401e-9664-121fa97bffe5.jpg?v=1775668859",
-    "url": "https://www.mastgeneralstore.com/products/assorted-jelly-belly-beans-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285565018431",
-    "title": "Redstone Foods Assorted Sour Jelly Belly Beans Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/183483_default.jpg?v=1775668860",
-    "url": "https://www.mastgeneralstore.com/products/assorted-sour-jelly-belly-beans-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
     "id": "128-10285479264575",
     "title": "Redstone Foods Jawbreakers Candy - 1 lb.",
     "price": "12.98",
@@ -762,21 +649,6 @@
     "tags": []
   },
   {
-    "id": "128-10285565575487",
-    "title": "Redstone Foods Jelly Belly Licorice Beans Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/184205_default.jpg?v=1775668860",
-    "url": "https://www.mastgeneralstore.com/products/jelly-belly-licorice-beans-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
     "id": "128-10285481197887",
     "title": "Redstone Foods Mini Jawbreakers Candy - 1 lb.",
     "price": "12.98",
@@ -786,6 +658,30 @@
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "167-bc-5543",
+    "title": "Skittles Original Fruity Candy 36 Count Box",
+    "price": "48.93",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/59971/images/165242/v010400__1__24903.1787722385.500.750.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/skittles-original-fruity-candy-36-count-box/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "167-bc-7060",
+    "title": "Skittles, Original Candy Sharing Size Bag - 15.6 oz",
+    "price": "5.24",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/65295/images/138459/v105074__1__46754.1787722061.500.750.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/skittles-original-candy-sharing-size-bag-15-6-oz/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
     "site_section": "Food & Pantry",
     "tags": []
   },
@@ -814,527 +710,6 @@
     "ownership_type": "employee-owned",
     "site_section": "Food & Pantry",
     "tags": []
-  },
-  {
-    "id": "128-10285566951743",
-    "title": "Strawberry Pop Rocks Candy",
-    "price": "1.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/77951_default_6200e933-37d1-405f-b45b-f4f33887c8f1.jpg?v=1775667099",
-    "url": "https://www.mastgeneralstore.com/products/strawberry-pop-rocks-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "167-bc-5777",
-    "title": "Sugar Babies 1.7 oz Bag - 24 Count Box",
-    "price": "36.85",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/60040/images/155817/v000507__1__31141.1787722435.500.750.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/sugar-babies-1-7-oz-bag-24-count-box/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285484343615",
-    "title": "Thayer Distro Life Savers Candy - Butter Rum",
-    "price": "1.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/108685_default.jpg?v=1777466776",
-    "url": "https://www.mastgeneralstore.com/products/life-savers-candy-butter-rum",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285484114239",
-    "title": "Thayer Distro Life Savers Candy - Five Flavors",
-    "price": "1.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17635_default.jpg?v=1775667975",
-    "url": "https://www.mastgeneralstore.com/products/life-savers-candy-five-flavors",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285574979903",
-    "title": "Thayer Distro Mike and Ike Hot Tamales Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/75744_default_16f98508-ce8e-43f2-a45d-80a031836642.jpg?v=1775804656",
-    "url": "https://www.mastgeneralstore.com/products/mike-and-ike-hot-tamales-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285574390079",
-    "title": "Thayer Distro Mike and Ike Originals Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18189_default.jpg?v=1775668864",
-    "url": "https://www.mastgeneralstore.com/products/mike-and-ike-originals-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "167-bc-3788",
-    "title": "Topps Ring Pop Lollipops Novelty Candy - 24 Count Box",
-    "price": "21.29",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/images/stencil/1280x1280/products/58644/164685/v007050__1__87562.1787722272.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/topps-ring-pop-lollipops-novelty-candy-24-count-box/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285567639871",
-    "title": "Tropical Punch Pop Rocks Candy",
-    "price": "1.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/77953_default.jpg?v=1775667100",
-    "url": "https://www.mastgeneralstore.com/products/tropical-punch-pop-rocks-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285575274815",
-    "title": "Watermelon Pop Rocks Candy",
-    "price": "1.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/77952_default_b55ea68e-b4d9-4445-b71e-2407c4c8f066.jpg?v=1775667099",
-    "url": "https://www.mastgeneralstore.com/products/watermelon-pop-rocks-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "167-bc-4227",
-    "title": "York Peppermint Patties Candy Bars 36/Box",
-    "price": "49.00",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/65927/images/140632/v000147__1__64188.1787722108.500.750.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/york-peppermint-patties-candy-bars-36-box/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285482770751",
-    "title": "Andre Prost Zotz Assorted Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/100756_default.jpg?v=1775662641",
-    "url": "https://www.mastgeneralstore.com/products/zotz-assorted-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285458489663",
-    "title": "Atkinson Candy Chick-O-Stick Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18504_default.jpg?v=1775668868",
-    "url": "https://www.mastgeneralstore.com/products/chick-o-stick-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285484015935",
-    "title": "Atkinson Candy Mary Janes Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/241143_default.jpg?v=1775669785",
-    "url": "https://www.mastgeneralstore.com/products/mary-janes-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285846102335",
-    "title": "Atkinson Candy Sugar Free Chick-O-Sticks Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/68168_default_c370f3af-3933-43d6-b93c-de793a1531b8.jpg?v=1775667180",
-    "url": "https://www.mastgeneralstore.com/products/sugar-free-chick-o-sticks-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285479166271",
-    "title": "Big League Chew Outta Here Original Gum Candy",
-    "price": "2.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/219076_default.jpg?v=1775662637",
-    "url": "https://www.mastgeneralstore.com/products/big-league-chew-outta-here-original-gum-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285575569727",
-    "title": "Boston Fruit Slice Wrapped Fruit Slice Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/160499_default_2b0d91ac-e0ff-41f4-a75e-6b5867537a27.jpg?v=1775667107",
-    "url": "https://www.mastgeneralstore.com/products/wrapped-fruit-slice-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "167-bc-6054",
-    "title": "Candy Necklace Nostalgic Candy - 24 Count Box",
-    "price": "11.67",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/59443/images/164699/v025487__1__95137.1787722341.500.750.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/candy-necklace-nostalgic-candy-24-count-box/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285484605759",
-    "title": "Charms Andes Mints Chocolate Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18353_default.jpg?v=1775667956",
-    "url": "https://www.mastgeneralstore.com/products/andes-mints-chocolate-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285472579903",
-    "title": "Charms Assorted Chiclets Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17877_default.jpg?v=1775667959",
-    "url": "https://www.mastgeneralstore.com/products/assorted-chiclets-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285564428607",
-    "title": "Charms Dubble Bubble Gum Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17775_default_d833892e-0e31-467f-a38d-12b5f5b5958d.jpg?v=1775667957",
-    "url": "https://www.mastgeneralstore.com/products/dubble-bubble-gum-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285482246463",
-    "title": "Charms Razzles Candy",
-    "price": "2.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18312_default.jpg?v=1775668860",
-    "url": "https://www.mastgeneralstore.com/products/razzles-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285483393343",
-    "title": "Dad's Root Beer Barrels Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/179918_default_25415089-7ad2-4048-a66e-ae6a36582390.jpg?v=1775667965",
-    "url": "https://www.mastgeneralstore.com/products/dads-root-beer-barrels-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "113-9349214044489",
-    "title": "Divine 70% Dark Chocolate Coins",
-    "price": "3.20",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0900/1205/7929/files/UK_DIVINE_DARK_COINS_3D_RENDER_2026.png?v=1787560180",
-    "url": "https://divinechocolate.com/products/divine-70-dark-chocolate-coins",
-    "store_name": "Divine Chocolate",
-    "store_url": "https://divinechocolate.com",
-    "ownership_type": "farmer co-op stake",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "Christmas",
-      "Dark Chocolate",
-      "Vegan"
-    ]
-  },
-  {
-    "id": "113-9349214110025",
-    "title": "Divine Milk Chocolate Coins",
-    "price": "3.20",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0900/1205/7929/files/UK_DIVINE_MILK_COINS_3D_RENDER_2026_BLUE.png?v=1787560144",
-    "url": "https://divinechocolate.com/products/divine-milk-chocolate-coins",
-    "store_name": "Divine Chocolate",
-    "store_url": "https://divinechocolate.com",
-    "ownership_type": "farmer co-op stake",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "Christmas",
-      "Milk Chocolate"
-    ]
-  },
-  {
-    "id": "128-10285478609215",
-    "title": "Dutch Valley Foods Australian Style Black Licorice Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243620_default.jpg?v=1775664422",
-    "url": "https://www.mastgeneralstore.com/products/australian-style-black-licorice-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285477986623",
-    "title": "Dutch Valley Foods Australian Style Red Licorice Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243619_default.jpg?v=1775664422",
-    "url": "https://www.mastgeneralstore.com/products/australian-style-red-licorice-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285478445375",
-    "title": "Ferrara Spree Original Roll Candy",
-    "price": "2.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/212852_default_3c6a3544-3f62-4831-8ba6-3ab138a94834.jpg?v=1775665354",
-    "url": "https://www.mastgeneralstore.com/products/spree-original-roll-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285571211583",
-    "title": "Forbes Candy Assorted Salt Water Taffy Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/253330_default.jpg?v=1775818294",
-    "url": "https://www.mastgeneralstore.com/products/assorted-salt-water-taffy-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "167-bc-2239",
-    "title": "Fruit Slices Tub Candy, Fruit Slices, 16 oz -1 Tub",
-    "price": "2.88",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/43001/images/156975/812664_38286__70929.1787723166.500.750.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/fruit-slices-tub-candy-fruit-slices-16-oz-1-tub/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285472055615",
-    "title": "Ganong Bros. Sixlets Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17623_default_82c5e780-3fd1-445e-99ac-c1954d925b35.jpg?v=1775667967",
-    "url": "https://www.mastgeneralstore.com/products/ganong-bros-sixlets-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285480476991",
-    "title": "Gerrit J. Verburg Chocolate Gold Coins Candy",
-    "price": "3.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/124342_default.jpg?v=1775663462",
-    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-chocolate-gold-coins-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285476774207",
-    "title": "Gerrit J. Verburg Rainbow Licorice Laces Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/100028_default.jpg?v=1775662627",
-    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-rainbow-licorice-laces-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285478215999",
-    "title": "Gerrit J. Verburg Sour Gummi Bubble Gum Bottles Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/154449_default.jpg?v=1775667959",
-    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-gummi-bubble-gum-bottles-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285475987775",
-    "title": "Gerrit J. Verburg Strawberry Licorice Laces Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/165077_default_20848e3b-a4b2-4270-9f5d-216379e3d509.jpg?v=1775667971",
-    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-strawberry-licorice-laces-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "167-bc-2620",
-    "title": "Licorice Pipes Nostalgic Candy 60 Count Box",
-    "price": "89.94",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/60084/images/155516/v025485__1__60969.1787722377.500.750.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/licorice-pipes-nostalgic-candy-60-count-box/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "167-bc-1284",
-    "title": "Mentos Chewy Mint Candy Roll, Strawberry 1.32 oz - Box of 15",
-    "price": "21.72",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/images/stencil/1280x1280/products/59794/165085/v001368__1__23436.1787722374.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/mentos-chewy-mint-candy-roll-strawberry-1-32-oz-box-of-15/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "167-bc-5395",
-    "title": "Necco Original Wafer Candy All Natural 2.02 oz - 24 ct",
-    "price": "37.88",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/65284/images/165136/v122737__1__63295.1787719636.500.750.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/necco-original-wafer-candy-all-natural-2-02-oz-24-ct/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "167-bc-113",
-    "title": "Necco Wafers-Chocolate 24/Box",
-    "price": "37.88",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/66714/images/165401/v133153__1__68863.1787722040.500.750.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/necco-wafers-chocolate-24-box/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285482410303",
-    "title": "Skybar Candy",
-    "price": "3.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17655_default_03f6b787-206e-4db7-b179-3c8da4246ae0.jpg?v=1775667969",
-    "url": "https://www.mastgeneralstore.com/products/skybar-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
   },
   {
     "id": "128-10285483983167",
@@ -1457,6 +832,43 @@
     ]
   },
   {
+    "id": "128-10285566951743",
+    "title": "Strawberry Pop Rocks Candy",
+    "price": "1.49",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/77951_default_6200e933-37d1-405f-b45b-f4f33887c8f1.jpg?v=1775667099",
+    "url": "https://www.mastgeneralstore.com/products/strawberry-pop-rocks-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "167-bc-5777",
+    "title": "Sugar Babies 1.7 oz Bag - 24 Count Box",
+    "price": "36.85",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/60040/images/155817/v000507__1__31141.1787722435.500.750.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/sugar-babies-1-7-oz-bag-24-count-box/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "167-bc-497",
+    "title": "Sugar Daddies 1.7 oz Lollipops - 24 Count Box",
+    "price": "36.85",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/59936/images/153732/v001727__1__78974.1787722370.500.750.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/sugar-daddies-1-7-oz-lollipops-24-count-box/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
     "id": "128-10285572260159",
     "title": "Thayer Distro Annabelle Abba-Zaba Original Chewy Taffy Candy",
     "price": "2.49",
@@ -1470,12 +882,307 @@
     "tags": []
   },
   {
+    "id": "128-10285575471423",
+    "title": "Thayer Distro Assorted Swedish Fish Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/182076_default_508feb62-a72a-4a0e-8745-4e1689b54797.jpg?v=1775668865",
+    "url": "https://www.mastgeneralstore.com/products/assorted-swedish-fish-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285484343615",
+    "title": "Thayer Distro Life Savers Candy - Butter Rum",
+    "price": "1.49",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/108685_default.jpg?v=1777466776",
+    "url": "https://www.mastgeneralstore.com/products/life-savers-candy-butter-rum",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285484114239",
+    "title": "Thayer Distro Life Savers Candy - Five Flavors",
+    "price": "1.49",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17635_default.jpg?v=1775667975",
+    "url": "https://www.mastgeneralstore.com/products/life-savers-candy-five-flavors",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285574979903",
+    "title": "Thayer Distro Mike and Ike Hot Tamales Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/75744_default_16f98508-ce8e-43f2-a45d-80a031836642.jpg?v=1775804656",
+    "url": "https://www.mastgeneralstore.com/products/mike-and-ike-hot-tamales-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285574390079",
+    "title": "Thayer Distro Mike and Ike Originals Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18189_default.jpg?v=1775668864",
+    "url": "https://www.mastgeneralstore.com/products/mike-and-ike-originals-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285575897407",
+    "title": "Thayer Distro Mini TWIX Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/169498_default_3e5e0e55-7c7c-429b-82e9-abcf865e803e.jpg?v=1775667968",
+    "url": "https://www.mastgeneralstore.com/products/mini-twix-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285473202495",
+    "title": "Thayer Distro Starburst Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/213069_default_1fb2ffb0-d815-4f03-98c0-08021382ecf7.jpg?v=1775665348",
+    "url": "https://www.mastgeneralstore.com/products/starburst-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285576323391",
+    "title": "Tootsie Pops Assorted Flavors Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18109_default.jpg?v=1775668866",
+    "url": "https://www.mastgeneralstore.com/products/tootsie-pops-assorted-flavors-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285576847679",
+    "title": "Tootsie Roll Charleston Chew Candy - Vanilla 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18123_default.jpg?v=1775668870",
+    "url": "https://www.mastgeneralstore.com/products/charleston-chew-candy-vanilla-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285576651071",
+    "title": "Tootsie Roll Junior Mints Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18120_default.jpg?v=1775668869",
+    "url": "https://www.mastgeneralstore.com/products/junior-mints-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285476610367",
+    "title": "Tootsie Roll Midgees Assorted Flavors Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18325_default.jpg?v=1775667969",
+    "url": "https://www.mastgeneralstore.com/products/tootsie-roll-midgees-assorted-flavors-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285475823935",
+    "title": "Tootsie Roll Midgees Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18302_default_1d33525b-afb5-478e-a1fa-ef77998c6077.jpg?v=1775668866",
+    "url": "https://www.mastgeneralstore.com/products/tootsie-roll-midgees-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "167-bc-2523",
+    "title": "Tootsie Roll Midgees Laydown Bag Candy - Midgees, 360 ct",
+    "price": "8.55",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/images/stencil/1280x1280/products/41758/159565/v000508__1__67422.1787719182.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/tootsie-roll-midgees-laydown-bag-candy-midgees-360-ct/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "167-bc-3788",
+    "title": "Topps Ring Pop Lollipops Novelty Candy - 24 Count Box",
+    "price": "21.29",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/images/stencil/1280x1280/products/58644/164685/v007050__1__87562.1787722272.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/topps-ring-pop-lollipops-novelty-candy-24-count-box/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285567639871",
+    "title": "Tropical Punch Pop Rocks Candy",
+    "price": "1.49",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/77953_default.jpg?v=1775667100",
+    "url": "https://www.mastgeneralstore.com/products/tropical-punch-pop-rocks-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285475103039",
+    "title": "Vanilla Tootsie Rolls Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/255630_default.jpg?v=1775804657",
+    "url": "https://www.mastgeneralstore.com/products/vanilla-tootsie-rolls-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285575274815",
+    "title": "Watermelon Pop Rocks Candy",
+    "price": "1.49",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/77952_default_b55ea68e-b4d9-4445-b71e-2407c4c8f066.jpg?v=1775667099",
+    "url": "https://www.mastgeneralstore.com/products/watermelon-pop-rocks-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "167-bc-4227",
+    "title": "York Peppermint Patties Candy Bars 36/Box",
+    "price": "49.00",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/65927/images/140632/v000147__1__64188.1787722108.500.750.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/york-peppermint-patties-candy-bars-36-box/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285480870207",
+    "title": "Zachary Confections Candy Corn - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17626_default.jpg?v=1775667973",
+    "url": "https://www.mastgeneralstore.com/products/candy-corn-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285573603647",
+    "title": "Albanese Assorted Gourmet Gummi Bears Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18097_default_2f5b28af-af32-4ba2-af89-bcac1234c937.jpg?v=1775668865",
+    "url": "https://www.mastgeneralstore.com/products/assorted-gourmet-gummi-bears-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285572817215",
+    "title": "Albanese Gummi Peach Rings Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17596_default.jpg?v=1775667956",
+    "url": "https://www.mastgeneralstore.com/products/gummi-peach-rings-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
     "id": "128-10285571506495",
     "title": "Albanese Gummie Fruit Worms Candy - 1 lb.",
     "price": "12.98",
     "available": true,
     "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/72922_default_ef80c3f0-9911-4ff4-bf62-bf4da8775a1e.jpg?v=1775164580",
     "url": "https://www.mastgeneralstore.com/products/gummie-fruit-worms-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285574291775",
+    "title": "Albanese Milk Chocolate Gummi Bears Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/211370_default.jpg?v=1775665349",
+    "url": "https://www.mastgeneralstore.com/products/milk-chocolate-gummi-bears-candy-1-lb",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
@@ -1513,6 +1220,761 @@
     "tags": [
       "badge:staff pick"
     ]
+  },
+  {
+    "id": "128-10285482770751",
+    "title": "Andre Prost Zotz Assorted Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/100756_default.jpg?v=1775662641",
+    "url": "https://www.mastgeneralstore.com/products/zotz-assorted-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285575405887",
+    "title": "Assorted Original Gourmet Lollipops Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/207670_default.jpg?v=1775664427",
+    "url": "https://www.mastgeneralstore.com/products/assorted-original-gourmet-lollipops-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285845807423",
+    "title": "Atkinson Candy Sugar-Free Peanut Butter Bars - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/68165_default.jpg?v=1775830135",
+    "url": "https://www.mastgeneralstore.com/products/sugar-free-peanut-butter-bars-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285458161983",
+    "title": "Atkinson Candy Zebra Bar Peanut Butter Candy -1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18496_default.jpg?v=1775668868",
+    "url": "https://www.mastgeneralstore.com/products/zebra-bar-peanut-butter-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285575569727",
+    "title": "Boston Fruit Slice Wrapped Fruit Slice Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/160499_default_2b0d91ac-e0ff-41f4-a75e-6b5867537a27.jpg?v=1775667107",
+    "url": "https://www.mastgeneralstore.com/products/wrapped-fruit-slice-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285484605759",
+    "title": "Charms Andes Mints Chocolate Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18353_default.jpg?v=1775667956",
+    "url": "https://www.mastgeneralstore.com/products/andes-mints-chocolate-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285472579903",
+    "title": "Charms Assorted Chiclets Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17877_default.jpg?v=1775667959",
+    "url": "https://www.mastgeneralstore.com/products/assorted-chiclets-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285473333567",
+    "title": "Charms Assorted Gumballs Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17654_default_fe7849c3-da82-474f-8412-c82e10eb7711.jpg?v=1775667959",
+    "url": "https://www.mastgeneralstore.com/products/assorted-gumballs-candy-1-lb-1",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285471072575",
+    "title": "Charms Blox Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/93310_default.jpg?v=1775667108",
+    "url": "https://www.mastgeneralstore.com/products/blox-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285483393343",
+    "title": "Dad's Root Beer Barrels Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/179918_default_25415089-7ad2-4048-a66e-ae6a36582390.jpg?v=1775667965",
+    "url": "https://www.mastgeneralstore.com/products/dads-root-beer-barrels-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285569114431",
+    "title": "Dorval Trading Blue Raspberry Sour Power Belts Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/77641_default.jpg?v=1775667108",
+    "url": "https://www.mastgeneralstore.com/products/blue-raspberry-sour-power-belts-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285570523455",
+    "title": "Dorval Trading Sour Power Quattro Belts Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17779_default.jpg?v=1775667965",
+    "url": "https://www.mastgeneralstore.com/products/sour-power-quattro-belts-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285568229695",
+    "title": "Dorval Trading Strawberry Sour Power Belts Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/212585_default_51f37cde-0683-4840-a64d-f3493d4f10cd.jpg?v=1775665351",
+    "url": "https://www.mastgeneralstore.com/products/strawberry-sour-power-belts-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285569900863",
+    "title": "Dorval Trading Watermelon Sour Power Belts Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/217171_default_a88240f5-d3c4-4104-be63-ddd3750d364d.jpg?v=1775662643",
+    "url": "https://www.mastgeneralstore.com/products/watermelon-sour-power-belts-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285478609215",
+    "title": "Dutch Valley Foods Australian Style Black Licorice Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243620_default.jpg?v=1775664422",
+    "url": "https://www.mastgeneralstore.com/products/australian-style-black-licorice-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285477986623",
+    "title": "Dutch Valley Foods Australian Style Red Licorice Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243619_default.jpg?v=1775664422",
+    "url": "https://www.mastgeneralstore.com/products/australian-style-red-licorice-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285480214847",
+    "title": "Dutch Valley Foods Canada Wintergreen Mint Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/245143_default.jpg?v=1775662626",
+    "url": "https://www.mastgeneralstore.com/products/canada-wintergreen-mint-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285476577599",
+    "title": "Dutch Valley Foods Mini Dark Chocolate Peanut Butter Buckeyes Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243617_default.jpg?v=1775664420",
+    "url": "https://www.mastgeneralstore.com/products/mini-dark-chocolate-peanut-butter-buckeyes-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285475922239",
+    "title": "Dutch Valley Foods Mini Milk Chocolate Peanut Butter Buckeyes Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243616_default_43a9ba5f-3073-440a-ad44-7aa450f573bb.jpg?v=1775664419",
+    "url": "https://www.mastgeneralstore.com/products/mini-milk-chocolate-peanut-butter-buckeyes-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285571211583",
+    "title": "Forbes Candy Assorted Salt Water Taffy Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/253330_default.jpg?v=1775818294",
+    "url": "https://www.mastgeneralstore.com/products/assorted-salt-water-taffy-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285472055615",
+    "title": "Ganong Bros. Sixlets Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17623_default_82c5e780-3fd1-445e-99ac-c1954d925b35.jpg?v=1775667967",
+    "url": "https://www.mastgeneralstore.com/products/ganong-bros-sixlets-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285474447679",
+    "title": "Gerrit J. Verburg Gummi Pink Grapefruit Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/212800_default.jpg?v=1775665353",
+    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-gummi-pink-grapefruit-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285476774207",
+    "title": "Gerrit J. Verburg Rainbow Licorice Laces Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/100028_default.jpg?v=1775662627",
+    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-rainbow-licorice-laces-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285572456767",
+    "title": "Gerrit J. Verburg Red and Black Berries Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/157147_default.jpg?v=1775667960",
+    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-red-and-black-berries-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285573800255",
+    "title": "Gerrit J. Verburg Sour Apple Buttons Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/234063_default.jpg?v=1775669788",
+    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-apple-buttons-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285475201343",
+    "title": "Gerrit J. Verburg Sour Blockheads Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/233906_default.jpg?v=1775669787",
+    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-blockheads-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285473890623",
+    "title": "Gerrit J. Verburg Sour Blue Raspberry Bottle Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/149138_default.jpg?v=1775667970",
+    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-blue-raspberry-bottle-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285477462335",
+    "title": "Gerrit J. Verburg Sour Cherry Cola Gummy Bottles Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/212803_default.jpg?v=1775665353",
+    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-cherry-cola-gummy-bottles-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285478215999",
+    "title": "Gerrit J. Verburg Sour Gummi Bubble Gum Bottles Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/154449_default.jpg?v=1775667959",
+    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-gummi-bubble-gum-bottles-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285472645439",
+    "title": "Gerrit J. Verburg Sour Gummi Cola Bottle Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/172649_default.jpg?v=1775668872",
+    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-gummi-cola-bottle-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285574488383",
+    "title": "Gerrit J. Verburg Sour Peach Buttons Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/233905_default_733540f0-4ede-4e03-8f26-bfb7d547560e.jpg?v=1775669789",
+    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-peach-buttons-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285475987775",
+    "title": "Gerrit J. Verburg Strawberry Licorice Laces Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/165077_default_20848e3b-a4b2-4270-9f5d-216379e3d509.jpg?v=1775667971",
+    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-strawberry-licorice-laces-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285565083967",
+    "title": "Hilco 3D Gummy Building Blocks Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/182063_default.jpg?v=1775668856",
+    "url": "https://www.mastgeneralstore.com/products/3d-gummy-building-blocks-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285566525759",
+    "title": "Hilco 3D Gummy Dinosaurs Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/231445_default.jpg?v=1775667961",
+    "url": "https://www.mastgeneralstore.com/products/3d-gummy-dinosaurs-candy-1lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285567213887",
+    "title": "Hilco Super Strawberries Gummy Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/218192_default.jpg?v=1775662630",
+    "url": "https://www.mastgeneralstore.com/products/super-strawberries-gummy-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285567836479",
+    "title": "Kopper's Chocolate S'mores Bites Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/236587_default.jpg?v=1775665358",
+    "url": "https://www.mastgeneralstore.com/products/koppers-chocolate-smores-bites-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285574914367",
+    "title": "Nassau Candy Killer Shark Gummies Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/212296_default.jpg?v=1775665348",
+    "url": "https://www.mastgeneralstore.com/products/killer-shark-gummies-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285475037503",
+    "title": "Palmer Candy Maple Nut Goodies Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/257265_default_a486f8ad-a97c-44d2-a9cb-20b6c0d3d703.jpg?v=1775163072",
+    "url": "https://www.mastgeneralstore.com/products/maple-nut-goodies-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285459702079",
+    "title": "Piedmont Candy Cotton Candy Puffs Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243550_default.jpg?v=1775664428",
+    "url": "https://www.mastgeneralstore.com/products/cotton-candy-puffs-candy",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285459472703",
+    "title": "Piedmont Candy Peppermint Candy Puffs - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/118903_default.jpg?v=1775667109",
+    "url": "https://www.mastgeneralstore.com/products/peppermint-candy-puffs",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285459898687",
+    "title": "Piedmont Candy Wintergreen Mint Candy Puffs - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243551_default.jpg?v=1775664429",
+    "url": "https://www.mastgeneralstore.com/products/wintergreen-mint-candy-puffs",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285564395839",
+    "title": "Redstone Foods Assorted Jelly Belly Beans Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/183484_default_7b662d79-b4a1-401e-9664-121fa97bffe5.jpg?v=1775668859",
+    "url": "https://www.mastgeneralstore.com/products/assorted-jelly-belly-beans-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285565018431",
+    "title": "Redstone Foods Assorted Sour Jelly Belly Beans Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/183483_default.jpg?v=1775668860",
+    "url": "https://www.mastgeneralstore.com/products/assorted-sour-jelly-belly-beans-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285565575487",
+    "title": "Redstone Foods Jelly Belly Licorice Beans Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/184205_default.jpg?v=1775668860",
+    "url": "https://www.mastgeneralstore.com/products/jelly-belly-licorice-beans-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285479887167",
+    "title": "Redstone Foods Sunkist Fruit Gems Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/127295_default.jpg?v=1775663460",
+    "url": "https://www.mastgeneralstore.com/products/sunkist-fruit-gems-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285471564095",
+    "title": "Sweet Candy Co Assorted Fruit Sours Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/136799_default_bc272b40-d289-47dd-ba40-7de4f28c7338.jpg?v=1775662635",
+    "url": "https://www.mastgeneralstore.com/products/assorted-fruit-sours-candy-1lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285484212543",
+    "title": "Sweet Candy Co Cinnamon Bears Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/213839_default.jpg?v=1775665347",
+    "url": "https://www.mastgeneralstore.com/products/cinnamon-bears-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285472121151",
+    "title": "Sweet Candy Co Sour Cherry Balls Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/150539_default.jpg?v=1775667968",
+    "url": "https://www.mastgeneralstore.com/products/sour-cherry-balls-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285483065663",
+    "title": "White Rock Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17873_default.jpg?v=1775667964",
+    "url": "https://www.mastgeneralstore.com/products/white-rock-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285478084927",
+    "title": "World Candies Candy Sticks - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18362_default_1f6855b0-61d9-4961-adad-e4c777ef147f.jpg?v=1775667970",
+    "url": "https://www.mastgeneralstore.com/products/candy-sticks-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "128-10285478773055",
+    "title": "Zachary Confections Assorted Spiced Gum Drops Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/186613_default.jpg?v=1775668871",
+    "url": "https://www.mastgeneralstore.com/products/assorted-spiced-gum-drops-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285481820479",
+    "title": "Zachary Confections Milk Chocolate Pretzel Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/139840_default.jpg?v=1775662636",
+    "url": "https://www.mastgeneralstore.com/products/milk-chocolate-pretzel-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "128-10285479461183",
+    "title": "Zachary Confections Milk Chocolate Sea Salt Caramel Candy - 1 lb.",
+    "price": "12.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/150090_default.jpg?v=1775667972",
+    "url": "https://www.mastgeneralstore.com/products/milk-chocolate-sea-salt-caramel-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "badge:made in usa"
+    ]
+  },
+  {
+    "id": "167-bc-6054",
+    "title": "Candy Necklace Nostalgic Candy - 24 Count Box",
+    "price": "11.67",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/59443/images/164699/v025487__1__95137.1787722341.500.750.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/candy-necklace-nostalgic-candy-24-count-box/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
+    "site_section": "Food & Pantry",
+    "tags": []
+  },
+  {
+    "id": "167-bc-2620",
+    "title": "Licorice Pipes Nostalgic Candy 60 Count Box",
+    "price": "89.94",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/60084/images/155516/v025485__1__60969.1787722377.500.750.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/licorice-pipes-nostalgic-candy-60-count-box/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
+    "site_section": "Food & Pantry",
+    "tags": []
   },
   {
     "id": "128-10285482311999",
@@ -1567,40 +2029,12 @@
     "tags": []
   },
   {
-    "id": "128-10285575405887",
-    "title": "Assorted Original Gourmet Lollipops Candy - 1 lb.",
-    "price": "12.98",
+    "id": "128-10285479166271",
+    "title": "Big League Chew Outta Here Original Gum Candy",
+    "price": "2.49",
     "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/207670_default.jpg?v=1775664427",
-    "url": "https://www.mastgeneralstore.com/products/assorted-original-gourmet-lollipops-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285845807423",
-    "title": "Atkinson Candy Sugar-Free Peanut Butter Bars - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/68165_default.jpg?v=1775830135",
-    "url": "https://www.mastgeneralstore.com/products/sugar-free-peanut-butter-bars-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285458161983",
-    "title": "Atkinson Candy Zebra Bar Peanut Butter Candy -1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18496_default.jpg?v=1775668868",
-    "url": "https://www.mastgeneralstore.com/products/zebra-bar-peanut-butter-candy-1-lb",
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/219076_default.jpg?v=1775662637",
+    "url": "https://www.mastgeneralstore.com/products/big-league-chew-outta-here-original-gum-candy",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
@@ -1679,45 +2113,6 @@
     ]
   },
   {
-    "id": "128-10285476446527",
-    "title": "Candy Dynamics Toxic Waste Slime Lickers 2.0 Candy",
-    "price": "2.99",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/244844_default.jpg?v=1775667111",
-    "url": "https://www.mastgeneralstore.com/products/toxic-waste-slime-lickers-2-0-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285478019391",
-    "title": "Candy Dynamics Toxic Waste Slime Lickers 2.0 Candy - 12 Pack",
-    "price": "29.99",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/247498_default.jpg?v=1775668857",
-    "url": "https://www.mastgeneralstore.com/products/toxic-waste-slime-lickers-2-0-candy-12-pack",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285477331263",
-    "title": "Candy Dynamics Toxic Waste Sour Drum Candy",
-    "price": "2.49",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/214144_default_7d6cc280-8498-4c96-bb89-785b6d27a836.jpg?v=1775665351",
-    "url": "https://www.mastgeneralstore.com/products/toxic-waste-sour-drum-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
     "id": "128-10647505371455",
     "title": "Carolina Candy Company Peppermint Bark - 8 ounces",
     "price": "12.99",
@@ -1746,32 +2141,6 @@
     "tags": [
       "badge:made in usa"
     ]
-  },
-  {
-    "id": "128-10285473333567",
-    "title": "Charms Assorted Gumballs Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17654_default_fe7849c3-da82-474f-8412-c82e10eb7711.jpg?v=1775667959",
-    "url": "https://www.mastgeneralstore.com/products/assorted-gumballs-candy-1-lb-1",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285471072575",
-    "title": "Charms Blox Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/93310_default.jpg?v=1775667108",
-    "url": "https://www.mastgeneralstore.com/products/blox-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
   },
   {
     "id": "128-10285567738175",
@@ -1890,6 +2259,39 @@
     ]
   },
   {
+    "id": "113-9349214044489",
+    "title": "Divine 70% Dark Chocolate Coins",
+    "price": "3.20",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0900/1205/7929/files/UK_DIVINE_DARK_COINS_3D_RENDER_2026.png?v=1787560180",
+    "url": "https://divinechocolate.com/products/divine-70-dark-chocolate-coins",
+    "store_name": "Divine Chocolate",
+    "store_url": "https://divinechocolate.com",
+    "ownership_type": "farmer co-op stake",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "Christmas",
+      "Dark Chocolate",
+      "Vegan"
+    ]
+  },
+  {
+    "id": "113-9349214110025",
+    "title": "Divine Milk Chocolate Coins",
+    "price": "3.20",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0900/1205/7929/files/UK_DIVINE_MILK_COINS_3D_RENDER_2026_BLUE.png?v=1787560144",
+    "url": "https://divinechocolate.com/products/divine-milk-chocolate-coins",
+    "store_name": "Divine Chocolate",
+    "store_url": "https://divinechocolate.com",
+    "ownership_type": "farmer co-op stake",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "Christmas",
+      "Milk Chocolate"
+    ]
+  },
+  {
     "id": "113-9349214142793",
     "title": "Divine Milk Chocolate Giant Coin 58g",
     "price": "3.50",
@@ -1904,58 +2306,6 @@
       "Christmas",
       "Milk Chocolate"
     ]
-  },
-  {
-    "id": "128-10285569114431",
-    "title": "Dorval Trading Blue Raspberry Sour Power Belts Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/77641_default.jpg?v=1775667108",
-    "url": "https://www.mastgeneralstore.com/products/blue-raspberry-sour-power-belts-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285570523455",
-    "title": "Dorval Trading Sour Power Quattro Belts Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17779_default.jpg?v=1775667965",
-    "url": "https://www.mastgeneralstore.com/products/sour-power-quattro-belts-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285568229695",
-    "title": "Dorval Trading Strawberry Sour Power Belts Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/212585_default_51f37cde-0683-4840-a64d-f3493d4f10cd.jpg?v=1775665351",
-    "url": "https://www.mastgeneralstore.com/products/strawberry-sour-power-belts-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285569900863",
-    "title": "Dorval Trading Watermelon Sour Power Belts Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/217171_default_a88240f5-d3c4-4104-be63-ddd3750d364d.jpg?v=1775662643",
-    "url": "https://www.mastgeneralstore.com/products/watermelon-sour-power-belts-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
   },
   {
     "id": "128-10285460357439",
@@ -1973,12 +2323,12 @@
     ]
   },
   {
-    "id": "128-10285480214847",
-    "title": "Dutch Valley Foods Canada Wintergreen Mint Candy - 1 lb.",
-    "price": "12.98",
+    "id": "128-10285478445375",
+    "title": "Ferrara Spree Original Roll Candy",
+    "price": "2.49",
     "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/245143_default.jpg?v=1775662626",
-    "url": "https://www.mastgeneralstore.com/products/canada-wintergreen-mint-candy",
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/212852_default_3c6a3544-3f62-4831-8ba6-3ab138a94834.jpg?v=1775665354",
+    "url": "https://www.mastgeneralstore.com/products/spree-original-roll-candy",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
@@ -1986,51 +2336,24 @@
     "tags": []
   },
   {
-    "id": "128-10285476577599",
-    "title": "Dutch Valley Foods Mini Dark Chocolate Peanut Butter Buckeyes Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243617_default.jpg?v=1775664420",
-    "url": "https://www.mastgeneralstore.com/products/mini-dark-chocolate-peanut-butter-buckeyes-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
+    "id": "167-bc-2239",
+    "title": "Fruit Slices Tub Candy, Fruit Slices, 16 oz -1 Tub",
+    "price": "2.88",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/43001/images/156975/812664_38286__70929.1787723166.500.750.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/fruit-slices-tub-candy-fruit-slices-16-oz-1-tub/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
     "site_section": "Food & Pantry",
     "tags": []
   },
   {
-    "id": "128-10285475922239",
-    "title": "Dutch Valley Foods Mini Milk Chocolate Peanut Butter Buckeyes Candy - 1 lb.",
-    "price": "12.98",
+    "id": "128-10285480476991",
+    "title": "Gerrit J. Verburg Chocolate Gold Coins Candy",
+    "price": "3.49",
     "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243616_default_43a9ba5f-3073-440a-ad44-7aa450f573bb.jpg?v=1775664419",
-    "url": "https://www.mastgeneralstore.com/products/mini-milk-chocolate-peanut-butter-buckeyes-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285474447679",
-    "title": "Gerrit J. Verburg Gummi Pink Grapefruit Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/212800_default.jpg?v=1775665353",
-    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-gummi-pink-grapefruit-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285572456767",
-    "title": "Gerrit J. Verburg Red and Black Berries Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/157147_default.jpg?v=1775667960",
-    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-red-and-black-berries-candy-1-lb",
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/124342_default.jpg?v=1775663462",
+    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-chocolate-gold-coins-candy",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
@@ -2051,129 +2374,12 @@
     "tags": []
   },
   {
-    "id": "128-10285573800255",
-    "title": "Gerrit J. Verburg Sour Apple Buttons Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/234063_default.jpg?v=1775669788",
-    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-apple-buttons-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285475201343",
-    "title": "Gerrit J. Verburg Sour Blockheads Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/233906_default.jpg?v=1775669787",
-    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-blockheads-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285473890623",
-    "title": "Gerrit J. Verburg Sour Blue Raspberry Bottle Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/149138_default.jpg?v=1775667970",
-    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-blue-raspberry-bottle-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285477462335",
-    "title": "Gerrit J. Verburg Sour Cherry Cola Gummy Bottles Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/212803_default.jpg?v=1775665353",
-    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-cherry-cola-gummy-bottles-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285472645439",
-    "title": "Gerrit J. Verburg Sour Gummi Cola Bottle Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/172649_default.jpg?v=1775668872",
-    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-gummi-cola-bottle-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285574488383",
-    "title": "Gerrit J. Verburg Sour Peach Buttons Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/233905_default_733540f0-4ede-4e03-8f26-bfb7d547560e.jpg?v=1775669789",
-    "url": "https://www.mastgeneralstore.com/products/gerrit-j-verburg-sour-peach-buttons-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
     "id": "128-10285567050047",
     "title": "Gosling Ginger Beer Barrels Hard Candy - 1lb.",
     "price": "12.98",
     "available": true,
     "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/255937_default.jpg?v=1775804655",
     "url": "https://www.mastgeneralstore.com/products/gosling-ginger-beer-barrels-hard-candy-1lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285565083967",
-    "title": "Hilco 3D Gummy Building Blocks Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/182063_default.jpg?v=1775668856",
-    "url": "https://www.mastgeneralstore.com/products/3d-gummy-building-blocks-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285566525759",
-    "title": "Hilco 3D Gummy Dinosaurs Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/231445_default.jpg?v=1775667961",
-    "url": "https://www.mastgeneralstore.com/products/3d-gummy-dinosaurs-candy-1lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285567213887",
-    "title": "Hilco Super Strawberries Gummy Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/218192_default.jpg?v=1775662630",
-    "url": "https://www.mastgeneralstore.com/products/super-strawberries-gummy-candy-1-lb",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
@@ -2231,21 +2437,6 @@
     "ownership_type": "employee-owned",
     "site_section": "Food & Pantry",
     "tags": []
-  },
-  {
-    "id": "128-10285567836479",
-    "title": "Kopper's Chocolate S'mores Bites Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/236587_default.jpg?v=1775665358",
-    "url": "https://www.mastgeneralstore.com/products/koppers-chocolate-smores-bites-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
   },
   {
     "id": "128-10468200677695",
@@ -2428,15 +2619,14 @@
     ]
   },
   {
-    "id": "128-10285574914367",
-    "title": "Nassau Candy Killer Shark Gummies Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/212296_default.jpg?v=1775665348",
-    "url": "https://www.mastgeneralstore.com/products/killer-shark-gummies-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
+    "id": "167-bc-1284",
+    "title": "Mentos Chewy Mint Candy Roll, Strawberry 1.32 oz - Box of 15",
+    "price": "21.72",
+    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/images/stencil/1280x1280/products/59794/165085/v001368__1__23436.1787722374.jpg?c=2",
+    "url": "https://shop.thriftywhite.com/mentos-chewy-mint-candy-roll-strawberry-1-32-oz-box-of-15/",
+    "store_name": "Thrifty White Pharmacy",
+    "store_url": "https://shop.thriftywhite.com",
+    "ownership_type": "ESOP",
     "site_section": "Food & Pantry",
     "tags": []
   },
@@ -2451,21 +2641,6 @@
     "ownership_type": "ESOP",
     "site_section": "Food & Pantry",
     "tags": []
-  },
-  {
-    "id": "128-10285475037503",
-    "title": "Palmer Candy Maple Nut Goodies Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/257265_default_a486f8ad-a97c-44d2-a9cb-20b6c0d3d703.jpg?v=1775163072",
-    "url": "https://www.mastgeneralstore.com/products/maple-nut-goodies-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
   },
   {
     "id": "167-bc-1730",
@@ -2492,57 +2667,12 @@
     "tags": []
   },
   {
-    "id": "128-10285459702079",
-    "title": "Piedmont Candy Cotton Candy Puffs Candy - 1 lb.",
-    "price": "12.98",
+    "id": "128-10285482410303",
+    "title": "Skybar Candy",
+    "price": "3.49",
     "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243550_default.jpg?v=1775664428",
-    "url": "https://www.mastgeneralstore.com/products/cotton-candy-puffs-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285459472703",
-    "title": "Piedmont Candy Peppermint Candy Puffs - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/118903_default.jpg?v=1775667109",
-    "url": "https://www.mastgeneralstore.com/products/peppermint-candy-puffs",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285459898687",
-    "title": "Piedmont Candy Wintergreen Mint Candy Puffs - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/243551_default.jpg?v=1775664429",
-    "url": "https://www.mastgeneralstore.com/products/wintergreen-mint-candy-puffs",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285479887167",
-    "title": "Redstone Foods Sunkist Fruit Gems Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/127295_default.jpg?v=1775663460",
-    "url": "https://www.mastgeneralstore.com/products/sunkist-fruit-gems-candy-1-lb",
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17655_default_03f6b787-206e-4db7-b179-3c8da4246ae0.jpg?v=1775667969",
+    "url": "https://www.mastgeneralstore.com/products/skybar-candy",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
@@ -2558,63 +2688,6 @@
     "available": true,
     "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17827_default.jpg?v=1775667971",
     "url": "https://www.mastgeneralstore.com/products/3-color-coconut-candy-bar",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "167-bc-497",
-    "title": "Sugar Daddies 1.7 oz Lollipops - 24 Count Box",
-    "price": "36.85",
-    "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/59936/images/153732/v001727__1__78974.1787722370.500.750.jpg?c=2",
-    "url": "https://shop.thriftywhite.com/sugar-daddies-1-7-oz-lollipops-24-count-box/",
-    "store_name": "Thrifty White Pharmacy",
-    "store_url": "https://shop.thriftywhite.com",
-    "ownership_type": "ESOP",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285471564095",
-    "title": "Sweet Candy Co Assorted Fruit Sours Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/136799_default_bc272b40-d289-47dd-ba40-7de4f28c7338.jpg?v=1775662635",
-    "url": "https://www.mastgeneralstore.com/products/assorted-fruit-sours-candy-1lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285484212543",
-    "title": "Sweet Candy Co Cinnamon Bears Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/213839_default.jpg?v=1775665347",
-    "url": "https://www.mastgeneralstore.com/products/cinnamon-bears-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285472121151",
-    "title": "Sweet Candy Co Sour Cherry Balls Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/150539_default.jpg?v=1775667968",
-    "url": "https://www.mastgeneralstore.com/products/sour-cherry-balls-candy-1-lb",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",
@@ -2649,85 +2722,12 @@
     "tags": []
   },
   {
-    "id": "128-10285483065663",
-    "title": "White Rock Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17873_default.jpg?v=1775667964",
-    "url": "https://www.mastgeneralstore.com/products/white-rock-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285478084927",
-    "title": "World Candies Candy Sticks - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/18362_default_1f6855b0-61d9-4961-adad-e4c777ef147f.jpg?v=1775667970",
-    "url": "https://www.mastgeneralstore.com/products/candy-sticks-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
     "id": "128-10285573701951",
     "title": "Yes Please Dark Chocolate Salted Caramel Bark Candy",
     "price": "12.99",
     "available": true,
     "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/257122_default_76907185-a842-460b-929c-e356b228f7fe.jpg?v=1775163070",
     "url": "https://www.mastgeneralstore.com/products/dark-chocolate-salted-caramel-bark-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285478773055",
-    "title": "Zachary Confections Assorted Spiced Gum Drops Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/186613_default.jpg?v=1775668871",
-    "url": "https://www.mastgeneralstore.com/products/assorted-spiced-gum-drops-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285481820479",
-    "title": "Zachary Confections Milk Chocolate Pretzel Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/139840_default.jpg?v=1775662636",
-    "url": "https://www.mastgeneralstore.com/products/milk-chocolate-pretzel-candy-1-lb",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": [
-      "badge:made in usa"
-    ]
-  },
-  {
-    "id": "128-10285479461183",
-    "title": "Zachary Confections Milk Chocolate Sea Salt Caramel Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/150090_default.jpg?v=1775667972",
-    "url": "https://www.mastgeneralstore.com/products/milk-chocolate-sea-salt-caramel-candy-1-lb",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",

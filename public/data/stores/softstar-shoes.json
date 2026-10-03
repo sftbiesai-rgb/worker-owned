@@ -6,15 +6,15 @@
       "count": 13,
       "products": [
         {
-          "id": "101-softstar-K-CHKVMUJ",
+          "id": "228-0001",
           "title": "Adult PRIMAL Chinook",
           "price": "$154",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/c/h/chinook.jpg",
           "url": "https://www.softstarshoes.com/adult-primal-chinook.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -22,15 +22,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-SAWLNUJ",
+          "id": "228-0002",
           "title": "Adult PRIMAL Sawyer",
           "price": "$145",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/o/softstar-sawyer-black_1.jpg",
           "url": "https://www.softstarshoes.com/primal-sawyer.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -38,30 +38,30 @@
           ]
         },
         {
-          "id": "101-softstar-K-700EMUJ",
+          "id": "228-0003",
           "title": "Adult Rogue",
           "price": "$185",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/m/i/minima-rogue-for-hiking.jpg",
           "url": "https://www.softstarshoes.com/adult-rogue.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes"
           ]
         },
         {
-          "id": "101-softstar-K-620BMUJ",
+          "id": "228-0004",
           "title": "Adult PRIMAL Merry Jane",
           "price": "$190",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/a/d/adult-primal-merry-jane-brown_1.jpg",
           "url": "https://www.softstarshoes.com/adult-primal-merry-jane.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -69,30 +69,30 @@
           ]
         },
         {
-          "id": "101-softstar-K-BALLMUJ",
+          "id": "228-0005",
           "title": "Adult Vintage Tie Ballerine Flat",
           "price": "$175",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/o/softstar-flats-40.jpg",
           "url": "https://www.softstarshoes.com/adult-vintage-tie-ballerine.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes"
           ]
         },
         {
-          "id": "101-softstar-K-BALPMUJ",
+          "id": "228-0006",
           "title": "Adult PRIMAL Ballerine",
           "price": "$185",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/p/r/primal-ballerine-black-5_1.jpg",
           "url": "https://www.softstarshoes.com/adult-primal-ballerine-flat.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -100,75 +100,75 @@
           ]
         },
         {
-          "id": "101-softstar-K-BALEMUJ",
+          "id": "228-0007",
           "title": "Adult Ballerine Flat",
           "price": "$185",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/b/a/ballerine-platinum-1_1.jpg",
           "url": "https://www.softstarshoes.com/adult-ballerine-flat.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes"
           ]
         },
         {
-          "id": "101-softstar-K-HAWOMUJ",
+          "id": "228-0008",
           "title": "Adult Hawthorne Chukka",
           "price": "$165",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/l/e/leather-chukka-boots-for-men-and-women.jpg",
           "url": "https://www.softstarshoes.com/adult-hawthorne-chukka.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes"
           ]
         },
         {
-          "id": "101-softstar-K-BALBMUJ",
+          "id": "228-0009",
           "title": "Adult Ankle Strap Ballerine Flat",
           "price": "$195",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/a/n/ankle-strap-ballerine-red-1_1.jpg",
           "url": "https://www.softstarshoes.com/adult-ankle-strap-ballerine-flat.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes"
           ]
         },
         {
-          "id": "101-softstar-K-600BMUJ",
+          "id": "228-0010",
           "title": "Adult Merry Jane",
           "price": "$150",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/a/d/adult-merry-jane-black-2.jpg",
           "url": "https://www.softstarshoes.com/adult-merry-jane.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes"
           ]
         },
         {
-          "id": "101-softstar-A-S-PLSTWAJ",
+          "id": "228-0011",
           "title": "Plus12 Adult Merino Wool Socks",
           "price": "$15",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/a/d/adult-black-1.jpg",
           "url": "https://www.softstarshoes.com/plus12-socks-adult.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -177,15 +177,15 @@
           ]
         },
         {
-          "id": "101-softstar-Z-O-ANKSTPJ",
+          "id": "228-0012",
           "title": "Replacement Ankle Straps for Ballerines",
           "price": "$12",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/a/n/ankle-straps-dec2025_1.jpg",
           "url": "https://www.softstarshoes.com/replacement-ankle-strap-ballerine.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -193,15 +193,15 @@
           ]
         },
         {
-          "id": "101-softstar-A-O-LACSAWJ",
+          "id": "228-0013",
           "title": "Replacement Laces for PRIMAL Sawyer",
           "price": "$6",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/p/r/primal-sawyer-shoelaces-800.jpg",
           "url": "https://www.softstarshoes.com/primal-sawyer-laces.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -216,15 +216,15 @@
       "count": 5,
       "products": [
         {
-          "id": "101-softstar-K-ASTZMUJ",
+          "id": "228-0014",
           "title": "Adult Astoria Boot",
           "price": "$205",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/a/s/astoria-black-9.jpg",
           "url": "https://www.softstarshoes.com/adult-astoria-boot.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -232,15 +232,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-SWBMMUJ",
+          "id": "228-0015",
           "title": "Adult Switchback Boot II",
           "price": "$245",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/b/o/boot-v2-3-_2_.jpg",
           "url": "https://www.softstarshoes.com/adult-switchback-boot-ii.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -248,15 +248,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-CHLHCUJ",
+          "id": "228-0016",
           "title": "Adult PRIMAL Chelsea Boot",
           "price": "$199",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/c/h/chelsea-1.jpg",
           "url": "https://www.softstarshoes.com/adult-primal-chelsea-boot.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -265,15 +265,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-450TMUJ",
+          "id": "228-0017",
           "title": "Adult Phoenix Boot",
           "price": "$240",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/p/h/phoenix-boot-23.jpg",
           "url": "https://www.softstarshoes.com/adult-phoenix-boot.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -281,15 +281,15 @@
           ]
         },
         {
-          "id": "101-softstar-A-S-PLSTWBJ",
+          "id": "228-0018",
           "title": "Plus12 Adult Merino Wool Boot Socks",
           "price": "$25",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/p/l/plus12-adult-merino-boot-socks-1.jpg",
           "url": "https://www.softstarshoes.com/plus12-adult-merino-wool-boot-socks.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -305,15 +305,15 @@
       "count": 6,
       "products": [
         {
-          "id": "101-softstar-K-CAMBNJ",
+          "id": "228-0019",
           "title": "Adult Camino Sandal",
           "price": "$149",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/c/a/camino-sandal-morel-1_1.jpg",
           "url": "https://www.softstarshoes.com/adult-camino-sandal.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -321,15 +321,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-680GMUJ",
+          "id": "228-0020",
           "title": "Adult Dahlia Sandal - Leather Sole",
           "price": "$140",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/d/a/dahlia-wide-blush-1-warmer.jpg",
           "url": "https://www.softstarshoes.com/adult-dahlia-sandal.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -337,15 +337,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-INFQMUJ",
+          "id": "228-0021",
           "title": "Adult Infinity Sandal",
           "price": "$140",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/i/n/infinity-terra-lifestyle-3.jpg",
           "url": "https://www.softstarshoes.com/adult-infinity-sandal.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -353,15 +353,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-630BMUJ",
+          "id": "228-0022",
           "title": "Adult Solstice Sandal",
           "price": "$140",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/a/d/adult-solstice-sandal-brown.jpg",
           "url": "https://www.softstarshoes.com/adult-solstice-sandal.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -369,15 +369,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-CAMPNUJ",
+          "id": "228-0023",
           "title": "Adult Camino Lite Sandal",
           "price": "$149",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/c/a/camino-lite-black-2_1.jpg",
           "url": "https://www.softstarshoes.com/adult-camino-lite-sandal.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -385,15 +385,15 @@
           ]
         },
         {
-          "id": "101-softstar-A-F-NESDSDJ",
+          "id": "228-0024",
           "title": "Sedona Sandal by Nativearth",
           "price": "$140",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/o/softstarjuly2024_aprilmaura-209.jpg",
           "url": "https://www.softstarshoes.com/nativearth-sedona-sandal.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -407,15 +407,15 @@
       "count": 15,
       "products": [
         {
-          "id": "101-softstar-K-PRIXMUJ",
+          "id": "228-0025",
           "title": "Adult PRIMAL RunAmoc",
           "price": "$195",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/p/r/pram-green-1_1.jpg",
           "url": "https://www.softstarshoes.com/primal-runamoc.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -424,15 +424,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-SMOQLUJ",
+          "id": "228-0026",
           "title": "Adult S'more Sheepskin Slippers",
           "price": "$160",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/m/smore-slipper-lifestyle-6.jpg",
           "url": "https://www.softstarshoes.com/adult-smore-sheepskin-slipper.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -441,15 +441,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-FIRULUJ",
+          "id": "228-0027",
           "title": "Adult Fireside Sheepskin Slippers",
           "price": "$160",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/f/i/firesides_074-min.jpg",
           "url": "https://www.softstarshoes.com/adult-fireside-slipper.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -458,15 +458,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-MOCUMUJ",
+          "id": "228-0028",
           "title": "Adult Roo Moccasin - Smooth Leather",
           "price": "$130",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/r/o/roo-moc-forest-1_1.jpg",
           "url": "https://www.softstarshoes.com/adult-roo-moccasin-smooth.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -474,15 +474,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-PRIGMUJ",
+          "id": "228-0029",
           "title": "Adult PRIMAL RunAmoc - Leather Sole",
           "price": "$205",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/p/r/primal-runamoc-leather-sole-black.jpg",
           "url": "https://www.softstarshoes.com/adult-primal-runamoc-leather-sole.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -491,15 +491,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-MOCUNUJ",
+          "id": "228-0030",
           "title": "Adult Roo Moccasin - Nubuck Leather",
           "price": "$130",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/r/o/roo-moc-loden-3.jpg",
           "url": "https://www.softstarshoes.com/adult-roo-moccasin-nubuck.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -507,15 +507,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-PRIMMUJ",
+          "id": "228-0031",
           "title": "Adult Megagrip PRIMAL RunAmoc",
           "price": "$215",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/o/softstarjuly2024_aprilmaura-236.jpg",
           "url": "https://www.softstarshoes.com/adult-primal-runamoc-megagrip.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -524,15 +524,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-DSHNMUJ",
+          "id": "228-0032",
           "title": "Adult Dash RunAmoc",
           "price": "$180",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/d/a/dash-black-portland.jpg",
           "url": "https://www.softstarshoes.com/adult-dash-runamoc.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -540,15 +540,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-MFSPPUJ",
+          "id": "228-0033",
           "title": "Adult Moc3 RunAmoc",
           "price": "$160",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/b/l/blaze-moc3-2023-4-min.jpg",
           "url": "https://www.softstarshoes.com/adult-moc3-runamoc.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -556,15 +556,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-ZENVWUJ",
+          "id": "228-0034",
           "title": "Adult Merino Zen Moccasin",
           "price": "$145",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/o/softstar-zen-moccasin-mocha1_1.jpg",
           "url": "https://www.softstarshoes.com/adult-merino-zen-moccasin.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -573,15 +573,15 @@
           ]
         },
         {
-          "id": "101-softstar-A-F-PDWMSLJ",
+          "id": "228-0035",
           "title": "Padraig Women's Slipper",
           "price": "$100",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/g/r/grey-1.jpg",
           "url": "https://www.softstarshoes.com/padraig-cottage-womens-wool-slippers.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -589,15 +589,15 @@
           ]
         },
         {
-          "id": "101-softstar-A-F-FDTFSLJ",
+          "id": "228-0036",
           "title": "Toffel Slipper by Friton Design",
           "price": "$135",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/t/o/toffel-blue-1.jpg",
           "url": "https://www.softstarshoes.com/friton-design-toffel-slipper.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -605,15 +605,15 @@
           ]
         },
         {
-          "id": "101-softstar-Z-I-SHPFIRJ",
+          "id": "228-0037",
           "title": "Replacement Sheepskin Insoles for Fireside and S'more Slippers",
           "price": "$32",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/f/i/fireside-innersole-top.jpg",
           "url": "https://www.softstarshoes.com/sheepskin-innersoles-fireside.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "slippers",
@@ -623,15 +623,15 @@
           ]
         },
         {
-          "id": "101-softstar-A-L-LACERMJ",
+          "id": "228-0038",
           "title": "Elastic Laces for Dash RunAmocs",
           "price": "$4",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/e/l/elastic-laces.jpg",
           "url": "https://www.softstarshoes.com/elastic-laces.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "moccasins",
@@ -639,15 +639,15 @@
           ]
         },
         {
-          "id": "101-softstar-A-L-LACPRIJ",
+          "id": "228-0039",
           "title": "Replacement Laces for Primal RunAmoc",
           "price": "$6",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/p/r/primal-ram-laces-gray.jpg",
           "url": "https://www.softstarshoes.com/primal-runamoc-laces.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -663,15 +663,15 @@
       "count": 12,
       "products": [
         {
-          "id": "101-softstar-K-RNOQMCJ",
+          "id": "228-0040",
           "title": "Child/Youth Rambler",
           "price": "$74",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/r/a/rambler-whiskey-1_1.jpg",
           "url": "https://www.softstarshoes.com/child-youth-rambler.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -679,15 +679,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-RNOFMCJ",
+          "id": "228-0041",
           "title": "Child/Youth Rugged Rambler",
           "price": "$84",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/r/u/rug-rambler-walnut-1_1.jpg",
           "url": "https://www.softstarshoes.com/child-youth-rugged-rambler.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -695,15 +695,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-MOCUMCJ",
+          "id": "228-0042",
           "title": "Child/Youth Roo Moccasin - Smooth Leather",
           "price": "$74",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/j/u/jumping-macaw.jpg",
           "url": "https://www.softstarshoes.com/child-youth-roo-moccasin-smooth.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -712,15 +712,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-100VMCJ",
+          "id": "228-0043",
           "title": "Child Classic",
           "price": "$74",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/k/i/kids-classic-whiskey.jpg",
           "url": "https://www.softstarshoes.com/child-classic-velcro.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -728,15 +728,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-300VMCJ",
+          "id": "228-0044",
           "title": "Child Laguna Sandal",
           "price": "$74",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/o/softstarmar2024_aprilmaura-13-min_1.jpg",
           "url": "https://www.softstarshoes.com/child-sandal-velcro.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -745,15 +745,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-450OMCJ",
+          "id": "228-0045",
           "title": "Child Phoenix Boot",
           "price": "$145",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/c/h/chocolate-child-phoenix-boot-1.jpg",
           "url": "https://www.softstarshoes.com/child-phoenix-boot.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -762,15 +762,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-PRINMYJ",
+          "id": "228-0046",
           "title": "Youth PRIMAL RunAmoc",
           "price": "$150",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/y/o/youth-primal-runamoc-aged-acorn-swing.jpg",
           "url": "https://www.softstarshoes.com/youth-primal-runamoc.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -780,15 +780,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-450TMYJ",
+          "id": "228-0047",
           "title": "Youth Phoenix Boot",
           "price": "$180",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/k/i/kids-phoenix-boots-6110.jpg",
           "url": "https://www.softstarshoes.com/youth-phoenix-boot.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -797,15 +797,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-600BMYJ",
+          "id": "228-0048",
           "title": "Youth Merry Jane",
           "price": "$90",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/y/o/youth-mary-janes-outside.jpg",
           "url": "https://www.softstarshoes.com/youth-merry.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -813,15 +813,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-630BMYJ",
+          "id": "228-0049",
           "title": "Youth Solstice Sandal",
           "price": "$95",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/y/o/youth-solstice-whiskey.jpg",
           "url": "https://www.softstarshoes.com/youth-solstice-sandal.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -830,15 +830,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-ZENVWYJ",
+          "id": "228-0050",
           "title": "Youth Merino Zen Moccasin",
           "price": "$95",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/y/o/youth-zen-merlot-1.jpg",
           "url": "https://www.softstarshoes.com/youth-merino-zen-moccasin.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -848,15 +848,15 @@
           ]
         },
         {
-          "id": "101-softstar-Z-I-SHPPLKJ",
+          "id": "228-0051",
           "title": "Child / Youth Sheepskin PLUS Insoles - Removable",
           "price": "$34",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/h/sheepskin-plus-innersoles-2019_1.jpg",
           "url": "https://www.softstarshoes.com/sheepskin-plus-innersoles-child-youth.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -872,15 +872,15 @@
       "count": 6,
       "products": [
         {
-          "id": "101-softstar-K-MOCULBJ",
+          "id": "228-0052",
           "title": "Baby Buttercup Moccasin",
           "price": "$49",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/b/u/buttercups-1_1.jpg",
           "url": "https://www.softstarshoes.com/baby-buttercup.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -890,15 +890,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-MOCUMBJ",
+          "id": "228-0053",
           "title": "Baby Roo Moccasin - Smooth Leather",
           "price": "$69",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/o/somerpickel-27-min_1.jpg",
           "url": "https://www.softstarshoes.com/baby-roo-moccasin-smooth.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -908,15 +908,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-RNOQMBJ",
+          "id": "228-0054",
           "title": "Baby Rambler",
           "price": "$69",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/k/i/kid-rambler-rose-sand-front_1_1.jpg",
           "url": "https://www.softstarshoes.com/baby-rambler.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -925,15 +925,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-300VMBJ",
+          "id": "228-0055",
           "title": "Baby Laguna Sandal",
           "price": "$69",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/o/softstarmar2024_aprilmaura-13-min_1_1.jpg",
           "url": "https://www.softstarshoes.com/baby-sandal-velcro.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -943,15 +943,15 @@
           ]
         },
         {
-          "id": "101-softstar-K-100VMBJ",
+          "id": "228-0056",
           "title": "Baby Classic",
           "price": "$69",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/k/i/kids-classic-whiskey_2.jpg",
           "url": "https://www.softstarshoes.com/baby-classic-velcro.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -960,15 +960,15 @@
           ]
         },
         {
-          "id": "101-softstar-A-F-PDBBSLJ",
+          "id": "228-0057",
           "title": "Padraig Baby/Toddler Slippers",
           "price": "$50",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/b/a/backyard_04_1.jpg",
           "url": "https://www.softstarshoes.com/padraig-cottage-baby-toddler-wool-slippers.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoes",
@@ -984,15 +984,15 @@
       "count": 5,
       "products": [
         {
-          "id": "101-softstar-A-S-PLSTWCJ",
+          "id": "228-0058",
           "title": "Plus12 Kids Merino Wool Socks",
           "price": "$10",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/c/h/child-blue-1.jpg",
           "url": "https://www.softstarshoes.com/plus12-socks-kids.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "socks",
@@ -1000,60 +1000,60 @@
           ]
         },
         {
-          "id": "101-softstar-A-S-XOQWOLJ",
+          "id": "228-0059",
           "title": "XOTOES™ Quarter Crew Wool Toe Socks",
           "price": "$34.5",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/x/o/xotoes-qcrew-4_1.jpg",
           "url": "https://www.softstarshoes.com/xotoes-quarter-crew-toe-socks.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "socks"
           ]
         },
         {
-          "id": "101-softstar-A-S-XOANKLJ",
+          "id": "228-0060",
           "title": "XOTOES™ Anklet Toe Socks",
           "price": "$24",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/x/o/xoskin-ankle-2b.jpg",
           "url": "https://www.softstarshoes.com/xotoes-anklet-toe-socks.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "socks"
           ]
         },
         {
-          "id": "101-softstar-A-S-INNSRNJ",
+          "id": "228-0061",
           "title": "Performance Run No-Show Toe Socks - Injinji",
           "price": "$14",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/i/n/injinji-toe-socks-no-show-black.jpg",
           "url": "https://www.softstarshoes.com/injinji-toe-socks-run-no-show.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "socks"
           ]
         },
         {
-          "id": "101-softstar-A-S-INLINRJ",
+          "id": "228-0062",
           "title": "Liner Crew Toe Socks - Injinji",
           "price": "$12",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/i/n/injinji-toe-socks-liner-grey_1.jpg",
           "url": "https://www.softstarshoes.com/injinji-toe-socks-liner.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "socks"
@@ -1066,30 +1066,30 @@
       "count": 3,
       "products": [
         {
-          "id": "101-softstar-Z-I-REPSUEDJ",
+          "id": "228-0063",
           "title": "Adult Suede / Poron Insoles - Removable",
           "price": "$20",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/h/y/hyb-reg-pair.jpg",
           "url": "https://www.softstarshoes.com/replacement-suede-insoles.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "insoles"
           ]
         },
         {
-          "id": "101-softstar-Z-I-MERINOUJ",
+          "id": "228-0064",
           "title": "Replacement Switchback Insoles - Merino Wool",
           "price": "$22",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/w/switchback-merino-insoles-800.jpg",
           "url": "https://www.softstarshoes.com/merino-wool-insoles.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "insoles",
@@ -1098,15 +1098,15 @@
           ]
         },
         {
-          "id": "101-softstar-Z-I-SHPPLUJ",
+          "id": "228-0065",
           "title": "Adult Sheepskin PLUS Insoles - Removable",
           "price": "$40",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/h/sheepskin-plus-innersoles-2019.jpg",
           "url": "https://www.softstarshoes.com/sheepskin-plus-innersoles.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "insoles",
@@ -1120,30 +1120,30 @@
       "count": 2,
       "products": [
         {
-          "id": "101-softstar-A-O-CRTTOSJ",
+          "id": "228-0066",
           "title": "Correct Toes SPORT - Toe Spacers",
           "price": "$35",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/c/o/correct-toes-sport-purple-small_1.png",
           "url": "https://www.softstarshoes.com/correct-toes-sport.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "foot health"
           ]
         },
         {
-          "id": "101-softstar-A-O-CRTTOEJ",
+          "id": "228-0067",
           "title": "Correct Toes - Toe Spacers",
           "price": "$65",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/c/o/correct-toes-no-feet.jpg",
           "url": "https://www.softstarshoes.com/correct-toes-spacers.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "foot health"
@@ -1156,90 +1156,90 @@
       "count": 6,
       "products": [
         {
-          "id": "101-softstar-A-C-NWREFRJ",
+          "id": "228-0068",
           "title": "Nikwax - Footwear Refresh and Deodorizer",
           "price": "$16",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/n/i/nikwax-footwear-refresh.jpg",
           "url": "https://www.softstarshoes.com/nikwax-footwear-refresh.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoe care"
           ]
         },
         {
-          "id": "101-softstar-A-C-NWFLWPJ",
+          "id": "228-0069",
           "title": "Nikwax - Fabric & Leather Proof",
           "price": "$16",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/n/i/nikwax-fabric-and-leather-proof.jpg",
           "url": "https://www.softstarshoes.com/nikwax-fabric-leather-waterproofing.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoe care"
           ]
         },
         {
-          "id": "101-softstar-A-C-NWFWCGJ",
+          "id": "228-0070",
           "title": "Nikwax - Footwear Cleaning Gel",
           "price": "$16",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/n/i/nikwax-cleaning-gel-front.jpg",
           "url": "https://www.softstarshoes.com/nikwax-footwear-cleaning-gel.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoe care"
           ]
         },
         {
-          "id": "101-softstar-A-C-NWSNWPJ",
+          "id": "228-0071",
           "title": "Nikwax - Nubuck and Suede Waterproofing",
           "price": "$16",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/n/i/nikwax-nubuck-front-2024b.jpg",
           "url": "https://www.softstarshoes.com/nikwax-nubuck-suede.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoe care"
           ]
         },
         {
-          "id": "101-softstar-A-C-BNAMREJ",
+          "id": "228-0072",
           "title": "Bee Natural Leathercare - Leather Amore",
           "price": "$24",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/b/e/bee-natural-amore-leathercaer.jpg",
           "url": "https://www.softstarshoes.com/bee-natural-leathercare-leather-amore.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoe care"
           ]
         },
         {
-          "id": "101-softstar-A-C-BNRSWPJ",
+          "id": "228-0073",
           "title": "Bee Natural Leathercare - Rain and Snow",
           "price": "$24",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/b/e/bee-natural-rain-snow-leather-waterproof.jpg",
           "url": "https://www.softstarshoes.com/bee-natural-leathercare-rain-snow.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "shoe care"
@@ -1252,270 +1252,270 @@
       "count": 18,
       "products": [
         {
-          "id": "101-softstar-K-SOMNPTJ",
+          "id": "228-0074",
           "title": "Adult Newport by SOM Footwear",
           "price": "$170",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/o/som-newport-black-scotch.jpg",
           "url": "https://www.softstarshoes.com/som-newport.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
           ]
         },
         {
-          "id": "101-softstar-K-SOMCVAJ",
+          "id": "228-0075",
           "title": "Adult Mesa by SOM Footwear",
           "price": "$165",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/s/o/som-mesa-olive-1.jpg",
           "url": "https://www.softstarshoes.com/som-mesa.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
           ]
         },
         {
-          "id": "101-softstar-K-SOMGRAJ",
+          "id": "228-0076",
           "title": "Adult Graciano by SOM Footwear",
           "price": "$185",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/g/r/graciano-1_1.jpg",
           "url": "https://www.softstarshoes.com/som-graciano.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
           ]
         },
         {
-          "id": "101-softstar-Z-F-HZCELNJ",
+          "id": "228-0077",
           "title": "Horizon Clog by El Naturalista",
           "price": "$159",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/h/o/horizon-3.jpg",
           "url": "https://www.softstarshoes.com/horizon-clog.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
           ]
         },
         {
-          "id": "101-softstar-A-H-NEURBLJ",
+          "id": "228-0078",
           "title": "Naboso Neuro Ball",
           "price": "$30",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/t/g/tgc_1488.jpg",
           "url": "https://www.softstarshoes.com/naboso-neuro-ball.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
           ]
         },
         {
-          "id": "101-softstar-Z-O-PLYPANJ",
+          "id": "228-0079",
           "title": "Playful Pancakes - Cat Toys for Charity",
           "price": "$4.5",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/p/l/playful-pancakes-2020_1.jpg",
           "url": "https://www.softstarshoes.com/playful-pancakes-cat-toys-for-charity.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
           ]
         },
         {
-          "id": "101-softstar-A-G-GIFTCRDJ",
+          "id": "228-0080",
           "title": "Softstar Gift Card",
           "price": "$0",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/g/i/gift-card-sample_1.png",
           "url": "https://www.softstarshoes.com/gift-card.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "gift cards"
           ]
         },
         {
-          "id": "101-softstar-A-O-MTSLPDJ",
+          "id": "228-0081",
           "title": "T-Form Metatarsal Pads - Pedag",
           "price": "$10",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/p/e/pedag-tform-package.jpg",
           "url": "https://www.softstarshoes.com/pedag-tform-metatarsal-pad.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
           ]
         },
         {
-          "id": "101-softstar-A-C-CMSBPLJ",
+          "id": "228-0082",
           "title": "Combi Suede Brush",
           "price": "$6",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/p/e/pedag-suede-combi-cleaning-brush.jpg",
           "url": "https://www.softstarshoes.com/combi-suede-brush.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
           ]
         },
         {
-          "id": "101-softstar-A-C-SDEERSJ",
+          "id": "228-0083",
           "title": "Suede and Nubuck Eraser",
           "price": "$7",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/p/e/pedag-suede-eraser.jpg",
           "url": "https://www.softstarshoes.com/suede-nubuck-eraser.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
           ]
         },
         {
-          "id": "101-softstar-A-M-SCPLTHJ",
+          "id": "228-0084",
           "title": "Leather Scraps for Crafts",
           "price": "$20",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/n/e/new-2lb-scraps.jpg",
           "url": "https://www.softstarshoes.com/leather-scraps.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
           ]
         },
         {
-          "id": "101-softstar-A-O-LACLCKJ",
+          "id": "228-0085",
           "title": "Lock Laces",
           "price": "$9.5",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/l/o/locklaces-navy-2026.jpg",
           "url": "https://www.softstarshoes.com/locklaces.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "laces"
           ]
         },
         {
-          "id": "101-softstar-A-L-LACLTHJ",
+          "id": "228-0086",
           "title": "Leather Shoelaces",
           "price": "$5",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/l/e/leather-shoelaces.jpg",
           "url": "https://www.softstarshoes.com/leather-shoelaces.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "laces"
           ]
         },
         {
-          "id": "101-softstar-A-L-LACCHKJ",
+          "id": "228-0087",
           "title": "Replacement Laces for Hawthorne Chukkas",
           "price": "$5",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/c/h/chukka-colorful-laces.jpg",
           "url": "https://www.softstarshoes.com/chukka-shoelaces.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "laces"
           ]
         },
         {
-          "id": "101-softstar-Z-M-WLCSTRJ",
+          "id": "228-0088",
           "title": "Wool Coasters - Set of 4",
           "price": "$10",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/w/o/wool-coasters-1.jpg",
           "url": "https://www.softstarshoes.com/coasters-wool.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
           ]
         },
         {
-          "id": "101-softstar-Z-M-TRIVETJ",
+          "id": "228-0089",
           "title": "Trivet - Leather and Wool",
           "price": "$15",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/h/o/hotpad-top.jpg",
           "url": "https://www.softstarshoes.com/leather-wool-trivet.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
           ]
         },
         {
-          "id": "101-softstar-Z-M-POTHCVJ",
+          "id": "228-0090",
           "title": "Pot Handle Cover - Leather",
           "price": "$15",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/p/o/pot-handle-cover-lifestyle.jpg",
           "url": "https://www.softstarshoes.com/leather-pot-handle-cover.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
           ]
         },
         {
-          "id": "101-softstar-Z-O-SWATCHJ",
+          "id": "228-0091",
           "title": "Color Swatches",
           "price": "$5",
           "available": true,
           "image": "https://www.softstarshoes.com/media/catalog/product/cache/5d1214d1b7cb71d5ceff2b3f03971916/l/e/leather-color-swatches-800.jpg",
           "url": "https://www.softstarshoes.com/leather-color-swatches.html",
-          "store_name": "Soft Star Shoes",
+          "store_name": "Softstar Shoes",
           "store_url": "https://www.softstarshoes.com",
-          "ownership_type": "worker co-op",
+          "ownership_type": "purpose trust-owned",
           "site_section": "Apparel",
           "tags": [
             "accessories"
