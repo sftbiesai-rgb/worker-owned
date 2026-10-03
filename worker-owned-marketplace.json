@@ -91,7 +91,7 @@
     "id": 9,
     "name": "Equal Exchange",
     "url": "https://shop.equalexchange.coop",
-    "category": "coffee, tea, chocolate, olive oil, nuts, snacks",
+    "category": "coffee / tea / chocolate / food",
     "ownership_type": "worker co-op",
     "ships": "US",
     "status": "verified active",
@@ -157,7 +157,7 @@
     "id": 15,
     "name": "Microcosm Publishing",
     "url": "https://microcosmpublishing.com",
-    "category": "books / zines / patches / stickers / prints",
+    "category": "books / zines / patches / stickers / prints / art",
     "ownership_type": "worker-owned",
     "ships": "worldwide",
     "status": "verified active",
@@ -174,17 +174,6 @@
     "status": "verify online store",
     "notes": "San Francisco Mission District volunteer worker co-op since 2013. Beloved community institution. Bookshop.org storefront: bookshop.org/shop/adobebooks.",
     "site_section": "Books"
-  },
-  {
-    "id": 18,
-    "name": "Equal Exchange — Food",
-    "url": "https://shop.equalexchange.coop",
-    "category": "coffee, tea, chocolate, olive oil, nuts, snacks",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Full pantry range: coffee, chocolate, tea, olive oil, nuts, bananas available online. Worker co-op since 1986.",
-    "site_section": "Food & Pantry"
   },
   {
     "id": 19,
@@ -284,28 +273,6 @@
     "status": "verified active",
     "notes": "International decentralized worker co-op of 30 artists producing activist screen-printed posters, prints, and graphics. Art for social movements.",
     "site_section": "Art & Prints"
-  },
-  {
-    "id": 30,
-    "name": "Microcosm Publishing — Zines & Art",
-    "url": "https://microcosmpublishing.com",
-    "category": "zines / art prints / patches / stickers",
-    "ownership_type": "worker-owned",
-    "ships": "worldwide",
-    "status": "verified active",
-    "notes": "Also sells patches, stickers, enamel pins, posters, buttons, shirts beyond books and zines.",
-    "site_section": "Art & Prints"
-  },
-  {
-    "id": 224,
-    "name": "Microcosm Publishing",
-    "url": "https://microcosmpublishing.com",
-    "category": "books / zines / graphic novels / nonfiction",
-    "ownership_type": "worker-owned",
-    "ships": "worldwide",
-    "status": "verified active",
-    "notes": "Portland OR worker-ownership program since 1996. Publishers Weekly Fastest Growing Publisher 2022-2024. DIY, punk, social justice zines and books.",
-    "site_section": "Books"
   },
   {
     "id": 32,
@@ -462,28 +429,6 @@
     "site_section": "Home Goods & Services"
   },
   {
-    "id": 54,
-    "name": "Equal Exchange — Tea",
-    "url": "https://shop.equalexchange.coop/collections/tea",
-    "category": "tea",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Fair trade organic teas sourced from farmer co-ops in India, Sri Lanka, South Africa. 20+ flavors. Part of broader Equal Exchange online store.",
-    "site_section": "Coffee & Tea"
-  },
-  {
-    "id": 55,
-    "name": "Equal Exchange — Chocolate",
-    "url": "https://shop.equalexchange.coop/collections/chocolate",
-    "category": "chocolate",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Organic fair trade chocolate bars sourced from farmer co-ops. Part of broader Equal Exchange online store.",
-    "site_section": "Food & Pantry"
-  },
-  {
     "id": 59,
     "name": "Frontier Co-op",
     "url": "https://www.frontiercoop.com",
@@ -495,28 +440,6 @@
     "site_section": "Food & Pantry"
   },
   {
-    "id": 62,
-    "name": "Afterglow Coffee — Shop",
-    "url": "https://www.afterglowcoffee.com/shop",
-    "category": "coffee roaster",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Direct link to Afterglow shop. Single origin coffees roasted in Richmond VA. Ships nationally.",
-    "site_section": "Coffee & Tea"
-  },
-  {
-    "id": 63,
-    "name": "Thread Coffee — Store",
-    "url": "https://threadcoffee.com/store",
-    "category": "coffee roaster",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Direct link to Thread Coffee store. Subscriptions available. Also sells brewing equipment (Fellow, Chemex, Hario).",
-    "site_section": "Coffee & Tea"
-  },
-  {
     "id": 66,
     "name": "Worx Printing — Shop",
     "url": "https://shop.goodpress.coop/collections/worx-merch",
@@ -526,17 +449,6 @@
     "status": "verified active",
     "notes": "Direct retail shop for union-made tees, hats, bags. Hosted on Good Press platform. Exclusive supplier of union labels for UNITE HERE and Workers United.",
     "site_section": "Apparel"
-  },
-  {
-    "id": 74,
-    "name": "Slow Bloom — Coffee Shop",
-    "url": "https://www.slowbloomcoffee.com/shopcoffee",
-    "category": "coffee roaster",
-    "ownership_type": "worker co-op",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "Direct link to Slow Bloom coffee shop. Single origin coffees, subscriptions available. Founded by workers illegally fired during unionization.",
-    "site_section": "Coffee & Tea"
   },
   {
     "id": 84,
@@ -1131,28 +1043,6 @@
     "ships": "US, Canada",
     "status": "verified active",
     "notes": "Canada's first certified organic and fair trade coffee roaster, founded 1995 as a worker co-op in Hortonville, Nova Scotia. Roasts to order. Known for social justice mission and direct trade with farming co-ops. 83 products including coffee, tea, and gift items.",
-    "site_section": "Food & Pantry"
-  },
-  {
-    "id": 146,
-    "name": "Gimme! Coffee",
-    "url": "https://www.gimmecoffee.com",
-    "category": "specialty coffee / espresso / tea",
-    "ownership_type": "worker co-op",
-    "ships": "worldwide",
-    "status": "verified active",
-    "notes": "Worker co-op coffee roaster based in Ithaca, NY. Founded 2000, converted to worker co-op. Certified EO member. Roasts single-origin and blended coffees. Also sells brewing equipment and accessories.",
-    "site_section": "Food & Pantry"
-  },
-  {
-    "id": 148,
-    "name": "Once Again Nut Butter",
-    "url": "https://www.onceagainnutbutter.com",
-    "category": "organic nut butters / honey",
-    "ownership_type": "worker co-op",
-    "ships": "worldwide",
-    "status": "verified active",
-    "notes": "Worker co-op based in Nunda, NY since 1976. Makes organic and natural peanut butter, almond butter, cashew butter, sunflower butter, honey, and tahini. B Corp certified. Certified EO member.",
     "site_section": "Food & Pantry"
   },
   {
@@ -1871,50 +1761,6 @@
     "site_section": "Media & Publishing"
   },
   {
-    "id": 217,
-    "name": "Bull Moose",
-    "url": "https://www.bullmoose.com",
-    "category": "music",
-    "ownership_type": "employee-owned",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "100% employee-owned (ESOP). Vinyl, CDs, cassettes — new and used.",
-    "site_section": "Music"
-  },
-  {
-    "id": 218,
-    "name": "Bull Moose",
-    "url": "https://www.bullmoose.com",
-    "category": "books",
-    "ownership_type": "employee-owned",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "100% employee-owned (ESOP). Fiction, nonfiction, graphic novels, manga, and more.",
-    "site_section": "Books"
-  },
-  {
-    "id": 219,
-    "name": "Bull Moose",
-    "url": "https://www.bullmoose.com",
-    "category": "games",
-    "ownership_type": "employee-owned",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "100% employee-owned (ESOP). Video games, board games, trading cards.",
-    "site_section": "Games"
-  },
-  {
-    "id": 220,
-    "name": "Bull Moose",
-    "url": "https://www.bullmoose.com",
-    "category": "movies",
-    "ownership_type": "employee-owned",
-    "ships": "US",
-    "status": "verified active",
-    "notes": "100% employee-owned (ESOP). DVDs, Blu-rays, 4K UHD — new and used.",
-    "site_section": "Movies & TV"
-  },
-  {
     "id": 221,
     "name": "Cane Creek Cycling Components",
     "url": "https://www.canecreek.com",
@@ -1948,7 +1794,7 @@
     "site_section": "Sporting Goods & Outdoors"
   },
   {
-    "id": 224,
+    "id": 229,
     "name": "Jam",
     "url": "https://jam.coop",
     "category": "music platform",
@@ -1968,5 +1814,38 @@
     "status": "verified active",
     "notes": "100% employee-owned building materials supplier since 1958. Lumber, decking, windows, doors, roofing, siding, hardware, and kitchen/bath cabinetry. 12-acre campus in Abington, MA with HomeScapes design showroom.",
     "site_section": "Home Goods & Services"
+  },
+  {
+    "id": 226,
+    "name": "Ingage Partners",
+    "url": "https://www.ingagepartners.com",
+    "category": "IT consulting / technology services",
+    "ownership_type": "employee-owned",
+    "ships": "US (service area)",
+    "status": "verified active",
+    "notes": "Employee-owned (ESOP) IT consulting firm. Certified B Corp and benefit corporation. Specializes in enterprise technology, data analytics, and digital transformation. Indianapolis, IN.",
+    "site_section": "Tech & Software"
+  },
+  {
+    "id": 227,
+    "name": "Global Prairie",
+    "url": "https://www.globalprairie.com",
+    "category": "marketing / communications agency",
+    "ownership_type": "employee-owned",
+    "ships": "US (service area)",
+    "status": "verified active",
+    "notes": "Employee-owned (ESOP) marketing and communications agency. Certified B Corp and benefit corporation. Purpose-driven brand strategy, creative, and digital services. Kansas City, MO.",
+    "site_section": "Tech & Software"
+  },
+  {
+    "id": 228,
+    "name": "Eileen Fisher",
+    "url": "https://www.eileenfisher.com",
+    "category": "women's clothing / sustainable fashion",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "40% employee-owned (ESOP) women's clothing brand. Certified B Corp and benefit corporation. Known for timeless, sustainable fashion and circular design. Renew resale program. Irvington, NY.",
+    "site_section": "Apparel"
   }
 ]

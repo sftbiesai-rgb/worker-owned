@@ -1,5 +1,24 @@
 [
   {
+    "id": "229-0038",
+    "title": "Dum Dums Original Mix Lollipops - 600 Count Pack",
+    "price": "49.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/49517.jpg?v=1700687036",
+    "url": "https://spanglercandy.com/products/dum-dums-original-mix-600-count",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "assorted flavors",
+      "bulk",
+      "dum dums",
+      "lollipops",
+      "mix"
+    ]
+  },
+  {
     "id": "167-bc-4692",
     "title": "Frooties Sour Cherry Candy 360 Ct Tootsie Chews Bulk Candies Fruities 2.42 Lbs",
     "price": "8.55",
@@ -22,6 +41,25 @@
     "ownership_type": "ESOP",
     "site_section": "Food & Pantry",
     "tags": []
+  },
+  {
+    "id": "229-0010",
+    "title": "Dum Dums Original Mix Lollipops - 2,300 Count Bulk",
+    "price": "134.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/23000.jpg?v=1700686896",
+    "url": "https://spanglercandy.com/products/dum-dums-original-mix-30-lb-bulk",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "assorted flavors",
+      "bulk",
+      "dum dums",
+      "lollipops",
+      "mix"
+    ]
   },
   {
     "id": "113-9349056102729",
@@ -57,6 +95,234 @@
     ]
   },
   {
+    "id": "229-0023",
+    "title": "Starburst Original Lollipops - 72 Count Concession Box",
+    "price": "29.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/STARBP_34000_6_inner_angle_left.jpg?v=1702156118",
+    "url": "https://spanglercandy.com/products/starburst-lollipops-72-count-concession-box",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "assorted flavors",
+      "count",
+      "lollipops",
+      "mix",
+      "starburst"
+    ]
+  },
+  {
+    "id": "229-0007",
+    "title": "Dum Dums Blu Raspberry Lollipops - 50 Count Bag",
+    "price": "15.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/DDflavorites_00373_4_ecomm_angle.jpg?v=1758563070",
+    "url": "https://spanglercandy.com/products/dum-dums-blue-raspberry-50-count",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "blue raspberry",
+      "count",
+      "dum dums",
+      "lollipops",
+      "single"
+    ]
+  },
+  {
+    "id": "229-0006",
+    "title": "Dum Dums Bubble Dum Lollipop - 50 Count Bag",
+    "price": "15.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/DDflavorites_00383_3_ecomm_angle.jpg?v=1758563492",
+    "url": "https://spanglercandy.com/products/dum-dums-bubble-gum-50-count",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "bubble gum",
+      "count",
+      "dum dums",
+      "lollipops",
+      "single"
+    ]
+  },
+  {
+    "id": "229-0035",
+    "title": "Dum Dums Cherry Lollipops - 50 Count Bag",
+    "price": "15.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/DDflavorites_00376_5_ecomm_angle.jpg?v=1758563700",
+    "url": "https://spanglercandy.com/products/dum-dums-cherry-50-count",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "cherry",
+      "count",
+      "dum dums",
+      "lollipops",
+      "single"
+    ]
+  },
+  {
+    "id": "229-0029",
+    "title": "Dum Dums Cotton Candy Lollipops - 50 Count Bag",
+    "price": "15.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/DDflavorites_00382_6_ecomm_angle.jpg?v=1758563522",
+    "url": "https://spanglercandy.com/products/dum-dums-cotton-candy-50-count",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "cotton candy",
+      "count",
+      "dum dums",
+      "lollipops",
+      "single"
+    ]
+  },
+  {
+    "id": "229-0028",
+    "title": "Dum Dums Fruit Punch Lollipops - 50 Count Bag",
+    "price": "15.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/DDflavorites_00386_4_ecomm_angle.jpg?v=1758563443",
+    "url": "https://spanglercandy.com/products/dum-dums-fruit-punch-50-count",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "count",
+      "dum dums",
+      "fruit punch",
+      "lollipops",
+      "single"
+    ]
+  },
+  {
+    "id": "229-0026",
+    "title": "Dum Dums Lemon-Lime Lollipops - 50 Count Bag",
+    "price": "15.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/DDflavorites_00389_5_ecomm_angle.jpg?v=1758563384",
+    "url": "https://spanglercandy.com/products/dum-dums-lemon-lime-50-count",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "count",
+      "dum dums",
+      "lemon lime",
+      "lollipops",
+      "single"
+    ]
+  },
+  {
+    "id": "229-0005",
+    "title": "Dum Dums Orange Lollipops - 50 Count Bag",
+    "price": "15.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/DDflavorites_00384_0_ecomm_angle.jpg?v=1758563463",
+    "url": "https://spanglercandy.com/products/dum-dums-orange-50-count",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "count",
+      "dum dums",
+      "lollipops",
+      "orange",
+      "single"
+    ]
+  },
+  {
+    "id": "229-0027",
+    "title": "Dum Dums Peach-Mango Lollipops - 50 Count Bag",
+    "price": "15.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/DDflavorites_00388_8_ecomm_angle.jpg?v=1758563417",
+    "url": "https://spanglercandy.com/products/dum-dums-peach-mango-50-count",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "count",
+      "dum dums",
+      "lollipops",
+      "peach mango",
+      "single"
+    ]
+  },
+  {
+    "id": "229-0025",
+    "title": "Dum Dums Pineapple Lollipops - 50 Count Bag",
+    "price": "15.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/DDflavorites_00390_1_ecomm_angle.jpg?v=1758563172",
+    "url": "https://spanglercandy.com/products/dum-dums-pineapple-50-count",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "count",
+      "dum dums",
+      "lollipops",
+      "pineapple",
+      "single"
+    ]
+  },
+  {
+    "id": "229-0033",
+    "title": "Dum Dums Strawberry Lollipops - 50 Count Bag",
+    "price": "15.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/DDflavorites_00378_9_ecomm_angle.jpg?v=1758563631",
+    "url": "https://spanglercandy.com/products/dum-dums-strawberry-50-count",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "count",
+      "dum dums",
+      "lollipops",
+      "single",
+      "strawberry"
+    ]
+  },
+  {
+    "id": "229-0032",
+    "title": "Dum Dums Watermelon Lollipops - 50 Count Bag",
+    "price": "15.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/DDflavorites_00379_6_ecomm_angle.jpg?v=1758563611",
+    "url": "https://spanglercandy.com/products/dum-dums-watermelon-50-count",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "count",
+      "dum dums",
+      "lollipops",
+      "single",
+      "watermelon"
+    ]
+  },
+  {
     "id": "167-bc-5543",
     "title": "Skittles Original Fruity Candy 36 Count Box",
     "price": "48.93",
@@ -79,6 +345,44 @@
     "ownership_type": "ESOP",
     "site_section": "Food & Pantry",
     "tags": []
+  },
+  {
+    "id": "229-0011",
+    "title": "Necco Chocolate Wafers - 24 Count Rolls Tray",
+    "price": "38.48",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/NECCO_91100_8_inner_angle_right.jpg?v=1706821788",
+    "url": "https://spanglercandy.com/products/necco-chocolate-wafers-24-count-rolls-1",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "chocolate",
+      "count",
+      "necco",
+      "single",
+      "wafers"
+    ]
+  },
+  {
+    "id": "229-0019",
+    "title": "Necco Original Candy Wafer Mix - 24 Count Rolls",
+    "price": "38.48",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/NECCO_90100_9_inner_angle_right.jpg?v=1706821829",
+    "url": "https://spanglercandy.com/products/necco-original-wafers-mix-24-count-rolls",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "assorted flavors",
+      "count",
+      "mix",
+      "necco",
+      "wafers"
+    ]
   },
   {
     "id": "167-bc-2400",
@@ -177,6 +481,44 @@
     "tags": []
   },
   {
+    "id": "229-0009",
+    "title": "Bit-O-Honey Chews - 11.5 oz. Pillow Bags, 12 Count",
+    "price": "55.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/BOH_98451_0_case_top.jpg?v=1706195338",
+    "url": "https://spanglercandy.com/products/bit-o-honey-chews-12-11-5-oz-pillow-bag",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "bit-o-honey",
+      "bulk",
+      "honey",
+      "single",
+      "taffy"
+    ]
+  },
+  {
+    "id": "229-0008",
+    "title": "Bit-O-Honey Chews - 4 oz. Theater box, 12 Count",
+    "price": "40.98",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/BOH_99150_5_case_angle.jpg?v=1747943069",
+    "url": "https://spanglercandy.com/products/bit-o-honey-chews-12-4-oz-theater-box",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "bit-o-honey",
+      "bulk",
+      "honey",
+      "single",
+      "taffy"
+    ]
+  },
+  {
     "id": "167-bc-6514",
     "title": "Pez Assortment, Favorites Blister Card Candies - 12 Pack",
     "price": "24.02",
@@ -201,6 +543,25 @@
     "tags": []
   },
   {
+    "id": "229-0001",
+    "title": "Bit-O-Honey Chews - 5 lb. Bag",
+    "price": "35.49",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/BOH_99800_9_retail_front.jpg?v=1749237680",
+    "url": "https://spanglercandy.com/products/bit-o-honey-chews-5-lb-bag",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "bit-o-honey",
+      "bulk",
+      "honey",
+      "single",
+      "taffy"
+    ]
+  },
+  {
     "id": "167-bc-480",
     "title": "Charleston Chews, Chocolate, 1.785 oz Bars (Pack of 24)",
     "price": "36.85",
@@ -211,6 +572,42 @@
     "ownership_type": "ESOP",
     "site_section": "Food & Pantry",
     "tags": []
+  },
+  {
+    "id": "229-0039",
+    "title": "Dum Dums Original Mix Lollipops - 1,000 Count Bucket",
+    "price": "79.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/20075.jpg?v=1700686936",
+    "url": "https://spanglercandy.com/products/dum-dums-original-mix-1-000-count-bucket",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "assorted flavors",
+      "bulk",
+      "dum dums",
+      "lollipops",
+      "mix"
+    ]
+  },
+  {
+    "id": "229-0004",
+    "title": "Dum Dums Swirls Flat Pops - 750+ Count Case",
+    "price": "74.95",
+    "available": true,
+    "image": "https://cdn.shopify.com/s/files/1/0818/7717/2536/files/ddswirls539_primary.1.1.jpg?v=1749577519",
+    "url": "https://spanglercandy.com/products/dum-dums-swirls-pop",
+    "store_name": "Spangler Candy",
+    "store_url": "https://spanglercandy.com",
+    "ownership_type": "employee-owned",
+    "site_section": "Food & Pantry",
+    "tags": [
+      "bulk",
+      "dum dums",
+      "lollipops"
+    ]
   },
   {
     "id": "128-10285563281727",
