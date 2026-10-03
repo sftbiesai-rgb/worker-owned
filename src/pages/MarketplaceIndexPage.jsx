@@ -302,6 +302,13 @@ function MarketplaceIndexPage() {
           <p className="text-[11px] text-gray-400 mt-2 text-center">Results are links to company sites. We don't sell anything or earn a commission.</p>
         </div>
 
+        <Link to="/halloween-candy" className="block rounded-2xl border-2 border-orange-400 bg-gradient-to-r from-orange-50 to-amber-50 w-full px-4 py-3 mb-3 text-center hover:border-orange-500 hover:shadow-md transition-all">
+          <span className="text-sm font-extrabold tracking-tight uppercase">
+            <span className="text-gray-900">Get Your Halloween Candy </span>
+            <span className="text-orange-500">From Worker-Owned Companies</span>
+          </span>
+        </Link>
+
         {searching ? (
           searchLoading ? (
             <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5">

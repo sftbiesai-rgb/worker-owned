@@ -10,40 +10,9 @@ const BSKY_APP_PASSWORD = 'cRbdqFsy4M9GzmL';
 const API = 'https://bsky.social/xrpc';
 
 const REPLIES = [
-  // #1 Blizzard union mega-contract (aftermath.site, 3K likes)
   {
-    url: 'https://bsky.app/profile/aftermath.site/post/3mv3lrwmzzh2q',
-    text: "Let's go. Once workers see what collective power can do at the bargaining table, the next question becomes: what about ownership? Worker-owned businesses take that a step further. You can find hundreds of them at workerowned.info",
-  },
-  // #2 NYC Office of Worker Power (ddayen, 1.8K likes)
-  {
-    url: 'https://bsky.app/profile/ddayen.bsky.social/post/3muwnn4wtt22m',
-    text: "This is great to see. Connecting workers to resources is exactly what's needed. On a related note, we built workerowned.info as a searchable marketplace of worker-owned businesses — so people can actually put their money where their values are too.",
-  },
-  // #3 Union membership grew most since 2008 (moreperfectunion, 428 likes)
-  {
-    url: 'https://bsky.app/profile/moreperfectunion.bsky.social/post/3muz3su7ji22s',
-    text: "Let's go, unions rule. With robust worker ownership we can make the economy work more for workers and consumers, less for owners and shareholders. We made workerowned.info, an Amazon-like site for buying from worker-owned businesses.",
-  },
-  // #4 $1.7B union-busting industry tool (ddayen, 310 likes)
-  {
-    url: 'https://bsky.app/profile/ddayen.bsky.social/post/3muz5ohbaps2l',
-    text: "What a resource. Exposing the money behind union-busting is critical. On the flip side, if you want to support businesses that don't need busting because workers already own them, we've been building a searchable marketplace at workerowned.info",
-  },
-  // #5 Boycott Amazon/Walmart/Target (archeryfan93, 449 likes)
-  {
-    url: 'https://bsky.app/profile/archeryfan93.bsky.social/post/3mv4yhtvpr223',
-    text: "If you're looking for where to shop instead, workerowned.info is a searchable marketplace of worker-owned businesses — co-ops, employee-owned companies, and independent shops across the US. Clothing, groceries, outdoor gear, books, and more.",
-  },
-  // #6 Worker-owned bookstore article (cooperatives, 38 likes)
-  {
-    url: 'https://bsky.app/profile/cooperatives.bsky.social/post/3muux2ffcsk2b',
-    text: "Dig it. Bol is a great example. If anyone wants to find more businesses like this, we built workerowned.info — a searchable marketplace of worker-owned companies across the US. Bookstores, groceries, outdoor gear, and more.",
-  },
-  // #7 Avi Lewis on worker ownership (avilewis.ca, 50 likes)
-  {
-    url: 'https://bsky.app/profile/avilewis.ca/post/3muxoind5522m',
-    text: "Workplace democracy and worker ownership in the same breath — you love to see it. If folks want to actually shop worker-owned right now, workerowned.info is a searchable marketplace with hundreds of businesses across the US.",
+    url: 'https://bsky.app/profile/nome.bsky.social/post/3mwwgiyfifk2x',
+    text: 'there are grocery stores already that run this way, but they\'re hard to find. we made a searchable marketplace with a food and pantry section https://www.workerowned.info/food-pantry before you get ur kim-chi (or beef patties or goetze caramels) at whole foods get it here :)',
   },
 ];
 

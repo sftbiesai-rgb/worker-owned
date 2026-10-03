@@ -14,6 +14,7 @@ import WhatIsCoopPage from './pages/WhatIsCoopPage.jsx'
 import CoffeeCityPage from './pages/CoffeeCityPage.jsx'
 import FAQPage from './pages/FAQPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
+import HalloweenCandyPage from './pages/HalloweenCandyPage.jsx'
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
       <Route path="/guides/alternatives" element={<AlternativesPage />} />
       <Route path="/guides/what-is-a-worker-cooperative" element={<WhatIsCoopPage />} />
       <Route path="/guides/worker-owned-coffee/:city" element={<CoffeeCityPage />} />
+      <Route path="/halloween-candy" element={<HalloweenCandyPage />} />
       <Route path="/companies" element={<CompaniesPage />} />
       <Route path="/store/:store" element={<StoreDetailPage />} />
       <Route path="/store/:store/:section" element={<StoreProductsPage />} />
