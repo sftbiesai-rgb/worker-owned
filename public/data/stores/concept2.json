@@ -1,0 +1,215 @@
+{
+  "total": 16,
+  "sections": [
+    {
+      "label": "Fitness Equipment",
+      "count": 16,
+      "products": [
+        {
+          "id": "concept2-rowerg",
+          "title": "Concept2 RowErg Rowing Machine",
+          "price": "$990.00",
+          "url": "https://www.concept2.com/ergs/rowerg",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/news/20221020_kiedaisch_2733-2100x1401-7caa78a6-6837-4033-8ebb-646ba4844274_1.jpg?itok=uk9xg0Gk",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "rowing machine"
+          ]
+        },
+        {
+          "id": "concept2-skierg",
+          "title": "Concept2 SkiErg Cross-Country Ski Trainer",
+          "price": "$850.00",
+          "url": "https://www.concept2.com/ergs/skierg",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2024-05/SEtech.jpg?itok=LhsP423o",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "ski trainer"
+          ]
+        },
+        {
+          "id": "concept2-bikeerg",
+          "title": "Concept2 BikeErg - Exercise Bike",
+          "price": "$1,100.00",
+          "url": "https://www.concept2.com/ergs/bikeerg",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2024-01/bike-erg-close.jpg?itok=mqtjyjsp",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "exercise bike"
+          ]
+        },
+        {
+          "id": "concept2-strengtherg",
+          "title": "Concept2 StrengthErg",
+          "price": "$1,500.00",
+          "url": "https://www.concept2.com/ergs/strengtherg",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2026-07/StrErg_PM_profile.png?itok=TrOiV7SO",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "strength training"
+          ]
+        },
+        {
+          "id": "concept2-dynamic-rowerg",
+          "title": "Dynamic RowErg",
+          "price": "$1,375.00",
+          "url": "https://www.concept2.com/ergs/dynamic-rowerg",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2024-02/Dynamic%20Profile.png?itok=g7P4VYWJ",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "rowing machine"
+          ]
+        },
+        {
+          "id": "concept2-22",
+          "title": "Slide Pair",
+          "price": "$390.00",
+          "url": "https://www.concept2.com/product/22",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2024-03/1800-slide-pair.jpg?itok=ziSsV8Nj",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "rowing accessory"
+          ]
+        },
+        {
+          "id": "concept2-23",
+          "title": "Slide Single",
+          "price": "$195.00",
+          "url": "https://www.concept2.com/product/23",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2024-03/1800S-slide-single.jpg?itok=we7Leirp",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "rowing accessory"
+          ]
+        },
+        {
+          "id": "concept2-295",
+          "title": "SkiErg Floor Stand",
+          "price": "$220.00",
+          "url": "https://www.concept2.com/product/295",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2024-04/2372-skierg-floor-stand.jpg?itok=LKrmILRx",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "ski trainer",
+            "equipment stand"
+          ]
+        },
+        {
+          "id": "concept2-336",
+          "title": "RowErg Floor Mat",
+          "price": "$55.00",
+          "url": "https://www.concept2.com/product/336",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2024-02/Floor%20Mat%20for%20RowErg%20.jpg?itok=hjRM4ead",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "rowing machine",
+            "floor mat"
+          ]
+        },
+        {
+          "id": "concept2-25",
+          "title": "RowErg/Indoor Rower Cover",
+          "price": "$65.00",
+          "url": "https://www.concept2.com/product/25",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2024-02/ROWERG-COVER-D_GRAY_2.jpg?itok=K4_wKodf",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "rowing machine",
+            "equipment cover"
+          ]
+        },
+        {
+          "id": "concept2-815",
+          "title": "Deluxe seat pad for Concept2 RowErgs and Indoor Rowers",
+          "price": "$12.00",
+          "url": "https://www.concept2.com/product/815",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2025-01/deluxe-seatpad2.jpg?itok=Pbia6m1W",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "rowing machine",
+            "seat accessory"
+          ]
+        },
+        {
+          "id": "concept2-338",
+          "title": "PM5 (Performance Monitor) Retrofit Kit",
+          "price": "$160.00",
+          "url": "https://www.concept2.com/product/338",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2024-03/pm5-monitor.jpg?itok=PbceIs3Q",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "accessory"
+          ]
+        },
+        {
+          "id": "concept2-20",
+          "title": "Dynamic Link",
+          "price": "$65.00",
+          "url": "https://www.concept2.com/product/20",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2024-03/2727-dynamic-link%20%283%29.jpg?itok=qiMJCP7-",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "rowing machine"
+          ]
+        },
+        {
+          "id": "concept2-garmin-hrm-200",
+          "title": "Garmin HRM 200",
+          "price": "$79.99",
+          "url": "https://www.concept2.com/product/garmin-hrm-200",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2025-07/img1.png?itok=b4qUgzQV",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "heart rate monitor"
+          ]
+        },
+        {
+          "id": "concept2-699",
+          "title": "Concept2 Device Holder",
+          "price": "$25.00",
+          "url": "https://www.concept2.com/product/699",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2024-04/2390-device-holder-retrofit-kit.jpg?itok=rtXE9ZLM",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "accessory"
+          ]
+        },
+        {
+          "id": "concept2-757",
+          "title": "SkiErg Device Holder",
+          "price": "$25.00",
+          "url": "https://www.concept2.com/product/757",
+          "image": "https://cms.concept2.com/sites/default/files/styles/max_2048/public/2024-04/2557-skierg-device-holder.jpg?itok=J6D4ffhg",
+          "available": true,
+          "tags": [
+            "fitness equipment",
+            "ski trainer"
+          ]
+        }
+      ]
+    }
+  ],
+  "sectionIndex": [
+    {
+      "slug": "fitness-equipment",
+      "label": "Fitness Equipment",
+      "count": 16,
+      "totalPages": 1
+    }
+  ]
+}

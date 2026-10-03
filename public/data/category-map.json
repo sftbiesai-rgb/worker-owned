@@ -43,42 +43,10 @@
     "Apps & Games": "tech-software"
   },
   "sections": {
-    "food-pantry": {
-      "label": "Food & Pantry",
-      "count": 4356,
-      "storeCount": 33,
-      "stores": [
-        {
-          "name": "Sow True Seed",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "King Arthur Baking Company",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Thrifty White Pharmacy",
-          "ownershipType": "ESOP"
-        },
-        {
-          "name": "The Local Butcher Shop",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Equal Exchange",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Cabot Creamery",
-          "ownershipType": "farmer co-op"
-        }
-      ],
-      "url": "/food-pantry"
-    },
     "books": {
       "label": "Books",
-      "count": 53855,
-      "storeCount": 31,
+      "count": 41617,
+      "storeCount": 32,
       "stores": [
         {
           "name": "Microcosm Publishing",
@@ -93,40 +61,104 @@
           "ownershipType": "worker co-op"
         },
         {
-          "name": "RADIX",
+          "name": "Zia Records",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "PM Press",
           "ownershipType": "worker co-op"
         },
         {
-          "name": "Thrifty White Pharmacy",
-          "ownershipType": "ESOP"
-        },
-        {
-          "name": "Boydell & Brewer",
+          "name": "Mast General Store",
           "ownershipType": "employee-owned"
         }
       ],
       "url": "/books"
     },
+    "food-pantry": {
+      "label": "Food & Pantry",
+      "count": 6099,
+      "storeCount": 20,
+      "stores": [
+        {
+          "name": "Zingerman's",
+          "ownershipType": "purpose trust-owned"
+        },
+        {
+          "name": "Sow True Seed",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Frontier Co-op",
+          "ownershipType": "member co-op (retailers as members)"
+        },
+        {
+          "name": "King Arthur Baking Company",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Thrifty White Pharmacy",
+          "ownershipType": "ESOP"
+        }
+      ],
+      "url": "/food-pantry"
+    },
     "personal-care": {
       "label": "Personal Care",
-      "count": 2039,
-      "storeCount": 1,
+      "count": 2669,
+      "storeCount": 5,
       "stores": [
         {
           "name": "Thrifty White Pharmacy",
           "ownershipType": "ESOP"
+        },
+        {
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Alaffia",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Meow Meow Tweet",
+          "ownershipType": "worker collective"
+        },
+        {
+          "name": "Palestinian Soap Cooperative",
+          "ownershipType": "worker co-op"
         }
       ],
       "url": "/personal-care"
     },
     "home-goods": {
       "label": "Home Goods & Services",
-      "count": 14543,
-      "storeCount": 2,
+      "count": 19645,
+      "storeCount": 11,
       "stores": [
         {
           "name": "Scheels All Sports",
           "ownershipType": "ESOP"
+        },
+        {
+          "name": "Artisans Cooperative",
+          "ownershipType": "multi-stakeholder co-op"
+        },
+        {
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Handwork — Ithaca's Artisan Cooperative",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Dye Mad Yarns",
+          "ownershipType": "employee-owned"
         },
         {
           "name": "Thrifty White Pharmacy",
@@ -137,55 +169,243 @@
     },
     "games": {
       "label": "Games",
-      "count": 113,
-      "storeCount": 2,
+      "count": 3884,
+      "storeCount": 8,
       "stores": [
         {
-          "name": "Thrifty White Pharmacy",
-          "ownershipType": "ESOP"
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
         },
         {
-          "name": "Scheels All Sports",
+          "name": "TableTop Gaming",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Microcosm Publishing",
+          "ownershipType": "worker-owned"
+        },
+        {
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Zia Records",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Thrifty White Pharmacy",
           "ownershipType": "ESOP"
         }
       ],
       "url": "/games"
     },
-    "sporting-goods": {
-      "label": "Sporting Goods & Outdoors",
-      "count": 51234,
-      "storeCount": 1,
+    "music": {
+      "label": "Music",
+      "count": 18085,
+      "storeCount": 4,
+      "stores": [
+        {
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Zia Records",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "PM Press",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Tape Trade",
+          "ownershipType": "worker-owned"
+        }
+      ],
+      "url": "/music"
+    },
+    "movies-tv": {
+      "label": "Movies & TV",
+      "count": 5680,
+      "storeCount": 3,
+      "stores": [
+        {
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Zia Records",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "PM Press",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/movies-tv"
+    },
+    "tech-software": {
+      "label": "Tech & Software",
+      "count": 2097,
+      "storeCount": 8,
       "stores": [
         {
           "name": "Scheels All Sports",
           "ownershipType": "ESOP"
+        },
+        {
+          "name": "Vernier Science Education",
+          "ownershipType": "purpose trust-owned"
+        },
+        {
+          "name": "Arbor Assays",
+          "ownershipType": "purpose trust-owned"
+        },
+        {
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Zia Records",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Landry's Bicycles",
+          "ownershipType": "employee-owned"
+        }
+      ],
+      "url": "/tech-software"
+    },
+    "sporting-goods": {
+      "label": "Sporting Goods & Outdoors",
+      "count": 53597,
+      "storeCount": 5,
+      "stores": [
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Landry's Bicycles",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Cane Creek Cycling Components",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Independent Fabrication",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Concept2",
+          "ownershipType": "purpose trust-owned"
         }
       ],
       "url": "/sporting-goods"
     },
     "apparel": {
       "label": "Apparel",
-      "count": 51438,
-      "storeCount": 1,
+      "count": 62435,
+      "storeCount": 16,
       "stores": [
         {
           "name": "Scheels All Sports",
           "ownershipType": "ESOP"
+        },
+        {
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Tradehome Shoes",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Eileen Fisher",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Dansko",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Landry's Bicycles",
+          "ownershipType": "employee-owned"
         }
       ],
       "url": "/apparel"
     },
-    "tech-software": {
-      "label": "Tech & Software",
-      "count": 128,
-      "storeCount": 1,
+    "coffee-tea": {
+      "label": "Coffee & Tea",
+      "count": 632,
+      "storeCount": 10,
       "stores": [
         {
-          "name": "Scheels All Sports",
-          "ownershipType": "ESOP"
+          "name": "Equal Exchange",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Dean's Beans Organic Coffee",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Gimme Coffee Cooperative",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Rock City Coffee",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Cafe Campesino",
+          "ownershipType": "cooperative affiliated"
+        },
+        {
+          "name": "Thread Coffee Roasters",
+          "ownershipType": "worker co-op"
         }
       ],
-      "url": "/tech-software"
+      "url": "/coffee-tea"
+    },
+    "media-publishing": {
+      "label": "Media & Publishing",
+      "count": 89,
+      "storeCount": 2,
+      "stores": [
+        {
+          "name": "RADIX",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Strange Matters Magazine",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/media-publishing"
+    },
+    "beer-brewing": {
+      "label": "Beer & Brewing",
+      "count": 284,
+      "storeCount": 4,
+      "stores": [
+        {
+          "name": "Odell Brewing Company",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Deschutes Brewery",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Harpoon Brewery",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Left Hand Brewing Company",
+          "ownershipType": "employee-owned"
+        }
+      ],
+      "url": "/beer-brewing"
     }
   }
 }
