@@ -352,14 +352,14 @@ function MarketplaceIndexPage() {
               />
               <div className="flex-1 min-w-0">
                 {/* Inline refine bar - always visible */}
-                <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-4 py-3 mb-3 flex items-center gap-2">
+                <div className="bg-white rounded-2xl border border-[#003580]/40 shadow-sm w-full px-4 py-3 mb-3 flex items-center gap-2">
                   <SlidersHorizontal size={14} className="text-gray-400 shrink-0" />
                   <input
                     type="text"
                     value={localRefine}
                     onChange={e => handleRefineChange(e.target.value)}
                     placeholder="Narrow results (e.g. red, mens, large)..."
-                    className="flex-1 text-sm outline-none bg-transparent placeholder-gray-400"
+                    className="flex-1 text-sm outline-none bg-transparent placeholder-gray-500"
                   />
                   {localRefine && (
                     <button
