@@ -284,21 +284,17 @@
     "tags": []
   },
   {
-    "id": "113-9349056102729",
-    "title": "100 X Divine 70% Dark Chocolate Mini Bars",
-    "price": "19.99",
+    "id": "128-10285460160831",
+    "title": "Smarties Candy - 1 lb.",
+    "price": "12.98",
     "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0900/1205/7929/files/DIVINE_NAPS_DARK_3D_MULTI.png?v=1768232638",
-    "url": "https://divinechocolate.com/products/100-x-divine-70-dark-chocolate-mini-bars",
-    "store_name": "Divine Chocolate",
-    "store_url": "https://divinechocolate.com",
-    "ownership_type": "farmer co-op stake",
+    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17926_default_be239e83-16c5-475c-88e4-ad45e6c3f65d.jpg?v=1775667966",
+    "url": "https://www.mastgeneralstore.com/products/smarties-candy-1-lb",
+    "store_name": "Mast General Store",
+    "store_url": "https://www.mastgeneralstore.com",
+    "ownership_type": "employee-owned",
     "site_section": "Food & Pantry",
-    "tags": [
-      "Dark Chocolate",
-      "Mini Bar",
-      "Vegan"
-    ]
+    "tags": []
   },
   {
     "id": "167-bc-2722",
@@ -826,19 +822,6 @@
     "available": true,
     "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/245725_default.jpg?v=1775663461",
     "url": "https://www.mastgeneralstore.com/products/mini-jawbreakers-candy",
-    "store_name": "Mast General Store",
-    "store_url": "https://www.mastgeneralstore.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Food & Pantry",
-    "tags": []
-  },
-  {
-    "id": "128-10285460160831",
-    "title": "Smarties Candy - 1 lb.",
-    "price": "12.98",
-    "available": true,
-    "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/17926_default_be239e83-16c5-475c-88e4-ad45e6c3f65d.jpg?v=1775667966",
-    "url": "https://www.mastgeneralstore.com/products/smarties-candy-1-lb",
     "store_name": "Mast General Store",
     "store_url": "https://www.mastgeneralstore.com",
     "ownership_type": "employee-owned",

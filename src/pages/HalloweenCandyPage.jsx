@@ -30,7 +30,7 @@ export default function HalloweenCandyPage() {
       })
     : products
 
-  const sorted = interleaveByStore(filtered)
+  const sorted = filtered
   const totalPages = Math.ceil(sorted.length / PER_PAGE)
   const paged = sorted.slice((page - 1) * PER_PAGE, page * PER_PAGE)
 
