@@ -42,6 +42,11 @@ export const CATEGORIES = [
     label: 'Jewelry',
     industries: ['Jewelry'],
   },
+  {
+    slug: 'other',
+    label: 'Other',
+    industries: ['Other'],
+  },
 ]
 
 // Map an industry string (from search.json store.i) → category slug
