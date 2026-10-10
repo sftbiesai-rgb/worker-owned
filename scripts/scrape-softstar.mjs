@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
  * scrape-softstar.mjs
- * Scraper for Soft Star Shoes (softstarshoes.com) — a Magento store.
- * Worker-owned co-op in Corvallis, OR. Handcrafted minimalist shoes.
+ * Scraper for Softstar Shoes (softstarshoes.com) — a Magento store.
+ * Purpose trust-owned company in Corvallis, OR. Handcrafted minimalist shoes.
  *
  * Strategy: crawl the three main category listing pages (adult-shoes,
  * kids-shoes, gift-accessories) with product_list_limit=48, then
@@ -27,7 +27,7 @@ const DELAY_MS = 2500;
 const CHECKPOINT_FILE = '/tmp/softstar-scrape-checkpoint.json';
 
 const STORE_ID = 101;
-const STORE_NAME = 'Soft Star Shoes';
+const STORE_NAME = 'Softstar Shoes';
 const STORE_URL = 'https://www.softstarshoes.com';
 const OWNERSHIP_TYPE = 'worker co-op';
 const SITE_SECTION = 'Apparel';

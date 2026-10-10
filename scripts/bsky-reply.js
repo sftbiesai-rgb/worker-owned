@@ -11,8 +11,8 @@ const API = 'https://bsky.social/xrpc';
 
 const REPLIES = [
   {
-    url: 'https://bsky.app/profile/nome.bsky.social/post/3mwwgiyfifk2x',
-    text: 'there are grocery stores already that run this way, but they\'re hard to find. we made a searchable marketplace with a food and pantry section https://www.workerowned.info/food-pantry before you get ur kim-chi (or beef patties or goetze caramels) at whole foods get it here :)',
+    url: 'https://bsky.app/profile/coopnews.bsky.social/post/3mwxwysmqss2u',
+    text: 'growing the co-ops economy means making it easier to actually buy from co-ops. been working on workerowned.info, a searchable marketplace for worker-owned and employee-owned products. 80,000+ items from 200+ stores. timely with co-op month.',
   },
 ];
 
