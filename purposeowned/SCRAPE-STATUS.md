@@ -1,9 +1,19 @@
-# Purpose Owned — Scrape Status (2026-09-24)
+# Purpose Owned — Scrape Status (2026-10-13)
 
 ## Site
 - **Live at**: https://purposeowned.vercel.app
 - **Location**: `purposeowned/site/` (Vite + React + Tailwind)
-- **Currently showing**: 75,983 products from 247 stores
+- **Currently showing**: 89,587 products from 255 stores (5,048 companies in directory)
+
+## 2026-10-13 update
+- Moved 5 purpose trust-owned stores here from workerowned (they were scraped into root `public/data` by mistake on Oct 3):
+  Zingerman's (1,021), Vernier Science Education (705), Arbor Assays (144), Osmosis Day Spa Sanctuary (100), Concept2 (16).
+  Scrapers live in root `scripts/` (scrape-zingermans.mjs etc.) and write to WORKEROWNED paths. If rescraping, convert output into purposeowned search.json, don't let them write to root public/data.
+- Softstar Shoes replaced with 91-product rescrape; tagged ['B','S'].
+- Forestry Suppliers store renamed to "Forestry Suppliers, Inc." so the directory link (/store/<slugify(directory name)>) resolves. Store names in search.json MUST match directory.json names.
+- Conversion script used: products from workerowned products.json -> search.json compact rows [storeIdx, title, price, imgSuffix, urlSuffix, avail, type, tagIds]; directory.json `p` counts patched directly (did not rerun build_directory.py, which may clobber Oct 5 manual categories).
+- Impact Conveners Trust (CSV) has no website, so not in directory.
+- Decision (Will, 2026-10-13): stay US-only; ~35 European purpose-economy.org companies stay off.
 
 ## Data Sources
 

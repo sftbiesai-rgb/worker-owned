@@ -11,8 +11,8 @@ const API = 'https://bsky.social/xrpc';
 
 const REPLIES = [
   {
-    url: 'https://bsky.app/profile/coopnews.bsky.social/post/3mwxwysmqss2u',
-    text: 'growing the co-ops economy means making it easier to actually buy from co-ops. been working on workerowned.info, a searchable marketplace for worker-owned and employee-owned products. 80,000+ items from 200+ stores. timely with co-op month.',
+    url: 'https://bsky.app/profile/margaret.bsky.social/post/3mxhrq7ithc2q',
+    text: "Baltimore has so many worker co-ops for one city. Red Emma's, Taharka Brothers, Baltimore Bicycle Works. Great to see the investment side that made it possible get written up.",
   },
 ];
 
