@@ -77,13 +77,9 @@
     },
     "food-pantry": {
       "label": "Food & Pantry",
-      "count": 6099,
-      "storeCount": 20,
+      "count": 5078,
+      "storeCount": 19,
       "stores": [
-        {
-          "name": "Zingerman's",
-          "ownershipType": "purpose trust-owned"
-        },
         {
           "name": "Sow True Seed",
           "ownershipType": "employee-owned"
@@ -103,14 +99,18 @@
         {
           "name": "Thrifty White Pharmacy",
           "ownershipType": "ESOP"
+        },
+        {
+          "name": "The Local Butcher Shop",
+          "ownershipType": "worker co-op"
         }
       ],
       "url": "/food-pantry"
     },
     "personal-care": {
       "label": "Personal Care",
-      "count": 2769,
-      "storeCount": 6,
+      "count": 2669,
+      "storeCount": 5,
       "stores": [
         {
           "name": "Thrifty White Pharmacy",
@@ -119,10 +119,6 @@
         {
           "name": "Mast General Store",
           "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Osmosis Day Spa",
-          "ownershipType": "purpose trust-owned"
         },
         {
           "name": "Alaffia",
@@ -249,20 +245,12 @@
     },
     "tech-software": {
       "label": "Tech & Software",
-      "count": 2097,
-      "storeCount": 8,
+      "count": 1248,
+      "storeCount": 6,
       "stores": [
         {
           "name": "Scheels All Sports",
           "ownershipType": "ESOP"
-        },
-        {
-          "name": "Vernier Science Education",
-          "ownershipType": "purpose trust-owned"
-        },
-        {
-          "name": "Arbor Assays",
-          "ownershipType": "purpose trust-owned"
         },
         {
           "name": "Bull Moose",
@@ -275,14 +263,22 @@
         {
           "name": "Landry's Bicycles",
           "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Verso Books",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Artisans Cooperative",
+          "ownershipType": "multi-stakeholder co-op"
         }
       ],
       "url": "/tech-software"
     },
     "sporting-goods": {
       "label": "Sporting Goods & Outdoors",
-      "count": 53597,
-      "storeCount": 5,
+      "count": 53581,
+      "storeCount": 4,
       "stores": [
         {
           "name": "Scheels All Sports",
@@ -299,10 +295,6 @@
         {
           "name": "Independent Fabrication",
           "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Concept2",
-          "ownershipType": "purpose trust-owned"
         }
       ],
       "url": "/sporting-goods"
