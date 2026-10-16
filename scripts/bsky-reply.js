@@ -5,8 +5,19 @@
 // Each reply object needs: url, text
 // URLs in the text are auto-detected and made clickable.
 
-const BSKY_HANDLE = 'iesai.bsky.social';
-const BSKY_APP_PASSWORD = 'cRbdqFsy4M9GzmL';
+import fs from 'fs';
+
+// Credentials live outside the repo in fair-share-calc/.env (BSKY_IDENTIFIER, BSKY_APP_PASSWORD)
+const ENV_PATH = '/Applications/fair-share-calc/.env';
+const env = Object.fromEntries(
+  fs.readFileSync(ENV_PATH, 'utf8').split('\n')
+    .map(l => l.match(/^\s*([A-Z_]+)\s*=\s*(.*?)\s*$/))
+    .filter(Boolean)
+    .map(m => [m[1], m[2].replace(/^['"]|['"]$/g, '')])
+);
+const BSKY_HANDLE = env.BSKY_IDENTIFIER || 'iesai.bsky.social';
+const BSKY_APP_PASSWORD = env.BSKY_APP_PASSWORD;
+if (!BSKY_APP_PASSWORD) throw new Error(`BSKY_APP_PASSWORD missing from ${ENV_PATH}`);
 const API = 'https://bsky.social/xrpc';
 
 const REPLIES = [
@@ -14,10 +25,13 @@ const REPLIES = [
     url: 'https://bsky.app/profile/margaret.bsky.social/post/3mxhrq7ithc2q',
     text: "Baltimore has so many worker co-ops for one city. Red Emma's, Taharka Brothers, Baltimore Bicycle Works. Great to see the investment side that made it possible get written up.",
   },
+  {
+    url: 'https://bsky.app/profile/heatherrandell.bsky.social/post/3mxw5ph2l6s23',
+    text: "for anyone else canceling Prime and wondering where to shop instead, we built workerowned.info, a searchable marketplace of worker-owned online stores. coffee, clothes, books, toothpaste, all from co-ops",
+  },
 ];
 
 const SENT_LOG = 'scripts/.bsky-sent.json';
-import fs from 'fs';
 
 // CLI args
 // --all         Send all unsent, spaced by --gap minutes (default 90)

@@ -14,8 +14,17 @@
 //   node scripts/bsky-reply-scan.js --feeds-only # only check target account feeds
 //   node scripts/bsky-reply-scan.js --search-only # only do keyword search
 
-const BSKY_HANDLE = 'iesai.bsky.social';
-const BSKY_APP_PASSWORD = 'cRbdqFsy4M9GzmL';
+// Credentials live outside the repo in fair-share-calc/.env (BSKY_IDENTIFIER, BSKY_APP_PASSWORD)
+const ENV_PATH = '/Applications/fair-share-calc/.env';
+const env = Object.fromEntries(
+  (await import('fs')).readFileSync(ENV_PATH, 'utf8').split('\n')
+    .map(l => l.match(/^\s*([A-Z_]+)\s*=\s*(.*?)\s*$/))
+    .filter(Boolean)
+    .map(m => [m[1], m[2].replace(/^['"]|['"]$/g, '')])
+);
+const BSKY_HANDLE = env.BSKY_IDENTIFIER || 'iesai.bsky.social';
+const BSKY_APP_PASSWORD = env.BSKY_APP_PASSWORD;
+if (!BSKY_APP_PASSWORD) throw new Error(`BSKY_APP_PASSWORD missing from ${ENV_PATH}`);
 const API = 'https://bsky.social/xrpc';
 
 // Parse args
