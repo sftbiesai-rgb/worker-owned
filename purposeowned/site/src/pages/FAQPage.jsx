@@ -33,9 +33,11 @@ export default function FAQPage() {
                 <li><strong>Certified B Corporations</strong> — companies certified by <a href="https://www.bcorporation.net/" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">B Lab</a> for meeting rigorous standards of social and environmental performance, accountability, and transparency</li>
                 <li><strong>Benefit Corporations</strong> — companies legally structured as benefit corporations under state law, listed in the <a href="https://www.domoregood.com/benefit-corporation-directory" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">DoMoreGood directory</a></li>
                 <li><strong>Purpose Pledge</strong> — companies that have signed the <a href="https://www.purposepledge.org/" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">Purpose Pledge</a></li>
-                <li><strong>Purpose Trust-Owned</strong> — companies held in <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/EYGHCW" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">employee ownership trusts, perpetual purpose trusts</a>, or structured under <a href="https://purpose-economy.org/en/companies/" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">purpose trust</a> principles</li>
+                <li><strong>Purpose Trust-Owned</strong> — companies held in a trust, such as an <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/EYGHCW" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">employee ownership trust or perpetual purpose trust</a></li>
+                <li><strong>Steward-Owned</strong> — companies listed by <a href="https://purpose-economy.org/en/companies/" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">Purpose Economy</a> whose ownership keeps control with people inside the business and profits serving its purpose rather than outside shareholders</li>
                 <li><strong>100% for Purpose</strong> — members of <a href="https://100forpurpose.org/" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">100% for Purpose</a></li>
               </ul>
+              <p className="mt-2">Purpose trust ownership and steward ownership overlap, but they aren't the same thing. In the US, a purpose trust is one legal form steward ownership can take, but there are others, like enterprise foundations. Purpose trusts also have other uses, like mixed-income neighborhood trusts. Companies that fit both carry both tags.</p>
             </section>
 
             <section>
@@ -46,7 +48,7 @@ export default function FAQPage() {
                 <li><a href="https://www.domoregood.com/benefit-corporation-directory" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">DoMoreGood Benefit Corporation Directory</a> — 2,000+ benefit corporations in good standing</li>
                 <li><a href="https://www.purposepledge.org/companies" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">Purpose Pledge</a></li>
                 <li><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/EYGHCW" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">Purpose Trust Ownership Network (PTON)</a> — 80+ trust-owned businesses (EOTs, perpetual purpose trusts, etc.)</li>
-                <li><a href="https://purpose-economy.org/en/companies/" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">Purpose Economy (purpose trust ownership)</a></li>
+                <li><a href="https://purpose-economy.org/en/companies/" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">Purpose Economy</a> — steward-owned companies</li>
                 <li><a href="https://100forpurpose.org/" target="_blank" rel="noopener" className="text-[#1a6847] hover:text-[#145236]">100% for Purpose</a></li>
               </ul>
               <p className="mt-2">

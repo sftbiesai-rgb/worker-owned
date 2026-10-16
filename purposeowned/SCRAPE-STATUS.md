@@ -126,3 +126,8 @@
 | Benefit Corps | 2,090 good standing | 1,735 (83%) | 419 (388 new) | ~35,500 |
 | Purpose Trusts (PTON) | 83 | 77 | 5 | 7,344 |
 | **Total** | | | **247 stores** | **75,983** |
+
+## Steward-Owned tag (2026-10-16)
+- New ownership code `W` = "Steward-Owned" (purpose-economy.org list), separate from `S` = "Purpose Trust-Owned" (Mark's PTON CSV). Per Mark: overlapping but not 1:1.
+- Only US companies on purpose-economy.org: Patagonia, Organically Grown Company, Firebrand Artisan Breads. All three tagged ['S','W'] (Patagonia ['B','S','W']) in directory.json and search.json, patched directly.
+- If build_directory.py is ever rerun, re-apply `W` to these three.

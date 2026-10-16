@@ -9,7 +9,7 @@ import ProductListItem from '../components/ProductListItem'
 import Pagination from '../components/Pagination'
 import Footer from '../components/Footer'
 
-const TYPE_LABELS = { B: 'B Corp', F: 'Benefit Corp', P: 'Purpose Pledge', S: 'Purpose Trust-Owned', '1': '100% for Purpose' }
+const TYPE_LABELS = { B: 'B Corp', F: 'Benefit Corp', P: 'Purpose Pledge', S: 'Purpose Trust-Owned', W: 'Steward-Owned', '1': '100% for Purpose' }
 
 const PRICE_RANGES = [
   { key: 'under25', label: 'Under $25', min: 0, max: 25 },
