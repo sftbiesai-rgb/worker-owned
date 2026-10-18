@@ -29,6 +29,10 @@ const REPLIES = [
     url: 'https://bsky.app/profile/heatherrandell.bsky.social/post/3mxw5ph2l6s23',
     text: "for anyone else canceling Prime and wondering where to shop instead, we built workerowned.info, a searchable marketplace of worker-owned online stores. coffee, clothes, books, toothpaste, all from co-ops",
   },
+  {
+    url: 'https://bsky.app/profile/miaganga.bsky.social/post/3my3e4cpwbk26',
+    text: "for anyone cancelling Amazon and looking for alternatives we built an online marketplace of worker-owned shops, workerowned.info. not just niche stuff, essentials, sweatshirts, candy! shoes, books, candy!",
+  },
 ];
 
 const SENT_LOG = 'scripts/.bsky-sent.json';
