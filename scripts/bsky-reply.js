@@ -112,10 +112,12 @@ async function resolvePost(url) {
   });
   const postData = await postRes.json();
   const post = postData.posts[0];
-  return { uri: post.uri, cid: post.cid };
+  // If the target is itself a reply, keep its thread root so ours threads correctly
+  const root = post.record.reply?.root ?? { uri: post.uri, cid: post.cid };
+  return { parent: { uri: post.uri, cid: post.cid }, root };
 }
 
-async function postReply(text, parentUri, parentCid) {
+async function postReply(text, parent, root) {
   const facets = buildFacets(text);
   const record = {
     $type: 'app.bsky.feed.post',
@@ -123,8 +125,8 @@ async function postReply(text, parentUri, parentCid) {
     facets,
     createdAt: new Date().toISOString(),
     reply: {
-      root: { uri: parentUri, cid: parentCid },
-      parent: { uri: parentUri, cid: parentCid },
+      root,
+      parent,
     },
   };
 
@@ -179,8 +181,8 @@ async function main() {
     const facets = buildFacets(reply.text);
     console.log(`Resolving: ${reply.url}`);
     console.log(`Links detected: ${facets.map(f => f.features[0].uri).join(', ') || 'none'}`);
-    const { uri, cid } = await resolvePost(reply.url);
-    const postedUrl = await postReply(reply.text, uri, cid);
+    const { parent, root } = await resolvePost(reply.url);
+    const postedUrl = await postReply(reply.text, parent, root);
     console.log(`Posted: ${postedUrl}`);
     console.log(`Text: ${reply.text}\n`);
 
