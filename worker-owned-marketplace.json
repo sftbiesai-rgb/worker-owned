@@ -1847,5 +1847,27 @@
     "status": "verified active",
     "notes": "40% employee-owned (ESOP) women's clothing brand. Certified B Corp and benefit corporation. Known for timeless, sustainable fashion and circular design. Renew resale program. Irvington, NY.",
     "site_section": "Apparel"
+  },
+  {
+    "id": 230,
+    "name": "Best Brushes",
+    "url": "https://bestbrushes.com",
+    "category": "home goods / brushes",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Employee-owned online retailer based in Sparks, NV. Traditional brushes, kitchen and bath accessories, garden tools, and gifts with an emphasis on natural materials and craftsmanship. Sister brand of Deutsche Optik.",
+    "site_section": "Home Goods & Services"
+  },
+  {
+    "id": 231,
+    "name": "Deutsche Optik",
+    "url": "https://deutscheoptik.com",
+    "category": "military surplus / outdoor gear",
+    "ownership_type": "employee-owned",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "Employee-owned specialty retailer based in Sparks, NV, established 1999 and employee-owned since 2023. Military surplus, outdoor equipment, optical instruments, traditional leather goods, and historical collectibles. Sister brand of Best Brushes.",
+    "site_section": "Sporting Goods & Outdoors"
   }
 ]

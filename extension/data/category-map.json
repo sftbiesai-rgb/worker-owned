@@ -137,8 +137,8 @@
     },
     "home-goods": {
       "label": "Home Goods & Services",
-      "count": 19645,
-      "storeCount": 11,
+      "count": 19895,
+      "storeCount": 12,
       "stores": [
         {
           "name": "Scheels All Sports",
@@ -161,8 +161,8 @@
           "ownershipType": "employee-owned"
         },
         {
-          "name": "Thrifty White Pharmacy",
-          "ownershipType": "ESOP"
+          "name": "Best Brushes",
+          "ownershipType": "employee-owned"
         }
       ],
       "url": "/home-goods"
@@ -277,8 +277,8 @@
     },
     "sporting-goods": {
       "label": "Sporting Goods & Outdoors",
-      "count": 53581,
-      "storeCount": 4,
+      "count": 53858,
+      "storeCount": 5,
       "stores": [
         {
           "name": "Scheels All Sports",
@@ -286,6 +286,10 @@
         },
         {
           "name": "Landry's Bicycles",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Deutsche Optik",
           "ownershipType": "employee-owned"
         },
         {
