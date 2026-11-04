@@ -66,7 +66,12 @@ async function tryShopify(entry) {
     const allProducts = [];
     for (let page = 1; ; page++) {
       const url = `${productsUrl}&page=${page}`;
-      const res = await fetchWithTimeout(url);
+      // Shopify rate-limits rapid pagination with 429s; back off and retry instead of stopping early
+      let res = await fetchWithTimeout(url);
+      for (let attempt = 1; res.status === 429 && attempt <= 6; attempt++) {
+        await new Promise(r => setTimeout(r, 30000 * attempt));
+        res = await fetchWithTimeout(url);
+      }
       if (!res.ok) break;
       const ct = res.headers.get('content-type') ?? '';
       if (!ct.includes('json')) break;

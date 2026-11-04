@@ -137,7 +137,7 @@
     },
     "home-goods": {
       "label": "Home Goods & Services",
-      "count": 19895,
+      "count": 20261,
       "storeCount": 12,
       "stores": [
         {
@@ -157,11 +157,11 @@
           "ownershipType": "worker co-op"
         },
         {
-          "name": "Dye Mad Yarns",
+          "name": "Best Brushes",
           "ownershipType": "employee-owned"
         },
         {
-          "name": "Best Brushes",
+          "name": "Dye Mad Yarns",
           "ownershipType": "employee-owned"
         }
       ],
