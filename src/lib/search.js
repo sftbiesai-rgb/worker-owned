@@ -83,6 +83,20 @@ export function buildProductIndex(products) {
   return ms
 }
 
+// The item a title describes is usually its last real word: "Wildflower Honey"
+// is honey, "Honey Stinger Energy Gel" is a gel. Ignore trailing variant/size
+// noise ("- Lavender", "(2 Pack)", "12 oz").
+const SIZE_WORD = /^(\d.*|oz|fl|lb|lbs|ct|count|pk|pack|piece|pc|g|kg|ml|l|in|inch|ft|x|each|set|of|assorted|asst)$/
+function headTerm(title) {
+  const main = normalizeText(title).split(/\s[-|–—]\s|[(@,:]/)[0]
+  // Bull Moose style "Artist/Title": use the part after the slash
+  const part = main.includes('/') ? main.split('/').pop() : main
+  const tokens = part.split(/[^a-z0-9]+/).filter(t => t && !SIZE_WORD.test(t))
+  return tokens.length ? stemTerm(tokens[tokens.length - 1]) : ''
+}
+
+const WORKER_OWNED = /worker co-op|worker-owned|worker owned|worker collective/
+
 export function searchProducts(query, products, index) {
   if (!query.trim() || !index) return []
 
@@ -90,23 +104,44 @@ export function searchProducts(query, products, index) {
   const words = normalized.split(/\s+/).filter(w => w.length > 1)
   if (words.length === 0) return []
 
-  const results = index.search(words.join(' '))
+  // Partial words ("choc") get prefix matching when they're rare as a whole word
+  const partial = new Set(words.map(stemTerm).filter(t =>
+    t.length >= 3 && index.search(t, { prefix: false, fuzzy: false }).length < 20))
+  const results = index.search(words.join(' '), {
+    prefix: (term) => term.length > 5 || partial.has(term),
+  })
+
+  const queryHeads = new Set(words.map(stemTerm))
+  const items = results
+    .filter(r => products[r.id]?.available !== false)
+    .map(r => ({ r, p: products[r.id], head: queryHeads.has(headTerm(products[r.id].title || '')) }))
+
+  // Category intent: the sections where the query word is the item itself
+  // (not a brand or color). "honey" -> Food & Pantry, not Mabel + Honey onesies.
+  const headSections = new Map()
+  let headTotal = 0
+  for (const it of items) {
+    if (!it.head) continue
+    headTotal++
+    headSections.set(it.p.site_section, (headSections.get(it.p.site_section) || 0) + 1)
+  }
+  const intent = new Set()
+  if (headTotal >= 5) {
+    for (const [sec, n] of headSections) if (n / headTotal >= 0.25) intent.add(sec)
+  }
 
   // Apply store fatigue so one store doesn't dominate results
   const storeCounts = new Map()
-  const scored = results
-    .filter(r => products[r.id]?.available !== false)
-    .map(r => {
-      const p = products[r.id]
-      const store = p.store_name || ''
-      const prior = storeCounts.get(store) || 0
-      storeCounts.set(store, prior + 1)
-      // Small co-op boost
-      const ot = (p.ownership_type || '').toLowerCase()
-      const coopBonus = (ot.includes('worker co-op') || ot === 'worker owned') ? 0.05 * r.score
-        : ot.includes('multi-stakeholder') ? 0.02 * r.score : 0
-      return { p, effective: r.score + coopBonus - (prior * 0.003 * r.score) }
-    })
+  const scored = items.map(({ r, p, head }) => {
+    const store = p.store_name || ''
+    const prior = storeCounts.get(store) || 0
+    storeCounts.set(store, prior + 1)
+    const ot = (p.ownership_type || '').toLowerCase()
+    const coop = WORKER_OWNED.test(ot) ? 0.15 : ot.includes('co-op') ? 0.08 : 0
+    const mult = 1 + (head ? 0.6 : 0) + (intent.has(p.site_section) ? 0.3 : 0) + coop
+      - Math.min(prior * 0.003, 0.5)
+    return { p, effective: r.score * mult }
+  })
 
   scored.sort((a, b) => b.effective - a.effective)
   return scored.map(s => s.p)
