@@ -5,6 +5,10 @@
 - **Location**: `purposeowned/site/` (Vite + React + Tailwind)
 - **Currently showing**: 89,587 products from 255 stores (5,048 companies in directory)
 
+## 2026-11-07 update
+- Search/filter audit (see commit 3a07a0f). Site now collapses same-title listings per store at load time (~62.8K shown of 89,587 rows) and assigns product-level categories from titles (`productIndustry()` in site/src/lib/categories.js).
+- **Patch-script rule:** in search.json rows, product type `0` is a real index (y[0] = "Lab Created Diamond", MiaDonna). Write `""` for no type, never `0`. Fixed 2,424 rows (Heath Ceramics, Hummingbird Wholesale, HMS Motorsport, Purse and Clutch) that had `0`.
+
 ## 2026-10-13 update
 - Moved 5 purpose trust-owned stores here from workerowned (they were scraped into root `public/data` by mistake on Oct 3):
   Zingerman's (1,021), Vernier Science Education (705), Arbor Assays (144), Osmosis Day Spa Sanctuary (100), Concept2 (16).
