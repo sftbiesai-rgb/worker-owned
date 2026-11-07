@@ -3,7 +3,8 @@
     { "source": "/marketplace/store/:path*", "destination": "/store/:path*", "permanent": true },
     { "source": "/marketplace/companies", "destination": "/companies", "permanent": true },
     { "source": "/marketplace/:path*", "destination": "/:path*", "permanent": true },
-    { "source": "/marketplace", "destination": "/", "permanent": true }
+    { "source": "/marketplace", "destination": "/", "permanent": true },
+    { "source": "/halloween-candy", "destination": "/food-pantry/chocolate", "permanent": false }
   ],
   "rewrites": [
     { "source": "/((?!sitemap\\.txt|sitemap\\.xml|robots\\.txt|data\\/|api\\/)..*)", "destination": "/index.html" }
