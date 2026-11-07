@@ -42,7 +42,7 @@ export const SUBCATEGORIES = {
   'home-goods': [
     { slug: 'jewelry', label: 'Jewelry', keywords: ['jewelry', 'earring', 'necklace', 'bracelet', 'ring', 'pendant', 'body jewelry'] },
     { slug: 'art', label: 'Art & Prints', keywords: ['art', 'print', 'poster', 'painting', 'wall art', 'canvas', 'illustration'] },
-    { slug: 'woodworking', label: 'Woodworking', keywords: ['wood', 'cutting board', 'furniture', 'shelf', 'table', 'chair'] },
+    { slug: 'woodworking', label: 'Woodworking', keywords: ['wood', 'wooden', 'cutting board', 'furniture', 'shelf', 'table', 'chair'] },
     { slug: 'ceramics', label: 'Ceramics & Pottery', keywords: ['ceramic', 'pottery', 'mug', 'bowl', 'plate', 'vase'] },
     { slug: 'decor', label: 'Candles & Decor', keywords: ['candle', 'decor', 'lamp', 'pillow', 'blanket'] },
     { slug: 'paper', label: 'Paper Goods', keywords: ['paper', 'card', 'stationery', 'notebook', 'sticker'] },
@@ -56,7 +56,7 @@ export const SUBCATEGORIES = {
   ],
   'personal-care': [
     { slug: 'skin-care', label: 'Skin Care', keywords: ['lotion', 'moisturizer', 'cream', 'sunscreen', 'face wash', 'cleanser', 'serum', 'body butter', 'body wash', 'exfoliat', 'toner', 'skin'] },
-    { slug: 'hair-care', label: 'Hair Care', keywords: ['shampoo', 'conditioner', 'hair', 'styling'] },
+    { slug: 'hair-care', label: 'Hair Care', keywords: ['shampoo', 'conditioner', 'hair', 'haircolor', 'styling'] },
     { slug: 'soap', label: 'Soap & Bath', keywords: ['soap', 'bar soap', 'bath', 'body bar', 'hand wash', 'bubble'] },
     { slug: 'deodorant', label: 'Deodorant', keywords: ['deodorant', 'antiperspirant'] },
     { slug: 'vitamins', label: 'Vitamins & Supplements', keywords: ['vitamin', 'supplement', 'mineral', 'probiotic', 'calcium', 'magnesium', 'iron ', 'zinc ', 'omega', 'fish oil', 'multivitamin', 'gummies'] },
@@ -86,7 +86,7 @@ export const SUBCATEGORIES = {
     { slug: 'shoes', label: 'Shoes & Footwear', keywords: ['shoe', 'boot', 'sandal', 'sneaker', 'cleat', 'hiking boot', 'trail runner', 'wading boot'] },
     { slug: 'shirts', label: 'Shirts & Tops', keywords: ['shirt', 't-shirt', 'tee ', 'jersey', 'tank ', 'polo', 'base layer', 'athletic top'] },
     { slug: 'outerwear', label: 'Jackets & Outerwear', keywords: ['jacket', 'coat', 'hoodie', 'vest', 'pullover', 'fleece', 'parka', 'windbreaker', 'rain jacket'] },
-    { slug: 'camping', label: 'Camping & Outdoors', keywords: ['tent', 'sleeping bag', 'camp', 'backpack', 'hiking', 'trail', 'cooler', 'lantern', 'compass', 'knife', 'hammock'] },
+    { slug: 'camping', label: 'Camping & Outdoors', keywords: ['tent', 'sleeping bag', 'camp', 'camping', 'backpack', 'hiking', 'trail', 'cooler', 'lantern', 'compass', 'knife', 'hammock'] },
     { slug: 'fishing', label: 'Fishing & Hunting', keywords: ['fishing', 'rod', 'reel', 'lure', 'tackle', 'hunting', 'ammo', 'scope', 'decoy'] },
     { slug: 'fitness', label: 'Fitness & Training', keywords: ['fitness', 'weight', 'dumbbell', 'kettlebell', 'resistance', 'yoga', 'exercise', 'training', 'gym'] },
   ],
@@ -150,12 +150,27 @@ function exclusiveSubcategory(p, subs) {
   return subs.find(s => lastMatchIndex(keywordsRegex(s.keywords), tags) >= 0)?.slug || null
 }
 
+// Keywords match at the start of a word, so 'art' doesn't hit "party" and
+// 'tea' doesn't hit "steam". Short keywords (4 chars or less) must be the
+// whole word, plural allowed: 'card' matches "cards" but not "cardigan".
+const startRegexCache = new Map()
+function keywordStartRegex(keywords) {
+  const key = keywords.join('|')
+  if (!startRegexCache.has(key)) {
+    const alts = keywords.map(k => {
+      const t = k.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+      return t.length <= 4 ? `${t}(?:s|es)?(?![a-z])` : t
+    })
+    startRegexCache.set(key, new RegExp(`(?<![a-z])(?:${alts.join('|')})`, 'i'))
+  }
+  return startRegexCache.get(key)
+}
+
 export function productInSubcategory(p, category, sub) {
   if (EXCLUSIVE_SUBCATEGORIES.has(category)) {
     return exclusiveSubcategory(p, SUBCATEGORIES[category]) === sub.slug
   }
-  const text = p.title.toLowerCase() + ' ' + (p.tags || []).join(' ').toLowerCase()
-  return sub.keywords.some(kw => text.includes(kw))
+  return keywordStartRegex(sub.keywords).test(p.title + ' ' + (p.tags || []).join(' '))
 }
 
 // Gender chips for clothing categories. Title wins over tags, since stores

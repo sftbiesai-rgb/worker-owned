@@ -54,7 +54,23 @@ const REMAP = {
   'Food & Pantry': 'Food & Pantry',
   'Books & Media': 'Books',
   'Sporting Goods': 'Sporting Goods & Outdoors',
+  'Beauty & Personal Care': 'Personal Care',
+  'Home & Kitchen': 'Home Goods & Services',
+  'Clothing & Shoes': 'Apparel',
+  'Clothing': 'Apparel',
+  'Accessories': 'Apparel',
+  'Art': 'Art & Prints',
 }
+
+// Store category paths (e.g. Scheels' "accessories > bath & body > soap")
+// that say more than the store-level section does. First matching prefix wins.
+const CATEGORY_PATH_RULES = [
+  ['accessories > bath & body', 'Personal Care'],
+  ['home & yard > food & drink', 'Food & Pantry'],
+  ['home & yard > toys & games', 'Games'],
+  ['home & yard > outdoor cooking', 'Home Goods & Services'],
+  ['home & yard > electronics', 'Tech & Software'],
+]
 
 const SECTIONS = {
   'Coffee & Tea': 'coffee-tea',
@@ -196,6 +212,18 @@ if (remapped > 0) {
   console.log(`Remapped ${remapped} products to correct sections`)
 }
 
+let pathRemapped = 0
+for (const p of products) {
+  const path = (p.tags || []).find(t => t.includes(' > '))?.toLowerCase()
+  if (!path) continue
+  const rule = CATEGORY_PATH_RULES.find(([prefix]) => path.startsWith(prefix))
+  if (rule && p.site_section !== rule[1]) {
+    p.site_section = rule[1]
+    pathRemapped++
+  }
+}
+if (pathRemapped > 0) console.log(`Remapped ${pathRemapped} products by store category path`)
+
 // Product-level categorization for multi-category stores
 let recategorized = 0
 for (const p of products) {
@@ -215,7 +243,7 @@ if (recategorized > 0) {
   console.log(`Recategorized ${recategorized} products from multi-category stores`)
 }
 
-if (remapped > 0 || recategorized > 0) {
+if (remapped > 0 || pathRemapped > 0 || recategorized > 0) {
   writeFileSync(resolve(root, 'public/data/products.json'), JSON.stringify(products))
 }
 

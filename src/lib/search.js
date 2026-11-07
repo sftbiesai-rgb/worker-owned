@@ -4,6 +4,10 @@ import MiniSearch from 'minisearch'
 // Applied to both product text (at index time) and queries (at search time).
 function normalizeText(text) {
   return text.toLowerCase()
+    // Possessives: "men's" / "mens" / "kids'" all index and search the same
+    .replace(/(\w)['\u2019]s\b/g, '$1s')
+    .replace(/s['\u2019](?=\s|$)/g, 's')
+    .replace(/\b(wo)?mens\b/g, '$1men')
     .replace(/t[-\s]shirts?\b/g, 'tshirt')
     .replace(/long[-\s]sleev\w*/g, 'longsleeve')
     .replace(/short[-\s]sleev\w*/g, 'shortsleeve')
@@ -37,12 +41,34 @@ function normalizeText(text) {
     .replace(/red\s+mill/g, 'redmill')
 }
 
+// Light plural stemming so "boots" finds "Boot" and "pants" finds "Pant".
+// Applied to every token at index and query time.
+function stemTerm(term) {
+  const t = term.toLowerCase()
+  if (t.length <= 3) return t
+  // berry/berries and hoodie/hoodies both meet at "-ie"
+  if (t.endsWith('ies')) return t.slice(0, -1)
+  if (/[^aeiou]y$/.test(t)) return t.slice(0, -1) + 'ie'
+  if (/(ch|sh|x|zz|ss)es$/.test(t)) return t.slice(0, -2)
+  if (/(ss|us|is)$/.test(t)) return t
+  if (t.endsWith('s')) return t.slice(0, -1)
+  return t
+}
+
+// Repeated words (stores often append the product type: "Ground Coffee Coffee")
+// would otherwise inflate term frequency and push those items to the top.
+function dedupeWords(text) {
+  return [...new Set(text.split(/\s+/))].join(' ')
+}
+
 export function buildProductIndex(products) {
   const ms = new MiniSearch({
     fields: ['title', 'tagsText'],
+    processTerm: stemTerm,
     searchOptions: {
       boost: { title: 3, tagsText: 1 },
-      prefix: (term) => term.length > 3,
+      // Stemming covers plurals; prefix only helps long partial words
+      prefix: (term) => term.length > 5,
       fuzzy: (term) => term.length > 8 ? 0.15 : false,
       combineWith: 'AND',
     },
@@ -50,8 +76,8 @@ export function buildProductIndex(products) {
 
   ms.addAll(products.map((p, i) => ({
     id: i,
-    title: normalizeText(p.title || ''),
-    tagsText: normalizeText((p.tags || []).join(' ')),
+    title: dedupeWords(normalizeText(p.title || '')),
+    tagsText: dedupeWords(normalizeText((p.tags || []).join(' '))),
   })))
 
   return ms

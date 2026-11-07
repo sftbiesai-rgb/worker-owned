@@ -77,8 +77,8 @@
     },
     "food-pantry": {
       "label": "Food & Pantry",
-      "count": 5078,
-      "storeCount": 19,
+      "count": 5661,
+      "storeCount": 20,
       "stores": [
         {
           "name": "Sow True Seed",
@@ -97,23 +97,27 @@
           "ownershipType": "employee-owned"
         },
         {
-          "name": "Thrifty White Pharmacy",
+          "name": "Scheels All Sports",
           "ownershipType": "ESOP"
         },
         {
-          "name": "The Local Butcher Shop",
-          "ownershipType": "worker co-op"
+          "name": "Thrifty White Pharmacy",
+          "ownershipType": "ESOP"
         }
       ],
       "url": "/food-pantry"
     },
     "personal-care": {
       "label": "Personal Care",
-      "count": 2669,
-      "storeCount": 5,
+      "count": 8069,
+      "storeCount": 7,
       "stores": [
         {
           "name": "Thrifty White Pharmacy",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Scheels All Sports",
           "ownershipType": "ESOP"
         },
         {
@@ -137,8 +141,8 @@
     },
     "home-goods": {
       "label": "Home Goods & Services",
-      "count": 20261,
-      "storeCount": 12,
+      "count": 18408,
+      "storeCount": 13,
       "stores": [
         {
           "name": "Scheels All Sports",
@@ -157,11 +161,11 @@
           "ownershipType": "worker co-op"
         },
         {
-          "name": "Best Brushes",
+          "name": "Gardener's Supply Company",
           "ownershipType": "employee-owned"
         },
         {
-          "name": "Dye Mad Yarns",
+          "name": "Best Brushes",
           "ownershipType": "employee-owned"
         }
       ],
@@ -169,9 +173,13 @@
     },
     "games": {
       "label": "Games",
-      "count": 3884,
+      "count": 6459,
       "storeCount": 8,
       "stores": [
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
         {
           "name": "Bull Moose",
           "ownershipType": "employee-owned"
@@ -191,10 +199,6 @@
         {
           "name": "Zia Records",
           "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Thrifty White Pharmacy",
-          "ownershipType": "ESOP"
         }
       ],
       "url": "/games"
@@ -243,9 +247,41 @@
       ],
       "url": "/movies-tv"
     },
+    "apparel": {
+      "label": "Apparel",
+      "count": 61241,
+      "storeCount": 18,
+      "stores": [
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Tradehome Shoes",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Eileen Fisher",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Dansko",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Landry's Bicycles",
+          "ownershipType": "employee-owned"
+        }
+      ],
+      "url": "/apparel"
+    },
     "tech-software": {
       "label": "Tech & Software",
-      "count": 1248,
+      "count": 1224,
       "storeCount": 6,
       "stores": [
         {
@@ -277,7 +313,7 @@
     },
     "sporting-goods": {
       "label": "Sporting Goods & Outdoors",
-      "count": 53858,
+      "count": 53679,
       "storeCount": 5,
       "stores": [
         {
@@ -302,38 +338,6 @@
         }
       ],
       "url": "/sporting-goods"
-    },
-    "apparel": {
-      "label": "Apparel",
-      "count": 62435,
-      "storeCount": 16,
-      "stores": [
-        {
-          "name": "Scheels All Sports",
-          "ownershipType": "ESOP"
-        },
-        {
-          "name": "Mast General Store",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Tradehome Shoes",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Eileen Fisher",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Dansko",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Landry's Bicycles",
-          "ownershipType": "employee-owned"
-        }
-      ],
-      "url": "/apparel"
     },
     "coffee-tea": {
       "label": "Coffee & Tea",
@@ -406,6 +410,18 @@
         }
       ],
       "url": "/beer-brewing"
+    },
+    "art-prints": {
+      "label": "Art & Prints",
+      "count": 28,
+      "storeCount": 1,
+      "stores": [
+        {
+          "name": "PM Press",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/art-prints"
     }
   }
 }
