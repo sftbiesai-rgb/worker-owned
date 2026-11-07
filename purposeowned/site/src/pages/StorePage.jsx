@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
-import { slugify, faviconUrl } from '../lib/utils'
+import { slugify, faviconUrl, hydrateProducts } from '../lib/utils'
 import ProductCard from '../components/ProductCard'
 import Pagination from '../components/Pagination'
 import Footer from '../components/Footer'
@@ -20,24 +20,7 @@ export default function StorePage() {
     fetch('/data/search.json')
       .then(r => r.json())
       .then(data => {
-        const stores = data.s
-        const tagDict = data.t || []
-        const typeDict = data.y || []
-        const hydrated = data.p.map((p, i) => {
-          const store = stores[p[0]]
-          const img = p[3] ? (store.ip || '') + p[3] : null
-          const tags = p[7] === 0 ? [] : (p[7] || []).map(id => tagDict[id])
-          return {
-            id: i, title: p[1], price: p[2] > 0 ? p[2] : null,
-            image: img,
-            url: (store.up || '') + p[4],
-            store_name: store.n, store_url: store.u,
-            store_industry: store.i,
-            product_type: typeof p[6] === 'number' ? (typeDict[p[6]] || '') : (p[6] || ''),
-            tags, available: p[5] !== 0,
-            ownership_types: store.t || [],
-          }
-        })
+        const hydrated = hydrateProducts(data, { requireImage: false })
         setProducts(hydrated)
       })
       .catch(() => {})

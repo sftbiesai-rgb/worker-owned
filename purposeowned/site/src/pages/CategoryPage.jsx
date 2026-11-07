@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import { ArrowLeft, Search, ArrowUpDown, Grid3X3, List, SlidersHorizontal, X } from 'lucide-react'
 import { CATEGORIES, categoryBySlug } from '../lib/categories'
-import { slugify, faviconUrl } from '../lib/utils'
+import { slugify, faviconUrl, hydrateProducts } from '../lib/utils'
 import ProductCard from '../components/ProductCard'
 import ProductListItem from '../components/ProductListItem'
 import Pagination from '../components/Pagination'
@@ -40,27 +40,8 @@ export default function CategoryPage() {
     fetch('/data/search.json')
       .then(r => r.json())
       .then(data => {
-        const stores = data.s
-        const tagDict = data.t || []
-        const typeDict = data.y || []
-        setAllStores(stores)
-        const hydrated = data.p
-          .map((p, i) => {
-            const store = stores[p[0]]
-            const img = p[3] ? (store.ip || '') + p[3] : null
-            const tags = p[7] === 0 ? [] : (p[7] || []).map(id => tagDict[id])
-            return {
-              id: i, title: p[1], price: p[2] > 0 ? p[2] : null,
-              image: img,
-              url: (store.up || '') + p[4],
-              store_name: store.n, store_url: store.u,
-              store_industry: store.i,
-              product_type: typeof p[6] === 'number' ? (typeDict[p[6]] || '') : (p[6] || ''),
-              tags, available: p[5] !== 0,
-              ownership_types: store.t || [],
-            }
-          })
-          .filter(p => p.image)
+        setAllStores(data.s)
+        const hydrated = hydrateProducts(data)
         setAllProducts(hydrated)
       })
       .catch(() => {})
@@ -79,7 +60,7 @@ export default function CategoryPage() {
     if (!cat) return []
     return allProducts
       .filter(p => p.available !== false)
-      .filter(p => cat.industries.includes(p.store_industry))
+      .filter(p => cat.industries.includes(p.industry))
   }, [allProducts, cat])
 
   // Facet counts (computed on unfiltered category products)
@@ -123,11 +104,16 @@ export default function CategoryPage() {
         return !isNaN(price) && price >= range.min && price < range.max
       })
     }
-    const terms = filter.toLowerCase().split(/\s+/).filter(Boolean)
-    if (terms.length > 0) {
+    // Whole-word match (plural-tolerant) so "mens" doesn't match "womens"
+    const patterns = filter.toLowerCase().split(/\s+/).filter(Boolean).map(t => {
+      const esc = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+      const alt = esc.endsWith('s') ? `(?:${esc}|${esc.slice(0, -1)})` : `(?:${esc}|${esc}s)`
+      return new RegExp(`(?:^|[^a-z])${alt}(?:[^a-z]|$)`, 'i')
+    })
+    if (patterns.length > 0) {
       r = r.filter(p => {
-        const text = (p.title || '') + ' ' + (p.product_type || '') + ' ' + (p.store_name || '')
-        return terms.every(t => text.toLowerCase().includes(t))
+        const text = (p.title || '') + ' ' + (p.product_type || '') + ' ' + (p.store_name || '') + ' ' + (p.tags || []).join(' ')
+        return patterns.every(re => re.test(text))
       })
     }
     if (sort === 'price-asc') r = [...r].sort((a, b) => (parseFloat(a.price) || 0) - (parseFloat(b.price) || 0))

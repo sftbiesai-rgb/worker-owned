@@ -2,8 +2,8 @@ import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { Search, ArrowUpDown, SlidersHorizontal, X, List, Grid3X3 } from 'lucide-react'
 import { CATEGORIES, categoryForIndustry } from '../lib/categories'
-import { searchProducts, buildProductIndex } from '../lib/search'
-import { slugify, faviconUrl } from '../lib/utils'
+import { searchProducts, buildProductIndex, suggest } from '../lib/search'
+import { slugify, faviconUrl, hydrateProducts } from '../lib/utils'
 import ProductCard from '../components/ProductCard'
 import ProductListItem from '../components/ProductListItem'
 import Pagination from '../components/Pagination'
@@ -80,26 +80,7 @@ function HomePage() {
     setLoadingProducts(true)
     ;(preloadRef.current || fetch('/data/search.json').then(r => r.json()))
       .then(data => {
-        const stores = data.s
-        const tagDict = data.t || []
-        const typeDict = data.y || []
-        const hydrated = data.p
-          .map((p, i) => {
-            const store = stores[p[0]]
-            const img = p[3] ? (store.ip || '') + p[3] : null
-            const tags = p[7] === 0 ? [] : (p[7] || []).map(id => tagDict[id])
-            return {
-              id: i, title: p[1], price: p[2] > 0 ? p[2] : null,
-              image: img,
-              url: (store.up || '') + p[4],
-              store_name: store.n, store_url: store.u,
-              store_industry: store.i,
-              product_type: typeof p[6] === 'number' ? (typeDict[p[6]] || '') : (p[6] || ''),
-              tags, available: p[5] !== 0,
-              ownership_types: store.t || [],
-            }
-          })
-          .filter(p => p.image) // hide products without images
+        const hydrated = hydrateProducts(data)
         setProducts(hydrated)
         setSearchIndex(buildProductIndex(hydrated))
       })
@@ -117,8 +98,7 @@ function HomePage() {
       return
     }
     suggestDebounceRef.current = setTimeout(() => {
-      const results = searchIndex.autoSuggest(val.trim(), { limit: 6 })
-      setSuggestions(results.map(r => r.suggestion).filter(s => s !== val.trim().toLowerCase()))
+      setSuggestions(suggest(searchIndex, val))
       setShowSuggestions(true)
     }, 150)
   }, [searchIndex])
@@ -136,7 +116,7 @@ function HomePage() {
     let r = baseFiltered
     if (filterCat) {
       const cat = CATEGORIES.find(c => c.slug === filterCat)
-      if (cat) r = r.filter(p => cat.industries.includes(p.store_industry))
+      if (cat) r = r.filter(p => cat.industries.includes(p.industry))
     }
     if (filterStore) r = r.filter(p => p.store_name === filterStore)
     if (filterType) r = r.filter(p => (p.ownership_types || []).includes(filterType))
@@ -232,7 +212,7 @@ function HomePage() {
   const industryFacets = useMemo(() => {
     const counts = new Map()
     for (const p of baseFiltered) {
-      const cat = categoryForIndustry(p.store_industry)
+      const cat = categoryForIndustry(p.industry)
       if (cat) counts.set(cat.slug, (counts.get(cat.slug) || 0) + 1)
     }
     return CATEGORIES
@@ -256,7 +236,7 @@ function HomePage() {
         <input
           ref={inputRef}
           type="text"
-          placeholder="Search 76,000+ products..."
+          placeholder="Search 60,000+ products..."
           className="w-full border border-gray-300 rounded-l-lg px-3 py-2.5 text-sm outline-none focus:border-[#1a6847] transition-colors bg-white"
           value={inputValue}
           onChange={e => handleInputChange(e.target.value)}
@@ -657,7 +637,7 @@ function HomePage() {
         <p className="text-center text-xs text-gray-400 mt-3">
           {products.length > 0
             ? <>{products.length.toLocaleString()} products from {storeCount} purpose-driven companies</>
-            : <>76,000+ products from 247 purpose-driven companies</>}
+            : <>60,000+ products from 250+ purpose-driven companies</>}
         </p>
 
       </main>
