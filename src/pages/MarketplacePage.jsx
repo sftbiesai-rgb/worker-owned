@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
 import { slugify, faviconUrl, dedupeByUrl, interleaveByStore } from '../lib/utils'
-import { SECTIONS, SUBCATEGORIES, FILTERS } from '../lib/categories'
+import { SECTIONS, SUBCATEGORIES, FILTERS, GENDER_FILTERS, GENDER_FILTER_CATEGORIES, productInSubcategory, productMatchesGender } from '../lib/categories'
 import OwnershipBadge from '../components/OwnershipBadge'
 import ProductCard from '../components/ProductCard'
 import Pagination from '../components/Pagination'
@@ -21,6 +21,7 @@ function MarketplacePage() {
   const [showStores, setShowStores] = useState(category === 'tech-software' || category === 'art-prints' || category === 'music')
   const [filter, setFilter] = useState('')
   const [activeFilter, setActiveFilter] = useState(null)
+  const [gender, setGender] = useState(null)
   const categoryFilters = FILTERS[category] || null
 
   useEffect(() => {
@@ -52,7 +53,7 @@ function MarketplacePage() {
     document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', desc)
   }, [section, activeSub])
 
-  useEffect(() => { setPage(1); setFilter(''); setActiveFilter(null) }, [category, subcategory])
+  useEffect(() => { setPage(1); setFilter(''); setActiveFilter(null); setGender(null) }, [category, subcategory])
 
   if (!section) return <Navigate to="/" replace />
   if (subcategory && subs && !activeSub) return <Navigate to={`/${category}`} replace />
@@ -60,23 +61,29 @@ function MarketplacePage() {
   const sectionProducts = products.filter(p => p.site_section === section.sectionName)
 
   const subFiltered = activeSub
-    ? sectionProducts.filter(p => {
-        const text = p.title.toLowerCase() + ' ' + (p.tags || []).join(' ').toLowerCase()
-        return activeSub.keywords.some(kw => text.includes(kw))
-      })
+    ? sectionProducts.filter(p => productInSubcategory(p, category, activeSub))
     : sectionProducts
 
   const tagFiltered = activeFilter
     ? subFiltered.filter(p => (p.tags || []).some(t => t.toLowerCase().includes(activeFilter.toLowerCase())))
     : subFiltered
 
-  const filterWords = filter.toLowerCase().split(/\s+/).filter(Boolean)
-  const filtered = filterWords.length
-    ? tagFiltered.filter(p => {
-        const text = p.title.toLowerCase() + ' ' + (p.tags || []).join(' ').toLowerCase() + ' ' + (p.store_name || '').toLowerCase()
-        return filterWords.every(w => text.includes(w))
-      })
+  const genderFiltered = gender
+    ? tagFiltered.filter(p => productMatchesGender(p, gender))
     : tagFiltered
+
+  // Whole-word match (plural-tolerant) so "mens" doesn't match "womens"
+  const filterPatterns = filter.toLowerCase().split(/\s+/).filter(Boolean).map(w => {
+    const esc = w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    const alt = esc.endsWith('s') ? `(?:${esc}|${esc.slice(0, -1)})` : `(?:${esc}|${esc}s)`
+    return new RegExp(`(?:^|[^a-z])${alt}(?:[^a-z]|$)`, 'i')
+  })
+  const filtered = filterPatterns.length
+    ? genderFiltered.filter(p => {
+        const text = p.title + ' ' + (p.tags || []).join(' ') + ' ' + (p.store_name || '')
+        return filterPatterns.every(re => re.test(text))
+      })
+    : genderFiltered
 
   const available = filtered.filter(p => p.available !== false)
   const soldOut = filtered.filter(p => p.available === false)
@@ -142,6 +149,25 @@ function MarketplacePage() {
                 >
                   {s.label}
                 </Link>
+              ))}
+            </div>
+          )}
+
+          {/* Gender filters */}
+          {GENDER_FILTER_CATEGORIES.has(category) && (
+            <div className="flex flex-wrap gap-1.5 justify-center mt-2">
+              {GENDER_FILTERS.map(g => (
+                <button
+                  key={g.slug}
+                  onClick={() => { setGender(gender === g.slug ? null : g.slug); setPage(1) }}
+                  className={`px-2.5 py-0.5 rounded-full text-[11px] font-medium transition-colors border ${
+                    gender === g.slug
+                      ? 'bg-[#003580] text-white border-[#003580]'
+                      : 'bg-white text-gray-400 border-gray-200 hover:text-[#003580] hover:border-[#003580]'
+                  }`}
+                >
+                  {g.label}
+                </button>
               ))}
             </div>
           )}

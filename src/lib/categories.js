@@ -29,12 +29,15 @@ export const SUBCATEGORIES = {
     { slug: 'cds', label: 'CDs', keywords: ['audio cd', 'cd'] },
     { slug: 'cassettes', label: 'Cassettes', keywords: ['audio cassette', 'cassette', 'tape'] },
   ],
+  // Apparel is matched exclusively (see productInSubcategory): whole words only,
+  // and the last item-type word in the title wins ("Fleece Joggers" -> pants,
+  // "Party Pants T-Shirt" -> shirts). Tags are only a fallback.
   apparel: [
-    { slug: 'shoes', label: 'Shoes & Footwear', keywords: ['shoe', 'boot', 'sandal', 'sneaker', 'clog', 'slipper', 'slide', 'mule', 'loafer', 'flat ', 'heel', 'wedge'] },
-    { slug: 'shirts', label: 'Shirts & Tops', keywords: ['shirt', 't-shirt', 'tee ', 'top', 'blouse', 'tank ', 'tank top', 'polo', 'henley', 'camisole'] },
-    { slug: 'pants', label: 'Pants & Bottoms', keywords: ['pant', 'jean', 'short', 'skirt', 'bottom', 'legging'] },
-    { slug: 'accessories', label: 'Hats & Accessories', keywords: ['hat ', 'beanie', 'cap ', 'scarf', 'glove', 'belt', 'sock', 'bag', 'backpack', 'wallet', 'pouch', 'purse', 'crossbody', 'tote', 'wristlet'] },
-    { slug: 'outerwear', label: 'Jackets & Outerwear', keywords: ['jacket', 'coat', 'hoodie', 'vest', 'pullover', 'sweater', 'fleece', 'parka', 'cardigan', 'shacket'] },
+    { slug: 'shoes', label: 'Shoes & Footwear', keywords: ['shoe', 'boot', 'bootie', 'sandal', 'sneaker', 'clog', 'slipper', 'slide', 'mule', 'loafer', 'flat', 'heel', 'wedge', 'moccasin', 'oxford', 'trainer'] },
+    { slug: 'outerwear', label: 'Jackets & Outerwear', keywords: ['jacket', 'coat', 'hoodie', 'vest', 'pullover', 'sweater', 'sweatshirt', 'crewneck', 'fleece', 'parka', 'cardigan', 'shacket', 'anorak', 'windbreaker'] },
+    { slug: 'shirts', label: 'Shirts & Tops', keywords: ['shirt', 't-shirt', 'tee', 'top', 'blouse', 'tank', 'tank top', 'polo', 'henley', 'camisole', 'cami', 'bodysuit', 'jersey'] },
+    { slug: 'pants', label: 'Pants & Bottoms', keywords: ['pant', 'sweatpant', 'jeans', 'short', 'skirt', 'skort', 'bottom', 'legging', 'jogger', 'trouser', 'chino', 'slack', 'overall', 'trunk', 'boardshort'] },
+    { slug: 'accessories', label: 'Hats & Accessories', keywords: ['hat', 'beanie', 'cap', 'scarf', 'scarves', 'glove', 'mitten', 'belt', 'sock', 'bag', 'backpack', 'wallet', 'pouch', 'purse', 'crossbody', 'tote', 'wristlet', 'bandana'] },
   ],
   'home-goods': [
     { slug: 'jewelry', label: 'Jewelry', keywords: ['jewelry', 'earring', 'necklace', 'bracelet', 'ring', 'pendant', 'body jewelry'] },
@@ -109,6 +112,73 @@ export const SUBCATEGORIES = {
     { slug: 'news-journalism', label: 'News & Journalism', keywords: ['news-subscription'] },
     { slug: 'maps-prints', label: 'Maps & Prints', keywords: ['map', 'poster', 'print', 'wall map', 'sticker', 'patch', 'button'] },
   ],
+}
+
+// Categories whose subcategories are mutually exclusive: each product goes to
+// the subcategory whose keyword appears last in its title (the head noun),
+// or failing that the first one matching its tags.
+const EXCLUSIVE_SUBCATEGORIES = new Set(['apparel'])
+
+// Phrases that contain a keyword but don't mean that item type.
+const SUBCATEGORY_NOISE = /\b(short|long|3\/4|cap)[- ]sleeved?\b|\bboot[- ]?cut\b|\btop[- ]?(rated|seller)\b/gi
+
+const wordRegexCache = new Map()
+function keywordsRegex(keywords) {
+  const key = keywords.join('|')
+  if (!wordRegexCache.has(key)) {
+    const alts = keywords.map(k => k.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')
+    wordRegexCache.set(key, new RegExp(`(?<![a-z])(?:${alts})(?:s|es)?(?![a-z])`, 'gi'))
+  }
+  return wordRegexCache.get(key)
+}
+
+function lastMatchIndex(re, text) {
+  let last = -1
+  for (const m of text.matchAll(re)) last = m.index
+  return last
+}
+
+function exclusiveSubcategory(p, subs) {
+  const title = (p.title || '').replace(SUBCATEGORY_NOISE, ' ')
+  let best = null, bestIdx = -1
+  for (const s of subs) {
+    const i = lastMatchIndex(keywordsRegex(s.keywords), title)
+    if (i > bestIdx) { best = s; bestIdx = i }
+  }
+  if (best) return best.slug
+  const tags = (p.tags || []).join(' | ').replace(SUBCATEGORY_NOISE, ' ')
+  return subs.find(s => lastMatchIndex(keywordsRegex(s.keywords), tags) >= 0)?.slug || null
+}
+
+export function productInSubcategory(p, category, sub) {
+  if (EXCLUSIVE_SUBCATEGORIES.has(category)) {
+    return exclusiveSubcategory(p, SUBCATEGORIES[category]) === sub.slug
+  }
+  const text = p.title.toLowerCase() + ' ' + (p.tags || []).join(' ').toLowerCase()
+  return sub.keywords.some(kw => text.includes(kw))
+}
+
+// Gender chips for clothing categories. Title wins over tags, since stores
+// often tag a women's item with both "Mens" and "Womens" for cross-listing.
+const WOMENS_RE = /(?:^|[^a-z])(?:women|womens|women's|woman's|ladies|ladies'|wmns)(?:[^a-z]|$)/i
+const MENS_RE = /(?:^|[^a-z])(?:men|mens|men's|man's)(?:[^a-z]|$)/i
+const UNISEX_RE = /(?:^|[^a-z])unisex(?:[^a-z]|$)/i
+
+export const GENDER_FILTER_CATEGORIES = new Set(['apparel', 'sporting-goods'])
+export const GENDER_FILTERS = [
+  { slug: 'mens', label: "Men's" },
+  { slug: 'womens', label: "Women's" },
+]
+
+export function productMatchesGender(p, gender) {
+  const own = gender === 'mens' ? MENS_RE : WOMENS_RE
+  const other = gender === 'mens' ? WOMENS_RE : MENS_RE
+  const title = p.title || ''
+  if (UNISEX_RE.test(title)) return true
+  if (own.test(title)) return true
+  if (other.test(title)) return false
+  const tags = (p.tags || []).join(' | ')
+  return own.test(tags) || UNISEX_RE.test(tags)
 }
 
 // Format/tag filters that appear as a secondary filter row on category pages.
