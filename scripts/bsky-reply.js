@@ -33,6 +33,22 @@ const REPLIES = [
     url: 'https://bsky.app/profile/miaganga.bsky.social/post/3my3e4cpwbk26',
     text: "for anyone cancelling Amazon and looking for alternatives we built an online marketplace of worker-owned shops, workerowned.info. not just niche stuff, essentials, sweatshirts, candy! shoes, books, candy!",
   },
+  {
+    url: 'https://bsky.app/profile/sandrako.bsky.social/post/3mzlb3qwfi22e',
+    text: "some of those ethical alternatives already exist. for the Amazon part, we built workerowned.info, a searchable marketplace of worker-owned shops",
+  },
+  {
+    url: 'https://bsky.app/profile/thecurmudgeon.bsky.social/post/3mzoe6t2m7s2q',
+    text: "that second part is why we built workerowned.info, a searchable marketplace of worker-owned businesses. should make it easier to actually keep the money in co-ops",
+  },
+  {
+    url: 'https://bsky.app/profile/cooperatives.bsky.social/post/3mzlsxedpn22o',
+    text: "more than 60 is a lot more than I would've guessed. hoping Fertile Ground gets its doors open soon",
+  },
+  {
+    url: 'https://bsky.app/profile/hellgatenyc.com/post/3mznn2cw5tg2o',
+    text: "a shared back office for worker-owned newsrooms makes so much sense. every hour off ops is an hour of reporting. let's go",
+  },
 ];
 
 const SENT_LOG = 'scripts/.bsky-sent.json';
