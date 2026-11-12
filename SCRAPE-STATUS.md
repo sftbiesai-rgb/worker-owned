@@ -70,6 +70,7 @@ node scripts/scrape-products.mjs
 node scripts/scrape-bullmoose.mjs --merge-only
 node scripts/scrape-landrys.mjs --merge-only
 node scripts/scrape-microcosm.mjs --merge-only
+node scripts/scrape-steam-studios.mjs   # worker-owned game studios, live from Steam (rerun after launches)
 # Scheels: use the python snippet above
 
 # 3. Split into category files + search index

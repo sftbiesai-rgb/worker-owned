@@ -1869,5 +1869,38 @@
     "status": "verified active",
     "notes": "Employee-owned specialty retailer based in Sparks, NV, established 1999 and employee-owned since 2023. Military surplus, outdoor equipment, optical instruments, traditional leather goods, and historical collectibles. Sister brand of Best Brushes.",
     "site_section": "Sporting Goods & Outdoors"
+  },
+  {
+    "id": 232,
+    "name": "Wraith Games",
+    "url": "https://wraith.games",
+    "category": "video game studio",
+    "ownership_type": "worker co-op",
+    "ships": "worldwide (digital)",
+    "status": "verified active",
+    "notes": "Worker-owned game studio cooperative in Cincinnati, OH. Majority-queer and majority-disabled. Making Collapsus, a gravity-flipping puzzle game coming to Steam Early Access, plus Radarkanoid and Cave Worm.",
+    "site_section": "Games"
+  },
+  {
+    "id": 233,
+    "name": "Hidden Horses",
+    "url": "https://hidden.horse",
+    "category": "video game studio",
+    "ownership_type": "worker-owned",
+    "ships": "worldwide (digital)",
+    "status": "verified active",
+    "notes": "Developer-owned, democratically run game studio founded in 2026 by former id Software developers. First project is on Kickstarter.",
+    "site_section": "Games"
+  },
+  {
+    "id": 234,
+    "name": "Punch Up Games",
+    "url": "https://punch-up-games.org",
+    "category": "video game studio",
+    "ownership_type": "worker co-op",
+    "ships": "worldwide (digital)",
+    "status": "verified active",
+    "notes": "Employee-owned cooperative of game developers that publishes its sales numbers openly. Made Dig Too Deep, an action roguelite on Steam.",
+    "site_section": "Games"
   }
 ]
