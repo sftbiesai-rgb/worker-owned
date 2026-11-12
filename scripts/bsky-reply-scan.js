@@ -143,6 +143,22 @@ const SEARCH_QUERIES = [
   'buy ethical',
 ];
 
+// Searched with sort=latest and no like threshold: people asking for alternatives
+// right now rarely have many likes yet, but they're the best reply leads.
+const LATEST_QUERIES = [
+  'amazon alternative',
+  'alternative to amazon',
+  'instead of amazon',
+  'quit amazon',
+  'cancel prime',
+  'canceled prime',
+  'walmart alternative',
+  'ethical alternatives',
+  'worker owned',
+  'worker co-op',
+  'worker cooperative',
+];
+
 let authToken = null;
 let authorDid = null;
 
@@ -268,8 +284,7 @@ async function scanSearch(cutoff) {
         const created = new Date(post.record?.createdAt);
         if (created < cutoff) continue;
         const likes = post.likeCount || 0;
-        const followers = post.author?.followersCount || 0;
-        if (likes < MIN_LIKES && followers < 5000) continue;
+        const followers = 0; // filled by hydrateFollowers (search views omit followersCount)
 
         const url = postUrl(post.author.handle, post.uri);
         const text = post.record?.text || '';
@@ -291,7 +306,56 @@ async function scanSearch(cutoff) {
     await new Promise(r => setTimeout(r, 300));
   }
 
+  console.log(`Searching ${LATEST_QUERIES.length} latest-sorted queries...\n`);
+  for (const q of LATEST_QUERIES) {
+    try {
+      const res = await fetch(
+        `${API}/app.bsky.feed.searchPosts?q=${encodeURIComponent(q)}&sort=latest&limit=50`,
+        { headers: { Authorization: `Bearer ${authToken}` } }
+      );
+      if (!res.ok) continue;
+      const data = await res.json();
+      for (const post of (data.posts || [])) {
+        const created = new Date(post.record?.createdAt);
+        if (created < cutoff) continue;
+        if (post.record?.reply) continue; // top-level posts only
+        results.push({
+          mode: 'search',
+          latest: true,
+          query: q,
+          handle: post.author.handle,
+          note: '',
+          likes: post.likeCount || 0,
+          reposts: post.repostCount || 0,
+          replies: post.replyCount || 0,
+          followers: 0,
+          url: postUrl(post.author.handle, post.uri),
+          text: post.record?.text || '',
+          created,
+        });
+      }
+    } catch {}
+    await new Promise(r => setTimeout(r, 300));
+  }
+
   return results;
+}
+
+// Post author views don't include followersCount, so look them up in batches of 25.
+async function hydrateFollowers(results) {
+  const handles = [...new Set(results.map(r => r.handle))];
+  const counts = {};
+  for (let i = 0; i < handles.length; i += 25) {
+    const qs = handles.slice(i, i + 25).map(h => 'actors=' + encodeURIComponent(h)).join('&');
+    try {
+      const res = await fetch(`${API}/app.bsky.actor.getProfiles?${qs}`,
+        { headers: { Authorization: `Bearer ${authToken}` } });
+      if (!res.ok) continue;
+      const data = await res.json();
+      for (const p of (data.profiles || [])) counts[p.handle] = p.followersCount || 0;
+    } catch {}
+  }
+  for (const r of results) r.followers = counts[r.handle] || 0;
 }
 
 async function main() {
@@ -313,6 +377,9 @@ async function main() {
     const searchResults = await scanSearch(cutoff);
     all.push(...searchResults);
   }
+
+  await hydrateFollowers(all);
+  all = all.filter(r => r.mode !== 'search' || r.latest || r.likes >= MIN_LIKES || r.followers >= 5000);
 
   // Dedupe by URL
   const seen = new Set();
@@ -356,7 +423,7 @@ async function main() {
       console.log(`  KEYWORD SEARCH HITS (${searchHits.length}) — high-engagement posts from anyone`);
       console.log(`${'═'.repeat(70)}\n`);
       for (const r of searchHits) {
-        console.log(`  ♥ ${r.likes.toLocaleString()} likes | ${fmtFollowers(r.followers)} followers | ${ageStr(r.created)} | q: "${r.query}"`);
+        console.log(`  ♥ ${r.likes.toLocaleString()} likes | ${fmtFollowers(r.followers)} followers | ${ageStr(r.created)} | q: "${r.query}"${r.latest ? ' (latest)' : ''}`);
         console.log(`  @${r.handle}`);
         console.log(`  ${r.url}`);
         console.log(`  "${truncate(r.text)}"`);
