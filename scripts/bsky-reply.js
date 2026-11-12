@@ -53,6 +53,10 @@ const REPLIES = [
     url: 'https://bsky.app/profile/hiddenhorses.bsky.social/post/3n22cfat5jk2n',
     text: "nice! added you guys to our directory and looking forward to see what comes out",
   },
+  {
+    url: 'https://bsky.app/profile/todmaffin.com/post/3mzyl7ugxdy2b',
+    text: "we're US-based but we've got some Canadian worker co-ops on workerowned.info, like Just Us! Coffee in Nova Scotia and Urbane Cyclist in Toronto",
+  },
 ];
 
 const SENT_LOG = 'scripts/.bsky-sent.json';
