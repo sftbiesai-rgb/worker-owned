@@ -49,6 +49,10 @@ const REPLIES = [
     url: 'https://bsky.app/profile/hellgatenyc.com/post/3mznn2cw5tg2o',
     text: "a shared back office for worker-owned newsrooms makes so much sense. every hour off ops is an hour of reporting. let's go",
   },
+  {
+    url: 'https://bsky.app/profile/hiddenhorses.bsky.social/post/3n22cfat5jk2n',
+    text: "nice! added you guys to our directory and looking forward to see what comes out",
+  },
 ];
 
 const SENT_LOG = 'scripts/.bsky-sent.json';
