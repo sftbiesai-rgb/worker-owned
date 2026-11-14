@@ -7,7 +7,7 @@
       {
         "id": "104-7115790450745",
         "title": "Vermont Maple & Cheese Gift Box",
-        "price": "78.00",
+        "price": "82.00",
         "available": true,
         "image": "https://cdn.shopify.com/s/files/1/0571/3933/1129/files/Vermont-Maple-And-Cheese-Gift-Box-Render-2100x2100-fd63e676-39bf-4961-b198-705c17b35961_WEB_SHADOW.png?v=1782930221",
         "url": "https://cabotcreamery.com/products/vt-maple-cheese",
@@ -136,19 +136,6 @@
         "tags": []
       },
       {
-        "id": "130-8529157816569",
-        "title": "Vegan Hot Chocolate Gift Set — 3 Cozy Flavors",
-        "price": "28.46",
-        "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0183/6313/files/HotChocolateTrio.webp?v=1726849015",
-        "url": "https://www.coracaoconfections.com/products/hot-chocolate-gift-set",
-        "store_name": "Coraçao Chocolate",
-        "store_url": "https://www.coracaoconfections.com",
-        "ownership_type": "employee-owned",
-        "site_section": "Food & Pantry",
-        "tags": []
-      },
-      {
         "id": "20-6678972498017",
         "title": "Make Your Own 4 Pack Gift Box",
         "price": "26.96",
@@ -177,17 +164,43 @@
         ]
       },
       {
-        "id": "130-8810770497785",
-        "title": "Premium Vegan Chocolate Gift Set — 15 Full-Size Bars",
-        "price": "85.00",
+        "id": "113-9530495074633",
+        "title": "Dark Chocolate Lover's Bundle - 5 pack",
+        "price": "15.99",
         "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0183/6313/files/10_77cdd2e5-da6d-4583-8e99-0bfdf60069f4.webp?v=1747245293",
-        "url": "https://www.coracaoconfections.com/products/ultimate-gift-set-15-pieces",
-        "store_name": "Coraçao Chocolate",
-        "store_url": "https://www.coracaoconfections.com",
-        "ownership_type": "employee-owned",
+        "image": "https://cdn.shopify.com/s/files/1/0900/1205/7929/files/DarkChocolateLover_sBundle5-pack.png?v=1768235940",
+        "url": "https://divinechocolate.com/products/dark-chocolate-lovers-bundle",
+        "store_name": "Divine Chocolate",
+        "store_url": "https://divinechocolate.com",
+        "ownership_type": "farmer co-op stake",
         "site_section": "Food & Pantry",
-        "tags": []
+        "tags": [
+          "Bundle Promo",
+          "Dark Chocolate",
+          "Gifting",
+          "Sharing Bar",
+          "Tasting Pack",
+          "Vegan"
+        ]
+      },
+      {
+        "id": "113-9535118967113",
+        "title": "Dark Chocolate Lover's Bundle - 7 Pack",
+        "price": "20.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0900/1205/7929/files/DarkChocolateLover_sBundle7-pack.png?v=1768235849",
+        "url": "https://divinechocolate.com/products/dark-chocolate-lovers-bundle-large",
+        "store_name": "Divine Chocolate",
+        "store_url": "https://divinechocolate.com",
+        "ownership_type": "farmer co-op stake",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "Bundle Promo",
+          "Dark Chocolate",
+          "Gifting",
+          "Sharing Bar",
+          "Tasting Pack"
+        ]
       }
     ]
   },
@@ -196,6 +209,108 @@
     "title": "For the Coffee & Tea Lover",
     "blurb": "Coffee from worker co-op roasters, plus mugs and cocoa.",
     "products": [
+      {
+        "id": "1-155804799",
+        "title": "Revolution Roast",
+        "price": "20.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/RevolutionRoastfairtradeorganiccoffee.png?v=1705604047",
+        "url": "https://justcoffee.coop/products/revolution-roast",
+        "store_name": "Just Coffee Cooperative",
+        "store_url": "https://justcoffee.coop",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": [
+          "coffee",
+          "dark roast",
+          "fair trade",
+          "fair trade coffee",
+          "just coffee coop",
+          "just coffee cooperative",
+          "organic",
+          "organic coffee",
+          "roasted",
+          "shade grown",
+          "shade grown coffee",
+          "single origin"
+        ]
+      },
+      {
+        "id": "1-155769277",
+        "title": "Humdinger",
+        "price": "20.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/HumdingerFairTradeOrganicCoffee_f432c3c1-5d69-4963-882b-b0681911c05c.png?v=1705600760",
+        "url": "https://justcoffee.coop/products/ethiopiansidama",
+        "store_name": "Just Coffee Cooperative",
+        "store_url": "https://justcoffee.coop",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": [
+          "coffee",
+          "fair trade",
+          "featured",
+          "medium roasted coffee",
+          "organic coffee",
+          "roasted"
+        ]
+      },
+      {
+        "id": "1-155722413",
+        "title": "Electric Monkey Espresso",
+        "price": "20.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/ElectricMonkeyEspressoFairTradeOrganicCoffee_9744a83b-1d4a-4936-ae35-10136ed5ad1a.png?v=1705601046",
+        "url": "https://justcoffee.coop/products/electric-monkey-espresso",
+        "store_name": "Just Coffee Cooperative",
+        "store_url": "https://justcoffee.coop",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": [
+          "blend",
+          "coffee",
+          "dark roast",
+          "dark roast coffee",
+          "electric monkey espresso",
+          "espresso",
+          "espresso blend",
+          "fair trade",
+          "fair trade coffee",
+          "fair trade organic espresso",
+          "organic",
+          "organic coffee",
+          "roasted",
+          "shade grown",
+          "shade grown coffee"
+        ]
+      },
+      {
+        "id": "1-157134291",
+        "title": "Hot Cocoa",
+        "price": "10.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0262/2413/products/HotCocoaFairTradeOrganic.png?v=1606161767",
+        "url": "https://justcoffee.coop/products/hot-cocoa-mix",
+        "store_name": "Just Coffee Cooperative",
+        "store_url": "https://justcoffee.coop",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": [
+          "all natrual",
+          "certified organic",
+          "chocolate",
+          "cocoa",
+          "cocoa powder",
+          "dessert",
+          "fair trade",
+          "Ghana",
+          "hot cocoa",
+          "just coffee coop",
+          "just coffee cooperative",
+          "organic",
+          "USDA Organic"
+        ]
+      },
       {
         "id": "146-9070806302939",
         "title": "Gift Subscription - Roaster's Choice",
@@ -264,7 +379,7 @@
       {
         "id": "146-8267645157595",
         "title": "Leftist Espresso",
-        "price": "22.00",
+        "price": "21.00",
         "available": true,
         "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/gimme-left.png?v=1761761066",
         "url": "https://www.gimmecoffee.com/products/leftist-espresso-fairtrade-organic",
@@ -323,68 +438,6 @@
           "Blend",
           "Signature Blend"
         ]
-      },
-      {
-        "id": "113-10011828846921",
-        "title": "Hot Chocolate Bundle",
-        "price": "19.99",
-        "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0900/1205/7929/files/Hotchocolatebundle_bf976f4b-4d38-46ab-82a9-1354393cf2c6.png?v=1767799363",
-        "url": "https://divinechocolate.com/products/hotchocolatebundle",
-        "store_name": "Divine Chocolate",
-        "store_url": "https://divinechocolate.com",
-        "ownership_type": "farmer co-op stake",
-        "site_section": "Food & Pantry",
-        "tags": [
-          "Bestseller",
-          "Beverages",
-          "bogos-bundle-check",
-          "Bundle Promo",
-          "Gifting",
-          "Tasting Pack"
-        ]
-      },
-      {
-        "id": "2-8433173102884",
-        "title": "Diner Mug",
-        "price": "12.00",
-        "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0253/5129/0968/files/newmugs.jpg?v=1755708490",
-        "url": "https://cooperativecoffeeroasters.com/products/diner-mug",
-        "store_name": "Cooperative Coffee Roasters",
-        "store_url": "https://cooperativecoffeeroasters.com",
-        "ownership_type": "worker co-op",
-        "site_section": "Coffee & Tea",
-        "tags": []
-      },
-      {
-        "id": "146-8267645780187",
-        "title": "Righteous Espresso",
-        "price": "22.00",
-        "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/Righteous2.png?v=1761762060",
-        "url": "https://www.gimmecoffee.com/products/righteous-espresso-fairtrade-organic",
-        "store_name": "Gimme! Coffee",
-        "store_url": "https://www.gimmecoffee.com",
-        "ownership_type": "worker co-op",
-        "site_section": "Food & Pantry",
-        "tags": [
-          "fairtrade",
-          "organic"
-        ]
-      },
-      {
-        "id": "2-3990309666904",
-        "title": "Sweet Dreams [Decaf]",
-        "price": "21.00",
-        "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0253/5129/0968/files/127decaf.png?v=1769536825",
-        "url": "https://cooperativecoffeeroasters.com/products/sweet-dreams-decaf",
-        "store_name": "Cooperative Coffee Roasters",
-        "store_url": "https://cooperativecoffeeroasters.com",
-        "ownership_type": "worker co-op",
-        "site_section": "Coffee & Tea",
-        "tags": []
       }
     ]
   },
@@ -446,18 +499,6 @@
         "tags": [
           "badge:made in usa"
         ]
-      },
-      {
-        "id": "115-bc-685",
-        "title": "Holiday Village Pop-Out Cookie Cutters",
-        "price": "13.99",
-        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1444/images/5929/213339_HolidayHousesPop-OutCutterSet-01__83964.1724079467.386.513.jpg?c=1",
-        "url": "https://shop.kingarthurbaking.com/items/holiday-village-pop-out-cutter-set",
-        "store_name": "King Arthur Baking Company",
-        "store_url": "https://shop.kingarthurbaking.com",
-        "ownership_type": "employee-owned",
-        "site_section": "Food & Pantry",
-        "tags": []
       },
       {
         "id": "115-bc-600",
@@ -540,11 +581,23 @@
         "tags": []
       },
       {
-        "id": "115-bc-138",
-        "title": "Winter Wonderland Spatula",
+        "id": "115-bc-27",
+        "title": "Winter Wonderland Cookie Cutter Set",
+        "price": "11.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/2062/images/10108/401019__80517.1782411971.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/winter-wonderland-cookie-cutter-set",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "115-bc-139",
+        "title": "Gluten-Free Gingerbread Cake and Cookie Mix",
         "price": "8.95",
-        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1875/images/10159/400371_1__56844.1783531316.386.513.jpg?c=1",
-        "url": "https://shop.kingarthurbaking.com/items/winter-wonderland-spatula",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1232/images/5549/204334_GFGingerbreadCakeCookie__25493.1724079463.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/gluten-free-gingerbread-cake-and-cookie-mix",
         "store_name": "King Arthur Baking Company",
         "store_url": "https://shop.kingarthurbaking.com",
         "ownership_type": "employee-owned",
@@ -623,22 +676,6 @@
         ]
       },
       {
-        "id": "177-zia-393930",
-        "title": "Jackson 5/Christmas Album",
-        "price": "30.99",
-        "available": true,
-        "image": "https://cache.fieldstackintelligence.com/images/150/752574-T.JPG",
-        "url": "https://www.ziarecords.com/p/393930/jackson-5-christmas-album",
-        "store_name": "Zia Records",
-        "store_url": "https://www.ziarecords.com",
-        "ownership_type": "employee-owned",
-        "site_section": "Music",
-        "tags": [
-          "music",
-          "CD"
-        ]
-      },
-      {
         "id": "176-bm-38187386",
         "title": "Bing Crosby & David Bowie/Peace On Earth / Little Drummer Boy (Picture Disc)",
         "price": "25.97",
@@ -703,22 +740,6 @@
         ]
       },
       {
-        "id": "177-zia-17165694",
-        "title": "Christmas Cocktail Jazz/Christmas Cocktail Jazz (Transparent Red Vinyl)@180g",
-        "price": "25.99",
-        "available": true,
-        "image": "https://cache.fieldstackintelligence.com/images/2650/13250688-T.JPG",
-        "url": "https://www.ziarecords.com/p/17165694/christmas-cocktail-jazz-christmas-cocktail-jazz-transparent-red-vinyl-180g",
-        "store_name": "Zia Records",
-        "store_url": "https://www.ziarecords.com",
-        "ownership_type": "employee-owned",
-        "site_section": "Music",
-        "tags": [
-          "music",
-          "Vinyl LP"
-        ]
-      },
-      {
         "id": "176-bm-38844830",
         "title": "Country Christmas/Country Christmas (Christmas Tree Green Vinyl)",
         "price": "22.97",
@@ -748,6 +769,38 @@
         "tags": [
           "music",
           "Vinyl LP"
+        ]
+      },
+      {
+        "id": "176-bm-38822724",
+        "title": "Bing Crosby/Ultimate Christmas",
+        "price": "13.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38822724-T.JPG",
+        "url": "https://www.bullmoose.com/p/38822724/bing-crosby-ultimate-christmas",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Books",
+        "tags": [
+          "books",
+          "audio cd"
+        ]
+      },
+      {
+        "id": "176-bm-35530208",
+        "title": "Dolly Parton/Holly Dolly Christmas (White Vinyl)@2LP",
+        "price": "34.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/35530208-T.JPG",
+        "url": "https://www.bullmoose.com/p/35530208/dolly-parton-holly-dolly-christmas-white-vinyl-2lp",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl lp"
         ]
       }
     ]
@@ -1444,25 +1497,6 @@
         ]
       },
       {
-        "id": "9-8749293404350",
-        "title": "40th Anniversary Beanie",
-        "price": "18.00",
-        "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/1709/6425/files/44209_40th_Beanie.jpg?v=1774044062",
-        "url": "https://shop.equalexchange.coop/products/beanie-hat",
-        "store_name": "Equal Exchange",
-        "store_url": "https://shop.equalexchange.coop",
-        "ownership_type": "worker co-op",
-        "site_section": "Coffee & Tea",
-        "tags": [
-          "44209",
-          "Branded Gear",
-          "Clothing",
-          "Hat",
-          "no-img-hover"
-        ]
-      },
-      {
         "id": "166-scheels-33977-1000229",
         "title": "Women's MUK LUKS Natalie Nancy Slippers",
         "price": "69.99",
@@ -1575,6 +1609,18 @@
           "women",
           "socks"
         ]
+      },
+      {
+        "id": "3-wc-52510",
+        "title": "Thread Coffee™ Roasters – Comfort Colors Long Sleeve T-Shirt w/ Embroidery",
+        "price": "25.00",
+        "image": "https://threadcoffee.com/wp-content/uploads/2025/01/ThreadCoffee_products-9.jpg",
+        "url": "https://threadcoffee.com/product/thread-coffee-roasters-long-sleeve/",
+        "store_name": "Thread Coffee Roasters",
+        "store_url": "https://threadcoffee.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": []
       }
     ]
   },
@@ -1639,18 +1685,6 @@
         "store_name": "Palestinian Soap Cooperative",
         "store_url": "https://palestiniansoap.coop",
         "ownership_type": "worker co-op",
-        "site_section": "Personal Care",
-        "tags": []
-      },
-      {
-        "id": "167-bc-1502",
-        "title": "Burt's Bees Tips & Toes Gift Set - Case of 3, 1 ct",
-        "price": "27.36",
-        "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/66453/images/157976/2824894__1__39922.1787721756.500.750.jpg?c=2",
-        "url": "https://shop.thriftywhite.com/burts-bees-tips-toes-gift-set-case-of-3-1-ct/",
-        "store_name": "Thrifty White Pharmacy",
-        "store_url": "https://shop.thriftywhite.com",
-        "ownership_type": "ESOP",
         "site_section": "Personal Care",
         "tags": []
       },
@@ -1817,13 +1851,26 @@
           "Vegan",
           "west African shea butter"
         ]
+      },
+      {
+        "id": "25-15740169846944",
+        "title": "Awaida Roots 1880 Olive and 5% Laurel Soap",
+        "price": "8.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0579/2369/8848/files/Awaida5-1.jpg?v=1782549237",
+        "url": "https://palestiniansoap.coop/products/awaida-roots-1880-olive-and-5-laurel-soap",
+        "store_name": "Palestinian Soap Cooperative",
+        "store_url": "https://palestiniansoap.coop",
+        "ownership_type": "worker co-op",
+        "site_section": "Personal Care",
+        "tags": []
       }
     ]
   },
   {
     "id": "handmade",
     "title": "Handmade & Decor",
-    "blurb": "Ornaments, suncatchers, and jewelry from artisan co-ops.",
+    "blurb": "Ornaments, pottery, textiles, and jewelry from artisan co-ops and makers.",
     "products": [
       {
         "id": "41-10340905845036",
@@ -1841,65 +1888,87 @@
         ]
       },
       {
-        "id": "41-10230593716524",
-        "title": "Pottery Christmas Ornament - Artisans Coop Fundraiser",
-        "price": "5.00",
+        "id": "43-10280815657209",
+        "title": "Rusty Red and Cream Ceramic Mug",
+        "price": "45.00",
         "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/cRZmADiMTJ.jpg?v=1770319932",
-        "url": "https://artisans.coop/products/copy-of-pottery-christmas-ornament-artisans-coop-fundraiser",
-        "store_name": "Artisans Cooperative",
-        "store_url": "https://artisans.coop",
-        "ownership_type": "multi-stakeholder co-op",
+        "image": "https://cdn.shopify.com/s/files/1/0411/4949/7497/files/TIP.MUG45-RR-TIP_2-1.png?v=1789591141",
+        "url": "https://www.handwork.coop/products/rusty-red-and-cream-ceramic-mug",
+        "store_name": "Handwork — Ithaca's Artisan Cooperative",
+        "store_url": "https://www.handwork.coop",
+        "ownership_type": "worker co-op",
         "site_section": "Home Goods & Services",
         "tags": [
-          "Ceramics & Pottery",
-          "Founder",
-          "From a Pattern or Template",
-          "Fundraiser",
-          "Fundraiser Item",
-          "Home & Living",
-          "In-house Production",
-          "Member",
-          "SFW",
-          "Turnaround 1-3 Days"
+          "Mug",
+          "Pottery"
         ]
       },
       {
-        "id": "41-10131536281900",
-        "title": "Silver Christmas Tree Earrings",
-        "price": "10.00",
+        "id": "128-10285490471231",
+        "title": "Mast General Store Pewter Cardinal Ornament",
+        "price": "10.99",
         "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/aguOZcWLY6.jpg?v=1762086583",
-        "url": "https://artisans.coop/products/silver-christmas-tree-earrings-1",
-        "store_name": "Artisans Cooperative",
-        "store_url": "https://artisans.coop",
-        "ownership_type": "multi-stakeholder co-op",
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/70358_default.jpg?v=1775804653",
+        "url": "https://www.mastgeneralstore.com/products/mast-general-store-pewter-cardinal-ornament",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
         "site_section": "Home Goods & Services",
         "tags": [
-          "One of a Kind",
-          "Original Design",
-          "OTHER",
-          "SFW",
-          "Turnaround 1-3 Days"
+          "badge:made in usa"
         ]
       },
       {
-        "id": "41-10235437318444",
-        "title": "Snowflake Tealight Holders",
-        "price": "15.00",
+        "id": "136-10598885851192",
+        "title": "Light Scarf",
+        "price": "40.00",
         "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/qk8kjcs06H.jpg?v=1770825733",
-        "url": "https://artisans.coop/products/snowflake-tealight-holders",
+        "image": "https://cdn.shopify.com/s/files/1/0014/5476/8184/files/IMG_1531_1.jpg?v=1780526134",
+        "url": "https://tramatextiles.org/products/light-white-scarf",
+        "store_name": "Trama Textiles",
+        "store_url": "https://tramatextiles.org",
+        "ownership_type": "worker co-op",
+        "site_section": "Apparel",
+        "tags": [
+          "accessories",
+          "blue",
+          "blue indigo",
+          "cotton",
+          "design",
+          "diamond",
+          "diamonds",
+          "geometric",
+          "guatemalantextiles",
+          "handmade",
+          "handwoven",
+          "indigo",
+          "indigo blue",
+          "jaspe",
+          "light weight",
+          "lightweight",
+          "maya blue",
+          "Natural",
+          "natural dye",
+          "scarf",
+          "scarves",
+          "trama textiles",
+          "womens accessories",
+          "Womenswear"
+        ]
+      },
+      {
+        "id": "41-10341009228076",
+        "title": "Cloud Earrings",
+        "price": "26.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/earrings-cloud-earrings-cloud-earrings-1199279027.jpg?v=1781137019",
+        "url": "https://artisans.coop/products/cloud-earrings",
         "store_name": "Artisans Cooperative",
         "store_url": "https://artisans.coop",
         "ownership_type": "multi-stakeholder co-op",
         "site_section": "Home Goods & Services",
         "tags": [
-          "One of a Kind",
-          "Original Design",
-          "Resin",
-          "SFW",
-          "Turnaround 1-3 Days"
+          "Jewelry"
         ]
       },
       {
@@ -1916,52 +1985,19 @@
         "tags": []
       },
       {
-        "id": "41-9808021356844",
-        "title": "Implant Grade Titanium Snowman Earring",
-        "price": "19.96",
+        "id": "43-10280815100153",
+        "title": "Orange and Green Round Belly Mug",
+        "price": "45.00",
         "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/v1CHybS1bT.jpg?v=1737515987",
-        "url": "https://artisans.coop/products/copy-of-implant-grade-titanium-snowman-earring",
-        "store_name": "Artisans Cooperative",
-        "store_url": "https://artisans.coop",
-        "ownership_type": "multi-stakeholder co-op",
+        "image": "https://cdn.shopify.com/s/files/1/0411/4949/7497/files/TIP.MUG45-OG-TIP_6-1.png?v=1789591118",
+        "url": "https://www.handwork.coop/products/orange-and-green-round-belly-mug",
+        "store_name": "Handwork — Ithaca's Artisan Cooperative",
+        "store_url": "https://www.handwork.coop",
+        "ownership_type": "worker co-op",
         "site_section": "Home Goods & Services",
         "tags": [
-          "Accessories",
-          "Body Jewelry",
-          "Earrings",
-          "In-house Production",
-          "Jewelry",
-          "Jewelry: Sets",
-          "Member",
-          "Original Design",
-          "SFW",
-          "Turnaround 1-3 Days",
-          "verified"
-        ]
-      },
-      {
-        "id": "41-10031082963244",
-        "title": "Strawberry Ornament",
-        "price": "11.00",
-        "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/oXFgEt6zcg.jpg?v=1752106970",
-        "url": "https://artisans.coop/products/ornamental-hanging-strawberry",
-        "store_name": "Artisans Cooperative",
-        "store_url": "https://artisans.coop",
-        "ownership_type": "multi-stakeholder co-op",
-        "site_section": "Home Goods & Services",
-        "tags": [
-          "Art & Collectibles",
-          "Home & Living",
-          "Home Decor",
-          "In-house Production",
-          "Member",
-          "Original Design",
-          "Sewing",
-          "SFW",
-          "Turnaround Variable",
-          "verified"
+          "Mug",
+          "Pottery"
         ]
       },
       {
@@ -1977,45 +2013,6 @@
         "site_section": "Personal Care",
         "tags": [
           "kufiya"
-        ]
-      },
-      {
-        "id": "41-10156421677356",
-        "title": "Decorative Christmas Tray",
-        "price": "15.00",
-        "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/UndprQWGMg.jpg?v=1764430557",
-        "url": "https://artisans.coop/products/decorative-christmas-tray",
-        "store_name": "Artisans Cooperative",
-        "store_url": "https://artisans.coop",
-        "ownership_type": "multi-stakeholder co-op",
-        "site_section": "Home Goods & Services",
-        "tags": [
-          "One of a Kind",
-          "Original Design",
-          "Resin",
-          "SFW",
-          "Turnaround 1-3 Days"
-        ]
-      },
-      {
-        "id": "41-9834008871212",
-        "title": "Green Snow Globe Tumbler",
-        "price": "20.00",
-        "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/0jLpWulWGA.jpg?v=1739289035",
-        "url": "https://artisans.coop/products/green-snow-globe-tumbler",
-        "store_name": "Artisans Cooperative",
-        "store_url": "https://artisans.coop",
-        "ownership_type": "multi-stakeholder co-op",
-        "site_section": "Home Goods & Services",
-        "tags": [
-          "Member",
-          "One of a Kind",
-          "Original Design",
-          "OTHER",
-          "SFW",
-          "Turnaround 1-3 Days"
         ]
       },
       {
@@ -2044,29 +2041,69 @@
         ]
       },
       {
-        "id": "41-9723757068588",
-        "title": "Christmas tree blank “note” cards, holiday cards/gift card holder, forest green",
-        "price": "20.00",
+        "id": "128-10285490209087",
+        "title": "Mast General Store Santa's Sleigh Pewter Ornament",
+        "price": "10.99",
         "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/A0CiBPS8FQ.jpg?v=1731951700",
-        "url": "https://artisans.coop/products/christmas-tree-blank-note-cards-holiday-cards-gift-card-holder-forest-green",
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/70347_default.jpg?v=1775164613",
+        "url": "https://www.mastgeneralstore.com/products/mast-general-store-santas-sleigh-pewter-ornament",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Home Goods & Services",
+        "tags": [
+          "badge:made in usa"
+        ]
+      },
+      {
+        "id": "41-10341009916204",
+        "title": "Strawberry Hoop Earrings",
+        "price": "15.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/earrings-strawberry-hoop-earrings-strawberry-hoop-earrings-handmade-clay-earrings-emaloe-s-thingys-1243820661.jpg?v=1781137029",
+        "url": "https://artisans.coop/products/strawberry-hoop-earrings",
         "store_name": "Artisans Cooperative",
         "store_url": "https://artisans.coop",
         "ownership_type": "multi-stakeholder co-op",
         "site_section": "Home Goods & Services",
         "tags": [
-          "Greeting Cards",
-          "Member",
-          "Music",
-          "One of a Kind",
-          "Original Design",
-          "OTHER",
-          "Paper Goods",
-          "Papercrafts",
-          "SFW",
-          "Sheet Music",
-          "Stationery",
-          "Turnaround 1-3 Days"
+          "Jewelry"
+        ]
+      },
+      {
+        "id": "136-10575236825144",
+        "title": "Leather Clutch - Jaspe",
+        "price": "25.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0014/5476/8184/files/IMG_1123.jpg?v=1777064418",
+        "url": "https://tramatextiles.org/products/leather-clutch-jaspe",
+        "store_name": "Trama Textiles",
+        "store_url": "https://tramatextiles.org",
+        "ownership_type": "worker co-op",
+        "site_section": "Apparel",
+        "tags": [
+          "art",
+          "blue indigo",
+          "color",
+          "colorful",
+          "design",
+          "fairfashion",
+          "fashion",
+          "guatemalantextiles",
+          "handbag",
+          "handmade",
+          "handwoven",
+          "indigenous",
+          "jaspe",
+          "Leather",
+          "maya",
+          "patterns",
+          "purse",
+          "quetzaltenango",
+          "recycled",
+          "trama textiles",
+          "women's",
+          "womens accessories"
         ]
       }
     ]
@@ -2268,6 +2305,19 @@
     "blurb": "Digital gift cards, no shipping needed.",
     "products": [
       {
+        "id": "1-176164617",
+        "title": "Gift Card",
+        "price": "25.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/GiftCard.jpg?v=1695231345",
+        "url": "https://justcoffee.coop/products/gift-card",
+        "store_name": "Just Coffee Cooperative",
+        "store_url": "https://justcoffee.coop",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": []
+      },
+      {
         "id": "115-bc-562",
         "title": "E-Gift Card",
         "price": "25.00",
@@ -2433,21 +2483,6 @@
           "final-sale",
           "GiftCard",
           "no-afterpay"
-        ]
-      },
-      {
-        "id": "129-4669056614490",
-        "title": "Dean's Beans Virtual Gift Card",
-        "price": "20.00",
-        "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0060/7895/5610/files/giftcard_a2627f47-548e-47c1-b434-5ca681d46122.jpg?v=1734367448",
-        "url": "https://www.deansbeans.com/products/deans-beans-gift-certificate-1",
-        "store_name": "Dean's Beans Organic Coffee",
-        "store_url": "https://www.deansbeans.com",
-        "ownership_type": "worker co-op",
-        "site_section": "Coffee & Tea",
-        "tags": [
-          "Gifts & Samplers"
         ]
       }
     ]
