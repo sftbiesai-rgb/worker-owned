@@ -57,8 +57,19 @@ const REPLIES = [
     url: 'https://bsky.app/profile/todmaffin.com/post/3mzyl7ugxdy2b',
     text: "we're US-based but we've got some Canadian worker co-ops on workerowned.info, like Just Us! Coffee in Nova Scotia and Urbane Cyclist in Toronto",
   },
+  {
+    url: 'https://bsky.app/profile/dylanroth.bsky.social/post/3n227wm33a227',
+    text: "Pop Heist is a good one. Darker Times is worker-owned too if you're into horror. we keep a list of worker-owned media at workerowned.info",
+  },
+  {
+    url: 'https://bsky.app/profile/cooperativesuk.bsky.social/post/3n27fjyo7hc2e',
+    text: "equal pay and still going 30 years later. let's go Unicorn",
+  },
+  {
+    url: 'https://bsky.app/profile/currentaffairs.bsky.social/post/3n256ocbyts2f',
+    text: "if you're skipping Starbucks, there are a lot of worker co-op roasters that ship. Just Coffee, Equal Exchange, Slow Bloom, Thread. all on workerowned.info",
+  },
 ];
-
 const SENT_LOG = 'scripts/.bsky-sent.json';
 
 // CLI args
