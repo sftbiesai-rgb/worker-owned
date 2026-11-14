@@ -4,24 +4,27 @@ import marketplaceData from '../data/marketplace.json'
 import { slugify, faviconUrl } from '../lib/utils'
 import Footer from '../components/Footer'
 
-// Hand-picked stores for the Amazon alternative section (variety across categories)
+// Hand-picked stores for the Amazon alternative section, biggest catalogs first,
+// covering the categories people most often buy on Amazon
 const AMAZON_PICKS = [
-  { name: 'Equal Exchange', product: 'Coffee, tea, and chocolate', detail: 'from a pioneer worker co-op since 1986.' },
-  { name: 'King Arthur Baking Company', product: 'Flours, baking mixes, and ingredients.', detail: 'Employee-owned since 2004.' },
-  { name: 'Mast General Store', product: 'Outdoor gear, clothing, candy, and housewares.', detail: 'Employee-owned general store.' },
-  { name: 'Thrifty White Pharmacy', product: 'Pharmacy, health, and wellness products.', detail: 'Employee-owned since 1952.' },
-  { name: 'Artisans Cooperative', product: 'Handmade ceramics, jewelry, textiles, and art.', detail: 'A co-op alternative to Etsy.' },
-  { name: 'Means Workwear', product: 'Durable workwear and everyday clothing.', detail: 'Worker-owned in the US.' },
-  { name: 'Just Coffee Cooperative', product: 'Fair-trade organic coffee', detail: 'roasted in Madison, WI since 2001.' },
-  { name: 'Red Emma\'s', product: 'Books, zines, and coffee', detail: 'from a worker-owned bookstore in Baltimore.' },
-  { name: 'Bob\'s Red Mill', product: 'Whole grains, oats, flours, and baking staples.', detail: 'Employee-owned.' },
-  { name: 'Frontier Co-op', product: 'Spices, seasonings, and bulk herbs.', detail: 'Member-owned co-op since 1976.' },
+  { name: 'Scheels All Sports', product: 'Outdoor gear, fitness, apparel, and footwear.', detail: '100% employee-owned, 100,000+ products online.' },
+  { name: 'Bull Moose', product: 'Vinyl, CDs, movies, video games, and books.', detail: '100% employee-owned, new and used.' },
+  { name: 'Zia Records', product: 'Records, CDs, movies, books, and merch.', detail: 'Employee-owned record store chain.' },
+  { name: 'Microcosm Publishing', product: 'Books, zines, stickers, and patches.', detail: 'Worker-owned indie publisher in Portland.' },
+  { name: 'Thrifty White Pharmacy', product: 'Vitamins, OTC medicine, and health products.', detail: '100% employee-owned since 1952.' },
+  { name: 'Mast General Store', product: 'Outdoor clothing, toys, candy, and housewares.', detail: 'Employee-owned general store since 1995.' },
+  { name: 'Tradehome Shoes', product: 'Shoes and boots for the whole family.', detail: '100% employee-owned since 2014.' },
+  { name: 'Gardener\'s Supply Company', product: 'Garden tools, planters, seeds, and outdoor decor.', detail: 'Employee-owned since 1986.' },
+  { name: 'Landry\'s Bicycles', product: 'Bike parts, accessories, and gear.', detail: '100% employee-owned since 2022.' },
+  { name: 'King Arthur Baking Company', product: 'Flours, baking mixes, and kitchen tools.', detail: '100% employee-owned since 2004.' },
+  { name: 'Equal Exchange', product: 'Coffee, tea, chocolate, and pantry staples.', detail: 'Pioneer worker co-op since 1986.' },
+  { name: 'Dansko', product: 'Clogs and comfort footwear.', detail: '100% employee-owned since 2012.' },
 ]
 
 const ALTERNATIVES = [
   {
     instead: 'Amazon',
-    why: 'These worker-owned businesses sell the same products and ship nationwide.',
+    why: 'Sporting goods, music, books, pharmacy, shoes, garden, and groceries. These worker-owned and employee-owned stores sell the same things and ship nationwide.',
     picks: AMAZON_PICKS,
   },
   {
@@ -76,7 +79,7 @@ function AlternativesPage() {
   useEffect(() => {
     document.title = 'Worker-Owned Alternatives to Amazon, Etsy & More | Worker Owned Marketplace'
     document.querySelector('meta[name="description"]')?.setAttribute('content',
-      'Skip Amazon and Etsy. Shop worker-owned cooperatives that sell coffee, food, books, clothing, art, and more. Every purchase supports worker ownership.')
+      'Skip Amazon and Etsy. Shop worker-owned and employee-owned stores for outdoor gear, music, books, shoes, pharmacy, groceries, and more. Every purchase supports worker ownership.')
     const canonical = 'https://www.workerowned.info/guides/alternatives'
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
@@ -134,7 +137,7 @@ function AlternativesPage() {
                 <p className="text-sm text-gray-500 mb-3">{alt.why}</p>
 
                 <div className="space-y-1.5">
-                  {stores.slice(0, 10).map(store => (
+                  {stores.slice(0, 12).map(store => (
                     <div key={store.id} className="bg-[#f5f5f7] rounded-xl px-4 py-2.5">
                       <div className="flex items-center gap-2">
                         <Link
