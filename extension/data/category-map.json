@@ -141,7 +141,7 @@
     },
     "home-goods": {
       "label": "Home Goods & Services",
-      "count": 18408,
+      "count": 16164,
       "storeCount": 13,
       "stores": [
         {
@@ -281,8 +281,8 @@
     },
     "tech-software": {
       "label": "Tech & Software",
-      "count": 1224,
-      "storeCount": 6,
+      "count": 1223,
+      "storeCount": 5,
       "stores": [
         {
           "name": "Scheels All Sports",
@@ -303,10 +303,6 @@
         {
           "name": "Verso Books",
           "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Artisans Cooperative",
-          "ownershipType": "multi-stakeholder co-op"
         }
       ],
       "url": "/tech-software"

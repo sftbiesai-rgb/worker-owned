@@ -1873,19 +1873,17 @@
     "blurb": "Ornaments, pottery, textiles, and jewelry from artisan co-ops and makers.",
     "products": [
       {
-        "id": "41-10340905845036",
+        "id": "41-cs-19728",
         "title": "Snowflake Suncatcher",
         "price": "40.00",
         "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/suncatchers-snowflake-suncatcher-handmade-snowflake-suncatcher-winter-window-decor-emaloe-s-thingys-1199278882.jpg?v=1781133654",
-        "url": "https://artisans.coop/products/snowflake-suncatcher",
+        "image": "https://shop.artisans.coop/images/thumbnails/400/400/detailed/37/suncatchers-snowflake-suncatcher-handmade-snowflake-suncatcher-winter-window-decor-emaloe-s-thingys-1199278882_ydiq-qx.jpg",
+        "url": "https://shop.artisans.coop/snowflake-suncatcher/",
         "store_name": "Artisans Cooperative",
-        "store_url": "https://artisans.coop",
+        "store_url": "https://shop.artisans.coop",
         "ownership_type": "multi-stakeholder co-op",
         "site_section": "Home Goods & Services",
-        "tags": [
-          "Home & Living"
-        ]
+        "tags": []
       },
       {
         "id": "43-10280815657209",
@@ -1957,19 +1955,17 @@
         ]
       },
       {
-        "id": "41-10341009228076",
+        "id": "41-cs-19537",
         "title": "Cloud Earrings",
         "price": "26.00",
         "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/earrings-cloud-earrings-cloud-earrings-1199279027.jpg?v=1781137019",
-        "url": "https://artisans.coop/products/cloud-earrings",
+        "image": "https://shop.artisans.coop/images/thumbnails/400/400/detailed/37/earrings-cloud-earrings-cloud-earrings-1199279027.jpg",
+        "url": "https://shop.artisans.coop/cloud-earrings/",
         "store_name": "Artisans Cooperative",
-        "store_url": "https://artisans.coop",
+        "store_url": "https://shop.artisans.coop",
         "ownership_type": "multi-stakeholder co-op",
         "site_section": "Home Goods & Services",
-        "tags": [
-          "Jewelry"
-        ]
+        "tags": []
       },
       {
         "id": "128-10285458751807",
@@ -2016,29 +2012,17 @@
         ]
       },
       {
-        "id": "41-9731319890220",
+        "id": "41-cs-1470",
         "title": "Rudolph “note” cards, Christmas cards, holiday cards, gift card holder, red",
         "price": "20.00",
         "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/rC3OAZtF8c.jpg?v=1732148977",
-        "url": "https://artisans.coop/products/rudolph-note-cards-christmas-cards-holiday-cards-gift-card-holder-red",
+        "image": "https://shop.artisans.coop/images/thumbnails/400/400/detailed/12/rC3OAZtF8c_3wts-ch.jpg",
+        "url": "https://shop.artisans.coop/rudolph-note-cards-christmas-cards-holiday-cards-gift-card-holder-red/",
         "store_name": "Artisans Cooperative",
-        "store_url": "https://artisans.coop",
+        "store_url": "https://shop.artisans.coop",
         "ownership_type": "multi-stakeholder co-op",
         "site_section": "Home Goods & Services",
-        "tags": [
-          "Greeting Cards",
-          "Member",
-          "Music",
-          "One of a Kind",
-          "Original Design",
-          "Paper Goods",
-          "Papercrafts",
-          "SFW",
-          "Sheet Music",
-          "Stationery",
-          "Turnaround 1-3 Days"
-        ]
+        "tags": []
       },
       {
         "id": "128-10285490209087",
@@ -2056,19 +2040,17 @@
         ]
       },
       {
-        "id": "41-10341009916204",
+        "id": "41-cs-19514",
         "title": "Strawberry Hoop Earrings",
         "price": "15.00",
         "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/earrings-strawberry-hoop-earrings-strawberry-hoop-earrings-handmade-clay-earrings-emaloe-s-thingys-1243820661.jpg?v=1781137029",
-        "url": "https://artisans.coop/products/strawberry-hoop-earrings",
+        "image": "https://shop.artisans.coop/images/thumbnails/400/400/detailed/37/earrings-strawberry-hoop-earrings-strawberry-hoop-earrings-handmade-clay-earrings-emaloe-s-thingys-1243820661.jpg",
+        "url": "https://shop.artisans.coop/strawberry-hoop-earrings/",
         "store_name": "Artisans Cooperative",
-        "store_url": "https://artisans.coop",
+        "store_url": "https://shop.artisans.coop",
         "ownership_type": "multi-stakeholder co-op",
         "site_section": "Home Goods & Services",
-        "tags": [
-          "Jewelry"
-        ]
+        "tags": []
       },
       {
         "id": "136-10575236825144",
