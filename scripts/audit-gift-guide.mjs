@@ -7,12 +7,17 @@
 // Everything else reads schema.org JSON-LD and price meta tags, falling back to
 // a real Chrome (puppeteer-core) for sites that block plain requests (Scheels).
 //
-// Usage: node scripts/audit-gift-guide.mjs   (writes /tmp/gift-audit.json)
+// Usage: node scripts/audit-gift-guide.mjs [input.json] [output.json]
+//        (defaults: src/data/gift-guide.json -> /tmp/gift-audit.json)
 
 import { readFileSync, writeFileSync } from 'fs'
 import puppeteer from 'puppeteer-core'
 
-const guide = JSON.parse(readFileSync('src/data/gift-guide.json', 'utf8'))
+// Optional args: input file (same shape as gift-guide.json) and output file,
+// so the same checks can audit a random sample of any store
+const INPUT = process.argv[2] || 'src/data/gift-guide.json'
+const OUTPUT = process.argv[3] || '/tmp/gift-audit.json'
+const guide = JSON.parse(readFileSync(INPUT, 'utf8'))
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36'
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 const num = v => parseFloat(String(v ?? '').replace(/[^0-9.]/g, ''))
@@ -156,6 +161,6 @@ for (const section of guide) {
 }
 
 await browser?.close()
-writeFileSync('/tmp/gift-audit.json', JSON.stringify(results, null, 2))
+writeFileSync(OUTPUT, JSON.stringify(results, null, 2))
 const counts = results.reduce((a, r) => ({ ...a, [r.verdict]: (a[r.verdict] || 0) + 1 }), {})
-console.log('\n', counts, '\nFull results in /tmp/gift-audit.json')
+console.log('\n', counts, `\nFull results in ${OUTPUT}`)

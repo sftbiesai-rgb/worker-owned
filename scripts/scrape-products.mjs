@@ -271,6 +271,17 @@ async function trySquarespace(entry) {
   } catch { return null; }
 }
 
+// Stable BigCommerce IDs come from the product URL slug, not scrape order,
+// so a re-scrape doesn't point existing IDs (gift guide, featured) at new items
+function bcId(storeId, productUrl, used) {
+  const slug = new URL(productUrl).pathname.split('/').filter(Boolean).pop()
+    ?.toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80) || 'item';
+  let id = `${storeId}-bc-${slug}`;
+  for (let n = 2; used.has(id); n++) id = `${storeId}-bc-${slug}-${n}`;
+  used.add(id);
+  return id;
+}
+
 // BigCommerce — product URLs from XML sitemap, then JSON-LD from each page
 async function tryBigCommerce(entry) {
   const base = getBaseUrl(entry.url);
@@ -293,6 +304,7 @@ async function tryBigCommerce(entry) {
     if (!urls.length) return null;
 
     const products = [];
+    const usedIds = new Set();
     for (const productUrl of urls) {
       try {
         const pageRes = await fetchWithTimeout(productUrl);
@@ -314,7 +326,7 @@ async function tryBigCommerce(entry) {
             if (!image) continue;
 
             products.push({
-              id: `${entry.id}-bc-${products.length}`,
+              id: bcId(entry.id, productUrl, usedIds),
               title: ld.name,
               price: price.toFixed(2),
               image,
@@ -338,7 +350,7 @@ async function tryBigCommerce(entry) {
           const price = parseFloat(ogPrice);
           if (ogTitle && ogImage && price > 0) {
             products.push({
-              id: `${entry.id}-bc-${products.length}`,
+              id: bcId(entry.id, productUrl, usedIds),
               title: ogTitle.replace(/&#039;/g, "'").replace(/&amp;/g, '&'),
               price: price.toFixed(2),
               image: ogImage,

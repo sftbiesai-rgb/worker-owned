@@ -33,7 +33,7 @@
         "store_name": "Coraçao Chocolate",
         "store_url": "https://www.coracaoconfections.com",
         "ownership_type": "employee-owned",
-        "site_section": "Chocolate & Sweets",
+        "site_section": "Food & Pantry",
         "tags": [
           "chocolate gifts"
         ]
@@ -55,10 +55,10 @@
         ]
       },
       {
-        "id": "115-bc-608",
+        "id": "115-bc-peppermint-bark",
         "title": "Peppermint Bark",
         "price": "9.95",
-        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1802/images/9171/400078_1__03010.1778784141.386.513.jpg?c=1",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1802/images/10615/400078__77294.1792689260.386.513.jpg?c=1",
         "url": "https://shop.kingarthurbaking.com/items/peppermint-bark",
         "store_name": "King Arthur Baking Company",
         "store_url": "https://shop.kingarthurbaking.com",
@@ -96,7 +96,7 @@
         "store_name": "Coraçao Chocolate",
         "store_url": "https://www.coracaoconfections.com",
         "ownership_type": "employee-owned",
-        "site_section": "Chocolate & Sweets",
+        "site_section": "Food & Pantry",
         "tags": [
           "berkeley",
           "chocolate berkeley",
@@ -124,10 +124,10 @@
         ]
       },
       {
-        "id": "115-bc-41",
+        "id": "115-bc-holiday-caramel-gift-bag",
         "title": "Holiday Caramel Gift Bag",
         "price": "10.95",
-        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1808/images/9193/400085_2__11702.1754322678.386.513.jpg?c=1",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1808/images/10616/400085__50785.1792689319.386.513.jpg?c=1",
         "url": "https://shop.kingarthurbaking.com/items/holiday-caramel-gift-bag",
         "store_name": "King Arthur Baking Company",
         "store_url": "https://shop.kingarthurbaking.com",
@@ -158,7 +158,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Apparel",
+        "site_section": "Food & Pantry",
         "tags": []
       },
       {
@@ -400,7 +400,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Apparel",
+        "site_section": "Food & Pantry",
         "tags": []
       },
       {
@@ -445,8 +445,8 @@
     "blurb": "Cookie cutters, mixes, and kitchen gear for holiday baking.",
     "products": [
       {
-        "id": "115-bc-497",
-        "title": "Winter Wonderland Oven Mitt Gift set",
+        "id": "115-bc-winter-wonderland-oven-mitt-gift-set",
+        "title": "Winter Wonderland Oven Mitt Gift Set",
         "price": "29.95",
         "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1877/images/10160/400375__24679.1783531386.386.513.jpg?c=1",
         "url": "https://shop.kingarthurbaking.com/items/winter-wonderland-oven-mitt-gift-set",
@@ -457,7 +457,7 @@
         "tags": []
       },
       {
-        "id": "115-bc-460",
+        "id": "115-bc-gingerbread-house-pop-out-cutters",
         "title": "Gingerbread House Pop Out Cutters",
         "price": "19.95",
         "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1282/images/5128/212894_GingerbreadHousePopOutCutters_1__92531.1724079467.386.513.jpg?c=1",
@@ -493,13 +493,13 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Apparel",
+        "site_section": "Personal Care",
         "tags": [
           "badge:made in usa"
         ]
       },
       {
-        "id": "115-bc-600",
+        "id": "115-bc-gingerbread-cake-cookie-mix",
         "title": "Gingerbread Cake & Cookie Mix",
         "price": "8.95",
         "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/585/images/7371/100313M403J_211574_TraditionalGingerbreadCakeCookie_0721-34__43900_3031__64245.1735930773.386.513.jpg?c=1",
@@ -527,7 +527,7 @@
         ]
       },
       {
-        "id": "115-bc-567",
+        "id": "115-bc-gingerbread-spice",
         "title": "Gingerbread Spice",
         "price": "6.95",
         "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/712/images/7827/gingerbread-spice-1-oz-1__32966_1664__77594.1751565560.386.513.jpg?c=1",
@@ -555,7 +555,7 @@
         ]
       },
       {
-        "id": "115-bc-541",
+        "id": "115-bc-winter-wonderland-towel",
         "title": "Winter Wonderland Towel",
         "price": "7.95",
         "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1873/images/10146/400368_1__91803.1783437443.386.513.jpg?c=1",
@@ -567,7 +567,7 @@
         "tags": []
       },
       {
-        "id": "115-bc-103",
+        "id": "115-bc-christmas-pop-out-cookie-cutters",
         "title": "Christmas Pop Out Cookie Cutters",
         "price": "11.95",
         "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1055/images/3932/212288_1__37257.1724079451.386.513.jpg?c=1",
@@ -579,11 +579,11 @@
         "tags": []
       },
       {
-        "id": "115-bc-27",
-        "title": "Winter Wonderland Cookie Cutter Set",
-        "price": "11.95",
-        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/2062/images/10108/401019__80517.1782411971.386.513.jpg?c=1",
-        "url": "https://shop.kingarthurbaking.com/items/winter-wonderland-cookie-cutter-set",
+        "id": "115-bc-winter-wonderland-spatula",
+        "title": "Winter Wonderland Spatula",
+        "price": "8.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1875/images/10159/400371_1__56844.1783531316.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/winter-wonderland-spatula",
         "store_name": "King Arthur Baking Company",
         "store_url": "https://shop.kingarthurbaking.com",
         "ownership_type": "employee-owned",
@@ -591,11 +591,11 @@
         "tags": []
       },
       {
-        "id": "115-bc-139",
-        "title": "Gluten-Free Gingerbread Cake and Cookie Mix",
-        "price": "8.95",
-        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1232/images/5549/204334_GFGingerbreadCakeCookie__25493.1724079463.386.513.jpg?c=1",
-        "url": "https://shop.kingarthurbaking.com/items/gluten-free-gingerbread-cake-and-cookie-mix",
+        "id": "115-bc-winter-wonderland-cookie-cutter-set",
+        "title": "Winter Wonderland Cookie Cutter Set",
+        "price": "11.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/2062/images/10108/401019__80517.1782411971.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/winter-wonderland-cookie-cutter-set",
         "store_name": "King Arthur Baking Company",
         "store_url": "https://shop.kingarthurbaking.com",
         "ownership_type": "employee-owned",
@@ -1671,7 +1671,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Apparel",
+        "site_section": "Personal Care",
         "tags": [
           "badge:made in usa"
         ]
@@ -1776,7 +1776,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Apparel",
+        "site_section": "Personal Care",
         "tags": []
       },
       {
@@ -1910,7 +1910,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Apparel",
+        "site_section": "Home Goods & Services",
         "tags": [
           "badge:made in usa"
         ]
@@ -1976,7 +1976,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Apparel",
+        "site_section": "Home Goods & Services",
         "tags": []
       },
       {
@@ -2033,7 +2033,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Apparel",
+        "site_section": "Home Goods & Services",
         "tags": [
           "badge:made in usa"
         ]
@@ -2111,7 +2111,7 @@
         ]
       },
       {
-        "id": "115-bc-160",
+        "id": "115-bc-gingerbread-cookie-cutter",
         "title": "Gingerbread Cookie Cutter",
         "price": "2.95",
         "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/238/images/6262/205758__22114_4059__80054.1724079438.386.513.jpg?c=1",
@@ -2163,11 +2163,11 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Apparel",
+        "site_section": "Food & Pantry",
         "tags": []
       },
       {
-        "id": "115-bc-276",
+        "id": "115-bc-peppermint-crunch",
         "title": "Peppermint Crunch",
         "price": "10.95",
         "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1888/images/9470/PeppermintCrunchGroup__23523.1761315097.386.513.jpg?c=1",
@@ -2297,10 +2297,10 @@
         "tags": []
       },
       {
-        "id": "115-bc-562",
+        "id": "115-bc-e-gift-card",
         "title": "E-Gift Card",
         "price": "25.00",
-        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/123/images/6059/E-Gift-Card-16463_sq__03216_5602__17318.1770918396.386.513.jpg?c=1",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/123/images/10487/E-Gift-Card-100726__29428.1791405363.386.513.jpg?c=1",
         "url": "https://shop.kingarthurbaking.com/items/e-gift-card",
         "store_name": "King Arthur Baking Company",
         "store_url": "https://shop.kingarthurbaking.com",
@@ -2331,7 +2331,7 @@
         "store_name": "Gardener's Supply Company",
         "store_url": "https://www.gardeners.com",
         "ownership_type": "employee-owned",
-        "site_section": "Home & Garden",
+        "site_section": "Home Goods & Services",
         "tags": []
       },
       {

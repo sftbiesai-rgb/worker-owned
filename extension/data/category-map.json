@@ -45,7 +45,7 @@
   "sections": {
     "food-pantry": {
       "label": "Food & Pantry",
-      "count": 5751,
+      "count": 5785,
       "storeCount": 20,
       "stores": [
         {
@@ -74,102 +74,6 @@
         }
       ],
       "url": "/food-pantry"
-    },
-    "personal-care": {
-      "label": "Personal Care",
-      "count": 8035,
-      "storeCount": 7,
-      "stores": [
-        {
-          "name": "Thrifty White Pharmacy",
-          "ownershipType": "ESOP"
-        },
-        {
-          "name": "Scheels All Sports",
-          "ownershipType": "ESOP"
-        },
-        {
-          "name": "Mast General Store",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Alaffia",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Meow Meow Tweet",
-          "ownershipType": "worker collective"
-        },
-        {
-          "name": "Palestinian Soap Cooperative",
-          "ownershipType": "worker co-op"
-        }
-      ],
-      "url": "/personal-care"
-    },
-    "home-goods": {
-      "label": "Home Goods & Services",
-      "count": 16169,
-      "storeCount": 13,
-      "stores": [
-        {
-          "name": "Scheels All Sports",
-          "ownershipType": "ESOP"
-        },
-        {
-          "name": "Artisans Cooperative",
-          "ownershipType": "multi-stakeholder co-op"
-        },
-        {
-          "name": "Mast General Store",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Handwork — Ithaca's Artisan Cooperative",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Gardener's Supply Company",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Best Brushes",
-          "ownershipType": "employee-owned"
-        }
-      ],
-      "url": "/home-goods"
-    },
-    "games": {
-      "label": "Games",
-      "count": 6521,
-      "storeCount": 12,
-      "stores": [
-        {
-          "name": "Scheels All Sports",
-          "ownershipType": "ESOP"
-        },
-        {
-          "name": "Bull Moose",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "TableTop Gaming",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Microcosm Publishing",
-          "ownershipType": "worker-owned"
-        },
-        {
-          "name": "Mast General Store",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Zia Records",
-          "ownershipType": "employee-owned"
-        }
-      ],
-      "url": "/games"
     },
     "books": {
       "label": "Books",
@@ -246,6 +150,38 @@
         }
       ],
       "url": "/movies-tv"
+    },
+    "games": {
+      "label": "Games",
+      "count": 6522,
+      "storeCount": 12,
+      "stores": [
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "TableTop Gaming",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Microcosm Publishing",
+          "ownershipType": "worker-owned"
+        },
+        {
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Zia Records",
+          "ownershipType": "employee-owned"
+        }
+      ],
+      "url": "/games"
     },
     "apparel": {
       "label": "Apparel",
@@ -330,6 +266,70 @@
         }
       ],
       "url": "/sporting-goods"
+    },
+    "home-goods": {
+      "label": "Home Goods & Services",
+      "count": 16164,
+      "storeCount": 13,
+      "stores": [
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Artisans Cooperative",
+          "ownershipType": "multi-stakeholder co-op"
+        },
+        {
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Handwork — Ithaca's Artisan Cooperative",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Gardener's Supply Company",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Best Brushes",
+          "ownershipType": "employee-owned"
+        }
+      ],
+      "url": "/home-goods"
+    },
+    "personal-care": {
+      "label": "Personal Care",
+      "count": 8036,
+      "storeCount": 7,
+      "stores": [
+        {
+          "name": "Thrifty White Pharmacy",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Alaffia",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Meow Meow Tweet",
+          "ownershipType": "worker collective"
+        },
+        {
+          "name": "Palestinian Soap Cooperative",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/personal-care"
     },
     "art-prints": {
       "label": "Art & Prints",
