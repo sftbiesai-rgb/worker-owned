@@ -177,9 +177,16 @@ const routes = [
   {
     url: '/guides/alternatives',
     title: 'Worker-Owned Alternatives to Amazon, Etsy & More | Worker Owned Marketplace',
-    description: 'Skip Amazon and Etsy. Shop worker-owned cooperatives that sell coffee, food, books, clothing, art, and more. Every purchase supports worker ownership.',
+    description: 'Skip Amazon and Etsy. Shop worker-owned and employee-owned stores for outdoor gear, music, books, shoes, pharmacy, groceries, and more. Every purchase supports worker ownership.',
     canonical: 'https://www.workerowned.info/guides/alternatives',
     keywords: 'worker owned alternative to amazon, cooperative alternative to etsy, worker owned online store, shop worker owned, ethical alternative to amazon',
+  },
+  {
+    url: '/holiday-gifts',
+    title: 'Holiday Gift Guide: Gifts from Worker-Owned Companies | Worker Owned Marketplace',
+    description: 'Holiday gifts from worker-owned co-ops and employee-owned companies. Chocolate, coffee, vinyl, books, games, outdoor gear, cozy socks, handmade ornaments, and stocking stuffers.',
+    canonical: 'https://www.workerowned.info/holiday-gifts',
+    keywords: 'worker owned holiday gifts, cooperative gift guide, ethical christmas gifts, employee owned gifts, gifts that support workers, alternative to amazon christmas',
   },
   {
     url: '/guides/what-is-a-worker-cooperative',

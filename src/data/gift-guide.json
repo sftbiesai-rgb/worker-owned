@@ -1,0 +1,2455 @@
+[
+  {
+    "id": "treats",
+    "title": "Sweet Treats & Edible Gifts",
+    "blurb": "Cheese boxes, chocolate, and holiday candy.",
+    "products": [
+      {
+        "id": "104-7115790450745",
+        "title": "Vermont Maple & Cheese Gift Box",
+        "price": "78.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0571/3933/1129/files/Vermont-Maple-And-Cheese-Gift-Box-Render-2100x2100-fd63e676-39bf-4961-b198-705c17b35961_WEB_SHADOW.png?v=1782930221",
+        "url": "https://cabotcreamery.com/products/vt-maple-cheese",
+        "store_name": "Cabot Creamery",
+        "store_url": "https://cabotcreamery.com",
+        "ownership_type": "farmer co-op",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "Bundle",
+          "ecommerce",
+          "Mem/Emp Discount",
+          "shoppable",
+          "smart-cart-hide-bundle-options"
+        ]
+      },
+      {
+        "id": "130-8633392922873",
+        "title": "Chocolate Bar Gift Box — Bestsellers, 6 Vegan Bars",
+        "price": "42.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0183/6313/files/Chocolate-gift-box-endorfin.webp?v=1733337327",
+        "url": "https://www.coracaoconfections.com/products/chocolate-gift-box",
+        "store_name": "Coraçao Chocolate",
+        "store_url": "https://www.coracaoconfections.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "chocolate gifts"
+        ]
+      },
+      {
+        "id": "113-9349214175561",
+        "title": "Divine Milk Chocolate Advent Calendar",
+        "price": "7.50",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0900/1205/7929/files/UK_MILK_ADVENT_FRONT_3D_RENDER_2026.png?v=1787560148",
+        "url": "https://divinechocolate.com/products/divine-milk-chocolate-advent-calendar",
+        "store_name": "Divine Chocolate",
+        "store_url": "https://divinechocolate.com",
+        "ownership_type": "farmer co-op stake",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "Christmas",
+          "New"
+        ]
+      },
+      {
+        "id": "115-bc-608",
+        "title": "Peppermint Bark",
+        "price": "9.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1802/images/9171/400078_1__03010.1778784141.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/peppermint-bark",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "104-7113276063801",
+        "title": "Fan Favorites Cheese Gift Box",
+        "price": "56.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0571/3933/1129/files/Fan-Favorites-Gift-Box-Render-2100x2100-623ac88e-7b66-4fdd-98f7-442a4af67404_WEB_SHADOW.png?v=1782930228",
+        "url": "https://cabotcreamery.com/products/fan-favorites",
+        "store_name": "Cabot Creamery",
+        "store_url": "https://cabotcreamery.com",
+        "ownership_type": "farmer co-op",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "Bundle",
+          "ecommerce",
+          "Fan Favorites",
+          "Mem/Emp Discount",
+          "shoppable",
+          "smart-cart-hide-bundle-options"
+        ]
+      },
+      {
+        "id": "130-8069128847609",
+        "title": "Berkeley Vegan Chocolate Truffle Gift Box (8pc)",
+        "price": "20.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0183/6313/files/Berkeley_Chocolate_Truffle_Box.webp?v=1727174257",
+        "url": "https://www.coracaoconfections.com/products/berkeley-chocolate-truffle-box",
+        "store_name": "Coraçao Chocolate",
+        "store_url": "https://www.coracaoconfections.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "berkeley",
+          "chocolate berkeley",
+          "vday2024"
+        ]
+      },
+      {
+        "id": "113-9537776320841",
+        "title": "Variety Bundle - 7 Pack",
+        "price": "20.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0900/1205/7929/files/VarietyBundle7-pack.png?v=1768235395",
+        "url": "https://divinechocolate.com/products/variety-bundle-7-pack",
+        "store_name": "Divine Chocolate",
+        "store_url": "https://divinechocolate.com",
+        "ownership_type": "farmer co-op stake",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "Bestseller",
+          "Bundle Promo",
+          "Dark Chocolate",
+          "Milk Chocolate",
+          "Sharing Bar",
+          "Tasting Pack"
+        ]
+      },
+      {
+        "id": "115-bc-41",
+        "title": "Holiday Caramel Gift Bag",
+        "price": "10.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1808/images/9193/400085_2__11702.1754322678.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/holiday-caramel-gift-bag",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "130-8529157816569",
+        "title": "Vegan Hot Chocolate Gift Set — 3 Cozy Flavors",
+        "price": "28.46",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0183/6313/files/HotChocolateTrio.webp?v=1726849015",
+        "url": "https://www.coracaoconfections.com/products/hot-chocolate-gift-set",
+        "store_name": "Coraçao Chocolate",
+        "store_url": "https://www.coracaoconfections.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "20-6678972498017",
+        "title": "Make Your Own 4 Pack Gift Box",
+        "price": "26.96",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0251/4242/7745/products/custom-bundle-custom-bundle-make-your-own-4-pack-gift-box-28763562508385.jpeg?v=1679959630",
+        "url": "https://onceagainnutbutter.com/products/make-your-own-4-pack-gift-box",
+        "store_name": "Once Again Nut Butter",
+        "store_url": "https://onceagainnutbutter.com",
+        "ownership_type": "ESOP",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "128-10285535756607",
+        "title": "Holiday Trio Tea Gift Set",
+        "price": "59.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/11196582_default.jpg?v=1790015394",
+        "url": "https://www.mastgeneralstore.com/products/holiday-trio-tea-gift-set",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "badge:made in usa"
+        ]
+      },
+      {
+        "id": "130-8810770497785",
+        "title": "Premium Vegan Chocolate Gift Set — 15 Full-Size Bars",
+        "price": "85.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0183/6313/files/10_77cdd2e5-da6d-4583-8e99-0bfdf60069f4.webp?v=1747245293",
+        "url": "https://www.coracaoconfections.com/products/ultimate-gift-set-15-pieces",
+        "store_name": "Coraçao Chocolate",
+        "store_url": "https://www.coracaoconfections.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      }
+    ]
+  },
+  {
+    "id": "coffee",
+    "title": "For the Coffee & Tea Lover",
+    "blurb": "Coffee from worker co-op roasters, plus mugs and cocoa.",
+    "products": [
+      {
+        "id": "146-9070806302939",
+        "title": "Gift Subscription - Roaster's Choice",
+        "price": "69.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/Roaster_s_Choice_Bag_12oz_3pack.png?v=1765484357",
+        "url": "https://www.gimmecoffee.com/products/gift-subscription",
+        "store_name": "Gimme! Coffee",
+        "store_url": "https://www.gimmecoffee.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "holiday",
+          "holiday2025",
+          "New Coffees"
+        ]
+      },
+      {
+        "id": "2-10212981932324",
+        "title": "Light Roast Lover's Diner Mug Bundle",
+        "price": "50.35",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0253/5129/0968/files/IMG_8553.heic?v=1761327268",
+        "url": "https://cooperativecoffeeroasters.com/products/light-roast-blend-and-mug-bundle",
+        "store_name": "Cooperative Coffee Roasters",
+        "store_url": "https://cooperativecoffeeroasters.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": []
+      },
+      {
+        "id": "145-8851457409186",
+        "title": "Peppermint Hot Chocolate",
+        "price": "13.25",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0407/8986/8706/files/PeppermintHotChocolate480x480_589ed60a-0eb1-4ac8-a62c-238dd1c8ccd2.png?v=1763982665",
+        "url": "https://www.justuscoffee.com/products/peppermint-hot-chocolate",
+        "store_name": "Just Us! Coffee Roasters",
+        "store_url": "https://www.justuscoffee.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "chocolate",
+          "Fair trade",
+          "Hot chocolate",
+          "peppermint"
+        ]
+      },
+      {
+        "id": "9-8749297434814",
+        "title": "40th Anniversary Camp Mug, 12oz",
+        "price": "24.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/1709/6425/files/44062_40th_Camp-Mug.jpg?v=1774045525",
+        "url": "https://shop.equalexchange.coop/products/anniv-camp-mug",
+        "store_name": "Equal Exchange",
+        "store_url": "https://shop.equalexchange.coop",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": [
+          "44062",
+          "Branded Gear",
+          "no-img-hover"
+        ]
+      },
+      {
+        "id": "146-8267645157595",
+        "title": "Leftist Espresso",
+        "price": "22.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/gimme-left.png?v=1761761066",
+        "url": "https://www.gimmecoffee.com/products/leftist-espresso-fairtrade-organic",
+        "store_name": "Gimme! Coffee",
+        "store_url": "https://www.gimmecoffee.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "fairtrade",
+          "organic"
+        ]
+      },
+      {
+        "id": "128-10562121105727",
+        "title": "The Republic of Tea Holiday Stackable Tea Tin",
+        "price": "23.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/20007040_default.jpg?v=1790089886",
+        "url": "https://www.mastgeneralstore.com/products/holiday-stackable-tea-tin",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "3-wc-36682",
+        "title": "10th Anniversary Diner Mug",
+        "price": "10.00",
+        "image": "https://threadcoffee.com/wp-content/uploads/2022/11/DinerMug2024.jpg",
+        "url": "https://threadcoffee.com/product/diner_mug_thread/",
+        "store_name": "Thread Coffee Roasters",
+        "store_url": "https://threadcoffee.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": [
+          "big coffee cup",
+          "camper cup",
+          "camper mug",
+          "ceramic mug",
+          "HOLIDAY SALE"
+        ]
+      },
+      {
+        "id": "2-10212950180132",
+        "title": "Cooperative Signature Blend Bundle",
+        "price": "57.95",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0253/5129/0968/files/IMG_8546.heic?v=1761327201",
+        "url": "https://cooperativecoffeeroasters.com/products/blend-bundle",
+        "store_name": "Cooperative Coffee Roasters",
+        "store_url": "https://cooperativecoffeeroasters.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": [
+          "Blend",
+          "Signature Blend"
+        ]
+      },
+      {
+        "id": "113-10011828846921",
+        "title": "Hot Chocolate Bundle",
+        "price": "19.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0900/1205/7929/files/Hotchocolatebundle_bf976f4b-4d38-46ab-82a9-1354393cf2c6.png?v=1767799363",
+        "url": "https://divinechocolate.com/products/hotchocolatebundle",
+        "store_name": "Divine Chocolate",
+        "store_url": "https://divinechocolate.com",
+        "ownership_type": "farmer co-op stake",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "Bestseller",
+          "Beverages",
+          "bogos-bundle-check",
+          "Bundle Promo",
+          "Gifting",
+          "Tasting Pack"
+        ]
+      },
+      {
+        "id": "2-8433173102884",
+        "title": "Diner Mug",
+        "price": "12.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0253/5129/0968/files/newmugs.jpg?v=1755708490",
+        "url": "https://cooperativecoffeeroasters.com/products/diner-mug",
+        "store_name": "Cooperative Coffee Roasters",
+        "store_url": "https://cooperativecoffeeroasters.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": []
+      },
+      {
+        "id": "146-8267645780187",
+        "title": "Righteous Espresso",
+        "price": "22.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/Righteous2.png?v=1761762060",
+        "url": "https://www.gimmecoffee.com/products/righteous-espresso-fairtrade-organic",
+        "store_name": "Gimme! Coffee",
+        "store_url": "https://www.gimmecoffee.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "fairtrade",
+          "organic"
+        ]
+      },
+      {
+        "id": "2-3990309666904",
+        "title": "Sweet Dreams [Decaf]",
+        "price": "21.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0253/5129/0968/files/127decaf.png?v=1769536825",
+        "url": "https://cooperativecoffeeroasters.com/products/sweet-dreams-decaf",
+        "store_name": "Cooperative Coffee Roasters",
+        "store_url": "https://cooperativecoffeeroasters.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": []
+      }
+    ]
+  },
+  {
+    "id": "baking",
+    "title": "For the Baker",
+    "blurb": "Cookie cutters, mixes, and kitchen gear for holiday baking.",
+    "products": [
+      {
+        "id": "115-bc-497",
+        "title": "Winter Wonderland Oven Mitt Gift set",
+        "price": "29.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1877/images/10160/400375__24679.1783531386.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/winter-wonderland-oven-mitt-gift-set",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "115-bc-460",
+        "title": "Gingerbread House Pop Out Cutters",
+        "price": "19.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1282/images/5128/212894_GingerbreadHousePopOutCutters_1__92531.1724079467.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/gingerbread-house-pop-out-cutters",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "15-microcosm-42067",
+        "title": "101 Greatest Cookies on the Planet",
+        "price": "23.99",
+        "available": true,
+        "image": "https://microcosmpublishing.com/previews/101greatestcookies_lg.jpg",
+        "url": "https://microcosmpublishing.com/catalog/books/42067",
+        "store_name": "Microcosm Publishing",
+        "store_url": "https://microcosmpublishing.com",
+        "ownership_type": "worker-owned",
+        "site_section": "Books",
+        "tags": [
+          "books"
+        ]
+      },
+      {
+        "id": "128-10285624197439",
+        "title": "Lodge Cast Iron Holiday Truck Skillet - 10.25 Inch",
+        "price": "34.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/234470_default.jpg?v=1775663463",
+        "url": "https://www.mastgeneralstore.com/products/lodge-cast-iron-holiday-truck-skillet-10-25-inch",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Personal Care",
+        "tags": [
+          "badge:made in usa"
+        ]
+      },
+      {
+        "id": "115-bc-685",
+        "title": "Holiday Village Pop-Out Cookie Cutters",
+        "price": "13.99",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1444/images/5929/213339_HolidayHousesPop-OutCutterSet-01__83964.1724079467.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/holiday-village-pop-out-cutter-set",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "115-bc-600",
+        "title": "Gingerbread Cake & Cookie Mix",
+        "price": "8.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/585/images/7371/100313M403J_211574_TraditionalGingerbreadCakeCookie_0721-34__43900_3031__64245.1735930773.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/gingerbread-cake-cookie-mix",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "176-bm-35293897",
+        "title": "Jenny Dorsey/Avatar The Last Airbender: The Official Cookbook Gift Set",
+        "price": "35.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/1871/9358642-T.JPG",
+        "url": "https://www.bullmoose.com/p/35293897/jenny-dorsey-avatar-the-last-airbender-the-official-cookbook-gift-set",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Books",
+        "tags": [
+          "books",
+          "book - hardcover"
+        ]
+      },
+      {
+        "id": "115-bc-567",
+        "title": "Gingerbread Spice",
+        "price": "6.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/712/images/7827/gingerbread-spice-1-oz-1__32966_1664__77594.1751565560.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/gingerbread-spice",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "176-bm-35293893",
+        "title": "Peggy Paul Casella/The Teenage Mutant Ninja Turtles Pizza Cookbook Gift Set@Book & Apron",
+        "price": "35.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/1871/9358636-T.JPG",
+        "url": "https://www.bullmoose.com/p/35293893/peggy-paul-casella-the-teenage-mutant-ninja-turtles-pizza-cookbook-gift-set-book-apron",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Books",
+        "tags": [
+          "books",
+          "book - hardcover"
+        ]
+      },
+      {
+        "id": "115-bc-541",
+        "title": "Winter Wonderland Towel",
+        "price": "7.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1873/images/10146/400368_1__91803.1783437443.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/winter-wonderland-towel",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "115-bc-103",
+        "title": "Christmas Pop Out Cookie Cutters",
+        "price": "11.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1055/images/3932/212288_1__37257.1724079451.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/Christmas-Pop-Out-Cookie-Cutters",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "115-bc-138",
+        "title": "Winter Wonderland Spatula",
+        "price": "8.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1875/images/10159/400371_1__56844.1783531316.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/winter-wonderland-spatula",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      }
+    ]
+  },
+  {
+    "id": "music",
+    "title": "Holiday Vinyl",
+    "blurb": "Christmas records from employee-owned record stores.",
+    "products": [
+      {
+        "id": "176-bm-38822718",
+        "title": "Bing Crosby/Ultimate Christmas@2LP",
+        "price": "32.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38822718-T.JPG",
+        "url": "https://www.bullmoose.com/p/38822718/bing-crosby-ultimate-christmas-2lp",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Books",
+        "tags": [
+          "books",
+          "vinyl lp"
+        ]
+      },
+      {
+        "id": "176-bm-38086700",
+        "title": "Vince Guaraldi Trio/Peanuts Greatest Hits (Picture Disc)@75th Anniversary",
+        "price": "32.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38086700-T.JPG",
+        "url": "https://www.bullmoose.com/p/38086700/vince-guaraldi-trio-peanuts-greatest-hits-picture-disc-75th-anniversary",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl lp"
+        ]
+      },
+      {
+        "id": "176-bm-38884855",
+        "title": "Earth, Wind & Fire/Holiday (Translucent Ruby Vinyl)",
+        "price": "24.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38884855-T.JPG",
+        "url": "https://www.bullmoose.com/p/38884855/earth-wind-fire-holiday-translucent-ruby-vinyl",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl lp"
+        ]
+      },
+      {
+        "id": "176-bm-38884850",
+        "title": "Elvis Presley/Christmas Peace@2LP",
+        "price": "34.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38884850-T.JPG",
+        "url": "https://www.bullmoose.com/p/38884850/elvis-presley-christmas-peace-2lp",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl lp"
+        ]
+      },
+      {
+        "id": "177-zia-393930",
+        "title": "Jackson 5/Christmas Album",
+        "price": "30.99",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/150/752574-T.JPG",
+        "url": "https://www.ziarecords.com/p/393930/jackson-5-christmas-album",
+        "store_name": "Zia Records",
+        "store_url": "https://www.ziarecords.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "CD"
+        ]
+      },
+      {
+        "id": "176-bm-38187386",
+        "title": "Bing Crosby & David Bowie/Peace On Earth / Little Drummer Boy (Picture Disc)",
+        "price": "25.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/2616/13083725-T.JPG",
+        "url": "https://www.bullmoose.com/p/38187386/bing-crosby-david-bowie-peace-on-earth-little-drummer-boy-picture-disc",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl 12&quot;"
+        ]
+      },
+      {
+        "id": "176-bm-38884848",
+        "title": "Platinum Christmas/Platinum Christmas (Sugarplum Sparkle Vinyl)",
+        "price": "23.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38884848-T.JPG",
+        "url": "https://www.bullmoose.com/p/38884848/platinum-christmas-platinum-christmas-sugarplum-sparkle-vinyl",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl lp"
+        ]
+      },
+      {
+        "id": "176-bm-38884857",
+        "title": "Johnny Mathis/Christmas Essentials",
+        "price": "22.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38884857-T.JPG",
+        "url": "https://www.bullmoose.com/p/38884857/johnny-mathis-christmas-essentials",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl lp"
+        ]
+      },
+      {
+        "id": "176-bm-36732996",
+        "title": "Elton John/Step Into Christmas (Transparent Green Vinyl)",
+        "price": "14.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/36732996-T.JPG",
+        "url": "https://www.bullmoose.com/p/36732996/elton-john-step-into-christmas-transparent-green-vinyl",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl 7&quot;"
+        ]
+      },
+      {
+        "id": "177-zia-17165694",
+        "title": "Christmas Cocktail Jazz/Christmas Cocktail Jazz (Transparent Red Vinyl)@180g",
+        "price": "25.99",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/2650/13250688-T.JPG",
+        "url": "https://www.ziarecords.com/p/17165694/christmas-cocktail-jazz-christmas-cocktail-jazz-transparent-red-vinyl-180g",
+        "store_name": "Zia Records",
+        "store_url": "https://www.ziarecords.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "Vinyl LP"
+        ]
+      },
+      {
+        "id": "176-bm-38844830",
+        "title": "Country Christmas/Country Christmas (Christmas Tree Green Vinyl)",
+        "price": "22.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38844830-T.JPG",
+        "url": "https://www.bullmoose.com/p/38844830/country-christmas-country-christmas-christmas-tree-green-vinyl",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl lp"
+        ]
+      },
+      {
+        "id": "177-zia-14638779",
+        "title": "N SYNC/Home For Christmas@2LP",
+        "price": "26.99",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/1919/9597567-T.JPG",
+        "url": "https://www.ziarecords.com/p/14638779/n-sync-home-for-christmas-2lp",
+        "store_name": "Zia Records",
+        "store_url": "https://www.ziarecords.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "Vinyl LP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "books",
+    "title": "For the Reader",
+    "blurb": "Box sets, journals, and books from worker-owned publishers.",
+    "products": [
+      {
+        "id": "176-bm-34483551",
+        "title": "Frank Herbert/Dune Saga 3-Book Boxed Set@Dune, Dune Messiah, and Children of Dune",
+        "price": "24.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/1798/8993514-T.JPG",
+        "url": "https://www.bullmoose.com/p/34483551/frank-herbert-dune-saga-3-book-boxed-set-dune-dune-messiah-and-children-of-dune",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Books",
+        "tags": [
+          "books",
+          "book - mass market paperback"
+        ]
+      },
+      {
+        "id": "128-10479873917247",
+        "title": "Twas the Night Before Christmas, Y'all Book",
+        "price": "13.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/9798894141923_default.jpg?v=1783526322",
+        "url": "https://www.mastgeneralstore.com/products/twas-the-night-before-christmas-yall",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Apparel",
+        "tags": []
+      },
+      {
+        "id": "176-bm-1837666",
+        "title": "Art Spiegelman/Maus I & II Paperback Boxed Set",
+        "price": "25.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/248/1242035-T.JPG",
+        "url": "https://www.bullmoose.com/p/1837666/art-spiegelman-maus-i-ii-paperback-boxed-set",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Books",
+        "tags": [
+          "books",
+          "book - paperback"
+        ]
+      },
+      {
+        "id": "15-microcosm-11131",
+        "title": "1 Minute Journal: Take a Moment. Write It Down.",
+        "price": "14.99",
+        "available": true,
+        "image": "https://microcosmpublishing.com/previews/one-minute_lg.png",
+        "url": "https://microcosmpublishing.com/catalog/journals/11131",
+        "store_name": "Microcosm Publishing",
+        "store_url": "https://microcosmpublishing.com",
+        "ownership_type": "worker-owned",
+        "site_section": "Books",
+        "tags": [
+          "journals"
+        ]
+      },
+      {
+        "id": "15-microcosm-6598",
+        "title": "$20 Superpack: Get on Your Bike and Ride!",
+        "price": "20.00",
+        "available": true,
+        "image": "https://microcosmpublishing.com/previews/ruby-bike-umbrella.JPG_lg.jpg",
+        "url": "https://microcosmpublishing.com/catalog/bundle/6598",
+        "store_name": "Microcosm Publishing",
+        "store_url": "https://microcosmpublishing.com",
+        "ownership_type": "worker-owned",
+        "site_section": "Books",
+        "tags": [
+          "bundle"
+        ]
+      },
+      {
+        "id": "15-microcosm-58225",
+        "title": "$20 Superpack: Holiday Survival Kit",
+        "price": "20.00",
+        "available": true,
+        "image": "https://microcosmpublishing.com/previews/1000004443_lg.jpg",
+        "url": "https://microcosmpublishing.com/catalog/bundle/58225",
+        "store_name": "Microcosm Publishing",
+        "store_url": "https://microcosmpublishing.com",
+        "ownership_type": "worker-owned",
+        "site_section": "Books",
+        "tags": [
+          "bundle"
+        ]
+      },
+      {
+        "id": "15-microcosm-64058",
+        "title": "The All-Year-Round Christmas Handbook: Plan, make, cook, and create your own unique celebration",
+        "price": "19.95",
+        "available": true,
+        "image": "https://microcosmpublishing.com/previews/9781782498919_7a1e3_lg.jpg",
+        "url": "https://microcosmpublishing.com/catalog/books/64057",
+        "store_name": "Microcosm Publishing",
+        "store_url": "https://microcosmpublishing.com",
+        "ownership_type": "worker-owned",
+        "site_section": "Books",
+        "tags": [
+          "books"
+        ]
+      },
+      {
+        "id": "176-bm-38122980",
+        "title": "Mojang AB/Minecraft The Ultimate Mobspotter’s Collection Gift Box",
+        "price": "14.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/2609/13045755-T.JPG",
+        "url": "https://www.bullmoose.com/p/38122980/mojang-ab-minecraft-the-ultimate-mobspotters-collection-gift-box",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Books",
+        "tags": [
+          "books",
+          "book - hardcover"
+        ]
+      },
+      {
+        "id": "15-microcosm-55266",
+        "title": "American Girl Holiday Baking: Seasonal Recipes for Cakes, Cookies & More",
+        "price": "19.95",
+        "available": true,
+        "image": "https://microcosmpublishing.com/previews/9781681884769_3770d_lg.jpg",
+        "url": "https://microcosmpublishing.com/catalog/books/55266",
+        "store_name": "Microcosm Publishing",
+        "store_url": "https://microcosmpublishing.com",
+        "ownership_type": "worker-owned",
+        "site_section": "Books",
+        "tags": [
+          "books"
+        ]
+      },
+      {
+        "id": "15-microcosm-38112",
+        "title": "The 13 Days of Swiftness: A Christmas Celebration for Fans",
+        "price": "10.99",
+        "available": true,
+        "image": "https://microcosmpublishing.com/previews/13daysofswift_lg.jpg",
+        "url": "https://microcosmpublishing.com/catalog/books/38111",
+        "store_name": "Microcosm Publishing",
+        "store_url": "https://microcosmpublishing.com",
+        "ownership_type": "worker-owned",
+        "site_section": "Books",
+        "tags": [
+          "books"
+        ]
+      },
+      {
+        "id": "15-microcosm-30166",
+        "title": "33 Revolutions per Minute: A History of Protest Songs, from Billie Holiday to Green Day",
+        "price": "25.00",
+        "available": true,
+        "image": "https://microcosmpublishing.com/previews/9780061670152_0_Cover_lg.jpg",
+        "url": "https://microcosmpublishing.com/catalog/books/30166",
+        "store_name": "Microcosm Publishing",
+        "store_url": "https://microcosmpublishing.com",
+        "ownership_type": "worker-owned",
+        "site_section": "Books",
+        "tags": [
+          "books"
+        ]
+      },
+      {
+        "id": "128-10397282500927",
+        "title": "Modgy Alice's Adventures in Wonderland Light Book",
+        "price": "36.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/11211220_default.jpg?v=1780586141",
+        "url": "https://www.mastgeneralstore.com/products/light-book-alice-in-wonderland-x4",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Apparel",
+        "tags": []
+      }
+    ]
+  },
+  {
+    "id": "games",
+    "title": "Game Night",
+    "blurb": "Board games from a worker co-op game studio, plus puzzles.",
+    "products": [
+      {
+        "id": "28-5627428438166",
+        "title": "Space Cats Fight Fascism: The Board Game",
+        "price": "35.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0465/1991/0550/products/scffbox.png?v=1693588938",
+        "url": "https://store.tesacollective.com/products/space-cats-fight-fascism-the-board-game",
+        "store_name": "TESA Collective",
+        "store_url": "https://store.tesacollective.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Games",
+        "tags": [
+          "Games",
+          "import_2020_08_19_003709"
+        ]
+      },
+      {
+        "id": "28-5646576287894",
+        "title": "Co-opoly: The Game of Co-operatives",
+        "price": "40.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0465/1991/0550/files/DSC08324_1.png?v=1774275883",
+        "url": "https://store.tesacollective.com/products/co-opoly-the-game-of-co-operatives",
+        "store_name": "TESA Collective",
+        "store_url": "https://store.tesacollective.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Games",
+        "tags": [
+          "Games"
+        ]
+      },
+      {
+        "id": "176-bm-38100135",
+        "title": "Codenames/Codenames 2025",
+        "price": "19.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/2614/13071230-T.JPG",
+        "url": "https://www.bullmoose.com/p/38100135/codenames-codenames-2025",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Games",
+        "tags": [
+          "board games",
+          "game - board game"
+        ]
+      },
+      {
+        "id": "176-bm-36291868",
+        "title": "Puzzle/Accidentally Wes Anderson@1000 Piece Puzzle",
+        "price": "20.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/1918/9591071-T.JPG",
+        "url": "https://www.bullmoose.com/p/36291868/puzzle-accidentally-wes-anderson-1000-piece-puzzle",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Games",
+        "tags": [
+          "video games",
+          "game - board game",
+          "board games"
+        ]
+      },
+      {
+        "id": "28-5627428569238",
+        "title": "Good Dog, Bad Zombie: 2nd Edition",
+        "price": "45.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0465/1991/0550/files/DSC07806.jpg?v=1753806926",
+        "url": "https://store.tesacollective.com/products/good-dog-bad-zombie",
+        "store_name": "TESA Collective",
+        "store_url": "https://store.tesacollective.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Games",
+        "tags": [
+          "Games",
+          "import_2020_08_19_003709"
+        ]
+      },
+      {
+        "id": "28-7361856995527",
+        "title": "Community Garden: The Board Game",
+        "price": "35.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0465/1991/0550/files/IMG_20230912_140043.jpg?v=1755830132",
+        "url": "https://store.tesacollective.com/products/community-garden-the-board-game",
+        "store_name": "TESA Collective",
+        "store_url": "https://store.tesacollective.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Games",
+        "tags": [
+          "Games"
+        ]
+      },
+      {
+        "id": "176-bm-23713210",
+        "title": "Splendor/Board Game",
+        "price": "39.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/1267/6336174-T.JPG",
+        "url": "https://www.bullmoose.com/p/23713210/splendor-board-game",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Games",
+        "tags": [
+          "board games",
+          "game - board game"
+        ]
+      },
+      {
+        "id": "176-bm-36361875",
+        "title": "Azul Mini/Board Game",
+        "price": "15.99",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/1914/9574547-T.JPG",
+        "url": "https://www.bullmoose.com/p/36361875/azul-mini-board-game",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Games",
+        "tags": [
+          "video games",
+          "game - board game",
+          "board games"
+        ]
+      },
+      {
+        "id": "176-bm-31819330",
+        "title": "Puzzle/Where's Bowie?@500 Piece Jigsaw Puzzle",
+        "price": "13.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/1761/8806544-T.JPG",
+        "url": "https://www.bullmoose.com/p/31819330/puzzle-wheres-bowie-500-piece-jigsaw-puzzle",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Games",
+        "tags": [
+          "video games",
+          "game - board game",
+          "board games"
+        ]
+      },
+      {
+        "id": "176-bm-35577765",
+        "title": "Puzzle/LEGO Brick Botanicals@1000 Pieces",
+        "price": "14.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/1903/9518990-T.JPG",
+        "url": "https://www.bullmoose.com/p/35577765/puzzle-lego-brick-botanicals-1000-pieces",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Games",
+        "tags": [
+          "board games",
+          "game - board game"
+        ]
+      },
+      {
+        "id": "28-5627428733078",
+        "title": "STRIKE! The Game of Worker Rebellion",
+        "price": "45.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0465/1991/0550/files/DSC08290_1.png?v=1774540133",
+        "url": "https://store.tesacollective.com/products/strike-the-game-of-worker-rebellion",
+        "store_name": "TESA Collective",
+        "store_url": "https://store.tesacollective.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Games",
+        "tags": [
+          "Games",
+          "import_2020_08_19_003709"
+        ]
+      },
+      {
+        "id": "176-bm-33129630",
+        "title": "Azul/Summer Pavilion",
+        "price": "34.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/1779/8895590-T.JPG",
+        "url": "https://www.bullmoose.com/p/33129630/azul-summer-pavilion",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Games",
+        "tags": [
+          "board games",
+          "game - board game"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "outdoors",
+    "title": "For the Outdoorsy",
+    "blurb": "Headlamps, tools, and winter gear from employee-owned Scheels.",
+    "products": [
+      {
+        "id": "166-scheels-4678-E102AB00",
+        "title": "Petzl Swift LT 380 Lumen Headlamp",
+        "price": "54.95",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/40700001469?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/4678-E102AB00",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Home Goods & Services",
+        "tags": [
+          "petzl",
+          "activities > camp & hike > portable power & lighting > headlamps",
+          "black",
+          "camping",
+          "headlamps"
+        ]
+      },
+      {
+        "id": "166-scheels-37447-831181",
+        "title": "Leatherman Super Tool 300 Multi-Tool",
+        "price": "119.99",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/03744717088?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/37447-831181",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Sporting Goods & Outdoors",
+        "tags": [
+          "leatherman",
+          "activities > hunting > knives & tools > multi tools",
+          "multi-tools"
+        ]
+      },
+      {
+        "id": "166-scheels-4017-SW011493",
+        "title": "Smartwool Patch Beanie",
+        "price": "22.99",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/19543701883?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/4017-SW011493",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Apparel",
+        "tags": [
+          "smartwool",
+          "accessories > hats & caps",
+          "black",
+          "men",
+          "hats & caps"
+        ]
+      },
+      {
+        "id": "166-scheels-1486-NF0A88JQ",
+        "title": "The North Face Montana Puffer Mittens",
+        "price": "65",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/19706498919?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/1486-NF0A88JQ",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Apparel",
+        "tags": [
+          "the north face",
+          "accessories > gloves & mittens",
+          "tnf black",
+          "men",
+          "gloves & mittens"
+        ]
+      },
+      {
+        "id": "166-scheels-645397-NEB-HLP-1005",
+        "title": "Nebo Sports Mycro 500+ Rechargeable Headlamp",
+        "price": "39.99",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/64539700217?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/645397-NEB-HLP-1005",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Sporting Goods & Outdoors",
+        "tags": [
+          "nebo",
+          "activities > camp & hike > portable power & lighting > headlamps",
+          "camping",
+          "headlamps"
+        ]
+      },
+      {
+        "id": "166-scheels-642249-8028",
+        "title": "Women's Darn Tough Snowburst Cushioned Ski & Snowboard Socks",
+        "price": "32",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/64224922075?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/642249-8028",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Sporting Goods & Outdoors",
+        "tags": [
+          "darn tough",
+          "activities > winter sports > skiing & snowboarding > ski & snowboard socks",
+          "white",
+          "women",
+          "alpine skiing",
+          "snowboarding",
+          "socks"
+        ]
+      },
+      {
+        "id": "166-scheels-812436-LP1513",
+        "title": "LuxPro LP1513 Rechargeable Dual-Power 940 Lumen LED Lantern",
+        "price": "44.99",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/81243601057?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/812436-LP1513",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Sporting Goods & Outdoors",
+        "tags": [
+          "lux pro",
+          "activities > camp & hike > portable power & lighting > camping lanterns",
+          "camping",
+          "camping lanterns"
+        ]
+      },
+      {
+        "id": "166-scheels-9947-61511619",
+        "title": "Liberty Mountain KELTY Camp Chairs Chair",
+        "price": "29.95",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/72788085809?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/9947-61511619",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Sporting Goods & Outdoors",
+        "tags": [
+          "liberty mountain",
+          "activities > camp & hike > camp furniture > camping chairs",
+          "fallen rock",
+          "camping",
+          "camping chairs"
+        ]
+      },
+      {
+        "id": "166-scheels-25725-52983C1",
+        "title": "Franklin Signature Elongated Pickleball Paddle",
+        "price": "79.99",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/02572557094?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/25725-52983C1",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Sporting Goods & Outdoors",
+        "tags": [
+          "franklin",
+          "activities > pickleball gear > pickleball paddles",
+          "black",
+          "pickleball",
+          "pickleball paddles"
+        ]
+      },
+      {
+        "id": "166-scheels-729343-44158",
+        "title": "Old World Christmas Pickleball Paddle Ornament",
+        "price": "21.99",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/72934344158?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/729343-44158",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Sporting Goods & Outdoors",
+        "tags": [
+          "old world christmas",
+          "home & yard > home decor > ornaments & stockings",
+          "ornaments & stockings"
+        ]
+      },
+      {
+        "id": "166-scheels-847706-502796",
+        "title": "LED Lenser HF6R Core Headlamp",
+        "price": "69.95",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/84770610333?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/847706-502796",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Sporting Goods & Outdoors",
+        "tags": [
+          "led lenser",
+          "activities > camp & hike > portable power & lighting > headlamps",
+          "black",
+          "camping",
+          "headlamps"
+        ]
+      },
+      {
+        "id": "166-scheels-13658-31-003566",
+        "title": "Gerber Armbar Drive ONYX Multi-Tool",
+        "price": "49.99",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/01365815635?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/13658-31-003566",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Sporting Goods & Outdoors",
+        "tags": [
+          "gerber",
+          "activities > hunting > knives & tools > multi tools",
+          "multi-tools"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cozy",
+    "title": "Cozy Gifts",
+    "blurb": "Slippers, socks, beanies, and sweatshirts.",
+    "products": [
+      {
+        "id": "166-scheels-39161-41188-00267",
+        "title": "Women's Dearfoams Hannah Festive Knit Slippers",
+        "price": "49",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/09121773689?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/39161-41188-00267",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Apparel",
+        "tags": [
+          "dearfoams",
+          "shoes > slippers",
+          "tan",
+          "women",
+          "slippers"
+        ]
+      },
+      {
+        "id": "166-scheels-1259-768",
+        "title": "Men's Minnetonka Double Bottom Hardsole Slippers",
+        "price": "84.95",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/74764705774?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/1259-768",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Apparel",
+        "tags": [
+          "minnetonka",
+          "shoes > slippers",
+          "brown",
+          "men",
+          "slippers"
+        ]
+      },
+      {
+        "id": "3-wc-51740",
+        "title": "Thread Coffee™ Socks | Made in USA | Wool Blend",
+        "price": "12.50",
+        "image": "https://threadcoffee.com/wp-content/uploads/2025/01/ThreadCoffee_products-6.jpg",
+        "url": "https://threadcoffee.com/product/wool-blend-thread-coffee-socks-made-in-usa/",
+        "store_name": "Thread Coffee Roasters",
+        "store_url": "https://threadcoffee.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": []
+      },
+      {
+        "id": "166-scheels-642249-6131",
+        "title": "Women's Darn Tough Tinsel Lifestyle Light Cushion Crew Hiking Socks",
+        "price": "25",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/64224922949?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/642249-6131",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Apparel",
+        "tags": [
+          "darn tough",
+          "activities > camp & hike > hiking footwear > hiking socks",
+          "eclipse",
+          "women",
+          "hiking",
+          "hiking",
+          "socks"
+        ]
+      },
+      {
+        "id": "9-8749293404350",
+        "title": "40th Anniversary Beanie",
+        "price": "18.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/1709/6425/files/44209_40th_Beanie.jpg?v=1774044062",
+        "url": "https://shop.equalexchange.coop/products/beanie-hat",
+        "store_name": "Equal Exchange",
+        "store_url": "https://shop.equalexchange.coop",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": [
+          "44209",
+          "Branded Gear",
+          "Clothing",
+          "Hat",
+          "no-img-hover"
+        ]
+      },
+      {
+        "id": "166-scheels-33977-1000229",
+        "title": "Women's MUK LUKS Natalie Nancy Slippers",
+        "price": "69.99",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/03397763524?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/33977-1000229",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Apparel",
+        "tags": [
+          "muk luks",
+          "shoes > slippers",
+          "dark brown",
+          "women",
+          "slippers"
+        ]
+      },
+      {
+        "id": "128-10479225995583",
+        "title": "Socksmith Kitty Christmas Chaos Cotton Crew Socks",
+        "price": "14.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/11217619_default.jpg?v=1790273766",
+        "url": "https://www.mastgeneralstore.com/products/kitty-christmas-chaos",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Apparel",
+        "tags": []
+      },
+      {
+        "id": "166-scheels-4017-SW018120",
+        "title": "Smartwool Chair Lift Beanie",
+        "price": "40",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/19780374403?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/4017-SW018120",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Apparel",
+        "tags": [
+          "smartwool",
+          "accessories > hats & caps",
+          "arctic green",
+          "men",
+          "hats & caps"
+        ]
+      },
+      {
+        "id": "2-10265343230244",
+        "title": "Cooperative Badge Crewneck Sweatshirt",
+        "price": "40.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0253/5129/0968/files/IMG_9227.heic?v=1765380303",
+        "url": "https://cooperativecoffeeroasters.com/products/cooperative-badge-crewneck-sweatshirt",
+        "store_name": "Cooperative Coffee Roasters",
+        "store_url": "https://cooperativecoffeeroasters.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": []
+      },
+      {
+        "id": "2-10265349751076",
+        "title": "Cooperative Badge Cropped Hoodie",
+        "price": "40.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0253/5129/0968/files/IMG_9268.heic?v=1765560485",
+        "url": "https://cooperativecoffeeroasters.com/products/cooperative-badge-cropped-hoodie",
+        "store_name": "Cooperative Coffee Roasters",
+        "store_url": "https://cooperativecoffeeroasters.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": []
+      },
+      {
+        "id": "9-8749299826878",
+        "title": "40th Anniversary Long Sleeve",
+        "price": "32.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/1709/6425/files/44601_40th_Long-Sleeve.jpg?v=1774046373",
+        "url": "https://shop.equalexchange.coop/products/anniv-long-sleeve-tee",
+        "store_name": "Equal Exchange",
+        "store_url": "https://shop.equalexchange.coop",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": [
+          "Branded Gear",
+          "Clothing",
+          "no-img-hover",
+          "Shirts"
+        ]
+      },
+      {
+        "id": "166-scheels-642249-6121",
+        "title": "Women's Darn Tough Birds of a Feather Lightweight Lifestyle Light Cushion Crew Socks",
+        "price": "24",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/64224922603?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/642249-6121",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Apparel",
+        "tags": [
+          "darn tough",
+          "clothing > socks",
+          "ash",
+          "women",
+          "socks"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "self-care",
+    "title": "Self-Care",
+    "blurb": "Soaps, bath salts, and spa gifts.",
+    "products": [
+      {
+        "id": "133-9551282274601",
+        "title": "Seaweed Bath Gift Set - Selkie Seaweed Bath Bag, Lavender Seaweed Soap, and Wood Soap Dish",
+        "price": "22.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0101/7328/4430/files/seaweed-bath-gift-set-selkie-seaweed-bath-bag-lavender-seaweed-soap-and-wood-soap-dish-maine-coast-sea-vegetables-151327.jpg?v=1733477420",
+        "url": "https://www.seaveg.com/products/seaweed-bath-gift-set",
+        "store_name": "Maine Coast Sea Vegetables",
+        "store_url": "https://www.seaveg.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "Body Care"
+        ]
+      },
+      {
+        "id": "25-15199683838112",
+        "title": "Bethlehem Olive Wood Soap Dish",
+        "price": "25.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0579/2369/8848/files/soap_dish_430px.png?v=1760849390",
+        "url": "https://palestiniansoap.coop/products/olive-wood-soap-dish",
+        "store_name": "Palestinian Soap Cooperative",
+        "store_url": "https://palestiniansoap.coop",
+        "ownership_type": "worker co-op",
+        "site_section": "Personal Care",
+        "tags": [
+          "bundle",
+          "retail-only"
+        ]
+      },
+      {
+        "id": "128-10479876997439",
+        "title": "Spongellé Festive Morning Sweet Ambrosia Holiday Wreath Body Wash Infused Buffer",
+        "price": "14.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/810176250389_default.jpg?v=1787337603",
+        "url": "https://www.mastgeneralstore.com/products/cleansing-body-buff-sweet-ambrosia-holiday-x6",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Personal Care",
+        "tags": [
+          "badge:made in usa"
+        ]
+      },
+      {
+        "id": "25-15685839224992",
+        "title": "Awaida Roots 1880 100% Olive Soap",
+        "price": "7.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0579/2369/8848/files/Roots1.jpg?v=1782548732",
+        "url": "https://palestiniansoap.coop/products/awaida-roots-1880-pure-olive-soap",
+        "store_name": "Palestinian Soap Cooperative",
+        "store_url": "https://palestiniansoap.coop",
+        "ownership_type": "worker co-op",
+        "site_section": "Personal Care",
+        "tags": []
+      },
+      {
+        "id": "167-bc-1502",
+        "title": "Burt's Bees Tips & Toes Gift Set - Case of 3, 1 ct",
+        "price": "27.36",
+        "image": "https://cdn11.bigcommerce.com/s-fe8s4uj/products/66453/images/157976/2824894__1__39922.1787721756.500.750.jpg?c=2",
+        "url": "https://shop.thriftywhite.com/burts-bees-tips-toes-gift-set-case-of-3-1-ct/",
+        "store_name": "Thrifty White Pharmacy",
+        "store_url": "https://shop.thriftywhite.com",
+        "ownership_type": "ESOP",
+        "site_section": "Personal Care",
+        "tags": []
+      },
+      {
+        "id": "150-7331205644355",
+        "title": "Body Scrub Bar",
+        "price": "12.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0171/5114/files/Corn-BAR-trans.png?v=1731041280",
+        "url": "https://meowmeowtweet.com/products/cornmeal-lime-body-scrub-bar",
+        "store_name": "Meow Meow Tweet",
+        "store_url": "https://meowmeowtweet.com",
+        "ownership_type": "worker collective",
+        "site_section": "Personal Care",
+        "tags": [
+          "body: Scrubs",
+          "gifts: for citrus sweeties",
+          "primary",
+          "soap: Body"
+        ]
+      },
+      {
+        "id": "151-4395005509730",
+        "title": "Authentic African Black Soap All-In-One - Rosewater Peony",
+        "price": "17.49",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0041/0471/6386/products/258_EP_AABS_AiO_Rosewater-Peony_32oz_F_1.jpg?v=1654752149",
+        "url": "https://www.alaffia.com/products/authentic-african-black-soap-all-in-one-rosewater-peony-32fl-oz",
+        "store_name": "Alaffia",
+        "store_url": "https://www.alaffia.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Personal Care",
+        "tags": [
+          "category body",
+          "Gluten & Soy Free",
+          "Gluten Free",
+          "Ingredient: Shea",
+          "Orangutan Safe",
+          "Soy Free",
+          "Vegan"
+        ]
+      },
+      {
+        "id": "150-7315127074883",
+        "title": "All Over Balm",
+        "price": "10.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0171/5114/files/R-BALM-TRANS.png?v=1727392378",
+        "url": "https://meowmeowtweet.com/products/rosebud-all-over-balm",
+        "store_name": "Meow Meow Tweet",
+        "store_url": "https://meowmeowtweet.com",
+        "ownership_type": "worker collective",
+        "site_section": "Personal Care",
+        "tags": [
+          "face: Dry",
+          "face: lip balm",
+          "face: Sensitive",
+          "gifts: for floral fans",
+          "gifts: stocking stuffers",
+          "moisturizer",
+          "primary",
+          "Subscription",
+          "treatment"
+        ]
+      },
+      {
+        "id": "15-microcosm-67079",
+        "title": "101 DIY Face Masks: Fun, Healthy, All-Natural Sheet Masks for Every Skin Type",
+        "price": "9.95",
+        "available": true,
+        "image": "https://microcosmpublishing.com/previews/101diyfacemasks_lg.jpg",
+        "url": "https://microcosmpublishing.com/catalog/books/67079",
+        "store_name": "Microcosm Publishing",
+        "store_url": "https://microcosmpublishing.com",
+        "ownership_type": "worker-owned",
+        "site_section": "Books",
+        "tags": [
+          "books"
+        ]
+      },
+      {
+        "id": "128-10479876571455",
+        "title": "Spongellé Holiday Splendor Golden Pear Body Wash Infused Buffer",
+        "price": "14.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/810176250365_default.jpg?v=1787337602",
+        "url": "https://www.mastgeneralstore.com/products/cleansing-body-buff-golden-pear-holiday-x6",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Personal Care",
+        "tags": [
+          "badge:made in usa"
+        ]
+      },
+      {
+        "id": "150-7315122716739",
+        "title": "Vegan Lip Balm",
+        "price": "10.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0171/5114/files/PC-LIP-TRANS.png?v=1727389692",
+        "url": "https://meowmeowtweet.com/products/peppermint-clove-lip-balm",
+        "store_name": "Meow Meow Tweet",
+        "store_url": "https://meowmeowtweet.com",
+        "ownership_type": "worker collective",
+        "site_section": "Personal Care",
+        "tags": [
+          "face: lip balm",
+          "gifts: stocking stuffers",
+          "moisturizer",
+          "primary"
+        ]
+      },
+      {
+        "id": "151-7303205945442",
+        "title": "Alaffia Pure Unrefined Shea Butter, Wild Lavender 11oz",
+        "price": "16.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0041/0471/6386/files/PureUnrefinedSheaButter_NEW_WildLavender.png?v=1739933073",
+        "url": "https://www.alaffia.com/products/alaffia-pure-unrefined-shea-butter-wild-lavender",
+        "store_name": "Alaffia",
+        "store_url": "https://www.alaffia.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Personal Care",
+        "tags": [
+          "African shea butter",
+          "Alaffia shea butter",
+          "authentic shea butter",
+          "Balms",
+          "Body Care",
+          "Body Care/Balms",
+          "Butters & Oils",
+          "category body",
+          "category_Body",
+          "everyday shea",
+          "everyday shea passion fruit",
+          "everyday shea shea butter",
+          "Fair For Life",
+          "fair trade conditioner",
+          "fair trade lotion",
+          "fair trade passion fruit",
+          "fair trade shea butter",
+          "Gluten & Soy Free",
+          "Gluten Free",
+          "gluten free moisturizer",
+          "gmo free shea butter",
+          "handcrafted shea butter",
+          "handmade shea butter",
+          "Ingredient: Shea",
+          "Ingredient:Aromatic Passiflora edulis (Passion Fruit) Extract",
+          "Ingredient:Butyrospermum parkii (Shea) Butter*",
+          "moisturizer for sensitive skin",
+          "natural shea butter",
+          "organic shea butter",
+          "passion fruit shea butter",
+          "pure shea butter",
+          "real shea butter",
+          "shea",
+          "shea butter",
+          "shea butter for body",
+          "shea butter for hair",
+          "Soy Free",
+          "unrefined shea butter",
+          "Vegan",
+          "west African shea butter"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "handmade",
+    "title": "Handmade & Decor",
+    "blurb": "Ornaments, suncatchers, and jewelry from artisan co-ops.",
+    "products": [
+      {
+        "id": "41-10340905845036",
+        "title": "Snowflake Suncatcher",
+        "price": "40.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/suncatchers-snowflake-suncatcher-handmade-snowflake-suncatcher-winter-window-decor-emaloe-s-thingys-1199278882.jpg?v=1781133654",
+        "url": "https://artisans.coop/products/snowflake-suncatcher",
+        "store_name": "Artisans Cooperative",
+        "store_url": "https://artisans.coop",
+        "ownership_type": "multi-stakeholder co-op",
+        "site_section": "Home Goods & Services",
+        "tags": [
+          "Home & Living"
+        ]
+      },
+      {
+        "id": "41-10230593716524",
+        "title": "Pottery Christmas Ornament - Artisans Coop Fundraiser",
+        "price": "5.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/cRZmADiMTJ.jpg?v=1770319932",
+        "url": "https://artisans.coop/products/copy-of-pottery-christmas-ornament-artisans-coop-fundraiser",
+        "store_name": "Artisans Cooperative",
+        "store_url": "https://artisans.coop",
+        "ownership_type": "multi-stakeholder co-op",
+        "site_section": "Home Goods & Services",
+        "tags": [
+          "Ceramics & Pottery",
+          "Founder",
+          "From a Pattern or Template",
+          "Fundraiser",
+          "Fundraiser Item",
+          "Home & Living",
+          "In-house Production",
+          "Member",
+          "SFW",
+          "Turnaround 1-3 Days"
+        ]
+      },
+      {
+        "id": "41-10131536281900",
+        "title": "Silver Christmas Tree Earrings",
+        "price": "10.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/aguOZcWLY6.jpg?v=1762086583",
+        "url": "https://artisans.coop/products/silver-christmas-tree-earrings-1",
+        "store_name": "Artisans Cooperative",
+        "store_url": "https://artisans.coop",
+        "ownership_type": "multi-stakeholder co-op",
+        "site_section": "Home Goods & Services",
+        "tags": [
+          "One of a Kind",
+          "Original Design",
+          "OTHER",
+          "SFW",
+          "Turnaround 1-3 Days"
+        ]
+      },
+      {
+        "id": "41-10235437318444",
+        "title": "Snowflake Tealight Holders",
+        "price": "15.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/qk8kjcs06H.jpg?v=1770825733",
+        "url": "https://artisans.coop/products/snowflake-tealight-holders",
+        "store_name": "Artisans Cooperative",
+        "store_url": "https://artisans.coop",
+        "ownership_type": "multi-stakeholder co-op",
+        "site_section": "Home Goods & Services",
+        "tags": [
+          "One of a Kind",
+          "Original Design",
+          "Resin",
+          "SFW",
+          "Turnaround 1-3 Days"
+        ]
+      },
+      {
+        "id": "128-10285458751807",
+        "title": "Greenville Santa Claus Ornament",
+        "price": "13.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/199656_default.jpg?v=1775828175",
+        "url": "https://www.mastgeneralstore.com/products/greenville-santa-claus-ornament",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Home Goods & Services",
+        "tags": []
+      },
+      {
+        "id": "41-9808021356844",
+        "title": "Implant Grade Titanium Snowman Earring",
+        "price": "19.96",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/v1CHybS1bT.jpg?v=1737515987",
+        "url": "https://artisans.coop/products/copy-of-implant-grade-titanium-snowman-earring",
+        "store_name": "Artisans Cooperative",
+        "store_url": "https://artisans.coop",
+        "ownership_type": "multi-stakeholder co-op",
+        "site_section": "Home Goods & Services",
+        "tags": [
+          "Accessories",
+          "Body Jewelry",
+          "Earrings",
+          "In-house Production",
+          "Jewelry",
+          "Jewelry: Sets",
+          "Member",
+          "Original Design",
+          "SFW",
+          "Turnaround 1-3 Days",
+          "verified"
+        ]
+      },
+      {
+        "id": "41-10031082963244",
+        "title": "Strawberry Ornament",
+        "price": "11.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/oXFgEt6zcg.jpg?v=1752106970",
+        "url": "https://artisans.coop/products/ornamental-hanging-strawberry",
+        "store_name": "Artisans Cooperative",
+        "store_url": "https://artisans.coop",
+        "ownership_type": "multi-stakeholder co-op",
+        "site_section": "Home Goods & Services",
+        "tags": [
+          "Art & Collectibles",
+          "Home & Living",
+          "Home Decor",
+          "In-house Production",
+          "Member",
+          "Original Design",
+          "Sewing",
+          "SFW",
+          "Turnaround Variable",
+          "verified"
+        ]
+      },
+      {
+        "id": "25-15758621016224",
+        "title": "Nablus Kufiya (Crimson on Black)",
+        "price": "28.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0579/2369/8848/files/1_23_2.jpg?v=1781742406",
+        "url": "https://palestiniansoap.coop/products/nablus-black-kufiya-copy-copy",
+        "store_name": "Palestinian Soap Cooperative",
+        "store_url": "https://palestiniansoap.coop",
+        "ownership_type": "worker co-op",
+        "site_section": "Personal Care",
+        "tags": [
+          "kufiya"
+        ]
+      },
+      {
+        "id": "41-10156421677356",
+        "title": "Decorative Christmas Tray",
+        "price": "15.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/UndprQWGMg.jpg?v=1764430557",
+        "url": "https://artisans.coop/products/decorative-christmas-tray",
+        "store_name": "Artisans Cooperative",
+        "store_url": "https://artisans.coop",
+        "ownership_type": "multi-stakeholder co-op",
+        "site_section": "Home Goods & Services",
+        "tags": [
+          "One of a Kind",
+          "Original Design",
+          "Resin",
+          "SFW",
+          "Turnaround 1-3 Days"
+        ]
+      },
+      {
+        "id": "41-9834008871212",
+        "title": "Green Snow Globe Tumbler",
+        "price": "20.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/0jLpWulWGA.jpg?v=1739289035",
+        "url": "https://artisans.coop/products/green-snow-globe-tumbler",
+        "store_name": "Artisans Cooperative",
+        "store_url": "https://artisans.coop",
+        "ownership_type": "multi-stakeholder co-op",
+        "site_section": "Home Goods & Services",
+        "tags": [
+          "Member",
+          "One of a Kind",
+          "Original Design",
+          "OTHER",
+          "SFW",
+          "Turnaround 1-3 Days"
+        ]
+      },
+      {
+        "id": "41-9731319890220",
+        "title": "Rudolph “note” cards, Christmas cards, holiday cards, gift card holder, red",
+        "price": "20.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/rC3OAZtF8c.jpg?v=1732148977",
+        "url": "https://artisans.coop/products/rudolph-note-cards-christmas-cards-holiday-cards-gift-card-holder-red",
+        "store_name": "Artisans Cooperative",
+        "store_url": "https://artisans.coop",
+        "ownership_type": "multi-stakeholder co-op",
+        "site_section": "Home Goods & Services",
+        "tags": [
+          "Greeting Cards",
+          "Member",
+          "Music",
+          "One of a Kind",
+          "Original Design",
+          "Paper Goods",
+          "Papercrafts",
+          "SFW",
+          "Sheet Music",
+          "Stationery",
+          "Turnaround 1-3 Days"
+        ]
+      },
+      {
+        "id": "41-9723757068588",
+        "title": "Christmas tree blank “note” cards, holiday cards/gift card holder, forest green",
+        "price": "20.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0762/3806/1868/files/A0CiBPS8FQ.jpg?v=1731951700",
+        "url": "https://artisans.coop/products/christmas-tree-blank-note-cards-holiday-cards-gift-card-holder-forest-green",
+        "store_name": "Artisans Cooperative",
+        "store_url": "https://artisans.coop",
+        "ownership_type": "multi-stakeholder co-op",
+        "site_section": "Home Goods & Services",
+        "tags": [
+          "Greeting Cards",
+          "Member",
+          "Music",
+          "One of a Kind",
+          "Original Design",
+          "OTHER",
+          "Paper Goods",
+          "Papercrafts",
+          "SFW",
+          "Sheet Music",
+          "Stationery",
+          "Turnaround 1-3 Days"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stocking-stuffers",
+    "title": "Stocking Stuffers",
+    "blurb": "Small gifts, mostly under $15.",
+    "products": [
+      {
+        "id": "113-9349214110025",
+        "title": "Divine Milk Chocolate Coins",
+        "price": "3.20",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0900/1205/7929/files/UK_DIVINE_MILK_COINS_3D_RENDER_2026_BLUE.png?v=1787560144",
+        "url": "https://divinechocolate.com/products/divine-milk-chocolate-coins",
+        "store_name": "Divine Chocolate",
+        "store_url": "https://divinechocolate.com",
+        "ownership_type": "farmer co-op stake",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "Christmas",
+          "Milk Chocolate"
+        ]
+      },
+      {
+        "id": "115-bc-160",
+        "title": "Gingerbread Cookie Cutter",
+        "price": "2.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/238/images/6262/205758__22114_4059__80054.1724079438.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/gingerbread-cookie-cutter",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "176-bm-26722141",
+        "title": "Studio Ghibli Plush Journal/Totoro Plush Journal",
+        "price": "12.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/1696/8483039-T.JPG",
+        "url": "https://www.bullmoose.com/p/26722141/studio-ghibli-plush-journal-totoro-plush-journal",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Movies & TV",
+        "tags": [
+          "movies",
+          "book - hardcover"
+        ]
+      },
+      {
+        "id": "2-4639222693976",
+        "title": "Sticker Pack",
+        "price": "10.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0253/5129/0968/files/1114-11.jpg?v=1731613844",
+        "url": "https://cooperativecoffeeroasters.com/products/sticker-pack",
+        "store_name": "Cooperative Coffee Roasters",
+        "store_url": "https://cooperativecoffeeroasters.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": [
+          "Sticker"
+        ]
+      },
+      {
+        "id": "128-10479876604223",
+        "title": "Gourmet Village Retro Ornament Double Truffle Hot Chocolate Mix",
+        "price": "1.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/11035158_default.jpg?v=1788361182",
+        "url": "https://www.mastgeneralstore.com/products/hot-chocolate-retro-ornament-x24",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "115-bc-276",
+        "title": "Peppermint Crunch",
+        "price": "10.95",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/1888/images/9470/PeppermintCrunchGroup__23523.1761315097.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/peppermint-crunch",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "166-scheels-717153-557025",
+        "title": "Penn 40 Outdoor Pickleballs - 3 Pack",
+        "price": "9.99",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/72642321458?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/717153-557025",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Sporting Goods & Outdoors",
+        "tags": [
+          "head/penn racquet sports",
+          "activities > pickleball gear > pickleballs",
+          "yellow",
+          "pickleball",
+          "pickleball",
+          "pickleballs"
+        ]
+      },
+      {
+        "id": "9-8366327038142",
+        "title": "Equal Exchange Never Sell Out Pint Glass",
+        "price": "8.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/1709/6425/files/never-sell-out-glass_01.jpg?v=1731601495",
+        "url": "https://shop.equalexchange.coop/products/insulated-16oz-equal-exchange-tumbler-copy",
+        "store_name": "Equal Exchange",
+        "store_url": "https://shop.equalexchange.coop",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": [
+          "44065",
+          "Branded Gear",
+          "no-img-hover"
+        ]
+      },
+      {
+        "id": "113-10010904789321",
+        "title": "Divine Hazelnut Hot Chocolate 250g",
+        "price": "8.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0900/1205/7929/files/DIVINE_HAZELNUT_PRALINE_HOT_CHOCOLATE_FRONT_FACE_RENDER.png?v=1767710507",
+        "url": "https://divinechocolate.com/products/divine-hazelnut-hot-chocolate",
+        "store_name": "Divine Chocolate",
+        "store_url": "https://divinechocolate.com",
+        "ownership_type": "farmer co-op stake",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "Beverages",
+          "New",
+          "Vegan"
+        ]
+      },
+      {
+        "id": "2-8613540364580",
+        "title": "Enamel Wiggle Pins",
+        "price": "3.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0253/5129/0968/files/157F61AA-F91D-486A-9119-CBFA62176F01.jpg?v=1694111490",
+        "url": "https://cooperativecoffeeroasters.com/products/enamel-wiggle-pins",
+        "store_name": "Cooperative Coffee Roasters",
+        "store_url": "https://cooperativecoffeeroasters.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": []
+      },
+      {
+        "id": "128-10285525139775",
+        "title": "Mast Store Provisioners Christmas Cider",
+        "price": "6.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/236634_default_42b73ad9-14a3-4a3e-8c2f-e78e7a11320f.jpg?v=1775791288",
+        "url": "https://www.mastgeneralstore.com/products/mast-store-provisioners-christmas-cider",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Apparel",
+        "tags": [
+          "badge:made in usa"
+        ]
+      },
+      {
+        "id": "166-scheels-19300-WH-BAR-LBJ-01",
+        "title": "Dr. Squatch Lumberjack Lodge Bar Soap",
+        "price": "7",
+        "available": true,
+        "image": "https://cdn.media.amplience.net/i/scheelspoc/81017157463?w=400&fmt=webp",
+        "url": "https://www.scheels.com/p/19300-WH-BAR-LBJ-01",
+        "store_name": "Scheels All Sports",
+        "store_url": "https://www.scheels.com",
+        "ownership_type": "ESOP",
+        "site_section": "Personal Care",
+        "tags": [
+          "dr. squatch",
+          "accessories > bath & body > bath & shower > soap",
+          "men",
+          "soap"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gift-cards",
+    "title": "Last-Minute Gift Cards",
+    "blurb": "Digital gift cards, no shipping needed.",
+    "products": [
+      {
+        "id": "115-bc-562",
+        "title": "E-Gift Card",
+        "price": "25.00",
+        "image": "https://cdn11.bigcommerce.com/s-ihwnd7z21q/products/123/images/6059/E-Gift-Card-16463_sq__03216_5602__17318.1770918396.386.513.jpg?c=1",
+        "url": "https://shop.kingarthurbaking.com/items/e-gift-card",
+        "store_name": "King Arthur Baking Company",
+        "store_url": "https://shop.kingarthurbaking.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": []
+      },
+      {
+        "id": "152-7483833221181",
+        "title": "Verso Gift Card",
+        "price": "25.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0569/3869/2669/files/Asset_1_fb5684fa-024b-4203-bc6d-6f4faaf8c1af.png?v=1726085653",
+        "url": "https://www.versobooks.com/products/verso-gift-card",
+        "store_name": "Verso Books",
+        "store_url": "https://www.versobooks.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Books",
+        "tags": []
+      },
+      {
+        "id": "141-9085332095201",
+        "title": "Gardener's Supply E-Gift Card",
+        "price": "25.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0770/9032/4705/files/gsc_e-giftcard_pdp_2024_13554d13-07b2-42d2-b496-34dc35055a71.webp?v=1758720694",
+        "url": "https://www.gardeners.com/products/e-gift-card",
+        "store_name": "Gardener's Supply Company",
+        "store_url": "https://www.gardeners.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Home Goods & Services",
+        "tags": []
+      },
+      {
+        "id": "2-4837275828312",
+        "title": "Cooperative Gift Card for Roastery and Online Store",
+        "price": "25.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0253/5129/0968/products/CooperativeCoffeeRoasters_square.jpg?v=1606151094",
+        "url": "https://cooperativecoffeeroasters.com/products/cooperative-gift-card",
+        "store_name": "Cooperative Coffee Roasters",
+        "store_url": "https://cooperativecoffeeroasters.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": [
+          "Gift Cards"
+        ]
+      },
+      {
+        "id": "104-6951705542713",
+        "title": "Cabot Gift Card",
+        "price": "25.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0571/3933/1129/files/CBT_GiftCard_600x600_Shopify_2024.png?v=1782829908",
+        "url": "https://cabotcreamery.com/products/cabot-creamery-gift-card",
+        "store_name": "Cabot Creamery",
+        "store_url": "https://cabotcreamery.com",
+        "ownership_type": "farmer co-op",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "Cabot Merch",
+          "ecommerce",
+          "shoppable"
+        ]
+      },
+      {
+        "id": "146-8650067378395",
+        "title": "Gimme! Gift Certificate - Valid online only",
+        "price": "10.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/online-gift-card.jpg?v=1754410990",
+        "url": "https://www.gimmecoffee.com/products/digital-gift-card-good-for-online-store-only",
+        "store_name": "Gimme! Coffee",
+        "store_url": "https://www.gimmecoffee.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "Gift Card"
+        ]
+      },
+      {
+        "id": "134-8357810569385",
+        "title": "Digital Gift Card",
+        "price": "15.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/2550/8730/files/Digital_Gift_Card.png?v=1777304507",
+        "url": "https://www.sowtrueseed.com/products/digital-gift-card",
+        "store_name": "Sow True Seed",
+        "store_url": "https://www.sowtrueseed.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "gift card",
+          "gift certificate",
+          "gift guide",
+          "giftcard",
+          "staff pick"
+        ]
+      },
+      {
+        "id": "119-1555206307895",
+        "title": "Digital Gift Card",
+        "price": "50.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0010/9120/7223/files/Gift_Card_squared.jpg?v=1765231606",
+        "url": "https://grassrootscoop.com/products/gift-card",
+        "store_name": "Grass Roots Farmers' Cooperative",
+        "store_url": "https://grassrootscoop.com",
+        "ownership_type": "farmer co-op",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "giftcard"
+        ]
+      },
+      {
+        "id": "133-4756467646542",
+        "title": "Gift Card",
+        "price": "15.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0101/7328/4430/products/gift-card-1500-usd-maine-coast-sea-vegetables-598014.jpg?v=1658979827",
+        "url": "https://www.seaveg.com/products/gift-card",
+        "store_name": "Maine Coast Sea Vegetables",
+        "store_url": "https://www.seaveg.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "Accessories",
+          "Gift_Card"
+        ]
+      },
+      {
+        "id": "143-8059460976960",
+        "title": "Taharka Brothers Online Gift Card",
+        "price": "10.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0684/6260/8704/files/FINALE.jpg?v=1734726329",
+        "url": "https://taharkabrothers.com/products/taharka-brothers-online-gift-card",
+        "store_name": "Taharka Brothers Ice Cream",
+        "store_url": "https://taharkabrothers.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Food & Pantry",
+        "tags": [
+          "gift card",
+          "gift idea"
+        ]
+      },
+      {
+        "id": "120-6917071896618",
+        "title": "Online Gift Card",
+        "price": "25.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0573/1339/4730/files/Heritage_Gift_Card-4.jpg?v=1739828554",
+        "url": "https://www.dansko.com/products/e-gift-card",
+        "store_name": "Dansko",
+        "store_url": "https://www.dansko.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Apparel",
+        "tags": [
+          "final-sale",
+          "GiftCard",
+          "no-afterpay"
+        ]
+      },
+      {
+        "id": "129-4669056614490",
+        "title": "Dean's Beans Virtual Gift Card",
+        "price": "20.00",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0060/7895/5610/files/giftcard_a2627f47-548e-47c1-b434-5ca681d46122.jpg?v=1734367448",
+        "url": "https://www.deansbeans.com/products/deans-beans-gift-certificate-1",
+        "store_name": "Dean's Beans Organic Coffee",
+        "store_url": "https://www.deansbeans.com",
+        "ownership_type": "worker co-op",
+        "site_section": "Coffee & Tea",
+        "tags": [
+          "Gifts & Samplers"
+        ]
+      }
+    ]
+  }
+]
