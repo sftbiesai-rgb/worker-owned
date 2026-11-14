@@ -403,6 +403,9 @@ async function main() {
 
   let allProducts = [];
   let scraped = 0, skipped = 0;
+  // --only mode: previous products per store base URL, restored if a re-scrape
+  // fails or comes back much smaller (rate limits, timeouts, site changes)
+  const previousByBase = new Map();
 
   // In --only mode, load existing products and remove entries for the target stores
   if (onlyIds) {
@@ -411,6 +414,13 @@ async function main() {
       const targetEntries = entries.filter(e => onlyIds.has(e.id));
       const targetUrls = new Set(targetEntries.map(e => getBaseUrl(e.url)).filter(Boolean));
       // Keep products not from target stores, and not synthetic entries for target stores
+      for (const p of existing) {
+        const pBase = getBaseUrl(p.store_url || p.url);
+        if (typeof p.id === 'string' && p.id.startsWith('synth-')) continue;
+        if (!targetUrls.has(pBase)) continue;
+        if (!previousByBase.has(pBase)) previousByBase.set(pBase, []);
+        previousByBase.get(pBase).push(p);
+      }
       allProducts = existing.filter(p => {
         if (typeof p.id === 'string' && p.id.startsWith('synth-')) {
           // Check if this synthetic entry belongs to a target store
@@ -453,9 +463,16 @@ async function main() {
     if (!products) products = await trySouthernExposure(entry);
     if (!products) products = await tryMerchantFeed(entry);
 
-    if (products?.length) {
+    const previous = previousByBase.get(base) || [];
+    if (previous.length >= 10 && (products?.length || 0) < previous.length * 0.5) {
+      allProducts.push(...previous);
+      previousByBase.delete(base);
+      console.log(`only ${products?.length || 0} products (had ${previous.length}), keeping previous data`);
+      skipped++;
+    } else if (products?.length) {
       allProducts.push(...products);
-      console.log(`${products.length} products (${entry.ownership_type})`);
+      previousByBase.delete(base);
+      console.log(`${products.length} products (${entry.ownership_type})${previous.length ? `, had ${previous.length}` : ''}`);
       scraped++;
     } else {
       console.log('no products found');
@@ -464,6 +481,9 @@ async function main() {
 
     await new Promise(r => setTimeout(r, DELAY_BETWEEN_STORES_MS));
   }
+
+  // Never drop a target store's products because it wasn't reached
+  for (const products of previousByBase.values()) allProducts.push(...products);
 
   // Synthetic entries for stores without scrapeable product pages
   const SYNTHETIC = [

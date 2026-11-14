@@ -43,41 +43,9 @@
     "Apps & Games": "tech-software"
   },
   "sections": {
-    "books": {
-      "label": "Books",
-      "count": 41617,
-      "storeCount": 32,
-      "stores": [
-        {
-          "name": "Microcosm Publishing",
-          "ownershipType": "worker-owned"
-        },
-        {
-          "name": "Bull Moose",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Verso Books",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Zia Records",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "PM Press",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Mast General Store",
-          "ownershipType": "employee-owned"
-        }
-      ],
-      "url": "/books"
-    },
     "food-pantry": {
       "label": "Food & Pantry",
-      "count": 5661,
+      "count": 5751,
       "storeCount": 20,
       "stores": [
         {
@@ -109,7 +77,7 @@
     },
     "personal-care": {
       "label": "Personal Care",
-      "count": 8069,
+      "count": 8035,
       "storeCount": 7,
       "stores": [
         {
@@ -141,7 +109,7 @@
     },
     "home-goods": {
       "label": "Home Goods & Services",
-      "count": 16164,
+      "count": 16169,
       "storeCount": 13,
       "stores": [
         {
@@ -173,7 +141,7 @@
     },
     "games": {
       "label": "Games",
-      "count": 6465,
+      "count": 6521,
       "storeCount": 12,
       "stores": [
         {
@@ -202,6 +170,38 @@
         }
       ],
       "url": "/games"
+    },
+    "books": {
+      "label": "Books",
+      "count": 41640,
+      "storeCount": 32,
+      "stores": [
+        {
+          "name": "Microcosm Publishing",
+          "ownershipType": "worker-owned"
+        },
+        {
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Verso Books",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Zia Records",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "PM Press",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
+        }
+      ],
+      "url": "/books"
     },
     "music": {
       "label": "Music",
@@ -249,7 +249,7 @@
     },
     "apparel": {
       "label": "Apparel",
-      "count": 61241,
+      "count": 60691,
       "storeCount": 18,
       "stores": [
         {
@@ -281,8 +281,8 @@
     },
     "tech-software": {
       "label": "Tech & Software",
-      "count": 1223,
-      "storeCount": 5,
+      "count": 1222,
+      "storeCount": 4,
       "stores": [
         {
           "name": "Scheels All Sports",
@@ -299,17 +299,13 @@
         {
           "name": "Landry's Bicycles",
           "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Verso Books",
-          "ownershipType": "worker co-op"
         }
       ],
       "url": "/tech-software"
     },
     "sporting-goods": {
       "label": "Sporting Goods & Outdoors",
-      "count": 53679,
+      "count": 53684,
       "storeCount": 5,
       "stores": [
         {
@@ -335,9 +331,21 @@
       ],
       "url": "/sporting-goods"
     },
+    "art-prints": {
+      "label": "Art & Prints",
+      "count": 28,
+      "storeCount": 1,
+      "stores": [
+        {
+          "name": "PM Press",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/art-prints"
+    },
     "coffee-tea": {
       "label": "Coffee & Tea",
-      "count": 632,
+      "count": 604,
       "storeCount": 10,
       "stores": [
         {
@@ -406,18 +414,6 @@
         }
       ],
       "url": "/beer-brewing"
-    },
-    "art-prints": {
-      "label": "Art & Prints",
-      "count": 28,
-      "storeCount": 1,
-      "stores": [
-        {
-          "name": "PM Press",
-          "ownershipType": "worker co-op"
-        }
-      ],
-      "url": "/art-prints"
     }
   }
 }

@@ -25,7 +25,7 @@
       },
       {
         "id": "130-8633392922873",
-        "title": "Chocolate Bar Gift Box — Bestsellers, 6 Vegan Bars",
+        "title": "Chocolate Bar Gift Box, Bestsellers, 6 Vegan Bars",
         "price": "42.00",
         "available": true,
         "image": "https://cdn.shopify.com/s/files/1/0183/6313/files/Chocolate-gift-box-endorfin.webp?v=1733337327",
@@ -33,7 +33,7 @@
         "store_name": "Coraçao Chocolate",
         "store_url": "https://www.coracaoconfections.com",
         "ownership_type": "employee-owned",
-        "site_section": "Food & Pantry",
+        "site_section": "Chocolate & Sweets",
         "tags": [
           "chocolate gifts"
         ]
@@ -96,7 +96,7 @@
         "store_name": "Coraçao Chocolate",
         "store_url": "https://www.coracaoconfections.com",
         "ownership_type": "employee-owned",
-        "site_section": "Food & Pantry",
+        "site_section": "Chocolate & Sweets",
         "tags": [
           "berkeley",
           "chocolate berkeley",
@@ -158,10 +158,8 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Food & Pantry",
-        "tags": [
-          "badge:made in usa"
-        ]
+        "site_section": "Apparel",
+        "tags": []
       },
       {
         "id": "113-9530495074633",
@@ -346,7 +344,7 @@
         "title": "Peppermint Hot Chocolate",
         "price": "13.25",
         "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0407/8986/8706/files/PeppermintHotChocolate480x480_589ed60a-0eb1-4ac8-a62c-238dd1c8ccd2.png?v=1763982665",
+        "image": "https://cdn.shopify.com/s/files/1/0407/8986/8706/files/PeppermintHotChoc_1000px.png?v=1790794785",
         "url": "https://www.justuscoffee.com/products/peppermint-hot-chocolate",
         "store_name": "Just Us! Coffee Roasters",
         "store_url": "https://www.justuscoffee.com",
@@ -402,7 +400,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Food & Pantry",
+        "site_section": "Apparel",
         "tags": []
       },
       {
@@ -495,7 +493,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Personal Care",
+        "site_section": "Apparel",
         "tags": [
           "badge:made in usa"
         ]
@@ -1445,6 +1443,21 @@
         ]
       },
       {
+        "id": "128-10479221932351",
+        "title": "World's Softest Women's Holiday Fireside Cozy Crew Socks",
+        "price": "16.99",
+        "available": true,
+        "image": "https://cdn.shopify.com/s/files/1/0874/7237/4079/files/11211603_263_HLDY_FAIR_ISLE.jpg?v=1784222657",
+        "url": "https://www.mastgeneralstore.com/products/knit-pickin-holiday-fireside-cozy-crew",
+        "store_name": "Mast General Store",
+        "store_url": "https://www.mastgeneralstore.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Apparel",
+        "tags": [
+          "badge:buy 3 get 1"
+        ]
+      },
+      {
         "id": "166-scheels-1259-768",
         "title": "Men's Minnetonka Double Bottom Hardsole Slippers",
         "price": "84.95",
@@ -1609,18 +1622,6 @@
           "women",
           "socks"
         ]
-      },
-      {
-        "id": "3-wc-52510",
-        "title": "Thread Coffee™ Roasters – Comfort Colors Long Sleeve T-Shirt w/ Embroidery",
-        "price": "25.00",
-        "image": "https://threadcoffee.com/wp-content/uploads/2025/01/ThreadCoffee_products-9.jpg",
-        "url": "https://threadcoffee.com/product/thread-coffee-roasters-long-sleeve/",
-        "store_name": "Thread Coffee Roasters",
-        "store_url": "https://threadcoffee.com",
-        "ownership_type": "worker co-op",
-        "site_section": "Coffee & Tea",
-        "tags": []
       }
     ]
   },
@@ -1631,7 +1632,7 @@
     "products": [
       {
         "id": "133-9551282274601",
-        "title": "Seaweed Bath Gift Set - Selkie Seaweed Bath Bag, Lavender Seaweed Soap, and Wood Soap Dish",
+        "title": "Seaweed Bath Gift Set - Selkie Seaweed Bath Bag, Lavender Seaweed Soap, and Wooden Soap Dish",
         "price": "22.00",
         "available": true,
         "image": "https://cdn.shopify.com/s/files/1/0101/7328/4430/files/seaweed-bath-gift-set-selkie-seaweed-bath-bag-lavender-seaweed-soap-and-wood-soap-dish-maine-coast-sea-vegetables-151327.jpg?v=1733477420",
@@ -1670,7 +1671,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Personal Care",
+        "site_section": "Apparel",
         "tags": [
           "badge:made in usa"
         ]
@@ -1775,10 +1776,8 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Personal Care",
-        "tags": [
-          "badge:made in usa"
-        ]
+        "site_section": "Apparel",
+        "tags": []
       },
       {
         "id": "150-7315122716739",
@@ -1803,7 +1802,7 @@
         "title": "Alaffia Pure Unrefined Shea Butter, Wild Lavender 11oz",
         "price": "16.99",
         "available": true,
-        "image": "https://cdn.shopify.com/s/files/1/0041/0471/6386/files/PureUnrefinedSheaButter_NEW_WildLavender.png?v=1739933073",
+        "image": "https://cdn.shopify.com/s/files/1/0041/0471/6386/files/alaffia-pure-unrefined-shea-butter-wild-lavender-11oz.png?v=1791322217",
         "url": "https://www.alaffia.com/products/alaffia-pure-unrefined-shea-butter-wild-lavender",
         "store_name": "Alaffia",
         "store_url": "https://www.alaffia.com",
@@ -1911,7 +1910,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Home Goods & Services",
+        "site_section": "Apparel",
         "tags": [
           "badge:made in usa"
         ]
@@ -1977,7 +1976,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Home Goods & Services",
+        "site_section": "Apparel",
         "tags": []
       },
       {
@@ -2034,7 +2033,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Home Goods & Services",
+        "site_section": "Apparel",
         "tags": [
           "badge:made in usa"
         ]
@@ -2164,7 +2163,7 @@
         "store_name": "Mast General Store",
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
-        "site_section": "Food & Pantry",
+        "site_section": "Apparel",
         "tags": []
       },
       {
@@ -2257,9 +2256,7 @@
         "store_url": "https://www.mastgeneralstore.com",
         "ownership_type": "employee-owned",
         "site_section": "Apparel",
-        "tags": [
-          "badge:made in usa"
-        ]
+        "tags": []
       },
       {
         "id": "166-scheels-19300-WH-BAR-LBJ-01",
@@ -2334,7 +2331,7 @@
         "store_name": "Gardener's Supply Company",
         "store_url": "https://www.gardeners.com",
         "ownership_type": "employee-owned",
-        "site_section": "Home Goods & Services",
+        "site_section": "Home & Garden",
         "tags": []
       },
       {
