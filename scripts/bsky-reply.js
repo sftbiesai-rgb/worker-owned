@@ -230,6 +230,8 @@ async function main() {
       const waitMs = GAP_MINUTES * 60 * 1000;
       console.log(`⏳ Waiting ${fmtWait(waitMs)} before next reply...`);
       await new Promise(r => setTimeout(r, waitMs));
+      // Access tokens expire after ~2h, so log in again after each wait
+      await authenticate();
     }
   }
 
