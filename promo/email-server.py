@@ -10,7 +10,7 @@ import json
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 import re
 
@@ -143,4 +143,4 @@ if __name__ == '__main__':
     print(f"Open http://localhost:{PORT}/outreach-emails.html")
     print(f"Sending from {FROM_EMAIL}")
     print()
-    HTTPServer(('localhost', PORT), Handler).serve_forever()
+    ThreadingHTTPServer(('localhost', PORT), Handler).serve_forever()
