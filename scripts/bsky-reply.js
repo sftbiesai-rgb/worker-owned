@@ -82,10 +82,6 @@ const REPLIES = [
     text: "for anyone else canceling Prime, we built workerowned.info, a searchable marketplace of products from worker-owned co-ops and employee-owned companies",
   },
   {
-    url: 'https://bsky.app/profile/jayasaxena.com/post/3n27erzzucc2v',
-    text: "Ravenous is on our list of worker-owned media alongside Defector and Hell Gate. glad you're doing this",
-  },
-  {
     url: 'https://bsky.app/profile/klemens.bsky.social/post/3n27hxp3ke52u',
     text: "if your assistant needs somewhere to look, workerowned.info is a searchable marketplace of worker-owned and employee-owned stores. every result links straight to the shop",
   },
