@@ -142,13 +142,17 @@ function parseProducts(html) {
   for (let i = 1; i < cards.length; i++) {
     const card = cards[i];
 
-    // URL: /p/{id}/{slug} or /pid/{id}/{slug}
-    const linkMatch = card.match(/href="\/p(?:id)?\/(\d+)\/([^"]+)"\s+title="([^"]+)"/);
+    // URL: /p/{id}/{slug} (one edition) or /pid/{id}/{slug} (a title with
+    // several editions). The two id spaces are different: /p/566105 and
+    // /pid/566105 are different products, so keep the path type in the URL
+    // and the id ("pid-" prefix) instead of rewriting everything to /p/.
+    const linkMatch = card.match(/href="\/(p|pid)\/(\d+)\/([^"]+)"\s+title="([^"]+)"/);
     if (!linkMatch) continue;
 
-    const productId = linkMatch[1];
-    const slug = linkMatch[2];
-    const title = linkMatch[3]
+    const pathType = linkMatch[1];
+    const productId = pathType === 'pid' ? `pid-${linkMatch[2]}` : linkMatch[2];
+    const slug = linkMatch[3];
+    const title = linkMatch[4]
       .replace(/&amp;/g, '&')
       .replace(/&lt;/g, '<')
       .replace(/&gt;/g, '>')
@@ -202,7 +206,7 @@ function parseProducts(html) {
       title,
       price,
       image,
-      url: `${BASE}/p/${productId}/${slug}`,
+      url: `${BASE}/${pathType}/${linkMatch[2]}/${slug}`,
       tags,
       shipStatus: keepMatch[0],
     });

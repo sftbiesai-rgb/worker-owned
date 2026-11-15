@@ -311,8 +311,11 @@ async function tryBigCommerce(entry) {
         if (!pageRes.ok) continue;
         const html = await pageRes.text();
 
-        // Try JSON-LD Product schema first
+        // Try JSON-LD Product schema first. An item marked out of stock is
+        // skipped outright; it must not fall through to the OG-tag fallback
+        // below, which has no stock info (that bug listed every sold-out item).
         let found = false;
+        let outOfStock = /property="og:availability" content="(?:oos|out of stock)"/i.test(html);
         const ldMatches = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)];
         for (const m of ldMatches) {
           try {
@@ -321,7 +324,7 @@ async function tryBigCommerce(entry) {
             const offer = Array.isArray(ld.offers) ? ld.offers[0] : ld.offers;
             const price = parseFloat(offer?.price);
             if (!price || price <= 0) continue;
-            if (offer?.availability?.includes('OutOfStock')) continue;
+            if (offer?.availability?.includes('OutOfStock')) { outOfStock = true; break; }
             const image = Array.isArray(ld.image) ? ld.image[0] : ld.image;
             if (!image) continue;
 
@@ -343,7 +346,7 @@ async function tryBigCommerce(entry) {
         }
 
         // Fall back to OG meta tags if no JSON-LD
-        if (!found) {
+        if (!found && !outOfStock) {
           const ogTitle = html.match(/property="og:title" content="([^"]+)"/)?.[1];
           const ogPrice = html.match(/property="product:price:amount" content="([^"]+)"/)?.[1];
           const ogImage = html.match(/property="og:image" content="([^"]+)"/)?.[1];
@@ -578,6 +581,18 @@ async function main() {
         console.log(`\nSafety check passed: no stores lost (${oldStores.size} before, ${newStores.size} after)`);
       }
     } catch { /* no existing file, skip check */ }
+  }
+
+  // --stores-out=<file> (with --only): write just the re-scraped stores'
+  // products to a separate file and leave products.json alone, so two runs
+  // can go in parallel without overwriting each other. Merge it afterward.
+  const storesOut = process.argv.find(a => a.startsWith('--stores-out='))?.split('=')[1];
+  if (storesOut && onlyIds) {
+    const names = new Set(entries.filter(e => onlyIds.has(e.id)).map(e => e.name));
+    const mine = allProducts.filter(p => names.has(p.store_name));
+    writeFileSync(storesOut, JSON.stringify(mine));
+    console.log(`Done: wrote ${mine.length} products for ${[...names].join(', ')} to ${storesOut} (products.json untouched)`);
+    return;
   }
 
   writeFileSync(OUT_FILE, JSON.stringify(allProducts));

@@ -45,7 +45,7 @@
   "sections": {
     "food-pantry": {
       "label": "Food & Pantry",
-      "count": 5785,
+      "count": 5768,
       "storeCount": 20,
       "stores": [
         {
@@ -77,7 +77,7 @@
     },
     "books": {
       "label": "Books",
-      "count": 41169,
+      "count": 41168,
       "storeCount": 32,
       "stores": [
         {
@@ -109,7 +109,7 @@
     },
     "sporting-goods": {
       "label": "Sporting Goods & Outdoors",
-      "count": 53684,
+      "count": 55984,
       "storeCount": 5,
       "stores": [
         {
@@ -169,8 +169,8 @@
     },
     "apparel": {
       "label": "Apparel",
-      "count": 60668,
-      "storeCount": 18,
+      "count": 60606,
+      "storeCount": 17,
       "stores": [
         {
           "name": "Scheels All Sports",
@@ -233,7 +233,7 @@
     },
     "games": {
       "label": "Games",
-      "count": 6610,
+      "count": 6611,
       "storeCount": 12,
       "stores": [
         {
@@ -265,23 +265,19 @@
     },
     "tech-software": {
       "label": "Tech & Software",
-      "count": 1203,
-      "storeCount": 2,
+      "count": 1201,
+      "storeCount": 1,
       "stores": [
         {
           "name": "Scheels All Sports",
           "ownershipType": "ESOP"
-        },
-        {
-          "name": "Landry's Bicycles",
-          "ownershipType": "employee-owned"
         }
       ],
       "url": "/tech-software"
     },
     "music": {
       "label": "Music",
-      "count": 14089,
+      "count": 14156,
       "storeCount": 4,
       "stores": [
         {
@@ -305,7 +301,7 @@
     },
     "coffee-tea": {
       "label": "Coffee & Tea",
-      "count": 604,
+      "count": 603,
       "storeCount": 10,
       "stores": [
         {
@@ -389,7 +385,7 @@
     },
     "movies-tv": {
       "label": "Movies & TV",
-      "count": 4683,
+      "count": 4660,
       "storeCount": 3,
       "stores": [
         {
