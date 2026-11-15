@@ -263,7 +263,12 @@ function MarketplaceIndexPage() {
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
       <main className="flex-1 max-w-xl lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[1600px] mx-auto w-full px-5 py-8 flex flex-col">
 
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-6 mb-3">
+        <div className="relative bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-6 mb-3">
+          {/* Desktop: Quick Tool sits in the empty corner next to the logo. Phones get it at the bottom of the page instead. */}
+          <Link to="/coffee" className="hidden lg:flex absolute top-5 right-6 max-w-[250px] items-center gap-2.5 rounded-xl border border-gray-200 bg-[#f5f5f7] px-3 py-2 hover:border-[#003580] transition-colors">
+            <img src="/logo-coffee.png" alt="" width="28" height="28" className="shrink-0" />
+            <span className="text-xs text-[#003580] leading-snug"><strong>Quick Tool:</strong> worker owned coffee shops, bars, restaurants, and groceries near you!</span>
+          </Link>
           <div className="flex items-center justify-center gap-3 mb-1">
             <img src="/logo-marketplace.png" alt="Worker Owned Marketplace" width="48" height="48" className="shrink-0" />
             <h1><Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">Market Place</Link></h1>
@@ -484,7 +489,7 @@ function MarketplaceIndexPage() {
               </div>
             )}
 
-            <Link to="/coffee" className="block bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-4 mt-3 hover:border-[#003580] transition-colors">
+            <Link to="/coffee" className="block lg:hidden bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-4 mt-3 hover:border-[#003580] transition-colors">
               <div className="flex items-center justify-center gap-2.5">
                 <img src="/logo-coffee.png" alt="" width="28" height="28" className="shrink-0" />
                 <span className="text-sm text-[#003580] font-semibold"><strong>Quick Tool:</strong> worker owned coffee shops, bars, restaurants, and groceries near you!</span>
