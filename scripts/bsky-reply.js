@@ -69,6 +69,26 @@ const REPLIES = [
     url: 'https://bsky.app/profile/currentaffairs.bsky.social/post/3n256ocbyts2f',
     text: "if you're skipping Starbucks, there are a lot of worker co-op roasters that ship. Just Coffee, Equal Exchange, Slow Bloom, Thread. all on workerowned.info",
   },
+  {
+    url: 'https://bsky.app/profile/democracyop.bsky.social/post/3n2d2qtj3tc2z',
+    text: "Artisans Cooperative is worth a look. it's owned by its makers and grew out of the Etsy seller strike. we list them with other worker-owned shops at workerowned.info",
+  },
+  {
+    url: 'https://bsky.app/profile/loreleikelly.bsky.social/post/3n2di533vhk2v',
+    text: "employee-owned businesses and user-owned AI in the same research agenda. let's go",
+  },
+  {
+    url: 'https://bsky.app/profile/run-dzeiher-run.bsky.social/post/3n27ekjptak2q',
+    text: "for anyone else canceling Prime, we built workerowned.info, a searchable marketplace of products from worker-owned co-ops and employee-owned companies",
+  },
+  {
+    url: 'https://bsky.app/profile/jayasaxena.com/post/3n27erzzucc2v',
+    text: "Ravenous is on our list of worker-owned media alongside Defector and Hell Gate. glad you're doing this",
+  },
+  {
+    url: 'https://bsky.app/profile/klemens.bsky.social/post/3n27hxp3ke52u',
+    text: "if your assistant needs somewhere to look, workerowned.info is a searchable marketplace of worker-owned and employee-owned stores. every result links straight to the shop",
+  },
 ];
 const SENT_LOG = 'scripts/.bsky-sent.json';
 
@@ -86,6 +106,10 @@ function getArg(name, fallback) {
   return idx >= 0 && cliArgs[idx + 1] ? Number(cliArgs[idx + 1]) : fallback;
 }
 const GAP_MINUTES = getArg('gap', 90);
+// --gaps 21,7,64,11  per-reply waits in minutes (overrides --gap; last value repeats)
+const gapsIdx = cliArgs.indexOf('--gaps');
+const GAPS = gapsIdx >= 0 ? String(cliArgs[gapsIdx + 1] || '').split(',').filter(Boolean).map(Number) : [];
+const gapFor = i => (GAPS.length ? GAPS[Math.min(i, GAPS.length - 1)] : GAP_MINUTES);
 
 function loadSent() {
   try { return JSON.parse(fs.readFileSync(SENT_LOG, 'utf8')); } catch { return []; }
@@ -202,7 +226,7 @@ async function main() {
     for (const [i, reply] of unsent.entries()) {
       console.log(`[${i + 1}] ${reply.url}`);
       console.log(`    ${reply.text.slice(0, 120)}...`);
-      if (SEND_ALL && i < unsent.length - 1) console.log(`    ⏳ wait ${GAP_MINUTES}m`);
+      if (SEND_ALL && i < unsent.length - 1) console.log(`    ⏳ wait ${gapFor(i)}m`);
     }
     console.log('\n(dry run — nothing sent)');
     process.exit(0);
@@ -227,7 +251,7 @@ async function main() {
 
     // Wait between replies (skip after last one)
     if (SEND_ALL && i < toSend.length - 1) {
-      const waitMs = GAP_MINUTES * 60 * 1000;
+      const waitMs = gapFor(i) * 60 * 1000;
       console.log(`⏳ Waiting ${fmtWait(waitMs)} before next reply...`);
       await new Promise(r => setTimeout(r, waitMs));
       // Access tokens expire after ~2h, so log in again after each wait
