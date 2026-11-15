@@ -19,6 +19,23 @@ SMTP_PORT = 587
 FROM_EMAIL = "sftbiesai@gmail.com"
 PASSWORD_FILE = Path(__file__).parent.parent / ".gmail-app-password"
 PORT = 8777
+# Every email this server sends is logged here. A send with the same To and
+# subject as a logged one is refused, so a stale Send button on the outreach
+# page can't send the same email twice. Follow-ups use "Re: ..." subjects,
+# which don't collide with the original.
+SENT_LOG = Path(__file__).parent / ".sent-log.json"
+
+
+def load_sent_log():
+    try:
+        return json.loads(SENT_LOG.read_text())
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+
+def already_sent(to, subject):
+    key = (to.strip().lower(), subject.strip().lower())
+    return any((e['to'].lower(), e['subject'].lower()) == key for e in load_sent_log())
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -33,6 +50,15 @@ class Handler(SimpleHTTPRequestHandler):
             to = body['to']
             subject = body['subject']
             html_body = body['body_html']
+
+            if already_sent(to, subject):
+                self.send_response(409)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps({'error': f'Already sent "{subject}" to {to}. Not sending again.'}).encode())
+                print(f"  BLOCKED duplicate: {to} | {subject}")
+                return
 
             # Create plain text version
             text = re.sub(r'<a[^>]*href="([^"]*)"[^>]*>(.*?)</a>', r'\2 (\1)', html_body)
@@ -56,6 +82,11 @@ class Handler(SimpleHTTPRequestHandler):
                     server.starttls()
                     server.login(FROM_EMAIL, password)
                     server.send_message(msg)
+
+                from datetime import datetime
+                log = load_sent_log()
+                log.append({'to': to, 'subject': subject, 'date': datetime.now().isoformat(timespec='seconds')})
+                SENT_LOG.write_text(json.dumps(log, indent=1))
 
                 self.send_response(200)
                 self.send_header('Content-Type', 'application/json')
