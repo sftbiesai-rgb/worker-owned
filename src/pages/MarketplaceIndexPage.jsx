@@ -302,10 +302,10 @@ function MarketplaceIndexPage() {
           <p className="text-[11px] text-gray-400 mt-2 text-center">Results are links to company sites. We don't sell anything or earn a commission.</p>
         </div>
 
-        <Link to="/holiday-gifts" className="block rounded-2xl border-2 border-red-700 bg-gradient-to-r from-red-50 to-green-50 w-full px-4 py-3 mb-3 text-center hover:border-red-800 hover:shadow-md transition-all">
+        <Link to="/holiday-gifts" className="block rounded-2xl border-2 border-[#1e3a5f] bg-gradient-to-r from-sky-50 to-rose-50 w-full px-4 py-3 mb-3 text-center hover:border-[#0f2440] hover:shadow-md transition-all">
           <span className="text-sm font-extrabold tracking-tight uppercase">
-            <span className="text-red-700">🎁 Holiday Gift Guide: </span>
-            <span className="text-green-800">Gifts From Worker-Owned Companies</span>
+            <span className="text-rose-700">🎁 Holiday Gift Guide: </span>
+            <span className="text-[#1e3a5f]">Gifts From Worker-Owned Companies</span>
           </span>
         </Link>
 
