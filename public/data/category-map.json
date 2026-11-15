@@ -45,7 +45,7 @@
   "sections": {
     "food-pantry": {
       "label": "Food & Pantry",
-      "count": 5768,
+      "count": 5618,
       "storeCount": 20,
       "stores": [
         {
@@ -69,15 +69,15 @@
           "ownershipType": "ESOP"
         },
         {
-          "name": "Thrifty White Pharmacy",
-          "ownershipType": "ESOP"
+          "name": "The Local Butcher Shop",
+          "ownershipType": "worker co-op"
         }
       ],
       "url": "/food-pantry"
     },
     "books": {
       "label": "Books",
-      "count": 41168,
+      "count": 41158,
       "storeCount": 32,
       "stores": [
         {
@@ -137,7 +137,7 @@
     },
     "home-goods": {
       "label": "Home Goods & Services",
-      "count": 16164,
+      "count": 16098,
       "storeCount": 13,
       "stores": [
         {
@@ -201,7 +201,7 @@
     },
     "personal-care": {
       "label": "Personal Care",
-      "count": 8036,
+      "count": 6016,
       "storeCount": 7,
       "stores": [
         {
@@ -233,7 +233,7 @@
     },
     "games": {
       "label": "Games",
-      "count": 6611,
+      "count": 6552,
       "storeCount": 12,
       "stores": [
         {
@@ -257,8 +257,8 @@
           "ownershipType": "employee-owned"
         },
         {
-          "name": "Thrifty White Pharmacy",
-          "ownershipType": "ESOP"
+          "name": "Zia Records",
+          "ownershipType": "employee-owned"
         }
       ],
       "url": "/games"
