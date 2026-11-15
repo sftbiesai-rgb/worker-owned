@@ -26,7 +26,7 @@ node scripts/scrape-microcosm.mjs --merge-only
 node scripts/scrape-bullmoose.mjs --merge-only
 ```
 
-**Landry's Bicycles** (done — 15,305 products)
+**Landry's Bicycles** (partial — 5,475 verified products, Nov 15 2026; full re-scrape at PARALLEL 5 another day, stop if 403s)
 ```bash
 node scripts/scrape-landrys.mjs --merge-only
 ```
@@ -91,3 +91,9 @@ git push
 | `microcosm-scrape-checkpoint.json` | Microcosm | `/tmp/` + `checkpoints/` |
 | `scheels-categories-checkpoint.json` | Scheels (no prices) | `/tmp/` + `checkpoints/` |
 | `scheels-enrich-checkpoint.json` | Scheels (with prices) | `/tmp/` + `checkpoints/` |
+
+## Nov 15 2026 refresh
+- Thrifty White 4,874 and King Arthur 797 (BigCommerce out-of-stock items now skipped; IDs are URL-slug based).
+- Zia 6,350 (keeps /pid vs /p id spaces). PM Press uses scrape-pmpress.mjs (UnifyCart). 1620 Workwear removed.
+- `scrape-products.mjs --only=<ids> --stores-out=<file>` writes those stores to a separate file and leaves products.json alone.
+- Catalog total ~213,151.
