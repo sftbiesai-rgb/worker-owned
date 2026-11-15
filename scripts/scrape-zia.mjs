@@ -80,14 +80,16 @@ async function fetchSearch(term) {
     res = await fetchWithRetry(searchUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } });
   } catch (err) {
     console.log(`  FAIL: ${err.code || err.message}`);
+    failedTerms++;
     return [];
   }
-  if (!res.ok) return [];
+  if (!res.ok) { failedTerms++; return []; }
 
   const html = await res.text();
   const searchId = html.match(/SearchId:\s*'([^']+)'/)?.[1];
   if (!searchId) {
     console.log(`  FAIL: no SearchId`);
+    failedTerms++;
     return [];
   }
 
@@ -128,6 +130,11 @@ async function fetchSearch(term) {
   return products;
 }
 
+// Running tally of shipping-status decisions, printed at the end of the run.
+// If skipped_no_span drops to ~0, the card HTML probably changed: investigate.
+const avStats = { av10: 0, av11: 0, av12: 0, av21: 0, av40: 0, skipped_av30: 0, skipped_av50: 0, skipped_no_span: 0 };
+let failedTerms = 0;
+
 function parseProducts(html) {
   const products = [];
   const cards = html.split(/class="producttitlelink product-grid-variant"/);
@@ -147,6 +154,21 @@ function parseProducts(html) {
       .replace(/&gt;/g, '>')
       .replace(/&#39;/g, "'")
       .replace(/&quot;/g, '"');
+
+    // Same allowlist as scrape-bullmoose.mjs (same FieldStack card HTML): keep
+    // only cards whose Shipping line shows In Stock (av10/av11), Limited
+    // availability (av12), Special Order (av21), or Pre-order (av40). Items
+    // that can't ship have NO Shipping line at all (pickup only), so a
+    // missing span means skip.
+    const shipCls = card.match(/Shipping[^<]*<span class="av\s+([^"]+)"/s)?.[1] || '';
+    const keepMatch = shipCls.match(/av10|av11|av12|av21|av40/);
+    if (!keepMatch) {
+      if (shipCls.includes('av30')) avStats.skipped_av30++;
+      else if (shipCls.includes('av50')) avStats.skipped_av50++;
+      else avStats.skipped_no_span++;
+      continue;
+    }
+    avStats[keepMatch[0]]++;
 
     // Price from itemprop="price"
     const priceMatch = card.match(/itemprop="price">([^<]+)</);
@@ -182,6 +204,7 @@ function parseProducts(html) {
       image,
       url: `${BASE}/p/${productId}/${slug}`,
       tags,
+      shipStatus: keepMatch[0],
     });
   }
 
@@ -238,10 +261,22 @@ async function main() {
   }
 
   console.log(`\nTotal: ${byId.size} unique products`);
+  if (!MERGE_ONLY) {
+    console.log(`Shipping-status audit: kept ${JSON.stringify({ av10: avStats.av10, av11: avStats.av11, av12: avStats.av12, av21: avStats.av21, av40: avStats.av40 })}`);
+    console.log(`                    skipped ${JSON.stringify({ av30: avStats.skipped_av30, av50: avStats.skipped_av50, no_shipping_line: avStats.skipped_no_span })}`);
+  }
 
   if (DRY_RUN) {
     console.log('Dry run — not writing to file');
     return;
+  }
+
+  // Guardrails: the merge below replaces every Zia product, so a partial
+  // scrape (blocked search, changed HTML) would gut the store
+  if (failedTerms > 10 || byId.size < 2000) {
+    console.error(`\nABORTING MERGE: scrape looks partial (${failedTerms} failed terms, ${byId.size} products).`);
+    console.error(`Checkpoint preserved at ${CHECKPOINT_FILE}. Investigate, then re-run or use --merge-only.`);
+    process.exit(1);
   }
 
   // Format for products.json
@@ -263,7 +298,7 @@ async function main() {
   const existing = JSON.parse(readFileSync(PRODUCTS_FILE, 'utf8'));
   const nonZia = existing.filter(p => p.store_name !== 'Zia Records');
   const final = [...nonZia, ...ziaProducts];
-  writeFileSync(PRODUCTS_FILE, JSON.stringify(final, null, 2));
+  writeFileSync(PRODUCTS_FILE, JSON.stringify(final));
   console.log(`\nWrote ${final.length} total products to products.json`);
   console.log(`  (${ziaProducts.length} Zia Records from this scrape)`);
   console.log(`  (${nonZia.length} other stores)`);

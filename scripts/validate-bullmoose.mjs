@@ -129,7 +129,7 @@ function parseProducts(html) {
     // items render NO "Shipping:" line at all, so a missing span means skip.
     const shipMatch = card.match(/Shipping[^<]*<span class="av\s+([^"]+)"/s);
     const shipCls = shipMatch?.[1] || '';
-    if (!/av10|av11|av21|av40/.test(shipCls)) continue;
+    if (!/av10|av11|av12|av21|av40/.test(shipCls)) continue;
     const imgMatch = card.match(/data-src="([^"]+)"/);
     let image = null;
     if (imgMatch && !imgMatch[1].includes('ArtNotAvailable')) {

@@ -301,7 +301,7 @@ async function fetchCategory(cat) {
 }
 
 // Running tally of shipping-status decisions, logged at end of run for auditing.
-const avStats = { av10: 0, av11: 0, av21: 0, av40: 0, skipped_av30: 0, skipped_av50: 0, skipped_no_span: 0 };
+const avStats = { av10: 0, av11: 0, av12: 0, av21: 0, av40: 0, skipped_av30: 0, skipped_av50: 0, skipped_no_span: 0 };
 // Sample of skipped items (with reason) for pilot verification.
 const skippedSamples = [];
 
@@ -321,12 +321,13 @@ function parseProducts(html, categoryTag) {
 
     // Check SHIPPING availability (not Curbside Pickup — items can be out of stock
     // locally but still shippable). Keep only cards whose Shipping line shows
-    // In Stock (av10/av11), Special Order (av21), or Pre-order (av40).
+    // In Stock (av10/av11), Limited availability (av12), Special Order (av21),
+    // or Pre-order (av40).
     // IMPORTANT: fully-unshippable items render NO "Shipping:" line at all (only a
     // Pickup line with av50), so a missing span means unshippable — skip it.
     const shipMatch = card.match(/Shipping[^<]*<span class="av\s+([^"]+)"/s);
     const shipCls = shipMatch?.[1] || '';
-    const keepMatch = shipCls.match(/av10|av11|av21|av40/);
+    const keepMatch = shipCls.match(/av10|av11|av12|av21|av40/);
     if (!keepMatch) {
       if (shipCls.includes('av30')) avStats.skipped_av30++;
       else if (shipCls.includes('av50')) avStats.skipped_av50++;
@@ -372,7 +373,7 @@ function parseProducts(html, categoryTag) {
       url: `${BASE}/p/${productId}/${slug}`,
       format,
       tags,
-      shipStatus: keepMatch[0], // av10/av11 = In Stock, av21 = Special Order, av40 = Pre-order
+      shipStatus: keepMatch[0], // av10/av11 = In Stock, av12 = Limited, av21 = Special Order, av40 = Pre-order
     });
   }
 
@@ -786,7 +787,7 @@ async function main() {
   }
 
   console.log(`\nTotal: ${byId.size} unique products`);
-  console.log(`Shipping-status audit: kept ${JSON.stringify({ av10: avStats.av10, av11: avStats.av11, av21: avStats.av21, av40: avStats.av40 })}`);
+  console.log(`Shipping-status audit: kept ${JSON.stringify({ av10: avStats.av10, av11: avStats.av11, av12: avStats.av12, av21: avStats.av21, av40: avStats.av40 })}`);
   console.log(`                    skipped ${JSON.stringify({ av30: avStats.skipped_av30, av50: avStats.skipped_av50, no_shipping_line: avStats.skipped_no_span })}`);
 
   if (PILOT) {

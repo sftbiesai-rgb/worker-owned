@@ -77,7 +77,7 @@
     },
     "books": {
       "label": "Books",
-      "count": 41640,
+      "count": 41083,
       "storeCount": 32,
       "stores": [
         {
@@ -93,12 +93,12 @@
           "ownershipType": "worker co-op"
         },
         {
-          "name": "Zia Records",
-          "ownershipType": "employee-owned"
-        },
-        {
           "name": "PM Press",
           "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Zia Records",
+          "ownershipType": "employee-owned"
         },
         {
           "name": "Mast General Store",
@@ -109,7 +109,7 @@
     },
     "music": {
       "label": "Music",
-      "count": 18085,
+      "count": 14220,
       "storeCount": 4,
       "stores": [
         {
@@ -133,7 +133,7 @@
     },
     "movies-tv": {
       "label": "Movies & TV",
-      "count": 5680,
+      "count": 4770,
       "storeCount": 3,
       "stores": [
         {
@@ -153,7 +153,7 @@
     },
     "games": {
       "label": "Games",
-      "count": 6522,
+      "count": 6412,
       "storeCount": 12,
       "stores": [
         {
@@ -177,15 +177,15 @@
           "ownershipType": "employee-owned"
         },
         {
-          "name": "Zia Records",
-          "ownershipType": "employee-owned"
+          "name": "Thrifty White Pharmacy",
+          "ownershipType": "ESOP"
         }
       ],
       "url": "/games"
     },
     "apparel": {
       "label": "Apparel",
-      "count": 60691,
+      "count": 60659,
       "storeCount": 18,
       "stores": [
         {
@@ -217,8 +217,8 @@
     },
     "tech-software": {
       "label": "Tech & Software",
-      "count": 1222,
-      "storeCount": 4,
+      "count": 1215,
+      "storeCount": 3,
       "stores": [
         {
           "name": "Scheels All Sports",
@@ -226,10 +226,6 @@
         },
         {
           "name": "Bull Moose",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Zia Records",
           "ownershipType": "employee-owned"
         },
         {
@@ -331,18 +327,6 @@
       ],
       "url": "/personal-care"
     },
-    "art-prints": {
-      "label": "Art & Prints",
-      "count": 28,
-      "storeCount": 1,
-      "stores": [
-        {
-          "name": "PM Press",
-          "ownershipType": "worker co-op"
-        }
-      ],
-      "url": "/art-prints"
-    },
     "coffee-tea": {
       "label": "Coffee & Tea",
       "count": 604,
@@ -414,6 +398,18 @@
         }
       ],
       "url": "/beer-brewing"
+    },
+    "art-prints": {
+      "label": "Art & Prints",
+      "count": 126,
+      "storeCount": 1,
+      "stores": [
+        {
+          "name": "PM Press",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/art-prints"
     }
   }
 }

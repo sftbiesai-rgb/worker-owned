@@ -30,7 +30,7 @@ async function checkShippable(productId) {
     if (shipDivs.length === 0) return null; // no shipping data
 
     // Shippable if ANY store shows av10, av11, av21, or av40 for shipping
-    const canShip = shipDivs.some(m => /av10|av11|av21|av40/.test(m[1]));
+    const canShip = shipDivs.some(m => /av10|av11|av12|av21|av40/.test(m[1]));
     return canShip;
   } catch {
     return null;

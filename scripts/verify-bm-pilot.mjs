@@ -24,7 +24,7 @@ async function checkShippable(productId) {
     const html = json.data?.data || '';
     const shipDivs = [...html.matchAll(/class="store-ship"[\s\S]*?<span class="av\s+([^"]+)"/g)];
     if (shipDivs.length === 0) return null;
-    return shipDivs.some(m => /av10|av11|av21|av40/.test(m[1]));
+    return shipDivs.some(m => /av10|av11|av12|av21|av40/.test(m[1]));
   } catch {
     return null;
   }

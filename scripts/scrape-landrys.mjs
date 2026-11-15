@@ -253,6 +253,11 @@ async function main() {
 }
 
 function mergeIntoProductsJson(products, entry) {
+  // The merge replaces every Landry's product, so refuse a partial scrape
+  if (products.size < 5000) {
+    console.error(`ABORTING MERGE: only ${products.size} products. Checkpoint at ${CHECKPOINT_FILE}.`);
+    process.exit(1);
+  }
   const formatted = [...products.values()].map(p => ({
     id: `${entry.id}-landrys-${p.id}`,
     title: p.title,
@@ -270,7 +275,7 @@ function mergeIntoProductsJson(products, entry) {
   const existing = JSON.parse(readFileSync(PRODUCTS_FILE, 'utf8'));
   const others = existing.filter(p => p.store_name !== "Landry's Bicycles");
   const final = [...others, ...formatted];
-  writeFileSync(PRODUCTS_FILE, JSON.stringify(final, null, 2));
+  writeFileSync(PRODUCTS_FILE, JSON.stringify(final));
 
   console.log(`\nWrote ${final.length} total products to products.json`);
   console.log(`  (${formatted.length} Landry's from this scrape)`);
