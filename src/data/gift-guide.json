@@ -610,108 +610,12 @@
     "blurb": "Christmas records from employee-owned record stores.",
     "products": [
       {
-        "id": "176-bm-38822718",
-        "title": "Bing Crosby/Ultimate Christmas@2LP",
-        "price": "32.97",
-        "available": true,
-        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38822718-T.JPG",
-        "url": "https://www.bullmoose.com/p/38822718/bing-crosby-ultimate-christmas-2lp",
-        "store_name": "Bull Moose",
-        "store_url": "https://www.bullmoose.com",
-        "ownership_type": "employee-owned",
-        "site_section": "Books",
-        "tags": [
-          "books",
-          "vinyl lp"
-        ]
-      },
-      {
         "id": "176-bm-38086700",
         "title": "Vince Guaraldi Trio/Peanuts Greatest Hits (Picture Disc)@75th Anniversary",
         "price": "32.97",
         "available": true,
         "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38086700-T.JPG",
         "url": "https://www.bullmoose.com/p/38086700/vince-guaraldi-trio-peanuts-greatest-hits-picture-disc-75th-anniversary",
-        "store_name": "Bull Moose",
-        "store_url": "https://www.bullmoose.com",
-        "ownership_type": "employee-owned",
-        "site_section": "Music",
-        "tags": [
-          "music",
-          "vinyl lp"
-        ]
-      },
-      {
-        "id": "176-bm-38884855",
-        "title": "Earth, Wind & Fire/Holiday (Translucent Ruby Vinyl)",
-        "price": "24.97",
-        "available": true,
-        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38884855-T.JPG",
-        "url": "https://www.bullmoose.com/p/38884855/earth-wind-fire-holiday-translucent-ruby-vinyl",
-        "store_name": "Bull Moose",
-        "store_url": "https://www.bullmoose.com",
-        "ownership_type": "employee-owned",
-        "site_section": "Music",
-        "tags": [
-          "music",
-          "vinyl lp"
-        ]
-      },
-      {
-        "id": "176-bm-38884850",
-        "title": "Elvis Presley/Christmas Peace@2LP",
-        "price": "34.97",
-        "available": true,
-        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38884850-T.JPG",
-        "url": "https://www.bullmoose.com/p/38884850/elvis-presley-christmas-peace-2lp",
-        "store_name": "Bull Moose",
-        "store_url": "https://www.bullmoose.com",
-        "ownership_type": "employee-owned",
-        "site_section": "Music",
-        "tags": [
-          "music",
-          "vinyl lp"
-        ]
-      },
-      {
-        "id": "176-bm-38187386",
-        "title": "Bing Crosby & David Bowie/Peace On Earth / Little Drummer Boy (Picture Disc)",
-        "price": "25.97",
-        "available": true,
-        "image": "https://cache.fieldstackintelligence.com/images/2616/13083725-T.JPG",
-        "url": "https://www.bullmoose.com/p/38187386/bing-crosby-david-bowie-peace-on-earth-little-drummer-boy-picture-disc",
-        "store_name": "Bull Moose",
-        "store_url": "https://www.bullmoose.com",
-        "ownership_type": "employee-owned",
-        "site_section": "Music",
-        "tags": [
-          "music",
-          "vinyl 12&quot;"
-        ]
-      },
-      {
-        "id": "176-bm-38884848",
-        "title": "Platinum Christmas/Platinum Christmas (Sugarplum Sparkle Vinyl)",
-        "price": "23.97",
-        "available": true,
-        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38884848-T.JPG",
-        "url": "https://www.bullmoose.com/p/38884848/platinum-christmas-platinum-christmas-sugarplum-sparkle-vinyl",
-        "store_name": "Bull Moose",
-        "store_url": "https://www.bullmoose.com",
-        "ownership_type": "employee-owned",
-        "site_section": "Music",
-        "tags": [
-          "music",
-          "vinyl lp"
-        ]
-      },
-      {
-        "id": "176-bm-38884857",
-        "title": "Johnny Mathis/Christmas Essentials",
-        "price": "22.97",
-        "available": true,
-        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38884857-T.JPG",
-        "url": "https://www.bullmoose.com/p/38884857/johnny-mathis-christmas-essentials",
         "store_name": "Bull Moose",
         "store_url": "https://www.bullmoose.com",
         "ownership_type": "employee-owned",
@@ -770,22 +674,6 @@
         ]
       },
       {
-        "id": "176-bm-38822724",
-        "title": "Bing Crosby/Ultimate Christmas",
-        "price": "13.97",
-        "available": true,
-        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38822724-T.JPG",
-        "url": "https://www.bullmoose.com/p/38822724/bing-crosby-ultimate-christmas",
-        "store_name": "Bull Moose",
-        "store_url": "https://www.bullmoose.com",
-        "ownership_type": "employee-owned",
-        "site_section": "Books",
-        "tags": [
-          "books",
-          "audio cd"
-        ]
-      },
-      {
         "id": "176-bm-35530208",
         "title": "Dolly Parton/Holly Dolly Christmas (White Vinyl)@2LP",
         "price": "34.97",
@@ -799,6 +687,118 @@
         "tags": [
           "music",
           "vinyl lp"
+        ]
+      },
+      {
+        "id": "176-bm-38938887",
+        "title": "Sufjan Stevens/Worst Christmas Ever! (Red Vinyl)",
+        "price": "24.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/2649/13248225-T.JPG",
+        "url": "https://www.bullmoose.com/p/38938887/sufjan-stevens-worst-christmas-ever-red-vinyl",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl lp"
+        ]
+      },
+      {
+        "id": "176-bm-38409287",
+        "title": "Home Alone/Soundtrack (Christmas Conetto Vinyl)@John Williams",
+        "price": "72.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/38409287-T.JPG",
+        "url": "https://www.bullmoose.com/p/38409287/home-alone-soundtrack-christmas-conetto-vinyl-john-williams",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl lp"
+        ]
+      },
+      {
+        "id": "176-bm-37430782",
+        "title": "Jason Isbell/Foxes In The Snow (Gold Vinyl)",
+        "price": "24.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/37430782-T.JPG",
+        "url": "https://www.bullmoose.com/p/37430782/jason-isbell-foxes-in-the-snow-gold-vinyl",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl lp"
+        ]
+      },
+      {
+        "id": "176-bm-35529164",
+        "title": "Dolly Parton/Home For Christmas",
+        "price": "22.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/1899/9497272-T.JPG",
+        "url": "https://www.bullmoose.com/p/35529164/dolly-parton-home-for-christmas",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl lp"
+        ]
+      },
+      {
+        "id": "177-zia-15366894",
+        "title": "Punk Goes Christmas/Punk Goes Christmas (Ruby Red Vinyl)@LP",
+        "price": "25.99",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/1935/9676980-T.JPG",
+        "url": "https://www.ziarecords.com/p/15366894/punk-goes-christmas-punk-goes-christmas-ruby-red-vinyl-lp",
+        "store_name": "Zia Records",
+        "store_url": "https://www.ziarecords.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "Vinyl LP"
+        ]
+      },
+      {
+        "id": "176-bm-34671505",
+        "title": "Kenny Rogers & Dolly Parton/Once Upon A Christmas",
+        "price": "22.97",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/Bullmoose/34671505-T.JPG",
+        "url": "https://www.bullmoose.com/p/34671505/kenny-rogers-dolly-parton-once-upon-a-christmas",
+        "store_name": "Bull Moose",
+        "store_url": "https://www.bullmoose.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "vinyl lp"
+        ]
+      },
+      {
+        "id": "177-zia-16392227",
+        "title": "Jackson 5/Santa Claus Is Comin' To Town (Red Vinyl)@7\" Single",
+        "price": "14.99",
+        "available": true,
+        "image": "https://cache.fieldstackintelligence.com/images/2616/13084373-T.JPG",
+        "url": "https://www.ziarecords.com/p/16392227/jackson-5-santa-claus-is-comin-to-town-red-vinyl-7-single",
+        "store_name": "Zia Records",
+        "store_url": "https://www.ziarecords.com",
+        "ownership_type": "employee-owned",
+        "site_section": "Music",
+        "tags": [
+          "music",
+          "Vinyl 7&quot;"
         ]
       }
     ]
@@ -1091,7 +1091,7 @@
       },
       {
         "id": "176-bm-23713210",
-        "title": "Splendor/Board Game",
+        "title": "SPLENDOR/BOARD GAME",
         "price": "39.97",
         "available": true,
         "image": "https://cache.fieldstackintelligence.com/images/1267/6336174-T.JPG",
@@ -1117,9 +1117,8 @@
         "ownership_type": "employee-owned",
         "site_section": "Games",
         "tags": [
-          "video games",
-          "game - board game",
-          "board games"
+          "board games",
+          "game - board game"
         ]
       },
       {
@@ -1134,9 +1133,8 @@
         "ownership_type": "employee-owned",
         "site_section": "Games",
         "tags": [
-          "video games",
-          "game - board game",
-          "board games"
+          "board games",
+          "game - board game"
         ]
       },
       {

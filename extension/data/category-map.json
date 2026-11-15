@@ -77,7 +77,7 @@
     },
     "books": {
       "label": "Books",
-      "count": 41083,
+      "count": 41169,
       "storeCount": 32,
       "stores": [
         {
@@ -106,134 +106,6 @@
         }
       ],
       "url": "/books"
-    },
-    "music": {
-      "label": "Music",
-      "count": 14220,
-      "storeCount": 4,
-      "stores": [
-        {
-          "name": "Bull Moose",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Zia Records",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "PM Press",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Tape Trade",
-          "ownershipType": "worker-owned"
-        }
-      ],
-      "url": "/music"
-    },
-    "movies-tv": {
-      "label": "Movies & TV",
-      "count": 4770,
-      "storeCount": 3,
-      "stores": [
-        {
-          "name": "Bull Moose",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Zia Records",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "PM Press",
-          "ownershipType": "worker co-op"
-        }
-      ],
-      "url": "/movies-tv"
-    },
-    "games": {
-      "label": "Games",
-      "count": 6412,
-      "storeCount": 12,
-      "stores": [
-        {
-          "name": "Scheels All Sports",
-          "ownershipType": "ESOP"
-        },
-        {
-          "name": "Bull Moose",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "TableTop Gaming",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Microcosm Publishing",
-          "ownershipType": "worker-owned"
-        },
-        {
-          "name": "Mast General Store",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Thrifty White Pharmacy",
-          "ownershipType": "ESOP"
-        }
-      ],
-      "url": "/games"
-    },
-    "apparel": {
-      "label": "Apparel",
-      "count": 60659,
-      "storeCount": 18,
-      "stores": [
-        {
-          "name": "Scheels All Sports",
-          "ownershipType": "ESOP"
-        },
-        {
-          "name": "Mast General Store",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Tradehome Shoes",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Eileen Fisher",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Dansko",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Landry's Bicycles",
-          "ownershipType": "employee-owned"
-        }
-      ],
-      "url": "/apparel"
-    },
-    "tech-software": {
-      "label": "Tech & Software",
-      "count": 1215,
-      "storeCount": 3,
-      "stores": [
-        {
-          "name": "Scheels All Sports",
-          "ownershipType": "ESOP"
-        },
-        {
-          "name": "Bull Moose",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Landry's Bicycles",
-          "ownershipType": "employee-owned"
-        }
-      ],
-      "url": "/tech-software"
     },
     "sporting-goods": {
       "label": "Sporting Goods & Outdoors",
@@ -295,6 +167,38 @@
       ],
       "url": "/home-goods"
     },
+    "apparel": {
+      "label": "Apparel",
+      "count": 60668,
+      "storeCount": 18,
+      "stores": [
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Tradehome Shoes",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Eileen Fisher",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Dansko",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Landry's Bicycles",
+          "ownershipType": "employee-owned"
+        }
+      ],
+      "url": "/apparel"
+    },
     "personal-care": {
       "label": "Personal Care",
       "count": 8036,
@@ -326,6 +230,78 @@
         }
       ],
       "url": "/personal-care"
+    },
+    "games": {
+      "label": "Games",
+      "count": 6610,
+      "storeCount": 12,
+      "stores": [
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "TableTop Gaming",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Microcosm Publishing",
+          "ownershipType": "worker-owned"
+        },
+        {
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Thrifty White Pharmacy",
+          "ownershipType": "ESOP"
+        }
+      ],
+      "url": "/games"
+    },
+    "tech-software": {
+      "label": "Tech & Software",
+      "count": 1203,
+      "storeCount": 2,
+      "stores": [
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Landry's Bicycles",
+          "ownershipType": "employee-owned"
+        }
+      ],
+      "url": "/tech-software"
+    },
+    "music": {
+      "label": "Music",
+      "count": 14089,
+      "storeCount": 4,
+      "stores": [
+        {
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Zia Records",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "PM Press",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Tape Trade",
+          "ownershipType": "worker-owned"
+        }
+      ],
+      "url": "/music"
     },
     "coffee-tea": {
       "label": "Coffee & Tea",
@@ -410,6 +386,26 @@
         }
       ],
       "url": "/art-prints"
+    },
+    "movies-tv": {
+      "label": "Movies & TV",
+      "count": 4683,
+      "storeCount": 3,
+      "stores": [
+        {
+          "name": "Bull Moose",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Zia Records",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "PM Press",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/movies-tv"
     }
   }
 }

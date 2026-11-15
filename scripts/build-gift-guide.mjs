@@ -2,7 +2,7 @@
 // Builds src/data/gift-guide.json for the /holiday-gifts page from
 // hand-picked product IDs in products.json.
 //
-// Bull Moose picks must be shipping In Stock (av10/av11), not Special Order,
+// Bull Moose and Zia picks must be shipping In Stock (av10/av11), not Special Order,
 // and every image must load. Items that fail either check are dropped.
 //
 // Usage: node scripts/build-gift-guide.mjs
@@ -61,6 +61,9 @@ const SECTIONS = [
       '176-bm-34686415', '176-bm-36732996', '177-zia-17165694', '176-bm-38885184',
       '176-bm-38844830', '177-zia-14638779',
       '176-bm-38822724', '176-bm-13843292', '176-bm-35572014', '176-bm-35530208', '176-bm-38691865',
+      '176-bm-20628009', '176-bm-35192684', '176-bm-38938887', '176-bm-38409287',
+      '176-bm-38235473', '176-bm-37430782', '176-bm-35529164', '177-zia-15366894',
+      '176-bm-34671505', '177-zia-16392227', '176-bm-35520824', '176-bm-35450854', '176-bm-36947845',
     ],
   },
   {
@@ -171,9 +174,10 @@ const sleep = ms => new Promise(r => setTimeout(r, ms))
 
 // Same shipping-status logic as check-bm-availability.mjs, but only av10/av11
 // (In Stock) count. Special Order and pre-orders are dropped from the guide.
-async function bullMooseInStock(productId) {
+// Bull Moose and Zia are both FieldStack stores with the same endpoint.
+async function fieldStackInStock(origin, productId) {
   try {
-    const res = await fetch(`https://www.bullmoose.com/availabilitydetail/${productId}/0`, {
+    const res = await fetch(`${origin}/availabilitydetail/${productId}/0`, {
       headers: { 'User-Agent': 'Mozilla/5.0', 'X-Requested-With': 'XMLHttpRequest' },
     })
     if (!res.ok) return false
@@ -206,8 +210,9 @@ for (const section of SECTIONS) {
     const p = byId.get(id)
     if (!p) { console.log(`  MISSING ${section.id}: ${id}`); continue }
     if (p.available === false) { console.log(`  SOLD OUT ${section.id}: ${p.title}`); continue }
-    if (p.store_name === 'Bull Moose') {
-      const inStock = await bullMooseInStock(id.replace('176-bm-', ''))
+    const fieldStack = { 'Bull Moose': 'https://www.bullmoose.com', 'Zia Records': 'https://www.ziarecords.com' }[p.store_name]
+    if (fieldStack) {
+      const inStock = await fieldStackInStock(fieldStack, id.replace(/^\d+-(bm|zia)-/, ''))
       await sleep(300)
       if (!inStock) { console.log(`  NOT IN STOCK ${section.id}: ${p.title}`); continue }
     }

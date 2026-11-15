@@ -26,7 +26,7 @@ const DRY_RUN = process.argv.includes('--dry-run');
 const RESUME = process.argv.includes('--resume');
 const MERGE_ONLY = process.argv.includes('--merge-only');
 
-const PARALLEL = 10;
+const PARALLEL = 5;
 const DELAY_MS = 200;
 const CHECKPOINT_INTERVAL = 200;
 const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
@@ -119,9 +119,27 @@ async function fetchSitemapUrls() {
   return allUrls;
 }
 
-async function scrapeProduct(url, retries = 2) {
+// HTTP status counts for the run. A wave of 429/5xx means we're being
+// rate-limited; those URLs are returned as FAILED and left for --resume.
+const statusCounts = {};
+const FAILED = Symbol('failed');
+const BLOCKED = Symbol('blocked');
+const BLOCK_LIMIT = 25;
+
+async function scrapeProduct(url, retries = 3) {
   try {
     const res = await fetchWithTimeout(url);
+    statusCounts[res.status] = (statusCounts[res.status] || 0) + 1;
+    // 403 means Landry's has blocked us. Don't retry or work around it:
+    // count it so the run stops (see BLOCK_LIMIT) and nothing gets merged.
+    if (res.status === 403) return BLOCKED;
+    if (res.status === 429 || res.status >= 500) {
+      if (retries > 0) {
+        await new Promise(r => setTimeout(r, 10000 * (4 - retries)));
+        return scrapeProduct(url, retries - 1);
+      }
+      return FAILED;
+    }
     if (!res.ok) return null;
     const html = await res.text();
 
@@ -141,12 +159,14 @@ async function scrapeProduct(url, retries = 2) {
     const title = data.name;
     if (!title) return null;
 
-    // Price from offers
-    const price = data.offers?.price ?? data.offers?.[0]?.price;
+    // Price from offers. Items with sizes/colors use an AggregateOffer with
+    // lowPrice instead of price; list them at the low ("from") price.
+    const offer = Array.isArray(data.offers) ? data.offers[0] : data.offers;
+    const price = offer?.price ?? offer?.lowPrice;
     if (!price) return null;
 
     // Availability
-    const availability = data.offers?.availability ?? data.offers?.[0]?.availability ?? '';
+    const availability = offer?.availability ?? '';
     const inStock = availability.includes('InStock');
     if (!inStock) return null;
 
@@ -168,7 +188,7 @@ async function scrapeProduct(url, retries = 2) {
       await new Promise(r => setTimeout(r, 2000));
       return scrapeProduct(url, retries - 1);
     }
-    return null;
+    return FAILED;
   }
 }
 
@@ -201,6 +221,8 @@ async function main() {
   let processed = 0;
   let found = products.size;
   let skipped = 0;
+  let failed = 0;
+  let blocked = 0;
   const startTime = Date.now();
 
   for (let i = 0; i < todoUrls.length; i += PARALLEL) {
@@ -210,8 +232,10 @@ async function main() {
     for (let j = 0; j < results.length; j++) {
       const result = results[j];
       const url = batch[j];
-      completedUrls.add(url);
       processed++;
+      if (result === BLOCKED) { blocked++; continue; }
+      if (result === FAILED) { failed++; continue; }
+      completedUrls.add(url);
 
       if (result) {
         products.set(result.id, result);
@@ -228,9 +252,15 @@ async function main() {
       const pct = ((processed / todoUrls.length) * 100).toFixed(1);
       process.stdout.write(
         `\r  ${processed}/${todoUrls.length} (${pct}%) | ` +
-        `${found} found, ${skipped} skipped | ` +
+        `${found} found, ${skipped} skipped, ${failed} failed | ` +
         `${rate.toFixed(1)}/s | ~${Math.round(remaining / 60)}min left   `
       );
+    }
+
+    if (blocked >= BLOCK_LIMIT) {
+      saveCheckpoint(products, completedUrls);
+      console.error(`\n\nSTOPPING: Landry's returned 403 (blocked) ${blocked} times. Not merging. Try again another day.`);
+      process.exit(1);
     }
 
     if (processed % CHECKPOINT_INTERVAL === 0) {
@@ -242,7 +272,8 @@ async function main() {
 
   console.log('\n');
   saveCheckpoint(products, completedUrls);
-  console.log(`Scrape complete: ${products.size} products found`);
+  console.log(`Scrape complete: ${products.size} products found, ${failed} URLs failed (rerun with --resume)`);
+  console.log(`HTTP statuses: ${JSON.stringify(statusCounts)}`);
 
   if (DRY_RUN) {
     console.log('Dry run — not writing to products.json');
