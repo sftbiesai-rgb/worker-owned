@@ -86,7 +86,7 @@ function StoreProductsPage() {
 
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
-      <main className="flex-1 max-w-xl lg:max-w-4xl mx-auto w-full px-5 py-8 flex flex-col">
+      <main className="flex-1 max-w-xl lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[1600px] mx-auto w-full px-5 py-8 flex flex-col">
         <Breadcrumbs items={[
           { label: 'Marketplace', to: '/' },
           { label: entry.name, to: `/store/${store}` },
@@ -116,7 +116,7 @@ function StoreProductsPage() {
 
           {products.length > 0 ? (
             <>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
                 {products.map(p => (
                   <ProductCard key={p.id} p={p} />
                 ))}
