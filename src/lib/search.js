@@ -130,21 +130,47 @@ export function searchProducts(query, products, index) {
     for (const [sec, n] of headSections) if (n / headTotal >= 0.25) intent.add(sec)
   }
 
-  // Apply store fatigue so one store doesn't dominate results
-  const storeCounts = new Map()
   const scored = items.map(({ r, p, head }) => {
-    const store = p.store_name || ''
-    const prior = storeCounts.get(store) || 0
-    storeCounts.set(store, prior + 1)
     const ot = (p.ownership_type || '').toLowerCase()
     const coop = WORKER_OWNED.test(ot) ? 0.15 : ot.includes('co-op') ? 0.08 : 0
     const mult = 1 + (head ? 0.6 : 0) + (intent.has(p.site_section) ? 0.3 : 0) + coop
-      - Math.min(prior * 0.003, 0.5)
     return { p, effective: r.score * mult }
   })
-
   scored.sort((a, b) => b.effective - a.effective)
-  return scored.map(s => s.p)
+
+  return diversifyStores(scored, intent).map(s => s.p)
+}
+
+// Store variety for the first pages: each item already placed from a store
+// discounts that store's next item, so big catalogs (Equal Exchange, Scheels)
+// can't fill page one. Only items scoring close to the best match, and in the
+// query's category when it has one, get reshuffled; everything else keeps its
+// rank, so variety never promotes weak matches ("Pablo Honey" for honey).
+const DIVERSIFY_SLOTS = 120
+const DIVERSIFY_FLOOR = 0.6
+const STORE_DECAY = 0.85
+function diversifyStores(scored, intent) {
+  if (!scored.length) return scored
+  const floor = scored[0].effective * DIVERSIFY_FLOOR
+  let n = 0
+  while (n < scored.length && scored[n].effective >= floor) n++
+  const eligible = s => !intent.size || intent.has(s.p.site_section)
+  const pool = scored.slice(0, n).filter(eligible)
+  const out = []
+  const placed = new Map()
+  for (let i = 0; i < n && out.length < DIVERSIFY_SLOTS; i++) {
+    if (!eligible(scored[i])) { out.push(scored[i]); continue }
+    let best = 0, bestScore = -Infinity
+    for (let j = 0; j < pool.length; j++) {
+      const s = pool[j].effective * STORE_DECAY ** (placed.get(pool[j].p.store_name) || 0)
+      if (s > bestScore) { bestScore = s; best = j }
+    }
+    const [pick] = pool.splice(best, 1)
+    placed.set(pick.p.store_name, (placed.get(pick.p.store_name) || 0) + 1)
+    out.push(pick)
+  }
+  const used = new Set(out)
+  return out.concat(scored.filter(s => !used.has(s)))
 }
 
 // Company search — small dataset, no index needed
