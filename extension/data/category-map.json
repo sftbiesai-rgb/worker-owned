@@ -45,7 +45,7 @@
   "sections": {
     "food-pantry": {
       "label": "Food & Pantry",
-      "count": 5618,
+      "count": 5613,
       "storeCount": 20,
       "stores": [
         {
@@ -109,7 +109,7 @@
     },
     "sporting-goods": {
       "label": "Sporting Goods & Outdoors",
-      "count": 55984,
+      "count": 55983,
       "storeCount": 5,
       "stores": [
         {
@@ -137,7 +137,7 @@
     },
     "home-goods": {
       "label": "Home Goods & Services",
-      "count": 16098,
+      "count": 16092,
       "storeCount": 13,
       "stores": [
         {
@@ -169,7 +169,7 @@
     },
     "apparel": {
       "label": "Apparel",
-      "count": 60606,
+      "count": 60601,
       "storeCount": 17,
       "stores": [
         {
@@ -201,7 +201,7 @@
     },
     "personal-care": {
       "label": "Personal Care",
-      "count": 6016,
+      "count": 6014,
       "storeCount": 7,
       "stores": [
         {
@@ -233,7 +233,7 @@
     },
     "games": {
       "label": "Games",
-      "count": 6552,
+      "count": 6551,
       "storeCount": 12,
       "stores": [
         {
@@ -333,7 +333,7 @@
     },
     "media-publishing": {
       "label": "Media & Publishing",
-      "count": 89,
+      "count": 88,
       "storeCount": 2,
       "stores": [
         {
