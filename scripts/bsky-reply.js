@@ -89,6 +89,10 @@ const REPLIES = [
     url: 'https://bsky.app/profile/uppaalaska.bsky.social/post/3n2bsetpsss2a',
     text: "for the Bezos part of the list, workerowned.info is a searchable marketplace of worker-owned shops if anyone needs somewhere to go instead",
   },
+  {
+    url: 'https://bsky.app/profile/theogleveller.bsky.social/post/3n2ow2i6vf22s',
+    text: "and for the stuff you can't find locally, workerowned.info is a searchable marketplace of worker-owned shops that ship",
+  },
 ];
 const SENT_LOG = 'scripts/.bsky-sent.json';
 

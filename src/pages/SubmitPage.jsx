@@ -25,11 +25,13 @@ function SubmitPage() {
   const [captchaA] = useState(Math.floor(Math.random() * 10) + 3)
   const [captchaB] = useState(Math.floor(Math.random() * 10) + 1)
   const [captchaAnswer, setCaptchaAnswer] = useState('')
+  const [honeypot, setHoneypot] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [formError, setFormError] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (honeypot) { setSubmitted(true); return }
     if (parseInt(captchaAnswer) !== captchaA + captchaB) {
       setFormError('Incorrect answer. Please try again.')
       return
@@ -42,7 +44,7 @@ function SubmitPage() {
       const res = await fetch('https://formspree.io/f/mjglzgwl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: formName, category: formCategory, city: formCity, state: formState, country: formCountry, website: formWebsite, email: formEmail, description: formDesc, marketplace_request: formMarketplace }),
+        body: JSON.stringify({ name: formName, category: formCategory, city: formCity, state: formState, country: formCountry, website: formWebsite, email: formEmail, description: formDesc, marketplace_request: formMarketplace, _gotcha: honeypot }),
       })
       if (!res.ok) {
         setFormError('Something went wrong. Please try again.')
@@ -152,6 +154,8 @@ function SubmitPage() {
                   Request inclusion in the <strong>Market Place</strong> — we'll try to add this business to our online shopping directory
                 </span>
               </label>
+              <input type="text" name="_gotcha" value={honeypot} onChange={e => setHoneypot(e.target.value)}
+                tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ display: 'none' }} />
               <div className="bg-[#f5f5f7] rounded-xl px-4 py-3">
                 <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Not a robot: what is {captchaA} + {captchaB}?</label>
                 <input type="text" value={captchaAnswer} onChange={e => setCaptchaAnswer(e.target.value)}
