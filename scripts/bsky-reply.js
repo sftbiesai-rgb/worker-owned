@@ -93,6 +93,14 @@ const REPLIES = [
     url: 'https://bsky.app/profile/theogleveller.bsky.social/post/3n2ow2i6vf22s',
     text: "and for the stuff you can't find locally, workerowned.info is a searchable marketplace of worker-owned shops that ship",
   },
+  {
+    url: 'https://bsky.app/profile/colleenky.bsky.social/post/3n2jo273ses2a',
+    text: "worker co-ops too. getting a vote in how your workplace is run is about as mini-democracy as it gets",
+  },
+  {
+    url: 'https://bsky.app/profile/brianloveswords.com/post/3n2mrcxgkbc2g',
+    text: "they've been 100% employee-owned since 2004 too. the logo and the flour both rule",
+  },
 ];
 const SENT_LOG = 'scripts/.bsky-sent.json';
 

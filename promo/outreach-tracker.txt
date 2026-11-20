@@ -177,12 +177,39 @@ Scheels All Sports              | customerservice@scheels.com          | NONE
 Sow True Seed                   | art@sowtrue.com                      | NONE
 Tootie's Tempeh                 | info@tootiestempeh.com               | NONE
 
+=== NOV 2026 WRITERS/JOURNALISTS (sent 2026-11-14 via Gmail) ===
+
+Organization                    | Contact Email                        | Status
+--------------------------------|--------------------------------------|-------
+Nat Pernick (Substack)          | Nat@PathologyOutlines.com            | NONE
+Crystal Sands / Farmer-ish      | farmerish.journal@gmail.com          | NONE
+Nick Swartsell / WVXU           | nswartsell@wvxu.org                  | NONE
+Garrison Lovely / Obsolete      | me@garrisonlovely.com                | NONE (sent 11/14, AI-for-left angle)
+Platform Cooperativism Consort. | pcc@newschool.edu                    | NONE (sent 11/14, AI-for-left angle)
+Cosmonaut (letter, DSA AI)      | submissions@cosmonautmag.com         | NONE (sent 11/14, signed "Will")
+Goods Unite Us                  | contact@goodsuniteus.com             | NONE (sent 11/14, offered verified list)
+Michael A. McCarthy / UCSC      | mimccart@ucsc.edu                    | NONE (sent 11/14, AI-for-left angle)
+Labor 411 / Cherri Senders      | cherri@sendersgroup.com              | NONE (sent 11/14, cross-link + holiday ask)
+
+=== NOV 15 2026 (state EO centers + follow-ups) ===
+
+Organization                    | Contact Email                        | Status
+--------------------------------|--------------------------------------|-------
+Tennessee Center for EO         | rmerfalen@tnceo.org                  | NONE (sent 11/15, holiday gift guide)
+Mass. Office of Employee Owner. | kevin.j.kuros@mass.gov               | NONE (sent 11/15)
+Ohio Employee Ownership Center  | oeoc@kent.edu                        | NONE (sent 11/15)
+NC Employee Ownership Center    | info@nceoc.org                       | NONE (sent 11/15)
+Alabama Center for EO           | info@alceo.org                       | NONE (sent 11/15, Safe Landing angle)
+Texas Center for EO             | tknickel@txceo.org                   | NONE (sent 11/15)
+Juliet Schor / BC               | juliet.schor@bc.edu                  | REPLIED (follow-up sent; she says piece is finished, not found online)
+Equal Exchange                  | woc@equalexchange.coop               | NONE (sent 11/15, holiday guide note: camp mug + pint glass)
+
 === ORG/ACADEMIC OUTREACH (not directory listings) ===
 
 Organization                    | Contact Email                        | Status | Summary
 --------------------------------|--------------------------------------|--------|--------
 Adria Scharf / Rutgers          | adria.scharf@rutgers.edu             | NONE   | Employee ownership researcher
-Jessica Nembhard / CUNY         | jnembhard@jjay.cuny.edu              | NONE   | Co-op economics professor
+Jessica Nembhard / CUNY         | jnembhard@jjay.cuny.edu              | REPLIED 11/18 | Co-op economics professor; "looks great", will suggest co-ops to add
 Lenore Palladino / UMass        | lpalladino@umass.edu                 | NONE   | Employee ownership researcher
 Democracy at Work               | info@democracyatwork.info            | NONE   | Richard Wolff's org
 Cooperation Works               | info@cooperationworks.coop           | NONE   | Co-op development org
