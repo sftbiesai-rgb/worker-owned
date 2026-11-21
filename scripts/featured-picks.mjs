@@ -27,6 +27,23 @@ export const PICKS = {
     '^mutual aid: a guide to helping one another', '^vincent bevins/the jakarta method', '^capitalist realism', '^how to blow up a pipeline',
     '^bullshit jobs', '^pierce brown/red rising \\(deluxe', '^frank herbert/dune saga 3-book', '^adrian tchaikovsky/children of ruin',
   ],
+  // One flagship coffee or tea per co-op.
+  'coffee-tea': [
+    '^righteous$', '^stampede$', "^birdwatcher's blend", "^founder's roast", '^fair harvest blend',
+    '^arm in arm', '^totality', '^organic bali blue moon', '^organic assam black tea', '^cardigan \\| cold weather blend', '^electric monkey espresso',
+    '^organic vanilla chai tea', '^organic extreme earl grey', '^rishi lavender mint', '^about coffee - leftist',
+  ],
+  'food-pantry': [
+    '^creamy organic peanut butter', '^dill pickles$', '^award-winning butter', '^chocolate love$', '^all beef hot dogs', '^everything bagels',
+    '^cacao fruit chocolate bar', "^dark chocolate lover's gift box", '^sauerkraut$', '^saf red instant yeast', '^vermont maple cream', '^pasture raised chicken broth',
+    '^frontier co-op adobo seasoning', '^red pepper hot sauce', '^butter pecan$', '^gluten-free pancake mix',
+  ],
+  games: [
+    '^nintendo switch/mario kart 8 deluxe', '^nintendo switch/the legend of zelda: tears of the kingdom', '^nintendo switch/super mario bros\\.? wonder', '^nintendo switch/animal crossing',
+    '^nintendo switch 2/mario kart world', '^nintendo switch 2/donkey kong bananza', '^nintendo switch/pikmin 4', '^nintendo switch/super smash bros',
+    '^ps5/astro bot', '^ps5/elden ring', '^nintendo switch/pokemon (scarlet|violet|legends)', '^ps5/marvel.s spider-man 2',
+    '^(asmodee )?catan( the game|$| - base game)', 'ticket to ride', 'wingspan', 'codenames', '^class war: the jacobin', 'pandemic',
+  ],
 }
 
 // Titles that match a pick but aren't the thing (stationery, tributes,

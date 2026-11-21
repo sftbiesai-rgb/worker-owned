@@ -4,13 +4,13 @@
 // featured-picks.mjs. Bull Moose and Zia picks must ship In Stock (av10/av11),
 // not Special Order. Run after split-products.mjs:
 //   node scripts/build-category-featured.mjs
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync, writeFileSync, existsSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { PICKS, EXCLUDE } from './featured-picks.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const SECTION_NAMES = { music: 'Music', 'movies-tv': 'Movies & TV', books: 'Books' }
+const SECTION_NAMES = { music: 'Music', 'movies-tv': 'Movies & TV', books: 'Books', 'coffee-tea': 'Coffee & Tea', 'food-pantry': 'Food & Pantry', games: 'Games' }
 const MAX_PER_CATEGORY = 16
 
 // Preferred format per category, best first.
@@ -20,10 +20,13 @@ const FORMAT_RANK = {
   books: [/paperback/i, /hardcover/i],
 }
 
+// Format preference first, then the everyday size (cheapest listing) so a
+// coffee pick is a 12oz bag rather than a 5lb bulk sack.
 function rank(p, cat) {
   const text = p.title + ' ' + (p.tags || []).join(' ')
   const i = (FORMAT_RANK[cat] || []).findIndex(re => re.test(text))
-  return i === -1 ? 99 : i
+  const price = parseFloat(String(p.price).replace(/^\$/, '')) || 0
+  return (i === -1 ? 99 : i) * 100000 + price
 }
 
 const FIELDSTACK = [
@@ -47,14 +50,27 @@ async function shipsInStock(url) {
   }
 }
 
-async function imageLoads(url) {
-  try {
-    const res = await fetch(url, { method: 'GET', headers: { 'User-Agent': 'Mozilla/5.0', Range: 'bytes=0-1023' } })
-    return res.ok && (res.headers.get('content-type') || '').startsWith('image/')
-  } catch {
-    return false
+async function imageLoads(url, tries = 3) {
+  for (let i = 0; i < tries; i++) {
+    try {
+      const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0', Range: 'bytes=0-1023' }, signal: AbortSignal.timeout(10000) })
+      await res.body?.cancel() // free the connection; unread bodies stall later requests
+      if (res.ok) return (res.headers.get('content-type') || '').startsWith('image/')
+      if (process.env.DEBUG) console.log(`  image ${res.status} ${url}`)
+      if (res.status === 404 || res.status === 403) return false
+    } catch (e) {
+      if (process.env.DEBUG) console.log(`  image error ${e.name} ${e.cause?.code || ''} ${url}`)
+    }
+    await new Promise(r => setTimeout(r, 1000 * (i + 1)))
   }
+  return false
 }
+
+// Image hosts sometimes throttle a long run, so a category that comes up short
+// keeps its previous picks instead of shrinking.
+const MIN_PER_CATEGORY = 12
+const outPath = resolve(root, 'public/data/featured-categories.json')
+const previous = existsSync(outPath) ? JSON.parse(readFileSync(outPath, 'utf8')) : {}
 
 const out = {}
 for (const [cat, patterns] of Object.entries(PICKS)) {
@@ -69,11 +85,16 @@ for (const [cat, patterns] of Object.entries(PICKS)) {
     for (const c of candidates.slice(0, 6)) {
       if (await imageLoads(c.image) && await shipsInStock(c.url)) { chosen = c; break }
     }
-    console.log(`${cat.padEnd(10)} ${chosen ? 'OK  ' : 'MISS'} ${pattern}${chosen ? '  ->  ' + chosen.title : ` (${candidates.length} candidates, none in stock)`}`)
+    console.log(`${cat.padEnd(10)} ${chosen ? 'OK  ' : 'MISS'} ${pattern}${chosen ? '  ->  ' + chosen.title : ` (${candidates.length} candidates, no in-stock match with a working image)`}`)
     if (chosen) picks.push(chosen)
   }
-  out[cat] = picks
+  if (picks.length < MIN_PER_CATEGORY && (previous[cat]?.length || 0) > picks.length) {
+    console.warn(`WARNING: ${cat} found only ${picks.length} picks; keeping the previous ${previous[cat].length}. Rerun later.`)
+    out[cat] = previous[cat]
+  } else {
+    out[cat] = picks
+  }
 }
 
-writeFileSync(resolve(root, 'public/data/featured-categories.json'), JSON.stringify(out))
+writeFileSync(outPath, JSON.stringify(out))
 console.log('Wrote featured-categories.json:', Object.entries(out).map(([k, v]) => `${k} ${v.length}`).join(', '))

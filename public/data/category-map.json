@@ -43,10 +43,42 @@
     "Apps & Games": "tech-software"
   },
   "sections": {
+    "coffee-tea": {
+      "label": "Coffee & Tea",
+      "count": 779,
+      "storeCount": 12,
+      "stores": [
+        {
+          "name": "Equal Exchange",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Dean's Beans Organic Coffee",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Just Us! Coffee Roasters",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Gimme! Coffee",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Gimme Coffee Cooperative",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Rock City Coffee",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/coffee-tea"
+    },
     "food-pantry": {
       "label": "Food & Pantry",
-      "count": 5670,
-      "storeCount": 20,
+      "count": 5494,
+      "storeCount": 18,
       "stores": [
         {
           "name": "Sow True Seed",
@@ -141,7 +173,7 @@
     },
     "sporting-goods": {
       "label": "Sporting Goods & Outdoors",
-      "count": 57274,
+      "count": 58092,
       "storeCount": 6,
       "stores": [
         {
@@ -269,7 +301,7 @@
     },
     "games": {
       "label": "Games",
-      "count": 6676,
+      "count": 5858,
       "storeCount": 12,
       "stores": [
         {
@@ -334,38 +366,6 @@
         }
       ],
       "url": "/music"
-    },
-    "coffee-tea": {
-      "label": "Coffee & Tea",
-      "count": 603,
-      "storeCount": 10,
-      "stores": [
-        {
-          "name": "Equal Exchange",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Dean's Beans Organic Coffee",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Gimme Coffee Cooperative",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Rock City Coffee",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Cafe Campesino",
-          "ownershipType": "cooperative affiliated"
-        },
-        {
-          "name": "Thread Coffee Roasters",
-          "ownershipType": "worker co-op"
-        }
-      ],
-      "url": "/coffee-tea"
     },
     "beer-brewing": {
       "label": "Beer & Brewing",

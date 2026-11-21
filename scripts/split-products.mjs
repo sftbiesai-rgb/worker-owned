@@ -68,6 +68,8 @@ const REMAP = {
 const CATEGORY_PATH_RULES = [
   ['accessories > bath & body', 'Personal Care'],
   ['home & yard > food & drink', 'Food & Pantry'],
+  ['home & yard > toys & games > game room', 'Sporting Goods & Outdoors'],
+  ['home & yard > toys & games > outdoor play', 'Sporting Goods & Outdoors'],
   ['home & yard > toys & games', 'Games'],
   ['home & yard > outdoor cooking', 'Home Goods & Services'],
   ['home & yard > electronics', 'Tech & Software'],
@@ -268,6 +270,17 @@ for (const p of products) {
 }
 if (pathRemapped > 0) console.log(`Remapped ${pathRemapped} products by store category path`)
 
+// Coffee roasters whose whole catalog was filed under Food.
+const COFFEE_STORES = new Set(['Gimme! Coffee', 'Just Us! Coffee Roasters'])
+let coffeeMoved = 0
+for (const p of products) {
+  if (COFFEE_STORES.has(p.store_name) && p.site_section === 'Food & Pantry') {
+    p.site_section = 'Coffee & Tea'
+    coffeeMoved++
+  }
+}
+if (coffeeMoved > 0) console.log(`Moved ${coffeeMoved} coffee roaster products to Coffee & Tea`)
+
 // Product-level categorization for multi-category stores
 let recategorized = 0
 for (const p of products) {
@@ -305,7 +318,7 @@ for (const p of products) {
 }
 if (apparelMoved > 0) console.log(`Moved ${apparelMoved} non-clothing products out of Apparel`)
 
-if (remapped > 0 || mediaMoved > 0 || pathRemapped > 0 || recategorized > 0 || apparelMoved > 0) {
+if (remapped > 0 || mediaMoved > 0 || coffeeMoved > 0 || pathRemapped > 0 || recategorized > 0 || apparelMoved > 0) {
   writeFileSync(resolve(root, 'public/data/products.json'), JSON.stringify(products))
 }
 

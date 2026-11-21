@@ -285,3 +285,23 @@ export const FILTERS = {
     { label: 'Xbox Series', tag: 'xbox series x game' },
   ],
 }
+
+// On a category's unfiltered page, list its core products before merch,
+// equipment and accessories. Categories not listed here keep store order.
+const MERCH = /\b(t-?shirts?|tees?|tank tops?|long sleeve|hoodies?|sweatshirts?|sweatpants|crewneck|beanies?|hats?|caps?|socks?|totes?|mugs?|tumblers?|glass|stickers?|magnets?|gift cards?|aprons?|napkins?|pins?|patch(es)?|ornaments?|keychains?|koozies?|postcards?|greeting cards?|plush|toys?|lip balm|gloves|mittens)\b|wholesale|display shipper/i
+const BREW_GEAR = /\b(dripper|filters?|grinder|kettle|scale|aeropress|chemex|brewer|carafe|french press|lighter|growler|cans?|pan|rolling pin|pastry wheel|oven gloves|peppermill)\b|cold brew filter|k-cup holder/i
+const NON_BOOK_TAGS = /^(posters|enamel-pins|magnets|patches|cards|other|gift\/lifestyle item|incense|sticker|audio cd|vinyl lp|blu-ray|dvd|4k ultra hd|news-subscription)$/i
+const GAME_GEAR = /\b(cables?|controllers?|chargers?|adapters?|cases?|stands?|memory card|headsets?|skins?|grips?|acc)\b|\bav cable|^[^/]+ acc\//i
+
+const CORE_ITEM = {
+  books: p => !(p.tags || []).some(t => NON_BOOK_TAGS.test(t)) && !/gift card/i.test(p.title),
+  'coffee-tea': p => !MERCH.test(p.title) && !BREW_GEAR.test(p.title),
+  'food-pantry': p => !MERCH.test(p.title) && !BREW_GEAR.test(p.title),
+  games: p => !GAME_GEAR.test(p.title),
+}
+
+export function coreFirstOrder(category, products) {
+  const isCore = CORE_ITEM[category]
+  if (!isCore) return interleaveByStore(products)
+  return [...interleaveByStore(products.filter(isCore)), ...interleaveByStore(products.filter(p => !isCore(p)))]
+}

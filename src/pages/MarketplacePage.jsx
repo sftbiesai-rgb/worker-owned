@@ -2,18 +2,13 @@ import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
 import { slugify, faviconUrl, dedupeByUrl, interleaveByStore } from '../lib/utils'
-import { SECTIONS, SUBCATEGORIES, FILTERS, GENDER_FILTERS, GENDER_FILTER_CATEGORIES, productInSubcategory, productMatchesGender, apparelBrowseOrder } from '../lib/categories'
+import { SECTIONS, SUBCATEGORIES, FILTERS, GENDER_FILTERS, GENDER_FILTER_CATEGORIES, productInSubcategory, productMatchesGender, apparelBrowseOrder, coreFirstOrder } from '../lib/categories'
 import OwnershipBadge from '../components/OwnershipBadge'
 import ProductCard from '../components/ProductCard'
 import Pagination from '../components/Pagination'
 import Footer from '../components/Footer'
 
 const PER_PAGE = 60
-
-// Books shelves also carry posters, pins, incense and discs; show the actual
-// books first on the unfiltered Books page.
-const NON_BOOK_TAGS = /^(posters|enamel-pins|magnets|patches|cards|other|gift\/lifestyle item|incense|sticker|audio cd|vinyl lp|blu-ray|dvd|4k ultra hd|news-subscription)$/i
-const isBook = p => !(p.tags || []).some(t => NON_BOOK_TAGS.test(t)) && !/gift card/i.test(p.title)
 
 function MarketplacePage() {
   const { category, subcategory } = useParams()
@@ -102,8 +97,8 @@ function MarketplacePage() {
   const soldOut = filtered.filter(p => p.available === false)
   const sorted = category === 'apparel' && !activeSub
     ? [...apparelBrowseOrder(available, { keepUnmatched: filterPatterns.length > 0 }), ...apparelBrowseOrder(soldOut, { keepUnmatched: filterPatterns.length > 0 })]
-    : category === 'books' && !activeSub
-      ? [...interleaveByStore(available.filter(isBook)), ...interleaveByStore(available.filter(p => !isBook(p))), ...soldOut]
+    : !activeSub
+      ? [...coreFirstOrder(category, available), ...soldOut]
       : [...interleaveByStore(available), ...soldOut]
   const totalPages = Math.ceil(sorted.length / PER_PAGE)
   const paged = sorted.slice((page - 1) * PER_PAGE, page * PER_PAGE)
