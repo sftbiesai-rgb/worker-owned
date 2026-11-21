@@ -333,12 +333,32 @@
     },
     "tech-software": {
       "label": "Tech & Software",
-      "count": 1201,
-      "storeCount": 1,
+      "count": 1212,
+      "storeCount": 12,
       "stores": [
         {
           "name": "Scheels All Sports",
           "ownershipType": "ESOP"
+        },
+        {
+          "name": "508.dev",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "JMP.chat",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Agaric",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "CoLab Cooperative",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Sassafras Tech Collective",
+          "ownershipType": "worker co-op"
         }
       ],
       "url": "/tech-software"

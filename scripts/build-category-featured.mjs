@@ -10,7 +10,7 @@ import { fileURLToPath } from 'url'
 import { PICKS, EXCLUDE } from './featured-picks.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const SECTION_NAMES = { music: 'Music', 'movies-tv': 'Movies & TV', books: 'Books', 'coffee-tea': 'Coffee & Tea', 'food-pantry': 'Food & Pantry', games: 'Games', 'personal-care': 'Personal Care', 'home-goods': 'Home Goods & Services', 'beer-brewing': 'Beer & Brewing', 'sporting-goods': 'Sporting Goods & Outdoors' }
+const SECTION_NAMES = { music: 'Music', 'movies-tv': 'Movies & TV', books: 'Books', 'coffee-tea': 'Coffee & Tea', 'food-pantry': 'Food & Pantry', games: 'Games', 'personal-care': 'Personal Care', 'home-goods': 'Home Goods & Services', 'beer-brewing': 'Beer & Brewing', 'sporting-goods': 'Sporting Goods & Outdoors', 'tech-software': 'Tech & Software' }
 const MAX_PER_CATEGORY = 16
 
 // Preferred format per category, best first.
@@ -79,11 +79,14 @@ const previous = existsSync(outPath) ? JSON.parse(readFileSync(outPath, 'utf8'))
 //   node scripts/build-category-featured.mjs personal-care home-goods
 const only = process.argv.slice(2)
 
+// Co-op service listings have no product photo; cards show the company icon.
+const isService = p => (p.tags || []).includes('service')
+
 const out = { ...previous }
 for (const [cat, patterns] of Object.entries(PICKS)) {
   if (only.length && !only.includes(cat)) continue
   const products = JSON.parse(readFileSync(resolve(root, `public/data/products-${cat}.json`), 'utf8'))
-    .filter(p => p.site_section === SECTION_NAMES[cat] && p.available !== false && p.image && !EXCLUDE.test(p.title))
+    .filter(p => p.site_section === SECTION_NAMES[cat] && p.available !== false && (p.image || isService(p)) && !EXCLUDE.test(p.title))
   const picks = []
   for (const pattern of patterns) {
     if (picks.length >= MAX_PER_CATEGORY) break
@@ -91,7 +94,7 @@ for (const [cat, patterns] of Object.entries(PICKS)) {
     const candidates = products.filter(p => re.test(p.title)).sort((a, b) => rank(a, cat) - rank(b, cat))
     let chosen = null
     for (const c of candidates.slice(0, 6)) {
-      if (await imageLoads(c.image) && await shipsInStock(c.url)) { chosen = c; break }
+      if ((isService(c) || await imageLoads(c.image)) && await shipsInStock(c.url)) { chosen = c; break }
     }
     console.log(`${cat.padEnd(10)} ${chosen ? 'OK  ' : 'MISS'} ${pattern}${chosen ? '  ->  ' + chosen.title : ` (${candidates.length} candidates, no in-stock match with a working image)`}`)
     if (chosen) picks.push(chosen)

@@ -252,6 +252,32 @@ if (remapped > 0) {
   console.log(`Remapped ${remapped} products to correct sections`)
 }
 
+// Tech co-ops sell services, not products. Give each Tech & Software company in
+// the directory a service listing (linking to its site) so the category shows
+// services next to the Scheels gadgets.
+const SERVICE_DETAILS = {
+  'JMP.chat': { label: 'Phone Number Service', price: '4.99', priceSuffix: '/mo' },
+  'Loomio': { label: 'Group Decision-Making Software' },
+  'ReVision Energy': { label: 'Solar, Heat Pumps & Batteries' },
+}
+const titleCase = s => s.replace(/\b\w/g, c => c.toUpperCase())
+const directory = JSON.parse(readFileSync(resolve(root, 'src/data/marketplace.json'), 'utf-8'))
+let servicesAdded = 0
+for (const e of directory.filter(e => e.site_section === 'Tech & Software')) {
+  const id = 'synth-svc-' + e.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+  const detail = SERVICE_DETAILS[e.name] || {}
+  const listing = {
+    id, title: `${e.name} — ${detail.label || titleCase(e.category || 'Services')}`,
+    price: detail.price || null, ...(detail.priceSuffix && { priceSuffix: detail.priceSuffix }),
+    available: true, image: null, url: e.url, store_name: e.name, store_url: e.url,
+    ownership_type: e.ownership_type, site_section: 'Tech & Software', tags: ['service'],
+  }
+  const i = products.findIndex(p => p.id === id)
+  if (i === -1) { products.push(listing); servicesAdded++ }
+  else if (JSON.stringify(products[i]) !== JSON.stringify(listing)) { products[i] = listing; servicesAdded++ }
+}
+if (servicesAdded > 0) console.log(`Added or updated ${servicesAdded} tech service listings`)
+
 // Hand-made subscription entries (news sites, podcasts, Means TV) belong with
 // the other independent media, not on the Books shelf.
 let mediaMoved = 0
@@ -335,7 +361,7 @@ for (const p of products) {
 }
 if (apparelMoved > 0) console.log(`Moved ${apparelMoved} non-clothing products out of Apparel`)
 
-if (remapped > 0 || mediaMoved > 0 || coffeeMoved > 0 || collectiblesMoved > 0 || pathRemapped > 0 || recategorized > 0 || apparelMoved > 0) {
+if (remapped > 0 || servicesAdded > 0 || mediaMoved > 0 || coffeeMoved > 0 || collectiblesMoved > 0 || pathRemapped > 0 || recategorized > 0 || apparelMoved > 0) {
   writeFileSync(resolve(root, 'public/data/products.json'), JSON.stringify(products))
 }
 

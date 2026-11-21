@@ -306,6 +306,8 @@ const isBeer = p => !BEER_WEAR.test(p.title) && !BAR_GEAR.test(p.title) &&
 // Replacement bolts, springs and service kits that bury whole bikes and gear.
 const SMALL_PARTS = /\b(bolts?|screws?|springs?|washers?|bearings?|replacement|service kits?|rebuild kits?|hardware|valve stems?|spacers?|seals?|o-?rings?|end caps?|pistons?|bushings?|knobs?|clamps?|brackets?|adaptors?|adapters?|axles?|lever blades|mounts?)\b/i
 
+const TECH_ACCESSORY = /\b(batter(y|ies)|chargers?|mounts?|cases?|sleeves?|cables?|bands?|lens mod|sd card|map card|transducers?|replacement|floaty|adapters?|kits?)\b|^prime brands group|^actionheat/i
+
 const CORE_ITEM = {
   books: p => !(p.tags || []).some(t => NON_BOOK_TAGS.test(t)) && !/gift card/i.test(p.title),
   'coffee-tea': p => !MERCH.test(p.title) && !BREW_GEAR.test(p.title),
@@ -315,6 +317,8 @@ const CORE_ITEM = {
   // Beer first, then glassware, growlers and tap handles, then apparel.
   'beer-brewing': p => isBeer(p) ? 0 : BAR_GEAR.test(p.title) ? 1 : 2,
   'sporting-goods': p => !isFanGear(p) && !SMALL_PARTS.test(p.title),
+  // Co-op services, then devices, then accessories and team-logo gadgets.
+  'tech-software': p => (p.tags || []).includes('service') ? 0 : (TECH_ACCESSORY.test(p.title) || isFanGear(p)) ? 2 : 1,
   'personal-care': p => !SHOP_MERCH.test(p.title) && !/\b(mugs?|candle holders?|t-?shirts?)\b/i.test(p.title),
 }
 

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { slugify, faviconUrl, displayTitle, formatPrice } from '../lib/utils'
+import { slugify, faviconUrl, displayTitle, formatPrice, storeKey } from '../lib/utils'
 import OwnershipBadge from './OwnershipBadge'
 import ProductImage from './ProductImage'
 
@@ -43,6 +43,13 @@ export default function ProductCard({ product: p, showStore = true, compact = fa
         rel="noopener"
         className="block hover:opacity-90 transition-opacity"
       >
+        {!p.image && p.store_url && (
+          // Services and subscriptions have no product photo: show the company icon.
+          <div className="aspect-square w-full bg-white border-b border-gray-200 flex flex-col items-center justify-center gap-2 px-3 text-center">
+            <img src={`https://www.google.com/s2/favicons?domain=${storeKey(p.store_url)}&sz=64`} alt="" className="w-12 h-12" loading="lazy" />
+            <span className="text-[11px] font-semibold text-gray-500">{p.store_name}</span>
+          </div>
+        )}
         {p.image && (
           <div className="aspect-square w-full overflow-hidden bg-gray-100 relative">
             <ProductImage src={p.image} alt={p.title} />
@@ -54,7 +61,7 @@ export default function ProductCard({ product: p, showStore = true, compact = fa
         <div className="px-3 pt-2 pb-1">
           <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{name} <span className="text-gray-400 font-normal">↗</span></p>
           {detail && <p className="text-[11px] text-gray-500 leading-snug truncate mt-0.5">{detail}</p>}
-          {p.price && <p className="text-xs font-semibold text-[#003580] mt-0.5">{formatPrice(p.price)}</p>}
+          {p.price && <p className="text-xs font-semibold text-[#003580] mt-0.5">{formatPrice(p.price)}{p.priceSuffix}</p>}
         </div>
       </a>
       {p.formats && p.formats.length > 1 && (

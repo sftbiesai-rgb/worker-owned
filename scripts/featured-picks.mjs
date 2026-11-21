@@ -66,6 +66,12 @@ export const PICKS = {
     '^yeti roadie 15 cooler', "^men's brooks ghost", '^eno doublenest hammock$', '^opinel no\\.08 walnut', '^big agnes sidewinder', '^black diamond spot 400',
     '^jetboil micromo', '^msr hubba hubba', '^swiss army cadet', '^neelum 40l duffel',
   ],
+  // Alternates co-op services with popular gadgets.
+  'tech-software': [
+    '^jmp\\.chat — ', '^garmin instinct e adventure', '^loomio — ', '^gopro hero12 black camera$', '^revision energy — ', '^jbl charge 5$',
+    '^agaric — ', '^garmin forerunner 170', '^sassafras tech collective — ', '^garmin edge explore 2', '^508\\.dev — ', '^whoop one',
+    '^colab cooperative — ', '^jbl tune 520', '^hypha worker co-operative — ', '^garrett ace apex metal detector',
+  ],
 }
 
 // Titles that match a pick but aren't the thing (stationery, tributes,
