@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
-import { slugify, displayTags, faviconUrl, dedupeByUrl } from '../lib/utils'
+import { slugify, displayTags, faviconUrl, dedupeByUrl, displayTitle, formatPrice } from '../lib/utils'
 import OwnershipBadge from '../components/OwnershipBadge'
 import ProductImage from '../components/ProductImage'
 import Pagination from '../components/Pagination'
@@ -13,6 +13,8 @@ const STORE_BY_SLUG = Object.fromEntries(
 )
 
 function ProductCard({ p }) {
+  const { name, byline, format } = displayTitle(p)
+  const detail = [byline, format].filter(Boolean).join(' · ')
   return (
     <a
       href={p.url}
@@ -29,8 +31,9 @@ function ProductCard({ p }) {
         </div>
       )}
       <div className="px-3 py-2">
-        <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{p.title}</p>
-        {p.price && <p className="text-xs font-semibold text-[#003580] mt-0.5">${p.price}</p>}
+        <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{name}</p>
+        {detail && <p className="text-[11px] text-gray-500 leading-snug truncate mt-0.5">{detail}</p>}
+        {p.price && <p className="text-xs font-semibold text-[#003580] mt-0.5">{formatPrice(p.price)}</p>}
       </div>
       {displayTags(p.tags)?.length > 0 && (
         <div className="px-3 pb-2 hidden group-hover:block">

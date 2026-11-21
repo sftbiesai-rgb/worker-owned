@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
-import { slugify, displayTags, faviconUrl } from '../lib/utils'
+import { slugify, faviconUrl, displayTitle, formatPrice } from '../lib/utils'
 import OwnershipBadge from './OwnershipBadge'
 import ProductImage from './ProductImage'
 
 export default function ProductCard({ product: p, showStore = true, compact = false, borderColor }) {
+  const { name, byline, format } = displayTitle(p)
+  const detail = [byline, format].filter(Boolean).join(' · ')
   if (compact) {
     return (
       <div className="bg-[#f5f5f7] rounded-xl overflow-hidden border-2" style={borderColor ? { borderColor } : { borderColor: '#e5e7eb' }}>
@@ -14,8 +16,8 @@ export default function ProductCard({ product: p, showStore = true, compact = fa
             </div>
           )}
           <div className="px-2.5 pt-1.5 pb-1">
-            <p className="text-[11px] font-semibold text-gray-800 leading-snug truncate">{p.title} <span className="text-gray-400 font-normal">↗</span></p>
-            {p.price && <p className="text-[11px] font-semibold text-[#003580] mt-0.5">${p.price}</p>}
+            <p className="text-[11px] font-semibold text-gray-800 leading-snug truncate">{name} <span className="text-gray-400 font-normal">↗</span></p>
+            {p.price && <p className="text-[11px] font-semibold text-[#003580] mt-0.5">{formatPrice(p.price)}</p>}
           </div>
         </a>
         {p.store_name && (
@@ -50,15 +52,16 @@ export default function ProductCard({ product: p, showStore = true, compact = fa
           </div>
         )}
         <div className="px-3 pt-2 pb-1">
-          <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{p.title} <span className="text-gray-400 font-normal">↗</span></p>
-          {p.price && <p className="text-xs font-semibold text-[#003580] mt-0.5">${p.price}</p>}
+          <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{name} <span className="text-gray-400 font-normal">↗</span></p>
+          {detail && <p className="text-[11px] text-gray-500 leading-snug truncate mt-0.5">{detail}</p>}
+          {p.price && <p className="text-xs font-semibold text-[#003580] mt-0.5">{formatPrice(p.price)}</p>}
         </div>
       </a>
       {p.formats && p.formats.length > 1 && (
         <div className="px-3 pb-1 flex flex-wrap gap-1">
           {p.formats.map(f => (
             <a key={f.label} href={f.url} target="_blank" rel="noopener" className="text-[9px] bg-white border border-gray-200 rounded px-1.5 py-0.5 text-gray-500 hover:text-[#003580] hover:border-[#003580] transition-colors">
-              {f.label} ${f.price}
+              {f.label} {formatPrice(f.price)}
             </a>
           ))}
         </div>
