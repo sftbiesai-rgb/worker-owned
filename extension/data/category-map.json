@@ -77,9 +77,13 @@
     },
     "food-pantry": {
       "label": "Food & Pantry",
-      "count": 5494,
+      "count": 6415,
       "storeCount": 18,
       "stores": [
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
         {
           "name": "Sow True Seed",
           "ownershipType": "employee-owned"
@@ -89,16 +93,12 @@
           "ownershipType": "member co-op (retailers as members)"
         },
         {
-          "name": "Mast General Store",
-          "ownershipType": "employee-owned"
-        },
-        {
           "name": "King Arthur Baking Company",
           "ownershipType": "employee-owned"
         },
         {
-          "name": "Scheels All Sports",
-          "ownershipType": "ESOP"
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
         },
         {
           "name": "The Local Butcher Shop",
@@ -141,7 +141,7 @@
     },
     "books": {
       "label": "Books",
-      "count": 41338,
+      "count": 41368,
       "storeCount": 12,
       "stores": [
         {
@@ -173,7 +173,7 @@
     },
     "sporting-goods": {
       "label": "Sporting Goods & Outdoors",
-      "count": 58092,
+      "count": 58090,
       "storeCount": 6,
       "stores": [
         {
@@ -205,7 +205,7 @@
     },
     "home-goods": {
       "label": "Home Goods & Services",
-      "count": 20575,
+      "count": 19747,
       "storeCount": 13,
       "stores": [
         {
@@ -237,7 +237,7 @@
     },
     "apparel": {
       "label": "Apparel",
-      "count": 54305,
+      "count": 54292,
       "storeCount": 17,
       "stores": [
         {
@@ -269,7 +269,7 @@
     },
     "personal-care": {
       "label": "Personal Care",
-      "count": 6152,
+      "count": 6022,
       "storeCount": 7,
       "stores": [
         {
@@ -301,7 +301,7 @@
     },
     "games": {
       "label": "Games",
-      "count": 5858,
+      "count": 5880,
       "storeCount": 12,
       "stores": [
         {

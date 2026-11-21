@@ -3,14 +3,14 @@
 // picks for the top of category pages, from the curated lists in
 // featured-picks.mjs. Bull Moose and Zia picks must ship In Stock (av10/av11),
 // not Special Order. Run after split-products.mjs:
-//   node scripts/build-category-featured.mjs
+//   node scripts/build-category-featured.mjs [category ...]
 import { readFileSync, writeFileSync, existsSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { PICKS, EXCLUDE } from './featured-picks.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const SECTION_NAMES = { music: 'Music', 'movies-tv': 'Movies & TV', books: 'Books', 'coffee-tea': 'Coffee & Tea', 'food-pantry': 'Food & Pantry', games: 'Games' }
+const SECTION_NAMES = { music: 'Music', 'movies-tv': 'Movies & TV', books: 'Books', 'coffee-tea': 'Coffee & Tea', 'food-pantry': 'Food & Pantry', games: 'Games', 'personal-care': 'Personal Care', 'home-goods': 'Home Goods & Services' }
 const MAX_PER_CATEGORY = 16
 
 // Preferred format per category, best first.
@@ -57,7 +57,10 @@ async function imageLoads(url, tries = 3) {
       await res.body?.cancel() // free the connection; unread bodies stall later requests
       if (res.ok) return (res.headers.get('content-type') || '').startsWith('image/')
       if (process.env.DEBUG) console.log(`  image ${res.status} ${url}`)
-      if (res.status === 404 || res.status === 403) return false
+      if (res.status === 404 || res.status === 410) return false
+      // 403/429 here means the image host is rate-limiting this script, not
+      // that the image is missing (it loads fine in a browser).
+      if (res.status === 403 || res.status === 429) return true
     } catch (e) {
       if (process.env.DEBUG) console.log(`  image error ${e.name} ${e.cause?.code || ''} ${url}`)
     }
@@ -72,8 +75,13 @@ const MIN_PER_CATEGORY = 12
 const outPath = resolve(root, 'public/data/featured-categories.json')
 const previous = existsSync(outPath) ? JSON.parse(readFileSync(outPath, 'utf8')) : {}
 
-const out = {}
+// Optional: rebuild only some categories, e.g.
+//   node scripts/build-category-featured.mjs personal-care home-goods
+const only = process.argv.slice(2)
+
+const out = { ...previous }
 for (const [cat, patterns] of Object.entries(PICKS)) {
+  if (only.length && !only.includes(cat)) continue
   const products = JSON.parse(readFileSync(resolve(root, `public/data/products-${cat}.json`), 'utf8'))
     .filter(p => p.site_section === SECTION_NAMES[cat] && p.available !== false && p.image && !EXCLUDE.test(p.title))
   const picks = []

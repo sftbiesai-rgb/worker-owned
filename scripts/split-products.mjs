@@ -71,6 +71,8 @@ const CATEGORY_PATH_RULES = [
   ['home & yard > toys & games > game room', 'Sporting Goods & Outdoors'],
   ['home & yard > toys & games > outdoor play', 'Sporting Goods & Outdoors'],
   ['home & yard > toys & games', 'Games'],
+  ['home & yard > outdoor cooking > seasonings, spices & sauces', 'Food & Pantry'],
+  ['home & yard > food processing > seasonings & kits', 'Food & Pantry'],
   ['home & yard > outdoor cooking', 'Home Goods & Services'],
   ['home & yard > electronics', 'Tech & Software'],
 ]
@@ -125,14 +127,18 @@ const SECTIONS = {
 
 // Product-level category detection for multi-category stores
 // Overrides the store-level site_section based on product title keywords
+// Whole words only, so "Flip Sip Mug" isn't lip care and "Cast Iron Lid" isn't
+// an iron supplement. Medicine comes first (vitamin gummies aren't candy), then
+// dishware and cookware so a "Coffee Mug" or "Candle Holder" doesn't land in
+// Food or Personal Care.
 const PRODUCT_CATEGORY_RULES = [
-  { match: /candy|gummy|chocolate|pez|snack|jerky|cookie|fudge|jam|jelly|honey|sauce|seasoning|spice|syrup|butter|pretzel|chip|popcorn|salt |sugar|pickle|relish|mustard|dressing|vinegar|nuts|trail mix|granola|cereal|food|baking|flour|olive oil|hot sauce|bbq|rub |marinade|coffee|tea /i, section: 'Food & Pantry' },
-  { match: /soap|lotion|cream|shampoo|conditioner|balm|lip |sunscreen|deodorant|bath|body wash|candle|moistur|cleanser|serum|toner|face |skin/i, section: 'Personal Care' },
-  { match: /vitamin|supplement|probiotic|mineral|omega|calcium|iron|zinc|magnesium|biotin|melatonin|collagen|fiber|medicine|tylenol|advil|ibuprofen|aspirin|antacid|allergy|cough|cold |pain relief|first aid|bandage|gauze|thermometer/i, section: 'Personal Care' },
-  { match: /toy |toys|game|puzzle|doll|stuffed|plush|lego|playset|action figure/i, section: 'Games' },
-  { match: /book |books|journal|notebook|novel /i, section: 'Books' },
-  { match: /mug|cup |glass |plate|bowl|towel|blanket|pillow|ornament|magnet|sticker|sign |frame|decor|pot |planter|vase|coaster/i, section: 'Home Goods & Services' },
-  { match: /diaper|baby|infant|formula|pacifier|sippy/i, section: 'Personal Care' },
+  { match: /\b(multivitamins?|vitamins?|multi ?gummies|gummies(?![^]*\bcandy)|dietary|wound|dressings|elderberry|immune|supplements?|probiotics?|omega|calcium|zinc|magnesium|biotin|melatonin|collagen|fiber|medicines?|ear candles?|tylenol|advil|ibuprofen|aspirin|antacids?|allergy|cough|pain relief|first aid|bandages?|gauze|thermometers?)\b/i, section: 'Personal Care' },
+  { match: /\b(mugs?|tumblers?|cups?|(shot|wine|pint|drinking) glass(es)?|glassware|plates?|bowls?|cast iron|skillets?|pans?|dutch ovens?|candles?|candle holders?|ornaments?|magnets?|stickers?|signs?|frames?|coasters?|towels?|blankets?|pillows?|vases?|planters?|decor)\b/i, section: 'Home Goods & Services' },
+  { match: /\b(cand(y|ies)|gumm(y|ies)|chocolates?|pez|snacks?|jerky|cookies?|fudge|jams?|jell(y|ies)|honey|sauces?|seasonings?|spices?|syrups?|maple (syrup|cream|candy|sugar)|butter|pretzels?|chips|popcorn|salt|sugar|pickles?|relish|mustard|dressing|vinegar|nuts|trail mix|granola|cereal|food|baking|flour|olive oil|bbq|rubs?|marinades?|coffee|teas?)\b/i, section: 'Food & Pantry' },
+  { match: /\b(soaps?|lotions?|creams?|shampoos?|conditioners?|balms?|lip (balm|gloss|butter)|sunscreen|deodorants?|bath|body wash|moisturi\w+|cleansers?|serums?|toners?|face wash|skin ?care|shav(e|ing))\b/i, section: 'Personal Care' },
+  { match: /\b(toys?|games?|puzzles?|dolls?|stuffed|plush|lego|playsets?|action figures?)\b/i, section: 'Games' },
+  { match: /\b(books?|journals?|notebooks?|novels?)\b/i, section: 'Books' },
+  { match: /\b(diapers?|formula|pacifiers?|sippy)\b/i, section: 'Personal Care' },
 ]
 
 // Stores that need product-level categorization (large multi-category stores)

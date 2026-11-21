@@ -44,6 +44,18 @@ export const PICKS = {
     '^ps5/astro bot', '^ps5/elden ring', '^nintendo switch/pokemon (scarlet|violet|legends)', '^ps5/marvel.s spider-man 2',
     '^(asmodee )?catan( the game|$| - base game)', 'ticket to ride', 'wingspan', 'codenames', '^class war: the jacobin', 'pandemic',
   ],
+  'personal-care': [
+    '^alaffia authentic african black soap', '^whipped shea butter & coconut oil', '^deodorant stick$', '^vegan lip balm$',
+    '^awaida roots 1880 olive', '^extra strength soap drops', '^dr\\. squatch .*bar soap', '^duke cannon .*soap',
+    "burt'?s bees .*lip balm", '^cerave .*(cream|lotion)', '^vanicream .*(cream|lotion)', "tom'?s of maine .*toothpaste",
+    "dr\\.? bronner", '^aveeno .*lotion', '^everyday shea body wash', '^good soap body wash',
+  ],
+  'home-goods': [
+    '^cutting boards$', '^royal blue classic wool blanket', '^spalted maple wood turned bowl', 'mountain mohair',
+    '^the empress$', "^medium gardener'?s supply cart", '^lifetime dandelion weeder', '^yeti rambler 20 oz',
+    'lodge .*cast iron skillet', "^zwilling four star 7-inch chef", "^designer'?s choice", 'sunflower .chocolate cherry',
+    '^small fork salad set', '^bamboo salt box', '^stainless steel bottle stoppers', 'loose knit scarf',
+  ],
 }
 
 // Titles that match a pick but aren't the thing (stationery, tributes,

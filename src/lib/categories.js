@@ -293,11 +293,17 @@ const BREW_GEAR = /\b(dripper|filters?|grinder|kettle|scale|aeropress|chemex|bre
 const NON_BOOK_TAGS = /^(posters|enamel-pins|magnets|patches|cards|other|gift\/lifestyle item|incense|sticker|audio cd|vinyl lp|blu-ray|dvd|4k ultra hd|news-subscription)$/i
 const GAME_GEAR = /\b(cables?|controllers?|chargers?|adapters?|cases?|stands?|memory card|headsets?|skins?|grips?|acc)\b|\bav cable|^[^/]+ acc\//i
 
+// Store logo merch and team-logo fan gear (Scheels' "fan shop" paths).
+const SHOP_MERCH = /\b(t-?shirts?|tees?|hoodies?|sweatshirts?|totes?|stickers?|keychains?|lanyards?|gift cards?|can coolers?|decals?)\b|^donate\b/i
+const isFanGear = p => (p.tags || []).some(t => /^fan shop >/i.test(t))
+
 const CORE_ITEM = {
   books: p => !(p.tags || []).some(t => NON_BOOK_TAGS.test(t)) && !/gift card/i.test(p.title),
   'coffee-tea': p => !MERCH.test(p.title) && !BREW_GEAR.test(p.title),
   'food-pantry': p => !MERCH.test(p.title) && !BREW_GEAR.test(p.title),
   games: p => !GAME_GEAR.test(p.title),
+  'home-goods': p => !isFanGear(p) && !SHOP_MERCH.test(p.title),
+  'personal-care': p => !SHOP_MERCH.test(p.title) && !/\b(mugs?|candle holders?|t-?shirts?)\b/i.test(p.title),
 }
 
 export function coreFirstOrder(category, products) {
