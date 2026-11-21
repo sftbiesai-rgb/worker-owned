@@ -1,7 +1,8 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { SUBCATEGORIES, productInSubcategory } from '../src/lib/categories.js'
+import { createHash } from 'crypto'
+import { SUBCATEGORIES, SECTION_SLUGS, productInSubcategory, browseOrder, apparelBrowseOrder } from '../src/lib/categories.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
@@ -240,6 +241,17 @@ for (const p of products) {
 }
 if (normalized > 0) console.log(`Normalized ${normalized} product titles`)
 
+// A few feeds (Eileen Fisher) come without product ids; give them a stable
+// one from the store and URL so lists, keys and store pages can tell them apart.
+let idsAdded = 0
+for (const p of products) {
+  if (p.id == null && p.url) {
+    p.id = 'gen-' + createHash('md5').update((p.store_name || '') + '|' + p.url).digest('hex').slice(0, 12)
+    idsAdded++
+  }
+}
+if (idsAdded > 0) console.log(`Added ids to ${idsAdded} products`)
+
 let remapped = 0
 for (const p of products) {
   if (REMAP[p.site_section]) {
@@ -361,7 +373,7 @@ for (const p of products) {
 }
 if (apparelMoved > 0) console.log(`Moved ${apparelMoved} non-clothing products out of Apparel`)
 
-if (remapped > 0 || servicesAdded > 0 || mediaMoved > 0 || coffeeMoved > 0 || collectiblesMoved > 0 || pathRemapped > 0 || recategorized > 0 || apparelMoved > 0) {
+if (idsAdded > 0 || remapped > 0 || servicesAdded > 0 || mediaMoved > 0 || coffeeMoved > 0 || collectiblesMoved > 0 || pathRemapped > 0 || recategorized > 0 || apparelMoved > 0) {
   writeFileSync(resolve(root, 'public/data/products.json'), JSON.stringify(products))
 }
 
@@ -496,8 +508,9 @@ for (const p of products) {
   byStore.get(key).push(p)
 }
 
+// Must match slugify() in src/lib/utils.js, which builds /store/:slug URLs.
 function slugify(str) {
-  return str.toLowerCase().replace(/['']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+  return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 }
 
 // Pick representative products: sample across subcategories, prefer items with images
@@ -598,23 +611,23 @@ function buildStoreSummary(storeProducts) {
 
 let storeSummaryCount = 0
 const storeDir = resolve(root, 'public/data/stores')
-import { mkdirSync } from 'fs'
-try { mkdirSync(storeDir, { recursive: true }) } catch {}
+import { mkdirSync, rmSync } from 'fs'
+// Rebuilt from scratch each run so renamed or emptied stores leave no stale files.
+rmSync(storeDir, { recursive: true, force: true })
+mkdirSync(storeDir, { recursive: true })
 
 const STORE_PAGE_SIZE = 100
 const MAX_STORE_PAGES_PER_SECTION = 10
+const MAX_STORE_PAGES = 50
 
+// Every store with products gets an index (stores/<slug>.json) and numbered
+// pages of all its products (stores/<slug>/all-<n>.json): in stock first,
+// rotating through the store's sections so page one shows its range. Stores
+// with 500+ products also get per-section pages for the section shortcuts.
 for (const [storeSlug, storeProducts] of byStore) {
-  if (storeProducts.length < 500) continue
-  const summary = buildStoreSummary(storeProducts)
-  const totalShown = summary.reduce((n, s) => n + s.products.length, 0)
-
-  // Generate per-section paginated files for "View all" pages
-  const sectionIndex = []
   const storeSubdir = resolve(storeDir, storeSlug)
-  try { mkdirSync(storeSubdir, { recursive: true }) } catch {}
+  mkdirSync(storeSubdir, { recursive: true })
 
-  // Group all products by their inferred category
   const allByCat = new Map()
   for (const p of storeProducts) {
     const cat = inferCategory(p)
@@ -622,33 +635,50 @@ for (const [storeSlug, storeProducts] of byStore) {
     allByCat.get(cat).push(p)
   }
 
-  for (const section of summary) {
-    const sectionSlug = section.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
-    const allProducts = allByCat.get(section.label) || allByCat.get(
-      [...allByCat.keys()].find(k => k.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === sectionSlug)
-    ) || []
+  // Same order as the category pages (popular items and core products first),
+  // applied per site section and then rotated so page one spans the store.
+  const inStockFirst = list => [...list.filter(p => p.available !== false), ...list.filter(p => p.available === false)]
+  const bySection = new Map()
+  for (const p of storeProducts) {
+    if (!bySection.has(p.site_section)) bySection.set(p.site_section, [])
+    bySection.get(p.site_section).push(p)
+  }
+  const queues = [...bySection.entries()].sort((a, b) => b[1].length - a[1].length).map(([name, list]) => {
+    const slug = SECTION_SLUGS[name]
+    const listed = inStockFirst(list)
+    if (slug === 'apparel') return apparelBrowseOrder(listed, { keepUnmatched: true })
+    return slug ? browseOrder(slug, listed) : listed
+  })
+  const rotated = []
+  for (let i = 0; queues.some(q => i < q.length); i++) for (const q of queues) if (i < q.length) rotated.push(q[i])
+  const ordered = inStockFirst(rotated)
 
-    const totalPages = Math.min(Math.ceil(allProducts.length / STORE_PAGE_SIZE), MAX_STORE_PAGES_PER_SECTION)
-    for (let page = 1; page <= totalPages; page++) {
-      const start = (page - 1) * STORE_PAGE_SIZE
-      const pageProducts = allProducts.slice(start, start + STORE_PAGE_SIZE)
-      writeFileSync(
-        resolve(storeSubdir, `${sectionSlug}-${page}.json`),
-        JSON.stringify({ products: pageProducts, total: allProducts.length, page, totalPages })
-      )
-    }
-    sectionIndex.push({ slug: sectionSlug, label: section.label, count: section.count, totalPages })
+  const totalPages = Math.min(Math.ceil(ordered.length / STORE_PAGE_SIZE), MAX_STORE_PAGES)
+  for (let page = 1; page <= totalPages; page++) {
+    const pageProducts = ordered.slice((page - 1) * STORE_PAGE_SIZE, page * STORE_PAGE_SIZE)
+    writeFileSync(resolve(storeSubdir, `all-${page}.json`), JSON.stringify({ products: pageProducts, total: ordered.length, page, totalPages }))
   }
 
-  writeFileSync(
-    resolve(storeDir, `${storeSlug}.json`),
-    JSON.stringify({ total: storeProducts.length, sections: summary, sectionIndex })
-  )
+  const sectionIndex = []
+  if (storeProducts.length >= 500) {
+    const summary = buildStoreSummary(storeProducts)
+    for (const section of summary) {
+      const sectionSlug = section.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+      const allProducts = inStockFirst(allByCat.get(section.label) || allByCat.get(
+        [...allByCat.keys()].find(k => k.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === sectionSlug)
+      ) || [])
+      const sectionPages = Math.min(Math.ceil(allProducts.length / STORE_PAGE_SIZE), MAX_STORE_PAGES_PER_SECTION)
+      for (let page = 1; page <= sectionPages; page++) {
+        const pageProducts = allProducts.slice((page - 1) * STORE_PAGE_SIZE, page * STORE_PAGE_SIZE)
+        writeFileSync(resolve(storeSubdir, `${sectionSlug}-${page}.json`), JSON.stringify({ products: pageProducts, total: allProducts.length, page, totalPages: sectionPages }))
+      }
+      sectionIndex.push({ slug: sectionSlug, label: section.label, count: section.count, totalPages: sectionPages })
+    }
+  }
+
+  writeFileSync(resolve(storeDir, `${storeSlug}.json`), JSON.stringify({ total: storeProducts.length, totalPages, sectionIndex }))
   storeSummaryCount++
-  console.log(`store/${storeSlug}.json: ${totalShown} featured across ${summary.length} categories (${storeProducts.length} total), ${sectionIndex.reduce((n,s) => n + s.totalPages, 0)} pages`)
 }
-if (storeSummaryCount > 0) {
-  console.log(`Generated ${storeSummaryCount} store summary files`)
-}
+console.log(`Generated store pages for ${storeSummaryCount} stores`)
 
 console.log('Split complete.')

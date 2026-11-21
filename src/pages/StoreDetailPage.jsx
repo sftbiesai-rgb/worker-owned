@@ -6,6 +6,7 @@ import { SECTION_SLUGS } from '../lib/categories'
 import OwnershipBadge from '../components/OwnershipBadge'
 import ProductImage from '../components/ProductImage'
 import Footer from '../components/Footer'
+import Pagination from '../components/Pagination'
 import Breadcrumbs from '../components/Breadcrumbs'
 
 const ALL_STORES = dedupeByUrl(marketplaceData)
@@ -50,34 +51,35 @@ function ProductCard({ p }) {
 function StoreDetailPage() {
   const { store } = useParams()
   const entry = STORE_BY_SLUG[store]
-  const [products, setProducts] = useState([])
-  const [storeSummary, setStoreSummary] = useState(null)
+  // Loaded data is keyed by store (and page) so navigating between stores
+  // never shows the previous store's products.
+  const [loadedIndex, setLoadedIndex] = useState({ store: null, data: null, missing: false })
+  const [loadedPage, setLoadedPage] = useState({ key: null, data: null })
+  const [pageByStore, setPageByStore] = useState({})
+  const page = pageByStore[store] || 1
+  const setPage = n => setPageByStore(prev => ({ ...prev, [store]: n }))
+  const storeIndex = loadedIndex.store === store ? loadedIndex.data : null
+  const missing = loadedIndex.store === store && loadedIndex.missing
+  const pageData = loadedPage.key === `${store}|${page}` ? loadedPage.data : null
   const categorySlug = entry ? SECTION_SLUGS[entry.site_section] : null
 
+  // stores/<slug>.json has the product total and section shortcuts;
+  // stores/<slug>/all-<n>.json holds each page of all the store's products.
   useEffect(() => {
     if (!entry) return
-    // Try store summary file first (generated for stores with 500+ products)
     fetch(`/data/stores/${store}.json`)
       .then(r => { if (!r.ok) throw new Error(); return r.json() })
-      .then(data => {
-        setStoreSummary(data)
-        // Flatten all section products for the grid
-        const all = data.sections.flatMap(s => s.products)
-        setProducts(all)
-      })
-      .catch(() => {
-        // Fall back to category file
-        const file = categorySlug ? `/data/products-${categorySlug}.json` : null
-        if (!file) return
-        fetch(file)
-          .then(r => r.json())
-          .then(data => {
-            const matched = data.filter(p => p.store_url === entry.url).slice(0, 100)
-            setProducts(matched)
-          })
-          .catch(() => {})
-      })
-  }, [entry, store, categorySlug])
+      .then(data => setLoadedIndex({ store, data, missing: false }))
+      .catch(() => setLoadedIndex({ store, data: null, missing: true }))
+  }, [entry, store])
+
+  useEffect(() => {
+    if (!storeIndex?.totalPages) return
+    fetch(`/data/stores/${store}/all-${page}.json`)
+      .then(r => r.json())
+      .then(data => setLoadedPage({ key: `${store}|${page}`, data }))
+      .catch(() => {})
+  }, [storeIndex, store, page])
 
   useEffect(() => {
     if (!entry) return
@@ -141,42 +143,36 @@ function StoreDetailPage() {
           </div>
 
           {/* Products */}
-          {storeSummary ? (
+          {storeIndex ? (
             <>
-              <p className="text-sm text-gray-500 mb-4">{storeSummary.total.toLocaleString()} products available</p>
-              {storeSummary.sections.map(section => {
-                const sectionSlug = section.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
-                return (
-                  <div key={section.label} className="mb-5">
-                    <div className="flex items-baseline justify-between mb-2">
-                      <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wide capitalize">
-                        {section.label} <span className="text-gray-400 font-normal">({section.count.toLocaleString()})</span>
-                      </h3>
-                      {section.count > section.products.length && (
-                        <Link to={`/store/${store}/${sectionSlug}`} className="text-xs text-[#003580] hover:text-[#002660] font-medium transition-colors">
-                          View all {section.count.toLocaleString()} →
-                        </Link>
-                      )}
-                    </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
-                      {section.products.map(p => (
-                        <ProductCard key={p.id} p={p} />
-                      ))}
-                    </div>
+              <p className="text-sm text-gray-500 mb-3">{storeIndex.total.toLocaleString()} products available</p>
+              {storeIndex.sectionIndex?.length > 1 && (
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {storeIndex.sectionIndex.map(s => (
+                    <Link
+                      key={s.slug}
+                      to={`/store/${store}/${s.slug}`}
+                      className="px-3 py-1 rounded-full text-xs font-medium border bg-white text-gray-500 border-gray-200 hover:text-[#003580] hover:border-[#003580] transition-colors capitalize"
+                    >
+                      {s.label} <span className="text-gray-400">({s.count.toLocaleString()})</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+              {pageData ? (
+                <>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
+                    {pageData.products.map(p => (
+                      <ProductCard key={p.id} p={p} />
+                    ))}
                   </div>
-                )
-              })}
+                  <Pagination page={page} totalPages={storeIndex.totalPages} onPageChange={setPage} />
+                </>
+              ) : (
+                <p className="text-sm text-gray-400 animate-pulse">Loading…</p>
+              )}
             </>
-          ) : products.length > 0 ? (
-            <>
-              <h2 className="text-sm font-bold text-gray-700 mb-3">{products.length} products</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3">
-                {products.map(p => (
-                  <ProductCard key={p.id} p={p} />
-                ))}
-              </div>
-            </>
-          ) : (
+          ) : missing ? (
             <div className="bg-[#f5f5f7] rounded-xl px-4 py-4 text-center">
               <a
                 href={entry.url}
@@ -187,7 +183,7 @@ function StoreDetailPage() {
                 Visit {entry.name} →
               </a>
             </div>
-          )}
+          ) : null}
         </div>
 
         <div className="mt-3 text-center flex flex-col gap-1">
