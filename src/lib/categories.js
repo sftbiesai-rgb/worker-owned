@@ -1,3 +1,5 @@
+import { interleaveByStore } from './utils.js'
+
 export const SECTIONS = [
   { slug: 'coffee-tea',       label: 'Coffee & Tea',          sectionName: 'Coffee & Tea',          title: 'Worker Owned Coffee & Tea Online | Worker Owned Marketplace',                          description: 'Shop worker owned coffee roasters and tea brands online. Cooperatively owned coffee roasted and shipped direct to your door.',              image: 'https://cdn.shopify.com/s/files/1/0262/2413/files/StampedeFairTradeOrganicCoffee.png' },
   { slug: 'media-publishing', label: 'Media & Publishing',    sectionName: 'Media & Publishing',    title: 'Worker Owned Media, News & Publishers Online | Worker Owned Marketplace',              description: 'Read and support worker owned journalism, newsletters, podcasts, and book publishers. Independent media owned by the people who make it.',  image: 'https://cdn.shopify.com/s/files/1/0569/3869/2669/files/getimage_d5cc5bf7-652d-4f27-9f0a-6600b7443adb.jpg' },
@@ -34,10 +36,11 @@ export const SUBCATEGORIES = {
   // "Party Pants T-Shirt" -> shirts). Tags are only a fallback.
   apparel: [
     { slug: 'shoes', label: 'Shoes & Footwear', keywords: ['shoe', 'boot', 'bootie', 'sandal', 'sneaker', 'clog', 'slipper', 'slide', 'mule', 'loafer', 'flat', 'heel', 'wedge', 'moccasin', 'oxford', 'trainer'] },
-    { slug: 'outerwear', label: 'Jackets & Outerwear', keywords: ['jacket', 'coat', 'hoodie', 'vest', 'pullover', 'sweater', 'sweatshirt', 'crewneck', 'fleece', 'parka', 'cardigan', 'shacket', 'anorak', 'windbreaker'] },
+    { slug: 'outerwear', label: 'Jackets & Outerwear', keywords: ['jacket', 'coat', 'hoodie', 'vest', 'pullover', 'sweater', 'sweatshirt', 'crewneck', 'fleece', 'parka', 'cardigan', 'shacket', 'anorak', 'windbreaker', 'quarter zip', '1/4 zip', 'half zip', '1/2 zip'] },
     { slug: 'shirts', label: 'Shirts & Tops', keywords: ['shirt', 't-shirt', 'tee', 'top', 'blouse', 'tank', 'tank top', 'polo', 'henley', 'camisole', 'cami', 'bodysuit', 'jersey'] },
-    { slug: 'pants', label: 'Pants & Bottoms', keywords: ['pant', 'sweatpant', 'jeans', 'short', 'skirt', 'skort', 'bottom', 'legging', 'jogger', 'trouser', 'chino', 'slack', 'overall', 'trunk', 'boardshort'] },
-    { slug: 'accessories', label: 'Hats & Accessories', keywords: ['hat', 'beanie', 'cap', 'scarf', 'scarves', 'glove', 'mitten', 'belt', 'sock', 'bag', 'backpack', 'wallet', 'pouch', 'purse', 'crossbody', 'tote', 'wristlet', 'bandana'] },
+    { slug: 'pants', label: 'Pants & Bottoms', keywords: ['pant', 'sweatpant', 'jeans', 'short', 'bottom', 'legging', 'jogger', 'trouser', 'chino', 'slack', 'overall', 'trunk', 'boardshort'] },
+    { slug: 'dresses', label: 'Dresses & Skirts', keywords: ['dress', 'skirt', 'skort', 'romper', 'jumpsuit'] },
+    { slug: 'accessories', label: 'Hats & Accessories', keywords: ['hat', 'beanie', 'cap', 'scarf', 'scarves', 'glove', 'mitten', 'belt', 'sock', 'bag', 'backpack', 'wallet', 'pouch', 'purse', 'crossbody', 'tote', 'wristlet', 'bandana', 'headband', 'luggage', 'duffel', 'sunglasses', 'necklace', 'earring', 'bracelet', 'pendant', 'jewelry', 'watch'] },
   ],
   'home-goods': [
     { slug: 'jewelry', label: 'Jewelry', keywords: ['jewelry', 'earring', 'necklace', 'bracelet', 'ring', 'pendant', 'body jewelry'] },
@@ -120,7 +123,7 @@ export const SUBCATEGORIES = {
 const EXCLUSIVE_SUBCATEGORIES = new Set(['apparel'])
 
 // Phrases that contain a keyword but don't mean that item type.
-const SUBCATEGORY_NOISE = /\b(short|long|3\/4|cap)[- ]sleeved?\b|\bboot[- ]?cut\b|\btop[- ]?(rated|seller)\b/gi
+const SUBCATEGORY_NOISE = /\b(short|long|3\/4|cap)[- ]sleeved?\b|\bboot[- ]?cut\b|\btop[- ]?(rated|seller)\b|\b(blue jackets|new jersey|high[- ]top|dress (sneak|shoe|boot)\w*)\b/gi
 
 const wordRegexCache = new Map()
 function keywordsRegex(keywords) {
@@ -138,7 +141,16 @@ function lastMatchIndex(re, text) {
   return last
 }
 
-function exclusiveSubcategory(p, subs) {
+// Fan gear and merch that mention a clothing word but aren't clothing
+// ("Boxer Shorts Ornament", "Blue Jackets Felt Banner").
+const NON_APPAREL = /\b(stickers?|keychains?|key ?rings?|lanyards?|ornaments?|banners?|pennants?|flags?|magnets?|decals?|enamel pins?|tumblers?|koozies?|mugs?|slipmats?|bobbleheads?|figurines?|gift cards?|posters?|coins?|detergents?|steamers?|fabric softeners?|sweater (stones?|combs?|shavers?|pins?))\b/i
+
+// Stores that only sell footwear, so "High Top" or "Dress" in a title is a shoe.
+const SHOE_STORES = new Set(['Tradehome Shoes', 'Dansko'])
+
+function exclusiveSubcategory(p, subs, { titleOnly = false } = {}) {
+  if (NON_APPAREL.test(p.title || '')) return null
+  if (SHOE_STORES.has(p.store_name) && subs.some(s => s.slug === 'shoes')) return 'shoes'
   const title = (p.title || '').replace(SUBCATEGORY_NOISE, ' ')
   let best = null, bestIdx = -1
   for (const s of subs) {
@@ -146,6 +158,7 @@ function exclusiveSubcategory(p, subs) {
     if (i > bestIdx) { best = s; bestIdx = i }
   }
   if (best) return best.slug
+  if (titleOnly) return null
   const tags = (p.tags || []).join(' | ').replace(SUBCATEGORY_NOISE, ' ')
   return subs.find(s => lastMatchIndex(keywordsRegex(s.keywords), tags) >= 0)?.slug || null
 }
@@ -178,6 +191,56 @@ export function productInSubcategory(p, category, sub) {
 const WOMENS_RE = /(?:^|[^a-z])(?:women|womens|women's|woman's|ladies|ladies'|wmns)(?:[^a-z]|$)/i
 const MENS_RE = /(?:^|[^a-z])(?:men|mens|men's|man's)(?:[^a-z]|$)/i
 const UNISEX_RE = /(?:^|[^a-z])unisex(?:[^a-z]|$)/i
+
+// Default order for the unfiltered Apparel page: everyday clothing first
+// (shirts, pants, hoodies/sweaters, dresses), alternating men's and women's,
+// then shoes, accessories and kids' items. Items that match no clothing type
+// (stickers, books, keychains) are left off unless the visitor is searching.
+const APPAREL_BASICS = new Set(['shirts', 'pants', 'outerwear', 'dresses'])
+const KIDS_RE = /(?:^|[^a-z])(?:baby|infant|toddler|kids?|kid's|youth|boys|boys'|girls|girls'|children|children's|preschool|grade school)(?:[^a-z]|$)/i
+
+export function apparelBrowseOrder(products, { keepUnmatched = false } = {}) {
+  const subs = SUBCATEGORIES.apparel
+  const basics = [], rest = [], unmatched = []
+  for (const p of products) {
+    const sub = exclusiveSubcategory(p, subs)
+    if (!sub) unmatched.push(p)
+    else if (APPAREL_BASICS.has(sub) && !KIDS_RE.test(p.title || '') && exclusiveSubcategory(p, subs, { titleOnly: true })) basics.push({ p, sub })
+    else rest.push(p)
+  }
+  // Within each store, rotate through item type and gender so a store's turn
+  // shows e.g. a men's shirt then women's pants, not ten tees in a row.
+  const byStore = new Map()
+  for (const b of basics) {
+    const key = b.p.store_name || b.p.store_url || ''
+    if (!byStore.has(key)) byStore.set(key, new Map())
+    const g = WOMENS_RE.test(b.p.title) ? 'w' : MENS_RE.test(b.p.title) ? 'm' : 'u'
+    const bucket = `${b.sub}|${g}`
+    const buckets = byStore.get(key)
+    if (!buckets.has(bucket)) buckets.set(bucket, [])
+    buckets.get(bucket).push(b.p)
+  }
+  const storeQueues = []
+  for (const buckets of byStore.values()) {
+    const qs = [...buckets.values()], queue = []
+    for (let i = 0; qs.some(q => i < q.length); i++) {
+      for (const q of qs) if (i < q.length) queue.push(q[i])
+    }
+    storeQueues.push(queue)
+  }
+  // Stores with the widest clothing range lead each round; every store still
+  // gets two items per round, so small shops show up on page one.
+  storeQueues.sort((a, b) => b.length - a.length)
+  const basicsOrdered = []
+  for (let i = 0; storeQueues.some(q => i < q.length); i += 2) {
+    for (const q of storeQueues) basicsOrdered.push(...q.slice(i, i + 2))
+  }
+  return [
+    ...basicsOrdered,
+    ...interleaveByStore(rest),
+    ...(keepUnmatched ? interleaveByStore(unmatched) : []),
+  ]
+}
 
 export const GENDER_FILTER_CATEGORIES = new Set(['apparel', 'sporting-goods'])
 export const GENDER_FILTERS = [

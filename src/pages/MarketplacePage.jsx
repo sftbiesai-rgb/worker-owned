@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
 import { slugify, faviconUrl, dedupeByUrl, interleaveByStore } from '../lib/utils'
-import { SECTIONS, SUBCATEGORIES, FILTERS, GENDER_FILTERS, GENDER_FILTER_CATEGORIES, productInSubcategory, productMatchesGender } from '../lib/categories'
+import { SECTIONS, SUBCATEGORIES, FILTERS, GENDER_FILTERS, GENDER_FILTER_CATEGORIES, productInSubcategory, productMatchesGender, apparelBrowseOrder } from '../lib/categories'
 import OwnershipBadge from '../components/OwnershipBadge'
 import ProductCard from '../components/ProductCard'
 import Pagination from '../components/Pagination'
@@ -87,7 +87,9 @@ function MarketplacePage() {
 
   const available = filtered.filter(p => p.available !== false)
   const soldOut = filtered.filter(p => p.available === false)
-  const sorted = [...interleaveByStore(available), ...soldOut]
+  const sorted = category === 'apparel' && !activeSub
+    ? [...apparelBrowseOrder(available, { keepUnmatched: filterPatterns.length > 0 }), ...apparelBrowseOrder(soldOut, { keepUnmatched: filterPatterns.length > 0 })]
+    : [...interleaveByStore(available), ...soldOut]
   const totalPages = Math.ceil(sorted.length / PER_PAGE)
   const paged = sorted.slice((page - 1) * PER_PAGE, page * PER_PAGE)
 
