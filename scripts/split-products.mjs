@@ -244,6 +244,18 @@ if (remapped > 0) {
   console.log(`Remapped ${remapped} products to correct sections`)
 }
 
+// Hand-made subscription entries (news sites, podcasts, Means TV) belong with
+// the other independent media, not on the Books shelf.
+let mediaMoved = 0
+for (const p of products) {
+  const isMediaSub = (p.tags || []).includes('news-subscription') || String(p.id).startsWith('synth-maxfunstudio')
+  if (isMediaSub && p.site_section !== 'Media & Publishing') {
+    p.site_section = 'Media & Publishing'
+    mediaMoved++
+  }
+}
+if (mediaMoved > 0) console.log(`Moved ${mediaMoved} subscriptions to Media & Publishing`)
+
 let pathRemapped = 0
 for (const p of products) {
   const path = (p.tags || []).find(t => t.includes(' > '))?.toLowerCase()
@@ -293,7 +305,7 @@ for (const p of products) {
 }
 if (apparelMoved > 0) console.log(`Moved ${apparelMoved} non-clothing products out of Apparel`)
 
-if (remapped > 0 || pathRemapped > 0 || recategorized > 0 || apparelMoved > 0) {
+if (remapped > 0 || mediaMoved > 0 || pathRemapped > 0 || recategorized > 0 || apparelMoved > 0) {
   writeFileSync(resolve(root, 'public/data/products.json'), JSON.stringify(products))
 }
 

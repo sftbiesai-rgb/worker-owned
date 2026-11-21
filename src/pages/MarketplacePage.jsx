@@ -10,6 +10,11 @@ import Footer from '../components/Footer'
 
 const PER_PAGE = 60
 
+// Books shelves also carry posters, pins, incense and discs; show the actual
+// books first on the unfiltered Books page.
+const NON_BOOK_TAGS = /^(posters|enamel-pins|magnets|patches|cards|other|gift\/lifestyle item|incense|sticker|audio cd|vinyl lp|blu-ray|dvd|4k ultra hd|news-subscription)$/i
+const isBook = p => !(p.tags || []).some(t => NON_BOOK_TAGS.test(t)) && !/gift card/i.test(p.title)
+
 function MarketplacePage() {
   const { category, subcategory } = useParams()
   const section = SECTIONS.find(s => s.slug === category)
@@ -22,6 +27,7 @@ function MarketplacePage() {
   const [filter, setFilter] = useState('')
   const [activeFilter, setActiveFilter] = useState(null)
   const [gender, setGender] = useState(null)
+  const [featured, setFeatured] = useState({})
   const categoryFilters = FILTERS[category] || null
 
   useEffect(() => {
@@ -33,6 +39,13 @@ function MarketplacePage() {
       .then(d => { setProducts(d); setLoaded(true) })
       .catch(() => setLoaded(true))
   }, [section])
+
+  useEffect(() => {
+    fetch('/data/featured-categories.json')
+      .then(r => r.json())
+      .then(setFeatured)
+      .catch(() => {})
+  }, [])
 
   useEffect(() => {
     if (!section) return
@@ -89,9 +102,14 @@ function MarketplacePage() {
   const soldOut = filtered.filter(p => p.available === false)
   const sorted = category === 'apparel' && !activeSub
     ? [...apparelBrowseOrder(available, { keepUnmatched: filterPatterns.length > 0 }), ...apparelBrowseOrder(soldOut, { keepUnmatched: filterPatterns.length > 0 })]
-    : [...interleaveByStore(available), ...soldOut]
+    : category === 'books' && !activeSub
+      ? [...interleaveByStore(available.filter(isBook)), ...interleaveByStore(available.filter(p => !isBook(p))), ...soldOut]
+      : [...interleaveByStore(available), ...soldOut]
   const totalPages = Math.ceil(sorted.length / PER_PAGE)
   const paged = sorted.slice((page - 1) * PER_PAGE, page * PER_PAGE)
+
+  const showFeatured = !activeSub && !filter && !activeFilter && !gender && page === 1
+  const featuredPicks = showFeatured ? (featured[category] || []).slice(0, 12) : []
 
   const entries = dedupeByUrl(
     marketplaceData.filter(e => e.site_section === section.sectionName)
@@ -200,6 +218,18 @@ function MarketplacePage() {
           <span className="text-gray-300 mx-2">|</span>
           <Link to={`/${category}/directory`} className="text-[#003580] hover:text-[#002660] transition-colors">Directory</Link>
         </div>
+
+        {/* Popular picks: only on the unfiltered first page */}
+        {featuredPicks.length > 0 && (
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mb-3">
+            <h2 className="text-sm font-bold text-gray-700 mb-3">Popular picks</h2>
+            <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
+              {featuredPicks.map(p => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Products grid */}
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm w-full px-6 py-5 mb-3">

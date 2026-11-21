@@ -75,10 +75,42 @@
       ],
       "url": "/food-pantry"
     },
+    "media-publishing": {
+      "label": "Media & Publishing",
+      "count": 109,
+      "storeCount": 22,
+      "stores": [
+        {
+          "name": "RADIX",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Strange Matters Magazine",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Maximum Fun Studio",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Defector",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "404 Media",
+          "ownershipType": "worker co-op"
+        },
+        {
+          "name": "Aftermath",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/media-publishing"
+    },
     "books": {
       "label": "Books",
-      "count": 41359,
-      "storeCount": 32,
+      "count": 41338,
+      "storeCount": 12,
       "stores": [
         {
           "name": "Microcosm Publishing",
@@ -334,22 +366,6 @@
         }
       ],
       "url": "/coffee-tea"
-    },
-    "media-publishing": {
-      "label": "Media & Publishing",
-      "count": 88,
-      "storeCount": 2,
-      "stores": [
-        {
-          "name": "RADIX",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Strange Matters Magazine",
-          "ownershipType": "worker co-op"
-        }
-      ],
-      "url": "/media-publishing"
     },
     "beer-brewing": {
       "label": "Beer & Brewing",
