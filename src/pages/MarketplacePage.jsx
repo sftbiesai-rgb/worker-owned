@@ -8,15 +8,19 @@ import ProductCard from '../components/ProductCard'
 import Pagination from '../components/Pagination'
 import Footer from '../components/Footer'
 
-const PER_PAGE = 60
+const PER_PAGE = 60 // keep in sync with BROWSE_PER_PAGE in scripts/split-products.mjs
+const NO_PRODUCTS = []
 
 function MarketplacePage() {
   const { category, subcategory } = useParams()
   const section = SECTIONS.find(s => s.slug === category)
   const subs = SUBCATEGORIES[category]
   const activeSub = subs?.find(s => s.slug === subcategory) || null
-  const [products, setProducts] = useState([])
-  const [loaded, setLoaded] = useState(false)
+  // Full category file (big: Apparel is ~25 MB), only fetched when needed.
+  const [full, setFull] = useState({ slug: null, list: [] })
+  // Prebuilt index and pages (public/data/browse, written by split-products.mjs).
+  const [browseIndex, setBrowseIndex] = useState({ slug: null, data: null, missing: false })
+  const [browsePage, setBrowsePage] = useState({ key: null, data: null })
   const [page, setPage] = useState(1)
   const [showStores, setShowStores] = useState(category === 'tech-software' || category === 'art-prints' || category === 'music')
   const [filter, setFilter] = useState('')
@@ -25,15 +29,41 @@ function MarketplacePage() {
   const [featured, setFeatured] = useState({})
   const categoryFilters = FILTERS[category] || null
 
+  const products = full.slug === category ? full.list : NO_PRODUCTS
+  const loaded = full.slug === category
+  const index = browseIndex.slug === category ? browseIndex.data : null
+  const indexMissing = browseIndex.slug === category && browseIndex.missing
+  const view = index ? (activeSub ? index.subs[activeSub.slug] : index) : null
+  // Prebuilt pages cover the unfiltered views; filters, the gender chips and
+  // deep pages need the whole category.
+  const needsFull = !!(filter || activeFilter || gender) || indexMissing || (view && page > view.prebuiltPages)
+  const pageKey = `${category}/${activeSub ? activeSub.slug : 'page'}-${page}`
+  const prebuilt = !needsFull && browsePage.key === pageKey ? browsePage.data : null
+
   useEffect(() => {
     if (!section) return
-    setLoaded(false)
-    setShowStores(category === 'tech-software' || category === 'art-prints' || category === 'music')
+    fetch(`/data/browse/${section.slug}.json`)
+      .then(r => { if (!r.ok) throw new Error(); return r.json() })
+      .then(data => setBrowseIndex({ slug: section.slug, data, missing: false }))
+      .catch(() => setBrowseIndex({ slug: section.slug, data: null, missing: true }))
+  }, [section])
+
+  useEffect(() => {
+    if (!section || !view || needsFull || page > view.prebuiltPages) return
+    const key = `${section.slug}/${activeSub ? activeSub.slug : 'page'}-${page}`
+    fetch(`/data/browse/${key}.json`)
+      .then(r => r.json())
+      .then(data => setBrowsePage({ key, data }))
+      .catch(() => {})
+  }, [section, view, activeSub, page, needsFull])
+
+  useEffect(() => {
+    if (!section || !needsFull || full.slug === section.slug) return
     fetch(`/data/products-${section.slug}.json`)
       .then(r => r.json())
-      .then(d => { setProducts(d); setLoaded(true) })
-      .catch(() => setLoaded(true))
-  }, [section])
+      .then(list => setFull({ slug: section.slug, list }))
+      .catch(() => setFull({ slug: section.slug, list: [] }))
+  }, [section, needsFull, full.slug])
 
   useEffect(() => {
     fetch('/data/featured-categories.json')
@@ -61,7 +91,10 @@ function MarketplacePage() {
     document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', desc)
   }, [section, activeSub])
 
-  useEffect(() => { setPage(1); setFilter(''); setActiveFilter(null); setGender(null) }, [category, subcategory])
+  useEffect(() => {
+    setPage(1); setFilter(''); setActiveFilter(null); setGender(null)
+    setShowStores(category === 'tech-software' || category === 'art-prints' || category === 'music')
+  }, [category, subcategory])
 
   // The unfiltered page order (popular items first) is expensive for big
   // categories, so build it once per category and filter it in place.
@@ -114,14 +147,16 @@ function MarketplacePage() {
   const sorted = !activeSub
     ? browse.list.filter(p => filteredSet.has(p) && (filterPatterns.length > 0 || !browse.unmatched.has(p)))
     : [...interleaveByStore(available), ...soldOut]
-  const totalPages = Math.ceil(sorted.length / PER_PAGE)
-  const paged = sorted.slice((page - 1) * PER_PAGE, page * PER_PAGE)
+  const totalPages = prebuilt ? view.totalPages : Math.ceil(sorted.length / PER_PAGE)
+  const paged = prebuilt || sorted.slice((page - 1) * PER_PAGE, page * PER_PAGE)
+  const productCount = prebuilt || (!loaded && view) ? view.total : filtered.length
+  const ready = !!prebuilt || loaded
 
   const showFeatured = !activeSub && !filter && !activeFilter && !gender && page === 1
   const featuredPicks = showFeatured ? mixSmallMakers(featured[category] || []).slice(0, 12) : []
 
   // Companies listed under this category, plus any store with products in it.
-  const productStores = new Set(sectionProducts.map(p => storeKey(p.store_url)))
+  const productStores = new Set(loaded ? sectionProducts.map(p => storeKey(p.store_url)) : index?.stores || [])
   const entries = dedupeByUrl(
     marketplaceData.filter(e => e.site_section === section.sectionName || productStores.has(storeKey(e.url)))
   )
@@ -247,10 +282,10 @@ function MarketplacePage() {
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-sm font-bold text-gray-700">{activeSub ? activeSub.label : section.label}</h2>
             <p className="text-xs text-gray-400">
-              {!loaded ? <span className="animate-pulse">Loading…</span> : products.length > 0 ? `${filtered.length} product${filtered.length !== 1 ? 's' : ''}` : ''}
+              {!ready ? <span className="animate-pulse">Loading…</span> : productCount > 0 ? `${productCount} product${productCount !== 1 ? 's' : ''}` : ''}
             </p>
           </div>
-          {loaded && subFiltered.length > 20 && (
+          {(view ? view.total : subFiltered.length) > 20 && (
             <input
               type="text"
               value={filter}
@@ -269,7 +304,7 @@ function MarketplacePage() {
               </div>
               <Pagination page={page} totalPages={totalPages} onPageChange={setPage} />
             </>
-          ) : loaded ? (
+          ) : ready ? (
             <p className="text-sm text-gray-500 text-center py-4">To see products and services offered, visit company sites below.</p>
           ) : null}
         </div>

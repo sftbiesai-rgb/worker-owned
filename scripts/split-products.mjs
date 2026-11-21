@@ -1,8 +1,9 @@
-import { readFileSync, writeFileSync, existsSync } from 'fs'
+import { readFileSync, writeFileSync, existsSync, mkdirSync, rmSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { createHash } from 'crypto'
-import { SUBCATEGORIES, SECTION_SLUGS, productInSubcategory, browseOrder, apparelBrowseOrder } from '../src/lib/categories.js'
+import { SUBCATEGORIES, SECTION_SLUGS, productInSubcategory, browseOrder, apparelBrowseOrder, isApparelUnmatched } from '../src/lib/categories.js'
+import { interleaveByStore, storeKey } from '../src/lib/utils.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
@@ -396,6 +397,48 @@ for (const [sectionName, slug] of Object.entries(SECTIONS)) {
   console.log(`products-${slug}.json: ${grouped.length} products${suffix}`)
 }
 
+// ── Prebuilt category pages ──
+// Category pages used to download a whole category (Apparel is ~25 MB) and sort
+// it in the browser before showing anything. Instead, write the default order
+// (and each subcategory's) as small page files the page loads directly. These
+// orders must match MarketplacePage's; it falls back to the full category file
+// for filters, the gender chips and pages past the prebuilt ones.
+const BROWSE_PER_PAGE = 60 // MarketplacePage PER_PAGE
+const BROWSE_PREBUILT_PAGES = 20
+const browseDir = resolve(root, 'public/data/browse')
+rmSync(browseDir, { recursive: true, force: true })
+
+function writeBrowsePages(dir, prefix, list) {
+  const prebuiltPages = Math.min(Math.ceil(list.length / BROWSE_PER_PAGE), BROWSE_PREBUILT_PAGES)
+  for (let page = 1; page <= prebuiltPages; page++) {
+    const products = list.slice((page - 1) * BROWSE_PER_PAGE, page * BROWSE_PER_PAGE)
+    writeFileSync(resolve(dir, `${prefix}-${page}.json`), JSON.stringify(products))
+  }
+  return { total: list.length, totalPages: Math.ceil(list.length / BROWSE_PER_PAGE), prebuiltPages }
+}
+
+for (const slug of Object.values(SECTIONS)) {
+  const grouped = JSON.parse(readFileSync(resolve(root, `public/data/products-${slug}.json`), 'utf-8'))
+  const dir = resolve(browseDir, slug)
+  mkdirSync(dir, { recursive: true })
+  const avail = grouped.filter(p => p.available !== false), sold = grouped.filter(p => p.available === false)
+  let list
+  if (slug === 'apparel') {
+    const unmatched = new Set(grouped.filter(isApparelUnmatched))
+    list = [...apparelBrowseOrder(avail, { keepUnmatched: true }), ...apparelBrowseOrder(sold, { keepUnmatched: true })].filter(p => !unmatched.has(p))
+  } else {
+    list = [...browseOrder(slug, avail), ...sold]
+  }
+  const index = { ...writeBrowsePages(dir, 'page', list), stores: [...new Set(grouped.map(p => storeKey(p.store_url)))], subs: {} }
+  for (const sub of SUBCATEGORIES[slug] || []) {
+    const items = grouped.filter(p => productInSubcategory(p, slug, sub))
+    const subList = [...interleaveByStore(items.filter(p => p.available !== false)), ...items.filter(p => p.available === false)]
+    index.subs[sub.slug] = writeBrowsePages(dir, sub.slug, subList)
+  }
+  writeFileSync(resolve(browseDir, `${slug}.json`), JSON.stringify(index))
+}
+console.log(`Wrote prebuilt category pages to public/data/browse/`)
+
 if (totalOriginal > totalGrouped) {
   console.log(`Format grouping: ${totalOriginal} → ${totalGrouped} (${totalOriginal - totalGrouped} duplicates merged)`)
 }
@@ -611,7 +654,6 @@ function buildStoreSummary(storeProducts) {
 
 let storeSummaryCount = 0
 const storeDir = resolve(root, 'public/data/stores')
-import { mkdirSync, rmSync } from 'fs'
 // Rebuilt from scratch each run so renamed or emptied stores leave no stale files.
 rmSync(storeDir, { recursive: true, force: true })
 mkdirSync(storeDir, { recursive: true })
