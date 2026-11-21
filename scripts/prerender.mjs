@@ -275,6 +275,7 @@ const subcategoryRoutes = [
   { cat: 'apparel', sub: 'accessories', label: 'Hats & Accessories', parent: 'Apparel' },
   { cat: 'apparel', sub: 'outerwear', label: 'Jackets & Outerwear', parent: 'Apparel' },
   { cat: 'apparel', sub: 'dresses', label: 'Dresses & Skirts', parent: 'Apparel' },
+  { cat: 'apparel', sub: 'swim-sleep', label: 'Swim, Sleep & Underwear', parent: 'Apparel' },
   { cat: 'home-goods', sub: 'jewelry', label: 'Jewelry', parent: 'Home Goods' },
   { cat: 'home-goods', sub: 'art', label: 'Art & Prints', parent: 'Home Goods' },
   { cat: 'home-goods', sub: 'woodworking', label: 'Woodworking', parent: 'Home Goods' },

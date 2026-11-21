@@ -45,7 +45,7 @@
   "sections": {
     "food-pantry": {
       "label": "Food & Pantry",
-      "count": 5613,
+      "count": 5670,
       "storeCount": 20,
       "stores": [
         {
@@ -57,11 +57,11 @@
           "ownershipType": "member co-op (retailers as members)"
         },
         {
-          "name": "King Arthur Baking Company",
+          "name": "Mast General Store",
           "ownershipType": "employee-owned"
         },
         {
-          "name": "Mast General Store",
+          "name": "King Arthur Baking Company",
           "ownershipType": "employee-owned"
         },
         {
@@ -77,7 +77,7 @@
     },
     "books": {
       "label": "Books",
-      "count": 41158,
+      "count": 41359,
       "storeCount": 32,
       "stores": [
         {
@@ -109,8 +109,8 @@
     },
     "sporting-goods": {
       "label": "Sporting Goods & Outdoors",
-      "count": 55983,
-      "storeCount": 5,
+      "count": 57274,
+      "storeCount": 6,
       "stores": [
         {
           "name": "Scheels All Sports",
@@ -118,6 +118,10 @@
         },
         {
           "name": "Landry's Bicycles",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Mast General Store",
           "ownershipType": "employee-owned"
         },
         {
@@ -137,7 +141,7 @@
     },
     "home-goods": {
       "label": "Home Goods & Services",
-      "count": 16092,
+      "count": 20575,
       "storeCount": 13,
       "stores": [
         {
@@ -145,12 +149,12 @@
           "ownershipType": "ESOP"
         },
         {
-          "name": "Artisans Cooperative",
-          "ownershipType": "multi-stakeholder co-op"
-        },
-        {
           "name": "Mast General Store",
           "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Artisans Cooperative",
+          "ownershipType": "multi-stakeholder co-op"
         },
         {
           "name": "Handwork — Ithaca's Artisan Cooperative",
@@ -169,7 +173,7 @@
     },
     "apparel": {
       "label": "Apparel",
-      "count": 60600,
+      "count": 54305,
       "storeCount": 17,
       "stores": [
         {
@@ -177,11 +181,11 @@
           "ownershipType": "ESOP"
         },
         {
-          "name": "Mast General Store",
+          "name": "Tradehome Shoes",
           "ownershipType": "employee-owned"
         },
         {
-          "name": "Tradehome Shoes",
+          "name": "Mast General Store",
           "ownershipType": "employee-owned"
         },
         {
@@ -201,7 +205,7 @@
     },
     "personal-care": {
       "label": "Personal Care",
-      "count": 6014,
+      "count": 6152,
       "storeCount": 7,
       "stores": [
         {
@@ -233,7 +237,7 @@
     },
     "games": {
       "label": "Games",
-      "count": 6551,
+      "count": 6676,
       "storeCount": 12,
       "stores": [
         {

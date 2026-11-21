@@ -36,11 +36,12 @@ export const SUBCATEGORIES = {
   // "Party Pants T-Shirt" -> shirts). Tags are only a fallback.
   apparel: [
     { slug: 'shoes', label: 'Shoes & Footwear', keywords: ['shoe', 'boot', 'bootie', 'sandal', 'sneaker', 'clog', 'slipper', 'slide', 'mule', 'loafer', 'flat', 'heel', 'wedge', 'moccasin', 'oxford', 'trainer'] },
-    { slug: 'outerwear', label: 'Jackets & Outerwear', keywords: ['jacket', 'coat', 'hoodie', 'vest', 'pullover', 'sweater', 'sweatshirt', 'crewneck', 'fleece', 'parka', 'cardigan', 'shacket', 'anorak', 'windbreaker', 'quarter zip', '1/4 zip', 'half zip', '1/2 zip'] },
-    { slug: 'shirts', label: 'Shirts & Tops', keywords: ['shirt', 't-shirt', 'tee', 'top', 'blouse', 'tank', 'tank top', 'polo', 'henley', 'camisole', 'cami', 'bodysuit', 'jersey'] },
+    { slug: 'outerwear', label: 'Jackets & Outerwear', keywords: ['jacket', 'coat', 'hoodie', 'vest', 'pullover', 'sweater', 'sweatshirt', 'crewneck', 'fleece', 'parka', 'cardigan', 'shacket', 'anorak', 'windbreaker', 'quarter zip', '1/4 zip', 'half zip', '1/2 zip', 'hoody', 'poncho', 'blazer', 'snowsuit', 'snow suit'] },
+    { slug: 'shirts', label: 'Shirts & Tops', keywords: ['shirt', 't-shirt', 'tee', 'top', 'blouse', 'tank', 'tank top', 'polo', 'henley', 'camisole', 'cami', 'bodysuit', 'jersey', 'overshirt', 'snapshirt', 'onesie'] },
     { slug: 'pants', label: 'Pants & Bottoms', keywords: ['pant', 'sweatpant', 'jeans', 'short', 'bottom', 'legging', 'jogger', 'trouser', 'chino', 'slack', 'overall', 'trunk', 'boardshort'] },
     { slug: 'dresses', label: 'Dresses & Skirts', keywords: ['dress', 'skirt', 'skort', 'romper', 'jumpsuit'] },
-    { slug: 'accessories', label: 'Hats & Accessories', keywords: ['hat', 'beanie', 'cap', 'scarf', 'scarves', 'glove', 'mitten', 'belt', 'sock', 'bag', 'backpack', 'wallet', 'pouch', 'purse', 'crossbody', 'tote', 'wristlet', 'bandana', 'headband', 'luggage', 'duffel', 'sunglasses', 'necklace', 'earring', 'bracelet', 'pendant', 'jewelry', 'watch'] },
+    { slug: 'swim-sleep', label: 'Swim, Sleep & Underwear', keywords: ['swimsuit', 'swimwear', 'tankini', 'bikini', 'one piece', 'one-piece', 'rash guard', 'pajama', 'pj', 'robe', 'nightgown', 'underwear', 'panties', 'panty', 'bra', 'bralette', 'brief', 'boxer', 'boxer brief', 'hipster', 'thong', 'shapewear', 'leotard'] },
+    { slug: 'accessories', label: 'Hats & Accessories', keywords: ['hat', 'beanie', 'cap', 'scarf', 'scarves', 'glove', 'mitten', 'belt', 'sock', 'bag', 'backpack', 'wallet', 'pouch', 'purse', 'crossbody', 'tote', 'wristlet', 'bandana', 'headband', 'luggage', 'duffel', 'sunglasses', 'necklace', 'earring', 'bracelet', 'pendant', 'jewelry', 'watch', 'hair clip', 'hair claw', 'scrunchie', 'face mask', 'balaclava', 'gaiter', 'wristband', 'wrist band', 'necktie', 'hair tie', 'card holder', 'cardholder'] },
   ],
   'home-goods': [
     { slug: 'jewelry', label: 'Jewelry', keywords: ['jewelry', 'earring', 'necklace', 'bracelet', 'ring', 'pendant', 'body jewelry'] },
@@ -142,14 +143,14 @@ function lastMatchIndex(re, text) {
 }
 
 // Fan gear and merch that mention a clothing word but aren't clothing
-// ("Boxer Shorts Ornament", "Blue Jackets Felt Banner").
-const NON_APPAREL = /\b(stickers?|keychains?|key ?rings?|lanyards?|ornaments?|banners?|pennants?|flags?|magnets?|decals?|enamel pins?|tumblers?|koozies?|mugs?|slipmats?|bobbleheads?|figurines?|gift cards?|posters?|coins?|detergents?|steamers?|fabric softeners?|sweater (stones?|combs?|shavers?|pins?))\b/i
+// ("Boxer Shorts Ornament", "Hoodie Sticker"). Only counts when it comes
+// after the clothing word, so "Sticker Collage T-Shirt" is still a shirt.
+const NON_APPAREL = /\b(?:stickers?|keychains?|key ?rings?|lanyards?|ornaments?|felt banners?|magnets?|decals?|enamel pins?|tumblers?|koozies?|slipmats?|bobbleheads?|figurines?|gift cards?|posters?|coins?|detergents?|steamers?|fabric softeners?|sweater (?:stones?|combs?|shavers?|pins?))\b/gi
 
 // Stores that only sell footwear, so "High Top" or "Dress" in a title is a shoe.
 const SHOE_STORES = new Set(['Tradehome Shoes', 'Dansko'])
 
 function exclusiveSubcategory(p, subs, { titleOnly = false } = {}) {
-  if (NON_APPAREL.test(p.title || '')) return null
   if (SHOE_STORES.has(p.store_name) && subs.some(s => s.slug === 'shoes')) return 'shoes'
   const title = (p.title || '').replace(SUBCATEGORY_NOISE, ' ')
   let best = null, bestIdx = -1
@@ -157,6 +158,7 @@ function exclusiveSubcategory(p, subs, { titleOnly = false } = {}) {
     const i = lastMatchIndex(keywordsRegex(s.keywords), title)
     if (i > bestIdx) { best = s; bestIdx = i }
   }
+  if (lastMatchIndex(NON_APPAREL, title) > bestIdx) return null
   if (best) return best.slug
   if (titleOnly) return null
   const tags = (p.tags || []).join(' | ').replace(SUBCATEGORY_NOISE, ' ')

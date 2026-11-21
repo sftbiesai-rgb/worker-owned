@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { SUBCATEGORIES, productInSubcategory } from '../src/lib/categories.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
@@ -71,6 +72,37 @@ const CATEGORY_PATH_RULES = [
   ['home & yard > outdoor cooking', 'Home Goods & Services'],
   ['home & yard > electronics', 'Tech & Software'],
 ]
+
+// Scheels files a lot of non-clothing under Apparel (strollers, saw blades,
+// coolers, keychains). Route it by the store's category path. Only applied to
+// products in Apparel; first match wins, and the keep-in-Apparel rules come
+// first because hiking clothes and boots live under "activities > camp & hike".
+const APPAREL_PATH_RULES = [
+  [/^activities > (workwear|camp & hike > hiking (clothing|footwear)|climbing gear > climbing shoes|track & field equipment > track & field shoes|padel gear > padel shoes)/, 'Apparel'],
+  [/^accessories > (stickers & patches|lanyards & keychains|clothing wash|umbrellas|jewelry)/, 'Home Goods & Services'],
+  [/^accessories > hair accessories > hair care/, 'Personal Care'],
+  [/^accessories > (swim accessories|cooling gear)/, 'Sporting Goods & Outdoors'],
+  [/^activities > /, 'Sporting Goods & Outdoors'],
+  [/^baby clothing & accessories > nursery & gear/, 'Home Goods & Services'],
+  [/^home & yard > /, 'Home Goods & Services'],
+  [/^fan shop > [^>]+ > [^>]*home & yard/, 'Home Goods & Services'],
+  [/^pheasants forever/, 'Sporting Goods & Outdoors'],
+]
+
+// Fan shop "accessories" mix hats and scarves with lanyards and car emblems.
+const FAN_ACCESSORIES = /^fan shop > [^>]+ > [^>]*accessories/
+
+// Mast General's feed has no category paths, so anything left in Apparel that
+// isn't a clothing item is sorted by title, defaulting to Home Goods.
+const MAST_TITLE_RULES = [
+  [/\b(cookbooks?|books?|guide|handbook|almanac|calendar)\b/i, 'Books'],
+  [/\b(toys?|putty|slinky|puzzles?|playing cards|kites?|yo-?yo)\b/i, 'Games'],
+  [/\b(knife|knives|axe|hatchet|flashlights?|headlamps?|tents?|hammocks?|trekking|hiking|poles?|carabiners?|stoves?|coolers?|compass|whistle|sharpeners?|multi-?tool|maps?|binoculars?|fishing)\b/i, 'Sporting Goods & Outdoors'],
+  [/\b(pancake|mix|preserves|grits|salsa|gum|mints|cornmeal)\b/i, 'Food & Pantry'],
+  [/\b(cologne|perfume|razor|shave|lip balm)\b/i, 'Personal Care'],
+]
+
+const isClothing = p => SUBCATEGORIES.apparel.some(sub => productInSubcategory(p, 'apparel', sub))
 
 const SECTIONS = {
   'Coffee & Tea': 'coffee-tea',
@@ -243,7 +275,25 @@ if (recategorized > 0) {
   console.log(`Recategorized ${recategorized} products from multi-category stores`)
 }
 
-if (remapped > 0 || pathRemapped > 0 || recategorized > 0) {
+let apparelMoved = 0
+for (const p of products) {
+  if (p.site_section !== 'Apparel') continue
+  const path = (p.tags || []).find(t => t.includes(' > '))?.toLowerCase()
+  let section = null
+  if (path) {
+    section = APPAREL_PATH_RULES.find(([re]) => re.test(path))?.[1] || null
+    if (!section && FAN_ACCESSORIES.test(path) && !isClothing(p)) section = 'Home Goods & Services'
+  } else if (p.store_name === 'Mast General Store' && !isClothing(p)) {
+    section = MAST_TITLE_RULES.find(([re]) => re.test(p.title || ''))?.[1] || 'Home Goods & Services'
+  }
+  if (section && section !== p.site_section) {
+    p.site_section = section
+    apparelMoved++
+  }
+}
+if (apparelMoved > 0) console.log(`Moved ${apparelMoved} non-clothing products out of Apparel`)
+
+if (remapped > 0 || pathRemapped > 0 || recategorized > 0 || apparelMoved > 0) {
   writeFileSync(resolve(root, 'public/data/products.json'), JSON.stringify(products))
 }
 
