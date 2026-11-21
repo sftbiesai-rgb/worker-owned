@@ -34,6 +34,7 @@ const STUDIOS = {
   'Wraith Games': ['Wraith Games'],
   'Punch Up Games': ['Punch Up Games'],
   'Hidden Horses': ['Hidden Horses'],
+  'Silver Spook Games': ['Silver Spook Games'],
 };
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));

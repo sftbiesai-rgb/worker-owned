@@ -1891,5 +1891,27 @@
     "status": "verified active",
     "notes": "Employee-owned cooperative of game developers that publishes its sales numbers openly. Made Dig Too Deep, an action roguelite on Steam.",
     "site_section": "Games"
+  },
+  {
+    "id": 235,
+    "name": "Scratch",
+    "url": "https://www.talkscratch.com",
+    "category": "worker-owned literary newsletter",
+    "ownership_type": "worker-owned",
+    "ships": "worldwide (digital)",
+    "status": "verified active",
+    "notes": "Weekly newsletter of interviews, essays, and real conversations about how writers are surviving. Self-described worker-owned literary publication. Free and paid subscriptions.",
+    "site_section": "Media & Publishing"
+  },
+  {
+    "id": 236,
+    "name": "Silver Spook Games",
+    "url": "https://store.steampowered.com/app/4611140/",
+    "category": "video game studio",
+    "ownership_type": "worker-owned",
+    "ships": "worldwide (digital)",
+    "status": "verified active",
+    "notes": "Worker-owned indie studio behind the Neofeud cyberpunk adventure games. Neofeud 2 (2026) is about fighting to overturn capitalism and empire.",
+    "site_section": "Games"
   }
 ]
