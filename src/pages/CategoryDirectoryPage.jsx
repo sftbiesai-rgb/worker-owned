@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
-import { slugify, faviconUrl, dedupeByUrl } from '../lib/utils'
+import { slugify, faviconUrl, dedupeByUrl, storeKey } from '../lib/utils'
 import { SECTIONS } from '../lib/categories'
 import OwnershipBadge from '../components/OwnershipBadge'
 import Footer from '../components/Footer'
@@ -20,7 +20,8 @@ function CategoryDirectoryPage() {
         const counts = {}
         for (const p of data) {
           if (p.site_section === section.sectionName && p.store_url) {
-            counts[p.store_url] = (counts[p.store_url] || 0) + 1
+            const key = storeKey(p.store_url)
+            counts[key] = (counts[key] || 0) + 1
           }
         }
         setProductCounts(counts)
@@ -45,8 +46,10 @@ function CategoryDirectoryPage() {
 
   if (!section) return <Navigate to="/" replace />
 
+  // Companies listed under this category, plus any store with products in it
+  // (Zia and PM Press sell movies but are listed under Music and Books).
   const entries = dedupeByUrl(
-    marketplaceData.filter(e => e.site_section === section.sectionName)
+    marketplaceData.filter(e => e.site_section === section.sectionName || productCounts[storeKey(e.url)])
   ).sort((a, b) => a.name.localeCompare(b.name))
 
   const filterWords = filter.toLowerCase().split(/\s+/).filter(Boolean)
@@ -57,8 +60,8 @@ function CategoryDirectoryPage() {
       })
     : entries
 
-  const withProducts = filtered.filter(e => productCounts[e.url])
-  const withoutProducts = filtered.filter(e => !productCounts[e.url])
+  const withProducts = filtered.filter(e => productCounts[storeKey(e.url)])
+  const withoutProducts = filtered.filter(e => !productCounts[storeKey(e.url)])
 
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-gray-800 font-sans flex flex-col">
@@ -112,11 +115,11 @@ function CategoryDirectoryPage() {
 
           <div className="space-y-2">
             {filtered.map(entry => {
-              const count = productCounts[entry.url] || 0
+              const count = productCounts[storeKey(entry.url)] || 0
               const hasProducts = count > 0
               const CardTag = hasProducts ? Link : 'a'
               const cardProps = hasProducts
-                ? { to: `/store/${slugify(entry.name)}/${section.slug}` }
+                ? { to: `/store/${slugify(entry.name)}` }
                 : { href: entry.url, target: '_blank', rel: 'noopener' }
               return (
                 <CardTag

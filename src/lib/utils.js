@@ -135,3 +135,9 @@ export function displayTitle(p) {
 
 // Some stores' scraped prices already include the currency symbol.
 export const formatPrice = price => `$${String(price).replace(/^\$/, '')}`
+
+// Compare stores by domain so "www.", "shop." and http/https differences between
+// the directory and scraped product URLs don't matter.
+export function storeKey(url) {
+  try { return new URL(url).hostname.replace(/^(www|shop)\./, '') } catch { return url || '' }
+}

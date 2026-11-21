@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
-import { slugify, faviconUrl, dedupeByUrl, interleaveByStore } from '../lib/utils'
+import { slugify, faviconUrl, dedupeByUrl, interleaveByStore, storeKey } from '../lib/utils'
 import { SECTIONS, SUBCATEGORIES, FILTERS, GENDER_FILTERS, GENDER_FILTER_CATEGORIES, productInSubcategory, productMatchesGender, apparelBrowseOrder, coreFirstOrder } from '../lib/categories'
 import OwnershipBadge from '../components/OwnershipBadge'
 import ProductCard from '../components/ProductCard'
@@ -106,8 +106,10 @@ function MarketplacePage() {
   const showFeatured = !activeSub && !filter && !activeFilter && !gender && page === 1
   const featuredPicks = showFeatured ? (featured[category] || []).slice(0, 12) : []
 
+  // Companies listed under this category, plus any store with products in it.
+  const productStores = new Set(sectionProducts.map(p => storeKey(p.store_url)))
   const entries = dedupeByUrl(
-    marketplaceData.filter(e => e.site_section === section.sectionName)
+    marketplaceData.filter(e => e.site_section === section.sectionName || productStores.has(storeKey(e.url)))
   )
 
   return (
