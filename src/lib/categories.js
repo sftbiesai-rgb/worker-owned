@@ -145,7 +145,7 @@ function lastMatchIndex(re, text) {
 // Fan gear and merch that mention a clothing word but aren't clothing
 // ("Boxer Shorts Ornament", "Hoodie Sticker"). Only counts when it comes
 // after the clothing word, so "Sticker Collage T-Shirt" is still a shirt.
-const NON_APPAREL = /\b(?:stickers?|keychains?|key ?rings?|lanyards?|ornaments?|felt banners?|magnets?|decals?|enamel pins?|tumblers?|koozies?|slipmats?|bobbleheads?|figurines?|gift cards?|posters?|coins?|detergents?|steamers?|fabric softeners?|sweater (?:stones?|combs?|shavers?|pins?))\b/gi
+const NON_APPAREL = /\b(?:stickers?|keychains?|key ?rings?|lanyards?|ornaments?|felt banners?|magnets?|decals?|enamel pins?|tumblers?|koozies?|slipmats?|replacement lens(es)?|bobbleheads?|figurines?|gift cards?|posters?|coins?|detergents?|steamers?|fabric softeners?|sweater (?:stones?|combs?|shavers?|pins?))\b/gi
 
 // Stores that only sell footwear, so "High Top" or "Dress" in a title is a shoe.
 const SHOE_STORES = new Set(['Tradehome Shoes', 'Dansko'])
@@ -158,7 +158,7 @@ function exclusiveSubcategory(p, subs, { titleOnly = false } = {}) {
     const i = lastMatchIndex(keywordsRegex(s.keywords), title)
     if (i > bestIdx) { best = s; bestIdx = i }
   }
-  if (lastMatchIndex(NON_APPAREL, title) > bestIdx) return null
+  if (lastMatchIndex(NON_APPAREL, title) >= Math.max(bestIdx, 0)) return null
   if (best) return best.slug
   if (titleOnly) return null
   const tags = (p.tags || []).join(' | ').replace(SUBCATEGORY_NOISE, ' ')
@@ -201,6 +201,9 @@ const UNISEX_RE = /(?:^|[^a-z])unisex(?:[^a-z]|$)/i
 const APPAREL_BASICS = new Set(['shirts', 'pants', 'outerwear', 'dresses'])
 const KIDS_RE = /(?:^|[^a-z])(?:baby|infant|toddler|kids?|kid's|youth|boys|boys'|girls|girls'|children|children's|preschool|grade school)(?:[^a-z]|$)/i
 
+// Apparel items that match no clothing type (stickers, books, keychains).
+export const isApparelUnmatched = p => !exclusiveSubcategory(p, SUBCATEGORIES.apparel)
+
 export function apparelBrowseOrder(products, { keepUnmatched = false } = {}) {
   const subs = SUBCATEGORIES.apparel
   const basics = [], rest = [], unmatched = []
@@ -210,14 +213,17 @@ export function apparelBrowseOrder(products, { keepUnmatched = false } = {}) {
     else if (APPAREL_BASICS.has(sub) && !KIDS_RE.test(p.title || '') && exclusiveSubcategory(p, subs, { titleOnly: true })) basics.push({ p, sub })
     else rest.push(p)
   }
-  // Within each store, rotate through item type and gender so a store's turn
+  // Familiar brands (Carhartt, Levi's, Patagonia...) lead, rotating brand and
+  // gender; then each store rotates item type and gender so a store's turn
   // shows e.g. a men's shirt then women's pants, not ten tees in a row.
+  const genderOf = p => WOMENS_RE.test(p.title) ? 'w' : MENS_RE.test(p.title) ? 'm' : 'u'
+  const brandBasics = basics.filter(b => popularName('apparel', b.p)).map(b => b.p)
+  const brandOrdered = roundRobinStores(brandBasics, q => rotate(q, p => popularName('apparel', p) + '|' + genderOf(p)))
   const byStore = new Map()
-  for (const b of basics) {
+  for (const b of basics.filter(b => !popularName('apparel', b.p))) {
     const key = b.p.store_name || b.p.store_url || ''
     if (!byStore.has(key)) byStore.set(key, new Map())
-    const g = WOMENS_RE.test(b.p.title) ? 'w' : MENS_RE.test(b.p.title) ? 'm' : 'u'
-    const bucket = `${b.sub}|${g}`
+    const bucket = `${b.sub}|${genderOf(b.p)}`
     const buckets = byStore.get(key)
     if (!buckets.has(bucket)) buckets.set(bucket, [])
     buckets.get(bucket).push(b.p)
@@ -238,7 +244,7 @@ export function apparelBrowseOrder(products, { keepUnmatched = false } = {}) {
     for (const q of storeQueues) basicsOrdered.push(...q.slice(i, i + 2))
   }
   return [
-    ...basicsOrdered,
+    ...mixSmallMakers([...brandOrdered, ...basicsOrdered]),
     ...interleaveByStore(rest),
     ...(keepUnmatched ? interleaveByStore(unmatched) : []),
   ]
@@ -314,6 +320,9 @@ const CORE_ITEM = {
   'food-pantry': p => !MERCH.test(p.title) && !BREW_GEAR.test(p.title),
   games: p => !GAME_GEAR.test(p.title),
   'home-goods': p => !isFanGear(p) && !SHOP_MERCH.test(p.title),
+  // Records, CDs and tapes before band shirts, posters and slipmats.
+  music: p => !MERCH.test((p.title || '').split('/')[0]),
+  'movies-tv': p => !MERCH.test((p.title || '').split('/')[0]) && !/sticky note|masking tape/i.test(p.title),
   // Beer first, then glassware, growlers and tap handles, then apparel.
   'beer-brewing': p => isBeer(p) ? 0 : BAR_GEAR.test(p.title) ? 1 : 2,
   'sporting-goods': p => !isFanGear(p) && !SMALL_PARTS.test(p.title),
@@ -322,10 +331,110 @@ const CORE_ITEM = {
   'personal-care': p => !SHOP_MERCH.test(p.title) && !/\b(mugs?|candle holders?|t-?shirts?)\b/i.test(p.title),
 }
 
-// A category's test returns true/false (core or not) or a tier number, lowest first.
-export function coreFirstOrder(category, products) {
-  const test = CORE_ITEM[category]
-  if (!test) return interleaveByStore(products)
+// Everyday staples (toothpaste, coffee, flour, skillets) and the brands,
+// artists, authors and franchises people already shop for. On a category's
+// unfiltered page these lead the first pages, so the marketplace reads like a
+// store with the things you'd otherwise buy on Amazon rather than only
+// handmade goods. Matched as whole words anywhere in the title.
+const POPULAR_NAMES = {
+  apparel: ['carhartt', "levi's", 'patagonia', 'the north face', 'columbia', 'nike', 'adidas', 'under armour', 'kuhl', 'wrangler', 'champion', 'vans', 'converse', 'birkenstock', 'ugg', 'crocs', 'new balance', 'brooks', 'hoka', 'asics', 'dansko', 'smartwool', 'darn tough', 'dickies', 'free people', 'prana', "arc'teryx", 'ariat', 'oakley', 'ray-ban', 'costa', 'keen', 'merrell', 'teva', 'chaco', 'timberland', 'dr. martens', 'filson', 'duluth', 'vuori'],
+  music: ['the beatles', 'taylor swift', 'fleetwood mac', 'pink floyd', 'radiohead', 'kendrick lamar', 'nirvana', 'prince', 'michael jackson', 'bob marley', 'amy winehouse', 'stevie wonder', 'marvin gaye', 'joni mitchell', 'daft punk', 'sabrina carpenter', 'wu-tang clan', 'beyonce', 'david bowie', 'outkast', 'phoebe bridgers', 'johnny cash', 'john coltrane', 'arctic monkeys', 'sza', 'miles davis', 'led zeppelin', 'the rolling stones', 'bob dylan', 'bruce springsteen', 'billie eilish', 'olivia rodrigo', 'chappell roan', 'lana del rey', 'tyler, the creator', 'harry styles', 'adele', 'dolly parton', 'willie nelson', 'elton john', 'queen', 'the cure', 'the smiths', 'talking heads', 'neil young', 'grateful dead', 'pearl jam', 'foo fighters', 'metallica', 'red hot chili peppers', 'gorillaz', 'tame impala', 'mac miller', 'noah kahan', 'zach bryan', 'gracie abrams', 'boygenius', 'mitski', 'fiona apple', 'kate bush', 'bjork', 'lorde', 'hozier', 'nina simone', 'aretha franklin', 'tom petty', 'creedence clearwater revival', 'eagles', 'steely dan', 'simon & garfunkel', 'carole king', 'abba', 'whitney houston', 'lauryn hill', 'a tribe called quest', 'nas', 'the notorious b.i.g.', 'vampire weekend', 'the strokes', 'lcd soundsystem', 'bon iver', 'sufjan stevens', 'system of a down', 'green day', 'the white stripes', 'paramore', 'weezer', 'beastie boys', 'the clash', 'ramones', 'black sabbath', 'ac/dc', 'the doors', 'jimi hendrix', 'janis joplin', 'frank sinatra', 'louis armstrong', 'ella fitzgerald', 'vince guaraldi', 'mariah carey', 'charli xcx', 'dua lipa', 'lady gaga', 'kacey musgraves', 'chris stapleton', 'tyler childers', 'sturgill simpson'],
+  'movies-tv': ['studio ghibli', 'spirited away', 'totoro', 'mononoke', 'star wars', 'mandalorian', 'lord of the rings', 'hobbit', 'harry potter', 'marvel', 'avengers', 'batman', 'spider-man', 'jurassic', 'indiana jones', 'back to the future', 'godfather', 'criterion', 'seinfeld', 'the office', 'friends', 'breaking bad', 'better call saul', 'twin peaks', 'simpsons', 'futurama', 'star trek', 'doctor who', 'toy story', 'pixar', 'disney', 'yellowstone', 'stranger things', 'game of thrones', 'sopranos', 'the wire', 'alien', 'terminator', 'die hard', 'ghostbusters', 'big lebowski', 'fargo', 'pulp fiction', 'kill bill', 'the shining', '2001', 'psycho', 'vertigo', 'wizard of oz', 'casablanca', 'dune', 'blade runner', 'mad max', 'top gun', 'rocky', 'halloween', 'scream', 'nightmare before christmas', 'elf', 'home alone', "it's a wonderful life", 'christmas vacation', 'a christmas story', 'grinch', 'charlie brown', 'muppet', 'princess bride', 'monty python', 'schitt', 'parks and recreation', 'the bear', 'succession', 'ted lasso', 'bluey', 'avatar', 'oppenheimer', 'barbie', 'wicked', 'john wick', 'mission: impossible', 'james bond', '007'],
+  books: ['stephen king', 'colleen hoover', 'rebecca yarros', 'sarah j. maas', 'brandon sanderson', 'j. r. r. tolkien', 'j.r.r. tolkien', 'frank herbert', 'octavia butler', 'octavia e. butler', 'ursula k. le guin', 'toni morrison', 'barbara kingsolver', 'percival everett', 'kazuo ishiguro', 'andy weir', 'taylor jenkins reid', 'emily henry', 'freida mcfadden', 'james clear', 'michelle obama', 'yuval noah harari', 'robin wall kimmerer', 'howard zinn', 'angela y. davis', 'naomi klein', 'david graeber', 'noam chomsky', 'mariame kaba', 'bell hooks', 'james baldwin', 'george orwell', 'kurt vonnegut', 'terry pratchett', 'douglas adams', 'agatha christie', 'jane austen', 'dr. seuss', 'mo willems', 'dav pilkey', 'jeff kinney', 'rick riordan', 'suzanne collins', 'eiichiro oda', 'tatsuki fujimoto', 'gege akutami', 'kohei horikoshi', 'alison bechdel', 'pierce brown', 'adrian tchaikovsky', 'martha wells', 'n. k. jemisin', 'becky chambers', 'ann patchett', 'sally rooney', 'gabrielle zevin', 'delia owens', 'tara westover', 'matt haig', 'john green', 'rick rubin', 'malcolm gladwell', 'mary roach', 'erik larson', 'david sedaris', 'anthony bourdain', 'ina garten', 'samin nosrat', 'j. kenji lopez-alt', 'cormac mccarthy', 'haruki murakami', 'gabriel garcia marquez', 'margaret atwood', 'ray bradbury', 'philip k. dick', 'isaac asimov', 'arthur c. clarke', 'william gibson', 'neal stephenson'],
+  games: ['mario', 'zelda', 'pokemon', 'kirby', 'animal crossing', 'metroid', 'donkey kong', 'smash bros', 'splatoon', 'minecraft', 'elden ring', 'final fantasy', 'spider-man', 'god of war', 'sonic', 'catan', 'ticket to ride', 'wingspan', 'codenames', 'pandemic', 'magic: the gathering', 'mtg', 'lorcana', 'lego', 'dungeons & dragons', 'monopoly', 'scrabble', 'uno', 'exploding kittens', 'jenga', 'clue', 'chess', 'baldur', 'hades', 'stardew', 'hollow knight', 'resident evil', 'metal gear', 'persona', 'yakuza', 'like a dragon', 'street fighter', 'mortal kombat', 'tetris', 'pac-man'],
+  'home-goods': ['cast iron skillet', 'skillet', 'dutch oven', 'coffee mug', 'kitchen towel', 'bath towel', 'tea towel', 'sheet set', 'wool blanket', 'throw blanket', 'throw pillow', 'cutting board', 'chef\'s knife', 'tumbler', 'water bottle', 'mixing bowl', 'baking sheet', 'cookware', 'dog bed', 'planter', 'grow light', 'yeti rambler', 'yeti tumbler', 'lodge', 'stanley', 'hydro flask', 'zwilling', 'oxo', 'cuisinart', 'ninja', 'le creuset', 'pyrex', 'big green egg', 'traeger', 'weber', 'solo stove', 'owala', 'contigo', 'kong', 'blackstone', 'ooni', 'staub', 'henckels', 'wusthof', 'victorinox', 'bodum', 'chemex', 'hario'],
+  'personal-care': ['toothpaste', 'deodorant', 'shampoo', 'conditioner', 'body wash', 'bar soap', 'hand soap', 'lotion', 'moisturizer', 'sunscreen', 'lip balm', 'floss', 'mouthwash', 'razor', 'multivitamin', 'face wash', 'shea butter', 'cerave', 'cetaphil', 'aveeno', 'neutrogena', "burt's bees", 'dr. bronner', "dr. bronner's", "tom's of maine", 'native deodorant', 'dr. squatch', 'olay', 'dove', 'colgate', 'crest', 'oral-b', 'nivea', 'aquaphor', 'vaseline', 'eucerin', 'la roche-posay', 'vanicream', "nature's bounty", 'centrum', 'olly', 'advil', 'tylenol', 'zyrtec', 'claritin', 'banana boat', 'sun bum', 'duke cannon', 'tree hut', 'mitchum', 'old spice', 'gillette', 'listerine', 'sensodyne', 'differin', 'thayers', 'alaffia', 'chapstick', 'blistex', 'carmex', 'emergen-c', 'airborne', 'miralax', 'metamucil', 'theraflu', 'mucinex', 'vicks'],
+  'sporting-goods': ['water bottle', 'backpack', 'running shoes', 'yoga mat', 'dumbbell', 'sleeping bag', 'tent', 'headlamp', 'cooler', 'hammock', 'bike helmet', 'basketball', 'football', 'soccer ball', 'pocket knife', 'trek', 'yeti', 'osprey', 'patagonia', 'brooks', 'hoka', 'garmin', 'black diamond', 'big agnes', 'msr', 'jetboil', 'eno', 'wilson', 'spalding', 'coleman', 'stanley', 'hydro flask', 'camelbak', 'under armour', 'nike', 'adidas', 'oakley', 'smith', 'titleist', 'callaway', 'taylormade', 'bushnell', 'vortex', 'shimano', 'penn', 'rapala', 'the north face', 'columbia', 'salomon', 'merrell', 'keen', 'thule', 'rei', 'kelty', 'nemo', 'therm-a-rest', 'sea to summit', 'leatherman', 'gerber', 'benchmade', 'opinel', 'swiss army', 'otterbox', 'hoyt', 'bear archery', 'yakima', 'peloton', 'bowflex', 'rogue', 'everlast', 'franklin', 'rawlings', 'easton', 'bauer', 'ccm', 'burton', 'k2', 'rossignol'],
+  'tech-software': ['headphones', 'earbuds', 'bluetooth speaker', 'smartwatch', 'action camera', 'binoculars', 'garmin', 'gopro', 'jbl', 'bose', 'sony', 'whoop', 'apple', 'anker', 'bushnell', 'zeiss', 'swarovski', 'vortex', 'nikon', 'skullcandy', 'tile', 'theragun', 'hyperice', 'oura'],
+  'coffee-tea': ['whole bean', 'ground coffee', 'espresso', 'decaf', 'dark roast', 'medium roast', 'light roast', 'french roast', 'cold brew', 'earl grey', 'green tea', 'black tea', 'chai', 'matcha', 'hot cocoa', 'equal exchange'],
+  'food-pantry': ['peanut butter', 'almond butter', 'flour', 'pasta', 'olive oil', 'honey', 'maple syrup', 'cheddar', 'butter', 'chocolate bar', 'granola', 'oats', 'rice', 'salsa', 'hot sauce', 'jerky', 'pickles', 'sauerkraut', 'bread', 'bagels', 'ice cream', 'broth', 'beef', 'chicken', 'bacon', 'spices', 'seasoning', 'haribo', 'jelly belly', 'ghirardelli', 'lindt', "hershey's", "reese's", 'kind', 'clif', 'cabot', 'king arthur', 'frontier', "bob's red mill", 'stonewall kitchen', 'moon ?pie', 'cheerwine', 'goo goo', 'big green egg', "stubb's", 'traeger', "sweet baby ray's", 'tabasco', 'cholula', 'jack link', 'divine', 'once again', 'real pickles', 'taharka'],
+}
+const escapeRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\\\?/g, '?')
+const POPULAR = Object.fromEntries(Object.entries(POPULAR_NAMES).map(([cat, names]) =>
+  [cat, new RegExp(`(?<![a-z])(${names.map(escapeRe).join('|')})(?![a-z])`, 'i')]))
+// Music and books from Bull Moose and Zia are titled "Artist/Album" or
+// "Author/Title": match the artist or author exactly, so "Fairy Queen" isn't
+// Queen and "Becoming Dr. Seuss" isn't Dr. Seuss. Other titles can't tell an
+// author apart, so they only count when they name the item itself.
+const BYLINE_CATEGORIES = new Set(['music', 'books'])
+const popularCache = new WeakMap()
+function popularName(category, p) {
+  if (popularCache.has(p)) return popularCache.get(p)
+  const re = POPULAR[category]
+  let name = null
+  if (re) {
+    const title = p.title || ''
+    if (BYLINE_CATEGORIES.has(category)) {
+      if (title.includes('/')) {
+        const byline = title.split('/')[0].trim()
+        const m = re.exec(byline)
+        if (m && m[0].length >= byline.replace(/^the /i, '').length - 1) name = m[1].toLowerCase()
+      }
+    } else {
+      name = re.exec(title)?.[1]?.toLowerCase() || null
+    }
+  }
+  popularCache.set(p, name)
+  return name
+}
+
+// Round-robin through groups so one brand or artist doesn't fill a page.
+function rotate(items, keyOf) {
+  const groups = new Map()
+  for (const p of items) {
+    const k = keyOf(p)
+    if (!groups.has(k)) groups.set(k, [])
+    groups.get(k).push(p)
+  }
+  const qs = [...groups.values()], out = []
+  for (let i = 0; qs.some(q => i < q.length); i++) for (const q of qs) if (i < q.length) out.push(q[i])
+  return out
+}
+
+// Two per store per round, stores with the widest range first, so big
+// general stores lead but every store appears on the first page.
+function roundRobinStores(products, orderWithinStore) {
+  const byStore = new Map()
+  for (const p of products) {
+    const k = p.store_name || p.store_url || ''
+    if (!byStore.has(k)) byStore.set(k, [])
+    byStore.get(k).push(p)
+  }
+  const queues = [...byStore.values()].map(orderWithinStore).sort((a, b) => b.length - a.length)
+  const out = []
+  for (let i = 0; queues.some(q => i < q.length); i += 2) for (const q of queues) out.push(...q.slice(i, i + 2))
+  return out
+}
+
+function subcategoryOf(category, p) {
+  const subs = SUBCATEGORIES[category]
+  return subs?.find(s => productInSubcategory(p, category, s))?.slug || ''
+}
+
+// Worker co-ops, collectives and union shops: the small makers. They fill about
+// one slot in five on the first pages; the rest goes to familiar brands and
+// staples from the big employee-owned stores.
+const SMALL_MAKER = /worker|collective|union|volunteer|multi-stakeholder|cooperative affiliated|journalist/i
+const isSmallMaker = p => SMALL_MAKER.test(p.ownership_type || '')
+
+export function mixSmallMakers(list, every = 5) {
+  const makers = list.filter(isSmallMaker), others = list.filter(p => !isSmallMaker(p))
+  const out = []
+  let m = 0, o = 0
+  while (m < makers.length || o < others.length) {
+    for (let i = 0; i < every - 1 && o < others.length; i++) out.push(others[o++])
+    if (m < makers.length) out.push(makers[m++])
+    if (o >= others.length) { out.push(...makers.slice(m)); break }
+  }
+  return out
+}
+
+// Unfiltered category page order: core products before merch and parts
+// (CORE_ITEM tiers), and within the core tier, popular brands and titles
+// first (rotating brands), then everything else rotating subcategories, with
+// small co-op makers mixed in at about one in five.
+export function browseOrder(category, products) {
+  const test = CORE_ITEM[category] || (() => true)
   const tiers = new Map()
   for (const p of products) {
     const v = test(p)
@@ -333,5 +442,15 @@ export function coreFirstOrder(category, products) {
     if (!tiers.has(tier)) tiers.set(tier, [])
     tiers.get(tier).push(p)
   }
-  return [...tiers.keys()].sort((a, b) => a - b).flatMap(t => interleaveByStore(tiers.get(t)))
+  return [...tiers.keys()].sort((a, b) => a - b).flatMap(tier => {
+    const items = tiers.get(tier)
+    if (tier !== 0) return interleaveByStore(items)
+    const popular = items.filter(p => popularName(category, p))
+    const rest = items.filter(p => !popularName(category, p))
+    return mixSmallMakers([
+      ...roundRobinStores(popular, q => rotate(q, p => popularName(category, p))),
+      ...roundRobinStores(rest, q => rotate(q, p => subcategoryOf(category, p))),
+    ])
+  })
 }
+

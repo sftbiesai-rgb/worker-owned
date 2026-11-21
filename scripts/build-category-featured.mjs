@@ -10,8 +10,8 @@ import { fileURLToPath } from 'url'
 import { PICKS, EXCLUDE } from './featured-picks.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const SECTION_NAMES = { music: 'Music', 'movies-tv': 'Movies & TV', books: 'Books', 'coffee-tea': 'Coffee & Tea', 'food-pantry': 'Food & Pantry', games: 'Games', 'personal-care': 'Personal Care', 'home-goods': 'Home Goods & Services', 'beer-brewing': 'Beer & Brewing', 'sporting-goods': 'Sporting Goods & Outdoors', 'tech-software': 'Tech & Software' }
-const MAX_PER_CATEGORY = 16
+const SECTION_NAMES = { music: 'Music', 'movies-tv': 'Movies & TV', books: 'Books', 'coffee-tea': 'Coffee & Tea', 'food-pantry': 'Food & Pantry', games: 'Games', 'personal-care': 'Personal Care', 'home-goods': 'Home Goods & Services', 'beer-brewing': 'Beer & Brewing', 'sporting-goods': 'Sporting Goods & Outdoors', 'tech-software': 'Tech & Software', apparel: 'Apparel' }
+const MAX_PER_CATEGORY = 24
 
 // Preferred format per category, best first.
 const FORMAT_RANK = {
@@ -58,9 +58,11 @@ async function imageLoads(url, tries = 3) {
       if (res.ok) return (res.headers.get('content-type') || '').startsWith('image/')
       if (process.env.DEBUG) console.log(`  image ${res.status} ${url}`)
       if (res.status === 404 || res.status === 410) return false
-      // 403/429 here means the image host is rate-limiting this script, not
-      // that the image is missing (it loads fine in a browser).
-      if (res.status === 403 || res.status === 429) return true
+      // Shopify's CDN answers 403/429 when it rate-limits this script; those
+      // images load fine in a browser. Other hosts' 403s (e.g. Eileen Fisher's
+      // hotlink protection) really are broken images.
+      if ((res.status === 403 || res.status === 429) && new URL(url).hostname === 'cdn.shopify.com') return true
+      if (res.status === 403) return false
     } catch (e) {
       if (process.env.DEBUG) console.log(`  image error ${e.name} ${e.cause?.code || ''} ${url}`)
     }

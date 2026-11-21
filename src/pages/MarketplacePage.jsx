@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import marketplaceData from '../data/marketplace.json'
 import { slugify, faviconUrl, dedupeByUrl, interleaveByStore, storeKey } from '../lib/utils'
-import { SECTIONS, SUBCATEGORIES, FILTERS, GENDER_FILTERS, GENDER_FILTER_CATEGORIES, productInSubcategory, productMatchesGender, apparelBrowseOrder, coreFirstOrder } from '../lib/categories'
+import { SECTIONS, SUBCATEGORIES, FILTERS, GENDER_FILTERS, GENDER_FILTER_CATEGORIES, productInSubcategory, productMatchesGender, apparelBrowseOrder, browseOrder, isApparelUnmatched, mixSmallMakers } from '../lib/categories'
 import OwnershipBadge from '../components/OwnershipBadge'
 import ProductCard from '../components/ProductCard'
 import Pagination from '../components/Pagination'
@@ -63,6 +63,21 @@ function MarketplacePage() {
 
   useEffect(() => { setPage(1); setFilter(''); setActiveFilter(null); setGender(null) }, [category, subcategory])
 
+  // The unfiltered page order (popular items first) is expensive for big
+  // categories, so build it once per category and filter it in place.
+  const browse = useMemo(() => {
+    if (!section) return { list: [], unmatched: new Set() }
+    const all = products.filter(p => p.site_section === section.sectionName)
+    const avail = all.filter(p => p.available !== false), sold = all.filter(p => p.available === false)
+    if (category === 'apparel') {
+      return {
+        list: [...apparelBrowseOrder(avail, { keepUnmatched: true }), ...apparelBrowseOrder(sold, { keepUnmatched: true })],
+        unmatched: new Set(all.filter(isApparelUnmatched)),
+      }
+    }
+    return { list: [...browseOrder(category, avail), ...sold], unmatched: new Set() }
+  }, [products, section, category])
+
   if (!section) return <Navigate to="/" replace />
   if (subcategory && subs && !activeSub) return <Navigate to={`/${category}`} replace />
 
@@ -95,16 +110,15 @@ function MarketplacePage() {
 
   const available = filtered.filter(p => p.available !== false)
   const soldOut = filtered.filter(p => p.available === false)
-  const sorted = category === 'apparel' && !activeSub
-    ? [...apparelBrowseOrder(available, { keepUnmatched: filterPatterns.length > 0 }), ...apparelBrowseOrder(soldOut, { keepUnmatched: filterPatterns.length > 0 })]
-    : !activeSub
-      ? [...coreFirstOrder(category, available), ...soldOut]
-      : [...interleaveByStore(available), ...soldOut]
+  const filteredSet = new Set(filtered)
+  const sorted = !activeSub
+    ? browse.list.filter(p => filteredSet.has(p) && (filterPatterns.length > 0 || !browse.unmatched.has(p)))
+    : [...interleaveByStore(available), ...soldOut]
   const totalPages = Math.ceil(sorted.length / PER_PAGE)
   const paged = sorted.slice((page - 1) * PER_PAGE, page * PER_PAGE)
 
   const showFeatured = !activeSub && !filter && !activeFilter && !gender && page === 1
-  const featuredPicks = showFeatured ? (featured[category] || []).slice(0, 12) : []
+  const featuredPicks = showFeatured ? mixSmallMakers(featured[category] || []).slice(0, 12) : []
 
   // Companies listed under this category, plus any store with products in it.
   const productStores = new Set(sectionProducts.map(p => storeKey(p.store_url)))

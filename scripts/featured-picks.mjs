@@ -48,12 +48,13 @@ export const PICKS = {
     '^alaffia authentic african black soap', '^whipped shea butter & coconut oil', '^deodorant stick$', '^vegan lip balm$',
     '^awaida roots 1880 olive', '^extra strength soap drops', '^dr\\. squatch .*bar soap', '^duke cannon .*soap',
     "burt'?s bees .*lip balm", '^cerave .*(cream|lotion)', '^vanicream .*(cream|lotion)', "tom'?s of maine .*toothpaste",
-    "dr\\.? bronner", '^aveeno .*lotion', '^everyday shea body wash', '^good soap body wash',
+    "dr\\.? bronner", '^aveeno .*lotion', '^colgate .*toothpaste', '^mitchum', '^crest 3d white', '^olly .*multi', '^jergens', '^centrum', '^everyday shea body wash', '^good soap body wash',
   ],
   'home-goods': [
     '^cutting boards$', '^royal blue classic wool blanket', '^spalted maple wood turned bowl', 'mountain mohair',
     '^the empress$', "^medium gardener'?s supply cart", '^lifetime dandelion weeder', '^yeti rambler 20 oz',
     'lodge .*cast iron skillet', "^zwilling four star 7-inch chef", "^designer'?s choice", 'sunflower .chocolate cherry',
+    '^oxo 3 piece mixing bowl set', '^hydro flask 20 ounce', '^wusthof', '^kong armor bone', '^anchor hocking', '^miracle led', '^maze 65 gallon compost tumbler',
     '^small fork salad set', '^bamboo salt box', '^stainless steel bottle stoppers', 'loose knit scarf',
   ],
   'beer-brewing': [
@@ -71,6 +72,13 @@ export const PICKS = {
     '^jmp\\.chat — ', '^garmin instinct e adventure', '^loomio — ', '^gopro hero12 black camera$', '^revision energy — ', '^jbl charge 5$',
     '^agaric — ', '^garmin forerunner 170', '^sassafras tech collective — ', '^garmin edge explore 2', '^508\\.dev — ', '^whoop one',
     '^colab cooperative — ', '^jbl tune 520', '^hypha worker co-operative — ', '^garrett ace apex metal detector',
+  ],
+  // Everyday basics, alternating men's and women's, co-op makers and familiar brands.
+  apparel: [
+    "^men's carhartt iconic k87 pocket t-shirt", "^women's levi's 725 bootcut jeans", '^american roots solidarity pullover hoodie', "^women's carhartt .*(t-shirt|tee|sweatshirt|hoodie)",
+    "^men's levi's 501 original", "^women's patagonia better sweater", '^100% regenerative organic certified® cotton - classic crew neck tee', "^women's kuhl kultivatr cargo pants",
+    "^men's kuhl renegade rock pants", "^women's columbia heavenly long vest", '^never forget long sleeve', "^women's birkenstock oswego",
+    "^men's patagonia down sweater vest", '^organic cotton socks - lightweight footie 2 pak', "^men's columbia tech trail utility winter hoodie", '^professional( wide)? (black|brown|oiled|tobacco)',
   ],
 }
 
