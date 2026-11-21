@@ -276,6 +276,17 @@ for (const p of products) {
 }
 if (pathRemapped > 0) console.log(`Remapped ${pathRemapped} products by store category path`)
 
+// Scheels commemorative coins, signed photos and plaques are keepsakes, not gear.
+let collectiblesMoved = 0
+for (const p of products) {
+  const path = (p.tags || []).find(t => t.includes(' > '))?.toLowerCase()
+  if (path && /^fan shop > ([^>]+ > )?[^>]*collectibles/.test(path) && p.site_section !== 'Home Goods & Services') {
+    p.site_section = 'Home Goods & Services'
+    collectiblesMoved++
+  }
+}
+if (collectiblesMoved > 0) console.log(`Moved ${collectiblesMoved} fan collectibles to Home Goods`)
+
 // Coffee roasters whose whole catalog was filed under Food.
 const COFFEE_STORES = new Set(['Gimme! Coffee', 'Just Us! Coffee Roasters'])
 let coffeeMoved = 0
@@ -324,7 +335,7 @@ for (const p of products) {
 }
 if (apparelMoved > 0) console.log(`Moved ${apparelMoved} non-clothing products out of Apparel`)
 
-if (remapped > 0 || mediaMoved > 0 || coffeeMoved > 0 || pathRemapped > 0 || recategorized > 0 || apparelMoved > 0) {
+if (remapped > 0 || mediaMoved > 0 || coffeeMoved > 0 || collectiblesMoved > 0 || pathRemapped > 0 || recategorized > 0 || apparelMoved > 0) {
   writeFileSync(resolve(root, 'public/data/products.json'), JSON.stringify(products))
 }
 

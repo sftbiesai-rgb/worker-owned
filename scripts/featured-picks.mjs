@@ -56,6 +56,16 @@ export const PICKS = {
     'lodge .*cast iron skillet', "^zwilling four star 7-inch chef", "^designer'?s choice", 'sunflower .chocolate cherry',
     '^small fork salad set', '^bamboo salt box', '^stainless steel bottle stoppers', 'loose knit scarf',
   ],
+  'beer-brewing': [
+    '^black butte porter$', '^mirror pond pale ale$', '^fresh squeezed ipa$', '^obsidian stout$', '^jubelale$', '^king crispy pilsner$',
+    '^non-alcoholic fresh squeezed ipa$', '^patagonia provisions organic lager$', '^speigelau ipa glass', '^16oz nitro pub glass', '^64oz insulated growler', '^harpoon ipa willi glass',
+    '^oktoberfest stein', '^winter warmer knit beanie', '^odell western flannel', '^tap handle$',
+  ],
+  'sporting-goods': [
+    '^trek marlin [4-8] ', '^trek fx', '^stock 52 steel gravel royale', '^eebrakes gecko', '^invert enduro$', '^osprey talon 22',
+    '^yeti roadie 15 cooler', "^men's brooks ghost", '^eno doublenest hammock$', '^opinel no\\.08 walnut', '^big agnes sidewinder', '^black diamond spot 400',
+    '^jetboil micromo', '^msr hubba hubba', '^swiss army cadet', '^neelum 40l duffel',
+  ],
 }
 
 // Titles that match a pick but aren't the thing (stationery, tributes,

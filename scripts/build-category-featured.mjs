@@ -10,7 +10,7 @@ import { fileURLToPath } from 'url'
 import { PICKS, EXCLUDE } from './featured-picks.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const SECTION_NAMES = { music: 'Music', 'movies-tv': 'Movies & TV', books: 'Books', 'coffee-tea': 'Coffee & Tea', 'food-pantry': 'Food & Pantry', games: 'Games', 'personal-care': 'Personal Care', 'home-goods': 'Home Goods & Services' }
+const SECTION_NAMES = { music: 'Music', 'movies-tv': 'Movies & TV', books: 'Books', 'coffee-tea': 'Coffee & Tea', 'food-pantry': 'Food & Pantry', games: 'Games', 'personal-care': 'Personal Care', 'home-goods': 'Home Goods & Services', 'beer-brewing': 'Beer & Brewing', 'sporting-goods': 'Sporting Goods & Outdoors' }
 const MAX_PER_CATEGORY = 16
 
 // Preferred format per category, best first.

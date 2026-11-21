@@ -297,17 +297,37 @@ const GAME_GEAR = /\b(cables?|controllers?|chargers?|adapters?|cases?|stands?|me
 const SHOP_MERCH = /\b(t-?shirts?|tees?|hoodies?|sweatshirts?|totes?|stickers?|keychains?|lanyards?|gift cards?|can coolers?|decals?)\b|^donate\b/i
 const isFanGear = p => (p.tags || []).some(t => /^fan shop >/i.test(t))
 
+const BEER_WEAR = /\b(t-?shirts?|shirts?|tees?|hoodies?|hats?|caps?|beanies?|flannel|shacket|crewneck|sweatshirts?|polo|jersey|tanks?|long sleeve|bandana|sunglasses|fanny pack|scarf|mittens?|socks?|stickers?|koozies?|playing cards|lens cloth|tackers?|poop bag|collar|leash|coin|bags?|tops?|ornaments?|toys?|gift cards?)\b/i
+const BAR_GEAR = /\b(glass(es)?|goblet|stein|mugs?|growlers?|tap handles?|bottle openers?|can coolers?|tumblers?|corkscrew|water ?bottles?)\b/i
+const BEER_STYLE = /\b(ipa|ale|lager|stout|porter|pilsner|cider|sour|quad|saison|shandy|hard lemonade|750ml)\b/i
+// Deschutes ships its beer; its beer names (Jubelale, Dissident) don't say "beer".
+const isBeer = p => !BEER_WEAR.test(p.title) && !BAR_GEAR.test(p.title) &&
+  (BEER_STYLE.test(p.title) || (p.store_name === 'Deschutes Brewery' && !/membership|society -|gift card|barrel|staves/i.test(p.title)))
+// Replacement bolts, springs and service kits that bury whole bikes and gear.
+const SMALL_PARTS = /\b(bolts?|screws?|springs?|washers?|bearings?|replacement|service kits?|rebuild kits?|hardware|valve stems?|spacers?|seals?|o-?rings?|end caps?|pistons?|bushings?|knobs?|clamps?|brackets?|adaptors?|adapters?|axles?|lever blades|mounts?)\b/i
+
 const CORE_ITEM = {
   books: p => !(p.tags || []).some(t => NON_BOOK_TAGS.test(t)) && !/gift card/i.test(p.title),
   'coffee-tea': p => !MERCH.test(p.title) && !BREW_GEAR.test(p.title),
   'food-pantry': p => !MERCH.test(p.title) && !BREW_GEAR.test(p.title),
   games: p => !GAME_GEAR.test(p.title),
   'home-goods': p => !isFanGear(p) && !SHOP_MERCH.test(p.title),
+  // Beer first, then glassware, growlers and tap handles, then apparel.
+  'beer-brewing': p => isBeer(p) ? 0 : BAR_GEAR.test(p.title) ? 1 : 2,
+  'sporting-goods': p => !isFanGear(p) && !SMALL_PARTS.test(p.title),
   'personal-care': p => !SHOP_MERCH.test(p.title) && !/\b(mugs?|candle holders?|t-?shirts?)\b/i.test(p.title),
 }
 
+// A category's test returns true/false (core or not) or a tier number, lowest first.
 export function coreFirstOrder(category, products) {
-  const isCore = CORE_ITEM[category]
-  if (!isCore) return interleaveByStore(products)
-  return [...interleaveByStore(products.filter(isCore)), ...interleaveByStore(products.filter(p => !isCore(p)))]
+  const test = CORE_ITEM[category]
+  if (!test) return interleaveByStore(products)
+  const tiers = new Map()
+  for (const p of products) {
+    const v = test(p)
+    const tier = v === true ? 0 : v === false ? 1 : v
+    if (!tiers.has(tier)) tiers.set(tier, [])
+    tiers.get(tier).push(p)
+  }
+  return [...tiers.keys()].sort((a, b) => a - b).flatMap(t => interleaveByStore(tiers.get(t)))
 }

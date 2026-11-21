@@ -171,41 +171,9 @@
       ],
       "url": "/books"
     },
-    "sporting-goods": {
-      "label": "Sporting Goods & Outdoors",
-      "count": 58090,
-      "storeCount": 6,
-      "stores": [
-        {
-          "name": "Scheels All Sports",
-          "ownershipType": "ESOP"
-        },
-        {
-          "name": "Landry's Bicycles",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Mast General Store",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Deutsche Optik",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Cane Creek Cycling Components",
-          "ownershipType": "employee-owned"
-        },
-        {
-          "name": "Independent Fabrication",
-          "ownershipType": "worker co-op"
-        }
-      ],
-      "url": "/sporting-goods"
-    },
     "home-goods": {
       "label": "Home Goods & Services",
-      "count": 19747,
+      "count": 21726,
       "storeCount": 13,
       "stores": [
         {
@@ -235,9 +203,41 @@
       ],
       "url": "/home-goods"
     },
+    "sporting-goods": {
+      "label": "Sporting Goods & Outdoors",
+      "count": 56115,
+      "storeCount": 6,
+      "stores": [
+        {
+          "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "Landry's Bicycles",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Mast General Store",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Deutsche Optik",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Cane Creek Cycling Components",
+          "ownershipType": "employee-owned"
+        },
+        {
+          "name": "Independent Fabrication",
+          "ownershipType": "worker co-op"
+        }
+      ],
+      "url": "/sporting-goods"
+    },
     "apparel": {
       "label": "Apparel",
-      "count": 54292,
+      "count": 54289,
       "storeCount": 17,
       "stores": [
         {
@@ -301,7 +301,7 @@
     },
     "games": {
       "label": "Games",
-      "count": 5880,
+      "count": 5879,
       "storeCount": 12,
       "stores": [
         {
