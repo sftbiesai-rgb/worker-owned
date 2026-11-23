@@ -204,6 +204,15 @@ Texas Center for EO             | tknickel@txceo.org                   | NONE (s
 Juliet Schor / BC               | juliet.schor@bc.edu                  | REPLIED (follow-up sent; she says piece is finished, not found online)
 Equal Exchange                  | woc@equalexchange.coop               | NONE (sent 11/15, holiday guide note: camp mug + pint glass)
 
+
+=== NOV 21 2026 (Black Friday tip lines) ===
+
+Organization                    | Contact Email                        | Status
+--------------------------------|--------------------------------------|-------
+Kottke.org / Jason Kottke       | jason@kottke.org                     | NONE (sent 11/21 manually from Gmail, gift guide + HN + Pluralistic)
+Andy Baio / Waxy                | Bluesky DM @andy.baio.net            | NONE (DM sent 11/21 manually, Waxy links pitch)
+Digg comment                    | digg.com/world-business/kj5c0mxr     | POSTED 11/21 (Amazon/Mamdani thread, new account)
+
 === ORG/ACADEMIC OUTREACH (not directory listings) ===
 
 Organization                    | Contact Email                        | Status | Summary

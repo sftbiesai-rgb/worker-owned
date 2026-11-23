@@ -136,6 +136,10 @@ const SEARCH_QUERIES = [
   'ethical shopping',
   'ethical alternative',
   'shop small instead',
+  'black friday amazon',
+  'black friday boycott',
+  'skip amazon',
+  'avoid amazon',
   'conscious consumer',
   'where else can I buy',
   'where to buy instead',
@@ -146,6 +150,10 @@ const SEARCH_QUERIES = [
 // Searched with sort=latest and no like threshold: people asking for alternatives
 // right now rarely have many likes yet, but they're the best reply leads.
 const LATEST_QUERIES = [
+  'black friday amazon',
+  'black friday boycott',
+  'not shopping amazon',
+  'avoid amazon',
   'amazon alternative',
   'alternative to amazon',
   'instead of amazon',

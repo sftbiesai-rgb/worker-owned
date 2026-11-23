@@ -101,6 +101,30 @@ const REPLIES = [
     url: 'https://bsky.app/profile/brianloveswords.com/post/3n2mrcxgkbc2g',
     text: "they've been 100% employee-owned since 2004 too. the logo and the flour both rule",
   },
+  {
+    url: 'https://bsky.app/profile/plourd.bsky.social/post/3n2qzzix56225',
+    text: "that's kind of the idea behind workerowned.info, an amazon-like site but it only shows stuff sold or made by worker-owned companies. buying from them is how they get big enough to compete",
+  },
+  {
+    url: 'https://bsky.app/profile/rahawahaile.bsky.social/post/3n2m43zn5es2n',
+    text: "added Scratch to workerowned.info with the other worker-owned media. hope you hit 1,000!",
+  },
+  {
+    url: 'https://bsky.app/profile/silverspookguy.bsky.social/post/3n2osc2yrg223',
+    text: "added Silver Spook Games to workerowned.info. fighting to overturn capitalism in a game made by a worker-owned studio is a great combo",
+  },
+  {
+    url: 'https://bsky.app/profile/misselainious.bsky.social/post/3n2vl5nyh322q',
+    text: "no app yet, but the site works on your phone. no login needed, just search and the links go straight to the company's own site",
+  },
+  {
+    url: 'https://bsky.app/profile/wordsfailme123.bsky.social/post/3n2pvixvnoc2c',
+    text: "if there's nothing local, workerowned.info might help. it's an amazon-like site but it only shows stuff from worker-owned companies that ship. buying from them is how they grow",
+  },
+  {
+    url: 'https://bsky.app/profile/troubledminnesotan.bsky.social/post/3n2tl4h7dxs2u',
+    text: "Artisans Cooperative is a good place to land. it's an Etsy alternative owned by the makers who sell on it, so no shareholders deciding to sell your work to AI",
+  },
 ];
 const SENT_LOG = 'scripts/.bsky-sent.json';
 
