@@ -125,6 +125,14 @@ const REPLIES = [
     url: 'https://bsky.app/profile/troubledminnesotan.bsky.social/post/3n2tl4h7dxs2u',
     text: "Artisans Cooperative is a good place to land. it's an Etsy alternative owned by the makers who sell on it, so no shareholders deciding to sell your work to AI",
   },
+  {
+    url: 'https://bsky.app/profile/iamunknownuser.bsky.social/post/3n2u6yz4g4224',
+    text: "it's easier than people think too. try workerowned.info! it's an amazon-like search but it only shows stuff sold or made by worker-owned companies, and the links go straight to their own sites",
+  },
+  {
+    url: 'https://bsky.app/profile/ravenswordpress.com/post/3n2w5yilyz22c',
+    text: "for anyone shopping this thread instead of Black Friday: workerowned.info is a searchable marketplace of stuff made or sold by worker-owned businesses. no login, no fees, links go straight to the shops",
+  },
 ];
 const SENT_LOG = 'scripts/.bsky-sent.json';
 
