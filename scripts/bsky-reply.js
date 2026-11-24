@@ -133,6 +133,14 @@ const REPLIES = [
     url: 'https://bsky.app/profile/ravenswordpress.com/post/3n2w5yilyz22c',
     text: "for anyone shopping this thread instead of Black Friday: workerowned.info is a searchable marketplace of stuff made or sold by worker-owned businesses. no login, no fees, links go straight to the shops",
   },
+  {
+    url: 'https://bsky.app/profile/bleafinchange.bsky.social/post/3n2yyt56sns2r',
+    text: "for the stuff you can't get at Costco or local, workerowned.info is a searchable marketplace of worker-owned shops. coffee, clothes, books, toothpaste, games, all linking straight to the shops",
+  },
+  {
+    url: 'https://bsky.app/profile/helioscrivener.bsky.social/post/3n2yxghdxf22f',
+    text: "for the stuff you have to order online, we built workerowned.info, a searchable marketplace of things sold by worker-owned businesses. buying from them helps them grow",
+  },
 ];
 const SENT_LOG = 'scripts/.bsky-sent.json';
 
