@@ -22,6 +22,10 @@ const API = 'https://bsky.social/xrpc';
 
 const REPLIES = [
   {
+    url: 'https://bsky.app/profile/caffeine-queen.bsky.social/post/3n2zuxqv7pc2u',
+    text: "it's a lot easier if you chip away one purchase at a time. workerowned.info is a searchable marketplace of worker-owned shops for the everyday stuff, so you can swap out some Amazon orders without overhauling everything",
+  },
+  {
     url: 'https://bsky.app/profile/margaret.bsky.social/post/3mxhrq7ithc2q',
     text: "Baltimore has so many worker co-ops for one city. Red Emma's, Taharka Brothers, Baltimore Bicycle Works. Great to see the investment side that made it possible get written up.",
   },
