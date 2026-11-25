@@ -1913,5 +1913,16 @@
     "status": "verified active",
     "notes": "Worker-owned indie studio behind the Neofeud cyberpunk adventure games. Neofeud 2 (2026) is about fighting to overturn capitalism and empire.",
     "site_section": "Games"
+  },
+  {
+    "id": 237,
+    "name": "AVID Products",
+    "url": "https://avidproducts.com/where-to-buy-avid-audio-solutions",
+    "category": "headphones / headsets / earbuds",
+    "ownership_type": "ESOP",
+    "ships": "US (via resellers)",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP since 2013). Based in Providence, RI. Makes affordable headsets, headphones, and earbuds, best known for classroom and school audio. Also serves healthcare, hospitality, and travel. Sold through resellers like CDW and Amazon rather than direct.",
+    "site_section": "Tech & Software"
   }
 ]
