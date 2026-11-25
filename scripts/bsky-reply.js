@@ -22,10 +22,6 @@ const API = 'https://bsky.social/xrpc';
 
 const REPLIES = [
   {
-    url: 'https://bsky.app/profile/iesai.bsky.social/post/3n35fvlb2ss2e',
-    text: "here's the link for easy sharing: workerowned.info",
-  },
-  {
     url: 'https://bsky.app/profile/hearthfox.bsky.social/post/3n2ykgb2lqk2r',
     text: "for the commission route, Artisans Cooperative is owned by its makers and grew out of the Etsy seller strike. Justseeds is a worker co-op of printmakers too, great for posters",
   },
