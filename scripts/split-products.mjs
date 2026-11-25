@@ -276,8 +276,15 @@ const SERVICE_DETAILS = {
 const titleCase = s => s.replace(/\b\w/g, c => c.toUpperCase())
 const directory = JSON.parse(readFileSync(resolve(root, 'src/data/marketplace.json'), 'utf-8'))
 let servicesAdded = 0
+// Hardware makers (e.g. AVID) have real scraped products; they don't need a service card
+const hasRealProducts = new Set(products.filter(p => !String(p.id).startsWith('synth-svc-')).map(p => p.store_name))
 for (const e of directory.filter(e => e.site_section === 'Tech & Software')) {
   const id = 'synth-svc-' + e.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+  if (hasRealProducts.has(e.name)) {
+    const i = products.findIndex(p => p.id === id)
+    if (i !== -1) { products.splice(i, 1); servicesAdded++ }
+    continue
+  }
   const detail = SERVICE_DETAILS[e.name] || {}
   const listing = {
     id, title: `${e.name} — ${detail.label || titleCase(e.category || 'Services')}`,

@@ -333,11 +333,15 @@
     },
     "tech-software": {
       "label": "Tech & Software",
-      "count": 1213,
+      "count": 1244,
       "storeCount": 13,
       "stores": [
         {
           "name": "Scheels All Sports",
+          "ownershipType": "ESOP"
+        },
+        {
+          "name": "AVID Products",
           "ownershipType": "ESOP"
         },
         {
@@ -354,10 +358,6 @@
         },
         {
           "name": "CoLab Cooperative",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "Sassafras Tech Collective",
           "ownershipType": "worker co-op"
         }
       ],
