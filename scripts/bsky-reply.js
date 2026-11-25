@@ -22,6 +22,10 @@ const API = 'https://bsky.social/xrpc';
 
 const REPLIES = [
   {
+    url: 'https://bsky.app/profile/anoncracy.bsky.social/post/3n33zgygfxc2x',
+    text: "Great find, thank you! AVID is now in the directory: workerowned.info/store/avid-products. Since they sell through resellers, we're linking their where-to-buy page for now and will add their headsets from CDW next. More tips like this, let's go",
+  },
+  {
     url: 'https://bsky.app/profile/caffeine-queen.bsky.social/post/3n2zuxqv7pc2u',
     text: "it's a lot easier if you chip away one purchase at a time. workerowned.info is a searchable marketplace of worker-owned shops for the everyday stuff, so you can swap out some Amazon orders without overhauling everything",
   },
