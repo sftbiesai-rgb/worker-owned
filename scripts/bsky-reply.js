@@ -31,7 +31,7 @@ const REPLIES = [
   },
   {
     url: 'https://bsky.app/profile/dnoven.bsky.social/post/3n33okfjexc2m',
-    text: "buying direct is the move. a lot of brands you can buy direct are worker-owned too, like Dansko, Taylor Guitars, Equal Exchange. we keep a list at workerowned.info",
+    text: "buying direct is the move. a lot of brands you can buy direct are worker-owned too, like Dansko, Taylor Guitars, Equal Exchange",
   },
   {
     url: 'https://bsky.app/profile/propcazhpm.bsky.social/post/3n33rifq74c2u',
