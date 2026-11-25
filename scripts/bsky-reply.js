@@ -22,6 +22,22 @@ const API = 'https://bsky.social/xrpc';
 
 const REPLIES = [
   {
+    url: 'https://bsky.app/profile/hearthfox.bsky.social/post/3n2ykgb2lqk2r',
+    text: "for the commission route, Artisans Cooperative is owned by its makers and grew out of the Etsy seller strike. Justseeds is a worker co-op of printmakers too, great for posters",
+  },
+  {
+    url: 'https://bsky.app/profile/nicolashenin.net/post/3n34tgrpres25',
+    text: "bonus points if the bookstore is worker-owned. Raven Book Store in Lawrence (literally wrote How to Resist Amazon and Why), Red Emma's, and Bluestockings all ship, and Libro.fm for audiobooks",
+  },
+  {
+    url: 'https://bsky.app/profile/dnoven.bsky.social/post/3n33okfjexc2m',
+    text: "buying direct is the move. a lot of brands you can buy direct are worker-owned too, like Dansko, Taylor Guitars, Equal Exchange. we keep a list at workerowned.info",
+  },
+  {
+    url: 'https://bsky.app/profile/propcazhpm.bsky.social/post/3n33rifq74c2u',
+    text: "selling to the workers instead of a chain should be the default succession plan. 100 jobs staying in Roxbury, let's go",
+  },
+  {
     url: 'https://bsky.app/profile/anoncracy.bsky.social/post/3n33zgygfxc2x',
     text: "Great find, thank you! AVID is now in the directory: workerowned.info/store/avid-products. Since they sell through resellers, we're linking their where-to-buy page for now and will add their headsets from CDW next. More tips like this, let's go",
   },
