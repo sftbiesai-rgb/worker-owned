@@ -14,6 +14,7 @@ import argparse
 import smtplib
 import sys
 import re
+import html
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from html.parser import HTMLParser
@@ -92,7 +93,7 @@ def preview_email(entry):
     text = re.sub(r'<br\s*/?>', '\n', text)
     text = re.sub(r'</?p>', '\n', text)
     text = re.sub(r'<[^>]+>', '', text)
-    text = re.sub(r'\n{3,}', '\n\n', text).strip()
+    text = html.unescape(re.sub(r'\n{3,}', '\n\n', text).strip())
     print(text)
 
 
@@ -110,7 +111,7 @@ def send_email(entry):
     text = re.sub(r'<br\s*/?>', '\n', text)
     text = re.sub(r'</?p>', '\n', text)
     text = re.sub(r'<[^>]+>', '', text)
-    text = re.sub(r'\n{3,}', '\n\n', text).strip()
+    text = html.unescape(re.sub(r'\n{3,}', '\n\n', text).strip())
 
     # Create HTML version with minimal styling
     html_body = f"""<html><body style="font-family: sans-serif; font-size: 14px; line-height: 1.6; color: #222;">
