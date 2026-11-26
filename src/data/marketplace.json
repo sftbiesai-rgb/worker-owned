@@ -1924,5 +1924,16 @@
     "status": "verified active",
     "notes": "100% employee-owned (ESOP since 2013). Based in Providence, RI. Makes affordable headsets, headphones, and earbuds, best known for classroom and school audio. Also serves healthcare, hospitality, and travel. Sold through authorized resellers rather than direct; product links go to Encore Data Products, an AVID reseller partner.",
     "site_section": "Tech & Software"
+  },
+  {
+    "id": 238,
+    "name": "Markertek",
+    "url": "https://www.markertek.com",
+    "category": "pro audio / video / broadcast gear",
+    "ownership_type": "ESOP",
+    "ships": "US",
+    "status": "verified active",
+    "notes": "100% employee-owned (ESOP). Based in Saugerties, NY; started as a mail-order catalog in 1987. Broadcast, pro audio, and video production supplier: headphones, microphones, audio interfaces, studio monitors, lighting, tripods, cameras, and cables, plus in-house custom cable and panel shops.",
+    "site_section": "Tech & Software"
   }
 ]

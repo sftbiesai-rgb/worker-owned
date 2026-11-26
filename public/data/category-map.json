@@ -333,9 +333,13 @@
     },
     "tech-software": {
       "label": "Tech & Software",
-      "count": 1244,
-      "storeCount": 13,
+      "count": 7120,
+      "storeCount": 14,
       "stores": [
+        {
+          "name": "Markertek",
+          "ownershipType": "ESOP"
+        },
         {
           "name": "Scheels All Sports",
           "ownershipType": "ESOP"
@@ -354,10 +358,6 @@
         },
         {
           "name": "Agaric",
-          "ownershipType": "worker co-op"
-        },
-        {
-          "name": "CoLab Cooperative",
           "ownershipType": "worker co-op"
         }
       ],
