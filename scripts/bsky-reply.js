@@ -34,8 +34,24 @@ const REPLIES = [
     text: "buying direct is the move. a lot of brands you can buy direct are worker-owned too, like Dansko, Taylor Guitars, Equal Exchange",
   },
   {
-    url: 'https://bsky.app/profile/propcazhpm.bsky.social/post/3n33rifq74c2u',
-    text: "selling to the workers instead of a chain should be the default succession plan. 100 jobs staying in Roxbury, let's go",
+    url: 'https://bsky.app/profile/stephielynn204.bsky.social/post/3n35f5ilyjc2f',
+    text: "it's not everything yet, but workerowned.info is an amazon-like search for stuff sold by worker-owned companies. no login, no fees, links go straight to the shops",
+  },
+  {
+    url: 'https://bsky.app/profile/bluebird07843.bsky.social/post/3n36bswgz5222',
+    text: "closest thing right now might be workerowned.info. it's an amazon-like search but it only shows stuff from worker-owned companies that ship, and the links go straight to their own sites",
+  },
+  {
+    url: 'https://bsky.app/profile/cooperatives.bsky.social/post/3n363hnvyj22z',
+    text: "making it easier to start a worker co-op is the kind of unglamorous policy that adds up. let's go Pennsylvania",
+  },
+  {
+    url: 'https://bsky.app/profile/ritaswartz.bsky.social/post/3n3atuoadgs2u',
+    text: "buying from them helps them grow too. workerowned.info is an amazon-like search that only shows stuff from worker-owned and employee-owned companies, and the links go straight to their shops",
+  },
+  {
+    url: 'https://bsky.app/profile/sophiaflorence.bsky.social/post/3n3b4qtc2kc2m',
+    text: "they're out there already, King Arthur Baking, Bob's Red Mill, Equal Exchange, plenty of bookstores and bike shops. buying from them is how they grow",
   },
   {
     url: 'https://bsky.app/profile/anoncracy.bsky.social/post/3n33zgygfxc2x',
