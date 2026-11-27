@@ -325,18 +325,6 @@
     "pick": "cool"
   },
   {
-    "id": "36-bc-organic-cotton-hooded-cardigan",
-    "title": "Organic Cotton Socks - Lightweight Footie 2 Pak",
-    "price": "20.00",
-    "image": "https://cdn11.bigcommerce.com/s-sr2gbw/products/3399/images/19879/Lightweight_Footie_2_Pak_natgold__37598.1770984961.550.550.png?c=2",
-    "url": "https://maggiesorganics.com/organic-cotton-socks-lightweight-footie-2-pak/",
-    "store_name": "Maggie's Organics",
-    "store_url": "https://maggiesorganics.com",
-    "ownership_type": "employee-owned",
-    "site_section": "Apparel",
-    "pick": "cool"
-  },
-  {
     "id": "125-wc-30171",
     "title": "Astronomy Pullover – 351",
     "price": "7.50",
@@ -1252,5 +1240,17 @@
     "ownership_type": "worker-owned",
     "site_section": "Books",
     "pick": "hits"
+  },
+  {
+    "id": "238-mtk-mdr-7506",
+    "title": "Sony Pro MDR-7506 Foldable Large Diaphragm Headphones",
+    "price": "99.99",
+    "image": "https://www.markertek.com/productImage/alternate-1/450x450/MDR-7506.JPG",
+    "url": "https://www.markertek.com/product/mdr-7506/sony-pro-mdr-7506-foldable-large-diaphragm-headphones",
+    "store_name": "Markertek",
+    "store_url": "https://www.markertek.com",
+    "ownership_type": "ESOP",
+    "site_section": "Tech & Software",
+    "pick": "staff"
   }
 ]

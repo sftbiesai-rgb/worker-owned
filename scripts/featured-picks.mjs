@@ -69,9 +69,10 @@ export const PICKS = {
   ],
   // Alternates co-op services with popular gadgets.
   'tech-software': [
-    '^jmp\\.chat — ', '^garmin instinct e adventure', '^loomio — ', '^gopro hero12 black camera$', '^revision energy — ', '^jbl charge 5$',
-    '^agaric — ', '^garmin forerunner 170', '^sassafras tech collective — ', '^garmin edge explore 2', '^508\\.dev — ', '^whoop one',
-    '^colab cooperative — ', '^jbl tune 520', '^hypha worker co-operative — ', '^garrett ace apex metal detector',
+    '^jmp\\.chat — ', '^sony pro mdr-7506', '^loomio — ', '^garmin instinct e adventure', '^revision energy — ', '^shure sm7b dynamic cardioid vocal microphone$',
+    '^agaric — ', '^audio-technica ath-m50x professional monitor headphones - black', '^sassafras tech collective — ', '^gopro hero12 black camera$', '^508\\.dev — ', '^focusrite scarlett 2i2 4th',
+    '^colab cooperative — ', '^jbl charge 5$', '^hypha worker co-operative — ', '^logitech c920s', '^shure se215 se series', '^garmin forerunner 170',
+    '^elgato wave:3', '^zoom h1essential', '^whoop one', '^sennheiser hd 280 pro', '^jbl tune 520', '^shure sm58s',
   ],
   // Everyday basics, alternating men's and women's, co-op makers and familiar brands.
   apparel: [
